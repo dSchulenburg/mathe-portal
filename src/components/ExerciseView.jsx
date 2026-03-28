@@ -55,12 +55,13 @@ export default function ExerciseView({ moduleId, levelId, exerciseId, onComplete
           payload: { moduleId, exerciseId: exercise.id, stars, baseXP: exercise.xp?.base || 10 }
         });
       } else {
-        // Check if partial progress (some steps correct, not all)
-        const correctSteps = (result.stepResults || []).filter(r => r === true).length;
-        const hasPartialProgress = correctSteps > 0 && result.stepResults.some(r => r !== true);
-        const feedbackType = hasPartialProgress ? 'progress' : 'error';
+        // Check if partial progress (some steps correct, others not yet answered)
+        const steps = result.stepResults || [];
+        const correctSteps = steps.filter(r => r === true).length;
+        const wrongSteps = steps.filter(r => r === false).length;
+        const feedbackType = (correctSteps > 0 && wrongSteps === 0) ? 'progress' : 'error';
         setFeedback({ type: feedbackType, message: result.message || 'Nicht ganz richtig. Versuch es nochmal!' });
-        if (newAttempts >= 2 && !hasPartialProgress) setShowHint(true);
+        if (newAttempts >= 2 && wrongSteps > 0) setShowHint(true);
       }
     }
   }, [answers, attempts, exercise, moduleId, dispatch]);

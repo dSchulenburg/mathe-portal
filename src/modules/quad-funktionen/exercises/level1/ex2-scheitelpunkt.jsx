@@ -81,6 +81,8 @@ const exercise = {
     const results = parabolas.map((p, i) => {
       const xKey = `q${i + 1}_x`;
       const yKey = `q${i + 1}_y`;
+      // If user hasn't entered anything yet, return null (not checked)
+      if (!answers[xKey] && !answers[yKey]) return null;
       const xCorrect = validateNumber(answers[xKey], p.vertex.x, 0.3);
       const yCorrect = validateNumber(answers[yKey], p.vertex.y, 0.3);
       return xCorrect && yCorrect;
@@ -88,22 +90,17 @@ const exercise = {
 
     const complete = results.every(r => r === true);
     const doneCount = results.filter(r => r === true).length;
-
-    // Find current step (first incomplete)
-    const currentStep = results.findIndex(r => r !== true);
-    const currentStepJustCompleted = currentStep === -1 || results[currentStep] === true;
+    const wrongCount = results.filter(r => r === false).length;
 
     let message;
     if (complete) {
-      message = null; // ExerciseView handles success
-    } else if (doneCount > 0 && currentStep >= 0 && results[currentStep] === false) {
-      // Current step wrong
+      message = null;
+    } else if (wrongCount > 0) {
       message = 'Nicht ganz. Schau genau auf das Koordinatensystem!';
     } else if (doneCount > 0) {
-      // Previous step correct, moving to next
       message = `Richtig! Weiter zu Parabel ${doneCount + 1} von ${parabolas.length}.`;
     } else {
-      message = 'Schau genau auf das Koordinatensystem!';
+      message = 'Gib die Koordinaten des Scheitelpunkts ein.';
     }
 
     return {
