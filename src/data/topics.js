@@ -1,4 +1,8 @@
 import { exercises as quadFunktionenEx } from './exercises/10-quad-funktionen';
+import { exercises as quadGleichungenEx } from './exercises/10-quad-gleichungen';
+import { exercises as trigonometrieEx } from './exercises/10-trigonometrie';
+import { exercises as expWachstumEx } from './exercises/10-exp-wachstum';
+import { exercises as wahrscheinlichkeitEx } from './exercises/10-wahrscheinlichkeit';
 
 /**
  * Topic metadata registry.
@@ -35,7 +39,7 @@ export const TOPICS = [
     icon: '🧮',
     color: '#f97316',
     period: 'Klasse 10',
-    exercises: [], // Will be populated when exercise file is created
+    exercises: quadGleichungenEx,
     plotter: null,
   },
   {
@@ -46,7 +50,7 @@ export const TOPICS = [
     icon: '📐',
     color: '#ec4899',
     period: 'Klasse 10',
-    exercises: [],
+    exercises: trigonometrieEx,
     plotter: {
       title: 'Erkunde Sinus und Kosinus',
       functions: [
@@ -70,7 +74,7 @@ export const TOPICS = [
     icon: '🚀',
     color: '#22c55e',
     period: 'Klasse 10',
-    exercises: [],
+    exercises: expWachstumEx,
     plotter: {
       title: 'Erkunde Exponentialfunktionen',
       functions: [
@@ -92,7 +96,7 @@ export const TOPICS = [
     icon: '🎲',
     color: '#3b82f6',
     period: 'Klasse 10',
-    exercises: [],
+    exercises: wahrscheinlichkeitEx,
     plotter: null,
   },
 ];
