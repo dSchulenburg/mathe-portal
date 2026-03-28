@@ -1,23 +1,13 @@
-// XP per level base amounts (increases with difficulty)
-const LEVEL_BASE_XP = { 1: 15, 2: 18, 3: 22, 4: 25, 5: 28, 6: 30 };
-
-// Player tiers
 export const TIERS = [
-  { name: 'Anfaenger', minXP: 0, icon: '\u{1F331}' },
-  { name: 'Lehrling', minXP: 100, icon: '\u{1F4D0}' },
-  { name: 'Fortgeschritten', minXP: 300, icon: '\u{1F9EE}' },
-  { name: 'Experte', minXP: 600, icon: '\u{1F3AF}' },
-  { name: 'Mathe-Genie', minXP: 1000, icon: '\u{1F3C6}' },
+  { name: 'Anfänger:in', icon: '🌱', minXP: 0 },
+  { name: 'Lehrling', icon: '📐', minXP: 100 },
+  { name: 'Fortgeschritten', icon: '🧮', minXP: 300 },
+  { name: 'Expert:in', icon: '🎯', minXP: 600 },
+  { name: 'Mathe-Genie', icon: '🏆', minXP: 1000 },
 ];
 
-export function getBaseXP(levelId) {
-  return LEVEL_BASE_XP[levelId] || 20;
-}
-
-export function calculateXP(levelId, stars) {
-  const base = getBaseXP(levelId);
-  const bonus = stars === 3 ? Math.round(base * 0.5) : 0;
-  return base + bonus;
+export function calculateXP(baseXP, stars) {
+  return stars === 3 ? Math.round(baseXP * 1.5) : baseXP;
 }
 
 export function getTier(xp) {
@@ -28,17 +18,14 @@ export function getTier(xp) {
 }
 
 export function getNextTier(xp) {
-  for (const tier of TIERS) {
-    if (xp < tier.minXP) return tier;
-  }
-  return null; // max tier reached
+  const current = getTier(xp);
+  const idx = TIERS.indexOf(current);
+  return idx < TIERS.length - 1 ? TIERS[idx + 1] : null;
 }
 
 export function getTierProgress(xp) {
   const current = getTier(xp);
   const next = getNextTier(xp);
-  if (!next) return 1; // max tier
-  const currentMin = current.minXP;
-  const nextMin = next.minXP;
-  return (xp - currentMin) / (nextMin - currentMin);
+  if (!next) return 1;
+  return (xp - current.minXP) / (next.minXP - current.minXP);
 }
