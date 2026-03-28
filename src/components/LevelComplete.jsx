@@ -66,7 +66,7 @@ export default function LevelComplete({ exerciseId, stars, levelId, onNextExerci
       {/* Stars message */}
       <p className="stars-message">
         {stars === 3 ? 'Perfekt beim ersten Versuch!' :
-         stars === 2 ? 'Gut gemacht!' : 'Weiter \u00fcben lohnt sich!'}
+         stars === 2 ? 'Gut gemacht!' : 'Weiter üben lohnt sich!'}
       </p>
 
       {/* XP */}
@@ -103,7 +103,7 @@ export default function LevelComplete({ exerciseId, stars, levelId, onNextExerci
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Zur \u00dcbersicht
+          Zur Übersicht
         </motion.button>
         {onNextExercise && (
           <motion.button
