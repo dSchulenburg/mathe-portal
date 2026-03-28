@@ -124,13 +124,13 @@ export default function ParabolaGraph({
           <g key={i}>
             <line
               x1={line.x1} y1={line.y1} x2={line.x2} y2={line.y2}
-              stroke="#e0e0e0" strokeWidth={line.label === 0 ? 0 : 0.5}
+              stroke="var(--mp-border)" strokeWidth={line.label === 0 ? 0 : 0.5}
             />
             {showAxisLabels && line.label !== 0 && (
               <text
                 x={line.axis === 'x' ? line.x1 : PADDING - 15}
                 y={line.axis === 'x' ? GRAPH_SIZE - PADDING + 15 : line.y1 + 4}
-                fill="#999" fontSize="10" textAnchor="middle"
+                fill="var(--mp-muted)" fontSize="10" textAnchor="middle"
               >
                 {line.label}
               </text>
@@ -139,16 +139,16 @@ export default function ParabolaGraph({
         ))}
 
         {/* Axes */}
-        <line x1={PADDING} y1={origin.y} x2={GRAPH_SIZE - PADDING} y2={origin.y} stroke="#333" strokeWidth={1.5} />
-        <line x1={origin.x} y1={PADDING} x2={origin.x} y2={GRAPH_SIZE - PADDING} stroke="#333" strokeWidth={1.5} />
+        <line x1={PADDING} y1={origin.y} x2={GRAPH_SIZE - PADDING} y2={origin.y} stroke="var(--mp-muted)" strokeWidth={1.5} />
+        <line x1={origin.x} y1={PADDING} x2={origin.x} y2={GRAPH_SIZE - PADDING} stroke="var(--mp-muted)" strokeWidth={1.5} />
 
         {/* Axis arrows */}
-        <polygon points={`${GRAPH_SIZE - PADDING},${origin.y - 4} ${GRAPH_SIZE - PADDING},${origin.y + 4} ${GRAPH_SIZE - PADDING + 8},${origin.y}`} fill="#333" />
-        <polygon points={`${origin.x - 4},${PADDING} ${origin.x + 4},${PADDING} ${origin.x},${PADDING - 8}`} fill="#333" />
+        <polygon points={`${GRAPH_SIZE - PADDING},${origin.y - 4} ${GRAPH_SIZE - PADDING},${origin.y + 4} ${GRAPH_SIZE - PADDING + 8},${origin.y}`} fill="var(--mp-muted)" />
+        <polygon points={`${origin.x - 4},${PADDING} ${origin.x + 4},${PADDING} ${origin.x},${PADDING - 8}`} fill="var(--mp-muted)" />
 
         {/* Axis labels */}
-        <text x={GRAPH_SIZE - PADDING + 12} y={origin.y + 4} fill="#333" fontSize="14" fontWeight="bold">x</text>
-        <text x={origin.x + 8} y={PADDING - 8} fill="#333" fontSize="14" fontWeight="bold">y</text>
+        <text x={GRAPH_SIZE - PADDING + 12} y={origin.y + 4} fill="var(--mp-muted)" fontSize="14" fontWeight="bold">x</text>
+        <text x={origin.x + 8} y={PADDING - 8} fill="var(--mp-muted)" fontSize="14" fontWeight="bold">y</text>
 
         {/* Parabola */}
         <motion.path
@@ -166,8 +166,8 @@ export default function ParabolaGraph({
           const vSvg = toSVG(vertex.x, vertex.y, xRange, yRange);
           return (
             <g>
-              <circle cx={vSvg.x} cy={vSvg.y} r={5} fill="var(--bswi-yellow)" stroke="#333" strokeWidth={1} />
-              <text x={vSvg.x + 10} y={vSvg.y - 10} fill="var(--bswi-navy)" fontSize="11" fontWeight="bold">
+              <circle cx={vSvg.x} cy={vSvg.y} r={5} fill="var(--bswi-yellow)" stroke="var(--mp-muted)" strokeWidth={1} />
+              <text x={vSvg.x + 10} y={vSvg.y - 10} fill="var(--mp-text)" fontSize="11" fontWeight="bold">
                 S({vertex.x.toFixed(1)}|{vertex.y.toFixed(1)})
               </text>
             </g>
@@ -179,7 +179,7 @@ export default function ParabolaGraph({
           const zSvg = toSVG(z.x, z.y, xRange, yRange);
           return (
             <g key={`zero-${i}`}>
-              <circle cx={zSvg.x} cy={zSvg.y} r={5} fill="var(--bswi-error)" stroke="#333" strokeWidth={1} />
+              <circle cx={zSvg.x} cy={zSvg.y} r={5} fill="var(--bswi-error)" stroke="var(--mp-muted)" strokeWidth={1} />
               <text x={zSvg.x + 8} y={zSvg.y + 15} fill="var(--bswi-error)" fontSize="11" fontWeight="bold">
                 x{i + 1}={z.x.toFixed(1)}
               </text>
@@ -192,7 +192,7 @@ export default function ParabolaGraph({
           const pSvg = toSVG(p.x, p.y, xRange, yRange);
           return (
             <g key={`highlight-${i}`}>
-              <circle cx={pSvg.x} cy={pSvg.y} r={6} fill={p.color || 'var(--bswi-yellow)'} stroke="#333" strokeWidth={1} />
+              <circle cx={pSvg.x} cy={pSvg.y} r={6} fill={p.color || 'var(--bswi-yellow)'} stroke="var(--mp-muted)" strokeWidth={1} />
               {p.label && (
                 <text x={pSvg.x + 10} y={pSvg.y - 5} fill={p.color || '#333'} fontSize="11">{p.label}</text>
               )}
