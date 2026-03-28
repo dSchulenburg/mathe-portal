@@ -550,6 +550,7 @@ body {
   padding: 1.5rem 2rem;
   box-shadow: var(--card-shadow);
   margin: 1rem 0;
+  overflow-x: auto;
 }
 
 /* Hide KaTeX MathML fallback (screen readers only) */
@@ -710,6 +711,7 @@ input[type='range']::-moz-range-thumb {
   font-weight: 600;
   color: var(--mp-text);
   transition: all 0.2s ease;
+  overflow: hidden;
 }
 
 .choice-indicator {
@@ -733,6 +735,25 @@ input[type='range']::-moz-range-thumb {
 .choice-label {
   flex: 1;
   text-align: center;
+  overflow: hidden;
+}
+
+/* Scale down long KaTeX formulas to fit cards */
+.choice-label .katex-html {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.choice-label .katex {
+  font-size: 1.1em;
+  white-space: nowrap;
+}
+
+/* Shrink formulas on smaller cards */
+@media (max-width: 900px) {
+  .choice-label .katex {
+    font-size: 0.95em;
+  }
 }
 
 .choice-card:hover {
