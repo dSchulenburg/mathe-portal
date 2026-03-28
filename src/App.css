@@ -90,6 +90,7 @@ body {
 .app-main {
   flex: 1;
   padding: 2rem;
+  padding-top: 1rem;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -541,7 +542,6 @@ body {
 /* Formula Display */
 .formula-display {
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--mp-primary);
@@ -550,6 +550,12 @@ body {
   padding: 1.5rem 2rem;
   box-shadow: var(--card-shadow);
   margin: 1rem 0;
+}
+
+/* Hide KaTeX MathML fallback (screen readers only) */
+.formula-display .katex-mathml,
+.choice-label .katex-mathml {
+  display: none;
   letter-spacing: 0.02em;
   line-height: 1.8;
 }
