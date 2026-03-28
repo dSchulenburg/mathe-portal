@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { GameProvider, useGame } from './context/GameContext';
 import { I18nProvider } from './i18n/I18nProvider';
 import { useTranslation } from './i18n/useTranslation';
+import { parseRoute } from './lib/router';
 import { getModule } from './modules/registry';
 import Layout from './components/Layout';
 import TopicSelector from './components/TopicSelector';
@@ -189,10 +190,41 @@ function AppWithI18n() {
   );
 }
 
-export default function App() {
+function RoutePlaceholder({ route }) {
+  const { state } = useGame();
+  return (
+    <I18nProvider language={state.language}>
+      <div style={{ padding: '1rem', background: 'var(--mp-bg)', minHeight: '100vh', color: 'var(--mp-text)' }}>
+        <p style={{ color: 'var(--mp-muted)' }}>
+          Route: {route.view} — {route.topicId || route.exerciseId}
+          <br />
+          (Data-driven view — wird in Phase 1b implementiert)
+        </p>
+      </div>
+    </I18nProvider>
+  );
+}
+
+function RouteAwareApp() {
+  const route = parseRoute();
+
+  // New data-driven routes (for Moodle iframe embedding)
+  if (route.view === 'topic' || route.view === 'exercise' || route.view === 'checkpoint') {
+    return (
+      <GameProvider>
+        <RoutePlaceholder route={route} />
+      </GameProvider>
+    );
+  }
+
+  // Default: existing app (no hash or #/ only)
   return (
     <GameProvider>
       <AppWithI18n />
     </GameProvider>
   );
+}
+
+export default function App() {
+  return <RouteAwareApp />;
 }
