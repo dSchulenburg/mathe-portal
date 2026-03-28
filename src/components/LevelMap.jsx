@@ -1,27 +1,22 @@
 import { motion } from 'framer-motion';
 import { useGame, isLevelUnlocked, getLevelStars, isLevelComplete } from '../context/GameContext';
+import { useTranslation } from '../i18n/useTranslation';
 
-const LEVELS = [
-  { id: 1, title: 'Grundlagen', subtitle: 'Parabeln erkennen', icon: '📐', color: '#00A3E0' },
-  { id: 2, title: 'Formen umwandeln', subtitle: 'Normal ↔ Scheitelform', icon: '🔄', color: '#0088cc' },
-  { id: 3, title: 'pq-Formel', subtitle: 'Nullstellen berechnen', icon: '🧮', color: '#006699' },
-  { id: 4, title: 'Faktorisieren', subtitle: 'Satz von Vieta', icon: '✂️', color: '#004d80' },
-  { id: 5, title: 'Mix & Match', subtitle: 'Methoden kombinieren', icon: '🎯', color: '#003366' },
-  { id: 6, title: 'Textaufgaben', subtitle: 'Mathe im Alltag', icon: '📝', color: '#002244' },
-];
-
-export { LEVELS };
-
-export default function LevelMap({ moduleId, onSelectLevel }) {
+export default function LevelMap({ moduleId, levels, accentColor, onSelectLevel }) {
   const { state } = useGame();
+  const { t } = useTranslation();
+  const color = accentColor || '#00A3E0';
 
   return (
     <div className="level-map">
-      {LEVELS.map((level, index) => {
+      {levels.map((level, index) => {
         const unlocked = isLevelUnlocked(state, moduleId, level.id);
         const complete = isLevelComplete(state, moduleId, level.id);
         const stars = getLevelStars(state, moduleId, level.id);
-        const maxStars = 12; // 4 exercises x 3 stars
+        const maxStars = 12; // 4 exercises × 3 stars
+
+        const levelTitle = t(`levels.${moduleId}.${level.id}.title`);
+        const levelSubtitle = t(`levels.${moduleId}.${level.id}.subtitle`);
 
         return (
           <motion.div
@@ -36,19 +31,19 @@ export default function LevelMap({ moduleId, onSelectLevel }) {
             style={{ cursor: unlocked ? 'pointer' : 'default' }}
           >
             {!unlocked && <div className="lock-overlay">🔒</div>}
-            <div className="level-number" style={{ background: unlocked ? level.color : '#999' }}>
+            <div className="level-number" style={{ background: unlocked ? color : '#999' }}>
               {level.id}
             </div>
             <div className="level-icon">{level.icon}</div>
-            <h3 className="level-title">{level.title}</h3>
-            <p className="level-subtitle">{level.subtitle}</p>
+            <h3 className="level-title">{levelTitle}</h3>
+            <p className="level-subtitle">{levelSubtitle}</p>
             {unlocked && (
               <>
                 <div className="level-stars-summary">
                   <span>⭐ {stars}/{maxStars}</span>
                 </div>
                 <div className="level-progress">
-                  <div className="level-progress-bar" style={{ width: `${(stars / maxStars) * 100}%`, background: level.color }} />
+                  <div className="level-progress-bar" style={{ width: `${(stars / maxStars) * 100}%`, background: color }} />
                 </div>
               </>
             )}

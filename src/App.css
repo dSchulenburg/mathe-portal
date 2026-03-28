@@ -1380,3 +1380,55 @@ input[type='range']::-moz-range-thumb {
     border: 1px solid #ccc;
   }
 }
+
+/* ============================================================
+   PORTAL LANDING (TopicSelector)
+   ============================================================ */
+.topic-selector { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; text-align: center; }
+.topic-header { margin-bottom: 2rem; }
+.topic-title { font-size: 2rem; font-weight: 700; color: var(--mp-primary); margin: 0; }
+.topic-subtitle { color: var(--mp-muted); font-size: 1rem; margin: 0.5rem 0 0; font-style: italic; }
+
+.module-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+
+.module-card {
+  background: var(--mp-surface); border: 1px solid var(--mp-border);
+  border-radius: var(--card-radius); padding: 1.5rem; text-align: left;
+  border-top: 3px solid var(--accent); transition: background 0.2s; cursor: pointer;
+}
+.module-card:hover { background: var(--mp-surface-hover); }
+.module-card-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+.module-card-title { color: var(--mp-text); font-size: 1.2rem; font-weight: 600; margin: 0 0 0.25rem; }
+.module-card-subtitle { color: var(--mp-muted); font-size: 0.85rem; margin: 0 0 1rem; }
+
+.portal-stats { display: flex; justify-content: center; gap: 0.75rem; color: var(--mp-muted); font-size: 0.9rem; margin: 1.5rem 0; flex-wrap: wrap; }
+
+.portal-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--mp-border); color: var(--mp-muted); font-size: 0.8rem; }
+.portal-footer a { color: var(--mp-primary); text-decoration: none; }
+.portal-footer a:hover { text-decoration: underline; }
+
+/* ============================================================
+   LANGUAGE SWITCHER
+   ============================================================ */
+.language-switcher { position: relative; }
+.language-switcher-btn { background: transparent; border: 1px solid var(--mp-border); color: var(--mp-text); padding: 0.4rem 0.6rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; }
+.language-switcher-dropdown { position: absolute; top: 100%; right: 0; background: var(--mp-surface); border: 1px solid var(--mp-border); border-radius: 8px; padding: 0.5rem; z-index: 100; min-width: 180px; max-height: 400px; overflow-y: auto; box-shadow: var(--card-shadow); }
+.language-option { display: block; width: 100%; text-align: left; background: transparent; border: none; color: var(--mp-text); padding: 0.5rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
+.language-option:hover { background: var(--mp-surface-hover); }
+.language-option.active { color: var(--mp-primary); font-weight: 600; }
+
+/* ============================================================
+   HEADER ADJUSTMENTS (module-aware)
+   ============================================================ */
+.back-btn { background: transparent; border: none; color: var(--mp-text); font-size: 0.9rem; cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 6px; transition: background 0.15s; }
+.back-btn:hover { background: var(--mp-surface-hover); }
+.header-logo { font-size: 1.5rem; color: var(--mp-primary); font-weight: 700; }
+.header-module { color: var(--mp-text); font-size: 1rem; font-weight: 600; }
+
+/* Level progress bar inside module card */
+.level-progress-bar {
+  height: 6px;
+  background: var(--mp-primary);
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}

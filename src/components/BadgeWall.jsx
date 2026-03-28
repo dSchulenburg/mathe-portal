@@ -1,33 +1,34 @@
 import { motion } from 'framer-motion';
-import { useGame, BADGE_DEFS } from '../context/GameContext';
+import { useGame } from '../context/GameContext';
+import { useTranslation } from '../i18n/useTranslation';
+import { getModule } from '../modules/registry';
 import Badge from './ui/Badge';
 
-// Extend BADGE_DEFS with descriptions for display purposes
-const BADGE_DISPLAY = BADGE_DEFS.map(def => ({
-  ...def,
-  description: {
-    'first-solve': 'Erste Aufgabe gel\u00f6st',
-    'parabel-pro': 'Level 1 abgeschlossen',
-    'pq-meister': 'Level 3 abgeschlossen',
-    'faktor-fuchs': 'Level 4 abgeschlossen',
-    'textaufgaben-koenig': 'Level 6 abgeschlossen',
-    'perfect-score': '3 Sterne bei einer Aufgabe',
-    'streak-3': '3 Tage in Folge ge\u00fcbt',
-    'vollstaendig': 'Alle 24 Aufgaben gel\u00f6st',
-  }[def.id] || '',
-}));
-
-export default function BadgeWall({ onBack }) {
+export default function BadgeWall({ moduleId, onBack }) {
   const { state } = useGame();
+  const { t } = useTranslation();
+
+  // Get badges from module definition (or empty if no moduleId)
+  const module = moduleId ? getModule(moduleId) : null;
+  const badgeDefs = module?.badges || [];
+  const earnedBadges = moduleId ? (state.modules[moduleId]?.badges || []) : [];
+
+  const badgesWithMeta = badgeDefs.map(def => ({
+    ...def,
+    name: t(`badges.${def.id}.name`),
+    description: t(`badges.${def.id}.description`),
+  }));
 
   return (
     <div className="badge-wall">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-        <h2 style={{ color: 'white', margin: 0 }}>{'\u{1F3C5}'} Badges ({state.badges.length}/{BADGE_DEFS.length})</h2>
-        <button className="btn btn-secondary" onClick={onBack}>{'\u2190'} Zur\u00fcck</button>
+        <h2 style={{ color: 'white', margin: 0 }}>
+          🏅 {t('ui.badges')} ({earnedBadges.length}/{badgeDefs.length})
+        </h2>
+        <button className="btn btn-secondary" onClick={onBack}>← {t('ui.back')}</button>
       </div>
       <div className="badge-grid">
-        {BADGE_DISPLAY.map((badge, i) => (
+        {badgesWithMeta.map((badge, i) => (
           <motion.div
             key={badge.id}
             initial={{ opacity: 0, scale: 0.5 }}
@@ -36,10 +37,15 @@ export default function BadgeWall({ onBack }) {
           >
             <Badge
               badge={badge}
-              earned={state.badges.includes(badge.id)}
+              earned={earnedBadges.includes(badge.id)}
             />
           </motion.div>
         ))}
+        {badgesWithMeta.length === 0 && (
+          <p style={{ color: 'var(--mp-muted)', gridColumn: '1/-1', textAlign: 'center', padding: '2rem 0' }}>
+            Wähle ein Modul, um seine Badges zu sehen.
+          </p>
+        )}
       </div>
     </div>
   );
