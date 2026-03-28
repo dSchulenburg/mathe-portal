@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import { exercises as quadExercises } from '../../data/exercises/10-quad-funktionen';
 import { registerExercise, getExercisesByLevel, getExercisesByTopic } from '../../data/exerciseDB';
 import { DIFF_LEVELS, DIFF_LEVEL_META, DOMAINS } from '../../data/types';
+import { getTopic } from '../../data/topics';
 import { useMathStore } from '../../store/mathStore';
 import ExerciseCard from '../exercises/ExerciseCard';
 import NumericInputExercise from '../exercises/NumericInputExercise';
@@ -10,28 +10,12 @@ import ErrorAnalysisExercise from '../exercises/ErrorAnalysisExercise';
 import OERShareButton from '../exercises/OERShareButton';
 import FunctionPlotter from '../stations/FunctionPlotter';
 
-// Topic metadata for known topics
-const TOPIC_META = {
-  '10-quad-funktionen': {
-    title: 'Quadratische Funktionen',
-    domain: 'analysis',
-    grade: 10,
-  },
-};
-
-// Map topicId → exercises array for re-registration
-const TOPIC_EXERCISES = {
-  '10-quad-funktionen': quadExercises,
-};
-
 function ensureRegistered(topicId) {
-  const exs = TOPIC_EXERCISES[topicId];
-  if (exs) exs.forEach(ex => registerExercise(ex));
+  const topic = getTopic(topicId);
+  if (topic?.exercises?.length) {
+    topic.exercises.forEach(ex => registerExercise(ex));
+  }
 }
-
-// Register exercises for known topics at module level
-// (idempotent — registerExercise overwrites by id)
-ensureRegistered('10-quad-funktionen');
 
 function renderExercise(exercise, onComplete) {
   switch (exercise.type) {
@@ -52,6 +36,8 @@ function getAvailableLevels(topicId) {
 }
 
 export default function TopicView({ topicId, onBack }) {
+  const topic = getTopic(topicId);
+
   // Re-register synchronously (handles test clearDB + HMR)
   ensureRegistered(topicId);
 
@@ -60,8 +46,41 @@ export default function TopicView({ topicId, onBack }) {
     ensureRegistered(topicId);
   }, [topicId]);
 
-  const meta = TOPIC_META[topicId] ?? { title: topicId, domain: 'analysis', grade: 10 };
-  const domainMeta = DOMAINS[meta.domain] ?? { label: meta.domain, icon: '📚', color: '#a78bfa' };
+  if (!topic) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        background: 'var(--mp-bg)',
+        color: 'var(--mp-text)',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '1rem',
+        padding: '2rem',
+      }}>
+        <p style={{ fontSize: '1.2rem', color: 'var(--mp-muted)' }}>
+          Topic nicht gefunden: <code>{topicId}</code>
+        </p>
+        <button
+          onClick={onBack}
+          style={{
+            background: 'transparent',
+            border: '1px solid var(--mp-border)',
+            borderRadius: '6px',
+            color: 'var(--mp-muted)',
+            padding: '0.4rem 1rem',
+            cursor: 'pointer',
+            fontSize: '0.9rem',
+          }}
+        >
+          ← Zurück
+        </button>
+      </div>
+    );
+  }
+
+  const domainMeta = DOMAINS[topic.domain] ?? { label: topic.domain, icon: '📚', color: '#a78bfa' };
 
   const availableLevels = getAvailableLevels(topicId);
   const [selectedTab, setSelectedTab] = useState(availableLevels[0] ?? 'basis');
@@ -169,7 +188,7 @@ export default function TopicView({ topicId, onBack }) {
             color: 'var(--mp-text)',
             margin: '0 0 0.6rem',
           }}>
-            {meta.title}
+            {topic.icon} {topic.titleKey}
           </h1>
 
           {/* Progress bar */}
@@ -198,8 +217,8 @@ export default function TopicView({ topicId, onBack }) {
 
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '1.25rem' }}>
 
-        {/* ── Interactive FunctionPlotter (quad-funktionen only) ── */}
-        {topicId === '10-quad-funktionen' && (
+        {/* ── Interactive FunctionPlotter (only when topic has plotter config) ── */}
+        {topic.plotter && (
           <div style={{
             marginBottom: '1.5rem',
             background: 'var(--mp-surface)',
@@ -213,17 +232,13 @@ export default function TopicView({ topicId, onBack }) {
               color: 'var(--mp-primary)',
               marginBottom: '0.75rem',
             }}>
-              🔭 Erkunde die Parabel
+              🔭 {topic.plotter.title}
             </h2>
             <FunctionPlotter
-              functions={[{ expression: 'a * x^2 + b * x + c', color: '#a78bfa', label: 'f(x)' }]}
-              sliders={[
-                { param: 'a', label: 'a (Öffnung)', min: -3, max: 3, step: 0.1, initial: 1 },
-                { param: 'b', label: 'b (Verschiebung)', min: -5, max: 5, step: 0.1, initial: 0 },
-                { param: 'c', label: 'c (y-Achse)', min: -5, max: 5, step: 0.1, initial: 0 },
-              ]}
-              xRange={[-5, 5]}
-              yRange={[-6, 8]}
+              functions={topic.plotter.functions}
+              sliders={topic.plotter.sliders}
+              xRange={topic.plotter.xRange}
+              yRange={topic.plotter.yRange}
             />
           </div>
         )}
