@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { GameProvider, useGame } from './context/GameContext';
 import { I18nProvider } from './i18n/I18nProvider';
 import { useTranslation } from './i18n/useTranslation';
-import { parseRoute } from './lib/router';
+import { parseRoute, navigate } from './lib/router';
+import TopicView from './components/views/TopicView';
+import SingleExerciseView from './components/views/SingleExerciseView';
 import { getModule } from './modules/registry';
 import Layout from './components/Layout';
 import TopicSelector from './components/TopicSelector';
@@ -206,14 +208,35 @@ function RoutePlaceholder({ route }) {
 }
 
 function RouteAwareApp() {
-  const route = parseRoute();
+  const [route, setRoute] = useState(() => parseRoute());
 
-  // New data-driven routes (for Moodle iframe embedding)
-  if (route.view === 'topic' || route.view === 'exercise' || route.view === 'checkpoint') {
+  useEffect(() => {
+    const handler = () => setRoute(parseRoute());
+    window.addEventListener('hashchange', handler);
+    return () => window.removeEventListener('hashchange', handler);
+  }, []);
+
+  if (route.view === 'topic') {
     return (
-      <GameProvider>
-        <RoutePlaceholder route={route} />
-      </GameProvider>
+      <I18nProvider>
+        <GameProvider>
+          <div style={{ background: 'var(--mp-bg)', minHeight: '100vh', color: 'var(--mp-text)' }}>
+            <TopicView topicId={route.topicId} onBack={() => navigate('/')} />
+          </div>
+        </GameProvider>
+      </I18nProvider>
+    );
+  }
+
+  if (route.view === 'exercise') {
+    return (
+      <I18nProvider>
+        <GameProvider>
+          <div style={{ background: 'var(--mp-bg)', minHeight: '100vh', color: 'var(--mp-text)' }}>
+            <SingleExerciseView exerciseId={route.exerciseId} onBack={() => navigate('/')} />
+          </div>
+        </GameProvider>
+      </I18nProvider>
     );
   }
 
