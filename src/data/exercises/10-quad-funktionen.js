@@ -1,0 +1,131 @@
+export const exercises = [
+  // BASIS (AFB I)
+  {
+    id: 'quad-basis-001', topicId: '10-quad-funktionen', type: 'multiple-choice', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 2,
+    data: {
+      questionText: 'Welche Funktionsgleichung beschreibt eine nach oben geoeffnete Parabel?',
+      options: [
+        { id: 'a', text: 'f(x) = 2x² + 3', correct: true },
+        { id: 'b', text: 'f(x) = -x² + 1', correct: false },
+        { id: 'c', text: 'f(x) = 3x + 2', correct: false },
+        { id: 'd', text: 'f(x) = 0.5x² - 4', correct: true },
+      ],
+    },
+    hintKeys: ['Eine Parabel oeffnet nach oben, wenn der Koeffizient vor x² positiv ist.'],
+    solutionKey: 'f(x) = 2x² + 3 und f(x) = 0.5x² - 4 haben beide einen positiven Koeffizienten vor x², also oeffnen sie nach oben.',
+    tags: ['parabel', 'oeffnung'],
+  },
+  {
+    id: 'quad-basis-002', topicId: '10-quad-funktionen', type: 'numeric-input', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 2,
+    data: { questionText: 'Bestimme den Scheitelpunkt von f(x) = (x - 3)² + 2. Gib die y-Koordinate des Scheitels an.', correctValue: 2, tolerance: 0.01 },
+    hintKeys: ['Die Scheitelpunktform ist f(x) = a(x - d)² + e. Der Scheitel liegt bei S(d|e).'],
+    solutionKey: 'f(x) = (x - 3)² + 2 ist in Scheitelpunktform. Der Scheitel liegt bei S(3|2). Die y-Koordinate ist 2.',
+    tags: ['scheitelpunkt', 'scheitelpunktform'],
+  },
+  {
+    id: 'quad-basis-003', topicId: '10-quad-funktionen', type: 'numeric-input', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 3,
+    data: { questionText: 'Berechne f(2) fuer f(x) = x² - 3x + 1.', correctValue: -1, tolerance: 0.01 },
+    hintKeys: ['Setze x = 2 in die Funktion ein: f(2) = 2² - 3·2 + 1'],
+    solutionKey: 'f(2) = 4 - 6 + 1 = -1',
+    tags: ['funktionswert'],
+  },
+  {
+    id: 'quad-basis-004', topicId: '10-quad-funktionen', type: 'numeric-input', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 3,
+    data: { questionText: 'Bestimme die Nullstellen von f(x) = x² - 4. Gib die positive Nullstelle an.', correctValue: 2, tolerance: 0.01 },
+    hintKeys: ['Setze f(x) = 0 und loese x² = 4.'],
+    solutionKey: 'x² - 4 = 0 → x² = 4 → x₁ = 2, x₂ = -2. Die positive Nullstelle ist x = 2.',
+    tags: ['nullstellen'],
+  },
+
+  // STANDARD (AFB II)
+  {
+    id: 'quad-std-001', topicId: '10-quad-funktionen', type: 'numeric-input', diffLevel: 'standard',
+    competencies: ['kommunikation', 'kritisches-denken'], points: 10, timeEstimate: 5,
+    data: { questionText: 'Bestimme die Nullstellen von f(x) = x² + 2x - 8 mit der p-q-Formel. Gib die groessere Nullstelle an.', correctValue: 2, tolerance: 0.01 },
+    hintKeys: ['Bringe die Gleichung auf die Form x² + px + q = 0. Hier: p = 2, q = -8.', 'Die p-q-Formel: x₁,₂ = -p/2 ± √((p/2)² - q)'],
+    solutionKey: 'x² + 2x - 8 = 0 → p = 2, q = -8 → x = -1 ± √(1+8) = -1 ± 3 → x₁ = 2, x₂ = -4',
+    tags: ['pq-formel', 'nullstellen', 'abiturrelevant'],
+  },
+  {
+    id: 'quad-std-002', topicId: '10-quad-funktionen', type: 'numeric-input', diffLevel: 'standard',
+    competencies: ['kommunikation'], points: 10, timeEstimate: 5,
+    data: { questionText: 'Wandle f(x) = x² - 6x + 5 in Scheitelpunktform um. Gib die x-Koordinate des Scheitels an.', correctValue: 3, tolerance: 0.01 },
+    hintKeys: ['Quadratische Ergaenzung: x² - 6x + 5 = (x² - 6x + 9) - 9 + 5', 'Die Klammer (x² - 6x + 9) ist (x - 3)²'],
+    solutionKey: 'f(x) = x² - 6x + 5 = (x - 3)² - 4. Scheitel bei S(3|-4). Die x-Koordinate ist 3.',
+    tags: ['quadratische-ergaenzung', 'scheitelpunktform', 'abiturrelevant'],
+  },
+  {
+    id: 'quad-std-003', topicId: '10-quad-funktionen', type: 'numeric-input', diffLevel: 'standard',
+    competencies: ['kritisches-denken'], points: 10, timeEstimate: 5,
+    data: { questionText: 'Wie viele Nullstellen hat f(x) = x² - 4x + 5? Gib die Anzahl an (0, 1, oder 2).', correctValue: 0, tolerance: 0 },
+    hintKeys: ['Berechne die Diskriminante D = (p/2)² - q.', 'Wenn D < 0, hat die Funktion keine reellen Nullstellen.'],
+    solutionKey: 'D = (-4/2)² - 5 = 4 - 5 = -1 < 0. Die Funktion hat keine reellen Nullstellen (0 Stueck).',
+    tags: ['diskriminante', 'nullstellen'],
+  },
+  {
+    id: 'quad-std-004', topicId: '10-quad-funktionen', type: 'multiple-choice', diffLevel: 'standard',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 10, timeEstimate: 4,
+    data: {
+      questionText: 'Welche Aussagen ueber f(x) = -(x + 1)² + 4 sind korrekt?',
+      options: [
+        { id: 'a', text: 'Die Parabel oeffnet nach unten', correct: true },
+        { id: 'b', text: 'Der Scheitel liegt bei S(-1|4)', correct: true },
+        { id: 'c', text: 'Die Funktion hat keine Nullstellen', correct: false },
+        { id: 'd', text: 'Der Scheitel ist ein Minimum', correct: false },
+      ],
+    },
+    hintKeys: ['Das Vorzeichen vor der Klammer bestimmt die Oeffnung. Bei negativem Vorzeichen ist der Scheitel ein Maximum.'],
+    solutionKey: 'a) Richtig (negatives a). b) Richtig (d=-1, e=4). c) Falsch (Scheitel ueber x-Achse → 2 Nullstellen). d) Falsch (Maximum, nicht Minimum).',
+    tags: ['scheitelpunktform', 'eigenschaften'],
+  },
+
+  // ERWEITERT (AFB III)
+  {
+    id: 'quad-erw-001', topicId: '10-quad-funktionen', type: 'numeric-input', diffLevel: 'erweitert',
+    competencies: ['kreativitaet', 'kommunikation'], points: 15, timeEstimate: 8,
+    contextKey: 'Ein Fussball wird abgeschossen. Die Flughoehe h(t) = -5t² + 20t beschreibt die Hoehe in Metern nach t Sekunden.',
+    data: { questionText: 'Bestimme die maximale Flughoehe des Fussballs (in Metern).', correctValue: 20, tolerance: 0.1 },
+    hintKeys: ['Die maximale Hoehe ist der Scheitel der Parabel.', 'Scheitelpunkt: t_s = -b/(2a) = -20/(2·(-5)) = 2. Dann h(2) einsetzen.'],
+    solutionKey: 'h(t) = -5t² + 20t. Scheitel bei t = -20/(2·(-5)) = 2. h(2) = -5·4 + 40 = 20 Meter.',
+    tags: ['sachkontext', 'modellierung', 'abiturrelevant'],
+  },
+  {
+    id: 'quad-erw-002', topicId: '10-quad-funktionen', type: 'numeric-input', diffLevel: 'erweitert',
+    competencies: ['kreativitaet', 'kritisches-denken'], points: 15, timeEstimate: 10,
+    contextKey: 'Ein Geschaeft verkauft T-Shirts. Bei einem Preis von p Euro betraegt der Gewinn G(p) = -2p² + 60p - 200.',
+    data: { questionText: 'Bei welchem Preis (in Euro) ist der Gewinn maximal?', correctValue: 15, tolerance: 0.1 },
+    hintKeys: ['Der maximale Gewinn liegt im Scheitel der Parabel.', 'p_max = -60 / (2·(-2)) = 15'],
+    solutionKey: 'G(p) = -2p² + 60p - 200. Scheitel: p = -60/(2·(-2)) = 15 Euro. G(15) = -2·225 + 900 - 200 = 250 Euro Gewinn.',
+    tags: ['sachkontext', 'optimierung', 'abiturrelevant'],
+  },
+  {
+    id: 'quad-erw-003', topicId: '10-quad-funktionen', type: 'error-analysis', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 15, timeEstimate: 6,
+    data: {
+      questionText: 'Finde den Fehler im folgenden Rechenweg zur Bestimmung der Nullstellen von f(x) = x² - 6x + 8:',
+      steps: [
+        { content: 'x² - 6x + 8 = 0', hasError: false },
+        { content: 'p = -6, q = 8', hasError: false },
+        { content: 'x = 3 ± √(9 - 8)', hasError: false },
+        { content: 'x = 3 ± √1 = 3 ± 1', hasError: false },
+        { content: 'x₁ = 4, x₂ = 3', hasError: true, errorExplanation: 'x₂ = 3 - 1 = 2 (nicht 3). Richtig: x₁ = 4, x₂ = 2.' },
+      ],
+    },
+    hintKeys: ['Pruefe jeden Rechenschritt sorgfaeltig. Kontrolliere besonders die Subtraktion.'],
+    solutionKey: 'Der Fehler liegt im letzten Schritt: x₂ = 3 - 1 = 2, nicht 3.',
+    tags: ['fehleranalyse', '4k-kritisches-denken'],
+  },
+  {
+    id: 'quad-erw-004', topicId: '10-quad-funktionen', type: 'numeric-input', diffLevel: 'erweitert',
+    competencies: ['kreativitaet', 'kommunikation'], points: 15, timeEstimate: 8,
+    contextKey: 'Eine Bruecke hat die Form einer Parabel. Sie ist 20 m breit und 5 m hoch.',
+    data: { questionText: 'Stelle die Funktionsgleichung auf (Scheitel oben, symmetrisch). Gib den Koeffizienten a an (als Dezimalzahl).', correctValue: -0.05, tolerance: 0.005 },
+    hintKeys: ['Lege den Scheitel in den Ursprung: f(x) = ax². Die Bruecke reicht von x = -10 bis x = 10.', 'Am Rand: f(10) = -5 (die Bruecke endet 5m tiefer als der Scheitel).'],
+    solutionKey: 'Scheitel bei (0|5), Rand bei (10|0): f(x) = a·x² + 5. f(10) = 0 → 100a + 5 = 0 → a = -0.05.',
+    tags: ['sachkontext', 'modellierung'],
+  },
+];
