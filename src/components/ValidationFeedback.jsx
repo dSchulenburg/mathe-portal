@@ -4,14 +4,14 @@ export default function ValidationFeedback({ feedback, isComplete, onCheck, onNe
   return (
     <AnimatePresence>
       <motion.div
-        className={`validation-bar ${feedback?.type === 'success' ? 'validation-success' : ''} ${feedback?.type === 'error' ? 'validation-error' : ''}`}
+        className={`validation-bar ${feedback?.type === 'success' ? 'validation-success' : ''} ${feedback?.type === 'error' ? 'validation-error' : ''} ${feedback?.type === 'progress' ? 'validation-progress' : ''}`}
         initial={{ y: 100 }}
         animate={{ y: 0 }}
         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
       >
         {feedback && (
           <div className="validation-message">
-            {feedback.type === 'success' ? '✅' : '❌'} {feedback.message}
+            {feedback.type === 'success' ? '✅' : feedback.type === 'progress' ? '👍' : '❌'} {feedback.message}
           </div>
         )}
         <div className="validation-actions">

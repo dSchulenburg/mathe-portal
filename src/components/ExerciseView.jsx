@@ -55,8 +55,12 @@ export default function ExerciseView({ moduleId, levelId, exerciseId, onComplete
           payload: { moduleId, exerciseId: exercise.id, stars, baseXP: exercise.xp?.base || 10 }
         });
       } else {
-        setFeedback({ type: 'error', message: result.message || 'Nicht ganz richtig. Versuch es nochmal!' });
-        if (newAttempts >= 2) setShowHint(true);
+        // Check if partial progress (some steps correct, not all)
+        const correctSteps = (result.stepResults || []).filter(r => r === true).length;
+        const hasPartialProgress = correctSteps > 0 && result.stepResults.some(r => r !== true);
+        const feedbackType = hasPartialProgress ? 'progress' : 'error';
+        setFeedback({ type: feedbackType, message: result.message || 'Nicht ganz richtig. Versuch es nochmal!' });
+        if (newAttempts >= 2 && !hasPartialProgress) setShowHint(true);
       }
     }
   }, [answers, attempts, exercise, moduleId, dispatch]);

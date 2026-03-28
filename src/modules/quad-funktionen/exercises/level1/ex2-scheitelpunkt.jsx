@@ -89,12 +89,27 @@ const exercise = {
     const complete = results.every(r => r === true);
     const doneCount = results.filter(r => r === true).length;
 
+    // Find current step (first incomplete)
+    const currentStep = results.findIndex(r => r !== true);
+    const currentStepJustCompleted = currentStep === -1 || results[currentStep] === true;
+
+    let message;
+    if (complete) {
+      message = null; // ExerciseView handles success
+    } else if (doneCount > 0 && currentStep >= 0 && results[currentStep] === false) {
+      // Current step wrong
+      message = 'Nicht ganz. Schau genau auf das Koordinatensystem!';
+    } else if (doneCount > 0) {
+      // Previous step correct, moving to next
+      message = `Richtig! Weiter zu Parabel ${doneCount + 1} von ${parabolas.length}.`;
+    } else {
+      message = 'Schau genau auf das Koordinatensystem!';
+    }
+
     return {
       complete,
       stepResults: results,
-      message: complete
-        ? null
-        : `${doneCount} von ${parabolas.length} Scheitelpunkten richtig. Schau genau auf das Koordinatensystem!`,
+      message,
     };
   },
 };
