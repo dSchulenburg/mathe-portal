@@ -294,9 +294,11 @@ export default function FunctionPlotter({
             <div key={s.param} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <label
                 htmlFor={`slider-${s.param}`}
-                style={{ color: THEME.axisText, fontSize: '13px', minWidth: '160px' }}
+                style={{ color: THEME.axisText, fontSize: '13px', minWidth: '160px', display: 'flex', gap: '4px', alignItems: 'center' }}
               >
-                {s.label ?? s.param}: <strong style={{ color: 'var(--mp-text)' }}>{params[s.param]}</strong>
+                <span>{s.label ?? s.param}</span>
+                <span>:</span>
+                <strong style={{ color: 'var(--mp-text)' }}>{params[s.param]}</strong>
               </label>
               <input
                 id={`slider-${s.param}`}
