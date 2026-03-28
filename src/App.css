@@ -77,7 +77,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0090c7;
+  background: var(--mp-secondary);
 }
 
 /* --- App Shell --- */
@@ -326,7 +326,7 @@ body {
 }
 
 .level-stars .star-earned {
-  color: #fbbf24;
+  color: var(--mp-accent);
 }
 
 .level-stars .star-empty {
@@ -854,7 +854,7 @@ input[type='range']::-moz-range-thumb {
 }
 
 .star.earned {
-  color: #fbbf24;
+  color: var(--mp-accent);
   text-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
 }
 
