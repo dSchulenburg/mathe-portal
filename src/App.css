@@ -356,6 +356,7 @@ body {
   grid-template-columns: 1fr;
   gap: 1.5rem;
   animation: fadeIn 0.3s ease;
+  padding-bottom: 100px; /* Space for fixed validation bar */
 }
 
 .exercise-sidebar {
@@ -789,10 +790,15 @@ input[type='range']::-moz-range-thumb {
   transition: all 0.2s ease;
 }
 
-.btn-check:hover {
+.btn-check:hover:not(:disabled) {
   background: var(--mp-secondary);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3);
+}
+
+.btn-check:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .btn-next {
