@@ -5,16 +5,35 @@
 
 /* --- CSS Variables --- */
 :root {
-  --bswi-navy: #003366;
-  --bswi-lightblue: #00A3E0;
-  --bswi-yellow: #B5E505;
-  --bswi-gray: #333333;
-  --bswi-lightgray: #F5F5F5;
-  --bswi-success: #22c55e;
-  --bswi-error: #ef4444;
-  --bswi-warning: #f59e0b;
+  /* Cosmic Math Branding */
+  --mp-bg: #0f0d1a;
+  --mp-surface: #1a1525;
+  --mp-surface-hover: #231e30;
+
+  --mp-primary: #a78bfa;
+  --mp-secondary: #f472b6;
+  --mp-accent: #fbbf24;
+
+  --mp-success: #34d399;
+  --mp-error: #fb7185;
+  --mp-warning: #fbbf24;
+
+  --mp-text: #f0edf6;
+  --mp-muted: #9890b0;
+
+  --mp-border: rgba(167, 139, 250, 0.2);
   --card-radius: 12px;
-  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --card-shadow: 0 4px 20px rgba(15, 13, 26, 0.4);
+
+  /* Legacy aliases for components not yet migrated */
+  --bswi-navy: var(--mp-bg);
+  --bswi-lightblue: var(--mp-primary);
+  --bswi-yellow: var(--mp-accent);
+  --bswi-gray: var(--mp-text);
+  --bswi-lightgray: var(--mp-surface);
+  --bswi-success: var(--mp-success);
+  --bswi-error: var(--mp-error);
+  --bswi-warning: var(--mp-warning);
 }
 
 /* --- Global Reset --- */
@@ -31,8 +50,8 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #001a33 0%, #003366 50%, #004080 100%);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #0f0d1a 0%, #1a1525 50%, #0f0d1a 100%);
   background-attachment: fixed;
   color: var(--bswi-gray);
   min-height: 100vh;
