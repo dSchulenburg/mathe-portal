@@ -12,8 +12,9 @@ import LevelComplete from './components/LevelComplete';
 import BadgeWall from './components/BadgeWall';
 import ProfileCard from './components/ProfileCard';
 
-// Side-effect: registers quad-funktionen module + exercises
+// Side-effect: registers modules + exercises
 import './modules/quad-funktionen';
+import './modules/differentialrechnung';
 
 const VIEWS = {
   TOPICS: 'topics',
