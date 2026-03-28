@@ -143,12 +143,12 @@ export const exercise = {
   component: D2EX4Component,
   validate: (answers) => {
     // MC validations
-    const mc1 = validateMultipleChoice(answers.mc1 ? [answers.mc1] : [], ['potenz']);
-    const mc2 = validateMultipleChoice(answers.mc2 ? [answers.mc2] : [], ['summe']);
-    const mc3 = validateMultipleChoice(answers.mc3 ? [answers.mc3] : [], ['faktor']);
+    const mc1 = !answers.mc1 ? null : validateMultipleChoice(answers.mc1 ? [answers.mc1] : [], ['potenz']);
+    const mc2 = !answers.mc2 ? null : validateMultipleChoice(answers.mc2 ? [answers.mc2] : [], ['summe']);
+    const mc3 = !answers.mc3 ? null : validateMultipleChoice(answers.mc3 ? [answers.mc3] : [], ['faktor']);
     // Calc validations
-    const c1 = matchesAccepted(answers.c1, CALC_PROBLEMS[0].accepted);
-    const c2 = matchesAccepted(answers.c2, CALC_PROBLEMS[1].accepted);
+    const c1 = (!answers.c1 || answers.c1 === '') ? null : matchesAccepted(answers.c1, CALC_PROBLEMS[0].accepted);
+    const c2 = (!answers.c2 || answers.c2 === '') ? null : matchesAccepted(answers.c2, CALC_PROBLEMS[1].accepted);
 
     const stepResults = [mc1, mc2, mc3, c1, c2];
     const complete = stepResults.every(Boolean);

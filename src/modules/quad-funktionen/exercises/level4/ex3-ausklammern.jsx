@@ -67,10 +67,10 @@ const exercise = {
   component: Ex3Component,
   validate: (answers) => {
     const results = [
-      validateFactor(answers.factor),
-      validateBracket(answers.bracket),
-      answers.x1 !== undefined && answers.x1 !== '' ? validateNumber(answers.x1, expected.x1) : false,
-      answers.x2 !== undefined && answers.x2 !== '' ? validateNumber(answers.x2, expected.x2) : false,
+      answers.factor ? validateFactor(answers.factor) : null,
+      answers.bracket ? validateBracket(answers.bracket) : null,
+      answers.x1 !== undefined && answers.x1 !== '' ? validateNumber(answers.x1, expected.x1) : null,
+      answers.x2 !== undefined && answers.x2 !== '' ? validateNumber(answers.x2, expected.x2) : null,
     ];
     const complete = allStepsComplete(results);
     return {

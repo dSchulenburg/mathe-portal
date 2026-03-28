@@ -76,7 +76,7 @@ const exercise = {
     const results = targets.map((t, i) => {
       const vx = answers[`q${i + 1}_vx`];
       const vy = answers[`q${i + 1}_vy`];
-      if (vx === undefined || vy === undefined) return false;
+      if (vx === undefined || vy === undefined) return null;
       const xOk = validateNumber(vx, t.x, 0.3);
       const yOk = validateNumber(vy, t.y, 0.3);
       return xOk && yOk;

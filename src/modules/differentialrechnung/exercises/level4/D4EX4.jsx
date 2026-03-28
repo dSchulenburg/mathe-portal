@@ -146,13 +146,13 @@ export const exercise = {
   ],
   component: D4EX4Component,
   validate: (answers) => {
-    const dfOk = validateDf(answers.df);
-    const zerosOk = validateZeros(answers.zeros);
-    const y0Ok = validateNumber(answers.y0, -1, 0.1);
-    const y2Ok = validateNumber(answers.y2, 3, 0.1);
+    const dfOk = (!answers.df || answers.df === '') ? null : validateDf(answers.df);
+    const zerosOk = (!answers.zeros || answers.zeros === '') ? null : validateZeros(answers.zeros);
+    const y0Ok = (!answers.y0 && answers.y0 !== 0) ? null : validateNumber(answers.y0, -1, 0.1);
+    const y2Ok = (!answers.y2 && answers.y2 !== 0) ? null : validateNumber(answers.y2, 3, 0.1);
     // x=0 is minimum (f' changes + to -... actually for -x^3+3x^2-1 at x=0: f''=-6x+6, f''(0)=6>0 → minimum)
-    const type0Ok = answers.type0 === 'minimum';
-    const type2Ok = answers.type2 === 'maximum';
+    const type0Ok = answers.type0 === undefined || answers.type0 === null ? null : answers.type0 === 'minimum';
+    const type2Ok = answers.type2 === undefined || answers.type2 === null ? null : answers.type2 === 'maximum';
 
     const stepResults = [dfOk, zerosOk, y0Ok, y2Ok, type0Ok, type2Ok];
     const complete = stepResults.every(Boolean);

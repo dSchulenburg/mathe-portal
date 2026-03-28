@@ -96,18 +96,24 @@ export const exercise = {
   ],
   component: D4EX1Component,
   validate: (answers) => {
-    const dfOk = validateStep(answers.df, ACCEPTED_DF);
-    const xsqOk = validateNumber(answers.xsq, 1, 0.05);
+    const dfOk = (!answers.df || answers.df === '') ? null : validateStep(answers.df, ACCEPTED_DF);
+    const xsqOk = (!answers.xsq && answers.xsq !== 0) ? null : validateNumber(answers.xsq, 1, 0.05);
 
     // x1 = -1, x2 = 1 (or swapped)
-    const x1Val = parseFloat((answers.x1 || '').replace(',', '.'));
-    const x2Val = parseFloat((answers.x2 || '').replace(',', '.'));
-    const xPair = [x1Val, x2Val].sort((a, b) => a - b);
-    const x1Ok = Math.abs(xPair[0] - (-1)) < 0.1;
-    const x2Ok = Math.abs(xPair[1] - 1) < 0.1;
+    let x1Ok, x2Ok;
+    if ((!answers.x1 && answers.x1 !== 0) || (!answers.x2 && answers.x2 !== 0)) {
+      x1Ok = (!answers.x1 && answers.x1 !== 0) ? null : false;
+      x2Ok = (!answers.x2 && answers.x2 !== 0) ? null : false;
+    } else {
+      const x1Val = parseFloat((answers.x1 || '').replace(',', '.'));
+      const x2Val = parseFloat((answers.x2 || '').replace(',', '.'));
+      const xPair = [x1Val, x2Val].sort((a, b) => a - b);
+      x1Ok = Math.abs(xPair[0] - (-1)) < 0.1;
+      x2Ok = Math.abs(xPair[1] - 1) < 0.1;
+    }
 
-    const y1Ok = validateNumber(answers.y1, 2, 0.1);
-    const y2Ok = validateNumber(answers.y2, -2, 0.1);
+    const y1Ok = (!answers.y1 && answers.y1 !== 0) ? null : validateNumber(answers.y1, 2, 0.1);
+    const y2Ok = (!answers.y2 && answers.y2 !== 0) ? null : validateNumber(answers.y2, -2, 0.1);
 
     const stepResults = [dfOk, xsqOk, x1Ok, x2Ok, y1Ok, y2Ok];
     const complete = stepResults.every(Boolean);

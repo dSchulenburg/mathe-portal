@@ -57,7 +57,7 @@ const exercise = {
   validate: (answers) => {
     const results = steps.map(s => {
       const val = answers[s.key];
-      if (val === undefined || val === '') return false;
+      if (val === undefined || val === '') return null;
       return validateNumber(val, expected[s.key], 0.1);
     });
 

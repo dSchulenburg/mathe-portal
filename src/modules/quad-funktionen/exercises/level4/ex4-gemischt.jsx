@@ -134,13 +134,13 @@ const exercise = {
 
       const methodCorrect = answers[methodKey]
         ? validateMultipleChoice(answers[methodKey], prob.correctMethod)
-        : false;
+        : null;
 
       // Accept x1 and x2 in either order
       const x1Val = answers[x1Key];
       const x2Val = answers[x2Key];
-      let x1Correct = false;
-      let x2Correct = false;
+      let x1Correct = null;
+      let x2Correct = null;
 
       if (x1Val !== undefined && x1Val !== '' && x2Val !== undefined && x2Val !== '') {
         // Check both orderings

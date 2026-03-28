@@ -100,8 +100,8 @@ export const exercise = {
   ],
   component: D4EX3Component,
   validate: (answers) => {
-    const risingOk = validateMonotony(answers.rising, true);
-    const fallingOk = validateMonotony(answers.falling, false);
+    const risingOk = (!answers.rising || answers.rising === '') ? null : validateMonotony(answers.rising, true);
+    const fallingOk = (!answers.falling || answers.falling === '') ? null : validateMonotony(answers.falling, false);
     const stepResults = [risingOk, fallingOk];
     const complete = stepResults.every(Boolean);
     const doneCount = stepResults.filter(Boolean).length;

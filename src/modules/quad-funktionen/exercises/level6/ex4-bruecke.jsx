@@ -88,7 +88,7 @@ const exercise = {
   validate: (answers) => {
     const keys = steps.map(s => s.key);
     const results = keys.map(key => {
-      if (answers[key] === undefined || answers[key] === '') return false;
+      if (answers[key] === undefined || answers[key] === '') return null;
 
       // x1 and x2 can be in either order
       if (key === 'x1' || key === 'x2') {

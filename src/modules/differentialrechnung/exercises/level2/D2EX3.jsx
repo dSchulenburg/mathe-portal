@@ -81,10 +81,10 @@ export const exercise = {
   component: D2EX3Component,
   validate: (answers) => {
     const stepResults = [
-      validateStep(answers.s1, ACCEPTED.s1),
-      validateStep(answers.s2, ACCEPTED.s2),
-      validateStep(answers.s3, ACCEPTED.s3),
-      validateStep(answers.s4, ACCEPTED.s4),
+      (!answers.s1 || answers.s1 === '') ? null : validateStep(answers.s1, ACCEPTED.s1),
+      (!answers.s2 || answers.s2 === '') ? null : validateStep(answers.s2, ACCEPTED.s2),
+      (!answers.s3 || answers.s3 === '') ? null : validateStep(answers.s3, ACCEPTED.s3),
+      (!answers.s4 || answers.s4 === '') ? null : validateStep(answers.s4, ACCEPTED.s4),
     ];
     const complete = stepResults.every(Boolean);
     const doneCount = stepResults.filter(Boolean).length;

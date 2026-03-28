@@ -123,10 +123,10 @@ export const exercise = {
   ],
   component: D3EX4Component,
   validate: (answers) => {
-    const mc1 = validateMultipleChoice(answers.mc1 ? [answers.mc1] : [], ['produkt']);
-    const mc2 = validateMultipleChoice(answers.mc2 ? [answers.mc2] : [], ['kette']);
-    const mc3 = validateMultipleChoice(answers.mc3 ? [answers.mc3] : [], ['quotient']);
-    const calc = matchesAccepted(answers.calc, CALC_ACCEPTED);
+    const mc1 = !answers.mc1 ? null : validateMultipleChoice(answers.mc1 ? [answers.mc1] : [], ['produkt']);
+    const mc2 = !answers.mc2 ? null : validateMultipleChoice(answers.mc2 ? [answers.mc2] : [], ['kette']);
+    const mc3 = !answers.mc3 ? null : validateMultipleChoice(answers.mc3 ? [answers.mc3] : [], ['quotient']);
+    const calc = (!answers.calc || answers.calc === '') ? null : matchesAccepted(answers.calc, CALC_ACCEPTED);
 
     const stepResults = [mc1, mc2, mc3, calc];
     const complete = stepResults.every(Boolean);

@@ -113,6 +113,8 @@ const exercise = {
   component: Ex3Component,
   validate: (answers) => {
     const results = questions.map((q, i) => {
+      if (answers[`q${i + 1}_dir`] === undefined || answers[`q${i + 1}_dir`] === null) return null;
+      if (answers[`q${i + 1}_width`] === undefined || answers[`q${i + 1}_width`] === null) return null;
       const dirCorrect = answers[`q${i + 1}_dir`] === q.direction;
       const widthCorrect = answers[`q${i + 1}_width`] === q.width;
       return dirCorrect && widthCorrect;

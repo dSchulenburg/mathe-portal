@@ -88,7 +88,7 @@ const exercise = {
   validate: (answers) => {
     const keys = steps.map(s => s.key);
     const results = keys.map(key => {
-      if (answers[key] === undefined || answers[key] === '') return false;
+      if (answers[key] === undefined || answers[key] === '') return null;
       if (key === 't_boden') {
         // Accept 4.09 to 4.1
         return validateNumber(answers[key], expected[key], 0.1);

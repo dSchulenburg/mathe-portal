@@ -90,7 +90,7 @@ const exercise = {
   validate: (answers) => {
     const results = problems.map((p, i) => {
       const input = answers[`k_${i}`];
-      if (input === undefined || input === '') return false;
+      if (input === undefined || input === '') return null;
       return p.validate(input);
     });
 

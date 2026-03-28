@@ -99,6 +99,9 @@ const exercise = {
   component: Ex1Component,
   validate: (answers) => {
     const results = problems.map((p, i) => {
+      if (!answers[`q${i + 1}_a`] && answers[`q${i + 1}_a`] !== 0) return null;
+      if (!answers[`q${i + 1}_b`] && answers[`q${i + 1}_b`] !== 0) return null;
+      if (!answers[`q${i + 1}_c`] && answers[`q${i + 1}_c`] !== 0) return null;
       const aOk = validateNumber(answers[`q${i + 1}_a`], p.a, 0.1);
       const bOk = validateNumber(answers[`q${i + 1}_b`], p.b, 0.1);
       const cOk = validateNumber(answers[`q${i + 1}_c`], p.c, 0.1);

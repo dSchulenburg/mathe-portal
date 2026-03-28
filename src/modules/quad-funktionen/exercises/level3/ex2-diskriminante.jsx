@@ -142,10 +142,10 @@ const exercise = {
 
       const dCorrect = answers[dKey] !== undefined && answers[dKey] !== ''
         ? validateNumber(answers[dKey], expectedValues[i].D, 0.1)
-        : false;
+        : null;
       const solCorrect = answers[solKey]
         ? validateMultipleChoice(answers[solKey], expectedValues[i].solutions)
-        : false;
+        : null;
 
       results.push(dCorrect, solCorrect);
       if (!dCorrect || !solCorrect) allCorrect = false;

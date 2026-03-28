@@ -86,13 +86,11 @@ export const exercise = {
   ],
   component: D1EX3Component,
   validate: (answers) => {
-    const r1 = validateStep1(answers.s1);
+    const r1 = (!answers.s1 || answers.s1 === '') ? null : validateStep1(answers.s1);
     // Step 2: accept "2x+h" (after dividing by h)
-    const norm2 = normalizeExpression(answers.s2 || '');
-    const r2 = norm2 === '2x+h' || norm2 === 'h+2x';
+    const r2 = (!answers.s2 || answers.s2 === '') ? null : (() => { const norm2 = normalizeExpression(answers.s2); return norm2 === '2x+h' || norm2 === 'h+2x'; })();
     // Step 3: accept "2x"
-    const norm3 = normalizeExpression(answers.s3 || '');
-    const r3 = norm3 === '2x';
+    const r3 = (!answers.s3 || answers.s3 === '') ? null : normalizeExpression(answers.s3) === '2x';
     const stepResults = [r1, r2, r3];
     const complete = stepResults.every(Boolean);
     const doneCount = stepResults.filter(Boolean).length;

@@ -90,7 +90,7 @@ export const exercise = {
   ],
   component: D2EX1Component,
   validate: (answers) => {
-    const stepResults = PROBLEMS.map(prob => matchesAccepted(answers[prob.key], prob.accepted));
+    const stepResults = PROBLEMS.map(prob => (!answers[prob.key] || answers[prob.key] === '') ? null : matchesAccepted(answers[prob.key], prob.accepted));
     const complete = stepResults.every(Boolean);
     const doneCount = stepResults.filter(Boolean).length;
     return {

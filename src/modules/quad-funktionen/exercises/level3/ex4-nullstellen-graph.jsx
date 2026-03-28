@@ -76,7 +76,7 @@ const exercise = {
     const results = keys.map(key =>
       answers[key] !== undefined && answers[key] !== ''
         ? validateNumber(answers[key], expected[key])
-        : false
+        : null
     );
     const complete = allStepsComplete(results);
     return {

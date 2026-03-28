@@ -156,6 +156,7 @@ const exercise = {
     const results = problems.map((p, i) => {
       const x1 = answers[`x1_${i}`];
       const x2 = answers[`x2_${i}`];
+      if (x1 === undefined || x1 === '' || x2 === undefined || x2 === '') return null;
       // We only check solutions, any method is accepted
       return solutionsCorrect(x1, x2, p.x1, p.x2);
     });

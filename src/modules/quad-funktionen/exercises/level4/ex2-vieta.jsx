@@ -108,10 +108,10 @@ const exercise = {
 
       const pCorrect = answers[pKey] !== undefined && answers[pKey] !== ''
         ? validateNumber(answers[pKey], prob.expectedP, 0.01)
-        : false;
+        : null;
       const qCorrect = answers[qKey] !== undefined && answers[qKey] !== ''
         ? validateNumber(answers[qKey], prob.expectedQ, 0.01)
-        : false;
+        : null;
 
       results.push(pCorrect, qCorrect);
       if (!pCorrect || !qCorrect) allCorrect = false;

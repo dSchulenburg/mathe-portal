@@ -13,10 +13,12 @@ const equations = [
 
 function checkSolution(answers, eq, i) {
   if (eq.singleSolution) {
+    if (!answers[`x_${i}`] && answers[`x_${i}`] !== 0) return null;
     return validateNumber(answers[`x_${i}`], eq.solutions[0], 0.1);
   }
   const a1 = answers[`x1_${i}`];
   const a2 = answers[`x2_${i}`];
+  if ((a1 === undefined || a1 === '') || (a2 === undefined || a2 === '')) return null;
   const fwd = validateNumber(a1, eq.solutions[0], 0.1) && validateNumber(a2, eq.solutions[1], 0.1);
   const rev = validateNumber(a1, eq.solutions[1], 0.1) && validateNumber(a2, eq.solutions[0], 0.1);
   return fwd || rev;

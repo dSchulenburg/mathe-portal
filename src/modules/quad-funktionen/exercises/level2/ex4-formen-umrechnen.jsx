@@ -95,6 +95,7 @@ const exercise = {
   component: Ex4Component,
   validate: (answers) => {
     const results = problems.map(p => {
+      if (p.fields.some(f => !answers[f.key] && answers[f.key] !== 0)) return null;
       return p.fields.every(f => validateNumber(answers[f.key], f.expected, 0.1));
     });
 
