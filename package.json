@@ -1,0 +1,25 @@
+{
+  "name": "mathe-portal",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Mathe-Portal — Mathematik, die universelle Sprache. Interaktive Übungen als Open Educational Resources.",
+  "homepage": "https://lernmodule.dirk-schulenburg.net/mathe-portal/",
+  "license": "CC-BY-SA-4.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.3",
+    "framer-motion": "^12.0.0",
+    "katex": "^0.16.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.0"
+  }
+}
