@@ -31,7 +31,7 @@ export default function LevelMap({ moduleId, levels, accentColor, onSelectLevel 
             style={{ cursor: unlocked ? 'pointer' : 'default' }}
           >
             {!unlocked && <div className="lock-overlay">🔒</div>}
-            <div className="level-number" style={{ background: unlocked ? color : '#999' }}>
+            <div className="level-number" style={{ background: unlocked ? color : 'var(--mp-muted)' }}>
               {level.id}
             </div>
             <div className="level-icon">{level.icon}</div>
