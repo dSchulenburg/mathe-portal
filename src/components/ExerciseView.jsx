@@ -118,14 +118,14 @@ export default function ExerciseView({ moduleId, levelId, exerciseId, onComplete
             {renderExerciseContent()}
           </motion.div>
         </AnimatePresence>
+        <ValidationFeedback
+          feedback={feedback}
+          isComplete={isComplete}
+          onCheck={handleCheck}
+          onNext={handleNext}
+          hasAnswers={Object.keys(answers).length > 0}
+        />
       </div>
-      <ValidationFeedback
-        feedback={feedback}
-        isComplete={isComplete}
-        onCheck={handleCheck}
-        onNext={handleNext}
-        hasAnswers={Object.keys(answers).length > 0}
-      />
     </div>
   );
 }

@@ -356,7 +356,7 @@ body {
   grid-template-columns: 1fr;
   gap: 1.5rem;
   animation: fadeIn 0.3s ease;
-  padding-bottom: 100px; /* Space for fixed validation bar */
+  padding-bottom: 2rem;
 }
 
 .exercise-sidebar {
@@ -736,30 +736,26 @@ input[type='range']::-moz-range-thumb {
    VALIDATION FEEDBACK BAR
    ============================================================ */
 .validation-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background: var(--mp-surface);
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
-  padding: 1rem 2rem;
+  border: 1px solid var(--mp-border);
+  border-radius: var(--card-radius);
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  z-index: 90;
-  animation: slideUp 0.3s ease;
-  border-top: 3px solid var(--mp-border);
+  animation: fadeIn 0.3s ease;
 }
 
 .validation-bar.validation-success {
-  border-top-color: var(--mp-success);
-  background: linear-gradient(180deg, rgba(52, 211, 153, 0.1), var(--mp-surface));
+  border-color: var(--mp-success);
+  background: rgba(52, 211, 153, 0.08);
 }
 
 .validation-bar.validation-error {
-  border-top-color: var(--mp-error);
-  background: linear-gradient(180deg, rgba(251, 113, 133, 0.1), var(--mp-surface));
+  border-color: var(--mp-error);
+  background: rgba(251, 113, 133, 0.08);
 }
 
 .validation-message {
