@@ -5,6 +5,7 @@ import { useTranslation } from './i18n/useTranslation';
 import { parseRoute, navigate } from './lib/router';
 import TopicView from './components/views/TopicView';
 import SingleExerciseView from './components/views/SingleExerciseView';
+import TopicGrid from './components/views/TopicGrid';
 import { getModule } from './modules/registry';
 import Layout from './components/Layout';
 import TopicSelector from './components/TopicSelector';
@@ -215,6 +216,18 @@ function RouteAwareApp() {
     window.addEventListener('hashchange', handler);
     return () => window.removeEventListener('hashchange', handler);
   }, []);
+
+  if (route.view === 'topics') {
+    return (
+      <I18nProvider>
+        <GameProvider>
+          <div style={{ background: 'var(--mp-bg)', minHeight: '100vh', color: 'var(--mp-text)' }}>
+            <TopicGrid />
+          </div>
+        </GameProvider>
+      </I18nProvider>
+    );
+  }
 
   if (route.view === 'topic') {
     return (

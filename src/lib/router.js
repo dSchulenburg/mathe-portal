@@ -14,6 +14,9 @@ export function parseRoute() {
   const hash = window.location.hash.slice(1) || '/';
   const parts = hash.split('/').filter(Boolean);
 
+  if (parts[0] === 'topics') {
+    return { view: 'topics' };
+  }
   if (parts[0] === 'topic' && parts[1]) {
     return { view: 'topic', topicId: parts[1] };
   }
