@@ -6,7 +6,7 @@ import { allStepsComplete, calculateStars } from '../utils/mathValidation';
 import ExerciseInstructions from './ExerciseInstructions';
 import ValidationFeedback from './ValidationFeedback';
 
-export default function ExerciseView({ levelId, exerciseId, onComplete, onBack }) {
+export default function ExerciseView({ moduleId, levelId, exerciseId, onComplete, onBack }) {
   const { state, dispatch } = useGame();
   const [attempts, setAttempts] = useState(0);
   const [answers, setAnswers] = useState({});
@@ -18,11 +18,11 @@ export default function ExerciseView({ levelId, exerciseId, onComplete, onBack }
   // Get current exercise — if no exerciseId, find first incomplete in level
   const exercise = exerciseId
     ? getExercise(exerciseId)
-    : getLevelExercises(levelId).find(ex => {
-        const unlocked = isExerciseUnlocked(state, ex.id);
-        const completed = state.exerciseResults[ex.id];
+    : getLevelExercises(moduleId, levelId).find(ex => {
+        const unlocked = isExerciseUnlocked(state, moduleId, ex.id);
+        const completed = state.modules[moduleId]?.exerciseResults?.[ex.id];
         return unlocked && !completed;
-      }) || getLevelExercises(levelId)[0];
+      }) || getLevelExercises(moduleId, levelId)[0];
 
   if (!exercise) {
     return (
@@ -52,14 +52,14 @@ export default function ExerciseView({ levelId, exerciseId, onComplete, onBack }
         setFeedback({ type: 'success', message: `Richtig! ${stars === 3 ? 'Perfekt beim ersten Versuch!' : stars === 2 ? 'Gut gemacht!' : 'Geschafft!'}` });
         dispatch({
           type: 'COMPLETE_EXERCISE',
-          payload: { exerciseId: exercise.id, stars, levelId: exercise.levelId }
+          payload: { moduleId, exerciseId: exercise.id, stars, baseXP: exercise.xp?.base || 10 }
         });
       } else {
         setFeedback({ type: 'error', message: result.message || 'Nicht ganz richtig. Versuch es nochmal!' });
         if (newAttempts >= 2) setShowHint(true);
       }
     }
-  }, [answers, attempts, exercise, dispatch]);
+  }, [answers, attempts, exercise, moduleId, dispatch]);
 
   const handleNext = useCallback(() => {
     const next = getNextExercise(exercise.id);

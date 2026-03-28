@@ -12,15 +12,15 @@ const LEVELS = [
 
 export { LEVELS };
 
-export default function LevelMap({ onSelectLevel }) {
+export default function LevelMap({ moduleId, onSelectLevel }) {
   const { state } = useGame();
 
   return (
     <div className="level-map">
       {LEVELS.map((level, index) => {
-        const unlocked = isLevelUnlocked(state, level.id);
-        const complete = isLevelComplete(state, level.id);
-        const stars = getLevelStars(state, level.id);
+        const unlocked = isLevelUnlocked(state, moduleId, level.id);
+        const complete = isLevelComplete(state, moduleId, level.id);
+        const stars = getLevelStars(state, moduleId, level.id);
         const maxStars = 12; // 4 exercises x 3 stars
 
         return (

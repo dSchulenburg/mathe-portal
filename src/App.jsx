@@ -8,13 +8,8 @@ import LevelComplete from './components/LevelComplete';
 import BadgeWall from './components/BadgeWall';
 import ProfileCard from './components/ProfileCard';
 
-// Import all level exercises — importing triggers registerExercises
-import './exercises/level1';
-import './exercises/level2';
-import './exercises/level3';
-import './exercises/level4';
-import './exercises/level5';
-import './exercises/level6';
+// Import quad-funktionen module — triggers registerModule + registerExercises
+import './modules/quad-funktionen';
 
 const VIEWS = { LEVELS: 'levels', STORY: 'story', EXERCISE: 'exercise', COMPLETE: 'complete', BADGES: 'badges', PROFILE: 'profile' };
 
@@ -43,7 +38,8 @@ function AppContent() {
   };
 
   const handleExerciseComplete = (exerciseId, nextExerciseId) => {
-    const result = state.exerciseResults[exerciseId];
+    const moduleId = 'quad-funktionen';
+    const result = state.modules[moduleId]?.exerciseResults?.[exerciseId];
     const stars = result?.stars || 1;
 
     setCompletionData({
@@ -79,13 +75,14 @@ function AppContent() {
   return (
     <Layout onNavigate={handleNavigate}>
       {view === VIEWS.LEVELS && (
-        <LevelMap onSelectLevel={handleSelectLevel} />
+        <LevelMap moduleId="quad-funktionen" onSelectLevel={handleSelectLevel} />
       )}
       {view === VIEWS.STORY && (
         <StoryIntro levelId={currentLevelId} onStart={handleStartExercise} />
       )}
       {view === VIEWS.EXERCISE && (
         <ExerciseView
+          moduleId="quad-funktionen"
           levelId={currentLevelId}
           exerciseId={currentExerciseId}
           onComplete={handleExerciseComplete}
