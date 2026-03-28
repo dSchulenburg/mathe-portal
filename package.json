@@ -9,17 +9,28 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
     "canvas-confetti": "^1.9.3",
+    "d3": "^7.9.0",
     "framer-motion": "^12.0.0",
     "katex": "^0.16.9",
+    "mathjs": "^15.1.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "zustand": "^5.0.12"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^6.0.0"
+    "jsdom": "^29.0.1",
+    "tailwindcss": "^4.2.2",
+    "vite": "^6.0.0",
+    "vitest": "^4.1.2"
   }
 }
