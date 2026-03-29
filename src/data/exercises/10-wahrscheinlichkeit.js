@@ -315,4 +315,130 @@ export const exercises = [
     solutionKey: 'mZ: P(BB) = (2/6)·(2/6) = 4/36 = 1/9 ≈ 0,111. oZ: P(BB) = (2/6)·(1/5) = 2/30 = 1/15 ≈ 0,067. Ohne Zurücklegen ist die Wahrscheinlichkeit kleiner, weil eine blaue Kugel fehlt.',
     tags: ['urnenmodell', 'mit-zuruecklegen', 'ohne-zuruecklegen', 'vergleich'],
   },
+
+  // ─── PREMIUM UPGRADE: 8 neue Übungen ────────────────────────────
+
+  {
+    id: 'wk-basis-008', topicId: '10-wahrscheinlichkeit', type: 'drag-match', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 3,
+    data: {
+      questionText: 'Ordne jedem Ereignis die richtige Wahrscheinlichkeit zu.',
+      pairs: [
+        { id: 'a', left: 'Würfel zeigt eine 6', right: '$\\frac{1}{6}$' },
+        { id: 'b', left: 'Münze zeigt Kopf', right: '$\\frac{1}{2}$' },
+        { id: 'c', left: 'Sicheres Ereignis', right: '$1$' },
+        { id: 'd', left: 'Unmögliches Ereignis', right: '$0$' },
+      ],
+    },
+    hintKeys: ['Ein sicheres Ereignis tritt immer ein (P=1), ein unmögliches nie (P=0).'],
+    solutionKey: 'P(6) = 1/6, P(Kopf) = 1/2, P(sicher) = 1, P(unmöglich) = 0.',
+    tags: ['drag-match', 'grundbegriffe'],
+  },
+  {
+    id: 'wk-standard-008', topicId: '10-wahrscheinlichkeit', type: 'step-solver', diffLevel: 'standard',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 12, timeEstimate: 6,
+    contextKey: 'Urne mit farbigen Kugeln',
+    data: {
+      questionText: 'Eine Urne enthält 5 rote und 3 blaue Kugeln. Du ziehst 2 Kugeln ohne Zurücklegen. Wie groß ist P(beide rot)?',
+      steps: [
+        { instruction: 'P(1. Kugel rot) = $\\frac{5}{8}$ = ? (Dezimalzahl, 3 Stellen)', type: 'numeric-input', expected: 0.625, tolerance: 0.001, showAnswer: 'P(1. rot) = 5/8 = 0,625' },
+        { instruction: 'Nach Ziehen: 4 rote, 3 blaue übrig. P(2. rot | 1. rot) = $\\frac{4}{7}$ ≈ ?', type: 'numeric-input', expected: 0.571, tolerance: 0.002, showAnswer: 'P(2. rot | 1. rot) = 4/7 ≈ 0,571' },
+        { instruction: 'P(beide rot) = $\\frac{5}{8} \\cdot \\frac{4}{7}$ ≈ ?', type: 'numeric-input', expected: 0.357, tolerance: 0.005, showAnswer: 'P(beide rot) = 20/56 ≈ 0,357' },
+      ],
+    },
+    hintKeys: ['Ohne Zurücklegen: Nach dem ersten Ziehen ändert sich die Anzahl.', 'Pfadregel: P(A und B) = P(A) · P(B|A).'],
+    solutionKey: 'P(beide rot) = 5/8 · 4/7 = 20/56 = 5/14 ≈ 0,357.',
+    tags: ['step-solver', 'urne', 'pfadregel'],
+  },
+  {
+    id: 'wk-standard-009', topicId: '10-wahrscheinlichkeit', type: 'error-analysis', diffLevel: 'standard',
+    competencies: ['kritisches-denken'], points: 10, timeEstimate: 5,
+    data: {
+      questionText: 'Finde den Fehler. Urne: 3 rote, 2 blaue. Ziehen mit Zurücklegen. P(1× rot, 1× blau)?',
+      steps: [
+        { content: 'P(rot, blau) = 3/5 · 2/5 = 6/25', hasError: false },
+        { content: 'P(blau, rot) = 2/5 · 3/5 = 6/25', hasError: false },
+        { content: 'P(1× rot, 1× blau) = 6/25', hasError: true, errorExplanation: 'Es gibt zwei Pfade (rot-blau UND blau-rot). Richtig: P = 6/25 + 6/25 = 12/25.' },
+      ],
+    },
+    hintKeys: ['Bei "1× rot, 1× blau" ist die Reihenfolge egal — zähle alle Pfade!'],
+    solutionKey: 'P(1× rot, 1× blau) = P(rot,blau) + P(blau,rot) = 12/25 = 0,48.',
+    tags: ['fehleranalyse', 'baumdiagramm'],
+  },
+  {
+    id: 'wk-erweitert-008', topicId: '10-wahrscheinlichkeit', type: 'numeric-input', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken'], points: 15, timeEstimate: 6,
+    contextKey: 'Lotto 6 aus 49',
+    data: {
+      questionText: 'Wie viele Möglichkeiten gibt es beim Lotto "6 aus 49"? Berechne $\\binom{49}{6}$.',
+      correctValue: 13983816, tolerance: 1,
+    },
+    hintKeys: ['$\\binom{49}{6} = \\frac{49!}{6! \\cdot 43!} = \\frac{49 \\cdot 48 \\cdot 47 \\cdot 46 \\cdot 45 \\cdot 44}{720}$'],
+    solutionKey: '$\\binom{49}{6} = 13.983.816$.',
+    tags: ['lotto', 'binomialkoeffizient'],
+  },
+  {
+    id: 'wk-erweitert-009', topicId: '10-wahrscheinlichkeit', type: 'drag-match', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 15, timeEstimate: 5,
+    data: {
+      questionText: 'Ordne jeden Sachkontext dem passenden Wahrscheinlichkeitsmodell zu.',
+      pairs: [
+        { id: 'a', left: 'Qualitätskontrolle: 10 Teile prüfen', right: 'Binomialverteilung' },
+        { id: 'b', left: 'Kugeln ziehen ohne Zurücklegen', right: 'Hypergeometrisch' },
+        { id: 'c', left: 'Wartezeit bis zum ersten Treffer', right: 'Geometrische Vert.' },
+        { id: 'd', left: 'Münze werfen: Kopf oder Zahl', right: 'Bernoulli-Experiment' },
+      ],
+    },
+    hintKeys: ['Binomial = n unabhängige Versuche, gleiche Trefferwahrscheinlichkeit.'],
+    solutionKey: 'Binomial: feste Anzahl, unabhängig. Hypergeometrisch: ohne Zurücklegen. Geometrisch: Warten auf Treffer. Bernoulli: ein Versuch.',
+    tags: ['drag-match', 'verteilungen'],
+  },
+  {
+    id: 'wk-ea-001', topicId: '10-wahrscheinlichkeit', type: 'multiple-choice', diffLevel: 'ea',
+    competencies: ['kritisches-denken'], points: 20, timeEstimate: 5,
+    data: {
+      questionText: 'Spielerfehlschluss: Du wirfst 10× Kopf hintereinander. Ist beim 11. Wurf Zahl wahrscheinlicher?',
+      options: [
+        { id: 'a', text: 'Ja, nach so vielen Köpfen muss Zahl kommen.', correct: false },
+        { id: 'b', text: 'Nein, P(Zahl) = 50 %, weil Würfe unabhängig sind.', correct: true },
+        { id: 'c', text: 'Ja, die Münze ist wahrscheinlich unfair.', correct: false },
+      ],
+    },
+    hintKeys: ['Unabhängigkeit: vorherige Ergebnisse beeinflussen die nächsten nicht.'],
+    solutionKey: 'Die Münze hat kein Gedächtnis. P(Zahl) = 0,5 bei jedem Wurf. Der "Ausgleich" ist ein Trugschluss (Gambler\'s Fallacy).',
+    tags: ['spielerfehlschluss', 'ea'],
+  },
+  {
+    id: 'wk-ea-002', topicId: '10-wahrscheinlichkeit', type: 'step-solver', diffLevel: 'ea',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 20, timeEstimate: 7,
+    contextKey: 'Glücksrad — Erwartungswert',
+    data: {
+      questionText: 'Glücksrad: 50% Niete (0 €), 30% Klein (5 €), 20% Hauptgewinn (20 €). Berechne E(X).',
+      steps: [
+        { instruction: 'Beitrag Niete: $0{,}5 \\cdot 0$ = ?', type: 'numeric-input', expected: 0, tolerance: 0.01, showAnswer: '0,5 · 0 = 0 €' },
+        { instruction: 'Beitrag Klein: $0{,}3 \\cdot 5$ = ?', type: 'numeric-input', expected: 1.5, tolerance: 0.01, showAnswer: '0,3 · 5 = 1,50 €' },
+        { instruction: 'Beitrag Hauptgewinn: $0{,}2 \\cdot 20$ = ?', type: 'numeric-input', expected: 4, tolerance: 0.01, showAnswer: '0,2 · 20 = 4 €. E(X) = 0 + 1,50 + 4 = 5,50 €' },
+      ],
+    },
+    hintKeys: ['E(X) = P₁·X₁ + P₂·X₂ + P₃·X₃'],
+    solutionKey: 'E(X) = 0,5·0 + 0,3·5 + 0,2·20 = 5,50 €.',
+    tags: ['step-solver', 'erwartungswert', 'ea'],
+  },
+  {
+    id: 'wk-erweitert-010', topicId: '10-wahrscheinlichkeit', type: 'step-solver', diffLevel: 'erweitert',
+    competencies: ['kreativitaet', 'kritisches-denken'], points: 15, timeEstimate: 7,
+    contextKey: 'Geburtstagsproblem',
+    data: {
+      questionText: 'Klasse mit 23 Personen: P(mindestens 2 haben gleichen Geburtstag)?',
+      steps: [
+        { instruction: 'Gegenereignis: P(alle verschieden). Person 1: 365/365, Person 2: 364/365, Person 3: ?', type: 'multiple-choice',
+          options: [{ id: 'a', text: '$\\frac{363}{365}$' }, { id: 'b', text: '$\\frac{364}{365}$' }, { id: 'c', text: '$\\frac{362}{365}$' }],
+          correctId: 'a', showAnswer: 'Person 3 hat noch 363 freie Tage.' },
+        { instruction: 'P(alle verschieden) ≈ 0,493. P(mind. 2 gleich) = 1 − 0,493 = ?', type: 'numeric-input', expected: 0.507, tolerance: 0.005, showAnswer: 'P ≈ 50,7% — überraschend hoch!' },
+      ],
+    },
+    hintKeys: ['P(mind. 1 gleich) = 1 − P(alle verschieden).'],
+    solutionKey: 'P(mind. 2 gleich) ≈ 50,7%. Schon ab 23 Personen ist es wahrscheinlicher als nicht!',
+    tags: ['step-solver', 'geburtstagsproblem'],
+  },
 ];

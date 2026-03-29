@@ -48,6 +48,7 @@ export const TOPICS = [
     period: 'Klasse 10',
     exercises: quadGleichungenEx,
     plotter: null,
+    station: 'DiscriminantViz',
   },
   {
     id: '10-trigonometrie',
@@ -105,6 +106,7 @@ export const TOPICS = [
     period: 'Klasse 10',
     exercises: wahrscheinlichkeitEx,
     plotter: null,
+    station: 'DiceSim',
   },
   {
     id: '10-pythagoras',
@@ -116,6 +118,7 @@ export const TOPICS = [
     period: 'Klasse 10',
     exercises: pythagorasEx,
     plotter: null,
+    station: 'PythagorasExplorer',
   },
   {
     id: '10-koerper',

@@ -222,4 +222,147 @@ export const exercises = [
     solutionKey: 'h = 6 · tan(30°) = 6 · (1/√3) = 6/√3 = 2√3 ≈ 3,464 m. Dachschräge = √(6² + (2√3)²) = √(36 + 12) = √48 = 4√3 ≈ 6,928 ≈ 6,93 m. Alternativ: 6 / cos(30°) = 6 / (√3/2) = 12/√3 = 4√3 ≈ 6,93 m.',
     tags: ['dachstuhl', 'sachkontext', 'kombiniert', 'trigonometrie'],
   },
+
+  // ─── PREMIUM UPGRADE: 9 neue Übungen ────────────────────────────
+
+  {
+    id: 'pyth-basis-006', topicId: '10-pythagoras', type: 'numeric-input', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 3,
+    data: {
+      questionText: 'Ein rechtwinkliges Dreieck hat die Katheten $a = 6$ cm und $b = 8$ cm. Berechne die Hypotenuse $c$ (in cm).',
+      correctValue: 10, tolerance: 0.01, unit: 'cm',
+    },
+    hintKeys: ['$c^2 = a^2 + b^2 = 36 + 64 = 100$'],
+    solutionKey: '$c = \\sqrt{6^2 + 8^2} = \\sqrt{100} = 10$ cm. (6-8-10 ist ein Vielfaches des Tripels 3-4-5.)',
+    tags: ['hypotenuse', 'tripel'],
+  },
+  {
+    id: 'pyth-basis-007', topicId: '10-pythagoras', type: 'multiple-choice', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 2,
+    data: {
+      questionText: 'Wo liegt die Hypotenuse in einem rechtwinkligen Dreieck?',
+      options: [
+        { id: 'a', text: 'Gegenüber dem rechten Winkel — sie ist die längste Seite.', correct: true },
+        { id: 'b', text: 'Neben dem rechten Winkel — eine der kürzeren Seiten.', correct: false },
+        { id: 'c', text: 'Es gibt keine feste Position, sie kann jede Seite sein.', correct: false },
+      ],
+    },
+    hintKeys: ['Die Hypotenuse liegt immer dem größten Winkel gegenüber.'],
+    solutionKey: 'Die Hypotenuse liegt gegenüber dem rechten Winkel (90°) und ist immer die längste Seite.',
+    tags: ['definition', 'hypotenuse'],
+  },
+  {
+    id: 'pyth-standard-006', topicId: '10-pythagoras', type: 'step-solver', diffLevel: 'standard',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 12, timeEstimate: 5,
+    contextKey: 'Leiter an der Wand',
+    data: {
+      questionText: 'Eine Leiter ist 5 m lang und steht 3 m von der Wand entfernt. Wie hoch reicht sie an der Wand?',
+      steps: [
+        { instruction: 'Welche Seite des Dreiecks ist die Leiter? Hypotenuse (c) oder Kathete?', type: 'multiple-choice',
+          options: [{ id: 'a', text: 'Hypotenuse $c = 5$ m' }, { id: 'b', text: 'Kathete $a = 5$ m' }],
+          correctId: 'a', showAnswer: 'Die Leiter ist die längste Seite = Hypotenuse $c = 5$ m.' },
+        { instruction: 'Berechne $a^2 = c^2 - b^2 = 5^2 - 3^2$. Was ergibt $a^2$?', type: 'numeric-input',
+          expected: 16, tolerance: 0.01, showAnswer: '$a^2 = 25 - 9 = 16$' },
+        { instruction: 'Berechne $a = \\sqrt{16}$ (in Metern).', type: 'numeric-input',
+          expected: 4, tolerance: 0.01, showAnswer: '$a = \\sqrt{16} = 4$ m — die Leiter reicht 4 m hoch.' },
+      ],
+    },
+    hintKeys: ['Die Leiter ist die Hypotenuse, der Abstand zur Wand ist Kathete b.', 'Stelle nach der gesuchten Kathete um: $a^2 = c^2 - b^2$.'],
+    solutionKey: '$a = \\sqrt{c^2 - b^2} = \\sqrt{25 - 9} = \\sqrt{16} = 4$ m.',
+    tags: ['step-solver', 'sachkontext', 'leiter'],
+  },
+  {
+    id: 'pyth-standard-007', topicId: '10-pythagoras', type: 'drag-match', diffLevel: 'standard',
+    competencies: ['kritisches-denken'], points: 10, timeEstimate: 4,
+    data: {
+      questionText: 'Welche Seitenlängen bilden ein rechtwinkliges Dreieck?',
+      pairs: [
+        { id: 'a', left: '3, 4, 5', right: 'Ja ✓' },
+        { id: 'b', left: '5, 12, 13', right: 'Ja ✓' },
+        { id: 'c', left: '2, 3, 4', right: 'Nein ✗' },
+        { id: 'd', left: '7, 24, 25', right: 'Ja ✓' },
+      ],
+    },
+    hintKeys: ['Prüfe jeweils: Gilt $a^2 + b^2 = c^2$? (c ist die größte Zahl)'],
+    solutionKey: '$3^2+4^2=25=5^2$ ✓, $5^2+12^2=169=13^2$ ✓, $2^2+3^2=13 \\neq 16=4^2$ ✗, $7^2+24^2=625=25^2$ ✓',
+    tags: ['drag-match', 'tripel-prüfung'],
+  },
+  {
+    id: 'pyth-erweitert-006', topicId: '10-pythagoras', type: 'step-solver', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 15, timeEstimate: 6,
+    contextKey: 'Monitor-Bildschirmdiagonale',
+    data: {
+      questionText: 'Ein Monitor hat das Format 16:9 und eine Breite von 80 cm. Berechne die Bildschirmdiagonale.',
+      steps: [
+        { instruction: 'Berechne die Höhe aus dem Seitenverhältnis 16:9. Höhe = $80 \\cdot \\frac{9}{16}$ = ?', type: 'numeric-input',
+          expected: 45, tolerance: 0.1, showAnswer: 'Höhe = $80 \\cdot 9/16 = 45$ cm' },
+        { instruction: 'Berechne $d^2 = 80^2 + 45^2$. Was ergibt $d^2$?', type: 'numeric-input',
+          expected: 8425, tolerance: 1, showAnswer: '$d^2 = 6400 + 2025 = 8425$' },
+        { instruction: 'Berechne $d = \\sqrt{8425}$ (auf eine Dezimale).', type: 'numeric-input',
+          expected: 91.8, tolerance: 0.2, showAnswer: '$d \\approx 91{,}8$ cm ≈ 36,1 Zoll' },
+      ],
+    },
+    hintKeys: ['16:9 bedeutet Breite:Höhe = 16:9, also Höhe = Breite · 9/16.', 'Diagonale mit Pythagoras: $d = \\sqrt{b^2 + h^2}$.'],
+    solutionKey: 'Höhe = 45 cm. $d = \\sqrt{80^2 + 45^2} = \\sqrt{8425} \\approx 91{,}8$ cm.',
+    tags: ['step-solver', 'sachkontext', 'bildschirm'],
+  },
+  {
+    id: 'pyth-erweitert-007', topicId: '10-pythagoras', type: 'error-analysis', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken'], points: 12, timeEstimate: 5,
+    data: {
+      questionText: 'Finde den Fehler in dieser Rechnung. Dreieck mit a = 5, c = 13. Gesucht: b.',
+      steps: [
+        { content: 'a² + b² = c²', hasError: false },
+        { content: 'b² = a² + c² = 25 + 169 = 194', hasError: true, errorExplanation: 'Fehler: Es muss b² = c² − a² heißen (nicht plus). Richtig: b² = 169 − 25 = 144.' },
+        { content: 'b = √194 ≈ 13,9', hasError: true, errorExplanation: 'Folgefehler. Richtig: b = √144 = 12.' },
+      ],
+    },
+    hintKeys: ['Wenn die Hypotenuse c gegeben ist, muss man subtrahieren: $b^2 = c^2 - a^2$.'],
+    solutionKey: '$b^2 = c^2 - a^2 = 169 - 25 = 144$, also $b = 12$.',
+    tags: ['fehleranalyse', 'kathete-berechnen'],
+  },
+  {
+    id: 'pyth-erweitert-008', topicId: '10-pythagoras', type: 'numeric-input', diffLevel: 'erweitert',
+    competencies: ['kommunikation'], points: 12, timeEstimate: 4,
+    contextKey: 'Fußballfeld',
+    data: {
+      questionText: 'Ein Fußballfeld ist 105 m lang und 68 m breit. Berechne die Diagonale (auf eine Dezimale, in m).',
+      correctValue: 125.1, tolerance: 0.2, unit: 'm',
+    },
+    hintKeys: ['$d = \\sqrt{105^2 + 68^2} = \\sqrt{11025 + 4624}$'],
+    solutionKey: '$d = \\sqrt{105^2 + 68^2} = \\sqrt{15649} \\approx 125{,}1$ m.',
+    tags: ['sachkontext', 'diagonale', 'fussball'],
+  },
+  {
+    id: 'pyth-ea-001', topicId: '10-pythagoras', type: 'step-solver', diffLevel: 'ea',
+    competencies: ['kreativitaet', 'kritisches-denken'], points: 20, timeEstimate: 8,
+    contextKey: '3D-Raumdiagonale',
+    data: {
+      questionText: 'Ein Quader hat die Maße 3 × 4 × 12. Berechne die Raumdiagonale.',
+      steps: [
+        { instruction: 'Berechne zuerst die Bodendiagonale: $d_B = \\sqrt{3^2 + 4^2}$ = ?', type: 'numeric-input',
+          expected: 5, tolerance: 0.01, showAnswer: '$d_B = \\sqrt{9 + 16} = \\sqrt{25} = 5$' },
+        { instruction: 'Die Raumdiagonale bildet ein rechtwinkliges Dreieck mit $d_B = 5$ und Höhe $h = 12$. Berechne $d_R = \\sqrt{5^2 + 12^2}$ = ?', type: 'numeric-input',
+          expected: 13, tolerance: 0.01, showAnswer: '$d_R = \\sqrt{25 + 144} = \\sqrt{169} = 13$' },
+      ],
+    },
+    hintKeys: ['Erst den Pythagoras auf dem Boden anwenden, dann nochmal mit der Höhe.', 'Formel: $d_R = \\sqrt{a^2 + b^2 + c^2}$'],
+    solutionKey: '$d_R = \\sqrt{3^2 + 4^2 + 12^2} = \\sqrt{9 + 16 + 144} = \\sqrt{169} = 13$.',
+    tags: ['step-solver', 'raumdiagonale', '3d', 'ea'],
+  },
+  {
+    id: 'pyth-ea-002', topicId: '10-pythagoras', type: 'multiple-choice', diffLevel: 'ea',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 20, timeEstimate: 5,
+    data: {
+      questionText: 'Warum gibt es unendlich viele pythagoräische Tripel?',
+      options: [
+        { id: 'a', text: 'Weil man jedes Tripel $(a, b, c)$ mit einer beliebigen Zahl $k$ multiplizieren kann: $(ka, kb, kc)$ erfüllt auch $a^2 + b^2 = c^2$.', correct: true },
+        { id: 'b', text: 'Weil es unendlich viele Primzahlen gibt.', correct: false },
+        { id: 'c', text: 'Weil der Satz des Pythagoras nicht bewiesen ist.', correct: false },
+      ],
+    },
+    hintKeys: ['Wenn $(3,4,5)$ ein Tripel ist, was ist dann mit $(6,8,10)$?'],
+    solutionKey: '$(ka)^2 + (kb)^2 = k^2(a^2 + b^2) = k^2 c^2 = (kc)^2$ ✓. Jedes Tripel erzeugt unendlich viele Vielfache.',
+    tags: ['beweis', 'tripel', 'skalierung', 'ea'],
+  },
 ];

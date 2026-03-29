@@ -284,4 +284,151 @@ export const exercises = [
     tags: ['kegel', 'wasserstand', 'sachkontext', 'proportionalität'],
   },
 
+  // ─── PREMIUM UPGRADE: 9 neue Übungen ────────────────────────────
+
+  {
+    id: 'koerp-basis-006', topicId: '10-koerper', type: 'drag-match', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 3,
+    data: {
+      questionText: 'Ordne jedem Körper die richtige Volumenformel zu.',
+      pairs: [
+        { id: 'a', left: 'Kugel', right: '$V = \\frac{4}{3} \\pi r^3$' },
+        { id: 'b', left: 'Kegel', right: '$V = \\frac{1}{3} \\pi r^2 h$' },
+        { id: 'c', left: 'Zylinder', right: '$V = \\pi r^2 h$' },
+        { id: 'd', left: 'Pyramide', right: '$V = \\frac{1}{3} G \\cdot h$' },
+      ],
+    },
+    hintKeys: ['Kegel und Pyramide haben den Faktor 1/3, Zylinder nicht.'],
+    solutionKey: 'Kugel: 4/3πr³, Kegel: 1/3πr²h, Zylinder: πr²h, Pyramide: 1/3·G·h.',
+    tags: ['drag-match', 'volumenformeln'],
+  },
+  {
+    id: 'koerp-basis-007', topicId: '10-koerper', type: 'multiple-choice', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 2,
+    data: {
+      questionText: 'Wie viele Flächen hat eine quadratische Pyramide?',
+      options: [
+        { id: 'a', text: '4 (nur die Dreiecke)', correct: false },
+        { id: 'b', text: '5 (1 Quadrat + 4 Dreiecke)', correct: true },
+        { id: 'c', text: '6 (wie ein Würfel)', correct: false },
+      ],
+    },
+    hintKeys: ['Die Grundfläche zählt auch als Fläche!'],
+    solutionKey: '5 Flächen: 1 quadratische Grundfläche + 4 dreieckige Seitenflächen.',
+    tags: ['pyramide', 'flaechen'],
+  },
+  {
+    id: 'koerp-standard-006', topicId: '10-koerper', type: 'step-solver', diffLevel: 'standard',
+    competencies: ['kommunikation', 'kritisches-denken'], points: 12, timeEstimate: 5,
+    contextKey: 'Eistüte',
+    data: {
+      questionText: 'Eine Eistüte hat die Form eines Kegels mit r = 3 cm und h = 12 cm. Berechne das Volumen.',
+      steps: [
+        { instruction: 'Welche Formel brauchst du?', type: 'multiple-choice',
+          options: [{ id: 'a', text: '$V = \\frac{1}{3} \\pi r^2 h$' }, { id: 'b', text: '$V = \\pi r^2 h$' }, { id: 'c', text: '$V = \\frac{4}{3} \\pi r^3$' }],
+          correctId: 'a', showAnswer: 'Kegel: $V = \\frac{1}{3} \\pi r^2 h$' },
+        { instruction: 'Setze ein: $V = \\frac{1}{3} \\cdot \\pi \\cdot 3^2 \\cdot 12$. Berechne $r^2 \\cdot h$ = ?', type: 'numeric-input',
+          expected: 108, tolerance: 0.1, showAnswer: '$3^2 \\cdot 12 = 9 \\cdot 12 = 108$' },
+        { instruction: '$V = \\frac{1}{3} \\cdot \\pi \\cdot 108 \\approx$ ? (auf 1 Dezimale)', type: 'numeric-input',
+          expected: 113.1, tolerance: 0.2, showAnswer: '$V = 36\\pi \\approx 113{,}1$ cm³' },
+      ],
+    },
+    hintKeys: ['Eistüte = Kegel. Vergiss den Faktor 1/3 nicht!'],
+    solutionKey: '$V = \\frac{1}{3} \\pi \\cdot 9 \\cdot 12 = 36\\pi \\approx 113{,}1$ cm³.',
+    tags: ['step-solver', 'kegel', 'sachkontext'],
+  },
+  {
+    id: 'koerp-standard-007', topicId: '10-koerper', type: 'step-solver', diffLevel: 'standard',
+    competencies: ['kommunikation'], points: 12, timeEstimate: 6,
+    contextKey: 'Fußball',
+    data: {
+      questionText: 'Ein Fußball hat einen Umfang von 69 cm. Berechne Radius und Volumen.',
+      steps: [
+        { instruction: '$U = 2\\pi r$. Berechne $r = \\frac{U}{2\\pi} = \\frac{69}{2\\pi}$ ≈ ? (auf 2 Dezimalen)', type: 'numeric-input',
+          expected: 10.98, tolerance: 0.05, showAnswer: '$r \\approx 10{,}98$ cm' },
+        { instruction: '$V = \\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi \\cdot 10{,}98^3$ ≈ ? (auf ganze cm³)', type: 'numeric-input',
+          expected: 5542, tolerance: 50, showAnswer: '$V \\approx 5542$ cm³ ≈ 5,5 Liter' },
+      ],
+    },
+    hintKeys: ['Umfang → Radius: $r = U/(2\\pi)$.', 'Dann Kugelvolumen: $V = 4/3 \\cdot \\pi \\cdot r^3$.'],
+    solutionKey: '$r \\approx 10{,}98$ cm. $V = \\frac{4}{3}\\pi \\cdot 10{,}98^3 \\approx 5542$ cm³.',
+    tags: ['step-solver', 'kugel', 'sachkontext', 'fussball'],
+  },
+  {
+    id: 'koerp-standard-008', topicId: '10-koerper', type: 'error-analysis', diffLevel: 'standard',
+    competencies: ['kritisches-denken'], points: 10, timeEstimate: 4,
+    data: {
+      questionText: 'Finde den Fehler bei der Volumenberechnung eines Kegels (r = 5, h = 9).',
+      steps: [
+        { content: 'V = π · r² · h', hasError: true, errorExplanation: 'Fehler: Beim Kegel fehlt der Faktor 1/3. Richtig: V = 1/3 · π · r² · h.' },
+        { content: '= π · 25 · 9 = 225π ≈ 706,9', hasError: true, errorExplanation: 'Folgefehler. Richtig: V = 1/3 · 225π = 75π ≈ 235,6.' },
+      ],
+    },
+    hintKeys: ['Ein Kegel hat nur 1/3 des Volumens eines Zylinders mit gleicher Grundfläche und Höhe.'],
+    solutionKey: 'V(Kegel) = 1/3 · π · 5² · 9 = 75π ≈ 235,6. (Nicht 225π!)',
+    tags: ['fehleranalyse', 'kegel', 'faktor-vergessen'],
+  },
+  {
+    id: 'koerp-erweitert-006', topicId: '10-koerper', type: 'numeric-input', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken'], points: 15, timeEstimate: 6,
+    contextKey: 'Wasserturm',
+    data: {
+      questionText: 'Ein Wasserturm besteht aus einem Zylinder (h = 8 m, r = 3 m) mit einer Halbkugel oben drauf. Berechne das Gesamtvolumen (auf 1 Dezimale, in m³).',
+      correctValue: 282.7, tolerance: 1,
+    },
+    hintKeys: ['V(Zylinder) = πr²h. V(Halbkugel) = 2/3 · πr³.', 'V(gesamt) = πr²h + 2/3πr³ = π·9·8 + 2/3·π·27'],
+    solutionKey: 'V = π·9·8 + 2/3·π·27 = 72π + 18π = 90π ≈ 282,7 m³.',
+    tags: ['zusammengesetzter-koerper', 'zylinder', 'halbkugel'],
+  },
+  {
+    id: 'koerp-erweitert-007', topicId: '10-koerper', type: 'drag-match', diffLevel: 'erweitert',
+    competencies: ['kommunikation'], points: 12, timeEstimate: 4,
+    data: {
+      questionText: 'Ordne jeden Alltagsgegenstand dem passenden geometrischen Körper zu.',
+      pairs: [
+        { id: 'a', left: 'Konservendose', right: 'Zylinder' },
+        { id: 'b', left: 'Kirchendach', right: 'Pyramide' },
+        { id: 'c', left: 'Globus', right: 'Kugel' },
+        { id: 'd', left: 'Trichter', right: 'Kegel' },
+      ],
+    },
+    hintKeys: ['Überlege: Welche Form hat die Grundfläche, und wie sieht die Seitenansicht aus?'],
+    solutionKey: 'Dose = Zylinder, Kirchendach = Pyramide, Globus = Kugel, Trichter = Kegel.',
+    tags: ['drag-match', 'alltagsgegenstaende'],
+  },
+  {
+    id: 'koerp-ea-001', topicId: '10-koerper', type: 'step-solver', diffLevel: 'ea',
+    competencies: ['kreativitaet', 'kritisches-denken'], points: 20, timeEstimate: 8,
+    contextKey: 'Zeltdach — Pyramide',
+    data: {
+      questionText: 'Ein pyramidenförmiges Zeltdach hat eine Grundfläche von 6 m × 6 m und eine Höhe von 4 m. Berechne Volumen und Mantelfläche.',
+      steps: [
+        { instruction: 'V = 1/3 · G · h = 1/3 · 36 · 4 = ?', type: 'numeric-input',
+          expected: 48, tolerance: 0.1, showAnswer: 'V = 1/3 · 36 · 4 = 48 m³' },
+        { instruction: 'Seitenhöhe $h_s$: rechtwinkliges Dreieck mit Kathete 3 m (halbe Grundseite) und Höhe 4 m. $h_s = \\sqrt{3^2 + 4^2}$ = ?', type: 'numeric-input',
+          expected: 5, tolerance: 0.01, showAnswer: '$h_s = \\sqrt{9 + 16} = 5$ m' },
+        { instruction: 'Mantelfläche = 4 · (1/2 · Grundseite · $h_s$) = 4 · (1/2 · 6 · 5) = ?', type: 'numeric-input',
+          expected: 60, tolerance: 0.1, showAnswer: 'M = 4 · 15 = 60 m²' },
+      ],
+    },
+    hintKeys: ['Für die Seitenhöhe brauchst du Pythagoras!', 'Jede Seitenfläche ist ein Dreieck mit A = 1/2 · a · hₛ.'],
+    solutionKey: 'V = 48 m³. Seitenhöhe = 5 m (Pythagoras). Mantelfläche = 60 m².',
+    tags: ['step-solver', 'pyramide', 'pythagoras', 'ea'],
+  },
+  {
+    id: 'koerp-ea-002', topicId: '10-koerper', type: 'multiple-choice', diffLevel: 'ea',
+    competencies: ['kritisches-denken'], points: 20, timeEstimate: 4,
+    data: {
+      questionText: 'Verdoppelt man den Radius einer Kugel, wie ändert sich das Volumen?',
+      options: [
+        { id: 'a', text: 'Es verdoppelt sich (×2).', correct: false },
+        { id: 'b', text: 'Es vervierfacht sich (×4).', correct: false },
+        { id: 'c', text: 'Es verachtfacht sich (×8).', correct: true },
+        { id: 'd', text: 'Es versechzehnfacht sich (×16).', correct: false },
+      ],
+    },
+    hintKeys: ['$V = \\frac{4}{3}\\pi r^3$. Ersetze r durch 2r und vereinfache.'],
+    solutionKey: '$V(2r) = \\frac{4}{3}\\pi (2r)^3 = \\frac{4}{3}\\pi \\cdot 8r^3 = 8 \\cdot V(r)$. Das Volumen wächst mit der dritten Potenz!',
+    tags: ['skalierung', 'dritte-potenz', 'ea'],
+  },
 ];

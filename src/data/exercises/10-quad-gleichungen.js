@@ -319,4 +319,155 @@ export const exercises = [
     solutionKey: '240/v - 240/(v+20) = 1. Multiplizieren mit v(v+20): 240(v+20) - 240v = v(v+20) → 4800 = v² + 20v → v² + 20v - 4800 = 0. p = 20, q = -4800. v = -10 ± √(100 + 4800) = -10 ± 70. v₁ = 60 (gueltig), v₂ = -80 (unsinning). v = 60 km/h.',
     tags: ['sachkontext', 'geschwindigkeit-zeit', 'gleichung-aufstellen'],
   },
+
+  // ─── PREMIUM UPGRADE: 9 neue Übungen ────────────────────────────
+
+  {
+    id: 'qgl-basis-006', topicId: '10-quad-gleichungen', type: 'step-solver', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 8, timeEstimate: 5,
+    data: {
+      questionText: 'Löse $x^2 - 5x + 6 = 0$ mit der pq-Formel.',
+      steps: [
+        { instruction: 'Identifiziere p und q. p = ?', type: 'numeric-input',
+          expected: -5, tolerance: 0.01, showAnswer: 'p = -5 (Koeffizient vor x)' },
+        { instruction: 'q = ?', type: 'numeric-input',
+          expected: 6, tolerance: 0.01, showAnswer: 'q = 6 (Absolutglied)' },
+        { instruction: 'Berechne die Diskriminante $D = (p/2)^2 - q = (-5/2)^2 - 6$ = ?', type: 'numeric-input',
+          expected: 0.25, tolerance: 0.01, showAnswer: 'D = 6,25 - 6 = 0,25' },
+        { instruction: '$x_1 = -p/2 + \\sqrt{D} = 2{,}5 + 0{,}5$ = ?', type: 'numeric-input',
+          expected: 3, tolerance: 0.01, showAnswer: '$x_1 = 3$' },
+      ],
+    },
+    hintKeys: ['pq-Formel: $x_{1,2} = -\\frac{p}{2} \\pm \\sqrt{(\\frac{p}{2})^2 - q}$'],
+    solutionKey: '$x_{1,2} = 2{,}5 \\pm 0{,}5$. Also $x_1 = 3$, $x_2 = 2$.',
+    tags: ['step-solver', 'pq-formel'],
+  },
+  {
+    id: 'qgl-basis-007', topicId: '10-quad-gleichungen', type: 'multiple-choice', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 2,
+    data: {
+      questionText: 'Wie viele Lösungen hat die Gleichung $x^2 + 4 = 0$?',
+      options: [
+        { id: 'a', text: 'Zwei Lösungen', correct: false },
+        { id: 'b', text: 'Eine Lösung', correct: false },
+        { id: 'c', text: 'Keine reelle Lösung', correct: true },
+      ],
+    },
+    hintKeys: ['$x^2 = -4$. Kann ein Quadrat negativ sein?'],
+    solutionKey: '$x^2 = -4$ hat keine reelle Lösung, da $x^2 \\geq 0$ für alle reellen $x$. D = 0 - 4 = -4 < 0.',
+    tags: ['keine-loesung', 'diskriminante'],
+  },
+  {
+    id: 'qgl-standard-006', topicId: '10-quad-gleichungen', type: 'drag-match', diffLevel: 'standard',
+    competencies: ['kritisches-denken'], points: 10, timeEstimate: 4,
+    data: {
+      questionText: 'Ordne jeder Gleichung die Anzahl der Lösungen zu.',
+      pairs: [
+        { id: 'a', left: '$x^2 - 4x + 4 = 0$', right: '1 Lösung (D = 0)' },
+        { id: 'b', left: '$x^2 - 5x + 6 = 0$', right: '2 Lösungen (D > 0)' },
+        { id: 'c', left: '$x^2 + 1 = 0$', right: 'Keine Lösung (D < 0)' },
+        { id: 'd', left: '$x^2 - 9 = 0$', right: '2 Lösungen (D > 0)' },
+      ],
+    },
+    hintKeys: ['Berechne jeweils D = (p/2)² - q.'],
+    solutionKey: '$x^2-4x+4$: D=0 (1 Lösung x=2). $x^2-5x+6$: D=0,25>0 (2 Lösungen). $x^2+1$: D=-1<0 (keine). $x^2-9$: D=9>0 (2 Lösungen).',
+    tags: ['drag-match', 'diskriminante', 'loesungsanzahl'],
+  },
+  {
+    id: 'qgl-standard-007', topicId: '10-quad-gleichungen', type: 'step-solver', diffLevel: 'standard',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 12, timeEstimate: 5,
+    contextKey: 'Wurfparabel',
+    data: {
+      questionText: 'Ein Ball wird mit $h(t) = -5t^2 + 20t$ geworfen. Wann trifft er den Boden?',
+      steps: [
+        { instruction: 'Setze $h(t) = 0$: $-5t^2 + 20t = 0$. Klammere $t$ aus: $t \\cdot (?) = 0$. Was steht in der Klammer?', type: 'multiple-choice',
+          options: [{ id: 'a', text: '$-5t + 20$' }, { id: 'b', text: '$-5t^2 + 20$' }, { id: 'c', text: '$5t - 20$' }],
+          correctId: 'a', showAnswer: '$t \\cdot (-5t + 20) = 0$' },
+        { instruction: '$t_1 = 0$ (Start). Löse $-5t + 20 = 0$: $t_2$ = ?', type: 'numeric-input',
+          expected: 4, tolerance: 0.01, showAnswer: '$t_2 = 20/5 = 4$ Sekunden' },
+      ],
+    },
+    hintKeys: ['Ausklammern: $-5t^2 + 20t = t(-5t + 20)$.', 'Nullprodukt: Wenn a·b = 0, dann a = 0 oder b = 0.'],
+    solutionKey: '$t(-5t+20) = 0$. $t_1 = 0$ (Abwurf), $t_2 = 4$ s (Aufprall).',
+    tags: ['step-solver', 'sachkontext', 'ausklammern', 'wurfparabel'],
+  },
+  {
+    id: 'qgl-standard-008', topicId: '10-quad-gleichungen', type: 'error-analysis', diffLevel: 'standard',
+    competencies: ['kritisches-denken'], points: 10, timeEstimate: 5,
+    data: {
+      questionText: 'Finde den Fehler in der pq-Formel-Anwendung auf $x^2 + 6x + 5 = 0$.',
+      steps: [
+        { content: 'p = 6, q = 5', hasError: false },
+        { content: 'x = -p/2 ± √((p/2)² - q) = -6/2 ± √(36 - 5)', hasError: true, errorExplanation: 'Fehler: (p/2)² = (6/2)² = 3² = 9, nicht 36. Es muss (p/2)² stehen, nicht p².' },
+        { content: '= -3 ± √31', hasError: true, errorExplanation: 'Folgefehler. Richtig: x = -3 ± √(9-5) = -3 ± 2, also x₁ = -1, x₂ = -5.' },
+      ],
+    },
+    hintKeys: ['Achte auf $(p/2)^2$ — erst halbieren, dann quadrieren!'],
+    solutionKey: 'x = -3 ± √(9-5) = -3 ± 2. $x_1 = -1$, $x_2 = -5$.',
+    tags: ['fehleranalyse', 'pq-formel'],
+  },
+  {
+    id: 'qgl-erweitert-006', topicId: '10-quad-gleichungen', type: 'numeric-input', diffLevel: 'erweitert',
+    competencies: ['kommunikation'], points: 15, timeEstimate: 5,
+    contextKey: 'Brückenberechnung',
+    data: {
+      questionText: 'Eine Brücke hat die Form $y = -0{,}02x^2 + 1{,}2x$. Bei welchem positiven $x$ ist $y = 0$? (= Spannweite)',
+      correctValue: 60, tolerance: 0.1,
+    },
+    hintKeys: ['$-0,02x^2 + 1,2x = 0$. Klammere x aus: $x(-0,02x + 1,2) = 0$.'],
+    solutionKey: '$x(-0,02x + 1,2) = 0$. $x_1 = 0$, $x_2 = 1,2/0,02 = 60$. Die Brücke spannt 60 m.',
+    tags: ['sachkontext', 'bruecke', 'ausklammern'],
+  },
+  {
+    id: 'qgl-erweitert-007', topicId: '10-quad-gleichungen', type: 'step-solver', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 15, timeEstimate: 7,
+    contextKey: 'Gewinnzone eines Unternehmens',
+    data: {
+      questionText: 'Gewinnfunktion $G(x) = -2x^2 + 120x - 1000$. Ab welcher Stückzahl macht das Unternehmen Gewinn?',
+      steps: [
+        { instruction: 'Setze $G(x) = 0$: $-2x^2 + 120x - 1000 = 0$. Teile durch -2: $x^2 - 60x + 500 = 0$. p = ?', type: 'numeric-input',
+          expected: -60, tolerance: 0.01, showAnswer: 'p = -60' },
+        { instruction: 'D = $(p/2)^2 - q = 30^2 - 500$ = ?', type: 'numeric-input',
+          expected: 400, tolerance: 0.1, showAnswer: 'D = 900 - 500 = 400' },
+        { instruction: '$x_1 = 30 - \\sqrt{400} = 30 - 20$ = ?', type: 'numeric-input',
+          expected: 10, tolerance: 0.1, showAnswer: '$x_1 \\approx 10$ (untere Grenze)' },
+      ],
+    },
+    hintKeys: ['Gewinnzone = zwischen den Nullstellen (da G(x) > 0).', 'Erst durch -2 teilen, um Normalform zu erhalten.'],
+    solutionKey: 'Break-even bei $x_1 \\approx 10$ und $x_2 = 50$. Gewinnzone: 10 < x < 50 Stück.',
+    tags: ['step-solver', 'sachkontext', 'gewinnzone'],
+  },
+  {
+    id: 'qgl-ea-001', topicId: '10-quad-gleichungen', type: 'multiple-choice', diffLevel: 'ea',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 20, timeEstimate: 5,
+    data: {
+      questionText: 'Satz von Vieta: Wenn $x_1 \\cdot x_2 = 6$ und $x_1 + x_2 = 5$, wie lautet die quadratische Gleichung?',
+      options: [
+        { id: 'a', text: '$x^2 - 5x + 6 = 0$', correct: true },
+        { id: 'b', text: '$x^2 + 5x + 6 = 0$', correct: false },
+        { id: 'c', text: '$x^2 - 6x + 5 = 0$', correct: false },
+      ],
+    },
+    hintKeys: ['Vieta: $x_1 + x_2 = -p$ und $x_1 \\cdot x_2 = q$.'],
+    solutionKey: '$x_1 + x_2 = 5 \\Rightarrow p = -5$. $x_1 \\cdot x_2 = 6 \\Rightarrow q = 6$. Also $x^2 - 5x + 6 = 0$.',
+    tags: ['vieta', 'ea'],
+  },
+  {
+    id: 'qgl-ea-002', topicId: '10-quad-gleichungen', type: 'step-solver', diffLevel: 'ea',
+    competencies: ['kreativitaet', 'kritisches-denken'], points: 20, timeEstimate: 7,
+    data: {
+      questionText: 'Löse $x^2 + 6x + 5 = 0$ durch quadratische Ergänzung (ohne pq-Formel).',
+      steps: [
+        { instruction: 'Ergänze: $x^2 + 6x + \\_ = (x + \\_)^2$. Welche Zahl muss ergänzt werden?', type: 'numeric-input',
+          expected: 9, tolerance: 0.01, showAnswer: '$(p/2)^2 = 3^2 = 9$. Also $x^2 + 6x + 9 = (x+3)^2$.' },
+        { instruction: '$x^2 + 6x + 5 = 0$ → $(x+3)^2 - 9 + 5 = 0$ → $(x+3)^2 = $ ?', type: 'numeric-input',
+          expected: 4, tolerance: 0.01, showAnswer: '$(x+3)^2 = 4$' },
+        { instruction: '$x + 3 = \\pm 2$. Die negative Lösung $x_2$ = ?', type: 'numeric-input',
+          expected: -5, tolerance: 0.01, showAnswer: '$x + 3 = -2 \\Rightarrow x = -5$' },
+      ],
+    },
+    hintKeys: ['Quadratische Ergänzung: Halbiere den Koeffizienten von x und quadriere.', '$(x+a)^2 = x^2 + 2ax + a^2$. Also $a = p/2$.'],
+    solutionKey: '$(x+3)^2 = 4$. $x+3 = \\pm 2$. $x_1 = -1$, $x_2 = -5$.',
+    tags: ['step-solver', 'quadratische-ergaenzung', 'ea'],
+  },
 ];

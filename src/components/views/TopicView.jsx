@@ -11,6 +11,9 @@ import StepSolverExercise from '../exercises/StepSolverExercise';
 import DragMatchExercise from '../exercises/DragMatchExercise';
 import OERShareButton from '../exercises/OERShareButton';
 import FunctionPlotter from '../stations/FunctionPlotter';
+import PythagorasExplorer from '../stations/PythagorasExplorer';
+import DiceSim from '../stations/DiceSim';
+import DiscriminantViz from '../stations/DiscriminantViz';
 
 function ensureRegistered(topicId) {
   const topic = getTopic(topicId);
@@ -246,6 +249,26 @@ export default function TopicView({ topicId, onBack }) {
               xRange={topic.plotter.xRange}
               yRange={topic.plotter.yRange}
             />
+          </div>
+        )}
+
+        {/* ── Interactive Stations ── */}
+        {topic.station === 'PythagorasExplorer' && (
+          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
+            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>🔭 Erkunde den Satz des Pythagoras</h2>
+            <PythagorasExplorer />
+          </div>
+        )}
+        {topic.station === 'DiceSim' && (
+          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
+            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>🎲 Zufallsexperiment-Simulator</h2>
+            <DiceSim />
+          </div>
+        )}
+        {topic.station === 'DiscriminantViz' && (
+          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
+            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>🔭 Erkunde die Diskriminante</h2>
+            <DiscriminantViz />
           </div>
         )}
 
