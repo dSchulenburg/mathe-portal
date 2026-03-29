@@ -322,4 +322,385 @@ export const exercises = [
       'h₁(x) = f(g(x)) = f(2^x) = (2^x)² = 2^(2x). Das ist eine Exponentialfunktion mit Basis 2 und verdoppeltem Exponent. h₂(x) = g(f(x)) = g(x²) = 2^(x²). Hier steht ein quadratischer Term im Exponenten – keine reine Exponentialfunktion im Standardsinne, aber exponentiell schnell wachsend. Antwort (a) beschreibt beide Kompositionen korrekt.',
     tags: ['komposition', 'funktionen-kombinieren', 'potenzregeln', 'kreativ'],
   },
+
+  // ─── NEUE AUFGABEN (BASIS) ──────────────────────────────────────────────────
+
+  {
+    id: 'fkl-basis-004',
+    topicId: '10-funktionsklassen',
+    type: 'drag-match',
+    diffLevel: 'basis',
+    competencies: ['kritisches-denken'],
+    points: 8,
+    timeEstimate: 4,
+    data: {
+      questionText:
+        'Ordne jede Funktionsgleichung dem passenden Funktionstyp zu.',
+      pairs: [
+        { id: 'p1', left: '$y = 2x + 1$', right: 'Linear' },
+        { id: 'p2', left: '$y = x^2 - 3$', right: 'Quadratisch' },
+        { id: 'p3', left: '$y = 2^x$', right: 'Exponentiell' },
+        { id: 'p4', left: '$y = \\sin(x)$', right: 'Trigonometrisch' },
+      ],
+    },
+    hintKeys: [
+      'Schau auf den höchsten Exponenten von x: Exponent 1 → linear, Exponent 2 → quadratisch.',
+      'Bei Exponentialfunktionen steht x im Exponenten der Basis. Sinus und Kosinus sind trigonometrische Funktionen.',
+    ],
+    solutionKey:
+      '$y = 2x + 1$: linear (x in der 1. Potenz, Form $y = mx + b$). $y = x^2 - 3$: quadratisch (x² ist die höchste Potenz). $y = 2^x$: exponentiell (x steht im Exponenten). $y = \\sin(x)$: trigonometrisch (Sinus-Funktion).',
+    tags: ['funktionstyp', 'zuordnung', 'drag-match', 'basis'],
+  },
+
+  {
+    id: 'fkl-basis-005',
+    topicId: '10-funktionsklassen',
+    type: 'multiple-choice',
+    diffLevel: 'basis',
+    competencies: ['kritisches-denken', 'kommunikation'],
+    points: 5,
+    timeEstimate: 3,
+    data: {
+      questionText:
+        'Welche Beschreibung passt zum Graphen einer linearen Funktion?',
+      options: [
+        { id: 'a', text: 'Eine nach oben geöffnete Parabel', correct: false },
+        { id: 'b', text: 'Eine Gerade, die schräg durch das Koordinatensystem verläuft', correct: true },
+        { id: 'c', text: 'Eine S-förmige Kurve, die sich einer Waagrechten annähert', correct: false },
+        { id: 'd', text: 'Eine Wellenkurve, die sich periodisch wiederholt', correct: false },
+      ],
+    },
+    hintKeys: [
+      'Der Name "linear" kommt vom lateinischen "linea" = Linie.',
+      'Lineare Funktionen haben die Form $f(x) = mx + b$. Jede solche Funktion ist eine Gerade im Koordinatensystem.',
+    ],
+    solutionKey:
+      'Eine lineare Funktion $f(x) = mx + b$ hat immer eine Gerade als Graph. Parabeln gehören zu quadratischen Funktionen, S-Kurven zu Exponentialfunktionen (für bestimmte Darstellungen), Wellenkurven zu trigonometrischen Funktionen.',
+    tags: ['linear', 'graph', 'erkennen', 'basis'],
+  },
+
+  // ─── NEUE AUFGABEN (STANDARD) ───────────────────────────────────────────────
+
+  {
+    id: 'fkl-standard-004',
+    topicId: '10-funktionsklassen',
+    type: 'step-solver',
+    diffLevel: 'standard',
+    competencies: ['kritisches-denken', 'kollaboration'],
+    points: 12,
+    timeEstimate: 10,
+    data: {
+      questionText:
+        'Handyvertrags-Vergleich: Vertrag A kostet $10{,}00\\,€$ Grundgebühr plus $0{,}10\\,€$ pro Minute. Vertrag B kostet $5{,}00\\,€$ Grundgebühr, der Preis steigt aber monatlich um $5\\,\\%$ je Minute mehr.\n\nModelliere beide Verträge als Funktionen und bestimme, ab welcher Minutenzahl $m$ Vertrag B teurer wird.',
+      steps: [
+        {
+          instruction: 'Welcher Funktionstyp beschreibt Vertrag A ($10 + 0{,}10 \\cdot m$)?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: 'Exponentialfunktion', correct: false },
+            { id: 'b', text: 'Lineare Funktion', correct: true },
+            { id: 'c', text: 'Quadratische Funktion', correct: false },
+          ],
+          correctId: 'b',
+          showAnswer: true,
+        },
+        {
+          instruction: 'Welcher Funktionstyp beschreibt Vertrag B ($5 \\cdot 1{,}05^m$)?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: 'Lineare Funktion', correct: false },
+            { id: 'b', text: 'Quadratische Funktion', correct: false },
+            { id: 'c', text: 'Exponentialfunktion', correct: true },
+          ],
+          correctId: 'c',
+          showAnswer: true,
+        },
+        {
+          instruction: 'Bei welcher ganzzahligen Minutenzahl $m$ ist Vertrag B erstmals teurer als Vertrag A? (Näherung durch Einsetzen: probiere $m = 30, 40, 50$)',
+          type: 'numeric-input',
+          expected: 45,
+          tolerance: 5,
+          showAnswer: true,
+        },
+      ],
+    },
+    hintKeys: [
+      'Vertrag A: konstante Zunahme pro Minute → linear. Vertrag B: prozentuale Zunahme → exponentiell.',
+      'Setze beide gleich: $10 + 0{,}10m = 5 \\cdot 1{,}05^m$. Für $m = 40$: A = 14,00 €, B ≈ 35,20 €. Für $m = 30$: A = 13,00 €, B ≈ 21,61 €.',
+    ],
+    solutionKey:
+      'Vertrag A: $f(m) = 10 + 0{,}10m$ (linear). Vertrag B: $g(m) = 5 \\cdot 1{,}05^m$ (exponentiell). Für kleine $m$ ist B günstiger (niedrige Grundgebühr). Ab ca. $m = 45$ Minuten überholt das exponentielle Wachstum von B die lineare Kurve von A.',
+    tags: ['sachkontext', 'handyvertrag', 'linear', 'exponentiell', 'schnittpunkt'],
+  },
+
+  {
+    id: 'fkl-standard-005',
+    topicId: '10-funktionsklassen',
+    type: 'drag-match',
+    diffLevel: 'standard',
+    competencies: ['kritisches-denken', 'kommunikation'],
+    points: 10,
+    timeEstimate: 5,
+    data: {
+      questionText:
+        'Ordne jeden Sachkontext dem passenden Funktionstyp zu.',
+      pairs: [
+        { id: 'p1', left: 'Wasserstand in einem Tank steigt gleichmäßig um 5 Liter pro Minute', right: 'Linear' },
+        { id: 'p2', left: 'Bakterien verdoppeln sich alle 20 Minuten', right: 'Exponentiell' },
+        { id: 'p3', left: 'Eine Schaukel schwingt hin und her — periodisch', right: 'Trigonometrisch' },
+        { id: 'p4', left: 'Ein geworfener Ball fliegt eine Wurfparabel', right: 'Quadratisch' },
+      ],
+    },
+    hintKeys: [
+      'Konstante Änderungsrate (immer gleich viel mehr) → linear. Konstanter Faktor (immer das x-fache) → exponentiell.',
+      'Periodisch = wiederholt sich regelmäßig → trigonometrisch. Parabel = quadratisch.',
+    ],
+    solutionKey:
+      'Wasserstand gleichmäßig: $f(t) = 5t$ → linear (konstante Zunahme). Bakterien verdoppeln: $f(t) = f_0 \\cdot 2^{t/20}$ → exponentiell (konstanter Faktor). Schaukel: $f(t) = A \\cdot \\sin(\\omega t)$ → trigonometrisch (periodisch). Ball: $h(t) = -g t^2/2 + v_0 t$ → quadratisch (Parabel).',
+    tags: ['sachkontext', 'drag-match', 'funktionstyp', 'anwendung'],
+  },
+
+  {
+    id: 'fkl-standard-006',
+    topicId: '10-funktionsklassen',
+    type: 'error-analysis',
+    diffLevel: 'standard',
+    competencies: ['kritisches-denken', 'kommunikation'],
+    points: 10,
+    timeEstimate: 8,
+    data: {
+      questionText:
+        'Ein Schüler behauptet: "Die Funktion $f(x) = 3 \\cdot 2^x$ ist linear, weil da \'mal 3\' steht." Analysiere seine Argumentation Schritt für Schritt.',
+      steps: [
+        {
+          content: 'Schüler: "Ich sehe einen Faktor 3 vor dem x, also ist es linear wie $f(x) = 3x$."',
+          hasError: true,
+          errorExplanation:
+            'Fehler: Der Schüler verwechselt $3 \\cdot 2^x$ mit $3x$. Bei $f(x) = 3 \\cdot 2^x$ ist $3$ ein konstanter Vorfaktor, aber $x$ steht im Exponenten der Basis 2 — nicht als Multiplikand.',
+        },
+        {
+          content: 'Schüler: "Der Graph müsste also eine Gerade sein."',
+          hasError: true,
+          errorExplanation:
+            'Fehler: Da $f(x) = 3 \\cdot 2^x$ eine Exponentialfunktion ist, hat sie keinen geraden, sondern einen exponentiell ansteigenden Graph. Bei $x = 0$: $f(0) = 3$; bei $x = 5$: $f(5) = 96$ — keine konstante Steigung.',
+        },
+        {
+          content: 'Richtig: Bei $f(x) = 3 \\cdot 2^x$ steht $x$ im Exponenten. Das ist das Kennzeichen einer Exponentialfunktion, unabhängig vom Vorfaktor.',
+          hasError: false,
+        },
+      ],
+    },
+    hintKeys: [
+      'Entscheidend ist, WO die Variable $x$ steht: als Basis mit festem Exponenten (Potenzfunktion), als direkte Variable (linear) oder im Exponenten einer festen Basis (exponentiell).',
+      'Prüfe: Ist die Steigung $f(x+1) - f(x)$ konstant? Bei $3 \\cdot 2^x$: $f(1) - f(0) = 6 - 3 = 3$, $f(2) - f(1) = 12 - 6 = 6$ — nicht konstant!',
+    ],
+    solutionKey:
+      'Die Funktion $f(x) = 3 \\cdot 2^x$ ist eine Exponentialfunktion. Der Vorfaktor $3$ verändert den Typ nicht. Entscheidend: $x$ steht im Exponenten der Basis $2$. Lineare Funktionen haben die Form $f(x) = mx + b$, wobei $x$ zur ersten Potenz auftritt.',
+    tags: ['fehleranalyse', 'exponentiell', 'vorfaktor', 'fehlkonzept'],
+  },
+
+  // ─── NEUE AUFGABEN (ERWEITERT) ───────────────────────────────────────────────
+
+  {
+    id: 'fkl-erweitert-004',
+    topicId: '10-funktionsklassen',
+    type: 'step-solver',
+    diffLevel: 'erweitert',
+    competencies: ['kritisches-denken', 'kollaboration'],
+    points: 15,
+    timeEstimate: 12,
+    data: {
+      questionText:
+        'Gegeben ist folgende Wertetabelle:\n\n| $x$ | 0 | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|---|\n| $y$ | 2 | 5 | 10 | 17 | 26 |\n\nBestimme durch systematische Differenzenanalyse, welcher Funktionstyp vorliegt.',
+      steps: [
+        {
+          instruction: 'Berechne die ersten Differenzen $\\Delta y = y_{n+1} - y_n$. Sind sie konstant?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: 'Ja, alle Differenzen sind gleich → lineare Funktion', correct: false },
+            { id: 'b', text: 'Nein, die Differenzen sind 3, 5, 7, 9 — wachsend', correct: true },
+            { id: 'c', text: 'Die Quotienten sind konstant → Exponentialfunktion', correct: false },
+          ],
+          correctId: 'b',
+          showAnswer: true,
+        },
+        {
+          instruction: 'Berechne die zweiten Differenzen $\\Delta^2 y = \\Delta y_{n+1} - \\Delta y_n$. Was stellst du fest?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: 'Die zweiten Differenzen sind 2, 2, 2 — konstant → quadratische Funktion', correct: true },
+            { id: 'b', text: 'Die zweiten Differenzen wachsen weiter → kubische Funktion', correct: false },
+            { id: 'c', text: 'Die zweiten Differenzen sind nicht berechenbar', correct: false },
+          ],
+          correctId: 'a',
+          showAnswer: true,
+        },
+        {
+          instruction: 'Welcher Wert von $a$ ergibt sich für $f(x) = ax^2 + bx + c$, wenn die zweiten Differenzen konstant gleich 2 sind? (Hinweis: konstante zweite Differenz = $2a$)',
+          type: 'numeric-input',
+          expected: 1,
+          tolerance: 0.01,
+          showAnswer: true,
+        },
+      ],
+    },
+    hintKeys: [
+      'Erste Differenzen konstant → linear. Zweite Differenzen konstant → quadratisch. Quotienten konstant → exponentiell.',
+      'Erste Differenzen: $5-2=3$, $10-5=5$, $17-10=7$, $26-17=9$. Zweite Differenzen: $5-3=2$, $7-5=2$, $9-7=2$ — konstant!',
+    ],
+    solutionKey:
+      'Die ersten Differenzen (3, 5, 7, 9) sind nicht konstant → nicht linear. Die zweiten Differenzen (2, 2, 2) sind konstant → quadratische Funktion. Aus $2a = 2$ folgt $a = 1$. Die Funktion lautet $f(x) = x^2 + 2x + 2$ (durch Einsetzen der Tabellenwerte zu bestimmen).',
+    tags: ['wertetabelle', 'differenzenanalyse', 'quadratisch', 'systematisch'],
+  },
+
+  {
+    id: 'fkl-erweitert-005',
+    topicId: '10-funktionsklassen',
+    type: 'multiple-choice',
+    diffLevel: 'erweitert',
+    competencies: ['kritisches-denken'],
+    points: 12,
+    timeEstimate: 8,
+    data: {
+      questionText:
+        'Welche der folgenden Funktionen wächst für sehr große $x$-Werte langfristig am stärksten?',
+      options: [
+        { id: 'a', text: '$f(x) = x^2$ (quadratisch)', correct: false },
+        { id: 'b', text: '$g(x) = 2^x$ (exponentiell)', correct: true },
+        { id: 'c', text: '$h(x) = 100x$ (linear mit großem Faktor)', correct: false },
+        { id: 'd', text: '$k(x) = x^3$ (kubisch)', correct: false },
+      ],
+    },
+    hintKeys: [
+      'Vergleiche die Werte bei $x = 20$: linear: 2000, quadratisch: 400, kubisch: 8000, exponentiell: $2^{20} = 1\\,048\\,576$.',
+      'Jedes Polynom (egal welchen Grades) wird langfristig von jeder Exponentialfunktion mit Basis $> 1$ übertroffen.',
+    ],
+    solutionKey:
+      'Exponentialfunktionen wachsen langfristig stärker als jedes Polynom. Bei $x = 20$: $h(20) = 2000$, $f(20) = 400$, $k(20) = 8000$, $g(20) = 2^{20} \\approx 10^6$. Bei $x = 100$: $g(100) = 2^{100} \\approx 10^{30}$, während $k(100) = 10^6$ winzig dagegen erscheint.',
+    tags: ['wachstumsvergleich', 'exponentiell', 'polynome', 'langzeitverhalten'],
+  },
+
+  {
+    id: 'fkl-erweitert-006',
+    topicId: '10-funktionsklassen',
+    type: 'numeric-input',
+    diffLevel: 'erweitert',
+    competencies: ['kritisches-denken'],
+    points: 12,
+    timeEstimate: 8,
+    data: {
+      questionText:
+        'Bestimme die positive $x$-Koordinate des Schnittpunkts von $f(x) = x^2$ und $g(x) = 2x + 3$.',
+      correctValue: 3,
+      tolerance: 0.01,
+    },
+    hintKeys: [
+      'Setze $f(x) = g(x)$: $x^2 = 2x + 3$, also $x^2 - 2x - 3 = 0$.',
+      'Faktorisiere: $(x - 3)(x + 1) = 0$. Die Lösungen sind $x = 3$ und $x = -1$.',
+    ],
+    solutionKey:
+      'Gleichsetzen: $x^2 = 2x + 3 \\Rightarrow x^2 - 2x - 3 = 0$. Faktorisierung: $(x-3)(x+1) = 0$. Lösungen: $x = 3$ und $x = -1$. Die positive Lösung ist $x = 3$. Probe: $f(3) = 9$, $g(3) = 2 \\cdot 3 + 3 = 9$ ✓',
+    tags: ['schnittpunkt', 'quadratisch', 'linear', 'gleichsetzen'],
+  },
+
+  // ─── NEUE AUFGABEN (ERWEITERTES ANWENDUNGSNIVEAU) ───────────────────────────
+
+  {
+    id: 'fkl-ea-001',
+    topicId: '10-funktionsklassen',
+    type: 'step-solver',
+    diffLevel: 'erweitert',
+    competencies: ['kreativitaet', 'kritisches-denken', 'kommunikation'],
+    points: 18,
+    timeEstimate: 15,
+    data: {
+      questionText:
+        'Das Café "Lernpause" erfasst seinen stündlichen Umsatz über den Tag:\n\n- **6–9 Uhr (Morgen)**: Umsatz verdoppelt sich jede Stunde: 50 € → 100 € → 200 €\n- **9–15 Uhr (Mittag)**: Umsatz bleibt konstant bei ca. 200 €/h\n- **15–20 Uhr (Abend)**: Umsatz fällt gleichmäßig von 200 € auf 0 €\n\nWelche Funktionstypen passen zu welchem Zeitraum?',
+      steps: [
+        {
+          instruction: 'Welcher Funktionstyp beschreibt den Morgen (6–9 Uhr, Verdopplung jede Stunde)?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: 'Linear — gleichmäßige Zunahme', correct: false },
+            { id: 'b', text: 'Exponentiell — konstanter Wachstumsfaktor', correct: true },
+            { id: 'c', text: 'Trigonometrisch — periodisches Muster', correct: false },
+          ],
+          correctId: 'b',
+          showAnswer: true,
+        },
+        {
+          instruction: 'Welcher Funktionstyp beschreibt die Mittagszeit (9–15 Uhr, konstanter Umsatz)?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: 'Konstante Funktion $f(t) = 200$ (Sonderfall linear mit Steigung 0)', correct: true },
+            { id: 'b', text: 'Quadratisch — mit Scheitelpunkt in der Mitte', correct: false },
+            { id: 'c', text: 'Exponentiell — Basis ist 1', correct: false },
+          ],
+          correctId: 'a',
+          showAnswer: true,
+        },
+        {
+          instruction: 'Welcher Funktionstyp beschreibt den Abend (15–20 Uhr, gleichmäßiger Rückgang)?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: 'Exponentieller Zerfall', correct: false },
+            { id: 'b', text: 'Linear — konstante Abnahme pro Stunde', correct: true },
+            { id: 'c', text: 'Quadratisch — beschleunigter Rückgang', correct: false },
+          ],
+          correctId: 'b',
+          showAnswer: true,
+        },
+      ],
+    },
+    hintKeys: [
+      'Verdopplung in gleichen Zeitabständen = konstanter Multiplikator = exponentielles Wachstum.',
+      'Gleichmäßiger Rückgang = konstante negative Steigung = lineare Abnahme. Konstant = lineare Funktion mit Steigung 0.',
+    ],
+    solutionKey:
+      'Morgen: $f(t) = 50 \\cdot 2^{t-6}$ (exponentiell, Verdopplung jede Stunde). Mittag: $f(t) = 200$ (konstant, Sonderfall linear). Abend: $f(t) = 200 - 40(t - 15)$ (linear, Steigung $-40$ €/h, fällt in 5 h von 200 auf 0). Ein realer Tagesumsatz setzt sich also aus verschiedenen Funktionstypen zusammen.',
+    tags: ['sachkontext', 'café', 'zusammengesetzte-funktion', 'modellierung', 'kreativ'],
+  },
+
+  {
+    id: 'fkl-ea-002',
+    topicId: '10-funktionsklassen',
+    type: 'multiple-choice',
+    diffLevel: 'erweitert',
+    competencies: ['kritisches-denken', 'kommunikation'],
+    points: 15,
+    timeEstimate: 10,
+    data: {
+      questionText:
+        'Warum kann eine quadratische Funktion $f(x) = ax^2 + bx + c$ mit $a \\neq 0$ maximal zwei Nullstellen haben?',
+      options: [
+        {
+          id: 'a',
+          text: 'Weil eine Parabel symmetrisch ist und deshalb höchstens zwei Punkte auf der $x$-Achse liegen kann.',
+          correct: false,
+        },
+        {
+          id: 'b',
+          text: 'Weil eine Gleichung vom Grad 2 nach dem Fundamentalsatz der Algebra höchstens 2 Lösungen in $\\mathbb{R}$ hat — der Grad des Polynoms bestimmt die maximale Anzahl der Nullstellen.',
+          correct: true,
+        },
+        {
+          id: 'c',
+          text: 'Weil die Diskriminante $D = b^2 - 4ac$ nur zwei Werte annehmen kann.',
+          correct: false,
+        },
+        {
+          id: 'd',
+          text: 'Weil quadratische Funktionen immer einen Scheitelpunkt haben, der genau eine Nullstelle erzeugt.',
+          correct: false,
+        },
+      ],
+    },
+    hintKeys: [
+      'Der Fundamentalsatz der Algebra besagt: Ein Polynom vom Grad $n$ hat genau $n$ Nullstellen in $\\mathbb{C}$ (mit Vielfachheiten gezählt).',
+      'In $\\mathbb{R}$ können komplexe Nullstellen auftreten, die wir nicht sehen — daher "höchstens" 2 reelle Nullstellen.',
+    ],
+    solutionKey:
+      'Nach dem Fundamentalsatz der Algebra hat ein Polynom vom Grad $n$ in $\\mathbb{C}$ genau $n$ Nullstellen (mit Vielfachheiten). Für $n = 2$ gibt es also höchstens 2 reelle Nullstellen (die anderen könnten komplex sein, wenn $D < 0$). Die Symmetrie der Parabel ist eine Folge des Grades, nicht die eigentliche Ursache. Die Diskriminante entscheidet, ob 0, 1 oder 2 reelle Nullstellen vorliegen.',
+    tags: ['nullstellen', 'grad', 'polynom', 'fundamentalsatz', 'begruendung'],
+  },
 ];
