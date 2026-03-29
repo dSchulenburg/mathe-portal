@@ -128,4 +128,80 @@ export const exercises = [
     solutionKey: 'Scheitel bei (0|5), Rand bei (10|0): f(x) = a·x² + 5. f(10) = 0 → 100a + 5 = 0 → a = -0.05.',
     tags: ['sachkontext', 'modellierung'],
   },
+
+  // ─── PREMIUM UPGRADE ────────────────────────────
+  {
+    id: 'qf-standard-005', topicId: '10-quad-funktionen', type: 'step-solver', diffLevel: 'standard',
+    competencies: ['kommunikation', 'kritisches-denken'], points: 12, timeEstimate: 5,
+    contextKey: 'Springbrunnen',
+    data: {
+      questionText: 'Ein Springbrunnen-Wasserbogen folgt $f(x) = -0{,}5x^2 + 2x$. Wie hoch ist der höchste Punkt?',
+      steps: [
+        { instruction: 'Scheitelstelle: $x_S = -\\frac{b}{2a} = -\\frac{2}{2 \\cdot (-0{,}5)}$ = ?', type: 'numeric-input', expected: 2, tolerance: 0.01, showAnswer: '$x_S = 2$' },
+        { instruction: 'Scheitelhöhe: $f(2) = -0{,}5 \\cdot 4 + 2 \\cdot 2$ = ?', type: 'numeric-input', expected: 2, tolerance: 0.01, showAnswer: '$f(2) = -2 + 4 = 2$ m' },
+      ],
+    },
+    hintKeys: ['Scheitelformel: $x_S = -b/(2a)$ für $f(x) = ax^2 + bx + c$.'],
+    solutionKey: 'Scheitel bei $(2 | 2)$. Der Wasserbogen erreicht 2 m Höhe.',
+    tags: ['step-solver', 'scheitel', 'sachkontext'],
+  },
+  {
+    id: 'qf-basis-005', topicId: '10-quad-funktionen', type: 'drag-match', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 3,
+    data: {
+      questionText: 'Ordne jeder Eigenschaft die richtige Auswirkung auf die Parabel zu.',
+      pairs: [
+        { id: 'a', left: '$a > 0$', right: 'Nach oben geöffnet' },
+        { id: 'b', left: '$a < 0$', right: 'Nach unten geöffnet' },
+        { id: 'c', left: '$|a| > 1$', right: 'Schmaler als Normalparabel' },
+        { id: 'd', left: '$|a| < 1$', right: 'Breiter als Normalparabel' },
+      ],
+    },
+    hintKeys: ['a bestimmt die Öffnungsrichtung (Vorzeichen) und Breite (Betrag).'],
+    solutionKey: '$a > 0$: oben offen. $a < 0$: unten offen. $|a| > 1$: schmaler. $|a| < 1$: breiter.',
+    tags: ['drag-match', 'parameter-a'],
+  },
+  {
+    id: 'qf-erweitert-005', topicId: '10-quad-funktionen', type: 'error-analysis', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken'], points: 12, timeEstimate: 5,
+    data: {
+      questionText: 'Finde den Fehler beim Bestimmen des Scheitels von $f(x) = 2(x-3)^2 + 4$.',
+      steps: [
+        { content: 'Scheitelform: f(x) = a(x - d)² + e', hasError: false },
+        { content: 'Scheitel bei (d | e) = (3 | 4)', hasError: false },
+        { content: 'Die Parabel ist nach unten geöffnet, da 2 > 1', hasError: true, errorExplanation: 'Fehler: a = 2 > 0, also ist die Parabel nach OBEN geöffnet. Das Vorzeichen von a bestimmt die Richtung, nicht der Betrag.' },
+      ],
+    },
+    hintKeys: ['Öffnungsrichtung hängt nur vom Vorzeichen von a ab, nicht von seinem Betrag.'],
+    solutionKey: 'Scheitel bei (3|4) ist korrekt. Aber a=2>0 → Parabel nach oben geöffnet (nicht unten).',
+    tags: ['fehleranalyse', 'scheitelform', 'oeffnung'],
+  },
+  {
+    id: 'qf-standard-006', topicId: '10-quad-funktionen', type: 'numeric-input', diffLevel: 'standard',
+    competencies: ['kommunikation'], points: 8, timeEstimate: 4,
+    contextKey: 'Basketball-Wurfbahn',
+    data: {
+      questionText: 'Ein Basketball folgt der Bahn $h(x) = -0{,}1x^2 + x + 2$ (h in m, x in m). Wie hoch fliegt der Ball maximal? (auf 1 Dezimale)',
+      correctValue: 4.5, tolerance: 0.1,
+    },
+    hintKeys: ['Scheitelstelle: $x_S = -b/(2a) = -1/(2 \\cdot (-0{,}1)) = 5$', 'Scheitelhöhe: $h(5) = -0{,}1 \\cdot 25 + 5 + 2$'],
+    solutionKey: '$x_S = 5$. $h(5) = -2{,}5 + 5 + 2 = 4{,}5$ m.',
+    tags: ['sachkontext', 'basketball', 'scheitel'],
+  },
+  {
+    id: 'qf-ea-001', topicId: '10-quad-funktionen', type: 'multiple-choice', diffLevel: 'ea',
+    competencies: ['kritisches-denken'], points: 20, timeEstimate: 5,
+    data: {
+      questionText: 'Die Normalparabel $y = x^2$ wird um 3 nach rechts und 2 nach oben verschoben. Welche Gleichung entsteht?',
+      options: [
+        { id: 'a', text: '$y = (x-3)^2 + 2$', correct: true },
+        { id: 'b', text: '$y = (x+3)^2 + 2$', correct: false },
+        { id: 'c', text: '$y = (x-3)^2 - 2$', correct: false },
+        { id: 'd', text: '$y = x^2 + 3x + 2$', correct: false },
+      ],
+    },
+    hintKeys: ['Verschiebung nach rechts um d: ersetze x durch (x-d). Nach oben um e: addiere e.'],
+    solutionKey: 'Rechts um 3: $(x-3)$. Hoch um 2: $+2$. Also $y = (x-3)^2 + 2$. Scheitel bei $(3|2)$.',
+    tags: ['verschiebung', 'scheitelform', 'ea'],
+  },
 ];

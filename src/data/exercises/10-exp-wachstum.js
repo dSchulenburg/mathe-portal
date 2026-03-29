@@ -385,4 +385,79 @@ export const exercises = [
       't = ln(8/6,1) / ln(1,011) ≈ 24,8 → aufrunden → t = 25 → Jahr 2025. Probe: B(25) = 6,1 · 1,011^25 ≈ 8,02 Mrd. > 8 Mrd. ✓',
     tags: ['sachkontext', 'bevoelkerungswachstum', 'modellierung', 'kritisches-denken', 'abiturrelevant'],
   },
+
+  // ─── PREMIUM UPGRADE ────────────────────────────
+  {
+    id: 'exp-standard-006', topicId: '10-exp-wachstum', type: 'drag-match', diffLevel: 'standard',
+    competencies: ['kommunikation'], points: 10, timeEstimate: 3,
+    data: {
+      questionText: 'Ordne jeden Sachkontext der richtigen Wachstumsart zu.',
+      pairs: [
+        { id: 'a', left: 'Bakterien verdoppeln sich alle 20 min', right: 'Exponentielles Wachstum' },
+        { id: 'b', left: 'Radioaktiver Zerfall', right: 'Exponentielle Abnahme' },
+        { id: 'c', left: 'Taschengeld: 5 € pro Woche', right: 'Lineares Wachstum' },
+        { id: 'd', left: 'Bevölkerung nähert sich Grenze', right: 'Begrenztes Wachstum' },
+      ],
+    },
+    hintKeys: ['Exponentiell: konstanter Faktor. Linear: konstante Differenz. Begrenzt: nähert sich einem Grenzwert.'],
+    solutionKey: 'Bakterien = exponentiell, Zerfall = exp. Abnahme, Taschengeld = linear, Bevölkerung = begrenzt.',
+    tags: ['drag-match', 'wachstumsarten'],
+  },
+  {
+    id: 'exp-standard-007', topicId: '10-exp-wachstum', type: 'step-solver', diffLevel: 'standard',
+    competencies: ['kritisches-denken'], points: 12, timeEstimate: 6,
+    contextKey: 'TikTok-Views',
+    data: {
+      questionText: 'Ein Video hat am ersten Tag 500 Views. Danach verdoppeln sich die Views täglich. Wie viele Views nach 7 Tagen?',
+      steps: [
+        { instruction: 'Aufgabe: $f(t) = 500 \\cdot 2^t$. Berechne $f(7) = 500 \\cdot 2^7$. Was ist $2^7$?', type: 'numeric-input', expected: 128, tolerance: 0.1, showAnswer: '$2^7 = 128$' },
+        { instruction: '$f(7) = 500 \\cdot 128$ = ?', type: 'numeric-input', expected: 64000, tolerance: 1, showAnswer: '64.000 Views nach 7 Tagen' },
+      ],
+    },
+    hintKeys: ['$2^7 = 2 \\cdot 2 \\cdot ... \\cdot 2$ (7-mal). Schrittweise: $2^3 = 8$, $2^4 = 16$, ...'],
+    solutionKey: '$f(7) = 500 \\cdot 2^7 = 500 \\cdot 128 = 64.000$ Views.',
+    tags: ['step-solver', 'sachkontext', 'verdopplung'],
+  },
+  {
+    id: 'exp-erweitert-006', topicId: '10-exp-wachstum', type: 'error-analysis', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken'], points: 12, timeEstimate: 5,
+    data: {
+      questionText: 'Finde den Fehler. Halbwertszeit: Ein Medikament hat HWZ = 4h. Startdosis 400 mg. Menge nach 12h?',
+      steps: [
+        { content: 'f(t) = 400 · 0,5^(t/4)', hasError: false },
+        { content: 'f(12) = 400 · 0,5^(12/4) = 400 · 0,5^3', hasError: false },
+        { content: '= 400 · 1,5 = 600 mg', hasError: true, errorExplanation: 'Fehler: $0{,}5^3 = 0{,}125$, nicht 1,5! Richtig: 400 · 0,125 = 50 mg.' },
+      ],
+    },
+    hintKeys: ['$0{,}5^3 = 0{,}5 \\cdot 0{,}5 \\cdot 0{,}5 = 0{,}125$.'],
+    solutionKey: 'f(12) = 400 · 0,5³ = 400 · 0,125 = 50 mg. Nach 3 Halbwertszeiten ist nur 1/8 übrig.',
+    tags: ['fehleranalyse', 'halbwertszeit'],
+  },
+  {
+    id: 'exp-basis-006', topicId: '10-exp-wachstum', type: 'numeric-input', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 3,
+    contextKey: 'Pizza abkühlen',
+    data: {
+      questionText: 'Eine Pizza kühlt ab: Temperatur $T(t) = 20 + 80 \\cdot 0{,}9^t$ (t in Minuten). Wie warm ist sie nach 10 Minuten? (auf ganze °C)',
+      correctValue: 48, tolerance: 1,
+    },
+    hintKeys: ['$0{,}9^{10} \\approx 0{,}349$. $T(10) = 20 + 80 \\cdot 0{,}349$.'],
+    solutionKey: '$T(10) = 20 + 80 \\cdot 0{,}9^{10} = 20 + 80 \\cdot 0{,}349 \\approx 20 + 27{,}9 \\approx 48$ °C.',
+    tags: ['sachkontext', 'abkuehlung', 'begrenztes-wachstum'],
+  },
+  {
+    id: 'exp-ea-003', topicId: '10-exp-wachstum', type: 'multiple-choice', diffLevel: 'ea',
+    competencies: ['kritisches-denken'], points: 20, timeEstimate: 5,
+    data: {
+      questionText: 'Warum ist exponentielles Wachstum in der Realität nie dauerhaft möglich?',
+      options: [
+        { id: 'a', text: 'Weil die Mathematik ab gewissen Zahlen nicht mehr funktioniert.', correct: false },
+        { id: 'b', text: 'Weil reale Systeme begrenzte Ressourcen haben (Platz, Nahrung, Energie), die das Wachstum irgendwann bremsen.', correct: true },
+        { id: 'c', text: 'Weil exponentielles Wachstum nur in der Theorie existiert.', correct: false },
+      ],
+    },
+    hintKeys: ['Denke an Bakterien: Irgendwann ist die Petrischale voll.'],
+    solutionKey: 'Reale Ressourcen sind endlich → logistisches Wachstum mit Sättigungsgrenze. Exponentiell gilt nur am Anfang.',
+    tags: ['modellkritik', 'logistisch', 'ea'],
+  },
 ];

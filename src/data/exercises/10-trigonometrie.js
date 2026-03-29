@@ -295,4 +295,80 @@ export const exercises = [
     solutionKey: 'Korrekt sind (a), (b) und (c). Da 6² + 8² = 36 + 64 = 100 = 10², ist es ein rechtwinkliges Dreieck (γ = 90°). Alle drei Methoden funktionieren. (d) ist falsch: Der Sinussatz benötigt einen bekannten Winkel.',
     tags: ['kreativaufgabe', 'dreieck-loesen', 'methoden-vergleich', 'kosinussatz', 'sinussatz'],
   },
+
+  // ─── PREMIUM UPGRADE ────────────────────────────
+  {
+    id: 'trig-standard-008', topicId: '10-trigonometrie', type: 'drag-match', diffLevel: 'standard',
+    competencies: ['kommunikation'], points: 10, timeEstimate: 3,
+    data: {
+      questionText: 'Ordne jede trigonometrische Funktion ihrer Definition im rechtwinkligen Dreieck zu.',
+      pairs: [
+        { id: 'a', left: '$\\sin(\\alpha)$', right: 'Gegenkathete / Hypotenuse' },
+        { id: 'b', left: '$\\cos(\\alpha)$', right: 'Ankathete / Hypotenuse' },
+        { id: 'c', left: '$\\tan(\\alpha)$', right: 'Gegenkathete / Ankathete' },
+      ],
+    },
+    hintKeys: ['Merkhilfe: SOHCAHTOA — Sin=Opposite/Hypotenuse, Cos=Adjacent/Hypotenuse, Tan=Opposite/Adjacent.'],
+    solutionKey: 'sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse, tan = Gegenkathete/Ankathete.',
+    tags: ['drag-match', 'definitionen'],
+  },
+  {
+    id: 'trig-standard-009', topicId: '10-trigonometrie', type: 'step-solver', diffLevel: 'standard',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 12, timeEstimate: 6,
+    contextKey: 'Schattenlänge',
+    data: {
+      questionText: 'Die Sonne steht im Winkel von 35° über dem Horizont. Ein Laternenpfahl ist 6 m hoch. Wie lang ist sein Schatten?',
+      steps: [
+        { instruction: 'Welche trigonometrische Funktion passt? $\\tan(35°) = \\frac{\\text{Höhe}}{\\text{Schatten}}$. Stelle nach dem Schatten um: Schatten = ?', type: 'multiple-choice',
+          options: [{ id: 'a', text: '$\\frac{6}{\\tan(35°)}$' }, { id: 'b', text: '$6 \\cdot \\tan(35°)$' }, { id: 'c', text: '$\\frac{\\tan(35°)}{6}$' }],
+          correctId: 'a', showAnswer: 'Schatten = Höhe / tan(α) = 6 / tan(35°)' },
+        { instruction: '$\\tan(35°) \\approx 0{,}7$. Schatten $\\approx 6 / 0{,}7$ = ? (auf 1 Dezimale)', type: 'numeric-input',
+          expected: 8.6, tolerance: 0.2, showAnswer: 'Schatten ≈ 8,6 m' },
+      ],
+    },
+    hintKeys: ['tan(α) = Gegenkathete/Ankathete. Hier: Gegenkathete = Höhe, Ankathete = Schatten.'],
+    solutionKey: 'Schatten = 6 / tan(35°) ≈ 6 / 0,7 ≈ 8,6 m.',
+    tags: ['step-solver', 'sachkontext', 'schatten', 'tangens'],
+  },
+  {
+    id: 'trig-erweitert-008', topicId: '10-trigonometrie', type: 'error-analysis', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken'], points: 12, timeEstimate: 5,
+    data: {
+      questionText: 'Finde den Fehler. Rechtwinkliges Dreieck, α = 40°, Hypotenuse c = 10. Gesucht: Gegenkathete a.',
+      steps: [
+        { content: 'sin(40°) = a / c', hasError: false },
+        { content: 'a = c / sin(40°) = 10 / 0,643 ≈ 15,6', hasError: true, errorExplanation: 'Fehler: Es muss a = c · sin(40°) heißen (multiplizieren, nicht dividieren). a = 10 · 0,643 ≈ 6,4.' },
+      ],
+    },
+    hintKeys: ['$\\sin(\\alpha) = a/c$ → $a = c \\cdot \\sin(\\alpha)$, nicht $c / \\sin(\\alpha)$.'],
+    solutionKey: '$a = 10 \\cdot \\sin(40°) = 10 \\cdot 0{,}643 \\approx 6{,}4$.',
+    tags: ['fehleranalyse', 'sinus', 'umstellen'],
+  },
+  {
+    id: 'trig-basis-008', topicId: '10-trigonometrie', type: 'numeric-input', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 3,
+    contextKey: 'Riesenrad',
+    data: {
+      questionText: 'Ein Riesenrad hat einen Radius von 25 m. Du sitzt in einer Gondel im Winkel von 30° über dem Mittelpunkt. Wie hoch über dem Mittelpunkt bist du? (= $25 \\cdot \\sin(30°)$)',
+      correctValue: 12.5, tolerance: 0.1,
+    },
+    hintKeys: ['$\\sin(30°) = 0{,}5$. Höhe über Mittelpunkt = $r \\cdot \\sin(\\alpha)$.'],
+    solutionKey: 'Höhe = $25 \\cdot \\sin(30°) = 25 \\cdot 0{,}5 = 12{,}5$ m.',
+    tags: ['sachkontext', 'riesenrad', 'sinus'],
+  },
+  {
+    id: 'trig-ea-004', topicId: '10-trigonometrie', type: 'step-solver', diffLevel: 'ea',
+    competencies: ['kreativitaet', 'kritisches-denken'], points: 20, timeEstimate: 8,
+    contextKey: 'Pegelstand Elbe (Hamburg)',
+    data: {
+      questionText: 'Der Elbe-Pegel schwankt mit den Gezeiten: $h(t) = 2{,}5 \\sin(\\frac{\\pi}{6{,}2} t) + 3{,}5$ (h in m, t in Stunden). Wann ist Hochwasser und wie hoch?',
+      steps: [
+        { instruction: 'Maximaler Pegelstand = Amplitude + Mittellinie = 2,5 + 3,5 = ?', type: 'numeric-input', expected: 6, tolerance: 0.01, showAnswer: 'Max. Pegel = 6 m' },
+        { instruction: 'Hochwasser wenn $\\sin(...) = 1$. Das ist bei $\\frac{\\pi}{6{,}2} t = \\frac{\\pi}{2}$. t = ?', type: 'numeric-input', expected: 3.1, tolerance: 0.1, showAnswer: '$t = 6{,}2/2 = 3{,}1$ h nach Beginn' },
+      ],
+    },
+    hintKeys: ['$\\sin$ ist maximal (=1) bei $\\pi/2$.', 'Periode = $2\\pi / (\\pi/6{,}2) = 12{,}4$ Stunden (realistisch für Gezeiten).'],
+    solutionKey: 'Hochwasser bei $t \\approx 3{,}1$ h mit $h = 6$ m. Periode ≈ 12,4 h (typisch für Gezeiten).',
+    tags: ['step-solver', 'sachkontext', 'gezeiten', 'sinus', 'ea'],
+  },
 ];

@@ -474,4 +474,85 @@ export const exercises = [
       'a(2) = v′(2) = 6 · 2 = 12 m/s².',
     tags: ['sachkontext', 'beschleunigung', 'zweite-ableitung', 'physik'],
   },
+
+  // ─── PREMIUM UPGRADE ────────────────────────────
+  {
+    id: 'diff-standard-006', topicId: '10-diff-einfuehrung', type: 'drag-match', diffLevel: 'standard',
+    competencies: ['kommunikation'], points: 10, timeEstimate: 3,
+    data: {
+      questionText: 'Ordne jeder Funktion ihre Ableitung zu.',
+      pairs: [
+        { id: 'a', left: '$f(x) = x^3$', right: "$f'(x) = 3x^2$" },
+        { id: 'b', left: '$f(x) = x^2$', right: "$f'(x) = 2x$" },
+        { id: 'c', left: '$f(x) = 5x$', right: "$f'(x) = 5$" },
+        { id: 'd', left: '$f(x) = 7$', right: "$f'(x) = 0$" },
+      ],
+    },
+    hintKeys: ['Potenzregel: $(x^n)\\prime = n \\cdot x^{n-1}$. Konstante → Ableitung = 0.'],
+    solutionKey: '$(x^3)\\prime = 3x^2$, $(x^2)\\prime = 2x$, $(5x)\\prime = 5$, $(7)\\prime = 0$.',
+    tags: ['drag-match', 'potenzregel', 'ableitungen'],
+  },
+  {
+    id: 'diff-standard-007', topicId: '10-diff-einfuehrung', type: 'step-solver', diffLevel: 'standard',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 12, timeEstimate: 5,
+    contextKey: 'Autofahrt',
+    data: {
+      questionText: 'Die Strecke eines Autos ist $s(t) = 2t^2 + 10t$ (s in m, t in s). Wie schnell fährt es nach 3 Sekunden?',
+      steps: [
+        { instruction: 'Geschwindigkeit = Ableitung der Strecke. $s\\prime(t) = $ ?', type: 'multiple-choice',
+          options: [{ id: 'a', text: '$4t + 10$' }, { id: 'b', text: '$2t + 10$' }, { id: 'c', text: '$4t^2 + 10$' }],
+          correctId: 'a', showAnswer: "$s'(t) = 4t + 10$ (Potenzregel)" },
+        { instruction: '$v(3) = s\\prime(3) = 4 \\cdot 3 + 10$ = ?', type: 'numeric-input',
+          expected: 22, tolerance: 0.01, showAnswer: '$v(3) = 22$ m/s ≈ 79 km/h' },
+      ],
+    },
+    hintKeys: ['$(2t^2)\\prime = 4t$, $(10t)\\prime = 10$.'],
+    solutionKey: "$s'(t) = 4t + 10$. $v(3) = 22$ m/s.",
+    tags: ['step-solver', 'sachkontext', 'geschwindigkeit'],
+  },
+  {
+    id: 'diff-erweitert-006', topicId: '10-diff-einfuehrung', type: 'error-analysis', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken'], points: 12, timeEstimate: 5,
+    data: {
+      questionText: 'Finde den Fehler bei der Ableitung von $f(x) = 3x^4 - 2x^2 + x$.',
+      steps: [
+        { content: "f'(x) = 3 · 4x³ - 2 · 2x + 1", hasError: false },
+        { content: "= 12x³ - 4x + 1", hasError: false },
+        { content: "f''(x) = 12 · 3x² - 4", hasError: false },
+        { content: "= 36x² - 4 + 1 = 36x² - 3", hasError: true, errorExplanation: "Fehler: Die +1 aus f'(x) ist eine Konstante, deren Ableitung 0 ist (nicht +1). Richtig: f''(x) = 36x² - 4." },
+      ],
+    },
+    hintKeys: ['Die Ableitung einer Konstanten ist immer 0.'],
+    solutionKey: "$f''(x) = 36x^2 - 4$. Die Konstante +1 in $f'(x)$ fällt weg.",
+    tags: ['fehleranalyse', 'zweite-ableitung'],
+  },
+  {
+    id: 'diff-basis-006', topicId: '10-diff-einfuehrung', type: 'numeric-input', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 3,
+    contextKey: 'Ballwurf',
+    data: {
+      questionText: 'Ein Ball wird hochgeworfen: $h(t) = -5t^2 + 20t$ (h in m). Nach wie vielen Sekunden ist er am höchsten? (= wo $h\\prime(t) = 0$)',
+      correctValue: 2, tolerance: 0.01,
+    },
+    hintKeys: ["$h'(t) = -10t + 20$. Setze $h'(t) = 0$ und löse nach t."],
+    solutionKey: "$h'(t) = -10t + 20 = 0 \\Rightarrow t = 2$ s. Maximale Höhe: $h(2) = -20 + 40 = 20$ m.",
+    tags: ['sachkontext', 'maximum', 'ballwurf'],
+  },
+  {
+    id: 'diff-ea-004', topicId: '10-diff-einfuehrung', type: 'step-solver', diffLevel: 'ea',
+    competencies: ['kreativitaet', 'kritisches-denken'], points: 20, timeEstimate: 7,
+    contextKey: 'Wasserstand-Änderungsrate',
+    data: {
+      questionText: 'Der Wasserstand eines Sees folgt $W(t) = 0{,}1t^3 - 1{,}5t^2 + 6t + 10$ (m über NN, t in Monaten). Wann steigt der Pegel am schnellsten?',
+      steps: [
+        { instruction: "$W'(t) = 0{,}3t^2 - 3t + 6$. Das Maximum der Änderungsrate ist wo $W''(t) = 0$. Berechne $W''(t)$.", type: 'multiple-choice',
+          options: [{ id: 'a', text: '$0{,}6t - 3$' }, { id: 'b', text: '$0{,}3t - 3$' }, { id: 'c', text: '$0{,}6t^2 - 3$' }],
+          correctId: 'a', showAnswer: "$W''(t) = 0{,}6t - 3$" },
+        { instruction: '$0{,}6t - 3 = 0$. t = ?', type: 'numeric-input', expected: 5, tolerance: 0.01, showAnswer: '$t = 5$ Monate' },
+      ],
+    },
+    hintKeys: ['Die Änderungsrate steigt am schnellsten beim Wendepunkt der Funktion.', "Wendepunkt: $W''(t) = 0$."],
+    solutionKey: "$W''(t) = 0{,}6t - 3 = 0 \\Rightarrow t = 5$. Der Pegel steigt im 5. Monat am schnellsten.",
+    tags: ['step-solver', 'sachkontext', 'wendepunkt', 'ea'],
+  },
 ];

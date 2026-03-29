@@ -220,4 +220,79 @@ export const exercises = [
     solutionKey: 'Periode von f(x) = sin(x) ist T₁ = 2π. Periode von g(x) = sin(2x) ist T₂ = π. Die resultierende Periode ist kgV(2π, π) = 2π. Antwort (b) ist korrekt.',
     tags: ['ueberlagerung', 'superposition', 'periode', 'kgv'],
   },
+
+  // ─── PREMIUM UPGRADE ────────────────────────────
+  {
+    id: 'per-standard-006', topicId: '10-periodisch', type: 'drag-match', diffLevel: 'standard',
+    competencies: ['kommunikation'], points: 10, timeEstimate: 3,
+    data: {
+      questionText: 'Ordne jedem periodischen Vorgang die passende Periode zu.',
+      pairs: [
+        { id: 'a', left: 'Herzschlag eines Erwachsenen', right: '≈ 1 Sekunde' },
+        { id: 'b', left: 'Tag-Nacht-Wechsel', right: '24 Stunden' },
+        { id: 'c', left: 'Jahreszeiten', right: '365 Tage' },
+        { id: 'd', left: 'Wechselstrom (DE)', right: '0,02 Sekunden (50 Hz)' },
+      ],
+    },
+    hintKeys: ['Frequenz × Periode = 1. Wechselstrom in DE hat 50 Hz = 50 Schwingungen pro Sekunde.'],
+    solutionKey: 'Herz ≈ 1s, Tag = 24h, Jahr = 365d, Wechselstrom = 1/50 = 0,02s.',
+    tags: ['drag-match', 'perioden', 'sachkontext'],
+  },
+  {
+    id: 'per-standard-007', topicId: '10-periodisch', type: 'step-solver', diffLevel: 'standard',
+    competencies: ['kritisches-denken'], points: 12, timeEstimate: 5,
+    contextKey: 'Temperatur im Jahresverlauf',
+    data: {
+      questionText: 'Die Durchschnittstemperatur in Hamburg folgt ca. $T(m) = 9 + 8 \\sin(\\frac{\\pi}{6}(m - 4))$ (m = Monat). Wann ist es am wärmsten?',
+      steps: [
+        { instruction: 'Maximum wenn $\\sin(...) = 1$. $\\frac{\\pi}{6}(m-4) = \\frac{\\pi}{2}$. $m - 4$ = ?', type: 'numeric-input', expected: 3, tolerance: 0.01, showAnswer: '$m - 4 = 3$, also $m = 7$' },
+        { instruction: 'Monat 7 = Juli. Maximale Temperatur: $T(7) = 9 + 8 \\cdot 1$ = ?', type: 'numeric-input', expected: 17, tolerance: 0.1, showAnswer: 'Max. 17 °C im Juli' },
+      ],
+    },
+    hintKeys: ['sin ist maximal (=1) bei π/2.', 'Mittlere Temperatur = 9 °C, Amplitude = 8 °C.'],
+    solutionKey: 'Wärmstes: Juli ($m=7$) mit ca. 17 °C.',
+    tags: ['step-solver', 'sachkontext', 'temperatur', 'sinus'],
+  },
+  {
+    id: 'per-erweitert-006', topicId: '10-periodisch', type: 'error-analysis', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken'], points: 12, timeEstimate: 5,
+    data: {
+      questionText: 'Finde den Fehler. $f(x) = 3\\sin(2x)$. Schüler behauptet: Amplitude = 2, Periode = 3.',
+      steps: [
+        { content: 'f(x) = 3·sin(2x)', hasError: false },
+        { content: 'Amplitude = 2 (der Faktor vor x)', hasError: true, errorExplanation: 'Fehler: Amplitude = 3 (Faktor VOR sin). Der Faktor 2 beeinflusst die Periode, nicht die Amplitude.' },
+        { content: 'Periode = 3', hasError: true, errorExplanation: 'Fehler: Periode = 2π/2 = π. Die 3 ist die Amplitude, nicht die Periode.' },
+      ],
+    },
+    hintKeys: ['$a \\cdot \\sin(b \\cdot x)$: Amplitude = $|a|$, Periode = $2\\pi / |b|$.'],
+    solutionKey: 'Amplitude = 3, Periode = 2π/2 = π.',
+    tags: ['fehleranalyse', 'amplitude', 'periode'],
+  },
+  {
+    id: 'per-basis-006', topicId: '10-periodisch', type: 'numeric-input', diffLevel: 'basis',
+    competencies: ['kommunikation'], points: 5, timeEstimate: 3,
+    contextKey: 'EKG-Herzschlag',
+    data: {
+      questionText: 'Ein Herz schlägt 72 mal pro Minute. Wie lang ist eine Periode (= ein Herzschlag) in Sekunden?',
+      correctValue: 0.833, tolerance: 0.01,
+    },
+    hintKeys: ['Periode = 1 / Frequenz. Frequenz = 72/60 Schläge pro Sekunde.'],
+    solutionKey: 'T = 60s / 72 = 0,833 s pro Herzschlag.',
+    tags: ['sachkontext', 'herzschlag', 'frequenz'],
+  },
+  {
+    id: 'per-ea-001', topicId: '10-periodisch', type: 'multiple-choice', diffLevel: 'ea',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 20, timeEstimate: 5,
+    data: {
+      questionText: 'Warum haben Gezeiten eine Periode von ca. 12,4 Stunden und nicht exakt 12?',
+      options: [
+        { id: 'a', text: 'Weil die Erde sich in 12 Stunden dreht.', correct: false },
+        { id: 'b', text: 'Weil der Mond sich während der Erdrotation weiterbewegt — die Erde muss etwas weiterdrehen, um unter dem Mond zu sein.', correct: true },
+        { id: 'c', text: 'Weil die Sonne die Gezeiten beeinflusst.', correct: false },
+      ],
+    },
+    hintKeys: ['Die Erde dreht sich in 24h. Aber der Mond bewegt sich auch um die Erde — in ca. 27 Tagen.'],
+    solutionKey: 'Mond wandert pro Tag ~13° weiter → Erde braucht ~50 min extra → 24h50min / 2 = 12h25min ≈ 12,4h.',
+    tags: ['sachkontext', 'gezeiten', 'mond', 'ea'],
+  },
 ];
