@@ -7,6 +7,8 @@ import ExerciseCard from '../exercises/ExerciseCard';
 import NumericInputExercise from '../exercises/NumericInputExercise';
 import MultipleChoiceExercise from '../exercises/MultipleChoiceExercise';
 import ErrorAnalysisExercise from '../exercises/ErrorAnalysisExercise';
+import StepSolverExercise from '../exercises/StepSolverExercise';
+import DragMatchExercise from '../exercises/DragMatchExercise';
 import OERShareButton from '../exercises/OERShareButton';
 import FunctionPlotter from '../stations/FunctionPlotter';
 
@@ -25,6 +27,10 @@ function renderExercise(exercise, onComplete) {
       return <MultipleChoiceExercise exercise={exercise} onComplete={onComplete} />;
     case 'error-analysis':
       return <ErrorAnalysisExercise exercise={exercise} onComplete={onComplete} />;
+    case 'step-solver':
+      return <StepSolverExercise exercise={exercise} onComplete={onComplete} />;
+    case 'drag-match':
+      return <DragMatchExercise exercise={exercise} onComplete={onComplete} />;
     default:
       return <p style={{ color: 'var(--mp-muted)' }}>Unbekannter Aufgabentyp: {exercise.type}</p>;
   }
