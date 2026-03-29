@@ -21,6 +21,15 @@ import { exercises as binomialEx } from './exercises/11-binomialverteilung';
 import { exercises as bedingteWkEx } from './exercises/11-bedingte-wk';
 import { exercises as vektorrechnungEx } from './exercises/11-vektorrechnung';
 
+// Klasse 12
+import { exercises as eFunktionLnEx } from './exercises/12-e-funktion-ln';
+import { exercises as integralVertieftEx } from './exercises/12-integralrechnung-v';
+import { exercises as analytischeGeoEx } from './exercises/12-analytische-geo';
+import { exercises as hypothesentestsEx } from './exercises/12-hypothesentests';
+import { exercises as normalverteilungEx } from './exercises/12-normalverteilung';
+import { exercises as matrizenEx } from './exercises/12-matrizen';
+import { exercises as abivorbereitungEx } from './exercises/12-abiturvorbereitung';
+
 /**
  * Topic metadata registry.
  * Each topic defines its metadata + which exercises belong to it.
@@ -365,6 +374,118 @@ export const TOPICS = [
     color: '#f472b6',
     period: 'Klasse 11',
     exercises: vektorrechnungEx,
+    plotter: null,
+  },
+
+  // ─── KLASSE 12 ──────────────────────────────────────────────────────────────
+
+  {
+    id: '12-e-funktion-ln',
+    grade: 12,
+    domain: 'analysis',
+    titleKey: 'e-Funktion & ln (vertieft)',
+    icon: '🔬',
+    color: '#10b981',
+    period: 'Klasse 12',
+    exercises: eFunktionLnEx,
+    plotter: {
+      title: 'e-Funktionen und ihre Ableitungen',
+      functions: [
+        { expression: 'a * x * exp(-b * x)', color: '#10b981', label: 'f(x) = ax·e^(-bx)' },
+        { expression: 'a * exp(-b * x) * (1 - b * x)', color: '#fbbf24', label: "f'(x)" },
+      ],
+      sliders: [
+        { param: 'a', min: 0.5, max: 5, step: 0.1, initial: 1, label: 'Faktor a' },
+        { param: 'b', min: 0.1, max: 3, step: 0.1, initial: 1, label: 'Dämpfung b' },
+      ],
+      xRange: [-1, 8],
+      yRange: [-2, 5],
+    },
+  },
+  {
+    id: '12-integralrechnung-vertieft',
+    grade: 12,
+    domain: 'analysis',
+    titleKey: 'Integralrechnung (vertieft)',
+    icon: '🔢',
+    color: '#0ea5e9',
+    period: 'Klasse 12',
+    exercises: integralVertieftEx,
+    plotter: {
+      title: 'Fläche zwischen Kurven',
+      functions: [
+        { expression: 'sin(x) + 2', color: '#0ea5e9', label: 'f(x) = sin(x) + 2' },
+        { expression: '0.5 * x', color: '#f472b6', label: 'g(x) = 0,5x' },
+      ],
+      sliders: [],
+      xRange: [-1, 7],
+      yRange: [-1, 5],
+    },
+  },
+  {
+    id: '12-analytische-geometrie',
+    grade: 12,
+    domain: 'geometrie',
+    titleKey: 'Analytische Geometrie',
+    icon: '🌐',
+    color: '#e879f9',
+    period: 'Klasse 12',
+    exercises: analytischeGeoEx,
+    plotter: null,
+  },
+  {
+    id: '12-hypothesentests',
+    grade: 12,
+    domain: 'stochastik',
+    titleKey: 'Hypothesentests',
+    icon: '⚖️',
+    color: '#8b5cf6',
+    period: 'Klasse 12',
+    exercises: hypothesentestsEx,
+    plotter: null,
+  },
+  {
+    id: '12-normalverteilung',
+    grade: 12,
+    domain: 'stochastik',
+    titleKey: 'Normalverteilung',
+    icon: '🔔',
+    color: '#2563eb',
+    period: 'Klasse 12',
+    exercises: normalverteilungEx,
+    plotter: {
+      title: 'Die Normalverteilung',
+      functions: [
+        { expression: '(1/(b*sqrt(2*pi))) * exp(-0.5*((x-a)/b)^2)', color: '#2563eb', label: 'N(µ, σ)' },
+      ],
+      sliders: [
+        { param: 'a', min: -5, max: 5, step: 0.1, initial: 0, label: 'Erwartungswert µ' },
+        { param: 'b', min: 0.3, max: 3, step: 0.1, initial: 1, label: 'Standardabweichung σ' },
+      ],
+      xRange: [-8, 8],
+      yRange: [-0.1, 1.5],
+    },
+  },
+  {
+    id: '12-matrizen',
+    grade: 12,
+    domain: 'algebra',
+    titleKey: 'Matrizen & Übergangsprozesse',
+    icon: '🔲',
+    color: '#34d399',
+    period: 'Klasse 12',
+    exercises: matrizenEx,
+    plotter: null,
+  },
+  {
+    id: '12-abiturvorbereitung',
+    grade: 12,
+    domain: 'analysis',
+    titleKey: 'Abiturvorbereitung',
+    icon: '🎓',
+    color: '#fbbf24',
+    period: 'Klasse 12',
+    exercises: abivorbereitungEx,
     plotter: null,
   },
 ];
