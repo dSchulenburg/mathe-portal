@@ -11,6 +11,16 @@ import { exercises as periodischEx } from './exercises/10-periodisch';
 import { exercises as diffEinfuehrungEx } from './exercises/10-diff-einfuehrung';
 import { exercises as funktionsklassenEx } from './exercises/10-funktionsklassen';
 
+// Klasse 11
+import { exercises as ableitungsregelnEx } from './exercises/11-ableitungsregeln';
+import { exercises as kurvendiskussionEx } from './exercises/11-kurvendiskussion';
+import { exercises as extremwertEx } from './exercises/11-extremwertaufgaben';
+import { exercises as integralrechnungEx } from './exercises/11-integralrechnung';
+import { exercises as expLogEx } from './exercises/11-exp-log';
+import { exercises as binomialEx } from './exercises/11-binomialverteilung';
+import { exercises as bedingteWkEx } from './exercises/11-bedingte-wk';
+import { exercises as vektorrechnungEx } from './exercises/11-vektorrechnung';
+
 /**
  * Topic metadata registry.
  * Each topic defines its metadata + which exercises belong to it.
@@ -221,6 +231,141 @@ export const TOPICS = [
       xRange: [-4, 5],
       yRange: [-3, 15],
     },
+  },
+  // ─── KLASSE 11 ──────────────────────────────────────────────────────────────
+
+  {
+    id: '11-ableitungsregeln',
+    grade: 11,
+    domain: 'analysis',
+    titleKey: 'Ableitungsregeln',
+    icon: '✏️',
+    color: '#a78bfa',
+    period: 'Klasse 11',
+    exercises: ableitungsregelnEx,
+    plotter: {
+      title: 'Erkunde Ableitungsregeln',
+      functions: [
+        { expression: 'a*x^3 + b*x^2 + c*x', color: '#a78bfa', label: 'f(x)' },
+        { expression: '3*a*x^2 + 2*b*x + c', color: '#fbbf24', label: "f'(x)" },
+      ],
+      sliders: [
+        { param: 'a', min: -2, max: 2, step: 0.1, initial: 1, label: 'a' },
+        { param: 'b', min: -3, max: 3, step: 0.5, initial: 0, label: 'b' },
+        { param: 'c', min: -3, max: 3, step: 0.5, initial: 0, label: 'c' },
+      ],
+      xRange: [-5, 5],
+      yRange: [-10, 15],
+    },
+  },
+  {
+    id: '11-kurvendiskussion',
+    grade: 11,
+    domain: 'analysis',
+    titleKey: 'Kurvendiskussion',
+    icon: '📉',
+    color: '#c084fc',
+    period: 'Klasse 11',
+    exercises: kurvendiskussionEx,
+    plotter: {
+      title: 'Kurvendiskussion interaktiv',
+      functions: [
+        { expression: 'a*x^3 - 3*a*x', color: '#c084fc', label: 'f(x) = ax³ - 3ax' },
+      ],
+      sliders: [
+        { param: 'a', min: -2, max: 2, step: 0.1, initial: 1, label: 'Parameter a' },
+      ],
+      xRange: [-4, 4],
+      yRange: [-8, 8],
+    },
+  },
+  {
+    id: '11-extremwertaufgaben',
+    grade: 11,
+    domain: 'analysis',
+    titleKey: 'Extremwertaufgaben',
+    icon: '🏆',
+    color: '#f59e0b',
+    period: 'Klasse 11',
+    exercises: extremwertEx,
+    plotter: null,
+  },
+  {
+    id: '11-integralrechnung',
+    grade: 11,
+    domain: 'analysis',
+    titleKey: 'Integralrechnung (Einführung)',
+    icon: '∫',
+    color: '#06b6d4',
+    period: 'Klasse 11',
+    exercises: integralrechnungEx,
+    plotter: {
+      title: 'Fläche unter der Kurve',
+      functions: [
+        { expression: 'x^2 - a', color: '#06b6d4', label: 'f(x) = x² - a' },
+      ],
+      sliders: [
+        { param: 'a', min: -2, max: 4, step: 0.5, initial: 1, label: 'Verschiebung a' },
+      ],
+      xRange: [-4, 4],
+      yRange: [-4, 10],
+    },
+  },
+  {
+    id: '11-exp-log',
+    grade: 11,
+    domain: 'analysis',
+    titleKey: 'Exponential- & Logarithmusfunktionen',
+    icon: '📈',
+    color: '#22c55e',
+    period: 'Klasse 11',
+    exercises: expLogEx,
+    plotter: {
+      title: 'e-Funktion und Logarithmus',
+      functions: [
+        { expression: 'a * exp(b * x)', color: '#22c55e', label: 'f(x) = a·e^(bx)' },
+        { expression: 'log(x) / log(exp(1))', color: '#fbbf24', label: 'g(x) = ln(x)' },
+      ],
+      sliders: [
+        { param: 'a', min: 0.1, max: 5, step: 0.1, initial: 1, label: 'Startwert a' },
+        { param: 'b', min: -2, max: 2, step: 0.1, initial: 1, label: 'Wachstumsrate b' },
+      ],
+      xRange: [-3, 5],
+      yRange: [-3, 15],
+    },
+  },
+  {
+    id: '11-binomialverteilung',
+    grade: 11,
+    domain: 'stochastik',
+    titleKey: 'Binomialverteilung',
+    icon: '🎯',
+    color: '#3b82f6',
+    period: 'Klasse 11',
+    exercises: binomialEx,
+    plotter: null,
+  },
+  {
+    id: '11-bedingte-wahrscheinlichkeit',
+    grade: 11,
+    domain: 'stochastik',
+    titleKey: 'Bedingte Wahrscheinlichkeit',
+    icon: '🔗',
+    color: '#6366f1',
+    period: 'Klasse 11',
+    exercises: bedingteWkEx,
+    plotter: null,
+  },
+  {
+    id: '11-vektorrechnung',
+    grade: 11,
+    domain: 'geometrie',
+    titleKey: 'Vektorrechnung (Einführung)',
+    icon: '➡️',
+    color: '#f472b6',
+    period: 'Klasse 11',
+    exercises: vektorrechnungEx,
+    plotter: null,
   },
 ];
 

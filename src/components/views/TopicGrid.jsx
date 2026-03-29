@@ -6,7 +6,7 @@ import { navigate } from '../../lib/router';
 
 const GRADE_TABS = [
   { grade: 10, label: 'Klasse 10', available: true },
-  { grade: 11, label: 'Klasse 11', available: false },
+  { grade: 11, label: 'Klasse 11', available: true },
   { grade: 12, label: 'Klasse 12', available: false },
 ];
 
