@@ -268,4 +268,320 @@ export const exercises = [
       '(2²)³ = 2⁶ = 64; 2^(3²) = 2⁹ = 512; 2³ · 3² = 8 · 9 = 72; (2·3)² = 6² = 36. Der größte Wert ist 2^(3²) = 512.',
     tags: ['groessenvergleich', 'reihenfolge-der-auswertung', 'potenz-der-potenz'],
   },
+
+  // ─── BASIS (neue Aufgaben) ───────────────────────────────────────────────────
+
+  {
+    id: 'pot-basis-005',
+    topicId: '10-potenzgesetze',
+    type: 'numeric-input',
+    diffLevel: 'basis',
+    competencies: ['kommunikation'],
+    points: 5,
+    timeEstimate: 2,
+    data: {
+      questionText: 'Berechne: $3^4 = ?$',
+      correctValue: 81,
+      tolerance: 0.01,
+    },
+    hintKeys: [
+      '$3^4$ bedeutet: $3 \\cdot 3 \\cdot 3 \\cdot 3$. Multipliziere schrittweise: $3 \\cdot 3 = 9$, dann $9 \\cdot 3 = 27$, dann $27 \\cdot 3 = 81$.',
+    ],
+    solutionKey: '$3^4 = 3 \\cdot 3 \\cdot 3 \\cdot 3 = 9 \\cdot 9 = 81.$',
+    tags: ['potenz-berechnen', 'basis-potenz'],
+  },
+
+  {
+    id: 'pot-basis-006',
+    topicId: '10-potenzgesetze',
+    type: 'multiple-choice',
+    diffLevel: 'basis',
+    competencies: ['kritisches-denken'],
+    points: 5,
+    timeEstimate: 2,
+    data: {
+      questionText: 'Was ergibt $x^0$ für $x \\neq 0$?',
+      options: [
+        { id: 'a', text: '0', correct: false },
+        { id: 'b', text: 'x', correct: false },
+        { id: 'c', text: '1', correct: true },
+        { id: 'd', text: 'Undefiniert', correct: false },
+      ],
+    },
+    hintKeys: [
+      'Nutze das Quotientengesetz: $\\frac{a^n}{a^n} = a^{n-n} = a^0$. Aber $\\frac{a^n}{a^n} = 1$ — also muss $a^0 = 1$ gelten.',
+    ],
+    solutionKey: '$x^0 = 1$ für jedes $x \\neq 0$. Begründung: $\\frac{x^n}{x^n} = x^{n-n} = x^0$, und $\\frac{x^n}{x^n} = 1$.',
+    tags: ['nullter-exponent', 'potenzgesetz-quotient'],
+  },
+
+  // ─── STANDARD (neue Aufgaben) ────────────────────────────────────────────────
+
+  {
+    id: 'pot-standard-005',
+    topicId: '10-potenzgesetze',
+    type: 'step-solver',
+    diffLevel: 'standard',
+    competencies: ['kritisches-denken', 'kommunikation'],
+    points: 10,
+    timeEstimate: 5,
+    data: {
+      questionText: 'Vereinfache Schritt für Schritt: $(2x^3)^2 \\cdot x^4$',
+      steps: [
+        {
+          instruction: 'Welches Gesetz wendest du im ersten Schritt auf $(2x^3)^2$ an?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: '$(ab)^n = a^n \\cdot b^n$ — Potenz eines Produkts', correct: true },
+            { id: 'b', text: '$a^m \\cdot a^n = a^{m+n}$ — Produktregel', correct: false },
+            { id: 'c', text: '$(a^m)^n = a^{m \\cdot n}$ — Potenz einer Potenz', correct: false },
+          ],
+          correctId: 'a',
+          showAnswer: false,
+        },
+        {
+          instruction: 'Nach dem Ausmultiplizieren ergibt $(2x^3)^2 = 4x^6$. Jetzt: Welchen Exponenten hat das Ergebnis $4x^6 \\cdot x^4$?',
+          type: 'numeric-input',
+          expected: 10,
+          tolerance: 0.01,
+        },
+      ],
+    },
+    hintKeys: [
+      'Schritt 1: $(2x^3)^2 = 2^2 \\cdot (x^3)^2 = 4 \\cdot x^{3 \\cdot 2} = 4x^6$.',
+      'Schritt 2: $4x^6 \\cdot x^4 = 4 \\cdot x^{6+4} = 4x^{10}$. Der Exponent ist 10.',
+    ],
+    solutionKey: '$(2x^3)^2 \\cdot x^4 = 4x^6 \\cdot x^4 = 4x^{10}$.',
+    tags: ['potenz-des-produkts', 'terme-vereinfachen', 'step-solver'],
+  },
+
+  {
+    id: 'pot-standard-006',
+    topicId: '10-potenzgesetze',
+    type: 'drag-match',
+    diffLevel: 'standard',
+    competencies: ['kommunikation', 'kritisches-denken'],
+    points: 10,
+    timeEstimate: 4,
+    data: {
+      questionText: 'Ordne jeden Term seiner vereinfachten Form zu.',
+      pairs: [
+        { id: 'p1', left: '$a^3 \\cdot a^4$', right: '$a^7$' },
+        { id: 'p2', left: '$(a^2)^3$', right: '$a^6$' },
+        { id: 'p3', left: '$\\frac{a^5}{a^2}$', right: '$a^3$' },
+        { id: 'p4', left: '$a^0$', right: '$1$' },
+      ],
+    },
+    hintKeys: [
+      'Produktregel: $a^m \\cdot a^n = a^{m+n}$.',
+      'Potenz einer Potenz: $(a^m)^n = a^{m \\cdot n}$.',
+      'Quotientenregel: $\\frac{a^m}{a^n} = a^{m-n}$.',
+      'Nullter Exponent: $a^0 = 1$.',
+    ],
+    solutionKey: '$a^3 \\cdot a^4 = a^7$; $(a^2)^3 = a^6$; $\\frac{a^5}{a^2} = a^3$; $a^0 = 1$.',
+    tags: ['potenzgesetze-zuordnung', 'drag-match', 'alle-grundgesetze'],
+  },
+
+  {
+    id: 'pot-standard-007',
+    topicId: '10-potenzgesetze',
+    type: 'error-analysis',
+    diffLevel: 'standard',
+    competencies: ['kritisches-denken', 'kommunikation'],
+    points: 10,
+    timeEstimate: 5,
+    data: {
+      questionText: 'Finde den Fehler im folgenden Lösungsweg für $\\frac{x^5 \\cdot x^3}{x^2}$:',
+      steps: [
+        { content: '$\\frac{x^5 \\cdot x^3}{x^2}$', hasError: false },
+        {
+          content: '$= \\frac{x^{5 \\cdot 3}}{x^2} = \\frac{x^{15}}{x^2}$',
+          hasError: true,
+          errorExplanation: 'Fehler: Bei der Multiplikation $x^5 \\cdot x^3$ werden die Exponenten addiert (nicht multipliziert). Richtig: $x^5 \\cdot x^3 = x^{5+3} = x^8$.',
+        },
+        {
+          content: '$= x^{15-2} = x^{13}$',
+          hasError: true,
+          errorExplanation: 'Folge des Fehlers: Da $x^{15}$ falsch war, ist auch $x^{13}$ falsch. Richtig: $x^8 / x^2 = x^{8-2} = x^6$.',
+        },
+      ],
+    },
+    hintKeys: [
+      'Unterscheide sorgfältig: $a^m \\cdot a^n = a^{m+n}$ (Exponenten addieren!), aber $(a^m)^n = a^{m \\cdot n}$ (Exponenten multiplizieren).',
+    ],
+    solutionKey: 'Fehler in Schritt 1: $x^5 \\cdot x^3 = x^{5+3} = x^8$ (nicht $x^{15}$). Richtig: $\\frac{x^8}{x^2} = x^{8-2} = x^6$.',
+    tags: ['fehleranalyse', 'potenzgesetz-produkt', '4k-kritisches-denken'],
+  },
+
+  // ─── ERWEITERT (neue Aufgaben) ───────────────────────────────────────────────
+
+  {
+    id: 'pot-erweitert-005',
+    topicId: '10-potenzgesetze',
+    type: 'step-solver',
+    diffLevel: 'erweitert',
+    competencies: ['kritisches-denken', 'kreativitaet', 'kommunikation'],
+    points: 15,
+    timeEstimate: 7,
+    data: {
+      questionText: 'Ein Smartphone hat $128 \\text{ GB}$ Speicher. Ein Foto belegt durchschnittlich $4 \\text{ MB}$. Berechne die maximale Anzahl Fotos in Zehnerpotenzen.',
+      contextKey: 'Technik: Smartphone-Speicher',
+      steps: [
+        {
+          instruction: 'Schreibe 128 GB in MB mithilfe von Zehnerpotenzen. $128 \\text{ GB} = 128 \\cdot 10^3 \\text{ MB}$. Wie lautet der Exponent der Zehnerpotenz für $128 \\cdot 10^3$?',
+          type: 'numeric-input',
+          expected: 3,
+          tolerance: 0.01,
+        },
+        {
+          instruction: 'Jetzt die Division: $\\frac{128 \\cdot 10^3 \\text{ MB}}{4 \\text{ MB}}$. Was ergibt $128 \\div 4$?',
+          type: 'numeric-input',
+          expected: 32,
+          tolerance: 0.01,
+        },
+        {
+          instruction: 'Das Ergebnis ist $32 \\cdot 10^3 = 3{,}2 \\cdot 10^4$ Fotos. Welchen Wert hat der Exponent der Zehnerpotenz in der normierten wissenschaftlichen Notation?',
+          type: 'numeric-input',
+          expected: 4,
+          tolerance: 0.01,
+        },
+      ],
+    },
+    hintKeys: [
+      '$1 \\text{ GB} = 1000 \\text{ MB} = 10^3 \\text{ MB}$, also $128 \\text{ GB} = 128 \\cdot 10^3 \\text{ MB}$.',
+      'Division: $\\frac{128 \\cdot 10^3}{4} = 32 \\cdot 10^3$.',
+      'Normierte Form: $32 \\cdot 10^3 = 3{,}2 \\cdot 10^4$.',
+    ],
+    solutionKey: '$\\frac{128 \\cdot 10^3 \\text{ MB}}{4 \\text{ MB}} = 32 \\cdot 10^3 = 3{,}2 \\cdot 10^4$ Fotos.',
+    tags: ['wissenschaftliche-notation', 'sachkontext', 'step-solver', 'zehnerpotenz'],
+  },
+
+  {
+    id: 'pot-erweitert-006',
+    topicId: '10-potenzgesetze',
+    type: 'drag-match',
+    diffLevel: 'erweitert',
+    competencies: ['kommunikation', 'kritisches-denken'],
+    points: 15,
+    timeEstimate: 5,
+    data: {
+      questionText: 'Ordne jede Zahl ihrer wissenschaftlichen Notation zu.',
+      pairs: [
+        { id: 'p1', left: '$0{,}00042$', right: '$4{,}2 \\cdot 10^{-4}$' },
+        { id: 'p2', left: '$3\\,700\\,000$', right: '$3{,}7 \\cdot 10^{6}$' },
+        { id: 'p3', left: '$0{,}0000001$', right: '$1 \\cdot 10^{-7}$' },
+        { id: 'p4', left: '$56\\,000$', right: '$5{,}6 \\cdot 10^{4}$' },
+      ],
+    },
+    hintKeys: [
+      'Verschiebe das Komma so, dass eine Zahl zwischen 1 und 10 entsteht. Die Anzahl der Stellen, die du verschiebst, ist der Exponent.',
+      'Komma nach rechts verschieben (kleine Zahlen) → negativer Exponent. Komma nach links verschieben (große Zahlen) → positiver Exponent.',
+    ],
+    solutionKey: '$0{,}00042 = 4{,}2 \\cdot 10^{-4}$; $3\\,700\\,000 = 3{,}7 \\cdot 10^6$; $0{,}0000001 = 1 \\cdot 10^{-7}$; $56\\,000 = 5{,}6 \\cdot 10^4$.',
+    tags: ['wissenschaftliche-notation', 'drag-match', 'zehnerpotenz'],
+  },
+
+  // ─── ERWEITERTES ANFORDERUNGSNIVEAU (eA) ────────────────────────────────────
+
+  {
+    id: 'pot-ea-001',
+    topicId: '10-potenzgesetze',
+    type: 'step-solver',
+    diffLevel: 'eA',
+    competencies: ['kritisches-denken', 'kreativitaet', 'kommunikation'],
+    points: 20,
+    timeEstimate: 10,
+    data: {
+      questionText: 'Informatik-Kontext: In der IT gilt $2^{10} \\approx 10^3$ (1 Kibibyte ≈ 1 Kilobyte). Untersuche diese Näherung.',
+      contextKey: 'Informatik: Binäre Speichergrößen',
+      steps: [
+        {
+          instruction: 'Berechne $2^{10}$ exakt.',
+          type: 'numeric-input',
+          expected: 1024,
+          tolerance: 0.01,
+        },
+        {
+          instruction: 'Der relative Fehler der Näherung $2^{10} \\approx 10^3 = 1000$ berechnet sich als $\\frac{1024 - 1000}{1000} \\cdot 100\\%$. Wie groß ist er in Prozent (auf eine Nachkommastelle)?',
+          type: 'numeric-input',
+          expected: 2.4,
+          tolerance: 0.05,
+        },
+        {
+          instruction: 'Nutze $2^{10} \\approx 10^3$ zweimal: Was ergibt $2^{20}$ näherungsweise als Zehnerpotenz? Gib den Exponenten ein.',
+          type: 'numeric-input',
+          expected: 6,
+          tolerance: 0.01,
+        },
+      ],
+    },
+    hintKeys: [
+      '$2^{10} = 2^5 \\cdot 2^5 = 32 \\cdot 32 = 1024$.',
+      'Relativer Fehler: $\\frac{1024 - 1000}{1000} = \\frac{24}{1000} = 0{,}024 = 2{,}4\\%$.',
+      '$2^{20} = (2^{10})^2 \\approx (10^3)^2 = 10^6$.',
+    ],
+    solutionKey: '$2^{10} = 1024$; relativer Fehler $= 2{,}4\\%$; $2^{20} = (2^{10})^2 \\approx (10^3)^2 = 10^6$.',
+    tags: ['informatik', 'näherung', 'step-solver', 'zehnerpotenz', '4k-kreativitaet'],
+  },
+
+  {
+    id: 'pot-ea-002',
+    topicId: '10-potenzgesetze',
+    type: 'multiple-choice',
+    diffLevel: 'eA',
+    competencies: ['kritisches-denken', 'kommunikation'],
+    points: 20,
+    timeEstimate: 7,
+    data: {
+      questionText: 'Warum muss $a^{-n} = \\frac{1}{a^n}$ gelten? Welche Begründung ist mathematisch korrekt?',
+      options: [
+        {
+          id: 'a',
+          text: 'Weil negative Exponenten per Definition so festgelegt wurden, ohne weiteren Grund.',
+          correct: false,
+        },
+        {
+          id: 'b',
+          text: 'Damit die Produktregel $a^m \\cdot a^n = a^{m+n}$ auch für negative Exponenten gilt: $a^n \\cdot a^{-n} = a^{n+(-n)} = a^0 = 1$, also muss $a^{-n} = \\frac{1}{a^n}$ sein.',
+          correct: true,
+        },
+        {
+          id: 'c',
+          text: 'Weil $a^{-n} = (-1) \\cdot a^n$, also das Vorzeichen übertragen wird.',
+          correct: false,
+        },
+        {
+          id: 'd',
+          text: 'Weil der Betrag des Exponenten kleiner wird und die Zahl deshalb kleiner werden muss.',
+          correct: false,
+        },
+      ],
+    },
+    hintKeys: [
+      'Denke daran: Die Gesetze der Potenzen sollen widerspruchsfrei sein. Was muss $a^{-n}$ sein, damit $a^n \\cdot a^{-n} = a^0 = 1$ gilt?',
+    ],
+    solutionKey: 'Antwort B: Aus der Produktregel folgt $a^n \\cdot a^{-n} = a^0 = 1$, also $a^{-n} = \\frac{1}{a^n}$. Die Definition ist durch Konsistenz erzwungen.',
+    tags: ['negativer-exponent', 'beweis', '4k-kritisches-denken', 'eA'],
+  },
+
+  {
+    id: 'pot-ea-003',
+    topicId: '10-potenzgesetze',
+    type: 'numeric-input',
+    diffLevel: 'eA',
+    competencies: ['kritisches-denken', 'kreativitaet'],
+    points: 20,
+    timeEstimate: 6,
+    data: {
+      questionText: 'Berechne $8^{\\frac{2}{3}}$ mithilfe rationaler Exponenten. Tipp: $8^{\\frac{2}{3}} = (\\sqrt[3]{8})^2$. Gib das Ergebnis ein.',
+      correctValue: 4,
+      tolerance: 0.01,
+    },
+    hintKeys: [
+      '$a^{\\frac{m}{n}} = (\\sqrt[n]{a})^m = \\sqrt[n]{a^m}$.',
+      '$\\sqrt[3]{8} = 2$, weil $2^3 = 8$. Also: $8^{\\frac{2}{3}} = (\\sqrt[3]{8})^2 = 2^2 = 4$.',
+    ],
+    solutionKey: '$8^{\\frac{2}{3}} = (8^{\\frac{1}{3}})^2 = (\\sqrt[3]{8})^2 = 2^2 = 4$.',
+    tags: ['rationaler-exponent', 'kubikwurzel', 'bruchexponent', 'eA'],
+  },
 ];
