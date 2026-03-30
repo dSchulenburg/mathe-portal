@@ -3,7 +3,7 @@ import LessonSection from './LessonSection';
 /**
  * Learning objectives checklist — "Nach diesem Thema kannst du..."
  */
-export default function LessonObjectives({ objectives, topicId, t, accentColor }) {
+export default function LessonObjectives({ objectives, topicId, t, accentColor, onRead }) {
   if (!objectives?.length) return null;
 
   return (
@@ -12,6 +12,7 @@ export default function LessonObjectives({ objectives, topicId, t, accentColor }
       title={t('lesson.objectives')}
       subtitle={t('lesson.objectivesSubtitle')}
       accentColor={accentColor}
+      onRead={onRead}
     >
       <ul style={{
         margin: 0,

@@ -6,7 +6,7 @@ import LessonSection from './LessonSection';
  * Real-world examples — "Where do you encounter this in daily life?"
  * Makes math tangible with relatable scenarios from students' world.
  */
-export default function LessonRealWorld({ examples, topicId, t, accentColor }) {
+export default function LessonRealWorld({ examples, topicId, t, accentColor, onRead }) {
   if (!examples?.length) return null;
 
   return (
@@ -14,6 +14,7 @@ export default function LessonRealWorld({ examples, topicId, t, accentColor }) {
       icon="🌍"
       title={t('lesson.realWorld')}
       accentColor={accentColor}
+      onRead={onRead}
     >
       <div style={{
         display: 'grid',

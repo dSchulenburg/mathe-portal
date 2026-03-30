@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import AudioPlayer from './AudioPlayer';
 import MathText from './MathText';
@@ -6,7 +7,8 @@ import MathText from './MathText';
  * Character-driven story intro for a topic.
  * Shows portrait, story context, challenge, and audio player.
  */
-export default function StoryScene({ character, story, topicStory, t }) {
+export default function StoryScene({ character, story, topicStory, t, onRead }) {
+  useEffect(() => { if (onRead) onRead(); }, []);
   if (!character || !story) return null;
 
   const intro = t(`lessons.${topicStory.topicId}.story.intro`);

@@ -6,7 +6,7 @@ import LessonSection from './LessonSection';
 /**
  * Common mistakes section — wrong vs. right with explanations.
  */
-export default function LessonMistakes({ mistakes, topicId, character, t, accentColor }) {
+export default function LessonMistakes({ mistakes, topicId, character, t, accentColor, onRead }) {
   if (!mistakes?.length) return null;
 
   return (
@@ -15,6 +15,7 @@ export default function LessonMistakes({ mistakes, topicId, character, t, accent
       title={t('lesson.mistakes')}
       subtitle={t('lesson.mistakesSubtitle')}
       accentColor={accentColor}
+      onRead={onRead}
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
         {mistakes.map((mistake, i) => (

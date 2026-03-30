@@ -1,6 +1,19 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
+const ALL_LESSON_SECTIONS = ['story', 'objectives', 'explanation', 'concepts', 'examples', 'realWorld', 'mistakes'];
+
+const updateStreak = (state) => {
+  const today = new Date().toDateString();
+  const last = state.lastPracticeDate ? new Date(state.lastPracticeDate).toDateString() : null;
+  if (last === today) return { streakDays: state.streakDays, lastPracticeDate: state.lastPracticeDate };
+  const yesterday = new Date(Date.now() - 86400000).toDateString();
+  return {
+    streakDays: last === yesterday ? state.streakDays + 1 : 1,
+    lastPracticeDate: Date.now(),
+  };
+};
+
 export const useMathStore = create(
   persist(
     (set, get) => ({
@@ -9,6 +22,7 @@ export const useMathStore = create(
       totalPoints: 0,
       streakDays: 0,
       lastPracticeDate: null,
+      lessonSectionsRead: {},
 
       // Actions
       submitAnswer: (exerciseId, result) => set((state) => {
@@ -31,8 +45,33 @@ export const useMathStore = create(
             },
           },
           totalPoints: state.totalPoints + pointsToAdd,
+          ...updateStreak(state),
         };
       }),
+
+      markSectionRead: (topicId, sectionKey) => set((state) => {
+        if (state.lessonSectionsRead[topicId]?.[sectionKey]) return state;
+
+        const updated = {
+          ...state.lessonSectionsRead,
+          [topicId]: { ...state.lessonSectionsRead[topicId], [sectionKey]: true },
+        };
+
+        const allRead = ALL_LESSON_SECTIONS.every(s => updated[topicId]?.[s]);
+        const bonus = allRead ? 20 : 0;
+
+        return {
+          lessonSectionsRead: updated,
+          totalPoints: state.totalPoints + 5 + bonus,
+          ...updateStreak(state),
+        };
+      }),
+
+      getLessonProgress: (topicId) => {
+        const sections = get().lessonSectionsRead[topicId] || {};
+        const read = ALL_LESSON_SECTIONS.filter(s => sections[s]).length;
+        return { read, total: ALL_LESSON_SECTIONS.length, complete: read === ALL_LESSON_SECTIONS.length };
+      },
 
       getTopicProgress: (topicId, totalExercises) => {
         const exercises = Object.entries(get().completedExercises)
@@ -52,6 +91,7 @@ export const useMathStore = create(
         totalPoints: 0,
         streakDays: 0,
         lastPracticeDate: null,
+        lessonSectionsRead: {},
       }),
     }),
     {
@@ -61,6 +101,7 @@ export const useMathStore = create(
         totalPoints: state.totalPoints,
         streakDays: state.streakDays,
         lastPracticeDate: state.lastPracticeDate,
+        lessonSectionsRead: state.lessonSectionsRead,
       }),
     }
   )

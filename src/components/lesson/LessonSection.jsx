@@ -11,15 +11,22 @@ export default function LessonSection({
   subtitle,
   accentColor = 'var(--mp-primary)',
   defaultOpen = true,
+  onRead,
   children,
 }) {
   const [open, setOpen] = useState(defaultOpen);
+
+  const handleToggle = () => {
+    const willOpen = !open;
+    setOpen(willOpen);
+    if (willOpen && onRead) onRead();
+  };
 
   return (
     <div style={{ marginBottom: '0.5rem' }}>
       {/* Header row — single clickable bar */}
       <button
-        onClick={() => setOpen(!open)}
+        onClick={handleToggle}
         style={{
           width: '100%',
           display: 'flex',

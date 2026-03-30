@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from '../../i18n/useTranslation';
 import { getTopicStory } from '../../data/characters';
+import { useMathStore } from '../../store/mathStore';
 import StoryScene from './StoryScene';
 import LessonObjectives from './LessonObjectives';
 import LessonExplanation from './LessonExplanation';
@@ -18,7 +19,11 @@ import LessonPrerequisites from './LessonPrerequisites';
  */
 export default function LessonLayer({ lesson, topicId, topicColor, completionPct, onNavigateTopic }) {
   const { t } = useTranslation();
-  const [expanded, setExpanded] = useState(completionPct < 50);
+  const markSectionRead = useMathStore(s => s.markSectionRead);
+  const lessonProgress = useMathStore(s => s.getLessonProgress(topicId));
+  const [expanded, setExpanded] = useState(!lessonProgress.complete && completionPct < 50);
+
+  const onSectionRead = (sectionKey) => markSectionRead(topicId, sectionKey);
 
   const topicStory = getTopicStory(topicId);
   const character = topicStory?.character;
@@ -33,6 +38,7 @@ export default function LessonLayer({ lesson, topicId, topicColor, completionPct
           story={lesson.story}
           topicStory={{ ...topicStory, topicId }}
           t={t}
+          onRead={() => onSectionRead('story')}
         />
       )}
 
@@ -48,6 +54,7 @@ export default function LessonLayer({ lesson, topicId, topicColor, completionPct
             topicId={topicId}
             t={t}
             accentColor={accentColor}
+            onRead={() => onSectionRead('objectives')}
           />
 
           <LessonExplanation
@@ -56,6 +63,7 @@ export default function LessonLayer({ lesson, topicId, topicColor, completionPct
             character={character}
             t={t}
             accentColor={accentColor}
+            onRead={() => onSectionRead('explanation')}
           />
 
           <LessonConcepts
@@ -63,6 +71,7 @@ export default function LessonLayer({ lesson, topicId, topicColor, completionPct
             topicId={topicId}
             t={t}
             accentColor={accentColor}
+            onRead={() => onSectionRead('concepts')}
           />
 
           <LessonExamples
@@ -71,6 +80,7 @@ export default function LessonLayer({ lesson, topicId, topicColor, completionPct
             character={character}
             t={t}
             accentColor={accentColor}
+            onRead={() => onSectionRead('examples')}
           />
 
           <LessonRealWorld
@@ -78,6 +88,7 @@ export default function LessonLayer({ lesson, topicId, topicColor, completionPct
             topicId={topicId}
             t={t}
             accentColor={accentColor}
+            onRead={() => onSectionRead('realWorld')}
           />
 
           <LessonMistakes
@@ -86,6 +97,7 @@ export default function LessonLayer({ lesson, topicId, topicColor, completionPct
             character={character}
             t={t}
             accentColor={accentColor}
+            onRead={() => onSectionRead('mistakes')}
           />
 
           <LessonPrerequisites

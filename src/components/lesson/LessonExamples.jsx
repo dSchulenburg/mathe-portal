@@ -9,7 +9,7 @@ import LessonSection from './LessonSection';
  * Worked examples with step-by-step reveal.
  * The most important didactic component — students learn by seeing solved problems.
  */
-export default function LessonExamples({ examples, topicId, character, t, accentColor }) {
+export default function LessonExamples({ examples, topicId, character, t, accentColor, onRead }) {
   if (!examples?.length) return null;
 
   return (
@@ -18,6 +18,7 @@ export default function LessonExamples({ examples, topicId, character, t, accent
       title={t('lesson.examples')}
       subtitle={t('lesson.examplesSubtitle')}
       accentColor={accentColor}
+      onRead={onRead}
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         {examples.map((example, ei) => (

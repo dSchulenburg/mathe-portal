@@ -6,7 +6,7 @@ import LessonSection from './LessonSection';
 /**
  * Explanatory text section — text blocks, formulas, and character callouts.
  */
-export default function LessonExplanation({ blocks, topicId, character, t, accentColor }) {
+export default function LessonExplanation({ blocks, topicId, character, t, accentColor, onRead }) {
   if (!blocks?.length) return null;
 
   return (
@@ -14,6 +14,7 @@ export default function LessonExplanation({ blocks, topicId, character, t, accen
       icon="📖"
       title={t('lesson.explanation')}
       accentColor={accentColor}
+      onRead={onRead}
     >
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
         {blocks.map((block, i) => {

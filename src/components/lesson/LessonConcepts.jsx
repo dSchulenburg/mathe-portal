@@ -13,7 +13,7 @@ const HIGHLIGHT_COLORS = {
 /**
  * Key concept cards — definitions + formulas in colored cards.
  */
-export default function LessonConcepts({ concepts, topicId, t, accentColor }) {
+export default function LessonConcepts({ concepts, topicId, t, accentColor, onRead }) {
   if (!concepts?.length) return null;
 
   return (
@@ -21,6 +21,7 @@ export default function LessonConcepts({ concepts, topicId, t, accentColor }) {
       icon="🔑"
       title={t('lesson.concepts')}
       accentColor={accentColor}
+      onRead={onRead}
     >
       <div style={{
         display: 'flex',

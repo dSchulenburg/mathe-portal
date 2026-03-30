@@ -14,8 +14,10 @@ const totalExerciseCount = TOPICS.reduce((sum, t) => sum + (t.exercises?.length 
 
 function TopicCard({ topic }) {
   const getTopicProgress = useMathStore((s) => s.getTopicProgress);
+  const getLessonProgress = useMathStore((s) => s.getLessonProgress);
   const exerciseCount = topic.exercises?.length || 0;
   const progress = getTopicProgress(topic.id, exerciseCount);
+  const lessonProgress = getLessonProgress(topic.id);
   const pct = exerciseCount > 0 ? Math.round((progress.completed / exerciseCount) * 100) : 0;
   const domain = DOMAINS[topic.domain] || {};
   const isEmpty = exerciseCount === 0;
@@ -77,8 +79,8 @@ function TopicCard({ topic }) {
         </div>
       </div>
 
-      {/* Domain badge */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+      {/* Domain badge + progress indicators */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
         <span style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -93,6 +95,24 @@ function TopicCard({ topic }) {
         }}>
           {domain.icon} {domain.label}
         </span>
+        {lessonProgress.complete && (
+          <span style={{
+            display: 'inline-flex', alignItems: 'center', gap: '0.2rem',
+            padding: '0.15rem 0.5rem', borderRadius: '999px', fontSize: '0.65rem',
+            fontWeight: 600, background: 'rgba(52,211,153,0.15)', color: '#34d399',
+          }}>
+            📖 gelesen
+          </span>
+        )}
+        {progress.mastered && (
+          <span style={{
+            display: 'inline-flex', alignItems: 'center', gap: '0.2rem',
+            padding: '0.15rem 0.5rem', borderRadius: '999px', fontSize: '0.65rem',
+            fontWeight: 600, background: 'rgba(251,191,36,0.15)', color: '#fbbf24',
+          }}>
+            ⭐ gemeistert
+          </span>
+        )}
       </div>
 
       {/* Footer: count + progress */}
