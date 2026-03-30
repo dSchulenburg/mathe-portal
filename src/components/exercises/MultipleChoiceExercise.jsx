@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { useMathStore } from '../../store/mathStore';
+import MathText from '../lesson/MathText';
 
 export default function MultipleChoiceExercise({ exercise, onComplete }) {
   const { data, hintKeys = [], solutionKey, contextKey, id, topicId, points = 10, diffLevel } = exercise;
@@ -103,13 +104,13 @@ export default function MultipleChoiceExercise({ exercise, onComplete }) {
       {/* Context */}
       {contextKey && (
         <p style={{ color: 'var(--mp-muted)', fontStyle: 'italic', margin: 0 }}>
-          {contextKey}
+          <MathText text={contextKey} />
         </p>
       )}
 
       {/* Question */}
       <h3 style={{ color: 'var(--mp-text)', margin: 0, fontSize: '1.1rem', fontWeight: 600 }}>
-        {questionText}
+        <MathText text={questionText} />
       </h3>
 
       {/* Multi-select hint */}
@@ -184,7 +185,7 @@ export default function MultipleChoiceExercise({ exercise, onComplete }) {
                 {state === 'missed' && ''}
               </span>
 
-              <span style={{ flex: 1 }}>{option.text}</span>
+              <span style={{ flex: 1 }}><MathText text={option.text} /></span>
 
               {/* Status icons */}
               {state === 'correct' && <span style={{ color: 'var(--mp-success)' }}>✓</span>}
@@ -216,7 +217,7 @@ export default function MultipleChoiceExercise({ exercise, onComplete }) {
             }}
           >
             <strong style={{ color: 'var(--mp-primary)' }}>Hinweis {hintsUsed}/{hintKeys.length}:</strong>{' '}
-            {hintKeys[hintsUsed - 1]}
+            <MathText text={hintKeys[hintsUsed - 1]} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -237,7 +238,7 @@ export default function MultipleChoiceExercise({ exercise, onComplete }) {
             }}
           >
             <strong style={{ color: 'var(--mp-success)' }}>Lösung:</strong>{' '}
-            {solutionKey}
+            <MathText text={solutionKey} />
           </motion.div>
         )}
       </AnimatePresence>

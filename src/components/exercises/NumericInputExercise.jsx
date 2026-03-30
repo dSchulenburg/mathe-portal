@@ -4,44 +4,7 @@ import FormulaDisplay from '../math/FormulaDisplay';
 import ExerciseCard from './ExerciseCard';
 import { validateNumber } from '../../utils/mathValidation';
 import { useMathStore } from '../../store/mathStore';
-
-/**
- * Splits a string with $...$ inline LaTeX into segments of text + formulas.
- * Returns an array of { type: 'text'|'formula', content: string }.
- */
-function parseInlineFormulas(text) {
-  if (!text || !text.includes('$')) return [{ type: 'text', content: text }];
-  const parts = [];
-  const regex = /\$([^$]+)\$/g;
-  let lastIndex = 0;
-  let match;
-  while ((match = regex.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push({ type: 'text', content: text.slice(lastIndex, match.index) });
-    }
-    parts.push({ type: 'formula', content: match[1] });
-    lastIndex = match.index + match[0].length;
-  }
-  if (lastIndex < text.length) {
-    parts.push({ type: 'text', content: text.slice(lastIndex) });
-  }
-  return parts;
-}
-
-function InlineQuestion({ text }) {
-  const parts = parseInlineFormulas(text);
-  const hasFormula = parts.some(p => p.type === 'formula');
-  if (!hasFormula) return <span>{text}</span>;
-  return (
-    <>
-      {parts.map((part, i) =>
-        part.type === 'formula'
-          ? <FormulaDisplay key={i} formula={part.content} displayMode={false} />
-          : <span key={i}>{part.content}</span>
-      )}
-    </>
-  );
-}
+import MathText from '../lesson/MathText';
 
 const shakeKeyframes = `
 @keyframes mp-shake {
@@ -148,7 +111,7 @@ export default function NumericInputExercise({ exercise, onComplete, index = 0, 
 
       {/* Question */}
       <p style={{ fontSize: '1.05rem', color: 'var(--mp-text)', marginBottom: '1.25rem', lineHeight: 1.6 }}>
-        <InlineQuestion text={questionText} />
+        <MathText text={questionText} />
       </p>
 
       {/* Input row */}

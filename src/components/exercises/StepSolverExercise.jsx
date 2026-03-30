@@ -3,39 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import FormulaDisplay from '../math/FormulaDisplay';
 import { useMathStore } from '../../store/mathStore';
-
-function parseInlineFormulas(text) {
-  if (!text || !text.includes('$')) return [{ type: 'text', content: text }];
-  const parts = [];
-  const regex = /\$([^$]+)\$/g;
-  let lastIndex = 0;
-  let match;
-  while ((match = regex.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push({ type: 'text', content: text.slice(lastIndex, match.index) });
-    }
-    parts.push({ type: 'formula', content: match[1] });
-    lastIndex = match.index + match[0].length;
-  }
-  if (lastIndex < text.length) {
-    parts.push({ type: 'text', content: text.slice(lastIndex) });
-  }
-  return parts;
-}
-
-function InlineContent({ text }) {
-  const parts = parseInlineFormulas(text);
-  if (!parts.some(p => p.type === 'formula')) return <span>{text}</span>;
-  return (
-    <>
-      {parts.map((part, i) =>
-        part.type === 'formula'
-          ? <FormulaDisplay key={i} formula={part.content} displayMode={false} />
-          : <span key={i}>{part.content}</span>
-      )}
-    </>
-  );
-}
+import MathText from '../lesson/MathText';
 
 function StepInput({ step, value, onChange, disabled }) {
   if (step.type === 'numeric-input') {
@@ -117,7 +85,7 @@ function StepInput({ step, value, onChange, disabled }) {
               background: value === opt.id ? 'var(--mp-primary)' : 'transparent',
               flexShrink: 0,
             }} />
-            <InlineContent text={opt.text} />
+            <MathText text={opt.text} />
           </button>
         ))}
       </div>
@@ -236,7 +204,7 @@ export default function StepSolverExercise({ exercise, onComplete }) {
       )}
 
       <h3 style={{ color: 'var(--mp-text)', margin: 0, fontSize: '1.1rem', fontWeight: 600 }}>
-        <InlineContent text={questionText} />
+        <MathText text={questionText} />
       </h3>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -311,7 +279,7 @@ export default function StepSolverExercise({ exercise, onComplete }) {
                   color: isFuture ? 'var(--mp-muted)' : 'var(--mp-text)',
                   fontWeight: isActive ? 600 : 400,
                 }}>
-                  <InlineContent text={step.instruction} />
+                  <MathText text={step.instruction} />
                 </span>
               </div>
 
@@ -333,7 +301,7 @@ export default function StepSolverExercise({ exercise, onComplete }) {
                   fontSize: '0.85rem',
                   color: 'var(--mp-success)',
                 }}>
-                  <InlineContent text={step.showAnswer} />
+                  <MathText text={step.showAnswer} />
                 </p>
               )}
             </motion.div>
@@ -371,7 +339,7 @@ export default function StepSolverExercise({ exercise, onComplete }) {
           color: 'var(--mp-text)',
         }}>
           <strong style={{ color: 'var(--mp-success)' }}>Lösung:</strong>{' '}
-          <InlineContent text={solutionKey} />
+          <MathText text={solutionKey} />
         </div>
       )}
 

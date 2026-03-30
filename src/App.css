@@ -539,7 +539,7 @@ body {
   text-align: center;
 }
 
-/* Formula Display */
+/* Formula Display (block/display mode) */
 .formula-display {
   text-align: center;
   font-size: 1.6rem;
@@ -551,6 +551,35 @@ body {
   box-shadow: var(--card-shadow);
   margin: 1rem 0;
   overflow-x: auto;
+}
+
+/* Formula Inline (within text flow) */
+.formula-inline {
+  display: inline;
+  font-size: inherit;
+  color: var(--mp-primary);
+  vertical-align: baseline;
+}
+
+.formula-inline .katex {
+  font-size: 1em;
+}
+
+.formula-inline .katex-mathml {
+  display: none;
+}
+
+/* Formula Display inside lesson sections — compact, no card styling */
+.lesson-formula .formula-display {
+  background: none;
+  box-shadow: none;
+  padding: 0.4rem 0;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.lesson-formula .formula-display .katex-mathml {
+  display: none;
 }
 
 /* Hide KaTeX MathML fallback (screen readers only) */

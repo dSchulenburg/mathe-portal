@@ -18,5 +18,5 @@ export default function FormulaDisplay({ formula, displayMode = true, className 
     }
   }, [formula, displayMode]);
 
-  return <span ref={ref} className={`formula-display ${className}`} />;
+  return <span ref={ref} className={`${displayMode ? 'formula-display' : 'formula-inline'} ${className}`} />;
 }

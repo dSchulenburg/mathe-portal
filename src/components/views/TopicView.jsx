@@ -14,6 +14,10 @@ import FunctionPlotter from '../stations/FunctionPlotter';
 import PythagorasExplorer from '../stations/PythagorasExplorer';
 import DiceSim from '../stations/DiceSim';
 import DiscriminantViz from '../stations/DiscriminantViz';
+import LessonLayer from '../lesson/LessonLayer';
+import StoryOutro from '../lesson/StoryOutro';
+import { getCharacterForTopic, TOPIC_STORIES } from '../../data/characters';
+import { useTranslation } from '../../i18n/useTranslation';
 
 function ensureRegistered(topicId) {
   const topic = getTopic(topicId);
@@ -46,6 +50,7 @@ function getAvailableLevels(topicId) {
 
 export default function TopicView({ topicId, onBack }) {
   const topic = getTopic(topicId);
+  const { t } = useTranslation();
 
   // Re-register synchronously (handles test clearDB + HMR)
   ensureRegistered(topicId);
@@ -226,6 +231,17 @@ export default function TopicView({ topicId, onBack }) {
 
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '1.25rem' }}>
 
+        {/* ── Lesson Layer (only when topic has lesson data) ── */}
+        {topic.lesson && (
+          <LessonLayer
+            lesson={topic.lesson}
+            topicId={topicId}
+            topicColor={topic.color}
+            completionPct={completionPercent}
+            onNavigateTopic={(id) => window.location.hash = `#/topic/${id}`}
+          />
+        )}
+
         {/* ── Interactive FunctionPlotter (only when topic has plotter config) ── */}
         {topic.plotter && (
           <div style={{
@@ -389,26 +405,26 @@ export default function TopicView({ topicId, onBack }) {
 
                 {/* Expanded exercise */}
                 {isExpanded && (
-                  <div style={{ position: 'relative' }}>
-                    {/* Close button */}
+                  <div>
+                    {/* Collapse header bar */}
                     <button
                       onClick={() => handleToggle(exercise.id)}
                       style={{
-                        position: 'absolute',
-                        top: '0.5rem',
-                        right: '0.5rem',
-                        zIndex: 2,
+                        width: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
                         background: 'var(--mp-surface-hover)',
                         border: '1px solid var(--mp-border)',
-                        borderRadius: '6px',
+                        borderRadius: '8px 8px 0 0',
                         color: 'var(--mp-muted)',
                         cursor: 'pointer',
-                        padding: '0.2rem 0.5rem',
+                        padding: '0.4rem 0.75rem',
                         fontSize: '0.8rem',
-                        minHeight: '32px',
                       }}
                     >
-                      ▲ Einklappen
+                      <span>{idx + 1}/{levelExercises.length} — {exercise.data?.questionText?.slice(0, 50)}{exercise.data?.questionText?.length > 50 ? '…' : ''}</span>
+                      <span>▲</span>
                     </button>
 
                     {/* Completed overlay indicator */}
@@ -444,6 +460,24 @@ export default function TopicView({ topicId, onBack }) {
             );
           })}
         </div>
+
+        {/* ── Story Outro (after exercises) ── */}
+        {topic.lesson && (() => {
+          const character = getCharacterForTopic(topicId);
+          const gradeTopics = Object.keys(TOPIC_STORIES).filter(
+            id => TOPIC_STORIES[id].characterId === TOPIC_STORIES[topicId]?.characterId
+          );
+          const topicIndex = gradeTopics.indexOf(topicId);
+          return character ? (
+            <StoryOutro
+              character={character}
+              topicId={topicId}
+              topicIndex={topicIndex}
+              totalTopics={gradeTopics.length}
+              t={t}
+            />
+          ) : null;
+        })()}
       </div>
     </div>
   );

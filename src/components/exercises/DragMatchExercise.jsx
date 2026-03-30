@@ -2,30 +2,7 @@ import React, { useState, useCallback, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { useMathStore } from '../../store/mathStore';
-import FormulaDisplay from '../math/FormulaDisplay';
-
-// Render text that may contain $...$ inline formulas
-function RichText({ text }) {
-  if (!text) return null;
-  const parts = text.split(/(\$[^$]+\$)/g);
-  if (parts.length === 1) return <span>{text}</span>;
-  return (
-    <span>
-      {parts.map((part, i) => {
-        if (part.startsWith('$') && part.endsWith('$')) {
-          return (
-            <FormulaDisplay
-              key={i}
-              formula={part.slice(1, -1)}
-              displayMode={false}
-            />
-          );
-        }
-        return <span key={i}>{part}</span>;
-      })}
-    </span>
-  );
-}
+import MathText from '../lesson/MathText';
 
 function shuffle(arr) {
   const a = [...arr];
@@ -272,7 +249,7 @@ export default function DragMatchExercise({ exercise, onComplete }) {
                 onDrop={(e) => handleDrop(e, pair.id)}
                 style={leftStyle(pair)}
               >
-                <RichText text={pair.left} />
+                <MathText text={pair.left} />
               </motion.div>
 
               {/* Arrow + state icon */}
@@ -309,7 +286,7 @@ export default function DragMatchExercise({ exercise, onComplete }) {
                 }}
               >
                 {matchedRightId
-                  ? <RichText text={getRightText(matchedRightId)} />
+                  ? <MathText text={getRightText(matchedRightId)} />
                   : <span style={{ fontSize: '0.78rem', opacity: 0.6 }}>— zuordnen →</span>
                 }
               </motion.div>
@@ -343,7 +320,7 @@ export default function DragMatchExercise({ exercise, onComplete }) {
             whileTap={!checked && !isComplete ? { scale: 0.97 } : {}}
             style={rightChipStyle(item)}
           >
-            <RichText text={item.right} />
+            <MathText text={item.right} />
           </motion.div>
         ))}
       </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useMathStore } from '../../store/mathStore';
+import MathText from '../lesson/MathText';
 
 function ConfettiPiece({ style }) {
   return (
@@ -109,7 +110,7 @@ export default function ErrorAnalysisExercise({ exercise, onComplete }) {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
         {/* Question */}
         <p style={{ margin: 0, color: 'var(--mp-text)', fontWeight: 600, fontSize: 15 }}>
-          {questionText}
+          <MathText text={questionText} />
         </p>
 
         {/* Context */}
@@ -123,7 +124,7 @@ export default function ErrorAnalysisExercise({ exercise, onComplete }) {
             fontSize: 13,
             fontStyle: 'italic',
           }}>
-            {exercise.contextKey}
+            <MathText text={exercise.contextKey} />
           </p>
         )}
 
@@ -198,7 +199,7 @@ export default function ErrorAnalysisExercise({ exercise, onComplete }) {
 
                 {/* Content */}
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <code style={{
+                  <span style={{
                     fontFamily: "'Courier New', Courier, monospace",
                     fontSize: 14,
                     color: 'var(--mp-text)',
@@ -206,8 +207,8 @@ export default function ErrorAnalysisExercise({ exercise, onComplete }) {
                     display: 'block',
                     paddingLeft: 4,
                   }}>
-                    {step.content}
-                  </code>
+                    <MathText text={step.content} />
+                  </span>
 
                   {/* Error explanation */}
                   {showResult && step.hasError && step.errorExplanation && (
@@ -218,7 +219,7 @@ export default function ErrorAnalysisExercise({ exercise, onComplete }) {
                       color: 'var(--mp-error)',
                       fontStyle: 'italic',
                     }}>
-                      {step.errorExplanation}
+                      <MathText text={step.errorExplanation} />
                     </p>
                   )}
                 </div>

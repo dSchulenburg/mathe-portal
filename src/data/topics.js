@@ -1,4 +1,16 @@
 import { exercises as quadFunktionenEx } from './exercises/10-quad-funktionen';
+import { lesson as quadFunktionenLesson } from './lessons/10-quad-funktionen';
+import { lesson as pythagorasLesson } from './lessons/10-pythagoras';
+import { lesson as wahrscheinlichkeitLesson } from './lessons/10-wahrscheinlichkeit';
+import { lesson as quadGleichungenLesson } from './lessons/10-quad-gleichungen';
+import { lesson as trigonometrieLesson } from './lessons/10-trigonometrie';
+import { lesson as expWachstumLesson } from './lessons/10-exp-wachstum';
+import { lesson as koerperLesson } from './lessons/10-koerper';
+import { lesson as potenzgesetzeLesson } from './lessons/10-potenzgesetze';
+import { lesson as aehnlichkeitLesson } from './lessons/10-aehnlichkeit';
+import { lesson as periodischLesson } from './lessons/10-periodisch';
+import { lesson as diffEinfuehrungLesson } from './lessons/10-diff-einfuehrung';
+import { lesson as funktionsklassenLesson } from './lessons/10-funktionsklassen';
 import { exercises as quadGleichungenEx } from './exercises/10-quad-gleichungen';
 import { exercises as trigonometrieEx } from './exercises/10-trigonometrie';
 import { exercises as expWachstumEx } from './exercises/10-exp-wachstum';
@@ -20,6 +32,14 @@ import { exercises as expLogEx } from './exercises/11-exp-log';
 import { exercises as binomialEx } from './exercises/11-binomialverteilung';
 import { exercises as bedingteWkEx } from './exercises/11-bedingte-wk';
 import { exercises as vektorrechnungEx } from './exercises/11-vektorrechnung';
+import { lesson as ableitungsregelnLesson } from './lessons/11-ableitungsregeln';
+import { lesson as kurvendiskussionLesson } from './lessons/11-kurvendiskussion';
+import { lesson as extremwertLesson } from './lessons/11-extremwertaufgaben';
+import { lesson as integralrechnungLesson } from './lessons/11-integralrechnung';
+import { lesson as expLogLesson } from './lessons/11-exp-log';
+import { lesson as binomialLesson } from './lessons/11-binomialverteilung';
+import { lesson as bedingteWkLesson } from './lessons/11-bedingte-wk';
+import { lesson as vektorrechnungLesson } from './lessons/11-vektorrechnung';
 
 // Klasse 12
 import { exercises as eFunktionLnEx } from './exercises/12-e-funktion-ln';
@@ -29,6 +49,13 @@ import { exercises as hypothesentestsEx } from './exercises/12-hypothesentests';
 import { exercises as normalverteilungEx } from './exercises/12-normalverteilung';
 import { exercises as matrizenEx } from './exercises/12-matrizen';
 import { exercises as abivorbereitungEx } from './exercises/12-abiturvorbereitung';
+import { lesson as eFunktionLnLesson } from './lessons/12-e-funktion-ln';
+import { lesson as integralVertieftLesson } from './lessons/12-integralrechnung-v';
+import { lesson as analytischeGeoLesson } from './lessons/12-analytische-geo';
+import { lesson as hypothesentestsLesson } from './lessons/12-hypothesentests';
+import { lesson as normalverteilungLesson } from './lessons/12-normalverteilung';
+import { lesson as matrizenLesson } from './lessons/12-matrizen';
+import { lesson as abivorbereitungLesson } from './lessons/12-abiturvorbereitung';
 
 /**
  * Topic metadata registry.
@@ -44,6 +71,7 @@ export const TOPICS = [
     color: '#f59e0b',
     period: 'Klasse 10',
     exercises: quadFunktionenEx,
+    lesson: quadFunktionenLesson,
     // FunctionPlotter config (optional, only for topics that have one)
     plotter: {
       title: 'Erkunde die Parabel',
@@ -66,6 +94,7 @@ export const TOPICS = [
     color: '#f97316',
     period: 'Klasse 10',
     exercises: quadGleichungenEx,
+    lesson: quadGleichungenLesson,
     plotter: null,
     station: 'DiscriminantViz',
   },
@@ -78,6 +107,7 @@ export const TOPICS = [
     color: '#ec4899',
     period: 'Klasse 10',
     exercises: trigonometrieEx,
+    lesson: trigonometrieLesson,
     plotter: {
       title: 'Erkunde Sinus und Kosinus',
       functions: [
@@ -102,6 +132,7 @@ export const TOPICS = [
     color: '#22c55e',
     period: 'Klasse 10',
     exercises: expWachstumEx,
+    lesson: expWachstumLesson,
     plotter: {
       title: 'Erkunde Exponentialfunktionen',
       functions: [
@@ -124,6 +155,7 @@ export const TOPICS = [
     color: '#3b82f6',
     period: 'Klasse 10',
     exercises: wahrscheinlichkeitEx,
+    lesson: wahrscheinlichkeitLesson,
     plotter: null,
     station: 'DiceSim',
   },
@@ -136,6 +168,7 @@ export const TOPICS = [
     color: '#f472b6',
     period: 'Klasse 10',
     exercises: pythagorasEx,
+    lesson: pythagorasLesson,
     plotter: null,
     station: 'PythagorasExplorer',
   },
@@ -148,6 +181,7 @@ export const TOPICS = [
     color: '#e879f9',
     period: 'Klasse 10',
     exercises: koerperEx,
+    lesson: koerperLesson,
     plotter: null,
   },
   {
@@ -159,6 +193,7 @@ export const TOPICS = [
     color: '#34d399',
     period: 'Klasse 10',
     exercises: potenzgesetzeEx,
+    lesson: potenzgesetzeLesson,
     plotter: null,
   },
   {
@@ -170,6 +205,7 @@ export const TOPICS = [
     color: '#fb923c',
     period: 'Klasse 10',
     exercises: aehnlichkeitEx,
+    lesson: aehnlichkeitLesson,
     plotter: null,
   },
   {
@@ -181,6 +217,7 @@ export const TOPICS = [
     color: '#38bdf8',
     period: 'Klasse 10',
     exercises: periodischEx,
+    lesson: periodischLesson,
     plotter: {
       title: 'Erkunde Schwingungen',
       functions: [
@@ -205,6 +242,7 @@ export const TOPICS = [
     color: '#a78bfa',
     period: 'Klasse 10',
     exercises: diffEinfuehrungEx,
+    lesson: diffEinfuehrungLesson,
     plotter: {
       title: 'Erkunde Tangenten & Sekanten',
       functions: [
@@ -227,6 +265,7 @@ export const TOPICS = [
     color: '#94a3b8',
     period: 'Klasse 10',
     exercises: funktionsklassenEx,
+    lesson: funktionsklassenLesson,
     plotter: {
       title: 'Vergleiche Funktionstypen',
       functions: [
@@ -252,6 +291,7 @@ export const TOPICS = [
     color: '#a78bfa',
     period: 'Klasse 11',
     exercises: ableitungsregelnEx,
+    lesson: ableitungsregelnLesson,
     plotter: {
       title: 'Erkunde Ableitungsregeln',
       functions: [
@@ -276,6 +316,7 @@ export const TOPICS = [
     color: '#c084fc',
     period: 'Klasse 11',
     exercises: kurvendiskussionEx,
+    lesson: kurvendiskussionLesson,
     plotter: {
       title: 'Kurvendiskussion interaktiv',
       functions: [
@@ -297,6 +338,7 @@ export const TOPICS = [
     color: '#f59e0b',
     period: 'Klasse 11',
     exercises: extremwertEx,
+    lesson: extremwertLesson,
     plotter: null,
   },
   {
@@ -308,6 +350,7 @@ export const TOPICS = [
     color: '#06b6d4',
     period: 'Klasse 11',
     exercises: integralrechnungEx,
+    lesson: integralrechnungLesson,
     plotter: {
       title: 'Fläche unter der Kurve',
       functions: [
@@ -329,6 +372,7 @@ export const TOPICS = [
     color: '#22c55e',
     period: 'Klasse 11',
     exercises: expLogEx,
+    lesson: expLogLesson,
     plotter: {
       title: 'e-Funktion und Logarithmus',
       functions: [
@@ -352,6 +396,7 @@ export const TOPICS = [
     color: '#3b82f6',
     period: 'Klasse 11',
     exercises: binomialEx,
+    lesson: binomialLesson,
     plotter: null,
   },
   {
@@ -363,6 +408,7 @@ export const TOPICS = [
     color: '#6366f1',
     period: 'Klasse 11',
     exercises: bedingteWkEx,
+    lesson: bedingteWkLesson,
     plotter: null,
   },
   {
@@ -374,6 +420,7 @@ export const TOPICS = [
     color: '#f472b6',
     period: 'Klasse 11',
     exercises: vektorrechnungEx,
+    lesson: vektorrechnungLesson,
     plotter: null,
   },
 
@@ -388,6 +435,7 @@ export const TOPICS = [
     color: '#10b981',
     period: 'Klasse 12',
     exercises: eFunktionLnEx,
+    lesson: eFunktionLnLesson,
     plotter: {
       title: 'e-Funktionen und ihre Ableitungen',
       functions: [
@@ -411,6 +459,7 @@ export const TOPICS = [
     color: '#0ea5e9',
     period: 'Klasse 12',
     exercises: integralVertieftEx,
+    lesson: integralVertieftLesson,
     plotter: {
       title: 'Fläche zwischen Kurven',
       functions: [
@@ -431,6 +480,7 @@ export const TOPICS = [
     color: '#e879f9',
     period: 'Klasse 12',
     exercises: analytischeGeoEx,
+    lesson: analytischeGeoLesson,
     plotter: null,
   },
   {
@@ -442,6 +492,7 @@ export const TOPICS = [
     color: '#8b5cf6',
     period: 'Klasse 12',
     exercises: hypothesentestsEx,
+    lesson: hypothesentestsLesson,
     plotter: null,
   },
   {
@@ -453,6 +504,7 @@ export const TOPICS = [
     color: '#2563eb',
     period: 'Klasse 12',
     exercises: normalverteilungEx,
+    lesson: normalverteilungLesson,
     plotter: {
       title: 'Die Normalverteilung',
       functions: [
@@ -475,6 +527,7 @@ export const TOPICS = [
     color: '#34d399',
     period: 'Klasse 12',
     exercises: matrizenEx,
+    lesson: matrizenLesson,
     plotter: null,
   },
   {
@@ -486,6 +539,7 @@ export const TOPICS = [
     color: '#fbbf24',
     period: 'Klasse 12',
     exercises: abivorbereitungEx,
+    lesson: abivorbereitungLesson,
     plotter: null,
   },
 ];

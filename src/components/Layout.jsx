@@ -41,7 +41,13 @@ export default function Layout({
                 ← {t('ui.back')}
               </button>
             ) : (
-              <span className="header-logo">∫</span>
+              <a
+                href="/dashboard/"
+                className="back-btn"
+                style={{ textDecoration: 'none', fontSize: '0.8rem' }}
+              >
+                ← Lernmodule
+              </a>
             )}
           </div>
 
