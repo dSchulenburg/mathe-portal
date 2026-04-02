@@ -5,7 +5,7 @@ import TopicGrid from '../components/views/TopicGrid';
 describe('TopicGrid', () => {
   it('renders main title', () => {
     render(<TopicGrid />);
-    expect(screen.getByText(/Aufgabendatenbank/)).toBeTruthy();
+    expect(screen.getByText(/∫nfinity/)).toBeTruthy();
   });
 
   it('renders grade tabs', () => {

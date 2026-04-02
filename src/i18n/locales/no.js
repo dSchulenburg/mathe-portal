@@ -1,19 +1,27 @@
+import { batch1 } from '../lessons-10-batch1-no';
+import { batch2 } from '../lessons-10-batch2-no';
+import { batch3 } from '../lessons-10-batch3-no';
+import { batch11a } from '../lessons-11-batch1-no';
+import { batch11b } from '../lessons-11-batch2-no';
+import { batch12a } from '../lessons-12-batch1-no';
+import { batch12b } from '../lessons-12-batch2-no';
+
 export default {
   portal: {
-    title: 'Matematikkportalen',
-    subtitle: 'Matematikk — det universelle språket',
+    title: '∫nfinity',
+    subtitle: '∫nfinity',
     oerBadge: 'Åpne læringsressurser',
     progress: 'Din fremgang',
     comingSoon: 'Kommer snart',
   },
   modules: {
     'quad-funktionen': {
-      title: 'Kvadratiske funksjoner',
-      subtitle: '{levels} nivåer · {exercises} øvelser',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
     differentialrechnung: {
-      title: 'Differensialregning',
-      subtitle: '{levels} nivåer · {exercises} øvelser',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
   },
   ui: {
@@ -45,18 +53,18 @@ export default {
   },
   levels: {
     'quad-funktionen': {
-      1: { title: 'Grunnleggende', subtitle: 'Gjenkjenne parabler' },
-      2: { title: 'Konvertere former', subtitle: 'Standard ↔ Toppunktform' },
-      3: { title: 'Andregradsformelen', subtitle: 'Finne nullpunkter' },
-      4: { title: 'Faktorisering', subtitle: 'Vietas formler' },
-      5: { title: 'Mix & Match', subtitle: 'Kombinere metoder' },
-      6: { title: 'Tekstoppgaver', subtitle: 'Matematikk i hverdagen' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
+      5: { title: '∫nfinity' },
+      6: { title: '∫nfinity' },
     },
     differentialrechnung: {
-      1: { title: 'Endringsrater og grenser', subtitle: 'Hva er en derivert?' },
-      2: { title: 'Grunnregler', subtitle: 'Potens-, Faktor-, Sumregel' },
-      3: { title: 'Avanserte regler', subtitle: 'Produkt-, Kvotient-, Kjederegl' },
-      4: { title: 'Monotonicitet og ekstrema', subtitle: 'Kurveanalyse I' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
     },
   },
   stories: {
@@ -92,27 +100,121 @@ export default {
   },
   exercises: {
     differentialrechnung: {
-      'D1-EX1': { title: 'Gjennomsnittlig endringsrate', description: 'Beregn sekanthellningen til f(x) = x² mellom x=1 og x=3.' },
-      'D1-EX2': { title: 'Momentan endringsrate', description: 'Dra punktet på kurven og bestem hellningen.' },
-      'D1-EX3': { title: 'Fra differenskvotient til differensialkvotient', description: 'Deriver f(x) = x² ved bruk av grensedefinisjon.' },
-      'D1-EX4': { title: 'Grense visuelt', description: 'Observer animasjonen og bestem tangentens hellning.' },
-      'D2-EX1': { title: 'Potensregelen', description: 'Deriver 5 funksjoner med potensregelen.' },
-      'D2-EX2': { title: 'Faktorregelen', description: 'Deriver funksjoner med konstante faktorer.' },
-      'D2-EX3': { title: 'Sumregelen', description: 'Deriver f(x) = 3x² + 2x − 5 ledd for ledd.' },
-      'D2-EX4': { title: 'Blandede øvelser', description: 'Identifiser riktig regel og beregn.' },
-      'D3-EX1': { title: 'Produktregelen', description: 'Deriver f(x) = (2x+1)·x³.' },
-      'D3-EX2': { title: 'Kvotientregelen', description: 'Deriver f(x) = (x²+1)/(x−1).' },
-      'D3-EX3': { title: 'Kjedeegelen', description: 'Deriver f(x) = (2x+3)⁴.' },
-      'D3-EX4': { title: 'Regelvalg', description: 'Hvilken regel passer? Forklar og beregn.' },
-      'D4-EX1': { title: 'Finne ekstrema', description: 'Bestem ekstremene til f(x) = x³ − 3x.' },
-      'D4-EX2': { title: 'Fortegnsskifte', description: 'Merk ekstremalpunktene på grafen.' },
-      'D4-EX3': { title: 'Monotonicitetintervaller', description: 'I hvilke intervaller er funksjonen stigende eller synkende?' },
-      'D4-EX4': { title: 'Komplett arbeidsflyt', description: 'Utfør en fullstendig ekstremaanalyse.' },
+      'D1-EX1': { title: '∫nfinity' },
+      'D1-EX2': { title: '∫nfinity' },
+      'D1-EX3': { title: '∫nfinity' },
+      'D1-EX4': { title: '∫nfinity' },
+      'D2-EX1': { title: '∫nfinity' },
+      'D2-EX2': { title: '∫nfinity' },
+      'D2-EX3': { title: '∫nfinity' },
+      'D2-EX4': { title: '∫nfinity' },
+      'D3-EX1': { title: '∫nfinity' },
+      'D3-EX2': { title: '∫nfinity' },
+      'D3-EX3': { title: '∫nfinity' },
+      'D3-EX4': { title: '∫nfinity' },
+      'D4-EX1': { title: '∫nfinity' },
+      'D4-EX2': { title: '∫nfinity' },
+      'D4-EX3': { title: '∫nfinity' },
+      'D4-EX4': { title: '∫nfinity' },
     },
   },
+  // ── Lesson Layer Labels ──
+  lesson: {
+    objectives: 'Laeringsmaal',
+    objectivesSubtitle: '∫nfinity',
+    explanation: 'Forklaring',
+    concepts: 'Noekkelkonsepter',
+    examples: 'Moenstereksempler',
+    examplesSubtitle: '∫nfinity',
+    realWorld: 'Hvor mooter du dette?',
+    mistakes: 'Typiske feil',
+    mistakesSubtitle: '∫nfinity',
+    prerequisites: 'Forkunnskaper',
+    prerequisitesSubtitle: '∫nfinity',
+    collapseLesson: 'Skjul leksjon',
+    expandLesson: 'Vis leksjon',
+    skipToExercises: 'OEv naa →',
+    storyOutro: 'Hvordan fortsetter historien?',
+  },
+
+  // ── Lesson Content per Topic ──
+  lessons: {
+    ...batch1,
+    ...batch2,
+    ...batch3,
+    ...batch11a,
+    ...batch11b,
+    ...batch12a,
+    ...batch12b,
+    '10-quad-funktionen': {
+      story: {
+        intro: 'Mia sitter paa det lille kontoret sitt ved Hamburg havn og stirrer paa skjermen. Lumi, spillfiguren hennes i "Havnelys", skal hoppe elegant over kasser og containere — men hoppkurven ser bare feil ut. "Fysikken stemmer ikke", mumler hun. For aa programmere en realistisk hoppbane trenger Mia kvadratiske funksjoner.',
+        challenge: 'Lumi skal hoppe over kasser — men hoppkurven ser unaturlig ut.',
+        outro: 'Med toppunktformen har Mia programmert den perfekte hoppkurven! Lumi flyr naa i en elegant bue over Hamburg-containerne. "Endelig ser det realistisk ut", sier Tim og gir henne en high-five.',
+      },
+      objectives: {
+        recognize: 'Gjenkjenne kvadratiske funksjoner og beskrive egenskapene deres',
+        vertex_form: 'Omregne sikkert mellom normalform og toppunktform',
+        pq_formula: 'Beregne nullpunkter med abc-formelen',
+        graph_properties: 'Lese av aapningsretning, toppunkt og symmetriakse fra likningen',
+      },
+      explanation: {
+        intro: 'Forestill deg at du kaster en basketball. Ballen flyr i en bue oppover, naar det hoeyeste punktet og faller ned igjen. Denne flybanen har en helt bestemt form — en parabel. Matematisk beskriver vi den med en kvadratisk funksjon:',
+        opening: 'Tallet $a$ bestemmer om parabelen aapner oppover ($a > 0$) eller nedover ($a < 0$) — og hvor "smal" eller "bred" den er. Jo stoerre $|a|$, desto smalere parabelen.',
+        mia_tip: 'I spillet mitt er $a$ negativ fordi hoppkurven gaar oppover og saa ned igjen — som en omvendt U!',
+        vertex_form: 'Toppunktformen avslorer direkte det hoeyeste (eller laveste) punktet paa parabelen. Toppunktet $S$ har koordinatene $(d \\mid e)$:',
+        conversion: 'For aa gaa fra normalform til toppunktform bruker du fullstendig kvadrering. Du legger smart til et tall og trekker det fra igjen slik at et perfekt kvadrat oppstaar.',
+      },
+      concepts: {
+        normal_form: { title: '∫nfinity' },
+        vertex_form: { title: '∫nfinity' },
+        pq_formula: { title: '∫nfinity' },
+        discriminant: { title: '∫nfinity' },
+      },
+      examples: {
+        vertex: {
+          title: '∫nfinity',
+          context: 'Mia vil beregne det hoeyeste punktet paa Lumis hopp.',
+          step1: 'Gitt er funksjonen i normalform:',
+          step2: 'Fullstendig kvadrering: Vi legger til $(\\frac{6}{2})^2 = 9$ og trekker det fra igjen:',
+          step3: 'Sett sammen — uttrykket i parentesen er et perfekt kvadrat:',
+          step4: 'Les av toppunktet: $d = 3$, $e = -4$, altsaa:',
+          mia_comment: 'Toppunktet ved $(3 \\mid -4)$ er det laveste punktet fordi $a = 1 > 0$. For en hoppkurve trenger jeg $a < 0$, da blir det det hoeyeste punktet!',
+        },
+        pq: {
+          title: '∫nfinity',
+          context: 'Hvor lander Lumi igjen paa bakken?',
+          step1: 'Gitt: Likningen er allerede i riktig form ($x^2$-koeffisient = 1):',
+          step2: 'Les av verdiene for $p$ og $q$:',
+          step3: 'Sett inn i abc-formelen og regn ut:',
+          step4: 'Lumi lander altsaa ved $x = 2$ eller $x = -4$:',
+          mia_comment: 'To nullpunkter — parabelen krysser x-aksen to ganger. I spillet betyr det: Lumi letter ved $x = -4$ og lander ved $x = 2$!',
+        },
+      },
+      realworld: {
+        basketball: { title: '∫nfinity' },
+        bridge: { title: '∫nfinity' },
+        pricing: { title: '∫nfinity' },
+      },
+      mistakes: {
+        sign_error: {
+          wrong: 'Fortegnsfeil',
+          correct: 'Pass paa fortegnene',
+          why: 'I $f(x) = (x - d)^2 + e$ staar det et minus foran $d$. Det betyr: $f(x) = (x - 3)^2$ har toppunktet ved $d = +3$, ikke ved $-3$!',
+          mia_warning: 'Denne fortegnsfeilen kostet meg 3 timer med debugging. Lumis hoppkurve var forskjoevet til venstre i stedet for til hoeyre!',
+        },
+        pq_wrong: {
+          wrong: 'abc-formel uten divisjon',
+          correct: 'Foerst dele paa $a$',
+          why: 'Abc-formelen fungerer bare naar koeffisienten foran $x^2$ er lik 1. Ved $2x^2 + 4x - 6 = 0$ maa du foerst dele paa 2: $x^2 + 2x - 3 = 0$.',
+        },
+      },
+    },
+  },
+
   footer: {
     createdBy: 'Laget av Dirk Schulenburg',
     license: 'Lisensiert under CC BY-SA 4.0',
-    consulting: 'Kurs og rådgivning',
+    consulting: 'Kurs og raadgivning',
   },
 };

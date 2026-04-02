@@ -1,19 +1,27 @@
+import { batch1 } from '../lessons-10-batch1-it';
+import { batch2 } from '../lessons-10-batch2-it';
+import { batch3 } from '../lessons-10-batch3-it';
+import { batch11a } from '../lessons-11-batch1-it';
+import { batch11b } from '../lessons-11-batch2-it';
+import { batch12a } from '../lessons-12-batch1-it';
+import { batch12b } from '../lessons-12-batch2-it';
+
 export default {
   portal: {
-    title: 'Portale di Matematica',
-    subtitle: 'Matematica — il linguaggio universale',
+    title: '∫nfinity',
+    subtitle: '∫nfinity',
     oerBadge: 'Risorse Educative Aperte',
     progress: 'Il tuo progresso',
     comingSoon: 'Prossimamente',
   },
   modules: {
     'quad-funktionen': {
-      title: 'Funzioni quadratiche',
-      subtitle: '{levels} livelli · {exercises} esercizi',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
     differentialrechnung: {
-      title: 'Calcolo differenziale',
-      subtitle: '{levels} livelli · {exercises} esercizi',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
   },
   ui: {
@@ -45,18 +53,18 @@ export default {
   },
   levels: {
     'quad-funktionen': {
-      1: { title: 'Fondamenti', subtitle: 'Riconoscere le parabole' },
-      2: { title: 'Conversione di forme', subtitle: 'Standard ↔ Vertice' },
-      3: { title: 'Formula quadratica', subtitle: 'Trovare gli zeri' },
-      4: { title: 'Fattorizzazione', subtitle: 'Formule di Vieta' },
-      5: { title: 'Mix & Match', subtitle: 'Combinare i metodi' },
-      6: { title: 'Problemi di testo', subtitle: 'Matematica nella vita' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
+      5: { title: '∫nfinity' },
+      6: { title: '∫nfinity' },
     },
     differentialrechnung: {
-      1: { title: 'Tassi di variazione e limiti', subtitle: 'Cos\'è una derivata?' },
-      2: { title: 'Regole di base', subtitle: 'Potenza, Fattore, Somma' },
-      3: { title: 'Regole avanzate', subtitle: 'Prodotto, Quoziente, Catena' },
-      4: { title: 'Monotonicità ed estremi', subtitle: 'Analisi delle curve I' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
     },
   },
   stories: {
@@ -92,22 +100,90 @@ export default {
   },
   exercises: {
     differentialrechnung: {
-      'D1-EX1': { title: 'Tasso di variazione medio', description: 'Calcola la pendenza della secante di f(x) = x² tra x=1 e x=3.' },
-      'D1-EX2': { title: 'Tasso di variazione istantaneo', description: 'Trascina il punto sulla curva e determina la pendenza.' },
-      'D1-EX3': { title: 'Dal rapporto incrementale al quoziente differenziale', description: 'Deriva f(x) = x² usando la definizione di limite.' },
-      'D1-EX4': { title: 'Limite visivamente', description: 'Osserva l\'animazione e determina la pendenza della tangente.' },
-      'D2-EX1': { title: 'Regola della potenza', description: 'Deriva 5 funzioni con la regola della potenza.' },
-      'D2-EX2': { title: 'Regola del fattore costante', description: 'Deriva funzioni con fattori costanti.' },
-      'D2-EX3': { title: 'Regola della somma', description: 'Deriva f(x) = 3x² + 2x − 5 termine per termine.' },
-      'D2-EX4': { title: 'Esercizi misti', description: 'Identifica la regola corretta e calcola.' },
-      'D3-EX1': { title: 'Regola del prodotto', description: 'Deriva f(x) = (2x+1)·x³.' },
-      'D3-EX2': { title: 'Regola del quoziente', description: 'Deriva f(x) = (x²+1)/(x−1).' },
-      'D3-EX3': { title: 'Regola della catena', description: 'Deriva f(x) = (2x+3)⁴.' },
-      'D3-EX4': { title: 'Selezione della regola', description: 'Quale regola è adatta? Spiega e calcola.' },
-      'D4-EX1': { title: 'Trovare gli estremi', description: 'Determina gli estremi di f(x) = x³ − 3x.' },
-      'D4-EX2': { title: 'Cambio di segno', description: 'Segna i punti estremi sul grafico.' },
-      'D4-EX3': { title: 'Intervalli di monotonicità', description: 'In quali intervalli la funzione è crescente o decrescente?' },
-      'D4-EX4': { title: 'Flusso di lavoro completo', description: 'Esegui un\'analisi completa degli estremi.' },
+      'D1-EX1': { title: '∫nfinity' },
+      'D1-EX2': { title: '∫nfinity' },
+      'D1-EX3': { title: '∫nfinity' },
+      'D1-EX4': { title: '∫nfinity' },
+      'D2-EX1': { title: '∫nfinity' },
+      'D2-EX2': { title: '∫nfinity' },
+      'D2-EX3': { title: '∫nfinity' },
+      'D2-EX4': { title: '∫nfinity' },
+      'D3-EX1': { title: '∫nfinity' },
+      'D3-EX2': { title: '∫nfinity' },
+      'D3-EX3': { title: '∫nfinity' },
+      'D3-EX4': { title: '∫nfinity' },
+      'D4-EX1': { title: '∫nfinity' },
+      'D4-EX2': { title: '∫nfinity' },
+      'D4-EX3': { title: '∫nfinity' },
+      'D4-EX4': { title: '∫nfinity' },
+    },
+  },
+  // ── Lesson Layer Labels ──
+  lesson: {
+    objectives: 'Obiettivi di apprendimento',
+    objectivesSubtitle: '∫nfinity',
+    explanation: 'Spiegazione',
+    concepts: 'Concetti chiave',
+    examples: 'Esempi guida',
+    examplesSubtitle: '∫nfinity',
+    realWorld: 'Dove lo incontri?',
+    mistakes: 'Errori tipici',
+    mistakesSubtitle: '∫nfinity',
+    prerequisites: 'Conoscenze pregresse',
+    prerequisitesSubtitle: '∫nfinity',
+    collapseLesson: 'Comprimi la lezione',
+    expandLesson: 'Mostra la lezione',
+    skipToExercises: 'Esercitati ora →',
+    storyOutro: 'Come continua la storia?',
+  },
+
+  // ── Lesson Content per Topic ──
+  lessons: {
+    ...batch1,
+    ...batch2,
+    ...batch3,
+    ...batch11a,
+    ...batch11b,
+    ...batch12a,
+    ...batch12b,
+    '10-quad-funktionen': {
+      story: {
+        intro: 'Mia e seduta nel suo piccolo ufficio al porto di Amburgo e fissa lo schermo. Lumi, il suo personaggio in "Hafenlichter", deve saltare elegantemente sopra casse e container — ma la curva di salto sembra sbagliata. "La fisica non e giusta", mormora. Per programmare una traiettoria di salto realistica, Mia ha bisogno delle funzioni quadratiche.',
+        challenge: 'Lumi deve saltare sopra le casse — ma la curva di salto sembra innaturale.',
+        outro: 'Con la forma del vertice Mia ha programmato la curva di salto perfetta! Lumi ora vola in un elegante arco sopra i container di Amburgo. "Finalmente sembra realistico", dice Tim e le da il cinque.',
+      },
+      objectives: {
+        recognize: 'Riconoscere le funzioni quadratiche e descrivere le loro proprieta',
+        vertex_form: 'Convertire con sicurezza tra forma standard e forma del vertice',
+        pq_formula: 'Calcolare gli zeri con la formula risolutiva',
+        graph_properties: 'Leggere dall\'equazione la direzione di apertura, il vertice e l\'asse di simmetria',
+      },
+      explanation: {
+        intro: 'Immagina di lanciare un pallone da basket. La palla vola in un arco verso l\'alto, raggiunge il punto piu alto e ricade. Questa traiettoria ha una forma ben precisa — una parabola. Matematicamente la descriviamo con una funzione quadratica:',
+        opening: 'Il numero $a$ determina se la parabola e aperta verso l\'alto ($a > 0$) o verso il basso ($a < 0$) — e quanto e "stretta" o "larga". Piu grande e $|a|$, piu stretta la parabola.',
+        mia_tip: 'Nel mio gioco $a$ e negativo, perche la curva di salto va prima su e poi giu — come una U capovolta!',
+        vertex_form: 'La forma del vertice ti rivela direttamente il punto piu alto (o piu basso) della parabola. Il vertice $S$ ha le coordinate $(d \\mid e)$:',
+        conversion: 'Per passare dalla forma standard alla forma del vertice, usi il completamento del quadrato. Aggiungi e sottrai abilmente un numero, cosi che si formi un quadrato perfetto.',
+      },
+      concepts: {
+        normal_form: { title: '∫nfinity' },
+        vertex_form: { title: '∫nfinity' },
+        pq_formula: { title: '∫nfinity' },
+        discriminant: { title: '∫nfinity' },
+      },
+      examples: {
+        vertex: { title: '∫nfinity' },
+        pq: { title: '∫nfinity' },
+      },
+      realworld: {
+        basketball: { title: '∫nfinity' },
+        bridge: { title: '∫nfinity' },
+        pricing: { title: '∫nfinity' },
+      },
+      mistakes: {
+        sign_error: { wrong: 'Errore di segno', correct: 'Fare attenzione ai segni', why: 'In $f(x) = (x - d)^2 + e$ c\'e un meno davanti a $d$. Significa: $f(x) = (x - 3)^2$ ha il vertice in $d = +3$, non in $-3$!', mia_warning: 'Questo errore di segno mi e costato 3 ore di debugging. La curva di salto di Lumi era spostata a sinistra invece che a destra!' },
+        pq_wrong: { wrong: 'Formula risolutiva senza divisione', correct: 'Prima dividere per $a$', why: 'La formula risolutiva funziona solo se il coefficiente di $x^2$ e 1. Per $2x^2 + 4x - 6 = 0$ devi prima dividere per 2: $x^2 + 2x - 3 = 0$.' },
+      },
     },
   },
   footer: {

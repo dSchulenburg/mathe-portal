@@ -39,7 +39,7 @@ function RouteAwareApp() {
     );
   }
 
-  // Default: TopicGrid (Aufgabendatenbank)
+  // Default: TopicGrid (∫nfinity)
   return (
     <I18nProvider>
       <GameProvider>

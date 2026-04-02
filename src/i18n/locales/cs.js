@@ -1,19 +1,27 @@
+import { batch1 } from '../lessons-10-batch1-cs';
+import { batch2 } from '../lessons-10-batch2-cs';
+import { batch3 } from '../lessons-10-batch3-cs';
+import { batch11a } from '../lessons-11-batch1-cs';
+import { batch11b } from '../lessons-11-batch2-cs';
+import { batch12a } from '../lessons-12-batch1-cs';
+import { batch12b } from '../lessons-12-batch2-cs';
+
 export default {
   portal: {
-    title: 'Matematický Portál',
-    subtitle: 'Matematika — univerzální jazyk',
+    title: '∫nfinity',
+    subtitle: '∫nfinity',
     oerBadge: 'Otevřené vzdělávací zdroje',
     progress: 'Tvůj pokrok',
     comingSoon: 'Brzy',
   },
   modules: {
     'quad-funktionen': {
-      title: 'Kvadratické funkce',
-      subtitle: '{levels} úrovně · {exercises} cvičení',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
     differentialrechnung: {
-      title: 'Diferenciální počet',
-      subtitle: '{levels} úrovně · {exercises} cvičení',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
   },
   ui: {
@@ -45,18 +53,18 @@ export default {
   },
   levels: {
     'quad-funktionen': {
-      1: { title: 'Základy', subtitle: 'Rozpoznávání parabol' },
-      2: { title: 'Převod tvarů', subtitle: 'Obecný ↔ Vrcholový tvar' },
-      3: { title: 'Kvadratický vzorec', subtitle: 'Hledání nulových bodů' },
-      4: { title: 'Faktorizace', subtitle: 'Vièteovy vzorce' },
-      5: { title: 'Mix & Match', subtitle: 'Kombinování metod' },
-      6: { title: 'Slovní úlohy', subtitle: 'Matematika v životě' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
+      5: { title: '∫nfinity' },
+      6: { title: '∫nfinity' },
     },
     differentialrechnung: {
-      1: { title: 'Rychlosti změn a limity', subtitle: 'Co je derivace?' },
-      2: { title: 'Základní pravidla', subtitle: 'Mocninné, Konstantní, Součtové' },
-      3: { title: 'Pokročilá pravidla', subtitle: 'Součinové, Podílové, Řetězové' },
-      4: { title: 'Monotonnost a extrémy', subtitle: 'Analýza křivek I' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
     },
   },
   stories: {
@@ -92,24 +100,119 @@ export default {
   },
   exercises: {
     differentialrechnung: {
-      'D1-EX1': { title: 'Průměrná rychlost změny', description: 'Vypočítej sklon sekanty f(x) = x² mezi x=1 a x=3.' },
-      'D1-EX2': { title: 'Okamžitá rychlost změny', description: 'Přetáhni bod na křivce a urči sklon.' },
-      'D1-EX3': { title: 'Od rozdílového ke diferenciálnímu podílu', description: 'Derivuj f(x) = x² pomocí definice limity.' },
-      'D1-EX4': { title: 'Limita vizuálně', description: 'Sleduj animaci a urči sklon tečny.' },
-      'D2-EX1': { title: 'Mocninné pravidlo', description: 'Derivuj 5 funkcí pomocí mocninného pravidla.' },
-      'D2-EX2': { title: 'Pravidlo konstantního faktoru', description: 'Derivuj funkce s konstantními faktory.' },
-      'D2-EX3': { title: 'Součtové pravidlo', description: 'Derivuj f(x) = 3x² + 2x − 5 člen po členu.' },
-      'D2-EX4': { title: 'Smíšená cvičení', description: 'Identifikuj správné pravidlo a vypočítej.' },
-      'D3-EX1': { title: 'Součinové pravidlo', description: 'Derivuj f(x) = (2x+1)·x³.' },
-      'D3-EX2': { title: 'Podílové pravidlo', description: 'Derivuj f(x) = (x²+1)/(x−1).' },
-      'D3-EX3': { title: 'Řetězové pravidlo', description: 'Derivuj f(x) = (2x+3)⁴.' },
-      'D3-EX4': { title: 'Výběr pravidla', description: 'Které pravidlo se hodí? Zdůvodni a vypočítej.' },
-      'D4-EX1': { title: 'Hledání extrémů', description: 'Urči extrémy f(x) = x³ − 3x.' },
-      'D4-EX2': { title: 'Změna znaménka', description: 'Označ extrémní body na grafu.' },
-      'D4-EX3': { title: 'Intervaly monotonnosti', description: 'Na kterých intervalech funkce roste nebo klesá?' },
-      'D4-EX4': { title: 'Kompletní postup', description: 'Proveď kompletní analýzu extrémů.' },
+      'D1-EX1': { title: '∫nfinity' },
+      'D1-EX2': { title: '∫nfinity' },
+      'D1-EX3': { title: '∫nfinity' },
+      'D1-EX4': { title: '∫nfinity' },
+      'D2-EX1': { title: '∫nfinity' },
+      'D2-EX2': { title: '∫nfinity' },
+      'D2-EX3': { title: '∫nfinity' },
+      'D2-EX4': { title: '∫nfinity' },
+      'D3-EX1': { title: '∫nfinity' },
+      'D3-EX2': { title: '∫nfinity' },
+      'D3-EX3': { title: '∫nfinity' },
+      'D3-EX4': { title: '∫nfinity' },
+      'D4-EX1': { title: '∫nfinity' },
+      'D4-EX2': { title: '∫nfinity' },
+      'D4-EX3': { title: '∫nfinity' },
+      'D4-EX4': { title: '∫nfinity' },
     },
   },
+  // ── Lesson Layer Labels ──
+  lesson: {
+    objectives: 'Cile uceni',
+    objectivesSubtitle: '∫nfinity',
+    explanation: 'Vysvetleni',
+    concepts: 'Klicove pojmy',
+    examples: 'Vzorove priklady',
+    examplesSubtitle: '∫nfinity',
+    realWorld: 'Kde se s tim potkáte?',
+    mistakes: 'Typicke chyby',
+    mistakesSubtitle: '∫nfinity',
+    prerequisites: 'Predchozi znalosti',
+    prerequisitesSubtitle: '∫nfinity',
+    collapseLesson: 'Sbalit lekci',
+    expandLesson: 'Zobrazit lekci',
+    skipToExercises: 'Ted cvicit →',
+    storyOutro: 'Jak pokracuje pribeh?',
+  },
+
+  // ── Lesson Content per Topic ──
+  lessons: {
+    ...batch1,
+    ...batch2,
+    ...batch3,
+    ...batch11a,
+    ...batch11b,
+    ...batch12a,
+    ...batch12b,
+    '10-quad-funktionen': {
+      story: {
+        intro: 'Mia sedi ve sve male kancelari v hamburskem pristavu a zira na obrazovku. Lumi, jeji herni postava v "Hafenlichter", ma elegantne preskakovat bedny a kontejnery — ale krivka skoku vypada proste spatne. "Fyzika nesedi", mumlá. Aby naprogramovala realistickou trajektorii skoku, potrebuje Mia kvadraticke funkce.',
+        challenge: 'Lumi ma preskakovat bedny — ale krivka skoku vypada neprirozene.',
+        outro: 'S vrcholovym tvarem Mia naprogramovala perfektni krivku skoku! Lumi ted leti elegantnim obloukem pres hamburske kontejnery. "Konecne to vypada realisticky", rika Tim a dava ji packu.',
+      },
+      objectives: {
+        recognize: 'Rozpoznavat kvadraticke funkce a popisovat jejich vlastnosti',
+        vertex_form: 'Bezpecne prevadet mezi obecnym a vrcholovym tvarem',
+        pq_formula: 'Pocitat nulove body kvadratickym vzorcem',
+        graph_properties: 'Odecist z rovnice smer otevreni, vrchol a osu symetrie',
+      },
+      explanation: {
+        intro: 'Predstav si, ze hadzis basketbalovym micem. Mic leti obloukem nahoru, dosahne nejvyssiho bodu a pada. Tato draha ma zcela urcity tvar — parabolu. Matematicky ji popisujeme kvadratickou funkci:',
+        opening: 'Cislo $a$ urcuje, jestli je parabola otevrena nahoru ($a > 0$) nebo dolu ($a < 0$) — a jak "uzka" nebo "siroka" je. Cim vetsi $|a|$, tim uzsi parabola.',
+        mia_tip: 'V me hre je $a$ zaporne, protoze krivka skoku jde nahoru a pak zpet dolu — jako obracene U!',
+        vertex_form: 'Vrcholovy tvar ti primo prozradi nejvyssi (nebo nejnizsi) bod paraboly. Vrchol $S$ ma souradnice $(d \\mid e)$:',
+        conversion: 'K prevodu z obecneho tvaru na vrcholovy pouzivas doplneni na ctverec. Sikovne pridas a odectes cislo, aby vznikl uplny ctverec.',
+      },
+      concepts: {
+        normal_form: { title: '∫nfinity' },
+        vertex_form: { title: '∫nfinity' },
+        pq_formula: { title: '∫nfinity' },
+        discriminant: { title: '∫nfinity' },
+      },
+      examples: {
+        vertex: {
+          title: '∫nfinity',
+          step1: 'Dana funkce v obecnem tvaru:', step2: 'Doplneni na ctverec: Pridame $(\\frac{6}{2})^2 = 9$ a odecteme:', step3: 'Zjednodusime — vyraz v zavorce je uplny ctverec:', step4: 'Odecteme vrchol: $d = 3$, $e = -4$, tedy:',
+          mia_comment: 'Vrchol v $(3 \\mid -4)$ je nejnizsi bod, protoze $a = 1 > 0$. Pro krivku skoku potrebuji $a < 0$, pak to bude nejvyssi bod!',
+        },
+        pq: {
+          title: '∫nfinity',
+          step1: 'Dano: Rovnice uz ma spravny tvar ($x^2$-koeficient = 1):', step2: 'Odecteme hodnoty $p$ a $q$:', step3: 'Dosadime do kvadratickeho vzorce a vypocteme:', step4: 'Lumi pristane tedy pri $x = 2$ nebo $x = -4$:',
+          mia_comment: 'Dva nulove body — parabola protina osu x dvakrat. Ve hre to znamena: Lumi odstartuje pri $x = -4$ a pristane pri $x = 2$!',
+        },
+      },
+      realworld: {
+        basketball: { title: '∫nfinity' },
+        bridge: { title: '∫nfinity' },
+        pricing: { title: '∫nfinity' },
+      },
+      mistakes: {
+        sign_error: { wrong: 'Chyba znamenka', correct: 'Davej pozor na znamenka', why: 'V $f(x) = (x - d)^2 + e$ stoji minus pred $d$. To znamena: $f(x) = (x - 3)^2$ ma vrchol pri $d = +3$, ne pri $-3$!', mia_warning: 'Tahle chyba znamenka me stala 3 hodiny ladeni. Krivka skoku Lumiho byla posunuta doleva misto doprava!' },
+        pq_wrong: { wrong: 'Kvadraticky vzorec bez deleni', correct: 'Nejdriv vydel $a$', why: 'Kvadraticky vzorec funguje jen kdyz koeficient pred $x^2$ je 1. U $2x^2 + 4x - 6 = 0$ musis nejdriv delit 2: $x^2 + 2x - 3 = 0$.' },
+      },
+    },
+    '10-pythagoras': {
+      story: { intro: 'Mia ma problem s detekci kolizi: Kdy se Lumi dotkne prekazky? Tim navrhuje vypocitat vzdalenost mezi dvema body. "Na to potrebujes Pythagora", rika.', challenge: 'Detekce kolizi potrebuje vypocet vzdalenosti mezi objekty.', outro: 'Detekce kolizi Lumiho ted funguje s pixelovou presnosti! Mia pouzila Pythagorovu vetu k vypoctu vzdalenosti v realnem case.' },
+      objectives: { theorem: 'Bezpecne pouzivat Pythagorovu vetu', calculate_sides: 'Pocitat chybejici strany v pravouhlem trojuhelniku', recognize: 'Rozpoznat, kdy je dan pravouhy trojuhelnik', apply: 'Prenest vetu na kazdodenni problemy' },
+      explanation: { intro: 'V kazdem pravouhlem trojuhelniku plati jednoduche, ale mocne pravidlo: Soucet ctvercu odvesen se rovna ctverci prepony.', sides: '$c$ je vzdy nejdelsi strana — prepona. Lezi naproti pravemu uhlu. Dve kratsi strany $a$ a $b$ se nazyvaji odvesny.', mia_tip: 'Ve sve hre pocitam vzdalenost mezi Lumim a objektem jako preponu. Vodorovná vzdalenost je $a$, svisla $b$ — a $c$ je skutecna vzdalenost!', solving: 'Vzorec muzes prevest na kazdou stranu. Hledas-li preponu:' },
+      concepts: { theorem: { title: '∫nfinity' } },
+      examples: { screen: { title: '∫nfinity' } },
+      realworld: { screen: { title: '∫nfinity' } },
+      mistakes: { hypotenuse: { wrong: 'Prepona jako odvesna', correct: 'c je vzdy nejdelsi strana', why: 'Prepona $c$ lezi VZDY naproti pravemu uhlu. Je to nejdelsi strana.' }, root: { wrong: 'Odmocnina ze souctu', correct: 'Nejdriv secti, pak odmocni', why: '$\\sqrt{a^2 + b^2}$ NENI totez co $a + b$! Priklad: $\\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$, ale $3 + 4 = 7$.', mia_warning: 'Tuto chybu nasel Tim v mem kodu — detekce kolizi byla o 40% prilis nepresna!' } },
+    },
+    '10-wahrscheinlichkeit': {
+      story: { intro: 'Mia chce postavit loot system pro Hafenlichter. Hraci maji nachazet vzacne predmety — ale ne prilis casto, jinak to bude nudne, a ne prilis zridka, jinak to bude frustrujici.', challenge: 'System loot-dropu ma byt fer a napinavy.', outro: 'Miin loot system funguje! Vyvazila pravdepodobnosti dropu tak, ze hraci prumerne kazdy 20. truhlicí najdou Rare Item.' },
+      objectives: { basic: 'Udavat pravdepodobnosti jako zlomky, desetinna cisla a procenta', tree: 'Resit vicestupnove nahodne pokusy stromovymi diagramy', expected_value: 'Pocitat a interpretovat stredni hodnotu', complement: 'Pracovat s opacnou pravdepodobnosti ("alespon jednou...")' },
+      explanation: { intro: 'Jak pravdepodobne je hodit sestku? Jaka je sance na vzacny predmet ve hre? Pocet pravdepodobnosti dava odpovedi. Zakladni myslenka je jednoducha:', range: 'Pravdepodobnosti lezi vzdy mezi 0 (nemozne) a 1 (jiste). Muzes je zapsat jako zlomek ($\\frac{1}{6}$), desetinne cislo ($0{,}167$) nebo procenta ($16{,}7\\%$).', mia_tip: 'V Hafenlichter je $P(\\text{Rare Item}) = 0{,}05$. To znamena: Pri kazdem dropu ma hrac 5% sanci. Zni to malo — ale pres mnoho dropu se to scita!', tree: 'U vicestupnovych pokusu (napr. dvakrat hodit kostkou) pouzivas stromovy diagram. Podèl cesty nasobis pravdepodobnosti:', complement: 'Casto je jednodussi pocitat "opak". Pravdepodobnost, ze se neco NESTANE, je:' },
+      concepts: { laplace: { title: '∫nfinity' } },
+      examples: { dice: { title: '∫nfinity' } },
+      realworld: { lootbox: { title: '∫nfinity' } },
+      mistakes: { addition: { wrong: 'Scitani cest misto nasobeni', correct: 'Podèl cesty nasob', why: 'U stromoveho diagramu nasobis podèl cesty (konjunkce). Scitat smes jen pri spojovani ruznych cest (disjunkce).', mia_warning: 'Tuto chybu jsem mela u loot systemu. Drop rate byly prilis vysoke, protoze jsem scitala misto nasobeni — kazdy hrac mel okamzite vse!' }, percent: { wrong: 'Procenta nad 100%', correct: 'Maximum je 100%', why: 'Pravdepodobnost nemuze byt nikdy vetsi nez 1 (= 100%). Pokud tvuj vysledek $P > 1$, mas chybu ve vypoctu.' } },
+    },
+  },
+
   footer: {
     createdBy: 'Vytvořil Dirk Schulenburg',
     license: 'Licencováno pod CC BY-SA 4.0',

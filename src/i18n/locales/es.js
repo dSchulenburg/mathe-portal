@@ -1,19 +1,27 @@
+import { batch1 } from '../lessons-10-batch1-es';
+import { batch2 } from '../lessons-10-batch2-es';
+import { batch3 } from '../lessons-10-batch3-es';
+import { batch11a } from '../lessons-11-batch1-es';
+import { batch11b } from '../lessons-11-batch2-es';
+import { batch12a } from '../lessons-12-batch1-es';
+import { batch12b } from '../lessons-12-batch2-es';
+
 export default {
   portal: {
-    title: 'Portal de Matemáticas',
-    subtitle: 'Matemáticas — el lenguaje universal',
+    title: '∫nfinity',
+    subtitle: '∫nfinity',
     oerBadge: 'Recursos Educativos Abiertos',
     progress: 'Tu progreso',
     comingSoon: 'Próximamente',
   },
   modules: {
     'quad-funktionen': {
-      title: 'Funciones cuadráticas',
-      subtitle: '{levels} niveles · {exercises} ejercicios',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
     differentialrechnung: {
-      title: 'Cálculo diferencial',
-      subtitle: '{levels} niveles · {exercises} ejercicios',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
   },
   ui: {
@@ -45,18 +53,18 @@ export default {
   },
   levels: {
     'quad-funktionen': {
-      1: { title: 'Fundamentos', subtitle: 'Reconocer parábolas' },
-      2: { title: 'Conversión de formas', subtitle: 'General ↔ Vértice' },
-      3: { title: 'Fórmula cuadrática', subtitle: 'Encontrar ceros' },
-      4: { title: 'Factorización', subtitle: 'Fórmulas de Vieta' },
-      5: { title: 'Mix & Match', subtitle: 'Combinar métodos' },
-      6: { title: 'Problemas de texto', subtitle: 'Matemáticas en la vida' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
+      5: { title: '∫nfinity' },
+      6: { title: '∫nfinity' },
     },
     differentialrechnung: {
-      1: { title: 'Tasas de cambio y límites', subtitle: '¿Qué es una derivada?' },
-      2: { title: 'Reglas básicas', subtitle: 'Potencia, Factor, Suma' },
-      3: { title: 'Reglas avanzadas', subtitle: 'Producto, Cociente, Cadena' },
-      4: { title: 'Monotonía y extremos', subtitle: 'Análisis de curvas I' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
     },
   },
   stories: {
@@ -92,24 +100,109 @@ export default {
   },
   exercises: {
     differentialrechnung: {
-      'D1-EX1': { title: 'Tasa de cambio media', description: 'Calcula la pendiente de la secante de f(x) = x² entre x=1 y x=3.' },
-      'D1-EX2': { title: 'Tasa de cambio instantánea', description: 'Arrastra el punto en la curva y determina la pendiente.' },
-      'D1-EX3': { title: 'Del cociente de diferencias al diferencial', description: 'Deriva f(x) = x² usando la definición de límite.' },
-      'D1-EX4': { title: 'Límite visualmente', description: 'Observa la animación y determina la pendiente de la tangente.' },
-      'D2-EX1': { title: 'Regla de la potencia', description: 'Deriva 5 funciones usando la regla de la potencia.' },
-      'D2-EX2': { title: 'Regla del factor constante', description: 'Deriva funciones con factores constantes.' },
-      'D2-EX3': { title: 'Regla de la suma', description: 'Deriva f(x) = 3x² + 2x − 5 término a término.' },
-      'D2-EX4': { title: 'Ejercicios mixtos', description: 'Identifica la regla correcta y calcula.' },
-      'D3-EX1': { title: 'Regla del producto', description: 'Deriva f(x) = (2x+1)·x³.' },
-      'D3-EX2': { title: 'Regla del cociente', description: 'Deriva f(x) = (x²+1)/(x−1).' },
-      'D3-EX3': { title: 'Regla de la cadena', description: 'Deriva f(x) = (2x+3)⁴.' },
-      'D3-EX4': { title: 'Selección de regla', description: '¿Qué regla encaja? Explica y calcula.' },
-      'D4-EX1': { title: 'Encontrar extremos', description: 'Determina los extremos de f(x) = x³ − 3x.' },
-      'D4-EX2': { title: 'Cambio de signo', description: 'Marca los puntos extremos en el gráfico.' },
-      'D4-EX3': { title: 'Intervalos de monotonía', description: '¿En qué intervalos crece o decrece la función?' },
-      'D4-EX4': { title: 'Flujo de trabajo completo', description: 'Realiza un análisis completo de extremos.' },
+      'D1-EX1': { title: '∫nfinity' },
+      'D1-EX2': { title: '∫nfinity' },
+      'D1-EX3': { title: '∫nfinity' },
+      'D1-EX4': { title: '∫nfinity' },
+      'D2-EX1': { title: '∫nfinity' },
+      'D2-EX2': { title: '∫nfinity' },
+      'D2-EX3': { title: '∫nfinity' },
+      'D2-EX4': { title: '∫nfinity' },
+      'D3-EX1': { title: '∫nfinity' },
+      'D3-EX2': { title: '∫nfinity' },
+      'D3-EX3': { title: '∫nfinity' },
+      'D3-EX4': { title: '∫nfinity' },
+      'D4-EX1': { title: '∫nfinity' },
+      'D4-EX2': { title: '∫nfinity' },
+      'D4-EX3': { title: '∫nfinity' },
+      'D4-EX4': { title: '∫nfinity' },
     },
   },
+  // ── Lesson Layer Labels ──
+  lesson: {
+    objectives: 'Objetivos de aprendizaje',
+    objectivesSubtitle: '∫nfinity',
+    explanation: 'Explicación',
+    concepts: 'Conceptos clave',
+    examples: 'Ejemplos modelo',
+    examplesSubtitle: '∫nfinity',
+    realWorld: '¿Dónde encuentras esto?',
+    mistakes: 'Errores típicos',
+    mistakesSubtitle: '∫nfinity',
+    prerequisites: 'Conocimientos previos',
+    prerequisitesSubtitle: '∫nfinity',
+    collapseLesson: 'Contraer lección',
+    expandLesson: 'Mostrar lección',
+    skipToExercises: 'Practicar ahora →',
+    storyOutro: '¿Cómo continúa la historia?',
+  },
+
+  // ── Lesson Content per Topic ──
+  lessons: {
+    ...batch1,
+    ...batch2,
+    ...batch3,
+    ...batch11a,
+    ...batch11b,
+    ...batch12a,
+    ...batch12b,
+    '10-quad-funktionen': {
+      story: {
+        intro: 'Mia está sentada en su pequeña oficina en el puerto de Hamburgo mirando la pantalla. Lumi, su personaje del juego "Hafenlichter", debe saltar elegantemente sobre cajas y contenedores — pero la curva de salto se ve simplemente mal. "La física no está bien", murmura. Para programar una trayectoria de salto realista, Mia necesita funciones cuadráticas.',
+        challenge: 'Lumi debe saltar sobre cajas — pero la curva de salto se ve antinatural.',
+        outro: 'Con la forma de vértice, Mia ha programado la curva de salto perfecta! Lumi ahora vuela en un elegante arco sobre los contenedores de Hamburgo. "Por fin se ve realista", dice Tim y le choca los cinco.',
+      },
+      objectives: {
+        recognize: 'Reconocer funciones cuadráticas y describir sus propiedades',
+        vertex_form: 'Convertir con seguridad entre forma general y forma de vértice',
+        pq_formula: 'Calcular ceros con la fórmula cuadrática',
+        graph_properties: 'Leer dirección de apertura, vértice y eje de simetría de la ecuación',
+      },
+      explanation: {
+        intro: 'Imagina que lanzas un balón de baloncesto. La pelota vuela en arco hacia arriba, alcanza el punto más alto y vuelve a caer. Esta trayectoria tiene una forma muy específica — una parábola. Matemáticamente la describimos con una función cuadrática:',
+        opening: 'El número $a$ determina si la parábola se abre hacia arriba ($a > 0$) o hacia abajo ($a < 0$) — y lo "estrecha" o "ancha" que es. Cuanto mayor es $|a|$, más estrecha la parábola.',
+        mia_tip: 'En mi juego $a$ es negativo, porque la curva de salto va hacia arriba y luego vuelve a bajar — como una U invertida!',
+        vertex_form: 'La forma de vértice te revela directamente el punto más alto (o más bajo) de la parábola. El vértice $S$ tiene las coordenadas $(d \\mid e)$:',
+        conversion: 'Para pasar de la forma general a la forma de vértice, usas completar el cuadrado. Añades hábilmente un número y lo vuelves a restar, de modo que surge un cuadrado perfecto.',
+      },
+      concepts: {
+        normal_form: { title: '∫nfinity' },
+        vertex_form: { title: '∫nfinity' },
+        pq_formula: { title: '∫nfinity' },
+        discriminant: { title: '∫nfinity' },
+      },
+      examples: {
+        vertex: {
+          title: '∫nfinity',
+          context: 'Mia quiere calcular el punto más alto del salto de Lumi.',
+          step1: 'Dada la función en forma general:',
+          step2: 'Completar el cuadrado: añadimos $(\\frac{6}{2})^2 = 9$ y lo restamos de nuevo:',
+          step3: 'Simplificar — la expresión en el paréntesis es un cuadrado perfecto:',
+          step4: 'Leer el vértice: $d = 3$, $e = -4$, entonces:',
+          mia_comment: 'El vértice en $(3 \\mid -4)$ es el punto más bajo, porque $a = 1 > 0$. Para una curva de salto necesito $a < 0$, entonces será el punto más alto!',
+        },
+        pq: {
+          title: '∫nfinity',
+          context: '¿Dónde aterriza Lumi de nuevo en el suelo?',
+          step1: 'Dado: la ecuación ya está en la forma correcta (coeficiente de $x^2$ = 1):',
+          step2: 'Leer los valores de $p$ y $q$:',
+          step3: 'Sustituir en la fórmula cuadrática y calcular:',
+          step4: 'Lumi aterriza en $x = 2$ o $x = -4$:',
+          mia_comment: 'Dos ceros — la parábola corta el eje x dos veces. En el juego eso significa: Lumi despega en $x = -4$ y aterriza en $x = 2$!',
+        },
+      },
+      realworld: {
+        basketball: { title: '∫nfinity' },
+        bridge: { title: '∫nfinity' },
+        pricing: { title: '∫nfinity' },
+      },
+      mistakes: {
+        sign_error: { wrong: 'Error de signo', correct: 'Prestar atención a los signos', why: 'En $f(x) = (x - d)^2 + e$ hay un signo negativo delante de $d$. Eso significa: $f(x) = (x - 3)^2$ tiene el vértice en $d = +3$, no en $-3$!', mia_warning: 'Este error de signo me costó 3 horas de depuración. La curva de salto de Lumi estaba desplazada a la izquierda en lugar de a la derecha!' },
+        pq_wrong: { wrong: 'Fórmula cuadrática sin dividir', correct: 'Primero dividir entre $a$', why: 'La fórmula cuadrática solo funciona cuando el coeficiente ante $x^2$ es 1. En $2x^2 + 4x - 6 = 0$ primero debes dividir entre 2: $x^2 + 2x - 3 = 0$.' },
+      },
+    },
+  },
+
   footer: {
     createdBy: 'Creado por Dirk Schulenburg',
     license: 'Licenciado bajo CC BY-SA 4.0',

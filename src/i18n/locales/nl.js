@@ -1,19 +1,27 @@
+import { batch1 } from '../lessons-10-batch1-nl';
+import { batch2 } from '../lessons-10-batch2-nl';
+import { batch3 } from '../lessons-10-batch3-nl';
+import { batch11a } from '../lessons-11-batch1-nl';
+import { batch11b } from '../lessons-11-batch2-nl';
+import { batch12a } from '../lessons-12-batch1-nl';
+import { batch12b } from '../lessons-12-batch2-nl';
+
 export default {
   portal: {
-    title: 'Wiskunde Portaal',
-    subtitle: 'Wiskunde — de universele taal',
+    title: '∫nfinity',
+    subtitle: '∫nfinity',
     oerBadge: 'Open Educatieve Bronnen',
     progress: 'Jouw voortgang',
     comingSoon: 'Binnenkort',
   },
   modules: {
     'quad-funktionen': {
-      title: 'Kwadratische functies',
-      subtitle: '{levels} niveaus · {exercises} oefeningen',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
     differentialrechnung: {
-      title: 'Differentiaalrekening',
-      subtitle: '{levels} niveaus · {exercises} oefeningen',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
   },
   ui: {
@@ -45,18 +53,18 @@ export default {
   },
   levels: {
     'quad-funktionen': {
-      1: { title: 'Basiskennis', subtitle: 'Paraboots herkennen' },
-      2: { title: 'Vormen omzetten', subtitle: 'Standaard ↔ Toppuntvorm' },
-      3: { title: 'Kwadratische formule', subtitle: 'Nulpunten vinden' },
-      4: { title: 'Factoriseren', subtitle: 'Formules van Vieta' },
-      5: { title: 'Mix & Match', subtitle: 'Methoden combineren' },
-      6: { title: 'Tekstopgaven', subtitle: 'Wiskunde in het leven' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
+      5: { title: '∫nfinity' },
+      6: { title: '∫nfinity' },
     },
     differentialrechnung: {
-      1: { title: 'Veranderingssnelheden en limieten', subtitle: 'Wat is een afgeleide?' },
-      2: { title: 'Basisregels', subtitle: 'Machts-, Factor-, Somregel' },
-      3: { title: 'Geavanceerde regels', subtitle: 'Product-, Quotiënt-, Kettingregel' },
-      4: { title: 'Monotoniciteit en extremen', subtitle: 'Curveanalyse I' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
     },
   },
   stories: {
@@ -92,22 +100,90 @@ export default {
   },
   exercises: {
     differentialrechnung: {
-      'D1-EX1': { title: 'Gemiddelde veranderingssnelheid', description: 'Bereken de secantenhelling van f(x) = x² tussen x=1 en x=3.' },
-      'D1-EX2': { title: 'Momentane veranderingssnelheid', description: 'Sleep het punt op de curve en bepaal de helling.' },
-      'D1-EX3': { title: 'Van differentiekwotiënt naar differentiaalquotiënt', description: 'Differentieer f(x) = x² met behulp van de limiet.' },
-      'D1-EX4': { title: 'Limiet visueel', description: 'Bekijk de animatie en bepaal de raaklijntanning.' },
-      'D2-EX1': { title: 'Machtsregel', description: 'Differentieer 5 functies met de machtsregel.' },
-      'D2-EX2': { title: 'Factorregel', description: 'Differentieer functies met constante factoren.' },
-      'D2-EX3': { title: 'Somregel', description: 'Differentieer f(x) = 3x² + 2x − 5 term voor term.' },
-      'D2-EX4': { title: 'Gemengde oefeningen', description: 'Identificeer de juiste regel en bereken.' },
-      'D3-EX1': { title: 'Productregel', description: 'Differentieer f(x) = (2x+1)·x³.' },
-      'D3-EX2': { title: 'Quotiëntregel', description: 'Differentieer f(x) = (x²+1)/(x−1).' },
-      'D3-EX3': { title: 'Kettingregel', description: 'Differentieer f(x) = (2x+3)⁴.' },
-      'D3-EX4': { title: 'Regelkeuze', description: 'Welke regel past? Leg uit en bereken.' },
-      'D4-EX1': { title: 'Extremen vinden', description: 'Bepaal de extremen van f(x) = x³ − 3x.' },
-      'D4-EX2': { title: 'Tekenverandering', description: 'Markeer de extremale punten op de grafiek.' },
-      'D4-EX3': { title: 'Monotoniciteitsintervallen', description: 'Op welke intervallen stijgt of daalt de functie?' },
-      'D4-EX4': { title: 'Volledig werkproces', description: 'Voer een volledige extremumanalyse uit.' },
+      'D1-EX1': { title: '∫nfinity' },
+      'D1-EX2': { title: '∫nfinity' },
+      'D1-EX3': { title: '∫nfinity' },
+      'D1-EX4': { title: '∫nfinity' },
+      'D2-EX1': { title: '∫nfinity' },
+      'D2-EX2': { title: '∫nfinity' },
+      'D2-EX3': { title: '∫nfinity' },
+      'D2-EX4': { title: '∫nfinity' },
+      'D3-EX1': { title: '∫nfinity' },
+      'D3-EX2': { title: '∫nfinity' },
+      'D3-EX3': { title: '∫nfinity' },
+      'D3-EX4': { title: '∫nfinity' },
+      'D4-EX1': { title: '∫nfinity' },
+      'D4-EX2': { title: '∫nfinity' },
+      'D4-EX3': { title: '∫nfinity' },
+      'D4-EX4': { title: '∫nfinity' },
+    },
+  },
+  // ── Lesson Layer Labels ──
+  lesson: {
+    objectives: 'Leerdoelen',
+    objectivesSubtitle: '∫nfinity',
+    explanation: 'Uitleg',
+    concepts: 'Sleutelconcepten',
+    examples: 'Voorbeeldopgaven',
+    examplesSubtitle: '∫nfinity',
+    realWorld: 'Waar kom je dit tegen?',
+    mistakes: 'Typische fouten',
+    mistakesSubtitle: '∫nfinity',
+    prerequisites: 'Voorkennis',
+    prerequisitesSubtitle: '∫nfinity',
+    collapseLesson: 'Les inklappen',
+    expandLesson: 'Les tonen',
+    skipToExercises: 'Nu oefenen →',
+    storyOutro: 'Hoe gaat het verhaal verder?',
+  },
+
+  // ── Lesson Content per Topic ──
+  lessons: {
+    ...batch1,
+    ...batch2,
+    ...batch3,
+    ...batch11a,
+    ...batch11b,
+    ...batch12a,
+    ...batch12b,
+    '10-quad-funktionen': {
+      story: {
+        intro: 'Mia zit in haar kleine kantoor aan de Hamburger haven en staart naar het scherm. Lumi, haar spelkarakter in "Hafenlichter", moet elegant over kisten en containers springen — maar de springcurve ziet er gewoon verkeerd uit. "De fysica klopt niet", mompelt ze. Om een realistische springbaan te programmeren heeft Mia kwadratische functies nodig.',
+        challenge: 'Lumi moet over kisten springen — maar de springcurve ziet er onnatuurlijk uit.',
+        outro: 'Met de toppuntvorm heeft Mia de perfecte springcurve geprogrammeerd! Lumi vliegt nu in een elegante boog over de Hamburger containers. "Eindelijk ziet het er realistisch uit", zegt Tim en geeft haar een high-five.',
+      },
+      objectives: {
+        recognize: 'Kwadratische functies herkennen en hun eigenschappen beschrijven',
+        vertex_form: 'Veilig omrekenen tussen standaardvorm en toppuntvorm',
+        pq_formula: 'Nulpunten berekenen met de abc-formule',
+        graph_properties: 'Uit de vergelijking de openingsrichting, het toppunt en de symmetrieas aflezen',
+      },
+      explanation: {
+        intro: 'Stel je voor dat je een basketbal gooit. De bal vliegt in een boog omhoog, bereikt het hoogste punt en valt weer. Deze vliegbaan heeft een heel bepaalde vorm — een parabool. Wiskundig beschrijven we die met een kwadratische functie:',
+        opening: 'Het getal $a$ bepaalt of de parabool naar boven ($a > 0$) of naar beneden ($a < 0$) open is — en hoe "smal" of "breed" ze is. Hoe groter $|a|$, hoe smaller de parabool.',
+        mia_tip: 'In mijn spel is $a$ negatief, want de springcurve gaat eerst omhoog en dan weer omlaag — als een omgekeerde U!',
+        vertex_form: 'De toppuntvorm onthult direct het hoogste (of laagste) punt van de parabool. Het toppunt $S$ heeft de coordinaten $(d \\mid e)$:',
+        conversion: 'Om van de standaardvorm naar de toppuntvorm te gaan, gebruik je het kwadraatafsplitsen. Je voegt slim een getal toe en trekt het weer af, zodat er een perfect kwadraat ontstaat.',
+      },
+      concepts: {
+        normal_form: { title: '∫nfinity' },
+        vertex_form: { title: '∫nfinity' },
+        pq_formula: { title: '∫nfinity' },
+        discriminant: { title: '∫nfinity' },
+      },
+      examples: {
+        vertex: { title: '∫nfinity' },
+        pq: { title: '∫nfinity' },
+      },
+      realworld: {
+        basketball: { title: '∫nfinity' },
+        bridge: { title: '∫nfinity' },
+        pricing: { title: '∫nfinity' },
+      },
+      mistakes: {
+        sign_error: { wrong: 'Tekenfout', correct: 'Op tekens letten', why: 'In $f(x) = (x - d)^2 + e$ staat een min voor $d$. Dat betekent: $f(x) = (x - 3)^2$ heeft het toppunt bij $d = +3$, niet bij $-3$!', mia_warning: 'Deze tekenfout heeft me 3 uur debugging gekost. Lumis springcurve was naar links verschoven in plaats van naar rechts!' },
+        pq_wrong: { wrong: 'abc-formule zonder deling', correct: 'Eerst door $a$ delen', why: 'De abc-formule werkt alleen als de coefficient voor $x^2$ gelijk is aan 1. Bij $2x^2 + 4x - 6 = 0$ moet je eerst door 2 delen: $x^2 + 2x - 3 = 0$.' },
+      },
     },
   },
   footer: {

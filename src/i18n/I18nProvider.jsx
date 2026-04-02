@@ -1,4 +1,4 @@
-import { createContext, useCallback, useMemo } from 'react';
+import { createContext, useCallback, useMemo, useState } from 'react';
 import de from './locales/de';
 import en from './locales/en';
 import uk from './locales/uk';
@@ -14,6 +14,14 @@ import no from './locales/no';
 import da from './locales/da';
 
 const locales = { de, en, uk, ru, pl, fr, es, pt, nl, it, cs, no, da };
+
+function getInitialLanguage() {
+  try {
+    const stored = localStorage.getItem('mathe-portal-language');
+    if (stored && locales[stored]) return stored;
+  } catch {}
+  return 'de';
+}
 
 export const LANGUAGES = [
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
@@ -33,8 +41,16 @@ export const LANGUAGES = [
 
 export const I18nContext = createContext();
 
-export function I18nProvider({ language, children }) {
+export function I18nProvider({ children }) {
+  const [language, setLanguageState] = useState(getInitialLanguage);
   const locale = locales[language] || locales.de;
+
+  const setLanguage = useCallback((code) => {
+    if (locales[code]) {
+      setLanguageState(code);
+      try { localStorage.setItem('mathe-portal-language', code); } catch {}
+    }
+  }, []);
 
   const t = useCallback((key, params) => {
     let str = key.split('.').reduce((obj, k) => obj?.[k], locale);
@@ -49,7 +65,7 @@ export function I18nProvider({ language, children }) {
     return str;
   }, [locale]);
 
-  const value = useMemo(() => ({ t, language }), [t, language]);
+  const value = useMemo(() => ({ t, language, setLanguage }), [t, language, setLanguage]);
 
   return (
     <I18nContext.Provider value={value}>

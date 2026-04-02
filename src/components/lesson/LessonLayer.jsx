@@ -20,7 +20,8 @@ import LessonPrerequisites from './LessonPrerequisites';
 export default function LessonLayer({ lesson, topicId, topicColor, completionPct, onNavigateTopic }) {
   const { t } = useTranslation();
   const markSectionRead = useMathStore(s => s.markSectionRead);
-  const lessonProgress = useMathStore(s => s.getLessonProgress(topicId));
+  const getLessonProgress = useMathStore(s => s.getLessonProgress);
+  const lessonProgress = getLessonProgress(topicId);
   const [expanded, setExpanded] = useState(!lessonProgress.complete && completionPct < 50);
 
   const onSectionRead = (sectionKey) => markSectionRead(topicId, sectionKey);

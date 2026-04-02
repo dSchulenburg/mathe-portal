@@ -8,7 +8,7 @@ import { batch12b } from '../lessons-12-batch2';
 
 export default {
   portal: {
-    title: 'Mathe-Portal',
+    title: '∫nfinity',
     subtitle: 'Mathematik — die universelle Sprache',
     oerBadge: 'Open Educational Resources',
     progress: 'Dein Fortschritt',

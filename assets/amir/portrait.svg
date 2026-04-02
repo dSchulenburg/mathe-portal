@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#67e8f9;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1"/>
+    </radialGradient>
+    <clipPath id="circleClip">
+      <circle cx="100" cy="100" r="96"/>
+    </clipPath>
+    <radialGradient id="skinGrad" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" style="stop-color:#e8c99a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#d4a974;stop-opacity:1"/>
+    </radialGradient>
+    <radialGradient id="hoodieShadow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="96" fill="url(#bgGrad)"/>
+
+  <!-- Subtle ring border -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.35"/>
+
+  <g clip-path="url(#circleClip)">
+
+    <!-- Hoodie / shoulders — dark slate -->
+    <path d="M 20 200 L 20 155 Q 45 135 70 128 L 80 122 L 120 122 L 130 128 Q 155 135 180 155 L 180 200 Z"
+          fill="url(#hoodieShadow)"/>
+
+    <!-- Hoodie highlight on left shoulder -->
+    <path d="M 20 200 L 20 162 Q 42 143 65 133 L 75 127 L 78 129 Q 55 140 35 162 L 35 200 Z"
+          fill="#1e293b" fill-opacity="0.5"/>
+
+    <!-- T-shirt collar visible -->
+    <path d="M 85 128 Q 90 138 100 140 Q 110 138 115 128 L 120 122 L 80 122 Z"
+          fill="#0f172a"/>
+    <!-- T-shirt line -->
+    <path d="M 88 125 Q 94 132 100 133 Q 106 132 112 125"
+          stroke="#06b6d4" stroke-width="1.5" fill="none"/>
+
+    <!-- Neck -->
+    <rect x="89" y="108" width="22" height="22" rx="6" fill="url(#skinGrad)"/>
+
+    <!-- Head -->
+    <ellipse cx="100" cy="90" rx="34" ry="37" fill="url(#skinGrad)"/>
+
+    <!-- Ear left -->
+    <ellipse cx="66" cy="91" rx="5.5" ry="7" fill="#d4a974"/>
+    <ellipse cx="66" cy="91" rx="3" ry="4.5" fill="#c49a68"/>
+
+    <!-- Ear right -->
+    <ellipse cx="134" cy="91" rx="5.5" ry="7" fill="#d4a974"/>
+    <ellipse cx="134" cy="91" rx="3" ry="4.5" fill="#c49a68"/>
+
+    <!-- Hair — dark brown, short textured -->
+    <ellipse cx="100" cy="66" rx="35" ry="28" fill="#1a120a"/>
+
+    <!-- Hair — top volume, slightly wavy -->
+    <path d="M 66 78 Q 65 55 75 48 Q 85 42 100 40 Q 115 42 125 48 Q 135 55 134 78"
+          fill="#1a120a"/>
+
+    <!-- Hair texture lines -->
+    <path d="M 78 50 Q 82 46 88 45" stroke="#2a1e12" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M 112 45 Q 118 46 122 50" stroke="#2a1e12" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Hair sides — short fade -->
+    <path d="M 66 78 Q 63 82 65 90 Q 66 93 68 93" fill="#1a120a"/>
+    <path d="M 134 78 Q 137 82 135 90 Q 134 93 132 93" fill="#1a120a"/>
+
+    <!-- Short beard stubble -->
+    <ellipse cx="100" cy="115" rx="16" ry="8" fill="#1a120a" fill-opacity="0.15"/>
+    <path d="M 85 110 Q 88 108 92 110" stroke="#1a120a" stroke-width="0.5" fill="none" stroke-opacity="0.2"/>
+    <path d="M 108 110 Q 112 108 115 110" stroke="#1a120a" stroke-width="0.5" fill="none" stroke-opacity="0.2"/>
+
+    <!-- Eyebrows — thicker, expressive -->
+    <path d="M 81 79 Q 88 74 95 77" stroke="#1a120a" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+    <path d="M 105 77 Q 112 74 119 79" stroke="#1a120a" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+
+    <!-- Eyes — warm brown -->
+    <!-- Left eye -->
+    <ellipse cx="88" cy="89.5" rx="5" ry="4" fill="#1a1a2e"/>
+    <ellipse cx="88" cy="89.5" rx="2.8" ry="2.8" fill="#4a2c12"/>
+    <circle cx="88" cy="89.5" r="1.8" fill="#1a1010"/>
+    <circle cx="89.5" cy="88.2" r="1" fill="white" fill-opacity="0.85"/>
+
+    <!-- Right eye -->
+    <ellipse cx="112" cy="89.5" rx="5" ry="4" fill="#1a1a2e"/>
+    <ellipse cx="112" cy="89.5" rx="2.8" ry="2.8" fill="#4a2c12"/>
+    <circle cx="112" cy="89.5" r="1.8" fill="#1a1010"/>
+    <circle cx="113.5" cy="88.2" r="1" fill="white" fill-opacity="0.85"/>
+
+    <!-- Nose — slightly broader -->
+    <path d="M 97 95 Q 95 102 98 105 Q 100 106 102 105 Q 105 102 103 95"
+          stroke="#b8904a" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+
+    <!-- Smile — confident, friendly -->
+    <path d="M 90 110 Q 96 116 100 116 Q 104 116 110 110"
+          stroke="#a07055" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Teeth hint -->
+    <path d="M 92 111 Q 96 115 100 115 Q 104 115 108 111"
+          fill="white" fill-opacity="0.5"/>
+
+    <!-- Cheek blush subtle -->
+    <ellipse cx="79" cy="103" rx="7" ry="4" fill="#d4956a" fill-opacity="0.18"/>
+    <ellipse cx="121" cy="103" rx="7" ry="4" fill="#d4956a" fill-opacity="0.18"/>
+
+    <!-- Headphones band over head -->
+    <path d="M 60 88 Q 60 46 100 40 Q 140 46 140 88"
+          stroke="#334155" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Left ear cup -->
+    <rect x="55" y="82" width="14" height="18" rx="5" fill="#334155"/>
+    <rect x="57" y="84" width="10" height="14" rx="4" fill="#1e293b"/>
+    <circle cx="62" cy="91" r="3" fill="#06b6d4" fill-opacity="0.4"/>
+    <!-- Right ear cup -->
+    <rect x="131" y="82" width="14" height="18" rx="5" fill="#334155"/>
+    <rect x="133" y="84" width="10" height="14" rx="4" fill="#1e293b"/>
+    <circle cx="138" cy="91" r="3" fill="#06b6d4" fill-opacity="0.4"/>
+
+    <!-- Data/code icon on hoodie -->
+    <g transform="translate(85, 150)">
+      <!-- Terminal window -->
+      <rect x="0" y="0" width="30" height="20" rx="3" fill="#0f172a" stroke="#06b6d4" stroke-width="1"/>
+      <!-- Title bar dots -->
+      <circle cx="5" cy="4" r="1.2" fill="#ef4444"/>
+      <circle cx="9" cy="4" r="1.2" fill="#fbbf24"/>
+      <circle cx="13" cy="4" r="1.2" fill="#34d399"/>
+      <!-- Code lines -->
+      <line x1="4" y1="9" x2="14" y2="9" stroke="#06b6d4" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="4" y1="12.5" x2="20" y2="12.5" stroke="#67e8f9" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="4" y1="16" x2="11" y2="16" stroke="#06b6d4" stroke-width="1.2" stroke-linecap="round"/>
+      <!-- Cursor blink -->
+      <rect x="13" y="15" width="1.5" height="3" fill="#fbbf24"/>
+    </g>
+
+  </g>
+</svg>

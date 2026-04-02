@@ -1,19 +1,27 @@
+import { batch1 } from '../lessons-10-batch1-da';
+import { batch2 } from '../lessons-10-batch2-da';
+import { batch3 } from '../lessons-10-batch3-da';
+import { batch11a } from '../lessons-11-batch1-da';
+import { batch11b } from '../lessons-11-batch2-da';
+import { batch12a } from '../lessons-12-batch1-da';
+import { batch12b } from '../lessons-12-batch2-da';
+
 export default {
   portal: {
-    title: 'Matematikportalen',
-    subtitle: 'Matematik — det universelle sprog',
+    title: '∫nfinity',
+    subtitle: '∫nfinity',
     oerBadge: 'Åbne læringsressourcer',
     progress: 'Din fremgang',
     comingSoon: 'Kommer snart',
   },
   modules: {
     'quad-funktionen': {
-      title: 'Kvadratiske funktioner',
-      subtitle: '{levels} niveauer · {exercises} øvelser',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
     differentialrechnung: {
-      title: 'Differentialregning',
-      subtitle: '{levels} niveauer · {exercises} øvelser',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
   },
   ui: {
@@ -45,18 +53,18 @@ export default {
   },
   levels: {
     'quad-funktionen': {
-      1: { title: 'Grundlæggende', subtitle: 'Genkende parabler' },
-      2: { title: 'Konvertere former', subtitle: 'Standard ↔ Toppunktsform' },
-      3: { title: 'Andengradsformlen', subtitle: 'Finde nulpunkter' },
-      4: { title: 'Faktorisering', subtitle: 'Vietas formler' },
-      5: { title: 'Mix & Match', subtitle: 'Kombinere metoder' },
-      6: { title: 'Tekstopgaver', subtitle: 'Matematik i hverdagen' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
+      5: { title: '∫nfinity' },
+      6: { title: '∫nfinity' },
     },
     differentialrechnung: {
-      1: { title: 'Ændringsrater og grænser', subtitle: 'Hvad er en afledt?' },
-      2: { title: 'Grundregler', subtitle: 'Potens-, Faktor-, Sumregel' },
-      3: { title: 'Avancerede regler', subtitle: 'Produkt-, Kvotient-, Kæderegel' },
-      4: { title: 'Monotonicitet og ekstrema', subtitle: 'Kurveanalyse I' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
     },
   },
   stories: {
@@ -92,27 +100,121 @@ export default {
   },
   exercises: {
     differentialrechnung: {
-      'D1-EX1': { title: 'Gennemsnitlig ændringsrate', description: 'Beregn sekanthældningen for f(x) = x² mellem x=1 og x=3.' },
-      'D1-EX2': { title: 'Momentan ændringsrate', description: 'Træk punktet på kurven og bestem hældningen.' },
-      'D1-EX3': { title: 'Fra differenskvotient til differentialkvotient', description: 'Differentier f(x) = x² ved hjælp af grænseværdidefinitionen.' },
-      'D1-EX4': { title: 'Grænse visuelt', description: 'Observer animationen og bestem tangentens hældning.' },
-      'D2-EX1': { title: 'Potensreglen', description: 'Differentier 5 funktioner med potensreglen.' },
-      'D2-EX2': { title: 'Faktorregl', description: 'Differentier funktioner med konstante faktorer.' },
-      'D2-EX3': { title: 'Sumreglen', description: 'Differentier f(x) = 3x² + 2x − 5 led for led.' },
-      'D2-EX4': { title: 'Blandede øvelser', description: 'Identificer den rigtige regel og beregn.' },
-      'D3-EX1': { title: 'Produktreglen', description: 'Differentier f(x) = (2x+1)·x³.' },
-      'D3-EX2': { title: 'Kvotientreglen', description: 'Differentier f(x) = (x²+1)/(x−1).' },
-      'D3-EX3': { title: 'Kædereglen', description: 'Differentier f(x) = (2x+3)⁴.' },
-      'D3-EX4': { title: 'Regelvalg', description: 'Hvilken regel passer? Forklar og beregn.' },
-      'D4-EX1': { title: 'Finde ekstrema', description: 'Bestem ekstremerne for f(x) = x³ − 3x.' },
-      'D4-EX2': { title: 'Fortegnskifte', description: 'Markér ekstremalpunkterne på grafen.' },
-      'D4-EX3': { title: 'Monotonicitedsintervaller', description: 'I hvilke intervaller er funktionen stigende eller aftagende?' },
-      'D4-EX4': { title: 'Komplet arbejdsgang', description: 'Udfør en komplet ekstremaanalyse.' },
+      'D1-EX1': { title: '∫nfinity' },
+      'D1-EX2': { title: '∫nfinity' },
+      'D1-EX3': { title: '∫nfinity' },
+      'D1-EX4': { title: '∫nfinity' },
+      'D2-EX1': { title: '∫nfinity' },
+      'D2-EX2': { title: '∫nfinity' },
+      'D2-EX3': { title: '∫nfinity' },
+      'D2-EX4': { title: '∫nfinity' },
+      'D3-EX1': { title: '∫nfinity' },
+      'D3-EX2': { title: '∫nfinity' },
+      'D3-EX3': { title: '∫nfinity' },
+      'D3-EX4': { title: '∫nfinity' },
+      'D4-EX1': { title: '∫nfinity' },
+      'D4-EX2': { title: '∫nfinity' },
+      'D4-EX3': { title: '∫nfinity' },
+      'D4-EX4': { title: '∫nfinity' },
     },
   },
+  // ── Lesson Layer Labels ──
+  lesson: {
+    objectives: 'Laeringsmaal',
+    objectivesSubtitle: '∫nfinity',
+    explanation: 'Forklaring',
+    concepts: 'Noeglekoncepter',
+    examples: 'Moenstereksempler',
+    examplesSubtitle: '∫nfinity',
+    realWorld: 'Hvor moeder du det?',
+    mistakes: 'Typiske fejl',
+    mistakesSubtitle: '∫nfinity',
+    prerequisites: 'Forkundskaber',
+    prerequisitesSubtitle: '∫nfinity',
+    collapseLesson: 'Skjul lektion',
+    expandLesson: 'Vis lektion',
+    skipToExercises: 'OEv nu →',
+    storyOutro: 'Hvordan fortsaetter historien?',
+  },
+
+  // ── Lesson Content per Topic ──
+  lessons: {
+    ...batch1,
+    ...batch2,
+    ...batch3,
+    ...batch11a,
+    ...batch11b,
+    ...batch12a,
+    ...batch12b,
+    '10-quad-funktionen': {
+      story: {
+        intro: 'Mia sidder paa sit lille kontor ved Hamburgs havn og stirrer paa skaermen. Lumi, hendes spilfigur i "Havnelys", skal hoppe elegant over kasser og containere — men springkurven ser bare forkert ud. "Fysikken stemmer ikke", mumler hun. For at programmere en realistisk springbane har Mia brug for kvadratiske funktioner.',
+        challenge: 'Lumi skal hoppe over kasser — men springkurven ser unaturlig ud.',
+        outro: 'Med toppunktsformen har Mia programmeret den perfekte springkurve! Lumi flyver nu i en elegant bue over Hamburg-containerne. "Endelig ser det realistisk ud", siger Tim og giver hende en high-five.',
+      },
+      objectives: {
+        recognize: 'Genkende kvadratiske funktioner og beskrive deres egenskaber',
+        vertex_form: 'Omregne sikkert mellem normalform og toppunktsform',
+        pq_formula: 'Beregne nulpunkter med abc-formlen',
+        graph_properties: 'Aflase aabningsretning, toppunkt og symmetriakse fra ligningen',
+      },
+      explanation: {
+        intro: 'Forestil dig, at du kaster en basketball. Bolden flyver i en bue opad, naar det hoejeste punkt og falder ned igen. Denne flyvebane har en helt bestemt form — en parabel. Matematisk beskriver vi den med en kvadratisk funktion:',
+        opening: 'Tallet $a$ bestemmer, om parablen aabner opad ($a > 0$) eller nedad ($a < 0$) — og hvor "smal" eller "bred" den er. Jo stoerre $|a|$, desto smallere parablen.',
+        mia_tip: 'I mit spil er $a$ negativ, fordi springkurven gaar opad og saa ned igen — som et omvendt U!',
+        vertex_form: 'Toppunktsformen afsloerer direkte det hoejeste (eller laveste) punkt paa parablen. Toppunktet $S$ har koordinaterne $(d \\mid e)$:',
+        conversion: 'For at gaa fra normalform til toppunktsform bruger du fuldstaendig kvadrering. Du tilfojer smart et tal og traekker det fra igen, saa et perfekt kvadrat opstaaar.',
+      },
+      concepts: {
+        normal_form: { title: '∫nfinity' },
+        vertex_form: { title: '∫nfinity' },
+        pq_formula: { title: '∫nfinity' },
+        discriminant: { title: '∫nfinity' },
+      },
+      examples: {
+        vertex: {
+          title: '∫nfinity',
+          context: 'Mia vil beregne det hoejeste punkt paa Lumis spring.',
+          step1: 'Givet er funktionen i normalform:',
+          step2: 'Fuldstaendig kvadrering: Vi tilfojer $(\\frac{6}{2})^2 = 9$ og traekker det fra igen:',
+          step3: 'Saet sammen — udtrykket i parentesen er et perfekt kvadrat:',
+          step4: 'Aflaes toppunktet: $d = 3$, $e = -4$, altsaa:',
+          mia_comment: 'Toppunktet ved $(3 \\mid -4)$ er det laveste punkt, fordi $a = 1 > 0$. Til en springkurve har jeg brug for $a < 0$, saa bliver det det hoejeste punkt!',
+        },
+        pq: {
+          title: '∫nfinity',
+          context: 'Hvor lander Lumi igen paa jorden?',
+          step1: 'Givet: Ligningen er allerede i den rigtige form ($x^2$-koefficient = 1):',
+          step2: 'Aflaes vaerdierne for $p$ og $q$:',
+          step3: 'Indsaet i abc-formlen og beregn:',
+          step4: 'Lumi lander altsaa ved $x = 2$ eller $x = -4$:',
+          mia_comment: 'To nulpunkter — parablen skaerer x-aksen to gange. I spillet betyder det: Lumi letter ved $x = -4$ og lander ved $x = 2$!',
+        },
+      },
+      realworld: {
+        basketball: { title: '∫nfinity' },
+        bridge: { title: '∫nfinity' },
+        pricing: { title: '∫nfinity' },
+      },
+      mistakes: {
+        sign_error: {
+          wrong: 'Fortegnsfejl',
+          correct: 'Pas paa fortegnene',
+          why: 'I $f(x) = (x - d)^2 + e$ staar der et minus foran $d$. Det betyder: $f(x) = (x - 3)^2$ har toppunktet ved $d = +3$, ikke ved $-3$!',
+          mia_warning: 'Denne fortegnsfejl kostede mig 3 timers debugging. Lumis springkurve var forskudt til venstre i stedet for til hoejre!',
+        },
+        pq_wrong: {
+          wrong: 'abc-formel uden division',
+          correct: 'Foerst dividere med $a$',
+          why: 'Abc-formlen virker kun, naar koefficienten foran $x^2$ er lig 1. Ved $2x^2 + 4x - 6 = 0$ skal du foerst dividere med 2: $x^2 + 2x - 3 = 0$.',
+        },
+      },
+    },
+  },
+
   footer: {
     createdBy: 'Oprettet af Dirk Schulenburg',
     license: 'Licenseret under CC BY-SA 4.0',
-    consulting: 'Workshops og rådgivning',
+    consulting: 'Workshops og raadgivning',
   },
 };

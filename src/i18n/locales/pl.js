@@ -1,19 +1,27 @@
+import { batch1 } from '../lessons-10-batch1-pl';
+import { batch2 } from '../lessons-10-batch2-pl';
+import { batch3 } from '../lessons-10-batch3-pl';
+import { batch11a } from '../lessons-11-batch1-pl';
+import { batch11b } from '../lessons-11-batch2-pl';
+import { batch12a } from '../lessons-12-batch1-pl';
+import { batch12b } from '../lessons-12-batch2-pl';
+
 export default {
   portal: {
-    title: 'Portal Matematyczny',
-    subtitle: 'Matematyka — język uniwersalny',
+    title: '∫nfinity',
+    subtitle: '∫nfinity',
     oerBadge: 'Otwarte Zasoby Edukacyjne',
     progress: 'Twój postęp',
     comingSoon: 'Wkrótce',
   },
   modules: {
     'quad-funktionen': {
-      title: 'Funkcje kwadratowe',
-      subtitle: '{levels} poziomy · {exercises} ćwiczenia',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
     differentialrechnung: {
-      title: 'Rachunek różniczkowy',
-      subtitle: '{levels} poziomy · {exercises} ćwiczenia',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
   },
   ui: {
@@ -45,18 +53,18 @@ export default {
   },
   levels: {
     'quad-funktionen': {
-      1: { title: 'Podstawy', subtitle: 'Rozpoznawanie parabol' },
-      2: { title: 'Konwersja form', subtitle: 'Ogólna ↔ Kanoniczna' },
-      3: { title: 'Wzór ogólny', subtitle: 'Znajdowanie zer' },
-      4: { title: 'Faktoryzacja', subtitle: 'Wzory Viète\'a' },
-      5: { title: 'Mix & Match', subtitle: 'Łączenie metod' },
-      6: { title: 'Zadania tekstowe', subtitle: 'Matematyka w życiu' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
+      5: { title: '∫nfinity' },
+      6: { title: '∫nfinity' },
     },
     differentialrechnung: {
-      1: { title: 'Prędkości zmian i granice', subtitle: 'Czym jest pochodna?' },
-      2: { title: 'Podstawowe reguły', subtitle: 'Potęgowa, Stała, Suma' },
-      3: { title: 'Zaawansowane reguły', subtitle: 'Iloczyn, Iloraz, Łańcuchowa' },
-      4: { title: 'Monotoniczność i ekstrema', subtitle: 'Badanie krzywych I' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
     },
   },
   stories: {
@@ -92,24 +100,121 @@ export default {
   },
   exercises: {
     differentialrechnung: {
-      'D1-EX1': { title: 'Średnia prędkość zmian', description: 'Oblicz nachylenie siecznej f(x) = x² między x=1 a x=3.' },
-      'D1-EX2': { title: 'Chwilowa prędkość zmian', description: 'Przeciągnij punkt na krzywej i określ nachylenie.' },
-      'D1-EX3': { title: 'Od ilorazu różnicowego do różniczkowego', description: 'Różniczkuj f(x) = x² za pomocą granicy.' },
-      'D1-EX4': { title: 'Granica wizualnie', description: 'Obserwuj animację i określ nachylenie stycznej.' },
-      'D2-EX1': { title: 'Reguła potęgowa', description: 'Różniczkuj 5 funkcji za pomocą reguły potęgowej.' },
-      'D2-EX2': { title: 'Reguła stałego czynnika', description: 'Różniczkuj funkcje ze stałymi czynnikami.' },
-      'D2-EX3': { title: 'Reguła sumy', description: 'Różniczkuj f(x) = 3x² + 2x − 5 wyraz po wyrazie.' },
-      'D2-EX4': { title: 'Ćwiczenia mieszane', description: 'Zidentyfikuj właściwą regułę i oblicz.' },
-      'D3-EX1': { title: 'Reguła iloczynu', description: 'Różniczkuj f(x) = (2x+1)·x³.' },
-      'D3-EX2': { title: 'Reguła ilorazu', description: 'Różniczkuj f(x) = (x²+1)/(x−1).' },
-      'D3-EX3': { title: 'Reguła łańcuchowa', description: 'Różniczkuj f(x) = (2x+3)⁴.' },
-      'D3-EX4': { title: 'Wybór reguły', description: 'Która reguła pasuje? Wyjaśnij i oblicz.' },
-      'D4-EX1': { title: 'Znajdowanie ekstremów', description: 'Wyznacz ekstrema f(x) = x³ − 3x.' },
-      'D4-EX2': { title: 'Zmiana znaku', description: 'Zaznacz punkty ekstremalne na wykresie.' },
-      'D4-EX3': { title: 'Przedziały monotoniczności', description: 'Na jakich przedziałach funkcja rośnie lub maleje?' },
-      'D4-EX4': { title: 'Pełny algorytm', description: 'Przeprowadź pełne badanie ekstremów.' },
+      'D1-EX1': { title: '∫nfinity' },
+      'D1-EX2': { title: '∫nfinity' },
+      'D1-EX3': { title: '∫nfinity' },
+      'D1-EX4': { title: '∫nfinity' },
+      'D2-EX1': { title: '∫nfinity' },
+      'D2-EX2': { title: '∫nfinity' },
+      'D2-EX3': { title: '∫nfinity' },
+      'D2-EX4': { title: '∫nfinity' },
+      'D3-EX1': { title: '∫nfinity' },
+      'D3-EX2': { title: '∫nfinity' },
+      'D3-EX3': { title: '∫nfinity' },
+      'D3-EX4': { title: '∫nfinity' },
+      'D4-EX1': { title: '∫nfinity' },
+      'D4-EX2': { title: '∫nfinity' },
+      'D4-EX3': { title: '∫nfinity' },
+      'D4-EX4': { title: '∫nfinity' },
     },
   },
+  // ── Lesson Layer Labels ──
+  lesson: {
+    objectives: 'Cele nauki',
+    objectivesSubtitle: '∫nfinity',
+    explanation: 'Wyjasnienie',
+    concepts: 'Kluczowe pojecia',
+    examples: 'Przyklady wzorcowe',
+    examplesSubtitle: '∫nfinity',
+    realWorld: 'Gdzie to spotkasz?',
+    mistakes: 'Typowe bledy',
+    mistakesSubtitle: '∫nfinity',
+    prerequisites: 'Wiedza wstepna',
+    prerequisitesSubtitle: '∫nfinity',
+    collapseLesson: 'Zwin lekcje',
+    expandLesson: 'Pokaz lekcje',
+    skipToExercises: 'Teraz cwicz →',
+    storyOutro: 'Jak toczy sie dalej historia?',
+  },
+
+  // ── Lesson Content per Topic ──
+  lessons: {
+    ...batch1,
+    ...batch2,
+    ...batch3,
+    ...batch11a,
+    ...batch11b,
+    ...batch12a,
+    ...batch12b,
+    '10-quad-funktionen': {
+      story: {
+        intro: 'Mia siedzi w swoim malym biurze w hamburskim porcie i wpatruje sie w ekran. Lumi, jej postac w grze "Hafenlichter", ma elegancko przeskakiwac skrzynie i kontenery — ale krzywa skoku wyglada po prostu zle. "Fizyka sie nie zgadza", mamrocze. Aby zaprogramowac realistyczna trajektorie skoku, Mia potrzebuje funkcji kwadratowych.',
+        challenge: 'Lumi ma przeskakiwac skrzynie — ale krzywa skoku wyglada nienaturalnie.',
+        outro: 'Z postacia wierzcholkowa Mia zaprogramowala doskonala krzywa skoku! Lumi leci teraz eleganckim lukiem nad hamburskimi kontenerami. "Wreszcie wyglada to realistycznie", mowi Tim i daje jej piatke.',
+      },
+      objectives: {
+        recognize: 'Rozpoznawac funkcje kwadratowe i opisywac ich wlasciwosci',
+        vertex_form: 'Pewnie przeliczac miedzy postacia ogolna a wierzcholkowa',
+        pq_formula: 'Obliczac miejsca zerowe wzorem kwadratowym',
+        graph_properties: 'Odczytywac z rownania kierunek otwarcia, wierzcholek i os symetrii',
+      },
+      explanation: {
+        intro: 'Wyobraz sobie, ze rzucasz pilke do koszykowki. Pilka leci lukiem w gore, osiaga najwyzszy punkt i spada. Ta trajektoria ma zupelnie okreslony ksztalt — parabole. Matematycznie opisujemy ja funkcja kwadratowa:',
+        opening: 'Liczba $a$ okresla, czy parabola jest otwarta do gory ($a > 0$) czy do dolu ($a < 0$) — i jak "waska" lub "szeroka" jest. Im wieksze $|a|$, tym wezsza parabola.',
+        mia_tip: 'W mojej grze $a$ jest ujemne, bo krzywa skoku idzie do gory i wraca w dol — jak odwrocone U!',
+        vertex_form: 'Postac wierzcholkowa zdradza ci bezposrednio najwyzszy (lub najnizszy) punkt paraboli. Wierzcholek $S$ ma wspolrzedne $(d \\mid e)$:',
+        conversion: 'Aby przejsc z postaci ogolnej do wierzcholkowej, uzywasz uzupelniania do kwadratu. Sprytnie dodajesz i odejmujesz liczbe, aby powstal kwadrat doskonaly.',
+      },
+      concepts: {
+        normal_form: { title: '∫nfinity' },
+        vertex_form: { title: '∫nfinity' },
+        pq_formula: { title: '∫nfinity' },
+        discriminant: { title: '∫nfinity' },
+      },
+      examples: {
+        vertex: {
+          title: '∫nfinity',
+          context: 'Mia chce obliczyc najwyzszy punkt skoku Lumiego.',
+          step1: 'Dana funkcja w postaci ogolnej:', step2: 'Uzupelnianie do kwadratu: Dodajemy $(\\frac{6}{2})^2 = 9$ i odejmujemy:', step3: 'Upraszczamy — wyrazenie w nawiasie to kwadrat doskonaly:', step4: 'Odczytujemy wierzcholek: $d = 3$, $e = -4$, wiec:',
+          mia_comment: 'Wierzcholek w $(3 \\mid -4)$ to najnizszy punkt, bo $a = 1 > 0$. Dla krzywej skoku potrzebuje $a < 0$, wtedy bedzie to najwyzszy punkt!',
+        },
+        pq: {
+          title: '∫nfinity',
+          context: 'Gdzie Lumi znow laduje na ziemi?',
+          step1: 'Dane: Rownanie jest juz we wlasciwej formie ($x^2$-wspolczynnik = 1):', step2: 'Odczytujemy wartosci $p$ i $q$:', step3: 'Wstawiamy do wzoru kwadratowego i obliczamy:', step4: 'Lumi laduje wiec przy $x = 2$ lub $x = -4$:',
+          mia_comment: 'Dwa miejsca zerowe — parabola przecina os x dwa razy. W grze to znaczy: Lumi startuje przy $x = -4$ i laduje przy $x = 2$!',
+        },
+      },
+      realworld: {
+        basketball: { title: '∫nfinity' },
+        bridge: { title: '∫nfinity' },
+        pricing: { title: '∫nfinity' },
+      },
+      mistakes: {
+        sign_error: { wrong: 'Blad znaku', correct: 'Zwracaj uwage na znaki', why: 'W $f(x) = (x - d)^2 + e$ stoi minus przed $d$. To znaczy: $f(x) = (x - 3)^2$ ma wierzcholek przy $d = +3$, nie przy $-3$!', mia_warning: 'Ten blad znaku kosztowal mnie 3 godziny debugowania. Krzywa skoku Lumiego byla przesunieta w lewo zamiast w prawo!' },
+        pq_wrong: { wrong: 'Wzor kwadratowy bez dzielenia', correct: 'Najpierw podziel przez $a$', why: 'Wzor kwadratowy dziala tylko gdy wspolczynnik przed $x^2$ jest rowny 1. Przy $2x^2 + 4x - 6 = 0$ musisz najpierw podzielic przez 2: $x^2 + 2x - 3 = 0$.' },
+      },
+    },
+    '10-pythagoras': {
+      story: { intro: 'Mia ma problem z detekcja kolizji: Kiedy Lumi dotyka przeszkody? Tim proponuje obliczenie odleglosci miedzy dwoma punktami. "Do tego potrzebujesz Pitagorasa", mowi.', challenge: 'Detekcja kolizji potrzebuje obliczania odleglosci miedzy obiektami.', outro: 'Detekcja kolizji Lumiego dziala teraz z dokladnoscia pikselowa! Mia uzy twierdzenia Pitagorasa do obliczania odleglosci w czasie rzeczywistym.' },
+      objectives: { theorem: 'Pewnie stosowac twierdzenie Pitagorasa', calculate_sides: 'Obliczac brakujace boki w trojkacie prostokatnym', recognize: 'Rozpoznawac, kiedy mamy do czynienia z trojkatem prostokatnym', apply: 'Przenosic twierdzenie na problemy codzienne' },
+      explanation: { intro: 'W kazdym trojkacie prostokatnym obowiazuje prosta, ale potezna regula: Suma kwadratow przyprostokatnych rowna sie kwadratowi przeciwprostokatnej.', sides: '$c$ jest zawsze najdluzszym bokiem — przeciwprostokatna. Lezy naprzeciw kata prostego. Dwa krotsze boki $a$ i $b$ to przyprostokatne.', mia_tip: 'W mojej grze obliczam odleglosc miedzy Lumim a obiektem jako przeciwprostokatna. Odleglosc pozioma to $a$, pionowa to $b$ — a $c$ to faktyczna odleglosc!', solving: 'Mozesz przeksztalcic wzor wzgledem kazdego boku. Gdy szukasz przeciwprostokatnej:' },
+      concepts: { theorem: { title: '∫nfinity' } },
+      examples: { screen: { title: '∫nfinity' } },
+      realworld: { screen: { title: '∫nfinity' } },
+      mistakes: { hypotenuse: { wrong: 'Przeciwprostokatna jako przyprostokatna', correct: 'c to zawsze najdluzszy bok', why: 'Przeciwprostokatna $c$ lezy ZAWSZE naprzeciw kata prostego. Jest najdluzszym bokiem.' }, root: { wrong: 'Pierwiastek z sumy', correct: 'Najpierw dodaj, potem pierwiastek', why: '$\\sqrt{a^2 + b^2}$ to NIE to samo co $a + b$! Przyklad: $\\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$, ale $3 + 4 = 7$.', mia_warning: 'Ten blad znalazl Tim w moim kodzie — detekcja kolizji byla o 40% za niedokladna!' } },
+    },
+    '10-wahrscheinlichkeit': {
+      story: { intro: 'Mia chce zbudowac system loot dla Hafenlichter. Gracze powinni znajdowac rzadkie przedmioty — ale nie za czesto, bo bedzie nudno, i nie za rzadko, bo bedzie frustrujaco.', challenge: 'System loot-drop ma byc sprawiedliwy i ekscytujacy.', outro: 'System loot Mii dziala! Zbalansowala prawdopodobienstwa dropow tak, ze gracze srednio co 20 skrzyn znajduja Rare-Item.' },
+      objectives: { basic: 'Podawac prawdopodobienstwa jako ulamki, ulamki dziesietne i procenty', tree: 'Rozwiazywac wieloetapowe eksperymenty losowe diagramami drzewkowymi', expected_value: 'Obliczac i interpretowac wartosc oczekiwana', complement: 'Pracowac z prawdopodobienstwem zdarzenia przeciwnego ("co najmniej raz...")' },
+      explanation: { intro: 'Jak prawdopodobne jest wyrzucenie 6? Jaka jest szansa na rzadki przedmiot w grze? Rachunek prawdopodobienstwa daje odpowiedzi. Podstawowa idea jest prosta:', range: 'Prawdopodobienstwa leza zawsze miedzy 0 (niemozliwe) a 1 (pewne). Mozesz je zapisac jako ulamek ($\\frac{1}{6}$), ulamek dziesietny ($0{,}167$) lub procent ($16{,}7\\%$).', mia_tip: 'W Hafenlichter $P(\\text{Rare Item}) = 0{,}05$. To znaczy: Przy kazdym dropie gracz ma 5% szansy. Brzmi malo — ale po wielu dropaach sie sumuje!', tree: 'Przy wieloetapowych eksperymentach (np. dwa rzuty kostka) uzywasz diagramu drzewkowego. Wzdluz sciezki mnozysz prawdopodobienstwa:', complement: 'Czesto latwiej jest obliczyc "przeciwienstwo". Prawdopodobienstwo, ze cos NIE nastapi, to:' },
+      concepts: { laplace: { title: '∫nfinity' } },
+      examples: { dice: { title: '∫nfinity' } },
+      realworld: { lootbox: { title: '∫nfinity' } },
+      mistakes: { addition: { wrong: 'Dodawanie sciezek zamiast mnozenia', correct: 'Wzdluz sciezki mnoz', why: 'W diagramie drzewkowym mnozysz wzdluz sciezki (koniunkcja). Dodawac mozesz tylko przy laczeniu roznych sciezek (alternatywa).', mia_warning: 'Ten blad mialam w systemie loot. Drop-rate byly za wysokie, bo dodawalam zamiast mnozyc — kazdy gracz natychmiast mial wszystko!' }, percent: { wrong: 'Procenty powyzej 100%', correct: 'Maksimum to 100%', why: 'Prawdopodobienstwo nigdy nie moze byc wieksze niz 1 (= 100%). Jesli twoj wynik $P > 1$, masz blad rachunkowy.' } },
+    },
+  },
+
   footer: {
     createdBy: 'Stworzone przez Dirka Schulenburga',
     license: 'Licencjonowane na CC BY-SA 4.0',

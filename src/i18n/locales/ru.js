@@ -1,19 +1,27 @@
+import { batch1 } from '../lessons-10-batch1-ru';
+import { batch2 } from '../lessons-10-batch2-ru';
+import { batch3 } from '../lessons-10-batch3-ru';
+import { batch11a } from '../lessons-11-batch1-ru';
+import { batch11b } from '../lessons-11-batch2-ru';
+import { batch12a } from '../lessons-12-batch1-ru';
+import { batch12b } from '../lessons-12-batch2-ru';
+
 export default {
   portal: {
-    title: 'Математический Портал',
-    subtitle: 'Математика — универсальный язык',
+    title: '∫nfinity',
+    subtitle: '∫nfinity',
     oerBadge: 'Открытые образовательные ресурсы',
     progress: 'Твой прогресс',
     comingSoon: 'Скоро',
   },
   modules: {
     'quad-funktionen': {
-      title: 'Квадратичные функции',
-      subtitle: '{levels} уровня · {exercises} упражнения',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
     differentialrechnung: {
-      title: 'Дифференциальное исчисление',
-      subtitle: '{levels} уровня · {exercises} упражнения',
+      title: '∫nfinity',
+      subtitle: '∫nfinity',
     },
   },
   ui: {
@@ -45,18 +53,18 @@ export default {
   },
   levels: {
     'quad-funktionen': {
-      1: { title: 'Основы', subtitle: 'Распознавание парабол' },
-      2: { title: 'Преобразование форм', subtitle: 'Стандартная ↔ Вершинная форма' },
-      3: { title: 'Дискриминант', subtitle: 'Нахождение нулей' },
-      4: { title: 'Факторизация', subtitle: 'Формулы Виета' },
-      5: { title: 'Комбинированный', subtitle: 'Сочетание методов' },
-      6: { title: 'Текстовые задачи', subtitle: 'Математика в жизни' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
+      5: { title: '∫nfinity' },
+      6: { title: '∫nfinity' },
     },
     differentialrechnung: {
-      1: { title: 'Скорости изменения и пределы', subtitle: 'Что такое производная?' },
-      2: { title: 'Базовые правила', subtitle: 'Степенная, Константа, Сумма' },
-      3: { title: 'Расширенные правила', subtitle: 'Произведение, Частное, Цепочка' },
-      4: { title: 'Монотонность и экстремумы', subtitle: 'Исследование кривых I' },
+      1: { title: '∫nfinity' },
+      2: { title: '∫nfinity' },
+      3: { title: '∫nfinity' },
+      4: { title: '∫nfinity' },
     },
   },
   stories: {
@@ -92,24 +100,67 @@ export default {
   },
   exercises: {
     differentialrechnung: {
-      'D1-EX1': { title: 'Средняя скорость изменения', description: 'Вычисли наклон секущей f(x) = x² между x=1 и x=3.' },
-      'D1-EX2': { title: 'Мгновенная скорость изменения', description: 'Перетащи точку на кривой и определи наклон.' },
-      'D1-EX3': { title: 'От разностного к дифференциальному отношению', description: 'Дифференцируй f(x) = x² с помощью предела.' },
-      'D1-EX4': { title: 'Предел визуально', description: 'Наблюдай за анимацией и определи наклон касательной.' },
-      'D2-EX1': { title: 'Степенное правило', description: 'Дифференцируй 5 функций с помощью степенного правила.' },
-      'D2-EX2': { title: 'Правило постоянного множителя', description: 'Дифференцируй функции с постоянными множителями.' },
-      'D2-EX3': { title: 'Правило суммы', description: 'Дифференцируй f(x) = 3x² + 2x − 5 по слагаемым.' },
-      'D2-EX4': { title: 'Смешанные упражнения', description: 'Определи правильное правило и вычисли.' },
-      'D3-EX1': { title: 'Правило произведения', description: 'Дифференцируй f(x) = (2x+1)·x³.' },
-      'D3-EX2': { title: 'Правило частного', description: 'Дифференцируй f(x) = (x²+1)/(x−1).' },
-      'D3-EX3': { title: 'Правило цепочки', description: 'Дифференцируй f(x) = (2x+3)⁴.' },
-      'D3-EX4': { title: 'Выбор правила', description: 'Какое правило подходит? Объясни и вычисли.' },
-      'D4-EX1': { title: 'Нахождение экстремумов', description: 'Определи экстремумы f(x) = x³ − 3x.' },
-      'D4-EX2': { title: 'Смена знака', description: 'Отметь экстремальные точки на графике.' },
-      'D4-EX3': { title: 'Интервалы монотонности', description: 'На каких интервалах функция возрастает или убывает?' },
-      'D4-EX4': { title: 'Полный алгоритм', description: 'Проведи полное исследование экстремумов.' },
+      'D1-EX1': { title: '∫nfinity' },
+      'D1-EX2': { title: '∫nfinity' },
+      'D1-EX3': { title: '∫nfinity' },
+      'D1-EX4': { title: '∫nfinity' },
+      'D2-EX1': { title: '∫nfinity' },
+      'D2-EX2': { title: '∫nfinity' },
+      'D2-EX3': { title: '∫nfinity' },
+      'D2-EX4': { title: '∫nfinity' },
+      'D3-EX1': { title: '∫nfinity' },
+      'D3-EX2': { title: '∫nfinity' },
+      'D3-EX3': { title: '∫nfinity' },
+      'D3-EX4': { title: '∫nfinity' },
+      'D4-EX1': { title: '∫nfinity' },
+      'D4-EX2': { title: '∫nfinity' },
+      'D4-EX3': { title: '∫nfinity' },
+      'D4-EX4': { title: '∫nfinity' },
     },
   },
+  // ── Lesson Layer Labels ──
+  lesson: {
+    objectives: 'Цели обучения',
+    objectivesSubtitle: '∫nfinity',
+    explanation: 'Объяснение',
+    concepts: 'Ключевые понятия',
+    examples: 'Примеры решений',
+    examplesSubtitle: '∫nfinity',
+    realWorld: 'Где ты это встретишь?',
+    mistakes: 'Типичные ошибки',
+    mistakesSubtitle: '∫nfinity',
+    prerequisites: 'Предварительные знания',
+    prerequisitesSubtitle: '∫nfinity',
+    collapseLesson: 'Свернуть урок',
+    expandLesson: 'Показать урок',
+    skipToExercises: 'Перейти к упражнениям →',
+    storyOutro: 'Как продолжается история?',
+  },
+
+  // ── Lesson Content per Topic ──
+  lessons: {
+    ...batch1,
+    ...batch2,
+    ...batch3,
+    ...batch11a,
+    ...batch11b,
+    ...batch12a,
+    ...batch12b,
+    '10-quad-funktionen': {
+      story: {
+        intro: 'Mia сидит в своём маленьком офисе у Гамбургской гавани и смотрит на экран. Lumi, её игровой персонаж в "Hafenlichter", должен элегантно прыгать через ящики и контейнеры — но кривая прыжка выглядит неправильно. "Физика не сходится", бормочет она. Чтобы запрограммировать реалистичную траекторию прыжка, Mia нужны квадратичные функции.',
+        challenge: 'Lumi должен прыгать через ящики — но кривая прыжка выглядит неестественно.',
+        outro: 'С вершинной формой Mia запрограммировала идеальную кривую прыжка! Lumi теперь летит элегантной дугой над гамбургскими контейнерами. "Наконец выглядит реалистично", говорит Тим и даёт пять.',
+      },
+      objectives: { recognize: 'Распознавать квадратичные функции и описывать их свойства', vertex_form: 'Уверенно преобразовывать между нормальной и вершинной формой', pq_formula: 'Вычислять нули по формуле', graph_properties: 'Считывать направление открытия, вершину и ось симметрии из уравнения' },
+      explanation: { intro: 'Представь, что бросаешь баскетбольный мяч. Мяч летит дугой вверх, достигает высшей точки и падает. Эта траектория — парабола:', opening: 'Число $a$ определяет, открыта ли парабола вверх ($a > 0$) или вниз ($a < 0$).', mia_tip: 'В моей игре $a$ отрицательное, потому что прыжок идёт вверх и вниз — как перевёрнутая U!', vertex_form: 'Вершинная форма сразу показывает высшую (или низшую) точку. Вершина $S(d \\mid e)$:', conversion: 'Для перехода из нормальной в вершинную форму используй выделение полного квадрата.' },
+      concepts: { normal_form: { title: '∫nfinity' } },
+      examples: { vertex: { title: '∫nfinity' } },
+      realworld: { basketball: { title: '∫nfinity' } },
+      mistakes: { sign_error: { wrong: 'Ошибка знака', correct: 'Учесть знаки', why: 'В $(x - d)^2$ стоит минус. $(x - 3)^2$ имеет вершину при $d = +3$!', mia_warning: 'Эта ошибка стоила мне 3 часа дебага!' }, pq_wrong: { wrong: 'Формула без деления', correct: 'Сначала разделить на $a$', why: 'Формула работает только при коэффициенте 1 перед $x^2$.' } },
+    },
+  },
+
   footer: {
     createdBy: 'Создано Дирком Шуленбургом',
     license: 'Лицензировано под CC BY-SA 4.0',

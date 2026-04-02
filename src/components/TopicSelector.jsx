@@ -21,7 +21,7 @@ export default function TopicSelector({ onSelectModule }) {
       transition={{ duration: 0.4 }}
     >
       <div className="topic-header">
-        <h1 className="topic-title">∫ {t('portal.title')}</h1>
+        <h1 className="topic-title">{t('portal.title')}</h1>
         <p className="topic-subtitle">{t('portal.subtitle')}</p>
       </div>
 

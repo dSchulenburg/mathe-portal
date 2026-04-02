@@ -55,7 +55,7 @@ export default function Layout({
           <div style={{ flex: 1, textAlign: 'center' }}>
             {isTopics && (
               <div className="header-title" style={{ cursor: 'default' }}>
-                <h1>∫ {t('portal.title')}</h1>
+                <h1>{t('portal.title')}</h1>
               </div>
             )}
             {view === 'levels' && moduleName && (

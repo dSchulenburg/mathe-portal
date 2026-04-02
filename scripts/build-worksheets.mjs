@@ -43,6 +43,7 @@ const COLORS = {
 // ─── Topic name map ──────────────────────────────────────────────────────────
 
 const TOPIC_NAMES = {
+  // Klasse 10
   '10-aehnlichkeit':     'Ähnlichkeit',
   '10-diff-einfuehrung': 'Einführung in die Differentialrechnung',
   '10-exp-wachstum':     'Exponentielles Wachstum',
@@ -55,6 +56,23 @@ const TOPIC_NAMES = {
   '10-quad-gleichungen': 'Quadratische Gleichungen',
   '10-trigonometrie':    'Trigonometrie',
   '10-wahrscheinlichkeit': 'Wahrscheinlichkeitsrechnung',
+  // Klasse 11
+  '11-ableitungsregeln':  'Ableitungsregeln',
+  '11-kurvendiskussion':  'Kurvendiskussion',
+  '11-extremwertaufgaben':'Extremwertaufgaben',
+  '11-integralrechnung':  'Integralrechnung',
+  '11-exp-log':           'Exponential- & Logarithmusfunktionen',
+  '11-binomialverteilung':'Binomialverteilung',
+  '11-bedingte-wk':       'Bedingte Wahrscheinlichkeit',
+  '11-vektorrechnung':    'Vektorrechnung',
+  // Klasse 12
+  '12-e-funktion-ln':       'e-Funktion & ln',
+  '12-integralrechnung-v':  'Integralrechnung vertieft',
+  '12-analytische-geo':     'Analytische Geometrie',
+  '12-hypothesentests':     'Hypothesentests',
+  '12-normalverteilung':    'Normalverteilung',
+  '12-matrizen':            'Matrizen & Übergangsprozesse',
+  '12-abiturvorbereitung':  'Abiturvorbereitung',
 };
 
 // ─── Competency labels ───────────────────────────────────────────────────────
@@ -81,7 +99,7 @@ async function loadExercisesForTopic(filePath) {
 
 async function loadAllTopics() {
   const files = readdirSync(EXERCISES_DIR)
-    .filter(f => f.endsWith('.js') && f.startsWith('10-'));
+    .filter(f => f.endsWith('.js') && /^1[0-2]-/.test(f));
 
   const topics = {};
   for (const file of files) {
@@ -221,7 +239,8 @@ function renderExercise(ex, num, withSolution) {
 
 function buildHtml(topicId, exercises, withSolution) {
   const topicName = TOPIC_NAMES[topicId] || topicId;
-  const subtitle  = withSolution ? 'Lösungsblatt — Klasse 10' : 'Aufgabenblatt — Klasse 10';
+  const grade = topicId.split('-')[0];
+  const subtitle  = withSolution ? `Lösungsblatt — Klasse ${grade}` : `Aufgabenblatt — Klasse ${grade}`;
 
   const exercisesHtml = exercises
     .map((ex, i) => renderExercise(ex, i + 1, withSolution))

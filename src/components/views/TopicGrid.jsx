@@ -3,6 +3,8 @@ import { TOPICS, getTopicsByGrade } from '../../data/topics';
 import { DOMAINS } from '../../data/types';
 import { useMathStore } from '../../store/mathStore';
 import { navigate } from '../../lib/router';
+import LanguageSwitcher from '../LanguageSwitcher';
+import { useTranslation } from '../../i18n/useTranslation';
 
 const GRADE_TABS = [
   { grade: 10, label: 'Klasse 10', available: true },
@@ -165,6 +167,7 @@ function TopicCard({ topic }) {
 export default function TopicGrid() {
   const [activeGrade, setActiveGrade] = useState(10);
   const topics = getTopicsByGrade(activeGrade);
+  const { language, setLanguage } = useTranslation();
 
   return (
     <div style={{
@@ -175,6 +178,11 @@ export default function TopicGrid() {
       maxWidth: '1100px',
       margin: '0 auto',
     }}>
+      {/* Language Switcher — top right */}
+      <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '-1rem' }}>
+        <LanguageSwitcher currentLanguage={language} onLanguageChange={setLanguage} />
+      </div>
+
       {/* Header */}
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <h1 style={{
@@ -187,7 +195,7 @@ export default function TopicGrid() {
           backgroundClip: 'text',
           lineHeight: 1.2,
         }}>
-          Aufgabendatenbank
+          ∫nfinity
         </h1>
         <p style={{
           margin: '0.5rem 0 1rem',
@@ -196,18 +204,40 @@ export default function TopicGrid() {
         }}>
           Gymnasium Klasse 10–12 · Hamburger Bildungsplan
         </p>
-        <span style={{
-          display: 'inline-block',
-          padding: '0.3rem 0.9rem',
-          borderRadius: '999px',
-          background: 'var(--mp-surface)',
-          border: '1px solid var(--mp-border)',
-          fontSize: '0.8rem',
-          color: 'var(--mp-primary)',
-          fontWeight: 600,
-        }}>
-          {totalExerciseCount}+ Aufgaben
-        </span>
+        <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <span style={{
+            display: 'inline-block',
+            padding: '0.3rem 0.9rem',
+            borderRadius: '999px',
+            background: 'var(--mp-surface)',
+            border: '1px solid var(--mp-border)',
+            fontSize: '0.8rem',
+            color: 'var(--mp-primary)',
+            fontWeight: 600,
+          }}>
+            {totalExerciseCount}+ Aufgaben
+          </span>
+          <a
+            href="/dashboard/"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.35rem',
+              padding: '0.3rem 0.9rem',
+              borderRadius: '999px',
+              background: 'var(--mp-primary)',
+              color: '#fff',
+              fontSize: '0.8rem',
+              fontWeight: 600,
+              textDecoration: 'none',
+              transition: 'opacity 0.15s',
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
+            onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+          >
+            📊 Mein Fortschritt
+          </a>
+        </div>
       </div>
 
       {/* Grade Filter Tabs */}
@@ -297,21 +327,38 @@ export default function TopicGrid() {
         fontSize: '0.8rem',
       }}>
         <span>Open Educational Resources · CC BY-SA 4.0</span>
-        <a
-          href="#/"
-          style={{
-            color: 'var(--mp-primary)',
-            textDecoration: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.3rem',
-            transition: 'opacity 0.15s',
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
-          onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
-        >
-          ← Zum klassischen Portal
-        </a>
+        <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <a
+            href="/dashboard/"
+            style={{
+              color: 'var(--mp-primary)',
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.3rem',
+              transition: 'opacity 0.15s',
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
+            onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+          >
+            📊 Mein Lernfortschritt
+          </a>
+          <a
+            href="#/"
+            style={{
+              color: 'var(--mp-muted)',
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.3rem',
+              transition: 'opacity 0.15s',
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
+            onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+          >
+            ← Zum klassischen Portal
+          </a>
+        </div>
       </div>
     </div>
   );
