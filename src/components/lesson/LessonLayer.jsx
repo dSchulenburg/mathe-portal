@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from '../../i18n/useTranslation';
 import { getTopicStory } from '../../data/characters';
+import { getTopic } from '../../data/topics';
 import { useMathStore } from '../../store/mathStore';
 import StoryScene from './StoryScene';
+import AdultIntroBanner from './AdultIntroBanner';
 import LessonObjectives from './LessonObjectives';
 import LessonExplanation from './LessonExplanation';
 import LessonConcepts from './LessonConcepts';
@@ -30,8 +32,16 @@ export default function LessonLayer({ lesson, topicId, topicColor, completionPct
   const character = topicStory?.character;
   const accentColor = character?.color || topicColor || 'var(--mp-primary)';
 
+  const bannerTitle = getTopic(topicId)?.titleKey || topicId;
+  const resolvedObjectives = (lesson.objectives || []).map(key =>
+    t(`lessons.${topicId}.${key}`)
+  );
+
   return (
     <div style={{ marginBottom: '1rem' }}>
+      {/* Adult intro banner — shown only in adult mode, hidden in youth mode */}
+      <AdultIntroBanner title={bannerTitle} objectives={resolvedObjectives} />
+
       {/* Story Scene — always visible */}
       {topicStory && character && (
         <StoryScene
