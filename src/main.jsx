@@ -1,11 +1,14 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import { DisplayModeProvider } from './context/DisplayModeContext';
 import 'katex/dist/katex.min.css';
 import './App.css';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <DisplayModeProvider>
+      <App />
+    </DisplayModeProvider>
   </React.StrictMode>
 );
