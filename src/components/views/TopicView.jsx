@@ -18,6 +18,7 @@ import LessonLayer from '../lesson/LessonLayer';
 import StoryOutro from '../lesson/StoryOutro';
 import { getCharacterForTopic, TOPIC_STORIES } from '../../data/characters';
 import { useTranslation } from '../../i18n/useTranslation';
+import { useDisplayMode } from '../../context/DisplayModeContext';
 
 function ensureRegistered(topicId) {
   const topic = getTopic(topicId);
@@ -51,6 +52,7 @@ function getAvailableLevels(topicId) {
 export default function TopicView({ topicId, onBack }) {
   const topic = getTopic(topicId);
   const { t } = useTranslation();
+  const { embed } = useDisplayMode();
 
   // Re-register synchronously (handles test clearDB + HMR)
   ensureRegistered(topicId);
@@ -150,86 +152,88 @@ export default function TopicView({ topicId, onBack }) {
       padding: '0',
     }}>
 
-      {/* ── Header ── */}
-      <div style={{
-        background: 'var(--mp-surface)',
-        borderBottom: '1px solid var(--mp-border)',
-        padding: '1rem 1.25rem',
-        position: 'sticky',
-        top: 0,
-        zIndex: 10,
-      }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          {/* Top row: back + domain badge */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem', flexWrap: 'wrap' }}>
-            <button
-              onClick={onBack}
-              aria-label="Zurück"
-              style={{
-                background: 'transparent',
-                border: '1px solid var(--mp-border)',
-                borderRadius: '6px',
-                color: 'var(--mp-muted)',
-                padding: '0.3rem 0.75rem',
-                cursor: 'pointer',
-                fontSize: '0.9rem',
-                minHeight: '36px',
-              }}
-            >
-              ← Zurück
-            </button>
+      {/* ── Header (hidden in embed mode) ── */}
+      {!embed && (
+        <div style={{
+          background: 'var(--mp-surface)',
+          borderBottom: '1px solid var(--mp-border)',
+          padding: '1rem 1.25rem',
+          position: 'sticky',
+          top: 0,
+          zIndex: 10,
+        }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            {/* Top row: back + domain badge */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem', flexWrap: 'wrap' }}>
+              <button
+                onClick={onBack}
+                aria-label="Zurück"
+                style={{
+                  background: 'transparent',
+                  border: '1px solid var(--mp-border)',
+                  borderRadius: '6px',
+                  color: 'var(--mp-muted)',
+                  padding: '0.3rem 0.75rem',
+                  cursor: 'pointer',
+                  fontSize: '0.9rem',
+                  minHeight: '36px',
+                }}
+              >
+                ← Zurück
+              </button>
 
-            <span style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.3rem',
-              background: `${domainMeta.color}22`,
-              border: `1px solid ${domainMeta.color}55`,
-              borderRadius: '999px',
-              padding: '0.2rem 0.7rem',
-              fontSize: '0.8rem',
-              color: domainMeta.color,
-              fontWeight: 600,
-            }}>
-              {domainMeta.icon} {domainMeta.label}
-            </span>
-          </div>
-
-          {/* Title */}
-          <h1 style={{
-            fontSize: '1.4rem',
-            fontWeight: 700,
-            color: 'var(--mp-text)',
-            margin: '0 0 0.6rem',
-          }}>
-            {topic.icon} {topic.titleKey}
-          </h1>
-
-          {/* Progress bar */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <div style={{
-              flex: 1,
-              height: '6px',
-              background: 'var(--mp-surface-hover)',
-              borderRadius: '999px',
-              overflow: 'hidden',
-            }}>
-              <div style={{
-                height: '100%',
-                width: `${completionPercent}%`,
-                background: 'var(--mp-primary)',
+              <span style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.3rem',
+                background: `${domainMeta.color}22`,
+                border: `1px solid ${domainMeta.color}55`,
                 borderRadius: '999px',
-                transition: 'width 0.4s ease',
-              }} />
+                padding: '0.2rem 0.7rem',
+                fontSize: '0.8rem',
+                color: domainMeta.color,
+                fontWeight: 600,
+              }}>
+                {domainMeta.icon} {domainMeta.label}
+              </span>
             </div>
-            <span style={{ fontSize: '0.8rem', color: 'var(--mp-muted)', whiteSpace: 'nowrap' }}>
-              {progress.completed}/{allExercises.length} ({completionPercent}%)
-            </span>
+
+            {/* Title */}
+            <h1 style={{
+              fontSize: '1.4rem',
+              fontWeight: 700,
+              color: 'var(--mp-text)',
+              margin: '0 0 0.6rem',
+            }}>
+              {topic.icon} {topic.titleKey}
+            </h1>
+
+            {/* Progress bar */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <div style={{
+                flex: 1,
+                height: '6px',
+                background: 'var(--mp-surface-hover)',
+                borderRadius: '999px',
+                overflow: 'hidden',
+              }}>
+                <div style={{
+                  height: '100%',
+                  width: `${completionPercent}%`,
+                  background: 'var(--mp-primary)',
+                  borderRadius: '999px',
+                  transition: 'width 0.4s ease',
+                }} />
+              </div>
+              <span style={{ fontSize: '0.8rem', color: 'var(--mp-muted)', whiteSpace: 'nowrap' }}>
+                {progress.completed}/{allExercises.length} ({completionPercent}%)
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '1.25rem' }}>
+      <div style={{ maxWidth: '800px', margin: '0 auto', padding: embed ? '0.75rem 1.25rem' : '1.25rem' }}>
 
         {/* ── Lesson Layer (only when topic has lesson data) ── */}
         {topic.lesson && (
