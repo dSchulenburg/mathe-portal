@@ -11,9 +11,13 @@ function readInitialMode() {
   if (urlMode === 'adult' || urlMode === 'youth') {
     return urlMode;
   }
-  const stored = sessionStorage.getItem(STORAGE_KEY);
-  if (stored === 'adult' || stored === 'youth') {
-    return stored;
+  try {
+    const stored = sessionStorage.getItem(STORAGE_KEY);
+    if (stored === 'adult' || stored === 'youth') {
+      return stored;
+    }
+  } catch (_) {
+    // sessionStorage unavailable — fall through to default
   }
   return 'youth';
 }
@@ -24,20 +28,27 @@ function readInitialEmbed() {
 }
 
 export function DisplayModeProvider({ children }) {
-  const [mode, setMode] = useState(readInitialMode);
+  const [mode] = useState(readInitialMode);
   const [embed] = useState(readInitialEmbed);
 
   useEffect(() => {
-    sessionStorage.setItem(STORAGE_KEY, mode);
+    try {
+      sessionStorage.setItem(STORAGE_KEY, mode);
+    } catch (_) {
+      // sessionStorage may be unavailable (private browsing, quota exceeded) — fail silent
+    }
   }, [mode]);
 
   return (
-    <DisplayModeContext.Provider value={{ mode, embed, setMode }}>
+    <DisplayModeContext.Provider value={{ mode, embed }}>
       {children}
     </DisplayModeContext.Provider>
   );
 }
 
+// Intentionally returns the default { mode: 'youth', embed: false } outside a provider,
+// rather than throwing, so consumer components can be rendered in isolation (e.g. in tests)
+// without needing to wrap them. Mirrors the defaults set in createContext().
 export function useDisplayMode() {
   return useContext(DisplayModeContext);
 }
