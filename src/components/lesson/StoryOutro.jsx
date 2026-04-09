@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion';
 import MathText from './MathText';
+import { useDisplayMode } from '../../context/DisplayModeContext';
 
 /**
  * Story resolution at the end of a topic.
  * Shows how the character solved their problem + progress + teaser for next topic.
  */
 export default function StoryOutro({ character, topicId, topicIndex, totalTopics, t }) {
+  const { mode } = useDisplayMode();
+  if (mode === 'adult') return null;
   if (!character) return null;
 
   const outro = t(`lessons.${topicId}.story.outro`);

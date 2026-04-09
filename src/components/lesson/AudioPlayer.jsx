@@ -1,10 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
+import { useDisplayMode } from '../../context/DisplayModeContext';
 
 /**
  * Compact audio player for character narration.
  * Uses native HTML5 <audio> — no external dependencies.
  */
 export default function AudioPlayer({ src, accentColor = 'var(--mp-primary)', label }) {
+  const { mode } = useDisplayMode();
   const audioRef = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -27,6 +29,8 @@ export default function AudioPlayer({ src, accentColor = 'var(--mp-primary)', la
       audio.removeEventListener('ended', onEnd);
     };
   }, []);
+
+  if (mode === 'adult') return null;
 
   const toggle = () => {
     const audio = audioRef.current;

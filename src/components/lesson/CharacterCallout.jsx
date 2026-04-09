@@ -1,8 +1,12 @@
+import { useDisplayMode } from '../../context/DisplayModeContext';
+
 /**
  * Character speech bubble — "Mia sagt: ..."
  * Shows character portrait with a callout message.
  */
 export default function CharacterCallout({ character, children }) {
+  const { mode } = useDisplayMode();
+  if (mode === 'adult') return null;
   if (!character) return null;
 
   return (
