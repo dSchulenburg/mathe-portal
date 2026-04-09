@@ -2,13 +2,16 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import AudioPlayer from './AudioPlayer';
 import MathText from './MathText';
+import { useDisplayMode } from '../../context/DisplayModeContext';
 
 /**
  * Character-driven story intro for a topic.
  * Shows portrait, story context, challenge, and audio player.
  */
 export default function StoryScene({ character, story, topicStory, t, onRead }) {
+  const { mode } = useDisplayMode();
   useEffect(() => { if (onRead) onRead(); }, []);
+  if (mode === 'adult') return null;
   if (!character || !story) return null;
 
   const intro = t(`lessons.${topicStory.topicId}.story.intro`);
