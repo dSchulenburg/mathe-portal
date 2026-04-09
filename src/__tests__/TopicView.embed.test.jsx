@@ -20,6 +20,11 @@ describe('TopicView — embed mode', () => {
     window.history.replaceState({}, '', '/');
   });
 
+  // Use the header button's aria-label specifically to avoid false positives
+  // from the "topic not found" fallback button which has text "← Zurück"
+  // but no aria-label.
+  const headerBackLabel = /zurück zur themenübersicht/i;
+
   it('hides the sticky header (Zurück button) when embed=1', () => {
     window.history.replaceState({}, '', '/?embed=1');
     render(
@@ -27,7 +32,7 @@ describe('TopicView — embed mode', () => {
         <TopicView topicId="10-quad-funktionen" onBack={() => {}} />
       </Wrapper>
     );
-    expect(screen.queryByRole('button', { name: /zurück/i })).toBeNull();
+    expect(screen.queryByRole('button', { name: headerBackLabel })).toBeNull();
   });
 
   it('shows the sticky header (Zurück button) by default (no embed param)', () => {
@@ -36,6 +41,6 @@ describe('TopicView — embed mode', () => {
         <TopicView topicId="10-quad-funktionen" onBack={() => {}} />
       </Wrapper>
     );
-    expect(screen.queryByRole('button', { name: /zurück/i })).not.toBeNull();
+    expect(screen.queryByRole('button', { name: headerBackLabel })).not.toBeNull();
   });
 });

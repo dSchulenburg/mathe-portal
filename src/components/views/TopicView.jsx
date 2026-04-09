@@ -167,7 +167,7 @@ export default function TopicView({ topicId, onBack }) {
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem', flexWrap: 'wrap' }}>
               <button
                 onClick={onBack}
-                aria-label="Zurück"
+                aria-label="Zurück zur Themenübersicht"
                 style={{
                   background: 'transparent',
                   border: '1px solid var(--mp-border)',
