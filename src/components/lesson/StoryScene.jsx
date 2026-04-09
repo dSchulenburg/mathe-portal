@@ -10,7 +10,10 @@ import { useDisplayMode } from '../../context/DisplayModeContext';
  */
 export default function StoryScene({ character, story, topicStory, t, onRead }) {
   const { mode } = useDisplayMode();
-  useEffect(() => { if (onRead) onRead(); }, []);
+  useEffect(() => {
+    if (mode === 'adult') return;  // adult mode does not consume the story — no progress
+    if (onRead) onRead();
+  }, [mode, onRead]);
   if (mode === 'adult') return null;
   if (!character || !story) return null;
 

@@ -19,11 +19,6 @@ const character = {
 // t() must return a real string (not the fallback key) so StoryOutro doesn't bail
 const t = (key) => 'Mia hat es geschafft!';
 
-function withAdultMode(children) {
-  window.history.replaceState({}, '', '/?mode=adult');
-  return <DisplayModeProvider>{children}</DisplayModeProvider>;
-}
-
 describe('Adult-mode hiding', () => {
   beforeEach(() => {
     window.history.replaceState({}, '', '/');
@@ -31,8 +26,9 @@ describe('Adult-mode hiding', () => {
   });
 
   it('StoryOutro renders null in adult mode', () => {
+    window.history.replaceState({}, '', '/?mode=adult');
     const { container } = render(
-      withAdultMode(
+      <DisplayModeProvider>
         <StoryOutro
           character={character}
           topicId="bruchrechnung"
@@ -40,28 +36,65 @@ describe('Adult-mode hiding', () => {
           totalTopics={9}
           t={t}
         />
-      )
+      </DisplayModeProvider>
     );
     expect(container.firstChild).toBeNull();
   });
 
   it('CharacterCallout renders null in adult mode', () => {
+    window.history.replaceState({}, '', '/?mode=adult');
     const { container } = render(
-      withAdultMode(
+      <DisplayModeProvider>
         <CharacterCallout character={character}>
           Probier es mal aus!
         </CharacterCallout>
-      )
+      </DisplayModeProvider>
     );
     expect(container.firstChild).toBeNull();
   });
 
   it('AudioPlayer renders null in adult mode', () => {
+    window.history.replaceState({}, '', '/?mode=adult');
     const { container } = render(
-      withAdultMode(
+      <DisplayModeProvider>
         <AudioPlayer src="/audio/mia-intro.mp3" />
-      )
+      </DisplayModeProvider>
     );
     expect(container.firstChild).toBeNull();
+  });
+
+  it('StoryOutro renders normally in youth mode', () => {
+    const { container } = render(
+      <DisplayModeProvider>
+        <StoryOutro
+          character={character}
+          topicId="bruchrechnung"
+          topicIndex={0}
+          totalTopics={9}
+          t={t}
+        />
+      </DisplayModeProvider>
+    );
+    expect(container.firstChild).not.toBeNull();
+  });
+
+  it('CharacterCallout renders normally in youth mode', () => {
+    const { container } = render(
+      <DisplayModeProvider>
+        <CharacterCallout character={character}>
+          Probier es mal aus!
+        </CharacterCallout>
+      </DisplayModeProvider>
+    );
+    expect(container.firstChild).not.toBeNull();
+  });
+
+  it('AudioPlayer renders normally in youth mode', () => {
+    const { container } = render(
+      <DisplayModeProvider>
+        <AudioPlayer src="/audio/mia-intro.mp3" />
+      </DisplayModeProvider>
+    );
+    expect(container.firstChild).not.toBeNull();
   });
 });
