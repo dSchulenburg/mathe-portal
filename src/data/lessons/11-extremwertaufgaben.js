@@ -107,4 +107,34 @@ export const lesson = {
   ],
 
   prerequisites: ['11-kurvendiskussion'],
+
+  connections: [
+    {
+      topicId: '11-kurvendiskussion',
+      relation: 'baut-auf',
+      why: 'Optimieren ist eine Extremstelle finden — also Kurvendiskussion mit Bedeutung',
+      bubble: {
+        character: 'euklid',
+        text: 'Mathematisch passiert hier nichts Neues: $f\'(x) = 0$ und mit $f\'\'$ prüfen. Was anders ist, ist der Weg dorthin: Erst musst du aus einer Sachsituation überhaupt eine Funktion bauen. Modellieren ist die eigentliche Kunst.',
+      },
+    },
+    {
+      topicId: '10-quad-funktionen',
+      relation: 'baut-auf',
+      why: 'Der Scheitelpunkt einer Parabel ist das einfachste Optimum überhaupt',
+      bubble: {
+        character: 'euklid',
+        text: 'Wenn deine Zielfunktion am Ende eine Parabel ist, brauchst du gar keine Ableitung — du kennst den Scheitelpunkt schon aus Klasse 10. Quadratische Optimierung ist Extremwert „mit blossem Auge".',
+      },
+    },
+    {
+      topicId: '12-e-funktion-ln',
+      relation: 'fuehrt-zu',
+      why: 'Optimieren mit e-Funktionen — Akkuladung, Pharmadosis, Modellfit',
+      bubble: {
+        character: 'euklid',
+        text: 'In Klasse 12 wirst du Extrema von e-Funktionen suchen — wann ist die Wirkstoffkonzentration am höchsten, wann der Energieverbrauch am geringsten. Die Methode bleibt, nur die Funktionsklasse wird reicher.',
+      },
+    },
+  ],
 };

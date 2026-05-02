@@ -111,4 +111,34 @@ export const lesson = {
   ],
 
   prerequisites: ['11-binomialverteilung'],
+
+  connections: [
+    {
+      topicId: '11-binomialverteilung',
+      relation: 'baut-auf',
+      why: 'Binomialverteilung wird für große n zur Normalverteilung — Grenzwertsatz',
+      bubble: {
+        character: 'euklid',
+        text: 'Stell dir das Stabdiagramm der Binomialverteilung vor — bei n=20 sieht man noch Treppen, bei n=200 nicht mehr. Die Glockenkurve hier ist der Grenzfall. $\\mu = np$ und $\\sigma = \\sqrt{np(1-p)}$ — die alten Formeln gelten weiter, nur ohne Stäbe.',
+      },
+    },
+    {
+      topicId: '12-hypothesentests',
+      relation: 'anwendung',
+      why: 'Approximative Tests nutzen Normalverteilung statt aufwändiger Binomialrechnung',
+      bubble: {
+        character: 'euklid',
+        text: 'Bei großen Stichproben wäre $P(X \\leq k)$ binomial unangenehm zu rechnen. Mit der Normalverteilung wird daraus eine z-Transformation und ein Blick in die Φ-Tabelle. Hypothesentests werden so erst praxistauglich.',
+      },
+    },
+    {
+      topicId: '11-exp-log',
+      relation: 'verwandt',
+      why: 'Die Glockenkurve enthält e^(-x²/2) — die e-Funktion macht die Krümmung',
+      bubble: {
+        character: 'euklid',
+        text: 'Schau genau auf die Dichte: $f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} \\cdot e^{-\\frac{1}{2}\\left(\\frac{x-\\mu}{\\sigma}\\right)^2}$. Die e-Funktion sorgt für den weichen Abfall in beide Richtungen. Ohne sie keine Glocke.',
+      },
+    },
+  ],
 };

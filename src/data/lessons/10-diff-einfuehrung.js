@@ -107,4 +107,43 @@ export const lesson = {
   ],
 
   prerequisites: ['10-quad-funktionen'],
+
+  connections: [
+    {
+      topicId: '11-ableitungsregeln',
+      relation: 'fuehrt-zu',
+      why: 'Die Limes-Rechnung wird durch Regeln ersetzt — gleiche Idee, anderes Tempo',
+      bubble: {
+        character: 'euklid',
+        text: 'Was du hier mühevoll mit dem h-Limes berechnest, geht in Klasse 11 in einer Zeile: $f(x) = x^2 \\Rightarrow f\'(x) = 2x$. Die Regel kommt nicht aus dem Nichts — sie ist genau die Limes-Rechnung, die du gerade übst, ein für alle Mal erledigt.',
+      },
+    },
+    {
+      topicId: '10-quad-funktionen',
+      relation: 'baut-auf',
+      why: 'Die Tangentensteigung wird zuerst an Parabeln entdeckt',
+      bubble: {
+        character: 'euklid',
+        text: 'Du nutzt $f(x) = x^2$ als Übungsfunktion — und nicht zufällig. Parabeln sind die einfachsten Kurven, an denen die Steigung sich ändert. Eine Gerade hätte überall dieselbe Steigung — da gäbe es nichts zu entdecken.',
+      },
+    },
+    {
+      topicId: '11-extremwertaufgaben',
+      relation: 'fuehrt-zu',
+      why: 'f\'(x) = 0 ist die Bedingung für Extremstellen',
+      bubble: {
+        character: 'euklid',
+        text: 'Was bringt es, die Tangentensteigung auszurechnen? In Klasse 11 wirst du sehen: Genau dort, wo $f\'(x) = 0$ — wo die Tangente waagrecht liegt — sitzen die Maxima und Minima. Aus dem Limes wird ein Werkzeug zur Optimierung.',
+      },
+    },
+    {
+      topicId: '11-integralrechnung',
+      relation: 'fuehrt-zu',
+      why: 'Integralrechnung ist die Umkehrung der Differentialrechnung',
+      bubble: {
+        character: 'euklid',
+        text: 'Hier zerlegst du eine Bewegung in Momentangeschwindigkeiten. In Klasse 11 wirst du das umgekehrt machen: aus der Geschwindigkeit den zurückgelegten Weg zusammenbauen. Differenzieren und Integrieren sind zwei Richtungen derselben Idee.',
+      },
+    },
+  ],
 };

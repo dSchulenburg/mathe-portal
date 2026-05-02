@@ -140,4 +140,43 @@ export const lesson = {
   ],
 
   prerequisites: ['10-pythagoras'],
+
+  connections: [
+    {
+      topicId: '10-pythagoras',
+      relation: 'baut-auf',
+      why: 'Vektorlänge ist Pythagoras in n Dimensionen',
+      bubble: {
+        character: 'euklid',
+        text: 'Schau dir $|\\vec{a}| = \\sqrt{a_1^2 + a_2^2 + a_3^2}$ noch einmal an — das ist der Satz des Pythagoras, einmal für die Bodendiagonale und dann nochmal für die Raumdiagonale, in einer einzigen Wurzel zusammengefasst. Du kannst das beliebig fortsetzen.',
+      },
+    },
+    {
+      topicId: '10-trigonometrie',
+      relation: 'baut-auf',
+      why: 'Skalarprodukt nutzt cos(α) — der Winkel zwischen Vektoren',
+      bubble: {
+        character: 'euklid',
+        text: 'Der Kosinus, den du am Dreieck eingeführt hast, kommt hier wieder: $\\cos(\\alpha) = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}|\\,|\\vec{b}|}$. So misst man Winkel zwischen Vektoren — und genau so misst eine KI, wie ähnlich sich zwei Wörter sind.',
+      },
+    },
+    {
+      topicId: '12-matrizen',
+      relation: 'fuehrt-zu',
+      why: 'Matrizen wirken auf Vektoren — Drehung, Spiegelung, Übergang',
+      bubble: {
+        character: 'euklid',
+        text: 'Vektoren sind Punkte und Richtungen. In Klasse 12 lernst du Matrizen kennen — das sind die Werkzeuge, die diese Punkte verschieben, drehen und strecken. Aus einem Vektor wird $M \\cdot \\vec{v}$, und plötzlich rotiert die ganze Spielwelt.',
+      },
+    },
+    {
+      topicId: '12-analytische-geometrie',
+      relation: 'fuehrt-zu',
+      why: 'Geraden und Ebenen werden mit Vektoren beschrieben',
+      bubble: {
+        character: 'euklid',
+        text: 'Ein einzelner Vektor ist nur ein Pfeil. Zwei Vektoren spannen eine Ebene auf, drei einen Raum. In Klasse 12 wirst du daraus Geradengleichungen, Ebenengleichungen und Schnittpunkte bauen — die ganze analytische Geometrie ist Vektorrechnung in Anwendung.',
+      },
+    },
+  ],
 };

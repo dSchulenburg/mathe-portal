@@ -104,4 +104,34 @@ export const lesson = {
   ],
 
   prerequisites: [],
+
+  connections: [
+    {
+      topicId: '11-bedingte-wahrscheinlichkeit',
+      relation: 'fuehrt-zu',
+      why: 'Bedingte Wk fragt: was ändert sich, wenn ich vorher etwas weiß?',
+      bubble: {
+        character: 'euklid',
+        text: 'Du hast hier Wahrscheinlichkeiten gerechnet, ohne dass dich Information unterwegs stört. In Klasse 11 dreht sich alles darum: Wenn ich weiß, dass A eingetreten ist — wie verschiebt sich dann $P(B)$? Bayes ist die Mathematik des Dazulernens.',
+      },
+    },
+    {
+      topicId: '11-binomialverteilung',
+      relation: 'fuehrt-zu',
+      why: 'Binomialverteilung verallgemeinert die Pfadregel auf n unabhängige Wiederholungen',
+      bubble: {
+        character: 'euklid',
+        text: 'Wenn du dieselbe Münze 100-mal wirfst und fragst „Wie wahrscheinlich genau 60 Kopf?" — dann brauchst du nicht 100 Pfade zu zeichnen. Die Binomialformel macht das in einer Zeile. Die Idee ist aber dieselbe wie hier am Baum.',
+      },
+    },
+    {
+      topicId: '12-normalverteilung',
+      relation: 'fuehrt-zu',
+      why: 'Aus diskreter Wk wird im Grenzfall stetige Verteilung',
+      bubble: {
+        character: 'euklid',
+        text: 'Würfel und Münzen sind diskret — endlich viele Ergebnisse, klare Brüche. In Klasse 12 lernst du stetige Verteilungen kennen, allen voran die Glockenkurve. Aus den Säulen wird eine glatte Fläche, aus $\\sum$ wird $\\int$.',
+      },
+    },
+  ],
 };
