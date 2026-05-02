@@ -118,4 +118,43 @@ export const lesson = {
   ],
 
   prerequisites: ['10-diff-einfuehrung'],
+
+  connections: [
+    {
+      topicId: '10-diff-einfuehrung',
+      relation: 'baut-auf',
+      why: 'Die Potenzregel ersetzt die mühsame Limes-Rechnung durch ein simples Schema',
+      bubble: {
+        character: 'euklid',
+        text: 'In Klasse 10 hast du den Differenzenquotienten gegen Null laufen lassen — Schritt für Schritt. Das war der ehrliche Weg. Jetzt bekommst du die Abkürzung: $f(x) = x^n \\Rightarrow f\'(x) = n \\cdot x^{n-1}$. Aber unter der Haube läuft immer noch derselbe Limes.',
+      },
+    },
+    {
+      topicId: '11-kurvendiskussion',
+      relation: 'fuehrt-zu',
+      why: 'Ableitungsregeln sind die Werkzeuge — Kurvendiskussion ist die Anwendung',
+      bubble: {
+        character: 'euklid',
+        text: 'Was du hier als Regelwerk lernst, brauchst du sofort: $f\'(x) = 0$ verrät Extremstellen, $f\'\'(x) = 0$ verrät Wendepunkte. Ohne diese Regeln keine Kurvendiskussion — und ohne Kurvendiskussion kein Abi.',
+      },
+    },
+    {
+      topicId: '11-extremwertaufgaben',
+      relation: 'fuehrt-zu',
+      why: 'Optimieren = Zielfunktion ableiten und f\'(x) = 0 lösen',
+      bubble: {
+        character: 'euklid',
+        text: 'Die Kettenregel und die Quotientenregel werden in Extremwertaufgaben zum Brot-und-Butter-Werkzeug — jede Optimierung beginnt mit einer Ableitung der Zielfunktion. Wer die Regeln sicher hat, kann sich auf die Modellierung konzentrieren.',
+      },
+    },
+    {
+      topicId: '11-exp-log',
+      relation: 'verwandt',
+      why: 'e^x ist die Funktion, die mit ihrer eigenen Ableitung übereinstimmt',
+      bubble: {
+        character: 'euklid',
+        text: 'Bei den Ableitungsregeln triffst du auf eine wundersame Sache: $\\left(e^x\\right)\' = e^x$. Das ist keine Nebensache — genau das macht $e$ zur natürlichen Basis und ist der Grund, warum die e-Funktion in Klasse 12 so allgegenwärtig wird.',
+      },
+    },
+  ],
 };

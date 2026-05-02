@@ -109,4 +109,43 @@ export const lesson = {
   ],
 
   prerequisites: ['11-ableitungsregeln'],
+
+  connections: [
+    {
+      topicId: '11-ableitungsregeln',
+      relation: 'baut-auf',
+      why: 'Ohne sichere Ableitungen geht keine Kurvendiskussion — sie ist die Anwendung',
+      bubble: {
+        character: 'euklid',
+        text: 'Hier zahlt sich jeder Abend aus, an dem du Ableitungsregeln geübt hast. f\', f\'\', manchmal f\'\'\' — die Regeln sind das Werkzeug, die Diskussion ist die Werkstatt. Wenn dir die Regeln noch wackeln, geh nochmal zurück.',
+      },
+    },
+    {
+      topicId: '11-extremwertaufgaben',
+      relation: 'fuehrt-zu',
+      why: 'Extremwertaufgaben sind angewandte Kurvendiskussion mit Sachkontext',
+      bubble: {
+        character: 'euklid',
+        text: 'Was hier abstrakt ist — Extremstelle finden — wird gleich praktisch: optimale Dosengröße, maximaler Gewinn, kürzester Weg. Die Methode bleibt: $f\'(x) = 0$ setzen, mit $f\'\'$ prüfen.',
+      },
+    },
+    {
+      topicId: '11-rationale-funktionen',
+      relation: 'verwandt',
+      why: 'Polstellen und Asymptoten erweitern die Kurvendiskussion auf Brüche',
+      bubble: {
+        character: 'euklid',
+        text: 'Bisher hattest du Polynome — die haben weder Polstellen noch waagrechte Asymptoten. Bei rationalen Funktionen kommen diese Phänomene dazu. Die Methode der Kurvendiskussion bleibt, sie wird nur um zwei neue Kapitel reicher.',
+      },
+    },
+    {
+      topicId: '12-abiturvorbereitung',
+      relation: 'fuehrt-zu',
+      why: 'Die Standardaufgabe „Untersuchen Sie f auf …" ist im Abi allgegenwärtig',
+      bubble: {
+        character: 'euklid',
+        text: 'In jeder Abiklausur findest du eine vollständige Kurvendiskussion — meist mit einer e- oder Polynomfunktion. Wenn du das Schema „Nullstellen, Extrema, Wendepunkte, Symmetrie, Skizze" verinnerlicht hast, sind 30-40% der Analysis-Punkte sicher.',
+      },
+    },
+  ],
 };
