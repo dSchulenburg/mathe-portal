@@ -122,6 +122,7 @@ export const TOPICS = [
       xRange: [-7, 7],
       yRange: [-4, 4],
     },
+    station: 'Einheitskreis',
   },
   {
     id: '10-exp-wachstum',
@@ -157,7 +158,7 @@ export const TOPICS = [
     exercises: wahrscheinlichkeitEx,
     lesson: wahrscheinlichkeitLesson,
     plotter: null,
-    station: 'DiceSim',
+    stations: ['ProbabilityTree', 'FourFieldTable'],
   },
   {
     id: '10-pythagoras',
@@ -183,6 +184,7 @@ export const TOPICS = [
     exercises: koerperEx,
     lesson: koerperLesson,
     plotter: null,
+    station: 'BodyExplorer3D',
   },
   {
     id: '10-potenzgesetze',
@@ -207,6 +209,7 @@ export const TOPICS = [
     exercises: aehnlichkeitEx,
     lesson: aehnlichkeitLesson,
     plotter: null,
+    station: 'StrahlensatzExplorer',
   },
   {
     id: '10-periodisch',
@@ -255,6 +258,7 @@ export const TOPICS = [
       xRange: [-4, 4],
       yRange: [-2, 10],
     },
+    station: 'SekanteTangente',
   },
   {
     id: '10-funktionsklassen',
@@ -362,6 +366,7 @@ export const TOPICS = [
       xRange: [-4, 4],
       yRange: [-4, 10],
     },
+    station: 'RiemannSummen',
   },
   {
     id: '11-exp-log',
@@ -398,6 +403,7 @@ export const TOPICS = [
     exercises: binomialEx,
     lesson: binomialLesson,
     plotter: null,
+    station: 'BinomialHistogram',
   },
   {
     id: '11-bedingte-wahrscheinlichkeit',
@@ -410,6 +416,7 @@ export const TOPICS = [
     exercises: bedingteWkEx,
     lesson: bedingteWkLesson,
     plotter: null,
+    stations: ['ProbabilityTree', 'FourFieldTable'],
   },
   {
     id: '11-vektorrechnung',
@@ -422,6 +429,7 @@ export const TOPICS = [
     exercises: vektorrechnungEx,
     lesson: vektorrechnungLesson,
     plotter: null,
+    station: 'VectorExplorer',
   },
 
   // ─── KLASSE 12 ──────────────────────────────────────────────────────────────
@@ -494,6 +502,7 @@ export const TOPICS = [
     exercises: hypothesentestsEx,
     lesson: hypothesentestsLesson,
     plotter: null,
+    station: 'BinomialHistogram',
   },
   {
     id: '12-normalverteilung',
@@ -529,6 +538,7 @@ export const TOPICS = [
     exercises: matrizenEx,
     lesson: matrizenLesson,
     plotter: null,
+    station: 'MarkovDiagramm',
   },
   {
     id: '12-abiturvorbereitung',

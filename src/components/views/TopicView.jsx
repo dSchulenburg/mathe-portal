@@ -14,6 +14,16 @@ import FunctionPlotter from '../stations/FunctionPlotter';
 import PythagorasExplorer from '../stations/PythagorasExplorer';
 import DiceSim from '../stations/DiceSim';
 import DiscriminantViz from '../stations/DiscriminantViz';
+import ProbabilityTree from '../stations/ProbabilityTree';
+import BinomialHistogram from '../stations/BinomialHistogram';
+import StrahlensatzExplorer from '../stations/StrahlensatzExplorer';
+import Einheitskreis from '../stations/Einheitskreis';
+import VectorExplorer from '../stations/VectorExplorer';
+import BodyExplorer3D from '../stations/BodyExplorer3D';
+import SekanteTangente from '../stations/SekanteTangente';
+import RiemannSummen from '../stations/RiemannSummen';
+import MarkovDiagramm from '../stations/MarkovDiagramm';
+import FourFieldTable from '../stations/FourFieldTable';
 import LessonLayer from '../lesson/LessonLayer';
 import StoryOutro from '../lesson/StoryOutro';
 import { getCharacterForTopic, TOPIC_STORIES } from '../../data/characters';
@@ -25,6 +35,28 @@ function ensureRegistered(topicId) {
   if (topic?.exercises?.length) {
     topic.exercises.forEach(ex => registerExercise(ex));
   }
+}
+
+const STATION_REGISTRY = {
+  PythagorasExplorer: { Component: PythagorasExplorer, title: '🔭 Erkunde den Satz des Pythagoras' },
+  DiceSim: { Component: DiceSim, title: '🎲 Zufallsexperiment-Simulator' },
+  DiscriminantViz: { Component: DiscriminantViz, title: '🔭 Erkunde die Diskriminante' },
+  ProbabilityTree: { Component: ProbabilityTree, title: '🌳 Wahrscheinlichkeitsbaum erkunden' },
+  BinomialHistogram: { Component: BinomialHistogram, title: '📊 Binomialverteilung erkunden' },
+  StrahlensatzExplorer: { Component: StrahlensatzExplorer, title: '📐 Strahlensatz live erkunden' },
+  Einheitskreis: { Component: Einheitskreis, title: '⭕ Einheitskreis & Sinus-Welle' },
+  VectorExplorer: { Component: VectorExplorer, title: '➡️ Vektoren & Skalarprodukt' },
+  BodyExplorer3D: { Component: BodyExplorer3D, title: '🔺 Körper drehen & erkunden' },
+  SekanteTangente: { Component: SekanteTangente, title: '📈 Sekante → Tangente' },
+  RiemannSummen: { Component: RiemannSummen, title: '📐 Riemann-Summen → Integral' },
+  MarkovDiagramm: { Component: MarkovDiagramm, title: '🔄 Markov-Kette: Konvergenz zum Fixvektor' },
+  FourFieldTable: { Component: FourFieldTable, title: '🔢 Vierfeldertafel interaktiv' },
+};
+
+function getStationsForTopic(topic) {
+  if (Array.isArray(topic.stations)) return topic.stations;
+  if (topic.station) return [topic.station];
+  return [];
 }
 
 function renderExercise(exercise, onComplete) {
@@ -273,24 +305,17 @@ export default function TopicView({ topicId, onBack }) {
         )}
 
         {/* ── Interactive Stations ── */}
-        {topic.station === 'PythagorasExplorer' && (
-          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
-            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>🔭 Erkunde den Satz des Pythagoras</h2>
-            <PythagorasExplorer />
-          </div>
-        )}
-        {topic.station === 'DiceSim' && (
-          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
-            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>🎲 Zufallsexperiment-Simulator</h2>
-            <DiceSim />
-          </div>
-        )}
-        {topic.station === 'DiscriminantViz' && (
-          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
-            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>🔭 Erkunde die Diskriminante</h2>
-            <DiscriminantViz />
-          </div>
-        )}
+        {getStationsForTopic(topic).map((stationId) => {
+          const meta = STATION_REGISTRY[stationId];
+          if (!meta) return null;
+          const { Component, title } = meta;
+          return (
+            <div key={stationId} style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
+              <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>{title}</h2>
+              <Component />
+            </div>
+          );
+        })}
 
         {/* ── Difficulty Tabs ── */}
         <div style={{
