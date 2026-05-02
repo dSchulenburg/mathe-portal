@@ -4,8 +4,31 @@ import { createJournalStore } from '@lernmodule/journal/store';
 import { pickFallbackPrompt } from '@lernmodule/journal/fallbackPrompts';
 
 const MODULE_ID = 'mathe-portal';
+const HEATMAP_ENTRY_URL =
+  'https://dashboard.dirk-schulenburg.net/api/journal/heatmap/entry';
+const HEATMAP_POST_TIMEOUT_MS = 3000;
 
 const store = typeof window !== 'undefined' ? createJournalStore() : null;
+
+// Fire-and-forget anonymous POST to the heatmap endpoint when the learner
+// has opted into swarm visibility. Sends ONLY (moduleId, sectionId) — no
+// transcript, no user id. Silent on any failure: this is best-effort.
+function postHeatmapEntry(sectionId) {
+  if (typeof fetch !== 'function') return;
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), HEATMAP_POST_TIMEOUT_MS);
+  fetch(HEATMAP_ENTRY_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ moduleId: MODULE_ID, sectionId }),
+    signal: ctrl.signal,
+    // No credentials — anonymous by design.
+    credentials: 'omit',
+    keepalive: true,
+  })
+    .catch(() => { /* silent */ })
+    .finally(() => clearTimeout(timer));
+}
 
 /**
  * Mount-component for the journal MikroCard. Listens for the
@@ -76,6 +99,17 @@ export default function MikroCardMount() {
   function handleSave(entry) {
     store.addEntry(entry);
     recentPromptsRef.current = [prompt, ...recentPromptsRef.current].slice(0, 8);
+    // Stigmergie: if the learner has opted into swarm visibility, contribute
+    // an anonymous (moduleId, sectionId) tuple to the heatmap aggregate.
+    // Skip "skip"-modality entries — those are non-reflections.
+    try {
+      const settings = store.getSettings();
+      if (settings.swarmOptedIn && entry.modality !== 'skip' && entry.sectionId) {
+        postHeatmapEntry(entry.sectionId);
+      }
+    } catch {
+      /* settings unreadable → don't post */
+    }
     setTrigger(null);
   }
 
