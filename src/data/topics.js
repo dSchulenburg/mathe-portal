@@ -538,6 +538,7 @@ export const TOPICS = [
     exercises: matrizenEx,
     lesson: matrizenLesson,
     plotter: null,
+    station: 'MarkovDiagramm',
   },
   {
     id: '12-abiturvorbereitung',
