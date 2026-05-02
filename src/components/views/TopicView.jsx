@@ -14,6 +14,12 @@ import FunctionPlotter from '../stations/FunctionPlotter';
 import PythagorasExplorer from '../stations/PythagorasExplorer';
 import DiceSim from '../stations/DiceSim';
 import DiscriminantViz from '../stations/DiscriminantViz';
+import ProbabilityTree from '../stations/ProbabilityTree';
+import BinomialHistogram from '../stations/BinomialHistogram';
+import StrahlensatzExplorer from '../stations/StrahlensatzExplorer';
+import Einheitskreis from '../stations/Einheitskreis';
+import VectorExplorer from '../stations/VectorExplorer';
+import BodyExplorer3D from '../stations/BodyExplorer3D';
 import LessonLayer from '../lesson/LessonLayer';
 import StoryOutro from '../lesson/StoryOutro';
 import { getCharacterForTopic, TOPIC_STORIES } from '../../data/characters';
@@ -289,6 +295,42 @@ export default function TopicView({ topicId, onBack }) {
           <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
             <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>🔭 Erkunde die Diskriminante</h2>
             <DiscriminantViz />
+          </div>
+        )}
+        {topic.station === 'ProbabilityTree' && (
+          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
+            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>🌳 Wahrscheinlichkeitsbaum erkunden</h2>
+            <ProbabilityTree />
+          </div>
+        )}
+        {topic.station === 'BinomialHistogram' && (
+          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
+            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>📊 Binomialverteilung erkunden</h2>
+            <BinomialHistogram />
+          </div>
+        )}
+        {topic.station === 'StrahlensatzExplorer' && (
+          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
+            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>📐 Strahlensatz live erkunden</h2>
+            <StrahlensatzExplorer />
+          </div>
+        )}
+        {topic.station === 'Einheitskreis' && (
+          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
+            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>⭕ Einheitskreis & Sinus-Welle</h2>
+            <Einheitskreis />
+          </div>
+        )}
+        {topic.station === 'VectorExplorer' && (
+          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
+            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>➡️ Vektoren & Skalarprodukt</h2>
+            <VectorExplorer />
+          </div>
+        )}
+        {topic.station === 'BodyExplorer3D' && (
+          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
+            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>🔺 Körper drehen & erkunden</h2>
+            <BodyExplorer3D />
           </div>
         )}
 
