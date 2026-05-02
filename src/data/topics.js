@@ -158,7 +158,7 @@ export const TOPICS = [
     exercises: wahrscheinlichkeitEx,
     lesson: wahrscheinlichkeitLesson,
     plotter: null,
-    station: 'ProbabilityTree',
+    stations: ['ProbabilityTree', 'FourFieldTable'],
   },
   {
     id: '10-pythagoras',
@@ -258,6 +258,7 @@ export const TOPICS = [
       xRange: [-4, 4],
       yRange: [-2, 10],
     },
+    station: 'SekanteTangente',
   },
   {
     id: '10-funktionsklassen',
@@ -365,6 +366,7 @@ export const TOPICS = [
       xRange: [-4, 4],
       yRange: [-4, 10],
     },
+    station: 'RiemannSummen',
   },
   {
     id: '11-exp-log',
@@ -414,7 +416,7 @@ export const TOPICS = [
     exercises: bedingteWkEx,
     lesson: bedingteWkLesson,
     plotter: null,
-    station: 'ProbabilityTree',
+    stations: ['ProbabilityTree', 'FourFieldTable'],
   },
   {
     id: '11-vektorrechnung',
@@ -536,6 +538,7 @@ export const TOPICS = [
     exercises: matrizenEx,
     lesson: matrizenLesson,
     plotter: null,
+    station: 'MarkovDiagramm',
   },
   {
     id: '12-abiturvorbereitung',
