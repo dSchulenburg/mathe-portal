@@ -42,6 +42,8 @@ import { lesson as expLogLesson } from './lessons/11-exp-log';
 import { lesson as binomialLesson } from './lessons/11-binomialverteilung';
 import { lesson as bedingteWkLesson } from './lessons/11-bedingte-wk';
 import { lesson as vektorrechnungLesson } from './lessons/11-vektorrechnung';
+import { exercises as rationaleFunktionenEx } from './exercises/11-rationale-funktionen';
+import { lesson as rationaleFunktionenLesson } from './lessons/11-rationale-funktionen';
 
 // Klasse 12
 import { exercises as eFunktionLnEx } from './exercises/12-e-funktion-ln';
@@ -455,6 +457,29 @@ export const TOPICS = [
     lesson: vektorrechnungLesson,
     plotter: null,
     station: 'VectorExplorer',
+  },
+  {
+    id: '11-rationale-funktionen',
+    grade: 11,
+    domain: 'analysis',
+    titleKey: 'Rationale Funktionen (Asymptoten, Polstellen)',
+    icon: '➗',
+    color: '#0891b2',
+    period: 'Klasse 11',
+    exercises: rationaleFunktionenEx,
+    lesson: rationaleFunktionenLesson,
+    plotter: {
+      title: 'Erkunde rationale Funktionen',
+      functions: [
+        { expression: '(x + a) / (x + b)', color: '#0891b2', label: 'f(x) = (x+a)/(x+b)' },
+      ],
+      sliders: [
+        { param: 'a', min: -5, max: 5, step: 0.5, initial: -3, label: 'Zähler-Verschiebung a' },
+        { param: 'b', min: -5, max: 5, step: 0.5, initial: 1, label: 'Nenner-Verschiebung b' },
+      ],
+      xRange: [-8, 8],
+      yRange: [-6, 8],
+    },
   },
 
   // ─── KLASSE 12 ──────────────────────────────────────────────────────────────

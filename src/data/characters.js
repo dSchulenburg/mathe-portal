@@ -175,6 +175,11 @@ export const TOPIC_STORIES = {
     audioFile: new URL('../../assets/amir/audio/sec08-vektorrechnung.mp3', import.meta.url).href,
     challenge: 'Embedding-Räume visualisieren',
   },
+  '11-rationale-funktionen': {
+    characterId: 'amir',
+    audioFile: null,
+    challenge: 'Lat encoder mit Polstellen-Behandlung',
+  },
 
   // ── Klasse 12 — Kai & Hafenlichter 3D ──
   '12-e-funktion-ln': {
