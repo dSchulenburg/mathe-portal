@@ -340,7 +340,7 @@ export const exercises = [
 
   {
     id: 'ageo-erweitert-005', topicId: '12-analytische-geometrie', type: 'step-solver', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kreativitaet'], points: 15, timeEstimate: 14,
+    competencies: ['kritisches-denken', 'kreativität'], points: 15, timeEstimate: 14,
     contextKey: 'VR-Gaming — Kollision Kugel/Wand',
     data: {
       questionText: 'In einem VR-Spiel nähert sich ein Spielercharakter (Startpunkt $S = (0; 0; 6)$, Bewegungsrichtung $\\vec{v} = \\begin{pmatrix} 2 \\\\ 1 \\\\ -3 \\end{pmatrix}$) einer Wand (Ebene $E: 2x + y - z = 3$). Bestimme den Auftreffpunkt und prüfe, ob sich der Charakter mit dem Rücken oder der Vorderseite nähert (Normalenvektor $\\vec{n} = \\begin{pmatrix} 2 \\\\ 1 \\\\ -1 \\end{pmatrix}$ zeigt nach außen).',

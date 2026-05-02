@@ -13,19 +13,19 @@ export const exercises = [
     timeEstimate: 3,
     data: {
       questionText:
-        'Berechne die mittlere Aenderungsrate von f(x) = x² auf dem Intervall [1; 3]. ' +
+        'Berechne die mittlere Änderungsrate von f(x) = x² auf dem Intervall [1; 3]. ' +
         'Das Ergebnis ist Δy/Δx.',
       correctValue: 4,
       tolerance: 0.01,
     },
     hintKeys: [
-      'Die mittlere Aenderungsrate ist Δy/Δx = (f(3) − f(1)) / (3 − 1).',
+      'Die mittlere Änderungsrate ist Δy/Δx = (f(3) − f(1)) / (3 − 1).',
       'f(1) = 1² = 1 und f(3) = 3² = 9.',
     ],
     solutionKey:
       'Δy/Δx = (f(3) − f(1)) / (3 − 1) = (9 − 1) / 2 = 8 / 2 = 4. ' +
-      'Die mittlere Aenderungsrate betraegt 4.',
-    tags: ['mittlere-aenderungsrate', 'differenzenquotient'],
+      'Die mittlere Änderungsrate betraegt 4.',
+    tags: ['mittlere-änderungsrate', 'differenzenquotient'],
   },
 
   {
@@ -52,7 +52,7 @@ export const exercises = [
     ],
     solutionKey:
       'm = (9 − 1) / (3 − 1) = 8 / 2 = 4. Die Sekante hat die Steigung 4.',
-    tags: ['sekante', 'steigung', 'mittlere-aenderungsrate'],
+    tags: ['sekante', 'steigung', 'mittlere-änderungsrate'],
   },
 
   {
@@ -65,7 +65,7 @@ export const exercises = [
     timeEstimate: 2,
     data: {
       questionText:
-        'Was beschreibt die momentane Aenderungsrate einer Funktion an der Stelle x₀?',
+        'Was beschreibt die momentane Änderungsrate einer Funktion an der Stelle x₀?',
       options: [
         { id: 'a', text: 'Die Steigung der Tangente an den Graphen im Punkt x₀', correct: true },
         { id: 'b', text: 'Der Durchschnitt der Funktionswerte auf einem Intervall', correct: false },
@@ -74,13 +74,13 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Die momentane Aenderungsrate gibt die Steilheit des Graphen genau an einer Stelle an.',
+      'Die momentane Änderungsrate gibt die Steilheit des Graphen genau an einer Stelle an.',
       'Denke an die Tangente als Grenzfall der Sekante.',
     ],
     solutionKey:
-      'Die momentane Aenderungsrate entspricht der Steigung der Tangente an den Graphen ' +
-      'im Punkt x₀. Sie ist der Grenzwert des Differenzenquotienten fuer h → 0.',
-    tags: ['momentane-aenderungsrate', 'tangente', 'grundbegriffe'],
+      'Die momentane Änderungsrate entspricht der Steigung der Tangente an den Graphen ' +
+      'im Punkt x₀. Sie ist der Grenzwert des Differenzenquotienten für h → 0.',
+    tags: ['momentane-änderungsrate', 'tangente', 'grundbegriffe'],
   },
 
   {
@@ -93,7 +93,7 @@ export const exercises = [
     timeEstimate: 4,
     data: {
       questionText:
-        'Berechne den Differenzenquotienten von f(x) = 2x + 1 fuer ' +
+        'Berechne den Differenzenquotienten von f(x) = 2x + 1 für ' +
         'x₀ = 3 und h = 1: [f(x₀ + h) − f(x₀)] / h.',
       correctValue: 2,
       tolerance: 0.01,
@@ -126,11 +126,11 @@ export const exercises = [
     },
     hintKeys: [
       'Berechne [f(2 + h) − f(2)] / h = [(2+h)² − 4] / h und vereinfache.',
-      'Kuerze h heraus und bilde dann den Grenzwert fuer h → 0.',
+      'Kürze h heraus und bilde dann den Grenzwert für h → 0.',
     ],
     solutionKey:
       '[(2+h)² − 4] / h = [4 + 4h + h² − 4] / h = (4h + h²) / h = 4 + h. ' +
-      'Fuer h → 0 ergibt sich f′(2) = 4. Die Tangentensteigung betraegt 4.',
+      'Für h → 0 ergibt sich f′(2) = 4. Die Tangentensteigung betraegt 4.',
     tags: ['tangente', 'grenzwert', 'parabel'],
   },
 
@@ -148,7 +148,7 @@ export const exercises = [
     timeEstimate: 6,
     data: {
       questionText:
-        'Berechne den Grenzwert des Differenzenquotienten fuer f(x) = x² ' +
+        'Berechne den Grenzwert des Differenzenquotienten für f(x) = x² ' +
         'an einer beliebigen Stelle x (d. h. bestimme f′(x)). ' +
         'An der Stelle x = 3 ergibt die Ableitung den Wert …',
       correctValue: 6,
@@ -156,11 +156,11 @@ export const exercises = [
     },
     hintKeys: [
       '[f(x + h) − f(x)] / h = [(x+h)² − x²] / h. Multipliziere (x+h)² aus.',
-      'Nach dem Kuerzen von h bleibt 2x + h. Grenzwert fuer h → 0?',
+      'Nach dem Kürzen von h bleibt 2x + h. Grenzwert für h → 0?',
     ],
     solutionKey:
       '[(x+h)² − x²] / h = (x² + 2xh + h² − x²) / h = (2xh + h²) / h = 2x + h. ' +
-      'Fuer h → 0: f′(x) = 2x. An der Stelle x = 3: f′(3) = 6.',
+      'Für h → 0: f′(x) = 2x. An der Stelle x = 3: f′(3) = 6.',
     tags: ['grenzwert', 'differenzenquotient', 'ableitung', 'parabel'],
   },
 
@@ -185,7 +185,7 @@ export const exercises = [
     ],
     solutionKey:
       '[3(x+h)² − 3x²] / h = 3 · [(x+h)² − x²] / h = 3 · (2x + h). ' +
-      'Grenzwert fuer h → 0: f′(x) = 6x. f′(2) = 6 · 2 = 12.',
+      'Grenzwert für h → 0: f′(x) = 6x. f′(2) = 6 · 2 = 12.',
     tags: ['ableitung', 'potenzregel', 'grenzwert'],
   },
 
@@ -200,17 +200,17 @@ export const exercises = [
     data: {
       questionText:
         'Berechne die Steigung der Tangente an f(x) = x³ an der Stelle x = 1. ' +
-        '(Tipp: Berechne den Grenzwert des Differenzenquotienten fuer h → 0.)',
+        '(Tipp: Berechne den Grenzwert des Differenzenquotienten für h → 0.)',
       correctValue: 3,
       tolerance: 0.01,
     },
     hintKeys: [
       '[(1+h)³ − 1] / h. Entwickle (1+h)³ = 1 + 3h + 3h² + h³.',
-      'Kuerze h und bilde den Grenzwert fuer h → 0.',
+      'Kürze h und bilde den Grenzwert für h → 0.',
     ],
     solutionKey:
       '[(1+h)³ − 1³] / h = (1 + 3h + 3h² + h³ − 1) / h = (3h + 3h² + h³) / h ' +
-      '= 3 + 3h + h². Fuer h → 0: f′(1) = 3.',
+      '= 3 + 3h + h². Für h → 0: f′(1) = 3.',
     tags: ['tangente', 'kubische-funktion', 'grenzwert'],
   },
 
@@ -225,44 +225,44 @@ export const exercises = [
     data: {
       questionText:
         'Welche der folgenden Aussagen zum Unterschied zwischen mittlerer und ' +
-        'momentaner Aenderungsrate ist KORREKT?',
+        'momentaner Änderungsrate ist KORREKT?',
       options: [
         {
           id: 'a',
           text:
-            'Die mittlere Aenderungsrate bezieht sich auf ein Intervall [x₀; x₁], ' +
+            'Die mittlere Änderungsrate bezieht sich auf ein Intervall [x₀; x₁], ' +
             'die momentane auf einen einzelnen Punkt x₀.',
           correct: true,
         },
         {
           id: 'b',
-          text: 'Beide Aenderungsraten liefern stets denselben Wert.',
+          text: 'Beide Änderungsraten liefern stets denselben Wert.',
           correct: false,
         },
         {
           id: 'c',
           text:
-            'Die momentane Aenderungsrate laesst sich direkt aus der Funktionsgleichung ' +
+            'Die momentane Änderungsrate laesst sich direkt aus der Funktionsgleichung ' +
             'ohne Grenzwertbetrachtung ablesen.',
           correct: false,
         },
         {
           id: 'd',
           text:
-            'Die mittlere Aenderungsrate ist immer groesser als die momentane Aenderungsrate.',
+            'Die mittlere Änderungsrate ist immer größer als die momentane Änderungsrate.',
           correct: false,
         },
       ],
     },
     hintKeys: [
-      'Die mittlere Aenderungsrate = Steigung der Sekante (ueber ein Intervall).',
-      'Die momentane Aenderungsrate = Grenzwert des Differenzenquotienten fuer h → 0.',
+      'Die mittlere Änderungsrate = Steigung der Sekante (über ein Intervall).',
+      'Die momentane Änderungsrate = Grenzwert des Differenzenquotienten für h → 0.',
     ],
     solutionKey:
-      'Die mittlere Aenderungsrate beschreibt den Durchschnitt ueber ein Intervall ' +
-      '(Sekantensteigung). Die momentane Aenderungsrate ist der Grenzwert fuer h → 0 ' +
+      'Die mittlere Änderungsrate beschreibt den Durchschnitt über ein Intervall ' +
+      '(Sekantensteigung). Die momentane Änderungsrate ist der Grenzwert für h → 0 ' +
       'und gibt die Steigung an einem einzigen Punkt an (Tangentensteigung).',
-    tags: ['mittlere-aenderungsrate', 'momentane-aenderungsrate', 'vergleich'],
+    tags: ['mittlere-änderungsrate', 'momentane-änderungsrate', 'vergleich'],
   },
 
   {
@@ -314,11 +314,11 @@ export const exercises = [
     },
     hintKeys: [
       'Die Geschwindigkeit ist die Ableitung des Weges nach der Zeit: v(t) = s′(t).',
-      'Berechne den Grenzwert von [s(3+h) − s(3)] / h fuer h → 0.',
+      'Berechne den Grenzwert von [s(3+h) − s(3)] / h für h → 0.',
     ],
     solutionKey:
       '[s(3+h) − s(3)] / h = [2(3+h)² − 2·9] / h = [2(9 + 6h + h²) − 18] / h ' +
-      '= (12h + 2h²) / h = 12 + 2h. Grenzwert fuer h → 0: v(3) = s′(3) = 12 m/s.',
+      '= (12h + 2h²) / h = 12 + 2h. Grenzwert für h → 0: v(3) = s′(3) = 12 m/s.',
     tags: ['sachkontext', 'geschwindigkeit', 'ableitung', 'physik'],
   },
 
@@ -332,7 +332,7 @@ export const exercises = [
     timeEstimate: 8,
     data: {
       questionText:
-        'Schuelerin Anna berechnet den Differenzenquotienten fuer f(x) = x² ' +
+        'Schuelerin Anna berechnet den Differenzenquotienten für f(x) = x² ' +
         'an der Stelle x₀ = 2 mit Schrittweite h = 1. Analysiere ihre Rechnung:',
       steps: [
         {
@@ -348,25 +348,25 @@ export const exercises = [
             'Differenzenquotient = [f(x₀ + h) + f(x₀)] / h = (9 + 4) / 1 = 13',
           hasError: true,
           errorExplanation:
-            'Im Zaehler muss f(x₀ + h) MINUS f(x₀) stehen, nicht Plus. ' +
+            'Im Zähler muss f(x₀ + h) MINUS f(x₀) stehen, nicht Plus. ' +
             'Korrekt: [f(3) − f(2)] / 1 = (9 − 4) / 1 = 5.',
         },
         {
-          content: 'Mittlere Aenderungsrate ≈ 13',
+          content: 'Mittlere Änderungsrate ≈ 13',
           hasError: true,
           errorExplanation:
             'Durch den Vorzeichenfehler in Schritt 3 ist das Ergebnis falsch. ' +
-            'Die korrekte mittlere Aenderungsrate betraegt 5.',
+            'Die korrekte mittlere Änderungsrate betraegt 5.',
         },
       ],
     },
     hintKeys: [
-      'Prueffe das Vorzeichen im Zaehler des Differenzenquotienten genau.',
+      'Prüffe das Vorzeichen im Zähler des Differenzenquotienten genau.',
       'Differenzenquotient = [f(x₀ + h) − f(x₀)] / h (Minus, nicht Plus!)',
     ],
     solutionKey:
       'In Schritt 3 steht faelschlicherweise ein Pluszeichen. ' +
-      'Korrekt ist [f(3) − f(2)] / 1 = 5. Die mittlere Aenderungsrate betraegt 5.',
+      'Korrekt ist [f(3) − f(2)] / 1 = 5. Die mittlere Änderungsrate betraegt 5.',
     tags: ['fehleranalyse', 'differenzenquotient', 'vorzeichenfehler'],
   },
 
@@ -381,9 +381,9 @@ export const exercises = [
     contextKey: 'Sachkontext: Bergwanderung',
     data: {
       questionText:
-        'Ein Wanderweg hat das Hoehenprofilprofil h(x) = −x² + 4x (in Metern, ' +
+        'Ein Wanderweg hat das Höhenprofilprofil h(x) = −x² + 4x (in Metern, ' +
         'x in Kilometern ab dem Start). An welcher Stelle x hat der Weg die Steigung 0 ' +
-        '(d. h. der hoechste Punkt der Tour)?',
+        '(d. h. der höchste Punkt der Tour)?',
       options: [
         { id: 'a', text: 'x = 2 km', correct: true },
         { id: 'b', text: 'x = 4 km', correct: false },
@@ -393,11 +393,11 @@ export const exercises = [
     },
     hintKeys: [
       'Bilde h′(x) und setze h′(x) = 0.',
-      'h′(x) = −2x + 4. Loese die Gleichung nach x auf.',
+      'h′(x) = −2x + 4. Löse die Gleichung nach x auf.',
     ],
     solutionKey:
       'h′(x) = −2x + 4. Steigung = 0: −2x + 4 = 0 → x = 2. ' +
-      'An der Stelle x = 2 km ist der Hoehenweg maximal (Steigung = 0).',
+      'An der Stelle x = 2 km ist der Höhenweg maximal (Steigung = 0).',
     tags: ['sachkontext', 'nullstelle-ableitung', 'extremum', 'bergwanderung'],
   },
 
@@ -411,7 +411,7 @@ export const exercises = [
     timeEstimate: 7,
     data: {
       questionText:
-        'f(x) = x² ist gegeben. Welcher der folgenden Graphen koennte die ' +
+        'f(x) = x² ist gegeben. Welcher der folgenden Graphen könnte die ' +
         'Ableitungsfunktion f′(x) darstellen?',
       options: [
         {
@@ -421,7 +421,7 @@ export const exercises = [
         },
         {
           id: 'b',
-          text: 'Eine nach oben geoeffnete Parabel',
+          text: 'Eine nach oben geöffnete Parabel',
           correct: false,
         },
         {
@@ -437,7 +437,7 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Die Ableitung von f(x) = x² ist f′(x) = 2x. Was fuer eine Funktion ist das?',
+      'Die Ableitung von f(x) = x² ist f′(x) = 2x. Was für eine Funktion ist das?',
       'f′(x) = 2x ist eine lineare Funktion durch den Ursprung.',
     ],
     solutionKey:
@@ -470,7 +470,7 @@ export const exercises = [
     ],
     solutionKey:
       '[v(t+h) − v(t)] / h = [3(t+h)² − 3t²] / h = 3(2t + h). ' +
-      'Grenzwert fuer h → 0: v′(t) = 6t. ' +
+      'Grenzwert für h → 0: v′(t) = 6t. ' +
       'a(2) = v′(2) = 6 · 2 = 12 m/s².',
     tags: ['sachkontext', 'beschleunigung', 'zweite-ableitung', 'physik'],
   },
@@ -540,7 +540,7 @@ export const exercises = [
   },
   {
     id: 'diff-ea-004', topicId: '10-diff-einfuehrung', type: 'step-solver', diffLevel: 'ea',
-    competencies: ['kreativitaet', 'kritisches-denken'], points: 20, timeEstimate: 7,
+    competencies: ['kreativität', 'kritisches-denken'], points: 20, timeEstimate: 7,
     contextKey: 'Wasserstand-Änderungsrate',
     data: {
       questionText: 'Der Wasserstand eines Sees folgt $W(t) = 0{,}1t^3 - 1{,}5t^2 + 6t + 10$ (m über NN, t in Monaten). Wann steigt der Pegel am schnellsten?',

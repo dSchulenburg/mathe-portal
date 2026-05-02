@@ -120,7 +120,7 @@ export const exercises = [
       '$P(X \\geq k) = 1 - P(X \\leq k-1)$. Kumulierte Binomialwahrscheinlichkeiten aus der Tabelle oder Rechner.',
     ],
     solutionKey: 'Unter $H_0$: $X \\sim B(20; \\frac{1}{6})$. $P(X \\geq 9) \\approx 0{,}0453 < 0{,}05$. $H_0$ wird abgelehnt — statistisch signifikanter Hinweis auf einen gezinkten Würfel.',
-    tags: ['step-solver', 'wuerfelbetrug', 'einseitiger-test', 'binomialtest', 'sachkontext'],
+    tags: ['step-solver', 'würfelbetrug', 'einseitiger-test', 'binomialtest', 'sachkontext'],
   },
 
   {
@@ -408,7 +408,7 @@ export const exercises = [
       'Bei $p = p_0$: $G(p_0) = $ realisierter Fehler 1. Art. Bei $p > p_0$: $G(p)$ steigt mit wachsender Abweichung.',
     ],
     solutionKey: '$k_{\\min} = 8$. $G(1/6) \\approx 0{,}027$ (Fehler 1. Art). $G(0{,}4) \\approx 0{,}60$ (Teststärke). $G(p) \\to 1$ für $p \\to 1$.',
-    tags: ['guefunktion', 'testaerke', 'power', 'wuerfelbetrug', 'ea', 'sachkontext'],
+    tags: ['guefunktion', 'testaerke', 'power', 'würfelbetrug', 'ea', 'sachkontext'],
   },
 
   {

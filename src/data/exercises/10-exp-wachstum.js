@@ -34,7 +34,7 @@ export const exercises = [
     timeEstimate: 3,
     data: {
       questionText:
-        'Berechne den Funktionswert von f(t) = 100 · 2^t fuer t = 3.',
+        'Berechne den Funktionswert von f(t) = 100 · 2^t für t = 3.',
       correctValue: 800,
       tolerance: 0.1,
     },
@@ -128,7 +128,7 @@ export const exercises = [
       tolerance: 0.01,
     },
     hintKeys: [
-      'Setze t = 0 ein. Es gilt: b^0 = 1 fuer jede Basis b.',
+      'Setze t = 0 ein. Es gilt: b^0 = 1 für jede Basis b.',
     ],
     solutionKey:
       'f(0) = 500 · 1,5^0 = 500 · 1 = 500. Der Startwert ist 500.',
@@ -147,7 +147,7 @@ export const exercises = [
     timeEstimate: 5,
     data: {
       questionText:
-        'Loese die Gleichung 3^x = 81 nach x. Nutze Logarithmen.',
+        'Löse die Gleichung 3^x = 81 nach x. Nutze Logarithmen.',
       correctValue: 4,
       tolerance: 0.01,
     },
@@ -188,7 +188,7 @@ export const exercises = [
     topicId: '10-exp-wachstum',
     type: 'numeric-input',
     diffLevel: 'standard',
-    competencies: ['kommunikation', 'kreativitaet'],
+    competencies: ['kommunikation', 'kreativität'],
     points: 10,
     timeEstimate: 6,
     data: {
@@ -216,7 +216,7 @@ export const exercises = [
     timeEstimate: 5,
     data: {
       questionText:
-        'Ein Kapital waechst jedes Jahr um 8 %. Mit welchem Wachstumsfaktor b wird gerechnet? (Gib b als Dezimalzahl an.)',
+        'Ein Kapital wächst jedes Jahr um 8 %. Mit welchem Wachstumsfaktor b wird gerechnet? (Gib b als Dezimalzahl an.)',
       correctValue: 1.08,
       tolerance: 0.001,
     },
@@ -239,7 +239,7 @@ export const exercises = [
     timeEstimate: 5,
     data: {
       questionText:
-        'Loese die Gleichung log₂(x) = 5 nach x. (Gib den exakten ganzzahligen Wert an.)',
+        'Löse die Gleichung log₂(x) = 5 nach x. (Gib den exakten ganzzahligen Wert an.)',
       correctValue: 32,
       tolerance: 0,
     },
@@ -259,11 +259,11 @@ export const exercises = [
     topicId: '10-exp-wachstum',
     type: 'numeric-input',
     diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kommunikation'],
+    competencies: ['kreativität', 'kommunikation'],
     points: 15,
     timeEstimate: 8,
     contextKey:
-      'Um 9:00 Uhr werden in einer Petrischale 500 Bakterien gezaehlt. Um 11:00 Uhr sind es bereits 4500. Die Anzahl waechst exponentiell: N(t) = 500 · b^t (t in Stunden ab 9:00 Uhr).',
+      'Um 9:00 Uhr werden in einer Petrischale 500 Bakterien gezaehlt. Um 11:00 Uhr sind es bereits 4500. Die Anzahl wächst exponentiell: N(t) = 500 · b^t (t in Stunden ab 9:00 Uhr).',
     data: {
       questionText:
         'Bestimme den Wachstumsfaktor b und berechne damit, wie viele Bakterien um 13:00 Uhr (t = 4) erwartet werden.',
@@ -284,7 +284,7 @@ export const exercises = [
     topicId: '10-exp-wachstum',
     type: 'numeric-input',
     diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kritisches-denken'],
+    competencies: ['kreativität', 'kritisches-denken'],
     points: 15,
     timeEstimate: 8,
     contextKey:
@@ -339,7 +339,7 @@ export const exercises = [
     timeEstimate: 6,
     data: {
       questionText:
-        'Ein Schueler loest folgende Aufgabe: "Eine Bakterienkolonie startet mit 200 Bakterien und waechst um 50 % pro Stunde. Wie viele Bakterien gibt es nach 3 Stunden?" Finde den Fehler im Rechenweg:',
+        'Ein Schueler löst folgende Aufgabe: "Eine Bakterienkolonie startet mit 200 Bakterien und wächst um 50 % pro Stunde. Wie viele Bakterien gibt es nach 3 Stunden?" Finde den Fehler im Rechenweg:',
       steps: [
         { content: 'Wachstum 50 % pro Stunde → Wachstumsfaktor b', hasError: false },
         {
@@ -353,7 +353,7 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Pruefe, ob der Wachstumsfaktor b korrekt aus dem Prozentwert abgeleitet wurde.',
+      'Prüfe, ob der Wachstumsfaktor b korrekt aus dem Prozentwert abgeleitet wurde.',
       'Eine Zunahme von p % ergibt b = 1 + p/100. Eine Abnahme ergibt b = 1 - p/100.',
     ],
     solutionKey:
@@ -366,14 +366,14 @@ export const exercises = [
     topicId: '10-exp-wachstum',
     type: 'numeric-input',
     diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kreativitaet'],
+    competencies: ['kritisches-denken', 'kreativität'],
     points: 15,
     timeEstimate: 10,
     contextKey:
       'Die Weltbevoelkerung betrug im Jahr 2000 ca. 6,1 Milliarden Menschen. Das jaehrliche Wachstum betraegt ca. 1,1 %. Modell: B(t) = 6,1 · 1,011^t (t = Jahre ab 2000, B in Mrd.)',
     data: {
       questionText:
-        'In welchem Jahr ueberschreitet die Weltbevoelkerung nach diesem Modell die 8-Milliarden-Marke? (Gib die Jahreszahl an. Runde t auf ganze Jahre auf.)',
+        'In welchem Jahr überschreitet die Weltbevoelkerung nach diesem Modell die 8-Milliarden-Marke? (Gib die Jahreszahl an. Runde t auf ganze Jahre auf.)',
       correctValue: 2025,
       tolerance: 1,
     },

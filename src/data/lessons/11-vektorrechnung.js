@@ -110,5 +110,5 @@ export const lesson = {
     },
   ],
 
-  prerequisites: [],
+  prerequisites: ['10-pythagoras'],
 };

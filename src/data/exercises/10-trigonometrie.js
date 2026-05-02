@@ -157,11 +157,11 @@ export const exercises = [
     },
     hintKeys: ['Die Winkelsumme im Dreieck beträgt stets 180°. γ = 180° − α − β.'],
     solutionKey: 'γ = 180° − 50° − 65° = 65°. Das Dreieck ist gleichschenklig, da β = γ = 65°.',
-    tags: ['dreieck-loesen', 'winkelsumme'],
+    tags: ['dreieck-lösen', 'winkelsumme'],
   },
   {
     id: 'trig-std-005', topicId: '10-trigonometrie', type: 'numeric-input', diffLevel: 'standard',
-    competencies: ['kommunikation', 'kreativitaet'], points: 10, timeEstimate: 5,
+    competencies: ['kommunikation', 'kreativität'], points: 10, timeEstimate: 5,
     contextKey: 'Im Dreieck ABC gilt: a = 10 cm, b = 12 cm, γ = 55°.',
     data: {
       questionText: 'Berechne die Fläche A des Dreiecks (in cm²) mit der Sinusformel. Runde auf zwei Dezimalstellen.',
@@ -221,7 +221,7 @@ export const exercises = [
   },
   {
     id: 'trig-erw-002', topicId: '10-trigonometrie', type: 'numeric-input', diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kommunikation'], points: 15, timeEstimate: 9,
+    competencies: ['kreativität', 'kommunikation'], points: 15, timeEstimate: 9,
     contextKey: 'Ein Riesenrad hat einen Radius von 20 m. Der unterste Punkt der Gondel befindet sich 2 m über dem Boden. Das Rad dreht sich einmal in 40 Sekunden. Eine Gondel startet am untersten Punkt (t = 0).',
     data: {
       questionText: 'Welche Höhe (in m) hat die Gondel nach 10 Sekunden? Runde auf zwei Dezimalstellen.',
@@ -235,7 +235,7 @@ export const exercises = [
   },
   {
     id: 'trig-erw-003', topicId: '10-trigonometrie', type: 'numeric-input', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kreativitaet'], points: 15, timeEstimate: 10,
+    competencies: ['kritisches-denken', 'kreativität'], points: 15, timeEstimate: 10,
     contextKey: 'Zwei Vermesser stehen an Punkt A und Punkt B, die 200 m voneinander entfernt sind. Punkt A misst den Winkel zur Turmspitze T als α = 62°. Punkt B misst den Winkel zur Turmspitze T als β = 53°. A, B und der Fuß des Turms liegen auf einer Geraden, der Turm steht zwischen A und B.',
     data: {
       questionText: 'Berechne die Höhe des Turms (in m). Runde auf zwei Dezimalstellen.',
@@ -280,7 +280,7 @@ export const exercises = [
   },
   {
     id: 'trig-erw-006', topicId: '10-trigonometrie', type: 'multiple-choice', diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kritisches-denken', 'kommunikation'], points: 15, timeEstimate: 10,
+    competencies: ['kreativität', 'kritisches-denken', 'kommunikation'], points: 15, timeEstimate: 10,
     contextKey: 'Im Dreieck ABC sind alle drei Seiten bekannt: a = 6 cm, b = 8 cm, c = 10 cm.',
     data: {
       questionText: 'Welche der folgenden Methoden können alle Winkel dieses Dreiecks korrekt bestimmen?',
@@ -293,7 +293,7 @@ export const exercises = [
     },
     hintKeys: ['Der Sinussatz benötigt mindestens einen bekannten Winkel. Bei nur bekannten Seiten muss man mit dem Kosinussatz beginnen.', 'Prüfe, ob a² + b² = c² gilt — dann ist es ein rechtwinkliges Dreieck und es ginge auch mit sin/cos direkt.'],
     solutionKey: 'Korrekt sind (a), (b) und (c). Da 6² + 8² = 36 + 64 = 100 = 10², ist es ein rechtwinkliges Dreieck (γ = 90°). Alle drei Methoden funktionieren. (d) ist falsch: Der Sinussatz benötigt einen bekannten Winkel.',
-    tags: ['kreativaufgabe', 'dreieck-loesen', 'methoden-vergleich', 'kosinussatz', 'sinussatz'],
+    tags: ['kreativaufgabe', 'dreieck-lösen', 'methoden-vergleich', 'kosinussatz', 'sinussatz'],
   },
 
   // ─── PREMIUM UPGRADE ────────────────────────────
@@ -358,7 +358,7 @@ export const exercises = [
   },
   {
     id: 'trig-ea-004', topicId: '10-trigonometrie', type: 'step-solver', diffLevel: 'ea',
-    competencies: ['kreativitaet', 'kritisches-denken'], points: 20, timeEstimate: 8,
+    competencies: ['kreativität', 'kritisches-denken'], points: 20, timeEstimate: 8,
     contextKey: 'Pegelstand Elbe (Hamburg)',
     data: {
       questionText: 'Der Elbe-Pegel schwankt mit den Gezeiten: $h(t) = 2{,}5 \\sin(\\frac{\\pi}{6{,}2} t) + 3{,}5$ (h in m, t in Stunden). Wann ist Hochwasser und wie hoch?',

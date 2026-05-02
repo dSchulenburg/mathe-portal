@@ -101,7 +101,7 @@ export const exercises = [
       'Gesamtwahrscheinlichkeit = Summe aller Pfade, die zu P führen.',
     ],
     solutionKey: '$P(P) = P(T) \\cdot P(P|T) + P(\\overline{T}) \\cdot P(P|\\overline{T}) = 0{,}7 \\cdot 0{,}8 + 0{,}3 \\cdot 0{,}2 = 0{,}56 + 0{,}06 = 0{,}62$.',
-    tags: ['baumdiagramm', 'totale-wahrscheinlichkeit', 'step-solver', 'fuehrerschein'],
+    tags: ['baumdiagramm', 'totale-wahrscheinlichkeit', 'step-solver', 'führerschein'],
   },
 
   {
@@ -169,7 +169,7 @@ export const exercises = [
       '$P(D) = P(D|M1) \\cdot P(M1) + P(D|M2) \\cdot P(M2)$ (totale Wahrscheinlichkeit).',
     ],
     solutionKey: '$P(M1|D) = \\dfrac{0{,}6 \\cdot 0{,}03}{0{,}6 \\cdot 0{,}03 + 0{,}4 \\cdot 0{,}05} = \\dfrac{0{,}018}{0{,}018 + 0{,}020} = \\dfrac{0{,}018}{0{,}038} \\approx 0{,}474$.',
-    tags: ['bayes', 'qualitaetskontrolle', 'formelauswahl'],
+    tags: ['bayes', 'qualitätskontrolle', 'formelauswahl'],
   },
 
   // ─── ERWEITERT (AFB III) – 3 Aufgaben ─────────────────────────────────────
@@ -189,12 +189,12 @@ export const exercises = [
       '$P(\\text{krank}|+) = \\dfrac{P(+|\\text{krank}) \\cdot P(\\text{krank})}{P(+)}$.',
     ],
     solutionKey: '$P(+|\\text{krank}) \\cdot P(\\text{krank}) = 0{,}9 \\cdot 0{,}05 = 0{,}045$. $P(+|\\text{gesund}) \\cdot P(\\text{gesund}) = 0{,}05 \\cdot 0{,}95 = 0{,}0475$. $P(+) = 0{,}045 + 0{,}0475 = 0{,}0925$. $P(\\text{krank}|+) = \\dfrac{0{,}045}{0{,}0925} \\approx 0{,}486$. Trotz positivem Test ist nur ~49 % der positiv Getesteten wirklich krank — wegen der niedrigen Prävalenz!',
-    tags: ['bayes', 'covid', 'sensitivitaet', 'spezifitaet', 'falsch-positiv', 'vorhersagewert'],
+    tags: ['bayes', 'covid', 'sensitivität', 'spezifität', 'falsch-positiv', 'vorhersagewert'],
   },
 
   {
     id: 'bwk-erweitert-002', topicId: '11-bedingte-wahrscheinlichkeit', type: 'numeric-input', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kreativitaet'], points: 15, timeEstimate: 10,
+    competencies: ['kritisches-denken', 'kreativität'], points: 15, timeEstimate: 10,
     contextKey: 'Spam-Filter „Gewinn"',
     data: {
       questionText: 'Spam-Filter: $P(\\text{Spam}) = 0{,}3$, $P(\\text{kein Spam}) = 0{,}7$. Wort „Gewinn" kommt vor in 70 % der Spam-Mails ($P(G|S) = 0{,}7$) und in 5 % normaler Mails ($P(G|\\overline{S}) = 0{,}05$). Berechne $P(\\text{Spam}|G)$ auf 3 Dezimalstellen.',
@@ -206,7 +206,7 @@ export const exercises = [
       '$P(S|G) = \\dfrac{P(G|S) \\cdot P(S)}{P(G)}$.',
     ],
     solutionKey: '$P(G|S) \\cdot P(S) = 0{,}7 \\cdot 0{,}3 = 0{,}21$. $P(G|\\overline{S}) \\cdot P(\\overline{S}) = 0{,}05 \\cdot 0{,}7 = 0{,}035$. $P(G) = 0{,}21 + 0{,}035 = 0{,}245$. $P(S|G) = \\dfrac{0{,}21}{0{,}245} \\approx 0{,}857$. Enthält eine Mail das Wort „Gewinn", ist sie mit ~86 % Wahrscheinlichkeit Spam.',
-    tags: ['bayes', 'spam-filter', 'sachkontext', 'kreativitaet'],
+    tags: ['bayes', 'spam-filter', 'sachkontext', 'kreativität'],
   },
 
   {

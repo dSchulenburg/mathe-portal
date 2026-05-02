@@ -276,7 +276,7 @@ export const exercises = [
 
   {
     id: 'norm-erweitert-003', topicId: '12-normalverteilung', type: 'step-solver', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 15, timeEstimate: 10,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 15, timeEstimate: 10,
     contextKey: 'IQ-Tests',
     data: {
       questionText: 'IQ: $\\mu = 100$, $\\sigma = 15$. Standardisiere und transformiere zurück: Welchen IQ-Wert hat jemand mit $z = 1{,}5$?',
@@ -336,7 +336,7 @@ export const exercises = [
 
   {
     id: 'norm-ea-001', topicId: '12-normalverteilung', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 15,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Binomial-Normal-Approximation',
     data: {
       questionText: '$X \\sim B(100; 0{,}4)$. Da $n = 100$ groß und $p = 0{,}4$ nicht zu extrem ist ($np = 40 \\geq 10$), approximiere $X$ durch eine Normalverteilung und berechne $P(X \\leq 45)$.',
@@ -386,7 +386,7 @@ export const exercises = [
 
   {
     id: 'norm-ea-002', topicId: '12-normalverteilung', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 18,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 18,
     contextKey: 'Amazon-Lieferzeiten',
     data: {
       questionText: 'Amazon wirbt: „95 % aller Pakete kommen innerhalb von 3 Tagen." Die Lieferzeit ist normalverteilt mit $\\mu = 2{,}0$ Tage. Berechne die zugehörige Standardabweichung $\\sigma$ und erkläre das Konfidenzintervall-Konzept.',

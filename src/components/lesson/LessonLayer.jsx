@@ -13,6 +13,7 @@ import LessonExamples from './LessonExamples';
 import LessonRealWorld from './LessonRealWorld';
 import LessonMistakes from './LessonMistakes';
 import LessonPrerequisites from './LessonPrerequisites';
+import LessonConnections from './LessonConnections';
 
 /**
  * Orchestrator component — assembles all lesson sections.
@@ -113,6 +114,13 @@ export default function LessonLayer({ lesson, topicId, topicColor, completionPct
 
           <LessonPrerequisites
             prerequisites={lesson.prerequisites}
+            t={t}
+            accentColor={accentColor}
+            onNavigate={onNavigateTopic}
+          />
+
+          <LessonConnections
+            connections={lesson.connections}
             t={t}
             accentColor={accentColor}
             onNavigate={onNavigateTopic}

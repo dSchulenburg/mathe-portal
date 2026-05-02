@@ -120,7 +120,7 @@ export const exercises = [
       '$0{,}9^5 = 0{,}9 \\cdot 0{,}9 \\cdot 0{,}9 \\cdot 0{,}9 \\cdot 0{,}9 \\approx 0{,}5905$.',
     ],
     solutionKey: '$P(X = 0) = 0{,}9^5 \\approx 0{,}5905$. Knapp 59 % Chance, dass keine der 5 AirPods fehlerhaft ist.',
-    tags: ['P-X-gleich-k', 'airpods', 'sachkontext', 'qualitaetskontrolle'],
+    tags: ['P-X-gleich-k', 'airpods', 'sachkontext', 'qualitätskontrolle'],
   },
 
   {
@@ -308,7 +308,7 @@ export const exercises = [
 
   {
     id: 'binom-ea-001', topicId: '11-binomialverteilung', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 15,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'AirPods Qualitätskontrolle',
     data: {
       questionText: 'Qualitätskontrolle: Ein Lieferant behauptet, maximal 5 % seiner AirPods sind fehlerhaft ($p \\leq 0{,}05$). Du prüfst $n = 20$ Geräte und findest $k = 3$ fehlerhafte. Entscheide nach einer Entscheidungsregel: Ablehnen, falls $P(X \\geq 3) < 0{,}1$.',
@@ -342,12 +342,12 @@ export const exercises = [
       'Entscheidungsregel: ablehnen, falls $P(X \\geq 3) < 0{,}1$.',
     ],
     solutionKey: '$P(X \\geq 3) = 1 - P(X \\leq 2) \\approx 1 - 0{,}925 = 0{,}075 < 0{,}1$ → Lieferant ablehnen. Unter der Annahme $p = 0{,}05$ ist 3+ Defekte zu unwahrscheinlich.',
-    tags: ['step-solver', 'entscheidungsregel', 'qualitaetskontrolle', 'airpods', 'ea'],
+    tags: ['step-solver', 'entscheidungsregel', 'qualitätskontrolle', 'airpods', 'ea'],
   },
 
   {
     id: 'binom-ea-002', topicId: '11-binomialverteilung', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 15,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Regenwahrscheinlichkeit',
     data: {
       questionText: 'Im Urlaubsort regnet es an jedem Tag unabhängig mit $p = 0{,}3$. Der Urlaub dauert 14 Tage. Analysiere, ob die Sigma-Regel sinnvolle Grenzen für einen „typischen" Urlaub liefert.',

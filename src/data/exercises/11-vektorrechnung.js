@@ -210,7 +210,7 @@ export const exercises = [
 
   {
     id: 'vek-erweitert-001', topicId: '11-vektorrechnung', type: 'step-solver', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 15, timeEstimate: 12,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 15, timeEstimate: 12,
     contextKey: 'Drohnenflug',
     data: {
       questionText: 'Eine Drohne fliegt drei Abschnitte: $\\vec{v_1} = \\begin{pmatrix} 3 \\\\ 0 \\\\ 2 \\end{pmatrix}$, $\\vec{v_2} = \\begin{pmatrix} 1 \\\\ 4 \\\\ 0 \\end{pmatrix}$, $\\vec{v_3} = \\begin{pmatrix} -2 \\\\ 1 \\\\ 1 \\end{pmatrix}$ (in km). Bestimme den Gesamtvektor und die zurückgelegte Gesamtdistanz.',
@@ -284,7 +284,7 @@ export const exercises = [
       'Aus der $x$-Komponente: $2 = \\lambda \\cdot (-1) \\Rightarrow \\lambda = -2$. Prüfe, ob dieser $\\lambda$-Wert für alle Komponenten passt.',
     ],
     solutionKey: '$\\lambda = -2$: $(-2) \\cdot (-1) = 2$ ✓; $(-2) \\cdot 2 = -4$ ✓; $(-2) \\cdot (-3) = 6$ ✓. Da $\\vec{a} = -2 \\cdot \\vec{b}$, sind die Vektoren kollinear (antiparallel).',
-    tags: ['kollinearitaet', 'parallelitaet', 'vielfaches', 'r3'],
+    tags: ['kollinearität', 'parallelität', 'vielfaches', 'r3'],
   },
 
   {
@@ -353,6 +353,6 @@ export const exercises = [
       'Orthogonalität: $\\vec{a} \\perp \\vec{b} \\Leftrightarrow \\vec{a} \\cdot \\vec{b} = 0$.',
     ],
     solutionKey: '$\\vec{a} \\cdot \\vec{b} = 3 \\cdot 1 + (-1) \\cdot 1 + 2 \\cdot k = 2 + 2k = 0 \\Rightarrow k = -1$.',
-    tags: ['skalarprodukt', 'orthogonalitaet', 'parameter', 'step-solver', 'ea', 'r3'],
+    tags: ['skalarprodukt', 'orthogonalität', 'parameter', 'step-solver', 'ea', 'r3'],
   },
 ];

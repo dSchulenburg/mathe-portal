@@ -6,14 +6,14 @@ export const exercises = [
     competencies: ['kommunikation'], points: 5, timeEstimate: 3,
     data: {
       questionText: 'Hilfsmittelfrei: Bestimme die Ableitung von $f(x) = 3x^4 - 2x^2 + 5x - 1$ im Kopf. Wie lautet $f\'(x)$ an der Stelle $x = 1$?',
-      correctValue: 17,
+      correctValue: 13,
       tolerance: 0,
     },
     hintKeys: [
       'Potenzregel: $(x^n)\' = n \\cdot x^{n-1}$.',
       '$f\'(x) = 12x^3 - 4x + 5$. Dann $x = 1$ einsetzen.',
     ],
-    solutionKey: '$f\'(x) = 12x^3 - 4x + 5$. $f\'(1) = 12 - 4 + 5 = 13$. Moment — nochmal: $12 \\cdot 1 - 4 \\cdot 1 + 5 = 13$. Korrektur: $f\'(1) = 12 - 4 + 5 = 13$.',
+    solutionKey: '$f\'(x) = 12x^3 - 4x + 5$. $f\'(1) = 12 - 4 + 5 = 13$.',
     tags: ['ableitung', 'potenzregel', 'hilfsmittelfrei', 'kopfrechnen'],
   },
 
@@ -227,7 +227,7 @@ export const exercises = [
 
   {
     id: 'abi-erweitert-001', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 15, timeEstimate: 16,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 15, timeEstimate: 16,
     contextKey: 'Analysis und Stochastik verknüpft',
     data: {
       questionText: 'Cross-Topic: Eine Lernkurve $f(t) = 100(1 - e^{-0{,}3t})$ modelliert den Lernfortschritt in %. (a) Wann wird 90 % Fortschritt erreicht? (b) Berechne den mittleren Lernfortschritt im Intervall $[0, 10]$ als $\\frac{1}{10} \\int_0^{10} f(t)\\,dt$.',
@@ -266,7 +266,7 @@ export const exercises = [
 
   {
     id: 'abi-erweitert-002', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 15, timeEstimate: 14,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 15, timeEstimate: 14,
     contextKey: 'Modellierung',
     data: {
       questionText: 'Modellierungsaufgabe: Eine Brücke hat ein Querschnittsprofil, das durch $f(x) = -0{,}5x^2 + 8$ (in Metern) beschrieben wird. Gesucht: (a) Breite der Brücke auf Höhe $y = 0$ m. (b) Querschnittsfläche oberhalb von $y = 0$.',
@@ -391,7 +391,7 @@ export const exercises = [
 
   {
     id: 'abi-erweitert-006', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 15, timeEstimate: 14,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 15, timeEstimate: 14,
     contextKey: 'Abiturähnliche Aufgabe',
     data: {
       questionText: 'Binomial + Normalverteilung verknüpft: Eine Klasse hat 32 Schüler. Jeder besteht eine Prüfung mit $p = 0{,}75$. Schätze die Wahrscheinlichkeit $P(X \\geq 28)$ mithilfe der Normalapproximation.',
@@ -449,7 +449,7 @@ export const exercises = [
 
   {
     id: 'abi-ea-001', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 20,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 20,
     contextKey: 'Vollständige Klausuraufgabe',
     data: {
       questionText: 'Vollständige Analysis-Aufgabe (5 Schritte): $f(x) = x^4 - 8x^2 + 7$. Kurvendiskussion: Nullstellen, Symmetrie, Extrema, Wendepunkte, Skizze.',
@@ -516,7 +516,7 @@ export const exercises = [
 
   {
     id: 'abi-ea-002', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 18,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 18,
     contextKey: 'Vollständige Klausuraufgabe',
     data: {
       questionText: 'Vollständige Stochastik-Aufgabe (5 Schritte): $X \\sim B(25; 0{,}6)$. Erwartungswert, Standardabweichung, $P(X \\geq 18)$ mit Normalapproximation, Interpretation.',
@@ -570,7 +570,7 @@ export const exercises = [
 
   {
     id: 'abi-ea-003', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 18,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 18,
     contextKey: 'Abiturähnliche Aufgabe',
     data: {
       questionText: 'Beweisaufgabe: Zeige, dass jede Funktion der Form $f(x) = x^3 + bx^2 + cx + d$ genau einen Wendepunkt hat.',
@@ -620,7 +620,7 @@ export const exercises = [
 
   {
     id: 'abi-ea-004', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 20,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 20,
     contextKey: 'Transferaufgabe',
     data: {
       questionText: 'Transfer: Zeige, dass die Fläche zwischen $f(x) = x^2$ und $g(x) = x$ im Intervall $[0, 1]$ gleich $\\frac{1}{6}$ ist, und interpretiere geometrisch.',
@@ -670,7 +670,7 @@ export const exercises = [
 
   {
     id: 'abi-ea-005', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 20,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 20,
     contextKey: 'Transferaufgabe',
     data: {
       questionText: 'Mehrdimensionaler Transfer: Gegeben die Übergangsmatrix $T = \\begin{pmatrix} 0{,}6 & 0{,}3 \\\\ 0{,}4 & 0{,}7 \\end{pmatrix}$ eines Markov-Modells. Zeige rechnerisch, dass der Fixvektor $\\vec{w} = \\begin{pmatrix} 0{,}43 \\\\ 0{,}57 \\end{pmatrix}$ (gerundet) existiert, und überprüfe den Grenzwert durch Iteration.',

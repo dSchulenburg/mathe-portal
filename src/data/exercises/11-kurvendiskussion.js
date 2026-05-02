@@ -535,7 +535,7 @@ export const exercises = [
     topicId: '11-kurvendiskussion',
     type: 'numeric-input',
     diffLevel: 'erweitert',
-    competencies: ['kommunikation', 'kritisches-denken', 'kreativitaet'],
+    competencies: ['kommunikation', 'kritisches-denken', 'kreativität'],
     points: 15,
     timeEstimate: 10,
     contextKey: 'Online-Shop Gewinnoptimierung',
@@ -569,7 +569,7 @@ export const exercises = [
     topicId: '11-kurvendiskussion',
     type: 'step-solver',
     diffLevel: 'ea',
-    competencies: ['kritisches-denken', 'kreativitaet', 'kommunikation'],
+    competencies: ['kritisches-denken', 'kreativität', 'kommunikation'],
     points: 20,
     timeEstimate: 15,
     data: {
@@ -646,7 +646,7 @@ export const exercises = [
     topicId: '11-kurvendiskussion',
     type: 'step-solver',
     diffLevel: 'ea',
-    competencies: ['kritisches-denken', 'kreativitaet'],
+    competencies: ['kritisches-denken', 'kreativität'],
     points: 20,
     timeEstimate: 15,
     data: {
@@ -688,26 +688,26 @@ export const exercises = [
         {
           instruction: 'Löse das Gleichungssystem. Welcher Wert ergibt sich für $a$?',
           type: 'numeric-input',
-          expected: 1,
+          expected: -1,
           tolerance: 0.01,
           showAnswer:
-            'Aus $(4a + 2b + c) - (a + b + c) = -1 - 1$: $3a + b = -2$. ' +
-            'Aus $3a + 2b + c = 0$ und $a + b + c = 1$: $2a + b = -1$. ' +
-            'Subtraktion: $a = -2 - (-1) = -1$... Neurechnung: $a = 1$ ergibt $f(x) = x^3 - 3x^2 + 3x + 2$.',
+            'LGS: (I) $4a + 2b + c = -1$, (II) $a + b + c = 1$, (III) $3a + 2b + c = 0$. ' +
+            '(I) − (III): $a = -1$. (III) − (II): $2a + b = -1 \\Rightarrow b = 1$. ' +
+            'Aus (II): $c = 1 - a - b = 1$.',
         },
         {
-          instruction: 'Verifiziere: Gilt $f(2) = 0$ für $f(x) = x^3 - 3x^2 + 3x + 2$?',
+          instruction: 'Verifiziere: Erfüllt $f(x) = -x^3 + x^2 + x + 2$ die Bedingung $f(2) = 0$?',
           type: 'multiple-choice',
           options: [
-            { id: 'a', text: 'Ja: $f(2) = 8 - 12 + 6 + 2 = 4 \\neq 0$ — Bedingung nicht erfüllt (Aufgabe zeigt Überbestimmtheit)' },
-            { id: 'b', text: 'Ja: $f(2) = 0$ ✓' },
-            { id: 'c', text: 'Nein, aber das Gleichungssystem hat keine Lösung' },
+            { id: 'a', text: 'Ja: $f(2) = -8 + 4 + 2 + 2 = 0$ ✓' },
+            { id: 'b', text: 'Nein: $f(2) = 8 - 12 + 6 + 2 = 4 \\neq 0$' },
+            { id: 'c', text: 'Bedingung ist überbestimmt — keine Lösung möglich' },
           ],
           correctId: 'a',
           showAnswer:
-            'Diese Aufgabe zeigt, dass 4 Bedingungen ein kubisches Polynom (4 Parameter) eindeutig bestimmen. ' +
-            'Die Lösung lautet: $a = -\\frac{3}{2}$, $b = \\frac{9}{2}$, $c = -\\frac{9}{2}$, $d = 2$. ' +
-            'Korrekt: $f(x) = -\\frac{3}{2}x^3 + \\frac{9}{2}x^2 - \\frac{9}{2}x + 2$.',
+            'Mit $a = -1$, $b = 1$, $c = 1$, $d = 2$: $f(x) = -x^3 + x^2 + x + 2$. ' +
+            'Probe: $f(0) = 2$ ✓, $f(1) = -1+1+1+2 = 3$ ✓, $f(2) = -8+4+2+2 = 0$ ✓, ' +
+            "$f'(x) = -3x^2 + 2x + 1$, $f'(1) = -3+2+1 = 0$ ✓. Alle vier Bedingungen erfüllt.",
         },
       ],
     },
@@ -716,9 +716,9 @@ export const exercises = [
       'Stelle ein lineares Gleichungssystem auf und löse es (Gauß-Verfahren).',
     ],
     solutionKey:
-      'Aus den 4 Bedingungen ergibt sich das LGS. Lösung: $a = -\\frac{3}{2}$, $b = \\frac{9}{2}$, $c = -\\frac{9}{2}$, $d = 2$. ' +
-      '$f(x) = -\\frac{3}{2}x^3 + \\frac{9}{2}x^2 - \\frac{9}{2}x + 2$. Probe: $f(0) = 2$ ✓, $f(2) = -12 + 18 - 9 + 2 = -1$... ' +
-      'Aufgabe demonstriert die Methode der Funktionsbestimmung aus Bedingungen.',
+      'Aus den 4 Bedingungen ergibt sich das LGS mit Lösung $a = -1$, $b = 1$, $c = 1$, $d = 2$. ' +
+      '$f(x) = -x^3 + x^2 + x + 2$. ' +
+      "Probe: $f(0) = 2$, $f(1) = 3$, $f(2) = 0$, $f'(1) = 0$ — alle vier Bedingungen erfüllt.",
     tags: ['step-solver', 'funktionsbestimmung', 'gleichungssystem', 'bedingungen', 'ea'],
   },
 ];

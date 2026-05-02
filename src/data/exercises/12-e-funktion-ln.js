@@ -200,7 +200,7 @@ export const exercises = [
       'Achte auf den Definitionsbereich: $x > 0$ und $x - 1 > 0 \\Rightarrow x > 1$.',
     ],
     solutionKey: '$\\ln(x) + \\ln(x-1) = \\ln(x(x-1)) = \\ln(6) \\Rightarrow x^2 - x - 6 = 0 \\Rightarrow (x-3)(x+2) = 0$. Da $x > 1$: $x = 3$.',
-    tags: ['gleichung-loesen', 'logarithmengesetze', 'ln', 'definitionsbereich'],
+    tags: ['gleichung-lösen', 'logarithmengesetze', 'ln', 'definitionsbereich'],
   },
 
   // ─── ERWEITERT (AFB III) – 5 Aufgaben ─────────────────────────────────────
@@ -240,7 +240,7 @@ export const exercises = [
 
   {
     id: 'efn-erweitert-002', topicId: '12-e-funktion-ln', type: 'step-solver', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 15, timeEstimate: 12,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 15, timeEstimate: 12,
     contextKey: 'Virale Social-Media-Posts',
     data: {
       questionText: 'Virale Reichweite eines Posts wird durch logistisches Wachstum modelliert: $R(t) = \\frac{K}{1 + \\left(\\frac{K - R_0}{R_0}\\right) \\cdot e^{-r t}}$ mit Kapazität $K = 100{.}000$, Startwert $R_0 = 1{.}000$, Wachstumsrate $r = 0{,}5$ (t in Stunden). Analysiere das Modell.',
@@ -357,7 +357,7 @@ export const exercises = [
 
   {
     id: 'efn-ea-001', topicId: '12-e-funktion-ln', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 15,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Partielle Integration',
     data: {
       questionText: 'Berechne $\\int x \\cdot e^x \\, dx$ mit partieller Integration: $\\int u \\cdot v\' \\, dx = u \\cdot v - \\int u\' \\cdot v \\, dx$.',
@@ -408,7 +408,7 @@ export const exercises = [
 
   {
     id: 'efn-ea-002', topicId: '12-e-funktion-ln', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 15,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Modellierung — Parameter fitten',
     data: {
       questionText: 'Ein Pharmaunternehmen misst die Konzentration eines Wirkstoffs: Bei $t = 0$ h ist $c = 8$ mg/l, bei $t = 3$ h ist $c = 2$ mg/l. Das Modell lautet $c(t) = c_0 \\cdot e^{-\\lambda t}$. Bestimme $c_0$ und $\\lambda$.',
@@ -441,7 +441,7 @@ export const exercises = [
 
   {
     id: 'efn-ea-003', topicId: '12-e-funktion-ln', type: 'multiple-choice', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 12,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 12,
     contextKey: 'Wendepunkt und Krümmung',
     data: {
       questionText: 'Für $f(x) = x \\cdot e^{-x}$ gilt $f\'\'(x) = e^{-x}(x - 2)$. Welche Aussage über den Wendepunkt ist korrekt?',

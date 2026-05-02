@@ -128,7 +128,7 @@ export const exercises = [
     },
     hintKeys: ['Es gilt: cos(x) = sin(x + π/2). Der Kosinus ist ein um π/2 nach links verschobener Sinus.'],
     solutionKey: 'cos(x) = sin(x + π/2). Das bedeutet: g(x) = cos(x) = f(x) = sin(x + π/2). Antwort (a) ist korrekt.',
-    tags: ['kosinus', 'sinus', 'umschreiben', 'identitaet'],
+    tags: ['kosinus', 'sinus', 'umschreiben', 'identität'],
   },
   {
     id: 'period-std-005', topicId: '10-periodisch', type: 'numeric-input', diffLevel: 'standard',
@@ -148,7 +148,7 @@ export const exercises = [
   // ===== ERWEITERT (AFB III) — 5 Aufgaben =====
   {
     id: 'period-erw-001', topicId: '10-periodisch', type: 'numeric-input', diffLevel: 'erweitert',
-    competencies: ['kommunikation', 'kritisches-denken', 'kreativitaet'], points: 15, timeEstimate: 10,
+    competencies: ['kommunikation', 'kritisches-denken', 'kreativität'], points: 15, timeEstimate: 10,
     contextKey: 'An einer Küste beträgt der Wasserstand bei Hochwasser 4 m und bei Niedrigwasser 0 m. Die Zeit zwischen zwei Hochwassern beträgt 12 Stunden. Um 6:00 Uhr ist Hochwasser.',
     data: {
       questionText: 'Modelliere den Wasserstand h(t) als Sinusfunktion der Form h(t) = a·sin(b·(t − c)) + d, wobei t die Zeit in Stunden ab Mitternacht (t = 0) ist. Welchen Wert hat die Amplitude a?',
@@ -162,7 +162,7 @@ export const exercises = [
   },
   {
     id: 'period-erw-002', topicId: '10-periodisch', type: 'numeric-input', diffLevel: 'erweitert',
-    competencies: ['kommunikation', 'kritisches-denken', 'kreativitaet'], points: 15, timeEstimate: 10,
+    competencies: ['kommunikation', 'kritisches-denken', 'kreativität'], points: 15, timeEstimate: 10,
     contextKey: 'Der Temperaturverlauf in einer Stadt wird durch f(t) = 12·sin(2π/12·(t − 3)) + 10 modelliert, wobei t die Monatsnummer (Januar = 1, …, Dezember = 12) und f(t) die Durchschnittstemperatur in °C ist.',
     data: {
       questionText: 'Welche maximale Durchschnittstemperatur (in °C) sagt das Modell voraus?',
@@ -192,7 +192,7 @@ export const exercises = [
   },
   {
     id: 'period-erw-004', topicId: '10-periodisch', type: 'numeric-input', diffLevel: 'erweitert',
-    competencies: ['kommunikation', 'kritisches-denken', 'kreativitaet'], points: 15, timeEstimate: 10,
+    competencies: ['kommunikation', 'kritisches-denken', 'kreativität'], points: 15, timeEstimate: 10,
     contextKey: 'Eine Schaukel vollführt eine harmonische Schwingung. Die Auslenkung s(t) (in cm) der Schaukel wird durch s(t) = 30·cos(π/2·t) modelliert, wobei t die Zeit in Sekunden ist.',
     data: {
       questionText: 'Welche Schwingungsdauer T (in Sekunden) hat die Schaukel?',
@@ -218,7 +218,7 @@ export const exercises = [
     },
     hintKeys: ['Die Periode der Summe zweier periodischer Funktionen ist das kleinste gemeinsame Vielfache (kgV) der Einzelperioden.', 'Periode von sin(x) ist 2π, Periode von sin(2x) ist π. kgV(2π, π) = 2π.'],
     solutionKey: 'Periode von f(x) = sin(x) ist T₁ = 2π. Periode von g(x) = sin(2x) ist T₂ = π. Die resultierende Periode ist kgV(2π, π) = 2π. Antwort (b) ist korrekt.',
-    tags: ['ueberlagerung', 'superposition', 'periode', 'kgv'],
+    tags: ['überlagerung', 'superposition', 'periode', 'kgv'],
   },
 
   // ─── PREMIUM UPGRADE ────────────────────────────

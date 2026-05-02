@@ -117,7 +117,7 @@ export const exercises = [
       '$t = \\frac{\\ln(5)}{0{,}05}$. $\\ln(5) \\approx 1{,}609$.',
     ],
     solutionKey: '$200 \\cdot e^{0{,}05 t} = 1000 \\Rightarrow e^{0{,}05 t} = 5 \\Rightarrow t = \\frac{\\ln(5)}{0{,}05} = \\frac{1{,}609}{0{,}05} \\approx 32$ Minuten.',
-    tags: ['wachstumsmodell', 'gleichung-loesen', 'sachkontext'],
+    tags: ['wachstumsmodell', 'gleichung-lösen', 'sachkontext'],
   },
 
   {
@@ -256,7 +256,7 @@ export const exercises = [
       '$\\ln(4) = 2 \\cdot \\ln(2) \\approx 2 \\cdot 0{,}693 = 1{,}386$.',
     ],
     solutionKey: '$3 e^{2x} = 12 \\Rightarrow e^{2x} = 4 \\Rightarrow 2x = \\ln(4) \\approx 1{,}386 \\Rightarrow x = \\frac{\\ln(4)}{2} \\approx 0{,}693$.',
-    tags: ['gleichung-loesen', 'e-funktion', 'logarithmus'],
+    tags: ['gleichung-lösen', 'e-funktion', 'logarithmus'],
   },
 
   {
@@ -300,7 +300,7 @@ export const exercises = [
 
   {
     id: 'elog-ea-001', topicId: '11-exp-log', type: 'multiple-choice', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 12,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 12,
     data: {
       questionText: 'Warum gilt für die Ableitung $f(x) = e^{kx}$: $f\'(x) = k \\cdot e^{kx}$? Welche Begründung ist mathematisch korrekt?',
       options: [
@@ -320,7 +320,7 @@ export const exercises = [
 
   {
     id: 'elog-ea-002', topicId: '11-exp-log', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 15,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Crypto-Kursmodell',
     data: {
       questionText: 'Ein Crypto-Kurs wird in zwei Phasen modelliert: Boom $C_1(t) = 100 \\cdot e^{0{,}3t}$ (0 bis 10 Tage) und Crash $C_2(t) = C_1(10) \\cdot e^{-0{,}5(t-10)}$ (ab Tag 10). Analysiere das Modell schrittweise.',

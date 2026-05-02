@@ -29,7 +29,7 @@ export const lesson = {
     {
       titleKey: 'concepts.read_then_plan.title',
       descriptionKey: 'concepts.read_then_plan.desc',
-      formula: '\\text{Lesen} \\to \\text{Planen} \\to \\text{Rechnen} \\to \\text{Pruefen}',
+      formula: '\\text{Lesen} \\to \\text{Planen} \\to \\text{Rechnen} \\to \\text{Prüfen}',
       highlight: 'amber',
     },
     {

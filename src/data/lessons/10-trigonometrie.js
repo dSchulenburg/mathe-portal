@@ -112,5 +112,44 @@ export const lesson = {
     },
   ],
 
-  prerequisites: ['10-pythagoras'],
+  prerequisites: ['10-pythagoras', '10-aehnlichkeit'],
+
+  connections: [
+    {
+      topicId: '10-aehnlichkeit',
+      relation: 'baut-auf',
+      why: 'Trig-Funktionen sind konstante Seitenverhältnisse bei festem Winkel — also ähnliche Dreiecke',
+      bubble: {
+        character: 'euklid',
+        text: 'Sinus, Kosinus, Tangens — das sind nichts anderes als Seitenverhältnisse. Und weil ähnliche Dreiecke gleiche Verhältnisse haben, hängt der Wert nur vom Winkel ab. Strahlensatz und Trig sind dieselbe Idee in zwei Verkleidungen.',
+      },
+    },
+    {
+      topicId: '10-pythagoras',
+      relation: 'baut-auf',
+      why: 'sin²(α) + cos²(α) = 1 ist Pythagoras am Einheitskreis',
+      bubble: {
+        character: 'euklid',
+        text: 'Wenn ein Punkt auf dem Einheitskreis bei (cos α | sin α) liegt, dann ist sein Abstand zum Ursprung 1. Pythagoras: cos²(α) + sin²(α) = 1². Die wichtigste Identität der Trigonometrie ist nur Pythagoras im neuen Kostüm.',
+      },
+    },
+    {
+      topicId: '10-periodisch',
+      relation: 'fuehrt-zu',
+      why: 'Periodische Vorgänge werden mit sin/cos modelliert',
+      bubble: {
+        character: 'euklid',
+        text: 'Jede Schwingung — Gezeiten, Herzschlag, Wechselstrom — wird mit Sinus und Kosinus beschrieben. Das ist die direkte Anwendung dessen, was du hier lernst.',
+      },
+    },
+    {
+      topicId: '11-vektorrechnung',
+      relation: 'fuehrt-zu',
+      why: 'Skalarprodukt: a·b = |a|·|b|·cos(α) — Trig macht Vektoren messbar',
+      bubble: {
+        character: 'euklid',
+        text: 'In Klasse 11 wirst du sehen, wie der Winkel zwischen zwei Vektoren über cos(α) ausgedrückt wird. Embeddings in der KI funktionieren genauso — der Sinn von Trig reicht weit über das Dreieck hinaus.',
+      },
+    },
+  ],
 };
