@@ -426,6 +426,7 @@ export const TOPICS = [
     exercises: vektorrechnungEx,
     lesson: vektorrechnungLesson,
     plotter: null,
+    station: 'VectorExplorer',
   },
 
   // ─── KLASSE 12 ──────────────────────────────────────────────────────────────
