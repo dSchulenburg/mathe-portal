@@ -184,6 +184,7 @@ export const TOPICS = [
     exercises: koerperEx,
     lesson: koerperLesson,
     plotter: null,
+    station: 'BodyExplorer3D',
   },
   {
     id: '10-potenzgesetze',
