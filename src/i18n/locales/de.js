@@ -131,6 +131,8 @@ export default {
     mistakesSubtitle: 'Das geht oft schief...',
     prerequisites: 'Vorwissen',
     prerequisitesSubtitle: 'Das solltest du schon können',
+    connections: 'Brücken zu anderen Themen',
+    connectionsSubtitle: 'Wo dieselbe Idee wieder auftaucht',
     collapseLesson: 'Lektion einklappen',
     expandLesson: 'Lektion anzeigen',
     skipToExercises: 'Jetzt üben →',

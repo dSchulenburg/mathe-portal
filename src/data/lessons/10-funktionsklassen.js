@@ -115,4 +115,34 @@ export const lesson = {
   ],
 
   prerequisites: ['10-quad-funktionen', '10-exp-wachstum'],
+
+  connections: [
+    {
+      topicId: '10-quad-funktionen',
+      relation: 'verwandt',
+      why: 'Eine Funktionsklasse — die quadratische ist eine von vier Grundtypen',
+      bubble: {
+        character: 'euklid',
+        text: 'Du hast schon Parabeln gesehen — hier siehst du, wo sie im Familienporträt aller Funktionen stehen. Linear, quadratisch, exponentiell, logarithmisch — vier Verwandte mit ganz unterschiedlichen Charakteren.',
+      },
+    },
+    {
+      topicId: '10-exp-wachstum',
+      relation: 'verwandt',
+      why: 'Exponentielles Wachstum ist ein Mitglied dieser Familie',
+      bubble: {
+        character: 'euklid',
+        text: 'Exponentielles Wachstum überholt jede Polynomfunktion — auf lange Sicht. Vergleiche es selbst: bei x = 10 ist 2ˣ = 1024, x² nur 100.',
+      },
+    },
+    {
+      topicId: '11-ableitungsregeln',
+      relation: 'fuehrt-zu',
+      why: 'Jede Funktionsklasse hat eine charakteristische Ableitung',
+      bubble: {
+        character: 'euklid',
+        text: 'In Klasse 11 wirst du sehen: Jede Funktionsklasse hat ihre eigene Ableitungsregel. Linear → konstant, quadratisch → linear, exponentiell → bleibt exponentiell. Die Form bleibt erhalten.',
+      },
+    },
+  ],
 };

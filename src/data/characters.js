@@ -46,6 +46,21 @@ export const CHARACTERS = {
     grade: 12,
     team: ['Mia (Mathe-Beratung)', 'Amir (Daten-Pipeline)', 'Studio Polygon Harbor'],
   },
+  euklid: {
+    id: 'euklid',
+    name: 'Euklid',
+    age: null,
+    role: 'Brücken-Geist der Mathematik',
+    story: null,
+    storyDesc: 'Taucht auf, wenn Themen Brücken zueinander bauen',
+    portrait: null,
+    emoji: '🦉',
+    color: '#a8a29e',
+    colorDark: '#292524',
+    colorText: '#f5f5f4',
+    grade: null,
+    team: null,
+  },
 };
 
 /**
@@ -209,4 +224,9 @@ export function getTopicStory(topicId) {
     ...story,
     character: CHARACTERS[story.characterId],
   };
+}
+
+/** Get a character by ID — useful for connection bubbles where the character may differ from the topic's main character */
+export function getCharacterById(id) {
+  return CHARACTERS[id] || null;
 }
