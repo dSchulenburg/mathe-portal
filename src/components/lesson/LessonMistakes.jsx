@@ -47,7 +47,7 @@ export default function LessonMistakes({ mistakes, topicId, character, t, accent
                   color: 'var(--mp-error)',
                   marginBottom: '0.3rem',
                 }}>
-                  ✗ {t(`lessons.${topicId}.${mistake.wrongKey}`)}
+                  ✗ <MathText text={t(`lessons.${topicId}.${mistake.wrongKey}`)} />
                 </span>
                 {mistake.wrongFormula && (
                   <FormulaDisplay formula={mistake.wrongFormula} displayMode={false} />
@@ -69,7 +69,7 @@ export default function LessonMistakes({ mistakes, topicId, character, t, accent
                   color: 'var(--mp-success)',
                   marginBottom: '0.3rem',
                 }}>
-                  ✓ {t(`lessons.${topicId}.${mistake.correctKey}`)}
+                  ✓ <MathText text={t(`lessons.${topicId}.${mistake.correctKey}`)} />
                 </span>
                 {mistake.correctFormula && (
                   <FormulaDisplay formula={mistake.correctFormula} displayMode={false} />
