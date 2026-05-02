@@ -158,7 +158,7 @@ export const TOPICS = [
     exercises: wahrscheinlichkeitEx,
     lesson: wahrscheinlichkeitLesson,
     plotter: null,
-    station: 'ProbabilityTree',
+    stations: ['ProbabilityTree', 'FourFieldTable'],
   },
   {
     id: '10-pythagoras',
@@ -416,7 +416,7 @@ export const TOPICS = [
     exercises: bedingteWkEx,
     lesson: bedingteWkLesson,
     plotter: null,
-    station: 'ProbabilityTree',
+    stations: ['ProbabilityTree', 'FourFieldTable'],
   },
   {
     id: '11-vektorrechnung',
