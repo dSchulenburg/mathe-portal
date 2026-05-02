@@ -122,6 +122,7 @@ export const TOPICS = [
       xRange: [-7, 7],
       yRange: [-4, 4],
     },
+    station: 'Einheitskreis',
   },
   {
     id: '10-exp-wachstum',
