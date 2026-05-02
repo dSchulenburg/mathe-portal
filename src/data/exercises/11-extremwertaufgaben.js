@@ -13,7 +13,7 @@ export const exercises = [
     timeEstimate: 3,
     data: {
       questionText:
-        'Welche der folgenden Funktionen beschreibt eine Zielfunktion fuer das Problem ' +
+        'Welche der folgenden Funktionen beschreibt eine Zielfunktion für das Problem ' +
         '"Maximiere den Flaecheninhalt eines Rechtecks mit gegebenem Umfang U = 20 m"? ' +
         'Die Seiten seien x und y, wobei y = 10 − x.',
       options: [
@@ -54,7 +54,7 @@ export const exercises = [
     },
     hintKeys: [
       'Bilde f′(x) und setze f′(x) = 0.',
-      'f′(x) = −2x + 6. Loese nach x auf.',
+      'f′(x) = −2x + 6. Löse nach x auf.',
     ],
     solutionKey:
       'f′(x) = −2x + 6 = 0 → x = 3. ' +
@@ -72,7 +72,7 @@ export const exercises = [
     timeEstimate: 4,
     data: {
       questionText:
-        'Pruefe die Randwerte: Die Funktion f(x) = x² − 4x + 3 ist auf [0; 4] definiert. ' +
+        'Prüfe die Randwerte: Die Funktion f(x) = x² − 4x + 3 ist auf [0; 4] definiert. ' +
         'Welchen Wert hat f an der Stelle x = 4 (rechter Rand)?',
       correctValue: 3,
       tolerance: 0.01,
@@ -135,7 +135,7 @@ export const exercises = [
         'Eine zylindrische Dose soll aus einem Blech mit der Gesamtflaeche 150π cm² ' +
         'gefertigt werden. Gesamtflaeche = 2πr² + 2πrh = 150π. ' +
         'Damit gilt h = (75 − r²) / r. ' +
-        'Die Zielfunktion fuer das Volumen lautet V(r) = πr²h = π(75r − r³). ' +
+        'Die Zielfunktion für das Volumen lautet V(r) = πr²h = π(75r − r³). ' +
         'Bei welchem Radius r (in cm) ist das Volumen maximal?',
       correctValue: 5,
       tolerance: 0.01,
@@ -194,8 +194,8 @@ export const exercises = [
     data: {
       questionText:
         'Ein rechteckiger Garten soll mit 40 m Zaun eingezaeumt werden. ' +
-        'Eine Seite bildet eine vorhandene Mauer (kein Zaun noetig). ' +
-        'Bestimme die Abmessungen fuer maximale Flaeche.',
+        'Eine Seite bildet eine vorhandene Mauer (kein Zaun nötig). ' +
+        'Bestimme die Abmessungen für maximale Flaeche.',
       steps: [
         {
           instruction: 'Stelle die Zielfunktion auf. Mit 2x + y = 40 gilt y = 40 − 2x. ' +
@@ -210,7 +210,7 @@ export const exercises = [
           showAnswer: 'A(x) = x · (40 − 2x) = 40x − 2x² (zwei Seiten x, eine Seite y)',
         },
         {
-          instruction: 'Bilde A′(x) und setze A′(x) = 0. Der optimale Wert fuer x ist:',
+          instruction: 'Bilde A′(x) und setze A′(x) = 0. Der optimale Wert für x ist:',
           type: 'numeric-input',
           expected: 10,
           tolerance: 0.01,
@@ -248,7 +248,7 @@ export const exercises = [
     data: {
       questionText:
         'Ein Unternehmen hat die Kostenfunktion K(x) = 0.5x² − 20x + 500 (Euro) ' +
-        'fuer x Stueck (x ∈ [0; 50]). ' +
+        'für x Stueck (x ∈ [0; 50]). ' +
         'Bei welcher Stueckzahl x sind die Kosten minimal?',
       correctValue: 20,
       tolerance: 0.01,
@@ -281,7 +281,7 @@ export const exercises = [
         { id: 'a', text: 'Bei x = 4 liegt ein Maximum vor (f″ < 0)', correct: true },
         { id: 'b', text: 'Bei x = 4 liegt ein Minimum vor (f″ < 0)', correct: false },
         { id: 'c', text: 'Bei x = 4 liegt ein Wendepunkt vor', correct: false },
-        { id: 'd', text: 'Keine Aussage moeglich, da f″ negativ', correct: false },
+        { id: 'd', text: 'Keine Aussage möglich, da f″ negativ', correct: false },
       ],
     },
     hintKeys: [
@@ -303,7 +303,7 @@ export const exercises = [
     topicId: '11-extremwertaufgaben',
     type: 'numeric-input',
     diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kritisches-denken'],
+    competencies: ['kreativität', 'kritisches-denken'],
     points: 15,
     timeEstimate: 10,
     contextKey: 'Festival-Buehne — optimale Sichtweite',
@@ -312,7 +312,7 @@ export const exercises = [
         'Eine Festival-Buehne ist 8 m breit und 3 m hoch aufgehaengt (Unterkante). ' +
         'Ein Zuschauer steht in Abstand x von der Buehne. ' +
         'Der Sehwinkel α (in rad) kann angenaeherrt beschrieben werden durch ' +
-        'f(x) = arctan(11/x) − arctan(3/x) fuer x > 0. ' +
+        'f(x) = arctan(11/x) − arctan(3/x) für x > 0. ' +
         'Ohne Ableitungsrechnung: Bei x = √33 ≈ 5.74 m ist das Maximum. ' +
         'Berechne f(√33) auf zwei Dezimalstellen. (Nutze arctan(11/√33) und arctan(3/√33).)',
       correctValue: 0.61,
@@ -333,7 +333,7 @@ export const exercises = [
     topicId: '11-extremwertaufgaben',
     type: 'numeric-input',
     diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kommunikation'],
+    competencies: ['kreativität', 'kommunikation'],
     points: 15,
     timeEstimate: 10,
     contextKey: 'Tiny-House-Grundriss',
@@ -342,7 +342,7 @@ export const exercises = [
         'Ein quadratisches Tiny-House-Grundstueck hat 16 m Zaun. ' +
         'Ein rechteckiger Innenbereich (Wohnen + Schlafen) soll durch eine Trennwand ' +
         'in zwei gleiche Teile geteilt werden. Der Zaun bildet drei Seiten des Rechtecks; ' +
-        'die vierte Seite ist die Hauswand. Die Trennwand laeuft parallel zu den kurzen Seiten. ' +
+        'die vierte Seite ist die Hauswand. Die Trennwand läuft parallel zu den kurzen Seiten. ' +
         'Gesamtllaenge Zaun + Trennwand: 2x + y + x = 3x + y = 16, also y = 16 − 3x. ' +
         'Zielfunktion: A(x) = x · y = x(16 − 3x). ' +
         'Bei welchem x (in m) ist A maximal?',
@@ -395,8 +395,8 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Fuer das Rechteck: 2x + 2y = 24 → y = 12 − x → A = xy.',
-      'Fuer die Schachtel: V = x²h = 32 → h = 32/x². O = x² + 4xh.',
+      'Für das Rechteck: 2x + 2y = 24 → y = 12 − x → A = xy.',
+      'Für die Schachtel: V = x²h = 32 → h = 32/x². O = x² + 4xh.',
     ],
     solutionKey:
       'a) A(x) = x(12−x): Umfang 2x+2y=24 → y=12−x. ' +
@@ -411,7 +411,7 @@ export const exercises = [
     topicId: '11-extremwertaufgaben',
     type: 'numeric-input',
     diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kommunikation'],
+    competencies: ['kreativität', 'kommunikation'],
     points: 15,
     timeEstimate: 9,
     contextKey: 'Lieferroute — minimale Fahrtkosten',
@@ -420,10 +420,10 @@ export const exercises = [
         'Ein Lieferwagen faehrt von Punkt A (0|0) zu Lager B (12|0) und von dort ' +
         'zum Kunden C (0|5) (alle Angaben in km). ' +
         'Statt direkt zu A → B → C kann er an einem Punkt P = (p|0) auf der x-Achse ' +
-        'abbiegen: Gesamtweg = p + √(p² − 24p + 169) fuer 0 ≤ p ≤ 12. ' +
+        'abbiegen: Gesamtweg = p + √(p² − 24p + 169) für 0 ≤ p ≤ 12. ' +
         'Finde numerisch (oder durch Ableiten) das p, das den Weg minimiert. ' +
-        '(Tipp: Setze die Ableitung = 0 und loese. Das optimale p liegt bei p = 12 − 5k ' +
-        'fuer ein passendes k. Das Ergebnis: p ≈ ?) ' +
+        '(Tipp: Setze die Ableitung = 0 und löse. Das optimale p liegt bei p = 12 − 5k ' +
+        'für ein passendes k. Das Ergebnis: p ≈ ?) ' +
         'Gib p auf eine Dezimalstelle gerundet an.',
       correctValue: 10.8,
       tolerance: 0.2,
@@ -432,18 +432,18 @@ export const exercises = [
     hintKeys: [
       'f(p) = p + √((p−12)² + 25). Bilde f′(p).',
       'f′(p) = 1 + (p−12)/√((p−12)² + 25) = 0 → (p−12)/√((p−12)² + 25) = −1. ' +
-        'Das ist nur moeglich wenn |p−12| = √((p−12)²+25), was nie gilt. ' +
-        'Pruefe Randwert p = 12: f(12) = 12 + 5 = 17. f(0) = 0 + 13 = 13. ' +
+        'Das ist nur möglich wenn |p−12| = √((p−12)²+25), was nie gilt. ' +
+        'Prüfe Randwert p = 12: f(12) = 12 + 5 = 17. f(0) = 0 + 13 = 13. ' +
         'Das Minimum liegt am linken Rand — denke aber nochmal nach: P auf Strecke AB!',
       'Korrektur: A=(0|0), B=(12|0), C=(0|5). Weg A→P + P→C = p + √(p²+25). ' +
-        'Minimum: d/dp [p + √(p²+25)] = 0 → 1 + p/√(p²+25) = 0 (unloesbar fuer p>0). ' +
-        'Also ist das Minimum fuer diesen Weg bei p=0 (direkt von A nach C): 5 km. ' +
-        'Fuer eine sinnvolle Aufgabe: minimiere Weg A→P→C mit P auf der Strecke x=0..12.',
+        'Minimum: d/dp [p + √(p²+25)] = 0 → 1 + p/√(p²+25) = 0 (unloesbar für p>0). ' +
+        'Also ist das Minimum für diesen Weg bei p=0 (direkt von A nach C): 5 km. ' +
+        'Für eine sinnvolle Aufgabe: minimiere Weg A→P→C mit P auf der Strecke x=0..12.',
     ],
     solutionKey:
-      'Weg W(p) = p + √(p²+25) auf [0;12]. W′(p) = 1 + p/√(p²+25) > 0 fuer p > 0. ' +
+      'Weg W(p) = p + √(p²+25) auf [0;12]. W′(p) = 1 + p/√(p²+25) > 0 für p > 0. ' +
       'Die Funktion ist streng monoton steigend → Minimum am Rand p = 0: W(0) = 5 km. ' +
-      'Sinnvoll ist p = 0: Direkt von A nach C ohne Umweg ueber x-Achse. ' +
+      'Sinnvoll ist p = 0: Direkt von A nach C ohne Umweg über x-Achse. ' +
       'Alternativmodell (A→P auf x-Achse, P→C): Minimum bei p ≈ 10.8 km wenn ' +
       'Kosten asymmetrisch (z.B. Autobahn-Abschnitt schneller).',
     tags: ['lieferroute', 'weg', 'sachkontext', 'minimum'],
@@ -458,7 +458,7 @@ export const exercises = [
     topicId: '11-extremwertaufgaben',
     type: 'step-solver',
     diffLevel: 'ea',
-    competencies: ['kreativitaet', 'kritisches-denken', 'kommunikation'],
+    competencies: ['kreativität', 'kritisches-denken', 'kommunikation'],
     points: 20,
     timeEstimate: 12,
     contextKey: 'Optimierung mit zwei Nebenbedingungen',
@@ -466,8 +466,8 @@ export const exercises = [
       questionText:
         'Ein offener Behaelter (ohne Deckel) in Form eines Quaders soll ' +
         'aus 48 cm² Blech gefertigt werden. Der quadratische Boden hat Seitenlaenge x, ' +
-        'die Hoehe sei h. Nebenbedingung: x² + 4xh = 48 → h = (48 − x²) / (4x). ' +
-        'Volumen: V(x) = x²h. Bestimme x fuer maximales Volumen.',
+        'die Höhe sei h. Nebenbedingung: x² + 4xh = 48 → h = (48 − x²) / (4x). ' +
+        'Volumen: V(x) = x²h. Bestimme x für maximales Volumen.',
       steps: [
         {
           instruction: 'Ersetze h in V(x) = x²h. Welche Zielfunktion ergibt sich?',
@@ -492,7 +492,7 @@ export const exercises = [
           showAnswer: "V'(x) = 12 − 3x²/4 = 0",
         },
         {
-          instruction: 'Loese 12 − 3x²/4 = 0 nach x auf (x > 0). x = ?',
+          instruction: 'Löse 12 − 3x²/4 = 0 nach x auf (x > 0). x = ?',
           type: 'numeric-input',
           expected: 4,
           tolerance: 0.01,
@@ -509,8 +509,8 @@ export const exercises = [
     },
     hintKeys: [
       'Setze h = (48−x²)/(4x) in V = x²h ein und vereinfache.',
-      'V′(x) = 12 − (3/4)x². Setze gleich null und loese nach x auf.',
-      'Pruefe mit V″(x) = −(3/2)x < 0, dass es sich um ein Maximum handelt.',
+      'V′(x) = 12 − (3/4)x². Setze gleich null und löse nach x auf.',
+      'Prüfe mit V″(x) = −(3/2)x < 0, dass es sich um ein Maximum handelt.',
     ],
     solutionKey:
       'V(x) = 12x − x³/4. V′(x) = 12 − 3x²/4 = 0 → x² = 16 → x = 4 cm. ' +
@@ -529,7 +529,7 @@ export const exercises = [
     data: {
       questionText:
         'Beweise-Aufgabe: Schueler Jonas behauptet, das Quadrat habe unter allen Rechtecken ' +
-        'mit gleichem Umfang den groessten Flaecheninhalt. ' +
+        'mit gleichem Umfang den größten Flaecheninhalt. ' +
         'Analysiere seinen Beweis auf Fehler:',
       steps: [
         {
@@ -548,7 +548,7 @@ export const exercises = [
           hasError: true,
           errorExplanation:
             'Fehler: A′(x) = U/2 − 2x = 0 → x = U/4, nicht U/2. ' +
-            'Jonas hat beim Loesen dividiert statt durch 2 zu dividieren.',
+            'Jonas hat beim Lösen dividiert statt durch 2 zu dividieren.',
         },
         {
           content:
@@ -562,7 +562,7 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Pruefe in Schritt 3: Loese U/2 − 2x = 0 korrekt nach x auf.',
+      'Prüfe in Schritt 3: Löse U/2 − 2x = 0 korrekt nach x auf.',
       'A′(x) = U/2 − 2x = 0 → 2x = U/2 → x = U/4.',
     ],
     solutionKey:

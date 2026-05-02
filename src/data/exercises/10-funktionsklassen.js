@@ -285,7 +285,7 @@ export const exercises = [
     topicId: '10-funktionsklassen',
     type: 'multiple-choice',
     diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kritisches-denken'],
+    competencies: ['kreativität', 'kritisches-denken'],
     points: 15,
     timeEstimate: 10,
     data: {
@@ -610,7 +610,7 @@ export const exercises = [
     topicId: '10-funktionsklassen',
     type: 'step-solver',
     diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kritisches-denken', 'kommunikation'],
+    competencies: ['kreativität', 'kritisches-denken', 'kommunikation'],
     points: 18,
     timeEstimate: 15,
     data: {

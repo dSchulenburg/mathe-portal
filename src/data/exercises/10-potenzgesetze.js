@@ -144,7 +144,7 @@ export const exercises = [
       'Kürze dann die Potenzen: x⁵ / x² = x^(5−2) = x³.',
     ],
     solutionKey: '(6x⁵) / (3x²) = (6/3) · x^(5−2) = 2x³. Der Koeffizient ist 2.',
-    tags: ['bruch-kuerzen', 'potenzgesetz-quotient'],
+    tags: ['bruch-kürzen', 'potenzgesetz-quotient'],
   },
 
   {
@@ -152,7 +152,7 @@ export const exercises = [
     topicId: '10-potenzgesetze',
     type: 'numeric-input',
     diffLevel: 'standard',
-    competencies: ['kritisches-denken', 'kreativitaet'],
+    competencies: ['kritisches-denken', 'kreativität'],
     points: 10,
     timeEstimate: 4,
     data: {
@@ -222,7 +222,7 @@ export const exercises = [
     topicId: '10-potenzgesetze',
     type: 'multiple-choice',
     diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kritisches-denken'],
+    competencies: ['kreativität', 'kritisches-denken'],
     points: 15,
     timeEstimate: 5,
     data: {
@@ -266,7 +266,7 @@ export const exercises = [
     ],
     solutionKey:
       '(2²)³ = 2⁶ = 64; 2^(3²) = 2⁹ = 512; 2³ · 3² = 8 · 9 = 72; (2·3)² = 6² = 36. Der größte Wert ist 2^(3²) = 512.',
-    tags: ['groessenvergleich', 'reihenfolge-der-auswertung', 'potenz-der-potenz'],
+    tags: ['größenvergleich', 'reihenfolge-der-auswertung', 'potenz-der-potenz'],
   },
 
   // ─── BASIS (neue Aufgaben) ───────────────────────────────────────────────────
@@ -420,7 +420,7 @@ export const exercises = [
     topicId: '10-potenzgesetze',
     type: 'step-solver',
     diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kreativitaet', 'kommunikation'],
+    competencies: ['kritisches-denken', 'kreativität', 'kommunikation'],
     points: 15,
     timeEstimate: 7,
     data: {
@@ -488,7 +488,7 @@ export const exercises = [
     topicId: '10-potenzgesetze',
     type: 'step-solver',
     diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kreativitaet', 'kommunikation'],
+    competencies: ['kritisches-denken', 'kreativität', 'kommunikation'],
     points: 20,
     timeEstimate: 10,
     data: {
@@ -521,7 +521,7 @@ export const exercises = [
       '$2^{20} = (2^{10})^2 \\approx (10^3)^2 = 10^6$.',
     ],
     solutionKey: '$2^{10} = 1024$; relativer Fehler $= 2{,}4\\%$; $2^{20} = (2^{10})^2 \\approx (10^3)^2 = 10^6$.',
-    tags: ['informatik', 'näherung', 'step-solver', 'zehnerpotenz', '4k-kreativitaet'],
+    tags: ['informatik', 'näherung', 'step-solver', 'zehnerpotenz', '4k-kreativität'],
   },
 
   {
@@ -569,7 +569,7 @@ export const exercises = [
     topicId: '10-potenzgesetze',
     type: 'numeric-input',
     diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kreativitaet'],
+    competencies: ['kritisches-denken', 'kreativität'],
     points: 20,
     timeEstimate: 6,
     data: {

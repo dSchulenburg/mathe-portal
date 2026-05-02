@@ -23,7 +23,7 @@ export const lesson = {
     { type: 'text', key: 'explanation.z_transformation' },
     { type: 'formula', latex: 'z = \\frac{x - \\mu}{\\sigma}, \\quad P(X \\leq x) = \\Phi(z)' },
     { type: 'text', key: 'explanation.central_limit' },
-    { type: 'formula', latex: '\\bar{X}_n \\xrightarrow{d} N\\!\\left(\\mu,\\, \\frac{\\sigma^2}{n}\\right) \\quad \\text{fuer } n \\to \\infty' },
+    { type: 'formula', latex: '\\bar{X}_n \\xrightarrow{d} N\\!\\left(\\mu,\\, \\frac{\\sigma^2}{n}\\right) \\quad \\text{für } n \\to \\infty' },
   ],
 
   concepts: [

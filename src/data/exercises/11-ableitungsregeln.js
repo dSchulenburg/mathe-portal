@@ -531,7 +531,7 @@ export const exercises = [
     topicId: '11-ableitungsregeln',
     type: 'step-solver',
     diffLevel: 'ea',
-    competencies: ['kritisches-denken', 'kreativitaet', 'kommunikation'],
+    competencies: ['kritisches-denken', 'kreativität', 'kommunikation'],
     points: 20,
     timeEstimate: 12,
     data: {
@@ -605,7 +605,7 @@ export const exercises = [
     topicId: '11-ableitungsregeln',
     type: 'step-solver',
     diffLevel: 'ea',
-    competencies: ['kritisches-denken', 'kreativitaet'],
+    competencies: ['kritisches-denken', 'kreativität'],
     points: 20,
     timeEstimate: 14,
     contextKey: 'Mehrfache Verkettung',

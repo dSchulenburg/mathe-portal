@@ -93,9 +93,9 @@ export const TOPIC_STORIES = {
     audioFile: new URL('../../assets/mia/audio/sec08-potenzgesetze.mp3', import.meta.url).href,
     challenge: 'Speicher-Management',
   },
-  '10-aehnlichkeit': {
+  '10-ähnlichkeit': {
     characterId: 'mia',
-    audioFile: new URL('../../assets/mia/audio/sec09-aehnlichkeit.mp3', import.meta.url).href,
+    audioFile: new URL('../../assets/mia/audio/sec09-ähnlichkeit.mp3', import.meta.url).href,
     challenge: 'Sprite-Skalierung',
   },
   '10-periodisch': {
@@ -103,9 +103,9 @@ export const TOPIC_STORIES = {
     audioFile: new URL('../../assets/mia/audio/sec10-periodisch.mp3', import.meta.url).href,
     challenge: 'Animations-Zyklen',
   },
-  '10-diff-einfuehrung': {
+  '10-diff-einführung': {
     characterId: 'mia',
-    audioFile: new URL('../../assets/mia/audio/sec11-diff-einfuehrung.mp3', import.meta.url).href,
+    audioFile: new URL('../../assets/mia/audio/sec11-diff-einführung.mp3', import.meta.url).href,
     challenge: 'Frame-Rate-Optimierung',
   },
   '10-funktionsklassen': {

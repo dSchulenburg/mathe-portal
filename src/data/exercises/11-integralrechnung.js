@@ -23,7 +23,7 @@ export const exercises = [
     },
     hintKeys: [
       'Eine Stammfunktion F(x) erfuellt F′(x) = f(x).',
-      'Potenzregel rueckwaerts: ∫xⁿ dx = xⁿ⁺¹/(n+1). Also ∫3x² dx = ?',
+      'Potenzregel rückwärts: ∫xⁿ dx = xⁿ⁺¹/(n+1). Also ∫3x² dx = ?',
     ],
     solutionKey:
       '∫3x² dx = 3 · x³/3 = x³. Probe: (x³)′ = 3x² = f(x). ' +
@@ -66,7 +66,7 @@ export const exercises = [
     timeEstimate: 3,
     data: {
       questionText:
-        'Welche Stammfunktion gehoert zu f(x) = x⁴?',
+        'Welche Stammfunktion gehört zu f(x) = x⁴?',
       options: [
         { id: 'a', text: 'F(x) = x⁵/5', correct: true },
         { id: 'b', text: 'F(x) = 4x³', correct: false },
@@ -104,7 +104,7 @@ export const exercises = [
     ],
     solutionKey:
       '∫₀⁴ 3 dx = [3x]₀⁴ = 12 − 0 = 12. ' +
-      'Geometrisch: Rechteck mit Breite 4 und Hoehe 3 → Flaeche = 4 · 3 = 12. ✓',
+      'Geometrisch: Rechteck mit Breite 4 und Höhe 3 → Flaeche = 4 · 3 = 12. ✓',
     tags: ['integral', 'konstante-funktion', 'flaeche'],
   },
 
@@ -129,10 +129,10 @@ export const exercises = [
     },
     hintKeys: [
       'Das bestimmte Integral summiert unendlich viele infinitesimal duenne Rechtecke.',
-      'Jedes Rechteck hat Breite dx und Hoehe f(x).',
+      'Jedes Rechteck hat Breite dx und Höhe f(x).',
     ],
     solutionKey:
-      'Das bestimmte Integral ∫ₐᵇ f(x) dx gibt (fuer f ≥ 0) die Flaeche unter dem Graphen ' +
+      'Das bestimmte Integral ∫ₐᵇ f(x) dx gibt (für f ≥ 0) die Flaeche unter dem Graphen ' +
       'zwischen x = a und x = b und der x-Achse an. Das ist die geometrische Grundinterpretation.',
     tags: ['interpretation', 'flaeche', 'grundbegriff'],
   },
@@ -152,7 +152,7 @@ export const exercises = [
     data: {
       questionText:
         'Berechne die Flaeche unter der Parabel f(x) = x² − 1 von x = 1 bis x = 3 ' +
-        '(der Graph liegt dort ueber der x-Achse). Bestimme ∫₁³ (x² − 1) dx.',
+        '(der Graph liegt dort über der x-Achse). Bestimme ∫₁³ (x² − 1) dx.',
       correctValue: 5.33,
       tolerance: 0.02,
     },
@@ -183,7 +183,7 @@ export const exercises = [
         'Bestimme die gesamte eingefuellte Wassermenge in den ersten 5 Minuten.',
       steps: [
         {
-          instruction: 'Welche Stammfunktion F(t) gehoert zu f(t) = 2t + 1?',
+          instruction: 'Welche Stammfunktion F(t) gehört zu f(t) = 2t + 1?',
           type: 'multiple-choice',
           options: [
             { id: 'a', text: 'F(t) = t² + t' },
@@ -226,10 +226,10 @@ export const exercises = [
     competencies: ['kommunikation'],
     points: 10,
     timeEstimate: 5,
-    contextKey: 'Marathon-Laeufer',
+    contextKey: 'Marathon-Läufer',
     data: {
       questionText:
-        'Ein Marathon-Laeufer hat in der ersten Stunde die Geschwindigkeit ' +
+        'Ein Marathon-Läufer hat in der ersten Stunde die Geschwindigkeit ' +
         'v(t) = 12 − 2t km/h (t in Stunden, 0 ≤ t ≤ 1). ' +
         'Berechne die in dieser Stunde zurueckgelegte Strecke s = ∫₀¹ v(t) dt (in km).',
       correctValue: 11,
@@ -284,7 +284,7 @@ export const exercises = [
     timeEstimate: 4,
     data: {
       questionText:
-        'Welche der folgenden Aussagen ueber das unbestimmte Integral ist KORREKT?',
+        'Welche der folgenden Aussagen über das unbestimmte Integral ist KORREKT?',
       options: [
         {
           id: 'a',
@@ -310,7 +310,7 @@ export const exercises = [
     },
     hintKeys: [
       'Ableiten und Integrieren sind Umkehroperationen — aber beim Ableiten gehen Konstanten verloren.',
-      'Jede Konstante C liefert beim Ableiten 0, also ist F(x)+C fuer jedes C eine Stammfunktion.',
+      'Jede Konstante C liefert beim Ableiten 0, also ist F(x)+C für jedes C eine Stammfunktion.',
     ],
     solutionKey:
       'Das unbestimmte Integral ist eine Schar von Stammfunktionen: F(x) + C. ' +
@@ -376,7 +376,7 @@ export const exercises = [
       'I₂ = |∫₋₂² (x²−4)dx| = |F(2)−F(−2)| = |(8/3−8)−(−8/3+8)| = |16/3−16| = 32/3. ' +
       'I₃ = ∫₂³ (x²−4)dx = F(3)−F(2) = (9−12)−(8/3−8) = −3+16/3 = 7/3. ' +
       'Gesamtflaeche = 7/3 + 32/3 + 7/3 = 46/3 ≈ 15.33.' +
-      ' Abweichung moeglich je nach exakter Rechnung.',
+      ' Abweichung möglich je nach exakter Rechnung.',
     tags: ['vorzeichenwechsel', 'flaeche', 'nullstellen', 'absolutbetrag'],
   },
 
@@ -399,8 +399,8 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Potenzregel: ∫xⁿ dx = xⁿ⁺¹/(n+1) + C (fuer n ≠ −1).',
-      'Fuer x⁻²: ∫x⁻² dx = x⁻¹/(−1) + C = −1/x + C.',
+      'Potenzregel: ∫xⁿ dx = xⁿ⁺¹/(n+1) + C (für n ≠ −1).',
+      'Für x⁻²: ∫x⁻² dx = x⁻¹/(−1) + C = −1/x + C.',
     ],
     solutionKey:
       'a) ∫5x⁴dx = 5x⁵/5 = x⁵+C. ' +
@@ -420,7 +420,7 @@ export const exercises = [
     timeEstimate: 8,
     data: {
       questionText:
-        'Schueler Tim berechnet ∫₋₂² x² dx. Finde den Fehler in seiner Loesung:',
+        'Schueler Tim berechnet ∫₋₂² x² dx. Finde den Fehler in seiner Lösung:',
       steps: [
         {
           content: 'Stammfunktion: F(x) = x³/3',
@@ -446,7 +446,7 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Pruefe (−2)³ sorgfaeltig: (−2)³ = −2 · −2 · −2 = −8.',
+      'Prüfe (−2)³ sorgfaeltig: (−2)³ = −2 · −2 · −2 = −8.',
       'Geometrische Kontrolle: x² ≥ 0 → Flaeche muss positiv sein.',
     ],
     solutionKey:
@@ -462,10 +462,10 @@ export const exercises = [
     competencies: ['kritisches-denken', 'kommunikation'],
     points: 15,
     timeEstimate: 10,
-    contextKey: 'Riemann-Summen — Annaeherung ans Integral',
+    contextKey: 'Riemann-Summen — Annäherung ans Integral',
     data: {
       questionText:
-        'Naehre das Integral ∫₀² x² dx durch eine Riemann-Summe mit n = 4 Rechtecken ' +
+        'Nähre das Integral ∫₀² x² dx durch eine Riemann-Summe mit n = 4 Rechtecken ' +
         '(Linkssumme, gleiche Breite Δx = 0.5).',
       steps: [
         {
@@ -490,7 +490,7 @@ export const exercises = [
         {
           instruction:
             'Das exakte Integral betraegt ∫₀² x² dx = [x³/3]₀² = 8/3 ≈ 2.667. ' +
-            'Wie gross ist der absolute Fehler der Riemann-Summe?',
+            'Wie groß ist der absolute Fehler der Riemann-Summe?',
           type: 'numeric-input',
           expected: 0.92,
           tolerance: 0.05,
@@ -499,12 +499,12 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Linkssumme nutzt den linken Rand jedes Teilintervalls als Hoehenannaehrung.',
+      'Linkssumme nutzt den linken Rand jedes Teilintervalls als Höhenannaehrung.',
       'Δx = (b−a)/n = 2/4 = 0.5. Berechne f an den linken Raendern: 0, 0.5, 1, 1.5.',
     ],
     solutionKey:
       'L₄ = 0.5 · (0 + 0.25 + 1 + 2.25) = 1.75. Exaktes Integral: 8/3 ≈ 2.67. ' +
-      'Fehler ≈ 0.92. Mit mehr Rechtecken naehert sich die Riemann-Summe dem Integral an.',
+      'Fehler ≈ 0.92. Mit mehr Rechtecken nähert sich die Riemann-Summe dem Integral an.',
     tags: ['riemann-summe', 'annaeherung', 'step-solver'],
   },
 
@@ -513,7 +513,7 @@ export const exercises = [
     topicId: '11-integralrechnung',
     type: 'numeric-input',
     diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kritisches-denken'],
+    competencies: ['kreativität', 'kritisches-denken'],
     points: 15,
     timeEstimate: 8,
     contextKey: 'Stromverbrauch',
@@ -545,15 +545,15 @@ export const exercises = [
     topicId: '11-integralrechnung',
     type: 'step-solver',
     diffLevel: 'ea',
-    competencies: ['kreativitaet', 'kritisches-denken', 'kommunikation'],
+    competencies: ['kreativität', 'kritisches-denken', 'kommunikation'],
     points: 20,
     timeEstimate: 14,
     contextKey: 'CO2-Emissionen — Gesamtausstoss',
     data: {
       questionText:
-        'Die CO2-Emissionsrate eines Kraftwerks betraegt in den naechsten 10 Jahren ' +
+        'Die CO2-Emissionsrate eines Kraftwerks betraegt in den nächsten 10 Jahren ' +
         'e(t) = −0.5t² + 2t + 20 (Tonnen/Jahr, 0 ≤ t ≤ 10). ' +
-        'Berechne den gesamten CO2-Ausstoss ueber diesen Zeitraum.',
+        'Berechne den gesamten CO2-Ausstoss über diesen Zeitraum.',
       steps: [
         {
           instruction: 'Bestimme die Stammfunktion E(t) von e(t) = −0.5t² + 2t + 20.',
@@ -634,19 +634,19 @@ export const exercises = [
         },
         {
           id: 'd',
-          text: 'Der Hauptsatz gilt nur fuer polynomiale Funktionen',
+          text: 'Der Hauptsatz gilt nur für polynomiale Funktionen',
           correct: false,
         },
       ],
     },
     hintKeys: [
       'Der Hauptsatz verbindet zwei scheinbar verschiedene Konzepte: Steigung (Ableitung) und Flaeche (Integral).',
-      'Die Konstante C kuerzt sich bei F(b) − F(a) heraus: (F(b)+C) − (F(a)+C) = F(b) − F(a).',
+      'Die Konstante C kürzt sich bei F(b) − F(a) heraus: (F(b)+C) − (F(a)+C) = F(b) − F(a).',
     ],
     solutionKey:
       'Der Hauptsatz verbindet Differentiation (lokale Eigenschaft: Steigung) und Integration ' +
-      '(globale Eigenschaft: kumulierte Groesse). Die C-Konstante spielt beim bestimmten Integral ' +
-      'keine Rolle, da sie sich wegkuerzt. Der Satz gilt allgemein fuer stetige Funktionen, ' +
+      '(globale Eigenschaft: kumulierte Größe). Die C-Konstante spielt beim bestimmten Integral ' +
+      'keine Rolle, da sie sich wegkuerzt. Der Satz gilt allgemein für stetige Funktionen, ' +
       'nicht nur Polynome.',
     tags: ['hauptsatz', 'integration', 'differentiation', 'ea', 'grundverstaendnis'],
   },

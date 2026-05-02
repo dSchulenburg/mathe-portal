@@ -535,7 +535,7 @@ export const exercises = [
     topicId: '11-kurvendiskussion',
     type: 'numeric-input',
     diffLevel: 'erweitert',
-    competencies: ['kommunikation', 'kritisches-denken', 'kreativitaet'],
+    competencies: ['kommunikation', 'kritisches-denken', 'kreativität'],
     points: 15,
     timeEstimate: 10,
     contextKey: 'Online-Shop Gewinnoptimierung',
@@ -569,7 +569,7 @@ export const exercises = [
     topicId: '11-kurvendiskussion',
     type: 'step-solver',
     diffLevel: 'ea',
-    competencies: ['kritisches-denken', 'kreativitaet', 'kommunikation'],
+    competencies: ['kritisches-denken', 'kreativität', 'kommunikation'],
     points: 20,
     timeEstimate: 15,
     data: {
@@ -646,7 +646,7 @@ export const exercises = [
     topicId: '11-kurvendiskussion',
     type: 'step-solver',
     diffLevel: 'ea',
-    competencies: ['kritisches-denken', 'kreativitaet'],
+    competencies: ['kritisches-denken', 'kreativität'],
     points: 20,
     timeEstimate: 15,
     data: {

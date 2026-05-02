@@ -56,7 +56,7 @@ export const exercises = [
     hintKeys: ['E(X) = Summe aller (Wert · Wahrscheinlichkeit). P(6) = 1/6, P(nicht 6) = 5/6.'],
     solutionKey: 'E(X) = 3 · (1/6) + (–1) · (5/6) = 3/6 – 5/6 = –2/6 = –1/3 ≈ –0,333 €.',
     tags: ['erwartungswert', 'laplace'],
-    contextKey: 'gluecksspiel',
+    contextKey: 'glücksspiel',
   },
 
   {
@@ -201,7 +201,7 @@ export const exercises = [
     },
     hintKeys: ['Im Baumdiagramm: erste Stufe = Maschine (A oder B), zweite Stufe = Qualität (defekt / nicht defekt). P(A ∩ defekt) = P(A) · P(defekt|A).'],
     solutionKey: 'P(A) = 0,6; P(defekt|A) = 0,02. P(A ∩ defekt) = 0,6 · 0,02 = 0,012. Option a ist korrekt.',
-    tags: ['baumdiagramm', 'qualitaetskontrolle', 'bedingte-wahrscheinlichkeit'],
+    tags: ['baumdiagramm', 'qualitätskontrolle', 'bedingte-wahrscheinlichkeit'],
   },
 
   // ─── ERWEITERT (AFB III) – 6 Aufgaben ─────────────────────────────────────
@@ -225,7 +225,7 @@ export const exercises = [
 
   {
     id: 'wahr-erweitert-002', topicId: '10-wahrscheinlichkeit', type: 'multiple-choice', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kreativitaet'], points: 15, timeEstimate: 8,
+    competencies: ['kritisches-denken', 'kreativität'], points: 15, timeEstimate: 8,
     data: {
       questionText: 'Lotterie: Einsatz 1 €. Gewinn 10 € mit P = 0,05, Gewinn 2 € mit P = 0,2, sonst kein Gewinn. Ist das Spiel fair?',
       options: [
@@ -241,7 +241,7 @@ export const exercises = [
     ],
     solutionKey: 'E(Auszahlung) = 10·0,05 + 2·0,2 + 0·0,75 = 0,5 + 0,4 = 0,9 €. E(Nettogewinn) = 0,9 – 1 = –0,1 €. Das Spiel ist nicht fair: Im Durchschnitt verliert man 10 Cent pro Runde.',
     tags: ['erwartungswert', 'fairness', 'lotterie'],
-    contextKey: 'gluecksspiel-analyse',
+    contextKey: 'glücksspiel-analyse',
   },
 
   {
@@ -298,7 +298,7 @@ export const exercises = [
 
   {
     id: 'wahr-erweitert-006', topicId: '10-wahrscheinlichkeit', type: 'multiple-choice', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kreativitaet'], points: 15, timeEstimate: 9,
+    competencies: ['kritisches-denken', 'kreativität'], points: 15, timeEstimate: 9,
     data: {
       questionText: 'Urne mit 4 roten (R) und 2 blauen (B) Kugeln. Vergleich: 2 Züge mit Zurücklegen (mZ) vs. ohne Zurücklegen (oZ). Welche Aussage über P(beide blau) ist korrekt?',
       options: [
@@ -426,7 +426,7 @@ export const exercises = [
   },
   {
     id: 'wk-erweitert-010', topicId: '10-wahrscheinlichkeit', type: 'step-solver', diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kritisches-denken'], points: 15, timeEstimate: 7,
+    competencies: ['kreativität', 'kritisches-denken'], points: 15, timeEstimate: 7,
     contextKey: 'Geburtstagsproblem',
     data: {
       questionText: 'Klasse mit 23 Personen: P(mindestens 2 haben gleichen Geburtstag)?',

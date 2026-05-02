@@ -116,7 +116,7 @@ export const exercises = [
 
   {
     id: 'koerp-standard-002', topicId: '10-koerper', type: 'numeric-input', diffLevel: 'standard',
-    competencies: ['kritisches-denken', 'kreativitaet'], points: 8, timeEstimate: 6,
+    competencies: ['kritisches-denken', 'kreativität'], points: 8, timeEstimate: 6,
     contextKey: 'Ein zusammengesetzter Körper besteht aus einem Zylinder (r = 5 cm, h = 10 cm) und einer aufgesetzten Halbkugel (r = 5 cm).',
     data: {
       questionText: 'Berechne das Gesamtvolumen des Körpers (in cm³). Runde auf eine Dezimalstelle. Nutze π ≈ 3,14159.',
@@ -193,7 +193,7 @@ export const exercises = [
 
   {
     id: 'koerp-erweitert-001', topicId: '10-koerper', type: 'numeric-input', diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kritisches-denken'], points: 12, timeEstimate: 8,
+    competencies: ['kreativität', 'kritisches-denken'], points: 12, timeEstimate: 8,
     contextKey: 'Eine Eistüte besteht aus einem Kegel (r = 3 cm, h = 12 cm) und einer aufgesetzten Halbkugel (r = 3 cm), die das Eis darstellt.',
     data: {
       questionText: 'Berechne das gesamte Volumen von Kegel und Halbkugel (in cm³). Runde auf eine Dezimalstelle. Nutze π ≈ 3,14159.',
@@ -211,7 +211,7 @@ export const exercises = [
 
   {
     id: 'koerp-erweitert-002', topicId: '10-koerper', type: 'numeric-input', diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kritisches-denken', 'kommunikation'], points: 12, timeEstimate: 8,
+    competencies: ['kreativität', 'kritisches-denken', 'kommunikation'], points: 12, timeEstimate: 8,
     contextKey: 'Ein Kirchturm besteht aus einem quadratischen Quader (Grundkante a = 4 m, Höhe h₁ = 15 m) und einer aufgesetzten quadratischen Pyramide (Grundkante a = 4 m, Höhe h₂ = 6 m).',
     data: {
       questionText: 'Berechne das gesamte Volumen des Kirchturms (in m³). Runde auf eine Dezimalstelle.',
@@ -249,7 +249,7 @@ export const exercises = [
 
   {
     id: 'koerp-erweitert-004', topicId: '10-koerper', type: 'numeric-input', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kreativitaet'], points: 12, timeEstimate: 8,
+    competencies: ['kritisches-denken', 'kreativität'], points: 12, timeEstimate: 8,
     contextKey: 'Eine Kugel ist einem Zylinder einbeschrieben: Der Radius der Kugel ist gleich dem Radius des Zylinders (r), und der Durchmesser der Kugel ist gleich der Höhe des Zylinders (h = 2r).',
     data: {
       questionText: 'Berechne das Verhältnis V(Kugel) / V(Zylinder). Gib den Wert als Dezimalzahl an (z. B. 0,67). Runde auf zwei Dezimalstellen.',
@@ -267,7 +267,7 @@ export const exercises = [
 
   {
     id: 'koerp-erweitert-005', topicId: '10-koerper', type: 'numeric-input', diffLevel: 'erweitert',
-    competencies: ['kritisches-denken', 'kreativitaet', 'kommunikation'], points: 12, timeEstimate: 10,
+    competencies: ['kritisches-denken', 'kreativität', 'kommunikation'], points: 12, timeEstimate: 10,
     contextKey: 'Ein umgekehrter Kegel (Spitze unten) dient als Wasserbehälter. Der Öffnungsradius oben beträgt R = 6 m, die Tiefe H = 9 m. Der Behälter ist zur Hälfte mit Wasser gefüllt (gemessen an der Höhe: Wasserstand h = 4,5 m).',
     data: {
       questionText: 'Berechne das Volumen des Wassers im Behälter (in m³). Runde auf eine Dezimalstelle. Nutze π ≈ 3,14159. Hinweis: Der Radius des Wasserkegels ist proportional zur Wassertiefe.',
@@ -398,7 +398,7 @@ export const exercises = [
   },
   {
     id: 'koerp-ea-001', topicId: '10-koerper', type: 'step-solver', diffLevel: 'ea',
-    competencies: ['kreativitaet', 'kritisches-denken'], points: 20, timeEstimate: 8,
+    competencies: ['kreativität', 'kritisches-denken'], points: 20, timeEstimate: 8,
     contextKey: 'Zeltdach — Pyramide',
     data: {
       questionText: 'Ein pyramidenförmiges Zeltdach hat eine Grundfläche von 6 m × 6 m und eine Höhe von 4 m. Berechne Volumen und Mantelfläche.',

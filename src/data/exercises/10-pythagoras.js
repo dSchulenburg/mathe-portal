@@ -100,7 +100,7 @@ export const exercises = [
     },
     hintKeys: ['Die Höhe teilt die Basis in zwei gleiche Hälften. Es entsteht ein rechtwinkliges Dreieck mit Hypotenuse a = 10 cm und Kathete a/2 = 5 cm.', 'h = √(a² − (a/2)²) = √(100 − 25)'],
     solutionKey: 'h² = a² − (a/2)² = 10² − 5² = 100 − 25 = 75. h = √75 = 5√3 ≈ 8,66 cm.',
-    tags: ['gleichseitiges-dreieck', 'hoehe', 'wurzel'],
+    tags: ['gleichseitiges-dreieck', 'höhe', 'wurzel'],
   },
   {
     id: 'pyth-standard-003', topicId: '10-pythagoras', type: 'numeric-input', diffLevel: 'standard',
@@ -130,7 +130,7 @@ export const exercises = [
     },
     hintKeys: ['Prüfe die Umkehrung: Falls a² + b² = c² gilt (mit c als längster Seite), ist das Dreieck rechtwinklig.'],
     solutionKey: 'a² + b² = 8² + 15² = 64 + 225 = 289 = 17² = c². Da die Bedingung erfüllt ist, ist das Dreieck rechtwinklig (Umkehrung des Satzes des Pythagoras). Antwort (a) ist korrekt.',
-    tags: ['umkehrung', 'pruefen', 'tripel'],
+    tags: ['umkehrung', 'prüfen', 'tripel'],
   },
   {
     id: 'pyth-standard-005', topicId: '10-pythagoras', type: 'numeric-input', diffLevel: 'standard',
@@ -164,7 +164,7 @@ export const exercises = [
   },
   {
     id: 'pyth-erweitert-002', topicId: '10-pythagoras', type: 'numeric-input', diffLevel: 'erweitert',
-    competencies: ['kommunikation', 'kritisches-denken', 'kreativitaet'], points: 15, timeEstimate: 9,
+    competencies: ['kommunikation', 'kritisches-denken', 'kreativität'], points: 15, timeEstimate: 9,
     contextKey: 'Zwei Schiffe starten von derselben Hafenposition. Schiff A fährt 12 km nach Norden, Schiff B fährt 16 km nach Osten.',
     data: {
       questionText: 'Wie groß ist die direkte Entfernung zwischen den beiden Schiffen (in km)?',
@@ -194,7 +194,7 @@ export const exercises = [
   },
   {
     id: 'pyth-erweitert-004', topicId: '10-pythagoras', type: 'multiple-choice', diffLevel: 'erweitert',
-    competencies: ['kreativitaet', 'kritisches-denken'], points: 15, timeEstimate: 8,
+    competencies: ['kreativität', 'kritisches-denken'], points: 15, timeEstimate: 8,
     data: {
       questionText: 'Welche der folgenden Zahlentripel (a, b, c) sind pythagoräische Tripel, d.h. es gilt a² + b² = c²? (Mehrere Antworten möglich)',
       options: [
@@ -210,7 +210,7 @@ export const exercises = [
   },
   {
     id: 'pyth-erweitert-005', topicId: '10-pythagoras', type: 'numeric-input', diffLevel: 'erweitert',
-    competencies: ['kommunikation', 'kritisches-denken', 'kreativitaet'], points: 15, timeEstimate: 10,
+    competencies: ['kommunikation', 'kritisches-denken', 'kreativität'], points: 15, timeEstimate: 10,
     contextKey: 'Ein symmetrisches Satteldach hat eine Firstbreite von 0 m (Spitze), eine Hausbreite von 12 m und eine Dachneigung von 30° zur Waagerechten. Die Dachlattung wird entlang der Schräge verlegt.',
     data: {
       questionText: 'Berechne die Länge einer Dachschräge (halbe Dachseite) in Metern. Runde auf zwei Dezimalstellen. Hinweis: Die halbe Hausbreite beträgt 6 m. Die Dachschräge ist die Hypotenuse, die Höhe ergibt sich aus tan(30°) · 6.',
@@ -335,7 +335,7 @@ export const exercises = [
   },
   {
     id: 'pyth-ea-001', topicId: '10-pythagoras', type: 'step-solver', diffLevel: 'ea',
-    competencies: ['kreativitaet', 'kritisches-denken'], points: 20, timeEstimate: 8,
+    competencies: ['kreativität', 'kritisches-denken'], points: 20, timeEstimate: 8,
     contextKey: '3D-Raumdiagonale',
     data: {
       questionText: 'Ein Quader hat die Maße 3 × 4 × 12. Berechne die Raumdiagonale.',

@@ -95,7 +95,7 @@ export const exercises = [
       'Spalte = Herkunftszustand. Eintrag $(i,j)$: Wahrscheinlichkeit, von Zustand $j$ in Zustand $i$ zu wechseln.',
     ],
     solutionKey: '$T = \\begin{pmatrix} 0{,}8 & 0{,}3 \\\\ 0{,}2 & 0{,}7 \\end{pmatrix}$. Spaltensummen je 1. Zeile 1 = Ziel Stadt, Zeile 2 = Ziel Umland.',
-    tags: ['step-solver', 'uebergangsmatrix', 'markov', 'pendler', 'stochastisch'],
+    tags: ['step-solver', 'übergangsmatrix', 'markov', 'pendler', 'stochastisch'],
   },
 
   {
@@ -296,7 +296,7 @@ export const exercises = [
 
   {
     id: 'mat-ea-001', topicId: '12-matrizen', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 18,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 18,
     contextKey: 'PageRank',
     data: {
       questionText: 'Vereinfachter PageRank: 3 Webseiten $A$, $B$, $C$. Verlinkungsmatrix: $L = \\begin{pmatrix} 0 & 1/2 & 1 \\\\ 1/2 & 0 & 0 \\\\ 1/2 & 1/2 & 0 \\end{pmatrix}$. Startvektor: $\\vec{r}_0 = \\begin{pmatrix} 1/3 \\\\ 1/3 \\\\ 1/3 \\end{pmatrix}$. Berechne $\\vec{r}_1 = L \\cdot \\vec{r}_0$.',
@@ -334,7 +334,7 @@ export const exercises = [
 
   {
     id: 'mat-ea-002', topicId: '12-matrizen', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 16,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 16,
     contextKey: 'Populationsdynamik',
     data: {
       questionText: 'Leslie-Matrix: Eine Froschpopulation hat zwei Altersklassen (Kaulquappe, Frosch). Leslie-Matrix: $L = \\begin{pmatrix} 0 & 2 \\\\ 0{,}5 & 0{,}8 \\end{pmatrix}$. Startpopulation: $\\vec{p}_0 = \\begin{pmatrix} 100 \\\\ 50 \\end{pmatrix}$ (100 Kaulquappen, 50 Frösche). Berechne $\\vec{p}_1 = L \\cdot \\vec{p}_0$.',
@@ -372,7 +372,7 @@ export const exercises = [
 
   {
     id: 'mat-ea-003', topicId: '12-matrizen', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 18,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 18,
     contextKey: 'Pendlerverhalten Stadt-Umland',
     data: {
       questionText: 'Grenzverhalten: Pendler-Übergangsmatrix $T = \\begin{pmatrix} 0{,}8 & 0{,}3 \\\\ 0{,}2 & 0{,}7 \\end{pmatrix}$. Zeige, dass $T$ unabhängig vom Startvektor gegen den Fixvektor $\\vec{w} = \\begin{pmatrix} 0{,}6 \\\\ 0{,}4 \\end{pmatrix}$ konvergiert.',

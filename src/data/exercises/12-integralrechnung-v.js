@@ -377,7 +377,7 @@ export const exercises = [
 
   {
     id: 'intv-ea-001', topicId: '12-integralrechnung-vertieft', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 15,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Rotationsvolumen Vase',
     data: {
       questionText: 'Eine Vase soll als Rotationskörper hergestellt werden. Ihr Querschnitt wird durch $f(x) = 1 + \\frac{1}{2}\\sin(x)$ cm ($0 \\leq x \\leq 2\\pi$) beschrieben. Berechne das Volumen $V = \\pi \\int_0^{2\\pi} [f(x)]^2 \\, dx$ schrittweise.',
@@ -416,7 +416,7 @@ export const exercises = [
 
   {
     id: 'intv-ea-002', topicId: '12-integralrechnung-vertieft', type: 'step-solver', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 15,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Uneigentliches Integral',
     data: {
       questionText: 'Berechne das uneigentliche Integral $\\displaystyle\\int_1^{\\infty} \\frac{1}{x^2} \\, dx$ als Grenzwert.',
@@ -461,7 +461,7 @@ export const exercises = [
 
   {
     id: 'intv-ea-003', topicId: '12-integralrechnung-vertieft', type: 'multiple-choice', diffLevel: 'eA',
-    competencies: ['kritisches-denken', 'kommunikation', 'kreativitaet'], points: 20, timeEstimate: 12,
+    competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 12,
     contextKey: 'Substitution — konzeptuell',
     data: {
       questionText: 'Welches Ergebnis liefert $\\displaystyle\\int_0^{\\pi/2} \\sin(x) \\cdot \\cos(x) \\, dx$? Tipp: Substitution $u = \\sin(x)$ oder Additionstheorem $\\sin(x)\\cos(x) = \\frac{1}{2}\\sin(2x)$ nutzen.',

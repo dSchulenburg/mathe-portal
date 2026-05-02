@@ -182,7 +182,7 @@ export const batch2 = {
     },
   },
 
-  '10-aehnlichkeit': {
+  '10-ähnlichkeit': {
     story: {
       intro:
         'Mia scrollt durch die Asset-Library von "Hafenlichter". Die Hamburger Speicherstadt hat Gebäude in allen Größen — aber sie sollen alle proportional aussehen. Lumi fragt: "Können wir nicht einfach alles skalieren?" Mia nickt: "Genau. Das ist Ähnlichkeit."',
