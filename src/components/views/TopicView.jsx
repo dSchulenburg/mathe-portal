@@ -134,6 +134,8 @@ export default function TopicView({ topicId, onBack }) {
   const [selectedTab, setSelectedTab] = useState(availableLevels[0] ?? 'basis');
   const [expandedId, setExpandedId] = useState(null);
   const exerciseRefs = useRef({});
+  const sessionCorrectRef = useRef(0);
+  const journalFiredRef = useRef(false);
 
   const completedExercises = useMathStore(s => s.completedExercises);
   const getTopicProgress = useMathStore(s => s.getTopicProgress);
@@ -162,6 +164,24 @@ export default function TopicView({ topicId, onBack }) {
   };
 
   const handleExerciseComplete = (exerciseId) => {
+    sessionCorrectRef.current += 1;
+
+    // Trigger journal MikroCard once per session, after the user has solved
+    // a meaningful chunk (3 correct exercises). The mount handles dedup
+    // (skipped today / already entered today).
+    if (!journalFiredRef.current && sessionCorrectRef.current >= 3) {
+      journalFiredRef.current = true;
+      const story = TOPIC_STORIES[topicId];
+      window.dispatchEvent(new CustomEvent('journal:section-complete', {
+        detail: {
+          moduleId: 'mathe-portal',
+          sectionId: `topic-${topicId}`,
+          concepts: [topic.titleKey],
+          character: story?.characterId,
+        },
+      }));
+    }
+
     // Auto-advance to next exercise
     const idx = levelExercises.findIndex(e => e.id === exerciseId);
     const next = levelExercises[idx + 1];

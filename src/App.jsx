@@ -5,6 +5,7 @@ import { parseRoute, navigate } from './lib/router';
 import TopicView from './components/views/TopicView';
 import SingleExerciseView from './components/views/SingleExerciseView';
 import TopicGrid from './components/views/TopicGrid';
+import MikroCardMount from './components/journal/MikroCardMount';
 
 function RouteAwareApp() {
   const [route, setRoute] = useState(() => parseRoute());
@@ -21,6 +22,7 @@ function RouteAwareApp() {
         <GameProvider>
           <div style={{ background: 'var(--mp-bg)', minHeight: '100vh', color: 'var(--mp-text)' }}>
             <TopicView topicId={route.topicId} onBack={() => navigate('/')} />
+            <MikroCardMount />
           </div>
         </GameProvider>
       </I18nProvider>
@@ -33,6 +35,7 @@ function RouteAwareApp() {
         <GameProvider>
           <div style={{ background: 'var(--mp-bg)', minHeight: '100vh', color: 'var(--mp-text)' }}>
             <SingleExerciseView exerciseId={route.exerciseId} onBack={() => navigate('/')} />
+            <MikroCardMount />
           </div>
         </GameProvider>
       </I18nProvider>
@@ -45,6 +48,7 @@ function RouteAwareApp() {
       <GameProvider>
         <div style={{ background: 'var(--mp-bg)', minHeight: '100vh', color: 'var(--mp-text)' }}>
           <TopicGrid />
+          <MikroCardMount />
         </div>
       </GameProvider>
     </I18nProvider>
