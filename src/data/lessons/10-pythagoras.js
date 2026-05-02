@@ -103,4 +103,43 @@ export const lesson = {
   ],
 
   prerequisites: ['10-potenzgesetze'],
+
+  connections: [
+    {
+      topicId: '10-trigonometrie',
+      relation: 'fuehrt-zu',
+      why: 'sin²(α) + cos²(α) = 1 ist Pythagoras am Einheitskreis',
+      bubble: {
+        character: 'euklid',
+        text: 'Wenn du gleich Sinus und Kosinus triffst, schau dir $\\sin^2(\\alpha) + \\cos^2(\\alpha) = 1$ noch einmal an. Das ist nichts anderes als $a^2 + b^2 = c^2$ — nur dass die Hypotenuse 1 ist und der Punkt auf einem Kreis liegt. Pythagoras im Kostüm.',
+      },
+    },
+    {
+      topicId: '11-vektorrechnung',
+      relation: 'fuehrt-zu',
+      why: 'Die Länge eines Vektors ist Pythagoras in n Dimensionen',
+      bubble: {
+        character: 'euklid',
+        text: 'In der Vektorrechnung wirst du $|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$ schreiben — und gar nicht merken, dass du dreidimensionalen Pythagoras gerade als selbstverständlich behandelst. Wer den Satz hier verstanden hat, hat ihn auch in 4, 5 oder 1000 Dimensionen verstanden.',
+      },
+    },
+    {
+      topicId: '10-koerper',
+      relation: 'anwendung',
+      why: 'Apothema und Raumdiagonale werden mit Pythagoras berechnet',
+      bubble: {
+        character: 'euklid',
+        text: 'Sobald du eine Pyramide aufschneidest, wartet wieder ein rechtwinkliges Dreieck auf dich: $h^2 + (a/2)^2 = s^2$. Pythagoras ist das Werkzeug, mit dem 3D-Körper messbar werden.',
+      },
+    },
+    {
+      topicId: '10-aehnlichkeit',
+      relation: 'verwandt',
+      why: 'Pythagoras-Tripel skalieren mit dem Ähnlichkeitsfaktor',
+      bubble: {
+        character: 'euklid',
+        text: 'Das Tripel (3, 4, 5) bleibt rechtwinklig, wenn du es mit 2, 7 oder $\\pi$ multiplizierst — daraus wird (6, 8, 10), (21, 28, 35) und so weiter. Ähnlichkeit erbt Rechtwinkligkeit. Eine kleine, aber tiefe Symmetrie der Geometrie.',
+      },
+    },
+  ],
 };
