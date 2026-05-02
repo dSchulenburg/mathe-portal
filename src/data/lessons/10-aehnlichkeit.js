@@ -101,4 +101,34 @@ export const lesson = {
   ],
 
   prerequisites: ['10-pythagoras'],
+
+  connections: [
+    {
+      topicId: '10-trigonometrie',
+      relation: 'fuehrt-zu',
+      why: 'Trig-Verhältnisse hängen nur vom Winkel ab, weil ähnliche Dreiecke gleiche Verhältnisse haben',
+      bubble: {
+        character: 'euklid',
+        text: 'Warum ist $\\sin(30°)$ immer $0{,}5$ — egal wie groß das Dreieck ist? Genau wegen der Ähnlichkeit. Alle rechtwinkligen Dreiecke mit dem gleichen Winkel sind ähnlich, also haben sie gleiche Seitenverhältnisse. Trigonometrie ist Strahlensatz mit anderem Vokabular.',
+      },
+    },
+    {
+      topicId: '10-koerper',
+      relation: 'fuehrt-zu',
+      why: 'In 3D wird Ähnlichkeit dreifach: Länge ·k, Fläche ·k², Volumen ·k³',
+      bubble: {
+        character: 'euklid',
+        text: 'Verdoppelst du alle Maße einer Pyramide, wird ihr Volumen achtfach so groß ($2^3 = 8$). Diese kubische Skalierung ist der Grund, warum kleine Tiere relativ stärker sind als große — die Geometrie steckt überall.',
+      },
+    },
+    {
+      topicId: '10-pythagoras',
+      relation: 'verwandt',
+      why: 'Pythagoras-Tripel skalieren mit jedem k zu neuen Tripeln',
+      bubble: {
+        character: 'euklid',
+        text: '(3, 4, 5) skaliert mit $k=2$ zu (6, 8, 10), mit $k=7$ zu (21, 28, 35) — und alle bleiben rechtwinklig. Ähnlichkeit erbt Rechtwinkligkeit, weil sich die Verhältnisse $a^2 + b^2 = c^2$ beim Strecken nicht ändern.',
+      },
+    },
+  ],
 };

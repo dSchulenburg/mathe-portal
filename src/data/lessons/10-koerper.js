@@ -106,4 +106,43 @@ export const lesson = {
   ],
 
   prerequisites: ['10-pythagoras'],
+
+  connections: [
+    {
+      topicId: '10-pythagoras',
+      relation: 'baut-auf',
+      why: 'Apothema, Mantellinie und Raumdiagonale werden mit Pythagoras berechnet',
+      bubble: {
+        character: 'euklid',
+        text: 'Sobald du eine Pyramide aufschneidest, taucht ein rechtwinkliges Dreieck auf: Höhe, halbe Grundkante, Apothema. Die Formel $s^2 = h^2 + (a/2)^2$ ist nichts anderes als $a^2 + b^2 = c^2$ — Pythagoras ist im Raum genauso treu wie in der Ebene.',
+      },
+    },
+    {
+      topicId: '10-aehnlichkeit',
+      relation: 'verwandt',
+      why: 'Volumen skaliert mit dem dritten Potenz des Ähnlichkeitsfaktors — k³',
+      bubble: {
+        character: 'euklid',
+        text: 'Wenn du einen Wasserkegel zur Hälfte füllst, ist die Höhe halb so groß — aber das Wasser-Volumen ist nur ein Achtel ($k^3 = 0{,}5^3 = 0{,}125$). Ähnlichkeit greift in 3D dreifach: Längen $\\cdot k$, Flächen $\\cdot k^2$, Volumen $\\cdot k^3$.',
+      },
+    },
+    {
+      topicId: '10-kreis',
+      relation: 'baut-auf',
+      why: 'Kreisfläche und -umfang sind Bausteine für Kegel, Zylinder und Kugel',
+      bubble: {
+        character: 'euklid',
+        text: 'Schau auf $V_{\\text{Kegel}} = \\frac{1}{3} \\pi r^2 h$ — die Grundfläche ist nichts anderes als der Kreis aus dem letzten Thema, mal Höhe, mal $\\frac{1}{3}$. 3D-Körper sind in vielen Fällen 2D-Figuren mit einer dritten Dimension.',
+      },
+    },
+    {
+      topicId: '11-integralrechnung',
+      relation: 'fuehrt-zu',
+      why: 'Volumenformeln werden in Klasse 11 mit Integralen hergeleitet',
+      bubble: {
+        character: 'euklid',
+        text: 'Die Formel $V = \\frac{1}{3} \\pi r^2 h$ — woher kommt eigentlich der Faktor $\\frac{1}{3}$? In Klasse 11 wirst du sie mit Integralen herleiten: ein Kegel ist ein Stapel immer kleinerer Kreisscheiben. Volumen wird zur Summe aus unendlich vielen Schnitten.',
+      },
+    },
+  ],
 };
