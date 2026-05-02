@@ -16,6 +16,7 @@ import DiceSim from '../stations/DiceSim';
 import DiscriminantViz from '../stations/DiscriminantViz';
 import ProbabilityTree from '../stations/ProbabilityTree';
 import BinomialHistogram from '../stations/BinomialHistogram';
+import StrahlensatzExplorer from '../stations/StrahlensatzExplorer';
 import LessonLayer from '../lesson/LessonLayer';
 import StoryOutro from '../lesson/StoryOutro';
 import { getCharacterForTopic, TOPIC_STORIES } from '../../data/characters';
@@ -303,6 +304,12 @@ export default function TopicView({ topicId, onBack }) {
           <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
             <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>📊 Binomialverteilung erkunden</h2>
             <BinomialHistogram />
+          </div>
+        )}
+        {topic.station === 'StrahlensatzExplorer' && (
+          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
+            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>📐 Strahlensatz live erkunden</h2>
+            <StrahlensatzExplorer />
           </div>
         )}
 

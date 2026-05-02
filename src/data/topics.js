@@ -207,6 +207,7 @@ export const TOPICS = [
     exercises: aehnlichkeitEx,
     lesson: aehnlichkeitLesson,
     plotter: null,
+    station: 'StrahlensatzExplorer',
   },
   {
     id: '10-periodisch',
