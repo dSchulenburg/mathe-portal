@@ -128,6 +128,16 @@ export const TOPIC_STORIES = {
     audioFile: new URL('../../assets/mia/audio/sec12-funktionsklassen.mp3', import.meta.url).href,
     challenge: 'Balancing-Kurven',
   },
+  '10-lineare-funktionen': {
+    characterId: 'mia',
+    audioFile: null,
+    challenge: 'Plattform-Bewegung mit konstanter Geschwindigkeit',
+  },
+  '10-kreis': {
+    characterId: 'mia',
+    audioFile: null,
+    challenge: 'Runde Hitboxen für rotierende Spielobjekte',
+  },
 
   // ── Klasse 11 — Amir & DataPulse ──
   '11-ableitungsregeln': {
@@ -169,6 +179,16 @@ export const TOPIC_STORIES = {
     characterId: 'amir',
     audioFile: new URL('../../assets/amir/audio/sec08-vektorrechnung.mp3', import.meta.url).href,
     challenge: 'Embedding-Räume visualisieren',
+  },
+  '11-rationale-funktionen': {
+    characterId: 'amir',
+    audioFile: null,
+    challenge: 'Lat encoder mit Polstellen-Behandlung',
+  },
+  '11-lgs-gauss': {
+    characterId: 'amir',
+    audioFile: null,
+    challenge: 'Feature-Gewichte aus Trainingsdaten lösen',
   },
 
   // ── Klasse 12 — Kai & Hafenlichter 3D ──

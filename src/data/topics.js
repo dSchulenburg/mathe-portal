@@ -11,6 +11,8 @@ import { lesson as aehnlichkeitLesson } from './lessons/10-aehnlichkeit';
 import { lesson as periodischLesson } from './lessons/10-periodisch';
 import { lesson as diffEinfuehrungLesson } from './lessons/10-diff-einfuehrung';
 import { lesson as funktionsklassenLesson } from './lessons/10-funktionsklassen';
+import { lesson as lineareFunktionenLesson } from './lessons/10-lineare-funktionen';
+import { lesson as kreisLesson } from './lessons/10-kreis';
 import { exercises as quadGleichungenEx } from './exercises/10-quad-gleichungen';
 import { exercises as trigonometrieEx } from './exercises/10-trigonometrie';
 import { exercises as expWachstumEx } from './exercises/10-exp-wachstum';
@@ -22,6 +24,8 @@ import { exercises as aehnlichkeitEx } from './exercises/10-aehnlichkeit';
 import { exercises as periodischEx } from './exercises/10-periodisch';
 import { exercises as diffEinfuehrungEx } from './exercises/10-diff-einfuehrung';
 import { exercises as funktionsklassenEx } from './exercises/10-funktionsklassen';
+import { exercises as lineareFunktionenEx } from './exercises/10-lineare-funktionen';
+import { exercises as kreisEx } from './exercises/10-kreis';
 
 // Klasse 11
 import { exercises as ableitungsregelnEx } from './exercises/11-ableitungsregeln';
@@ -40,6 +44,10 @@ import { lesson as expLogLesson } from './lessons/11-exp-log';
 import { lesson as binomialLesson } from './lessons/11-binomialverteilung';
 import { lesson as bedingteWkLesson } from './lessons/11-bedingte-wk';
 import { lesson as vektorrechnungLesson } from './lessons/11-vektorrechnung';
+import { exercises as rationaleFunktionenEx } from './exercises/11-rationale-funktionen';
+import { lesson as rationaleFunktionenLesson } from './lessons/11-rationale-funktionen';
+import { exercises as lgsGaussEx } from './exercises/11-lgs-gauss';
+import { lesson as lgsGaussLesson } from './lessons/11-lgs-gauss';
 
 // Klasse 12
 import { exercises as eFunktionLnEx } from './exercises/12-e-funktion-ln';
@@ -284,6 +292,41 @@ export const TOPICS = [
       yRange: [-3, 15],
     },
   },
+  {
+    id: '10-lineare-funktionen',
+    grade: 10,
+    domain: 'analysis',
+    titleKey: 'Lineare Funktionen',
+    icon: '📏',
+    color: '#0ea5e9',
+    period: 'Klasse 10',
+    exercises: lineareFunktionenEx,
+    lesson: lineareFunktionenLesson,
+    plotter: {
+      title: 'Erkunde lineare Funktionen',
+      functions: [
+        { expression: 'm*x + b', color: '#0ea5e9', label: 'f(x) = m·x + b' },
+      ],
+      sliders: [
+        { param: 'm', min: -3, max: 3, step: 0.1, initial: 1, label: 'Steigung m' },
+        { param: 'b', min: -5, max: 5, step: 0.5, initial: 0, label: 'y-Achsenabschnitt b' },
+      ],
+      xRange: [-6, 6],
+      yRange: [-8, 8],
+    },
+  },
+  {
+    id: '10-kreis',
+    grade: 10,
+    domain: 'geometrie',
+    titleKey: 'Kreis (Umfang, Fläche, Bogenmaß)',
+    icon: '⭕',
+    color: '#0e7490',
+    period: 'Klasse 10',
+    exercises: kreisEx,
+    lesson: kreisLesson,
+    plotter: null,
+  },
   // ─── KLASSE 11 ──────────────────────────────────────────────────────────────
 
   {
@@ -430,6 +473,41 @@ export const TOPICS = [
     lesson: vektorrechnungLesson,
     plotter: null,
     station: 'VectorExplorer',
+  },
+  {
+    id: '11-rationale-funktionen',
+    grade: 11,
+    domain: 'analysis',
+    titleKey: 'Rationale Funktionen (Asymptoten, Polstellen)',
+    icon: '➗',
+    color: '#0891b2',
+    period: 'Klasse 11',
+    exercises: rationaleFunktionenEx,
+    lesson: rationaleFunktionenLesson,
+    plotter: {
+      title: 'Erkunde rationale Funktionen',
+      functions: [
+        { expression: '(x + a) / (x + b)', color: '#0891b2', label: 'f(x) = (x+a)/(x+b)' },
+      ],
+      sliders: [
+        { param: 'a', min: -5, max: 5, step: 0.5, initial: -3, label: 'Zähler-Verschiebung a' },
+        { param: 'b', min: -5, max: 5, step: 0.5, initial: 1, label: 'Nenner-Verschiebung b' },
+      ],
+      xRange: [-8, 8],
+      yRange: [-6, 8],
+    },
+  },
+  {
+    id: '11-lgs-gauss',
+    grade: 11,
+    domain: 'algebra',
+    titleKey: 'Lineare Gleichungssysteme & Gauß',
+    icon: '🧮',
+    color: '#16a34a',
+    period: 'Klasse 11',
+    exercises: lgsGaussEx,
+    lesson: lgsGaussLesson,
+    plotter: null,
   },
 
   // ─── KLASSE 12 ──────────────────────────────────────────────────────────────

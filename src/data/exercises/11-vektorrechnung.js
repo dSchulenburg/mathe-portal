@@ -355,4 +355,63 @@ export const exercises = [
     solutionKey: '$\\vec{a} \\cdot \\vec{b} = 3 \\cdot 1 + (-1) \\cdot 1 + 2 \\cdot k = 2 + 2k = 0 \\Rightarrow k = -1$.',
     tags: ['skalarprodukt', 'orthogonalität', 'parameter', 'step-solver', 'ea', 'r3'],
   },
+
+  // ─── KREUZPRODUKT (3 Aufgaben) ─────────────────────────────────────────────
+
+  {
+    id: 'vek-cross-001', topicId: '11-vektorrechnung', type: 'numeric-input', diffLevel: 'standard',
+    competencies: ['kommunikation'], points: 10, timeEstimate: 4,
+    data: {
+      questionText: 'Berechne $\\vec{a} \\times \\vec{b}$ für $\\vec{a} = \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix}$, $\\vec{b} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix}$. Welchen Wert hat die dritte Komponente?',
+      correctValue: 1,
+      tolerance: 0.001,
+    },
+    hintKeys: ['Dritte Komponente: $a_1 b_2 - a_2 b_1 = 1 \\cdot 1 - 0 \\cdot 0 = 1$.'],
+    solutionKey: '$\\vec{a} \\times \\vec{b} = (0, 0, 1) = \\vec{e}_3$. Die Standard-Basisvektoren bilden ein Rechtshandsystem: $\\vec{e}_1 \\times \\vec{e}_2 = \\vec{e}_3$.',
+    tags: ['kreuzprodukt', 'standardbasis'],
+  },
+  {
+    id: 'vek-cross-002', topicId: '11-vektorrechnung', type: 'step-solver', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken', 'kommunikation'], points: 12, timeEstimate: 7,
+    contextKey: 'Normalenvektor zu zwei Vektoren',
+    data: {
+      questionText: 'Bestimme einen Vektor, der senkrecht auf $\\vec{a} = \\begin{pmatrix} 1 \\\\ 2 \\\\ 0 \\end{pmatrix}$ und $\\vec{b} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 3 \\end{pmatrix}$ steht.',
+      steps: [
+        {
+          instruction: 'Erste Komponente: $a_2 b_3 - a_3 b_2 = 2 \\cdot 3 - 0 \\cdot 1 = ?$',
+          type: 'numeric-input', expected: 6, tolerance: 0.01,
+          showAnswer: '$2 \\cdot 3 - 0 \\cdot 1 = 6$',
+        },
+        {
+          instruction: 'Zweite Komponente: $a_3 b_1 - a_1 b_3 = 0 \\cdot 0 - 1 \\cdot 3 = ?$',
+          type: 'numeric-input', expected: -3, tolerance: 0.01,
+          showAnswer: '$0 \\cdot 0 - 1 \\cdot 3 = -3$',
+        },
+        {
+          instruction: 'Dritte Komponente: $a_1 b_2 - a_2 b_1 = 1 \\cdot 1 - 2 \\cdot 0 = ?$',
+          type: 'numeric-input', expected: 1, tolerance: 0.01,
+          showAnswer: '$1 \\cdot 1 - 2 \\cdot 0 = 1$. $\\vec{a} \\times \\vec{b} = (6, -3, 1)$.',
+        },
+      ],
+    },
+    hintKeys: ['Kreuzprodukt: zyklische Indexverschiebung. (i,j,k) → $a_j b_k - a_k b_j$.'],
+    solutionKey: '$\\vec{a} \\times \\vec{b} = (6, -3, 1)$. Probe: $\\vec{a} \\cdot (6, -3, 1) = 6 - 6 + 0 = 0 \\;\\checkmark$',
+    tags: ['step-solver', 'kreuzprodukt', 'normalenvektor'],
+  },
+  {
+    id: 'vek-cross-003', topicId: '11-vektorrechnung', type: 'multiple-choice', diffLevel: 'erweitert',
+    competencies: ['kritisches-denken'], points: 10, timeEstimate: 4,
+    data: {
+      questionText: 'Welche Aussage zum Kreuzprodukt ist FALSCH?',
+      options: [
+        { id: 'a', text: '$\\vec{a} \\times \\vec{b}$ steht senkrecht auf $\\vec{a}$ und $\\vec{b}$.', correct: false },
+        { id: 'b', text: '$|\\vec{a} \\times \\vec{b}|$ ist der Flächeninhalt des Parallelogramms.', correct: false },
+        { id: 'c', text: '$\\vec{a} \\times \\vec{b} = \\vec{b} \\times \\vec{a}$.', correct: true },
+        { id: 'd', text: '$\\vec{a} \\times \\vec{a} = \\vec{0}$.', correct: false },
+      ],
+    },
+    hintKeys: ['Das Kreuzprodukt ist antikommutativ: Reihenfolge umkehren wechselt das Vorzeichen.'],
+    solutionKey: 'Option c ist falsch. Richtig: $\\vec{a} \\times \\vec{b} = -(\\vec{b} \\times \\vec{a})$ (antikommutativ).',
+    tags: ['kreuzprodukt', 'eigenschaften', 'antikommutativ'],
+  },
 ];
