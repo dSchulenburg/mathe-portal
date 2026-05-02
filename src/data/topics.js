@@ -398,6 +398,7 @@ export const TOPICS = [
     exercises: binomialEx,
     lesson: binomialLesson,
     plotter: null,
+    station: 'BinomialHistogram',
   },
   {
     id: '11-bedingte-wahrscheinlichkeit',
@@ -495,6 +496,7 @@ export const TOPICS = [
     exercises: hypothesentestsEx,
     lesson: hypothesentestsLesson,
     plotter: null,
+    station: 'BinomialHistogram',
   },
   {
     id: '12-normalverteilung',
