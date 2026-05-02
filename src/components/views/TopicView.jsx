@@ -21,6 +21,7 @@ import Einheitskreis from '../stations/Einheitskreis';
 import VectorExplorer from '../stations/VectorExplorer';
 import BodyExplorer3D from '../stations/BodyExplorer3D';
 import SekanteTangente from '../stations/SekanteTangente';
+import RiemannSummen from '../stations/RiemannSummen';
 import LessonLayer from '../lesson/LessonLayer';
 import StoryOutro from '../lesson/StoryOutro';
 import { getCharacterForTopic, TOPIC_STORIES } from '../../data/characters';
@@ -338,6 +339,12 @@ export default function TopicView({ topicId, onBack }) {
           <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
             <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>📈 Sekante → Tangente</h2>
             <SekanteTangente />
+          </div>
+        )}
+        {topic.station === 'RiemannSummen' && (
+          <div style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
+            <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>📐 Riemann-Summen → Integral</h2>
+            <RiemannSummen />
           </div>
         )}
 

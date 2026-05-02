@@ -366,6 +366,7 @@ export const TOPICS = [
       xRange: [-4, 4],
       yRange: [-4, 10],
     },
+    station: 'RiemannSummen',
   },
   {
     id: '11-exp-log',
