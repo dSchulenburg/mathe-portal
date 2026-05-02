@@ -14,6 +14,8 @@ const GRADE_TABS = [
 
 const totalExerciseCount = TOPICS.reduce((sum, t) => sum + (t.exercises?.length || 0), 0);
 
+import HeatmapBadge from '../journal/HeatmapBadge';
+
 function TopicCard({ topic }) {
   const getTopicProgress = useMathStore((s) => s.getTopicProgress);
   const getLessonProgress = useMathStore((s) => s.getLessonProgress);
@@ -115,6 +117,7 @@ function TopicCard({ topic }) {
             ⭐ gemeistert
           </span>
         )}
+        <HeatmapBadge topicId={topic.id} />
       </div>
 
       {/* Footer: count + progress */}
