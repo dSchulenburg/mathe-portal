@@ -128,6 +128,11 @@ export const TOPIC_STORIES = {
     audioFile: new URL('../../assets/mia/audio/sec12-funktionsklassen.mp3', import.meta.url).href,
     challenge: 'Balancing-Kurven',
   },
+  '10-lineare-funktionen': {
+    characterId: 'mia',
+    audioFile: null,
+    challenge: 'Plattform-Bewegung mit konstanter Geschwindigkeit',
+  },
 
   // ── Klasse 11 — Amir & DataPulse ──
   '11-ableitungsregeln': {

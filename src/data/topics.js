@@ -11,6 +11,7 @@ import { lesson as aehnlichkeitLesson } from './lessons/10-aehnlichkeit';
 import { lesson as periodischLesson } from './lessons/10-periodisch';
 import { lesson as diffEinfuehrungLesson } from './lessons/10-diff-einfuehrung';
 import { lesson as funktionsklassenLesson } from './lessons/10-funktionsklassen';
+import { lesson as lineareFunktionenLesson } from './lessons/10-lineare-funktionen';
 import { exercises as quadGleichungenEx } from './exercises/10-quad-gleichungen';
 import { exercises as trigonometrieEx } from './exercises/10-trigonometrie';
 import { exercises as expWachstumEx } from './exercises/10-exp-wachstum';
@@ -22,6 +23,7 @@ import { exercises as aehnlichkeitEx } from './exercises/10-aehnlichkeit';
 import { exercises as periodischEx } from './exercises/10-periodisch';
 import { exercises as diffEinfuehrungEx } from './exercises/10-diff-einfuehrung';
 import { exercises as funktionsklassenEx } from './exercises/10-funktionsklassen';
+import { exercises as lineareFunktionenEx } from './exercises/10-lineare-funktionen';
 
 // Klasse 11
 import { exercises as ableitungsregelnEx } from './exercises/11-ableitungsregeln';
@@ -282,6 +284,29 @@ export const TOPICS = [
       ],
       xRange: [-4, 5],
       yRange: [-3, 15],
+    },
+  },
+  {
+    id: '10-lineare-funktionen',
+    grade: 10,
+    domain: 'analysis',
+    titleKey: 'Lineare Funktionen',
+    icon: '📏',
+    color: '#0ea5e9',
+    period: 'Klasse 10',
+    exercises: lineareFunktionenEx,
+    lesson: lineareFunktionenLesson,
+    plotter: {
+      title: 'Erkunde lineare Funktionen',
+      functions: [
+        { expression: 'm*x + b', color: '#0ea5e9', label: 'f(x) = m·x + b' },
+      ],
+      sliders: [
+        { param: 'm', min: -3, max: 3, step: 0.1, initial: 1, label: 'Steigung m' },
+        { param: 'b', min: -5, max: 5, step: 0.5, initial: 0, label: 'y-Achsenabschnitt b' },
+      ],
+      xRange: [-6, 6],
+      yRange: [-8, 8],
     },
   },
   // ─── KLASSE 11 ──────────────────────────────────────────────────────────────
