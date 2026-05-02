@@ -12,6 +12,7 @@ import { lesson as periodischLesson } from './lessons/10-periodisch';
 import { lesson as diffEinfuehrungLesson } from './lessons/10-diff-einfuehrung';
 import { lesson as funktionsklassenLesson } from './lessons/10-funktionsklassen';
 import { lesson as lineareFunktionenLesson } from './lessons/10-lineare-funktionen';
+import { lesson as kreisLesson } from './lessons/10-kreis';
 import { exercises as quadGleichungenEx } from './exercises/10-quad-gleichungen';
 import { exercises as trigonometrieEx } from './exercises/10-trigonometrie';
 import { exercises as expWachstumEx } from './exercises/10-exp-wachstum';
@@ -24,6 +25,7 @@ import { exercises as periodischEx } from './exercises/10-periodisch';
 import { exercises as diffEinfuehrungEx } from './exercises/10-diff-einfuehrung';
 import { exercises as funktionsklassenEx } from './exercises/10-funktionsklassen';
 import { exercises as lineareFunktionenEx } from './exercises/10-lineare-funktionen';
+import { exercises as kreisEx } from './exercises/10-kreis';
 
 // Klasse 11
 import { exercises as ableitungsregelnEx } from './exercises/11-ableitungsregeln';
@@ -310,6 +312,18 @@ export const TOPICS = [
       xRange: [-6, 6],
       yRange: [-8, 8],
     },
+  },
+  {
+    id: '10-kreis',
+    grade: 10,
+    domain: 'geometrie',
+    titleKey: 'Kreis (Umfang, Fläche, Bogenmaß)',
+    icon: '⭕',
+    color: '#0e7490',
+    period: 'Klasse 10',
+    exercises: kreisEx,
+    lesson: kreisLesson,
+    plotter: null,
   },
   // ─── KLASSE 11 ──────────────────────────────────────────────────────────────
 

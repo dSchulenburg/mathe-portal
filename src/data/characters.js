@@ -133,6 +133,11 @@ export const TOPIC_STORIES = {
     audioFile: null,
     challenge: 'Plattform-Bewegung mit konstanter Geschwindigkeit',
   },
+  '10-kreis': {
+    characterId: 'mia',
+    audioFile: null,
+    challenge: 'Runde Hitboxen für rotierende Spielobjekte',
+  },
 
   // ── Klasse 11 — Amir & DataPulse ──
   '11-ableitungsregeln': {
