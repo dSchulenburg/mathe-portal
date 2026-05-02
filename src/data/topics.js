@@ -258,6 +258,7 @@ export const TOPICS = [
       xRange: [-4, 4],
       yRange: [-2, 10],
     },
+    station: 'SekanteTangente',
   },
   {
     id: '10-funktionsklassen',
