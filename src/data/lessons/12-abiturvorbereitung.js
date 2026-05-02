@@ -109,4 +109,52 @@ export const lesson = {
   ],
 
   prerequisites: [],
+
+  connections: [
+    {
+      topicId: '11-kurvendiskussion',
+      relation: 'baut-auf',
+      why: 'Vollständige Funktionsuntersuchung ist die wiederkehrende Standardaufgabe',
+      bubble: {
+        character: 'euklid',
+        text: 'Wenn du nur eines aus Klasse 11 mitnehmen sollst: das Schema der Kurvendiskussion. Nullstellen, Extrema, Wendepunkte, Symmetrie, Skizze — in jeder Abiklausur stehen damit 30-40% der Analysis-Punkte zur Disposition.',
+      },
+    },
+    {
+      topicId: '12-e-funktion-ln',
+      relation: 'baut-auf',
+      why: 'e-Funktionen sind die häufigste Funktionsklasse im Abi',
+      bubble: {
+        character: 'euklid',
+        text: 'Ableitungen mit der Produktregel von $f(x) = (ax+b) \\cdot e^{cx}$ — kommt fast jedes Jahr vor. Wer hier sicher ist, spart sich Stress am entscheidenden Tag.',
+      },
+    },
+    {
+      topicId: '12-integralrechnung-vertieft',
+      relation: 'baut-auf',
+      why: 'Flächen, Volumen und Mittelwerte liefern die zweite Hälfte der Analysis-Punkte',
+      bubble: {
+        character: 'euklid',
+        text: 'Substitution, partielle Integration, Fläche zwischen zwei Kurven — das sind die typischen Aufgaben. Plus die Modellierung: Wofür steht das Integral im Sachzusammenhang? Diese Frage trennt 12 Punkte von 15 Punkten.',
+      },
+    },
+    {
+      topicId: '12-matrizen',
+      relation: 'baut-auf',
+      why: 'Übergangsmatrizen und Fixvektor sind das algebraische Standard-Set',
+      bubble: {
+        character: 'euklid',
+        text: 'Wer im Algebra-Teil eine Markovkette sieht, sollte sofort den Fixvektor angehen — das ist meist die Punktelawine. $T \\cdot \\vec{v}_{\\text{fix}} = \\vec{v}_{\\text{fix}}$ ist die Schlüsselgleichung.',
+      },
+    },
+    {
+      topicId: '12-hypothesentests',
+      relation: 'baut-auf',
+      why: 'Hypothesentests sind im Stochastik-Teil fast immer dabei',
+      bubble: {
+        character: 'euklid',
+        text: 'Linksseitig, rechtsseitig, zweiseitig — ein klares Schema, das im Abi reproduzierbar Punkte bringt. Achte auf den α-Fehler und auf den Übergang zur Normalverteilung bei großen n.',
+      },
+    },
+  ],
 };
