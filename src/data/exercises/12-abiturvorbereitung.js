@@ -6,14 +6,14 @@ export const exercises = [
     competencies: ['kommunikation'], points: 5, timeEstimate: 3,
     data: {
       questionText: 'Hilfsmittelfrei: Bestimme die Ableitung von $f(x) = 3x^4 - 2x^2 + 5x - 1$ im Kopf. Wie lautet $f\'(x)$ an der Stelle $x = 1$?',
-      correctValue: 17,
+      correctValue: 13,
       tolerance: 0,
     },
     hintKeys: [
       'Potenzregel: $(x^n)\' = n \\cdot x^{n-1}$.',
       '$f\'(x) = 12x^3 - 4x + 5$. Dann $x = 1$ einsetzen.',
     ],
-    solutionKey: '$f\'(x) = 12x^3 - 4x + 5$. $f\'(1) = 12 - 4 + 5 = 13$. Moment — nochmal: $12 \\cdot 1 - 4 \\cdot 1 + 5 = 13$. Korrektur: $f\'(1) = 12 - 4 + 5 = 13$.',
+    solutionKey: '$f\'(x) = 12x^3 - 4x + 5$. $f\'(1) = 12 - 4 + 5 = 13$.',
     tags: ['ableitung', 'potenzregel', 'hilfsmittelfrei', 'kopfrechnen'],
   },
 

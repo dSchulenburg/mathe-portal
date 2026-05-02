@@ -362,7 +362,7 @@ export const exercises = [
         'Achtung: f hat Nullstellen bei x = ±2. ' +
         'Die Flaeche ergibt sich als |∫₋₃⁻² (x²−4) dx| + |∫₋₂² (x²−4) dx| + |∫₂³ (x²−4) dx|. ' +
         '(Hinweis: Stammfunktion F(x) = x³/3 − 4x.)',
-      correctValue: 17.67,
+      correctValue: 15.33,
       tolerance: 0.05,
     },
     hintKeys: [
@@ -375,8 +375,7 @@ export const exercises = [
       'I₁ = ∫₋₃⁻² (x²−4)dx = F(−2)−F(−3) = (−8/3+8)−(−9+12) = 16/3−3 = 7/3. ' +
       'I₂ = |∫₋₂² (x²−4)dx| = |F(2)−F(−2)| = |(8/3−8)−(−8/3+8)| = |16/3−16| = 32/3. ' +
       'I₃ = ∫₂³ (x²−4)dx = F(3)−F(2) = (9−12)−(8/3−8) = −3+16/3 = 7/3. ' +
-      'Gesamtflaeche = 7/3 + 32/3 + 7/3 = 46/3 ≈ 15.33.' +
-      ' Abweichung möglich je nach exakter Rechnung.',
+      'Gesamtflaeche = 7/3 + 32/3 + 7/3 = 46/3 ≈ 15,33 FE.',
     tags: ['vorzeichenwechsel', 'flaeche', 'nullstellen', 'absolutbetrag'],
   },
 

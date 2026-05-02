@@ -117,5 +117,5 @@ export const lesson = {
     },
   ],
 
-  prerequisites: ['10-diff-einführung'],
+  prerequisites: ['10-diff-einfuehrung'],
 };

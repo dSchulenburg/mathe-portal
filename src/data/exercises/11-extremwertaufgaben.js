@@ -309,22 +309,24 @@ export const exercises = [
     contextKey: 'Festival-Buehne — optimale Sichtweite',
     data: {
       questionText:
-        'Eine Festival-Buehne ist 8 m breit und 3 m hoch aufgehaengt (Unterkante). ' +
-        'Ein Zuschauer steht in Abstand x von der Buehne. ' +
-        'Der Sehwinkel α (in rad) kann angenaeherrt beschrieben werden durch ' +
+        'Eine Festival-Bühne ist 8 m hoch (Oberkante 11 m, Unterkante 3 m über Augenhöhe). ' +
+        'Ein Zuschauer steht in Abstand x von der Bühne. ' +
+        'Der Sehwinkel α (in rad) lässt sich beschreiben durch ' +
         'f(x) = arctan(11/x) − arctan(3/x) für x > 0. ' +
-        'Ohne Ableitungsrechnung: Bei x = √33 ≈ 5.74 m ist das Maximum. ' +
-        'Berechne f(√33) auf zwei Dezimalstellen. (Nutze arctan(11/√33) und arctan(3/√33).)',
+        'Mathematisch lässt sich zeigen, dass f bei x = √33 ≈ 5,74 m maximal wird ' +
+        '(Standardresultat: x_opt = √(a·b) für f(x) = arctan(b/x) − arctan(a/x)). ' +
+        'Verifiziere durch Berechnung von f(√33) auf zwei Dezimalstellen.',
       correctValue: 0.61,
       tolerance: 0.03,
+      unit: 'rad',
     },
     hintKeys: [
-      'arctan(11/√33) = arctan(11/5.74) ≈ arctan(1.916) ≈ 1.085 rad.',
-      'arctan(3/√33) = arctan(3/5.74) ≈ arctan(0.523) ≈ 0.482 rad.',
+      'arctan(11/√33) = arctan(11/5,74) ≈ arctan(1,916) ≈ 1,089 rad.',
+      'arctan(3/√33) = arctan(3/5,74) ≈ arctan(0,522) ≈ 0,481 rad.',
     ],
     solutionKey:
-      'f(√33) = arctan(11/√33) − arctan(3/√33) ≈ 1.085 − 0.482 ≈ 0.60 rad. ' +
-      'Dies entspricht dem maximalen Sehwinkel von ca. 34°.',
+      'f(√33) = arctan(11/√33) − arctan(3/√33) ≈ 1,089 − 0,481 ≈ 0,61 rad. ' +
+      'Dies entspricht einem maximalen Sehwinkel von ca. 35°.',
     tags: ['festival', 'sehwinkel', 'sachkontext', 'arctan'],
   },
 
@@ -414,39 +416,31 @@ export const exercises = [
     competencies: ['kreativität', 'kommunikation'],
     points: 15,
     timeEstimate: 9,
-    contextKey: 'Lieferroute — minimale Fahrtkosten',
+    contextKey: 'Lieferdrohne — minimale Reisezeit',
     data: {
       questionText:
-        'Ein Lieferwagen faehrt von Punkt A (0|0) zu Lager B (12|0) und von dort ' +
-        'zum Kunden C (0|5) (alle Angaben in km). ' +
-        'Statt direkt zu A → B → C kann er an einem Punkt P = (p|0) auf der x-Achse ' +
-        'abbiegen: Gesamtweg = p + √(p² − 24p + 169) für 0 ≤ p ≤ 12. ' +
-        'Finde numerisch (oder durch Ableiten) das p, das den Weg minimiert. ' +
-        '(Tipp: Setze die Ableitung = 0 und löse. Das optimale p liegt bei p = 12 − 5k ' +
-        'für ein passendes k. Das Ergebnis: p ≈ ?) ' +
-        'Gib p auf eine Dezimalstelle gerundet an.',
-      correctValue: 10.8,
+        'Eine Lieferdrohne startet im Hangar A=(0|0) und soll zum Kunden C=(8|6) (km). ' +
+        'Auf der x-Achse verläuft ein Drohnen-Korridor, in dem sie 50 km/h fliegen darf. ' +
+        'Außerhalb darf sie nur 30 km/h fliegen. Sie verlässt den Korridor an einem Punkt ' +
+        'P=(p|0) und fliegt von dort direkt zu C. Die Reisezeit ist ' +
+        'T(p) = p/50 + √((p−8)² + 36)/30 (in Stunden). ' +
+        'Bei welchem p ist T(p) minimal? Gib p auf eine Dezimalstelle gerundet an.',
+      correctValue: 3.5,
       tolerance: 0.2,
       unit: 'km',
     },
     hintKeys: [
-      'f(p) = p + √((p−12)² + 25). Bilde f′(p).',
-      'f′(p) = 1 + (p−12)/√((p−12)² + 25) = 0 → (p−12)/√((p−12)² + 25) = −1. ' +
-        'Das ist nur möglich wenn |p−12| = √((p−12)²+25), was nie gilt. ' +
-        'Prüfe Randwert p = 12: f(12) = 12 + 5 = 17. f(0) = 0 + 13 = 13. ' +
-        'Das Minimum liegt am linken Rand — denke aber nochmal nach: P auf Strecke AB!',
-      'Korrektur: A=(0|0), B=(12|0), C=(0|5). Weg A→P + P→C = p + √(p²+25). ' +
-        'Minimum: d/dp [p + √(p²+25)] = 0 → 1 + p/√(p²+25) = 0 (unloesbar für p>0). ' +
-        'Also ist das Minimum für diesen Weg bei p=0 (direkt von A nach C): 5 km. ' +
-        'Für eine sinnvolle Aufgabe: minimiere Weg A→P→C mit P auf der Strecke x=0..12.',
+      'T′(p) = 1/50 + (p−8)/(30·√((p−8)²+36)) = 0.',
+      'Umstellen: 50·(8−p) = 30·√((p−8)²+36). Quadrieren: 2500·(8−p)² = 900·((p−8)²+36).',
+      '1600·(8−p)² = 32400 → (8−p)² = 20,25 → 8−p = 4,5 → p = 3,5 km.',
     ],
     solutionKey:
-      'Weg W(p) = p + √(p²+25) auf [0;12]. W′(p) = 1 + p/√(p²+25) > 0 für p > 0. ' +
-      'Die Funktion ist streng monoton steigend → Minimum am Rand p = 0: W(0) = 5 km. ' +
-      'Sinnvoll ist p = 0: Direkt von A nach C ohne Umweg über x-Achse. ' +
-      'Alternativmodell (A→P auf x-Achse, P→C): Minimum bei p ≈ 10.8 km wenn ' +
-      'Kosten asymmetrisch (z.B. Autobahn-Abschnitt schneller).',
-    tags: ['lieferroute', 'weg', 'sachkontext', 'minimum'],
+      'T(p) = p/50 + √((p−8)²+36)/30. ' +
+      'T′(p) = 0 ⇒ 50·(8−p) = 30·√((p−8)²+36). ' +
+      'Quadrieren und Umformen: 1600·(8−p)² = 32400 ⇒ (8−p)² = 20,25 ⇒ p = 3,5 km. ' +
+      'T(3,5) = 0,07 + 7,5/30 = 0,32 h ≈ 19,2 min. ' +
+      'Geometrisch: Snell\'sches Brechungsgesetz — der Geschwindigkeitsunterschied erzwingt das Knicken am optimalen Punkt.',
+    tags: ['lieferdrohne', 'snell', 'sachkontext', 'minimum', 'geschwindigkeit'],
   },
 
   // ─────────────────────────────────────────────
