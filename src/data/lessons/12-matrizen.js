@@ -109,4 +109,43 @@ export const lesson = {
   ],
 
   prerequisites: ['11-vektorrechnung'],
+
+  connections: [
+    {
+      topicId: '11-vektorrechnung',
+      relation: 'baut-auf',
+      why: 'Matrizen wirken auf Vektoren — jede Matrix-Vektor-Multiplikation ist ein Skalarprodukt pro Zeile',
+      bubble: {
+        character: 'euklid',
+        text: 'Schau dir $M \\cdot \\vec{v}$ noch einmal an: Jede Zeile von M wird mit $\\vec{v}$ skalarmultipliziert — das hast du in Klasse 11 schon gemacht. Eine Matrix ist nichts anderes als ein Bündel Vektoren, das gleichzeitig auf einen anderen Vektor losgelassen wird.',
+      },
+    },
+    {
+      topicId: '11-bedingte-wahrscheinlichkeit',
+      relation: 'anwendung',
+      why: 'Stochastische Matrizen (Markov) sind angewandte bedingte Wahrscheinlichkeit',
+      bubble: {
+        character: 'euklid',
+        text: 'Jeder Eintrag $t_{ij}$ in einer Übergangsmatrix ist eine bedingte Wahrscheinlichkeit: $P(\\text{neuer Zustand} = i \\mid \\text{aktueller Zustand} = j)$. Markovketten machen aus Bayes-Wissen Bewegung — TikToks Recommender, Googles PageRank, alles Markov.',
+      },
+    },
+    {
+      topicId: '10-trigonometrie',
+      relation: 'verwandt',
+      why: 'Drehmatrizen enthalten sin und cos — Rotation ist angewandte Trigonometrie',
+      bubble: {
+        character: 'euklid',
+        text: 'Die Drehmatrix $R(\\theta) = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$ ist Trigonometrie in Aktion. Was du am Einheitskreis als Punkt $(\\cos\\alpha \\mid \\sin\\alpha)$ kennengelernt hast, dreht hier ganze Bilder.',
+      },
+    },
+    {
+      topicId: '12-abiturvorbereitung',
+      relation: 'fuehrt-zu',
+      why: 'Matrizen sind regelmäßiger Teil des Abiturs — Übergangsprozesse, Fixvektor',
+      bubble: {
+        character: 'euklid',
+        text: 'Im Abi taucht häufig eine Übergangsmatrix mit der Frage nach dem Fixvektor auf. Wer $T \\cdot \\vec{v}_{\\text{fix}} = \\vec{v}_{\\text{fix}}$ hier sicher löst, hat im Abi schon halb gewonnen.',
+      },
+    },
+  ],
 };

@@ -111,4 +111,34 @@ export const lesson = {
   ],
 
   prerequisites: ['10-wahrscheinlichkeit'],
+
+  connections: [
+    {
+      topicId: '10-wahrscheinlichkeit',
+      relation: 'baut-auf',
+      why: 'Bedingte Wk macht aus dem Baum ein zweischneidiges Werkzeug — Pfad und Bayes-Inversion',
+      bubble: {
+        character: 'euklid',
+        text: 'Den Baum hast du schon gesehen. Neu ist hier: derselbe Baum lässt sich aus zwei Richtungen lesen. $P(B \\mid A)$ liest nach unten, $P(A \\mid B)$ liest nach oben. Bayes ist die Kunst, den Baum umzukippen.',
+      },
+    },
+    {
+      topicId: '12-matrizen',
+      relation: 'fuehrt-zu',
+      why: 'Übergangsmatrizen (Markov) sind bedingte Wahrscheinlichkeiten in Tabellenform',
+      bubble: {
+        character: 'euklid',
+        text: 'Wenn du in Klasse 12 eine Übergangsmatrix siehst, schau in jede Zelle: dort steht ein $P(\\text{neu} \\mid \\text{alt})$ — also genau das, was du hier lernst. Markov ist bedingte Wk in Bewegung.',
+      },
+    },
+    {
+      topicId: '11-binomialverteilung',
+      relation: 'verwandt',
+      why: 'Unabhängige Wiederholungen sind die Voraussetzung der Binomialformel',
+      bubble: {
+        character: 'euklid',
+        text: 'Der Begriff Unabhängigkeit, den du hier präzise lernst — $P(A \\cap B) = P(A) \\cdot P(B)$ — ist genau die Bedingung, unter der die Binomialformel überhaupt gilt. Hängt zwischen den Zügen etwas zusammen, bricht das Modell.',
+      },
+    },
+  ],
 };

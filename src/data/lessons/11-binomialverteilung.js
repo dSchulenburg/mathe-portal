@@ -109,4 +109,34 @@ export const lesson = {
   ],
 
   prerequisites: ['10-wahrscheinlichkeit'],
+
+  connections: [
+    {
+      topicId: '10-wahrscheinlichkeit',
+      relation: 'baut-auf',
+      why: 'Binomialverteilung ist n-faches Ziehen mit Zurücklegen am Baum',
+      bubble: {
+        character: 'euklid',
+        text: 'Erinnerst du dich an die Pfadregel? Genau die steckt in $\\binom{n}{k} \\cdot p^k \\cdot (1-p)^{n-k}$ drin: $p^k$ ist die Wahrscheinlichkeit eines Pfades mit k Erfolgen, und $\\binom{n}{k}$ zählt, wie viele solcher Pfade es gibt.',
+      },
+    },
+    {
+      topicId: '12-normalverteilung',
+      relation: 'fuehrt-zu',
+      why: 'Für große n nähert sich die Binomial- der Normalverteilung — Grenzwertsatz',
+      bubble: {
+        character: 'euklid',
+        text: 'Drehe in Gedanken am n-Slider: bei n=10 siehst du noch einzelne Stäbe, bei n=100 wird daraus eine Glockenkurve. Das ist der Zentrale Grenzwertsatz — vielleicht das schönste Resultat der ganzen Stochastik. In Klasse 12 wirst du es formal sehen.',
+      },
+    },
+    {
+      topicId: '12-hypothesentests',
+      relation: 'fuehrt-zu',
+      why: 'Hypothesentests prüfen Annahmen über p mit binomialer Wahrscheinlichkeit',
+      bubble: {
+        character: 'euklid',
+        text: 'Wenn du wissen willst, ob ein Würfel manipuliert ist oder eine Werbekampagne wirkt, brauchst du genau diese Verteilung. Du fragst: „Wäre das beobachtete Ergebnis bei p = 0,5 noch plausibel?" Hypothesentests sind angewandte Binomial.',
+      },
+    },
+  ],
 };
