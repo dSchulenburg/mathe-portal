@@ -185,6 +185,11 @@ export const TOPIC_STORIES = {
     audioFile: null,
     challenge: 'Lat encoder mit Polstellen-Behandlung',
   },
+  '11-lgs-gauss': {
+    characterId: 'amir',
+    audioFile: null,
+    challenge: 'Feature-Gewichte aus Trainingsdaten lösen',
+  },
 
   // ── Klasse 12 — Kai & Hafenlichter 3D ──
   '12-e-funktion-ln': {

@@ -46,6 +46,8 @@ import { lesson as bedingteWkLesson } from './lessons/11-bedingte-wk';
 import { lesson as vektorrechnungLesson } from './lessons/11-vektorrechnung';
 import { exercises as rationaleFunktionenEx } from './exercises/11-rationale-funktionen';
 import { lesson as rationaleFunktionenLesson } from './lessons/11-rationale-funktionen';
+import { exercises as lgsGaussEx } from './exercises/11-lgs-gauss';
+import { lesson as lgsGaussLesson } from './lessons/11-lgs-gauss';
 
 // Klasse 12
 import { exercises as eFunktionLnEx } from './exercises/12-e-funktion-ln';
@@ -494,6 +496,18 @@ export const TOPICS = [
       xRange: [-8, 8],
       yRange: [-6, 8],
     },
+  },
+  {
+    id: '11-lgs-gauss',
+    grade: 11,
+    domain: 'algebra',
+    titleKey: 'Lineare Gleichungssysteme & Gauß',
+    icon: '🧮',
+    color: '#16a34a',
+    period: 'Klasse 11',
+    exercises: lgsGaussEx,
+    lesson: lgsGaussLesson,
+    plotter: null,
   },
 
   // ─── KLASSE 12 ──────────────────────────────────────────────────────────────
