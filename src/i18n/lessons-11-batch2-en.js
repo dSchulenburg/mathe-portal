@@ -163,7 +163,7 @@ export const batch11b = {
     },
   },
 
-  '11-bedingte-wk': {
+  '11-bedingte-wahrscheinlichkeit': {
     story: {
       intro: 'DataPulse recommends songs based on past listening behavior. But Amir notices: Not every correlation is equally strong. Someone who listens to rock might also like metal — but does it work the other way around? "The probability that someone likes rock GIVEN that they listen to metal is not the same as the reverse," explains Prof. Nguyen. Welcome to conditional probability.',
       challenge: 'Amir needs to improve the recommendation logic: How likely is it that a user likes genre $A$, GIVEN that they listen to genre $B$? And how do you reverse this direction?',

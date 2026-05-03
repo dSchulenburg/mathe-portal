@@ -8,7 +8,7 @@ export const batch12a = {
     realworld: { particle_systems: { title: 'Системы частиц', desc: '$N(t) = N_0 \\cdot e^{-\\lambda t}$.' }, signal_processing: { title: 'Обработка аудио', desc: '$S(t) = A \\cdot e^{-\\alpha t} \\cdot \\sin(\\omega t)$.' }, learning_curve: { title: 'Кривая обучения', desc: '$L(t) = L_{\\max} \\cdot (1 - e^{-kt})$.' } },
     mistakes: { chain_rule_forgotten: { wrong: '$(e^{3x})\' = e^{3x}$', correct: '$(e^{3x})\' = 3 \\cdot e^{3x}$', why: 'В показателе больше чем $x$ — правило цепочки!', kai_warning: 'Частицы "замёрзли" — я забыл $-t$.' }, ln_negative: { wrong: '$\\int \\frac{1}{x}\\,\\mathrm{d}x = \\ln(x) + C$', correct: '$\\ln|x| + C$', why: 'Модуль обеспечивает корректность для отрицательных $x$.' } },
   },
-  '12-integralrechnung-v': {
+  '12-integralrechnung-vertieft': {
     story: { intro: 'Кай строит процедурный генератор уровней: мосты, тоннели, дома из математических кривых, вращающихся вокруг осей.', challenge: 'Объёмы тел вращения, интегрирование по частям, несобственные интегралы.', outro: 'Генератор работает: Кай вращает профили кривых и получает точные 3D-тела.' },
     objectives: { integration_techniques: 'Интегрирование по частям и подстановка', rotation_volumes: '$V = \\pi \\int_a^b [f(x)]^2\\,\\mathrm{d}x$', improper_integrals: 'Проверка сходимости несобственных интегралов', partial_integration: 'Целенаправленное интегрирование по частям' },
     explanation: { intro: 'Интегрирование по частям — "обращение" правила произведения:', substitution: 'Подстановка — "обращение" правила цепочки:', kai_tip: 'LIATE — порядок выбора $u$.', rotation_volume: 'Тело вращения: сумма круговых срезов:', improper: 'Несобственные: заменяем пределом и проверяем сходимость:' },
@@ -17,7 +17,7 @@ export const batch12a = {
     realworld: { '3d_printing': { title: '3D-печать', desc: 'Слайсер вычисляет объёмы этой формулой.' }, render_falloff: { title: 'Затухание освещения', desc: '$\\int_0^\\infty I_0 \\cdot e^{-\\alpha r}\\,\\mathrm{d}r = \\frac{I_0}{\\alpha}$ — конечная энергия!' }, terrain_volume: { title: 'Генерация ландшафта', desc: 'Двумерный интеграл высоты.' } },
     mistakes: { rotation_no_square: { wrong: 'Забыт квадрат', correct: '$V = \\pi \\int_a^b [f(x)]^2\\,\\mathrm{d}x$', why: 'Площадь круга: $\\pi r^2$!', kai_warning: 'Мои колонны имели лишь долю правильного объёма.' }, improper_no_limit: { wrong: 'Подставить $\\infty$ напрямую', correct: 'Записать предел $\\lim_{b \\to \\infty}$', why: '$\\infty$ — не число!' } },
   },
-  '12-analytische-geo': {
+  '12-analytische-geometrie': {
     story: { intro: '3D-мир: краны, фасады, водная поверхность — всё из треугольников в плоскостях. "Для освещения нужен нормальный вектор."', challenge: 'Уравнения плоскостей, пересечения прямых с плоскостями, расстояния, векторное произведение.', outro: 'Система столкновений работает. "Векторное произведение — мой главный инструмент."' },
     objectives: { plane_equations: 'Составлять уравнения плоскостей в разных формах', line_plane_intersection: 'Вычислять пересечения прямых с плоскостями', distances_3d: 'Вычислять расстояния в пространстве', cross_product: 'Освоить векторное произведение' },
     explanation: { intro: 'Параметрическая форма: опорная точка и два направляющих вектора:', normal_form: 'Нормальная и координатная формы:', kai_tip: 'Для рендеринга — нормальный вектор, для физики — пересечения и расстояния.', cross_product: '$\\vec{u} \\times \\vec{v}$ — перпендикулярен обоим. Антикоммутативен!', distance_point_plane: 'Формула Гессе для расстояния:' },

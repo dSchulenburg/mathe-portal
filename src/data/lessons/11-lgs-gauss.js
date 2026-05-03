@@ -135,7 +135,7 @@ export const lesson = {
       },
     },
     {
-      topicId: '12-analytische-geo',
+      topicId: '12-analytische-geometrie',
       relation: 'fuehrt-zu',
       why: 'Schnittgerade zweier Ebenen, Schnittpunkt Gerade-Ebene — alles LGS',
       bubble: {

@@ -85,7 +85,7 @@ export const batch11b = {
     },
   },
 
-  '11-bedingte-wk': {
+  '11-bedingte-wahrscheinlichkeit': {
     story: {
       intro: 'DataPulse doporucuje pisni na zaklade dosavadniho poslechoveho chovani. Ale Amir si vsimne: Ne kazda korelace je stejne silna. Kdo posloucha rock, mozna ma rad i metal — ale plati to i naopak? "Pravdepodobnost, ze nekdo ma rad rock, KDYZ posloucha metal, neni totez co naopak", vysvetluje prof. Nguyen. Vitej u podminene pravdepodobnosti.',
       challenge: 'Amir musi vylepsit logiku doporucovani: Jak pravdepodobne je, ze uzivatel ma rad zanr $A$, POKUD posloucha zanr $B$? A jak otocit tento smer?',

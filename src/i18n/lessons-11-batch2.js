@@ -163,7 +163,7 @@ export const batch11b = {
     },
   },
 
-  '11-bedingte-wk': {
+  '11-bedingte-wahrscheinlichkeit': {
     story: {
       intro: 'DataPulse empfiehlt Songs basierend auf dem bisherigen Hörverhalten. Aber Amir merkt: Nicht jede Korrelation ist gleich stark. Wer Rock hört, mag vielleicht auch Metal — aber gilt das auch umgekehrt? "Die Wahrscheinlichkeit, dass jemand Rock mag WENN er Metal hört, ist nicht dasselbe wie umgekehrt", erklärt Prof. Nguyen. Willkommen bei der bedingten Wahrscheinlichkeit.',
       challenge: 'Amir muss die Empfehlungslogik verbessern: Wie wahrscheinlich ist es, dass ein User Genre $A$ mag, GEGEBEN dass er Genre $B$ hört? Und wie kehrt man diese Richtung um?',

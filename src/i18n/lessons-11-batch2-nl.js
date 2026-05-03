@@ -77,7 +77,7 @@ export const batch11b = {
     },
   },
 
-  '11-bedingte-wk': {
+  '11-bedingte-wahrscheinlichkeit': {
     story: {
       intro: 'DataPulse beveelt songs aan op basis van eerder luistergedrag. Maar Amir merkt: niet elke correlatie is even sterk. Wie rock luistert, waardeert misschien ook metal — maar geldt dat ook andersom? "De kans dat iemand van rock houdt ALS hij metal luistert, is niet hetzelfde als andersom", legt Prof. Nguyen uit. Welkom bij de voorwaardelijke kans.',
       challenge: 'Amir moet de aanbevelingslogica verbeteren: hoe waarschijnlijk is het dat een user genre $A$ waardeert, GEGEVEN dat hij genre $B$ luistert? En hoe keer je deze richting om?',

@@ -163,7 +163,7 @@ export const batch11b = {
     },
   },
 
-  '11-bedingte-wk': {
+  '11-bedingte-wahrscheinlichkeit': {
     story: {
       intro: 'DataPulse rekomenduje piosenki na podstawie dotychczasowego zachowania sluchacza. Ale Amir zauwa, ze nie kazda korelacja jest rownie silna. Kto slucha rocka, moze tez lubic metal — ale czy to dziala tez w druga strone? "Prawdopodobienstwo, ze ktos lubi rock, JESLI slucha metalu, nie jest tym samym co odwrotnie", wyjasnia prof. Nguyen. Witaj w swiecie prawdopodobienstwa warunkowego.',
       challenge: 'Amir musi poprawic logike rekomendacji: Jak prawdopodobne jest, ze uzytkownik lubi gatunek $A$, POD WARUNKIEM ze slucha gatunku $B$? I jak odwrocic ten kierunek?',

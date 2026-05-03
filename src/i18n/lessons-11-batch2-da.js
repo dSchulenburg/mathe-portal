@@ -102,7 +102,7 @@ export const batch11b = {
     },
   },
 
-  '11-bedingte-wk': {
+  '11-bedingte-wahrscheinlichkeit': {
     story: {
       intro: 'DataPulse anbefaler sange baseret paa tidligere lytteadfaerd. Men Amir maerker: Ikke enhver korrelation er lige staerk. Den der lytter til rock, kan maase ogsaa lide metal — men gaelder det ogsaa omvendt? "Sandsynligheden for at nogen kan lide rock GIVET at de hoerer metal, er ikke det samme som omvendt", forklarer Prof. Nguyen. Velkommen til betinget sandsynlighed.',
       challenge: 'Amir skal forbedre anbefalingslogikken: Hvor sandsynligt er det, at en bruger kan lide genre $A$, GIVET at de hoerer genre $B$?',

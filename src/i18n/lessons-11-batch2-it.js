@@ -127,7 +127,7 @@ export const batch11b = {
     },
   },
 
-  '11-bedingte-wk': {
+  '11-bedingte-wahrscheinlichkeit': {
     story: {
       intro: 'DataPulse raccomanda canzoni basandosi sul comportamento d\'ascolto passato. Ma Amir nota: non tutte le correlazioni sono ugualmente forti. Chi ascolta rock forse apprezza anche il metal — ma vale anche il contrario? "La probabilita che a qualcuno piaccia il rock SE ascolta metal non e la stessa del contrario", spiega la Prof.ssa Nguyen. Benvenuti alla probabilita condizionata.',
       challenge: 'Amir deve migliorare la logica di raccomandazione: quanto e probabile che a un utente piaccia il genere $A$, DATO che ascolta il genere $B$? E come si inverte questa direzione?',
