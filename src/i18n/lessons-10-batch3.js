@@ -80,7 +80,7 @@ export const batch3 = {
     },
   },
 
-  '10-diff-einführung': {
+  '10-diff-einfuehrung': {
     story: {
       intro: 'Hafenlichter läuft — aber es ruckelt. Mia öffnet den Performance-Monitor und sieht: In manchen Szenen bricht die Framerate auf 15 FPS ein. "Wo genau wird es langsam?", fragt Tim. "Ich brauche nicht den Durchschnitt über die ganze Szene, sondern die exakte Stelle, an der die Performance einbricht." Jule laechelt: "Das ist genau die Frage, die zur Erfindung der Differentialrechnung gefuehrt hat — die momentane Änderungsrate."',
       challenge: 'Die exakte Stelle finden, an der die Framerate einbricht — nicht nur den Durchschnitt.',

@@ -38,7 +38,7 @@ export const batch12a = {
     },
   },
 
-  '12-integralrechnung-v': {
+  '12-integralrechnung-vertieft': {
     story: {
       intro: 'Voor "Hafenlichter 3D" bouwt Kai een procedurele levelgenerator: bruggen, tunnels en huizen moeten ontstaan uit wiskundige curves die om assen geroteerd worden.',
       challenge: 'Kai moet volumes berekenen van 3D-objecten die door rotatie van curves ontstaan. Bovendien heeft hij partiele integratie nodig voor complexe belichtingsformules.',
@@ -77,7 +77,7 @@ export const batch12a = {
     },
   },
 
-  '12-analytische-geo': {
+  '12-analytische-geometrie': {
     story: {
       intro: 'De 3D-wereld van "Hafenlichter 3D" krijgt vorm: havenkranen, gebouwgevels, wateroppervlakken — alles bestaat uit driehoeken, en elke driehoek ligt in een vlak. "Voor realistische belichting moet ik voor elk oppervlak de normaalvector berekenen", legt Kai uit.',
       challenge: 'Kai moet vlakvergelijkingen uit drie punten opstellen, normaalvectoren via het kruisproduct berekenen, snijpunten lijn-vlak vinden en afstanden tussen objecten bepalen.',

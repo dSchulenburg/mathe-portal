@@ -38,7 +38,7 @@ export const batch12a = {
     },
   },
 
-  '12-integralrechnung-v': {
+  '12-integralrechnung-vertieft': {
     story: {
       intro: 'Dla "Hafenlichter 3D" Kai buduje proceduralny generator poziomow: Mosty, tunele i budynki maja powstawac z matematycznych krzywych obracanych wokol osi. "Wyobrazcie sobie, ze definiuje profil i obracam go — i juz mam kolumne, kopule lub kadlub statku", zachwyca sie Kai.',
       challenge: 'Kai musi obliczac objetosci obiektow 3D powstajacych przez obrot krzywych. Ponadto potrzebuje calkowania czesciowego dla zlozonych wzorow oswietlenia i musi sprawdzac, czy okreslone calki w ogole sa zbiezne.',
@@ -77,7 +77,7 @@ export const batch12a = {
     },
   },
 
-  '12-analytische-geo': {
+  '12-analytische-geometrie': {
     story: {
       intro: 'Swiat 3D "Hafenlichter 3D" nabiera ksztaltu: Dzwigi portowe, fasady budynkow, powierzchnie wody — wszystko sklada sie z trojkatow, a kazdy trojkat lezy w plaszczyznie. "Do realistycznego oswietlenia musze dla kazdej powierzchni obliczyc wektor normalny", wyjasnia Kai.',
       challenge: 'Kai musi budowac rownania plaszczyzn z trzech punktow, obliczac wektory normalne iloczynem wektorowym, znajdowac punkty przeciecia prostych z plaszczyznami i wyznaczac odleglosci miedzy obiektami.',

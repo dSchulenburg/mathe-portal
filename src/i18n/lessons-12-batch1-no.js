@@ -38,7 +38,7 @@ export const batch12a = {
     },
   },
 
-  '12-integralrechnung-v': {
+  '12-integralrechnung-vertieft': {
     story: {
       intro: 'For "Havnelys 3D" bygger Kai en prosedyre-levelgenerator: Broer, tunneler og hus skal oppstaa fra matematiske kurver som roteres rundt akser. Men hvordan beregner han det eksakte volumet av disse 3D-kroppene? Svaret: Rotasjonsvolum, delvis integrasjon og noen elegante integrasjonsteknikker.',
       challenge: 'Kai maa beregne volum av 3D-objekter som oppstaar ved rotasjon av kurver. I tillegg trenger han delvis integrasjon for komplekse belysningsformler.',
@@ -77,7 +77,7 @@ export const batch12a = {
     },
   },
 
-  '12-analytische-geo': {
+  '12-analytische-geometrie': {
     story: {
       intro: '3D-verdenen i "Havnelys 3D" tar form: Havnekraner, bygningsfasader, vannflater — alt bestaar av trekanter, og hver trekant ligger i et plan. "For realistisk belysning maa jeg beregne normalvektoren for hvert plan", forklarer Kai. Velkommen til analytisk geometri i rommet.',
       challenge: 'Kai maa sette opp planlikninger fra tre punkter, beregne normalvektorer med kryssproduktet, finne linje-plan-skjaringspunkter og bestemme avstander mellom objekter.',

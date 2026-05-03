@@ -108,9 +108,9 @@ export const TOPIC_STORIES = {
     audioFile: new URL('../../assets/mia/audio/sec08-potenzgesetze.mp3', import.meta.url).href,
     challenge: 'Speicher-Management',
   },
-  '10-ähnlichkeit': {
+  '10-aehnlichkeit': {
     characterId: 'mia',
-    audioFile: new URL('../../assets/mia/audio/sec09-ähnlichkeit.mp3', import.meta.url).href,
+    audioFile: new URL('../../assets/mia/audio/sec09-aehnlichkeit.mp3', import.meta.url).href,
     challenge: 'Sprite-Skalierung',
   },
   '10-periodisch': {
@@ -118,9 +118,9 @@ export const TOPIC_STORIES = {
     audioFile: new URL('../../assets/mia/audio/sec10-periodisch.mp3', import.meta.url).href,
     challenge: 'Animations-Zyklen',
   },
-  '10-diff-einführung': {
+  '10-diff-einfuehrung': {
     characterId: 'mia',
-    audioFile: new URL('../../assets/mia/audio/sec11-diff-einführung.mp3', import.meta.url).href,
+    audioFile: new URL('../../assets/mia/audio/sec11-diff-einfuehrung.mp3', import.meta.url).href,
     challenge: 'Frame-Rate-Optimierung',
   },
   '10-funktionsklassen': {
@@ -170,7 +170,7 @@ export const TOPIC_STORIES = {
     audioFile: new URL('../../assets/amir/audio/sec06-binomialverteilung.mp3', import.meta.url).href,
     challenge: 'A/B-Testing auswerten',
   },
-  '11-bedingte-wk': {
+  '11-bedingte-wahrscheinlichkeit': {
     characterId: 'amir',
     audioFile: new URL('../../assets/amir/audio/sec07-bedingte-wk.mp3', import.meta.url).href,
     challenge: 'Empfehlungsfilter verbessern',
@@ -197,12 +197,12 @@ export const TOPIC_STORIES = {
     audioFile: new URL('../../assets/kai/audio/sec01-e-funktion-ln.mp3', import.meta.url).href,
     challenge: 'Partikel-Decay-Systeme',
   },
-  '12-integralrechnung-v': {
+  '12-integralrechnung-vertieft': {
     characterId: 'kai',
     audioFile: new URL('../../assets/kai/audio/sec02-integralrechnung-v.mp3', import.meta.url).href,
     challenge: 'Level-Geometrie berechnen',
   },
-  '12-analytische-geo': {
+  '12-analytische-geometrie': {
     characterId: 'kai',
     audioFile: new URL('../../assets/kai/audio/sec03-analytische-geo.mp3', import.meta.url).href,
     challenge: '3D-Koordinatensystem',

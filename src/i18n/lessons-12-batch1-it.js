@@ -38,7 +38,7 @@ export const batch12a = {
     },
   },
 
-  '12-integralrechnung-v': {
+  '12-integralrechnung-vertieft': {
     story: {
       intro: 'Per "Hafenlichter 3D" Kai costruisce un generatore procedurale di livelli: ponti, tunnel e case devono nascere da curve matematiche ruotate attorno ad assi. "Immaginate di definire un profilo e farlo ruotare — ed ecco una colonna, una cupola o lo scafo di una nave", si entusiasma Kai.',
       challenge: 'Kai deve calcolare volumi di oggetti 3D generati dalla rotazione di curve. Inoltre gli serve l\'integrazione per parti per formule di illuminazione complesse e deve verificare se certi integrali convergono.',
@@ -77,7 +77,7 @@ export const batch12a = {
     },
   },
 
-  '12-analytische-geo': {
+  '12-analytische-geometrie': {
     story: {
       intro: 'Il mondo 3D di "Hafenlichter 3D" prende forma: gru portuali, facciate di edifici, superfici d\'acqua — tutto e composto da triangoli, e ogni triangolo giace in un piano. "Per un\'illuminazione realistica devo calcolare il vettore normale per ogni superficie", spiega Kai.',
       challenge: 'Kai deve costruire equazioni dei piani da tre punti, calcolare vettori normali tramite prodotto vettoriale, trovare intersezioni retta-piano e determinare distanze tra oggetti — tutto in tempo reale per il suo motore di gioco.',

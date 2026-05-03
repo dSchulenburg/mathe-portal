@@ -81,7 +81,7 @@ export const batch12a = {
     },
   },
 
-  '12-integralrechnung-v': {
+  '12-integralrechnung-vertieft': {
     story: {
       intro: 'For "Harbor Lights 3D," Kai is building a procedural level generator: Bridges, tunnels, and buildings should emerge from mathematical curves rotated around axes. "Imagine I define a profile and rotate it — and I get a column, a dome, or a ship hull," Kai enthuses. But how does he calculate the exact volume of these 3D objects? The answer: Volumes of revolution, integration by parts, and a few elegant integration techniques.',
       challenge: 'Kai needs to calculate volumes of 3D objects created by rotating curves around axes. He also needs integration by parts for complex lighting formulas and must check whether certain integrals converge at all.',
@@ -163,7 +163,7 @@ export const batch12a = {
     },
   },
 
-  '12-analytische-geo': {
+  '12-analytische-geometrie': {
     story: {
       intro: 'The 3D world of "Harbor Lights 3D" is taking shape: Harbor cranes, building facades, water surfaces — everything consists of triangles, and every triangle lies in a plane. "For realistic lighting, I need to calculate the normal vector for every surface," Kai explains. "And for collision detection, I need intersection points of lines with planes." Welcome to analytic geometry of space — the mathematics behind every 3D engine.',
       challenge: 'Kai needs to set up plane equations from three points, calculate normal vectors via the cross product, find line-plane intersections, and determine distances between objects — all in real time for his game engine.',

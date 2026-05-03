@@ -81,7 +81,7 @@ export const batch12a = {
     },
   },
 
-  '12-integralrechnung-v': {
+  '12-integralrechnung-vertieft': {
     story: {
       intro: 'Für "Hafenlichter 3D" baut Kai einen prozeduralen Level-Generator: Bruecken, Tunnel und Haeuser sollen aus mathematischen Kurven entstehen, die um Achsen rotiert werden. "Stellt euch vor, ich definiere ein Profil und lasse es rotieren — schon habe ich eine Saeule, eine Kuppel oder ein Schiffsrumpf", schwaermt Kai. Aber wie berechnet er das exakte Volumen dieser 3D-Koerper? Die Antwort: Rotationsvolumina, partielle Integration und ein paar elegante Integrationstechniken.',
       challenge: 'Kai muss Volumen von 3D-Objekten berechnen, die durch Rotation von Kurven entstehen. Ausserdem braucht er partielle Integration für komplexe Beleuchtungsformeln und muss prüfen, ob bestimmte Integrale überhaupt konvergieren.',
@@ -163,7 +163,7 @@ export const batch12a = {
     },
   },
 
-  '12-analytische-geo': {
+  '12-analytische-geometrie': {
     story: {
       intro: 'Die 3D-Welt von "Hafenlichter 3D" nimmt Gestalt an: Hafenkraene, Gebaeudefassaden, Wasserflaechen — alles besteht aus Dreiecken, und jedes Dreieck liegt in einer Ebene. "Für realistische Beleuchtung muss ich für jede Flaeche den Normalenvektor berechnen", erklärt Kai. "Und für Collision Detection brauche ich Schnittpunkte von Geraden mit Ebenen." Willkommen in der analytischen Geometrie des Raums — der Mathematik hinter jeder 3D-Engine.',
       challenge: 'Kai muss Ebenengleichungen aus drei Punkten aufstellen, Normalenvektoren per Kreuzprodukt berechnen, Gerade-Ebene-Schnittpunkte finden und Abständde zwischen Objekten bestimmen — alles in Echtzeit für seine Game-Engine.',
