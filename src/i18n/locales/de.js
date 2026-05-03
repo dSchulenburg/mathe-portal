@@ -1,8 +1,10 @@
 import { batch1 } from '../lessons-10-batch1';
 import { batch2 } from '../lessons-10-batch2';
 import { batch3 } from '../lessons-10-batch3';
+import { batch4 } from '../lessons-10-batch4';
 import { batch11a } from '../lessons-11-batch1';
 import { batch11b } from '../lessons-11-batch2';
+import { batch11c } from '../lessons-11-batch3';
 import { batch12a } from '../lessons-12-batch1';
 import { batch12b } from '../lessons-12-batch2';
 
@@ -144,8 +146,10 @@ export default {
     ...batch1,
     ...batch2,
     ...batch3,
+    ...batch4,
     ...batch11a,
     ...batch11b,
+    ...batch11c,
     ...batch12a,
     ...batch12b,
     '10-quad-funktionen': {
