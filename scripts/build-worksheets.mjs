@@ -16,7 +16,27 @@ import path from 'path';
 
 // ─── Config ─────────────────────────────────────────────────────────────────
 
-const CHROME_PATH = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
+// Browser robust auflösen: Chrome → Edge → gebündeltes Playwright-Chromium.
+function resolveBrowser() {
+  const candidates = [
+    process.env.PUPPETEER_EXECUTABLE_PATH,
+    'C:/Program Files/Google/Chrome/Application/chrome.exe',
+    'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
+    'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
+    'C:/Program Files/Microsoft/Edge/Application/msedge.exe',
+  ].filter(Boolean);
+  for (const p of candidates) if (existsSync(p)) return p;
+  const pwRoot = `${process.env.LOCALAPPDATA || ''}/ms-playwright`;
+  if (existsSync(pwRoot)) {
+    for (const dir of readdirSync(pwRoot)) {
+      const exe = `${pwRoot}/${dir}/chrome-win64/chrome.exe`;
+      if (existsSync(exe)) return exe;
+    }
+  }
+  throw new Error('Kein Chromium-Binary gefunden (Chrome/Edge/Playwright).');
+}
+
+const CHROME_PATH = resolveBrowser();
 const OUTPUT_DIR  = './worksheets';
 const EXERCISES_DIR = './src/data/exercises';
 
