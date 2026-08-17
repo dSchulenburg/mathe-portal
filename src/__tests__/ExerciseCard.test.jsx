@@ -8,7 +8,7 @@ describe('ExerciseCard', () => {
     topicId: '10-quad-funktionen',
     type: 'numeric-input',
     diffLevel: 'standard',
-    competencies: ['kreativitaet', 'kommunikation'],
+    competencies: ['kreativität', 'kommunikation'],
     points: 10,
     timeEstimate: 5,
     data: { questionKey: 'test.task', correctValue: 42 },

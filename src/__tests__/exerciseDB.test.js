@@ -55,11 +55,11 @@ describe('exerciseDB', () => {
 
   it('filters by multiple criteria', () => {
     registerExercise(sampleExercise);
-    registerExercise({ ...sampleExercise, id: 'quad-002', diffLevel: 'standard', competencies: ['kreativitaet'] });
-    registerExercise({ ...sampleExercise, id: 'quad-003', diffLevel: 'basis', competencies: ['kreativitaet'] });
+    registerExercise({ ...sampleExercise, id: 'quad-002', diffLevel: 'standard', competencies: ['kreativität'] });
+    registerExercise({ ...sampleExercise, id: 'quad-003', diffLevel: 'basis', competencies: ['kreativität'] });
     const result = filterExercises({ topicId: '10-quad-funktionen', diffLevel: 'basis' });
     expect(result).toHaveLength(2);
-    const creative = filterExercises({ topicId: '10-quad-funktionen', competency: 'kreativitaet' });
+    const creative = filterExercises({ topicId: '10-quad-funktionen', competency: 'kreativität' });
     expect(creative).toHaveLength(2);
   });
 });
