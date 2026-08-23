@@ -3,7 +3,7 @@ import { DIFF_LEVELS } from '../data/types';
 import { exercises } from '../data/exercises/10-wahrscheinlichkeit';
 
 describe('Wahrscheinlichkeit exercises', () => {
-  it('has 20 exercises', () => { expect(exercises.length).toBe(20); });
+  it('has 28 exercises', () => { expect(exercises.length).toBe(28); });
   it('all have required fields', () => {
     exercises.forEach(ex => {
       expect(ex.id).toBeTruthy();
@@ -23,5 +23,9 @@ describe('Wahrscheinlichkeit exercises', () => {
   it('has unique IDs', () => {
     const ids = exercises.map(e => e.id);
     expect(new Set(ids).size).toBe(ids.length);
+  });
+  it('has no duplicate question texts', () => {
+    const texts = exercises.map(e => (e.data.questionText ?? JSON.stringify(e.data)).trim());
+    expect(new Set(texts).size).toBe(texts.length);
   });
 });
