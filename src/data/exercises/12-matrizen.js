@@ -295,7 +295,7 @@ export const exercises = [
   // ─── eA (erhöhtes Anforderungsniveau) – 3 Aufgaben ───────────────────────
 
   {
-    id: 'mat-ea-001', topicId: '12-matrizen', type: 'step-solver', diffLevel: 'eA',
+    id: 'mat-ea-001', topicId: '12-matrizen', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 18,
     contextKey: 'PageRank',
     data: {
@@ -333,7 +333,7 @@ export const exercises = [
   },
 
   {
-    id: 'mat-ea-002', topicId: '12-matrizen', type: 'step-solver', diffLevel: 'eA',
+    id: 'mat-ea-002', topicId: '12-matrizen', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 16,
     contextKey: 'Populationsdynamik',
     data: {
@@ -371,7 +371,7 @@ export const exercises = [
   },
 
   {
-    id: 'mat-ea-003', topicId: '12-matrizen', type: 'step-solver', diffLevel: 'eA',
+    id: 'mat-ea-003', topicId: '12-matrizen', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 18,
     contextKey: 'Pendlerverhalten Stadt-Umland',
     data: {

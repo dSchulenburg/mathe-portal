@@ -335,7 +335,7 @@ export const exercises = [
   // ─── eA (erhöhtes Anforderungsniveau) – 2 Aufgaben ───────────────────────
 
   {
-    id: 'norm-ea-001', topicId: '12-normalverteilung', type: 'step-solver', diffLevel: 'eA',
+    id: 'norm-ea-001', topicId: '12-normalverteilung', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Binomial-Normal-Approximation',
     data: {
@@ -385,7 +385,7 @@ export const exercises = [
   },
 
   {
-    id: 'norm-ea-002', topicId: '12-normalverteilung', type: 'step-solver', diffLevel: 'eA',
+    id: 'norm-ea-002', topicId: '12-normalverteilung', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 18,
     contextKey: 'Amazon-Lieferzeiten',
     data: {

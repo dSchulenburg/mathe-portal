@@ -356,7 +356,7 @@ export const exercises = [
   // ─── eA (erhöhtes Anforderungsniveau) – 3 Aufgaben ───────────────────────
 
   {
-    id: 'efn-ea-001', topicId: '12-e-funktion-ln', type: 'step-solver', diffLevel: 'eA',
+    id: 'efn-ea-001', topicId: '12-e-funktion-ln', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Partielle Integration',
     data: {
@@ -407,7 +407,7 @@ export const exercises = [
   },
 
   {
-    id: 'efn-ea-002', topicId: '12-e-funktion-ln', type: 'step-solver', diffLevel: 'eA',
+    id: 'efn-ea-002', topicId: '12-e-funktion-ln', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Modellierung — Parameter fitten',
     data: {
@@ -440,7 +440,7 @@ export const exercises = [
   },
 
   {
-    id: 'efn-ea-003', topicId: '12-e-funktion-ln', type: 'multiple-choice', diffLevel: 'eA',
+    id: 'efn-ea-003', topicId: '12-e-funktion-ln', type: 'multiple-choice', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 12,
     contextKey: 'Wendepunkt und Krümmung',
     data: {

@@ -307,7 +307,7 @@ export const exercises = [
   // ─── eA (erhöhtes Anforderungsniveau) – 2 Aufgaben ───────────────────────
 
   {
-    id: 'binom-ea-001', topicId: '11-binomialverteilung', type: 'step-solver', diffLevel: 'eA',
+    id: 'binom-ea-001', topicId: '11-binomialverteilung', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'AirPods Qualitätskontrolle',
     data: {
@@ -346,7 +346,7 @@ export const exercises = [
   },
 
   {
-    id: 'binom-ea-002', topicId: '11-binomialverteilung', type: 'step-solver', diffLevel: 'eA',
+    id: 'binom-ea-002', topicId: '11-binomialverteilung', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Regenwahrscheinlichkeit',
     data: {

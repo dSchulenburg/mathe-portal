@@ -376,7 +376,7 @@ export const exercises = [
   // ─── eA (erhöhtes Anforderungsniveau) – 3 Aufgaben ───────────────────────
 
   {
-    id: 'intv-ea-001', topicId: '12-integralrechnung-vertieft', type: 'step-solver', diffLevel: 'eA',
+    id: 'intv-ea-001', topicId: '12-integralrechnung-vertieft', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Rotationsvolumen Vase',
     data: {
@@ -415,7 +415,7 @@ export const exercises = [
   },
 
   {
-    id: 'intv-ea-002', topicId: '12-integralrechnung-vertieft', type: 'step-solver', diffLevel: 'eA',
+    id: 'intv-ea-002', topicId: '12-integralrechnung-vertieft', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Uneigentliches Integral',
     data: {
@@ -460,7 +460,7 @@ export const exercises = [
   },
 
   {
-    id: 'intv-ea-003', topicId: '12-integralrechnung-vertieft', type: 'multiple-choice', diffLevel: 'eA',
+    id: 'intv-ea-003', topicId: '12-integralrechnung-vertieft', type: 'multiple-choice', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 12,
     contextKey: 'Substitution — konzeptuell',
     data: {

@@ -299,7 +299,7 @@ export const exercises = [
   // ─── eA (erhöhtes Anforderungsniveau) – 2 Aufgaben ───────────────────────
 
   {
-    id: 'elog-ea-001', topicId: '11-exp-log', type: 'multiple-choice', diffLevel: 'eA',
+    id: 'elog-ea-001', topicId: '11-exp-log', type: 'multiple-choice', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 12,
     data: {
       questionText: 'Warum gilt für die Ableitung $f(x) = e^{kx}$: $f\'(x) = k \\cdot e^{kx}$? Welche Begründung ist mathematisch korrekt?',
@@ -319,7 +319,7 @@ export const exercises = [
   },
 
   {
-    id: 'elog-ea-002', topicId: '11-exp-log', type: 'step-solver', diffLevel: 'eA',
+    id: 'elog-ea-002', topicId: '11-exp-log', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 15,
     contextKey: 'Crypto-Kursmodell',
     data: {

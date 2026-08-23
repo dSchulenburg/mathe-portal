@@ -448,7 +448,7 @@ export const exercises = [
   // ─── eA (erhöhtes Anforderungsniveau) – 5 Aufgaben ───────────────────────
 
   {
-    id: 'abi-ea-001', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'eA',
+    id: 'abi-ea-001', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 20,
     contextKey: 'Vollständige Klausuraufgabe',
     data: {
@@ -515,7 +515,7 @@ export const exercises = [
   },
 
   {
-    id: 'abi-ea-002', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'eA',
+    id: 'abi-ea-002', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 18,
     contextKey: 'Vollständige Klausuraufgabe',
     data: {
@@ -569,7 +569,7 @@ export const exercises = [
   },
 
   {
-    id: 'abi-ea-003', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'eA',
+    id: 'abi-ea-003', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 18,
     contextKey: 'Abiturähnliche Aufgabe',
     data: {
@@ -619,7 +619,7 @@ export const exercises = [
   },
 
   {
-    id: 'abi-ea-004', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'eA',
+    id: 'abi-ea-004', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 20,
     contextKey: 'Transferaufgabe',
     data: {
@@ -669,7 +669,7 @@ export const exercises = [
   },
 
   {
-    id: 'abi-ea-005', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'eA',
+    id: 'abi-ea-005', topicId: '12-abiturvorbereitung', type: 'step-solver', diffLevel: 'ea',
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'], points: 20, timeEstimate: 20,
     contextKey: 'Transferaufgabe',
     data: {
