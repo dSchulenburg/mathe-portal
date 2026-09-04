@@ -6,6 +6,7 @@ Style: Jugendsprache, energisch, etwas schneller als normal.
 
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -17,9 +18,14 @@ except ImportError:
     import requests
 
 # --- Config ---
+# Pfade aus der Skript-Lage ableiten statt hartkodieren: das Repo liegt auf
+# Deus Machina und auf dem Laptop an verschiedenen Stellen.
+ROOT = Path(__file__).resolve().parent.parent      # .../mathe-portal
+REPO_ROOT = ROOT.parent                            # .../docker
+
 API_KEY = os.environ.get("ELEVENLABS_API_KEY", "")
 if not API_KEY:
-    env_path = Path(r"C:\Users\mail\entwicklung\docker\.env")
+    env_path = REPO_ROOT / ".env"
     if env_path.exists():
         for line in env_path.read_text().splitlines():
             if line.startswith("ELEVENLABS_API_KEY="):
@@ -31,16 +37,40 @@ if not API_KEY:
     sys.exit(1)
 
 MODEL = "eleven_multilingual_v2"
-BASE_DIR = Path(r"C:\Users\mail\entwicklung\docker\mathe-portal\assets")
+# public/assets, NICHT assets/: nur aus public/ kopiert Vite die MP3s
+# ungehasht in den Build. Das alte assets/ existiert gar nicht mehr.
+BASE_DIR = ROOT / "public" / "assets"
 
 # Voice IDs
 VOICE_AMIR = "TX3LPaxmHKxFdv7VOQHJ"   # Liam - Energetic, young
 VOICE_KAI = "IKne3meq5aSn9XLyUdCD"     # Charlie - Deep, confident, young
 
 
+ESCAPE_RE = re.compile(r"&[a-zA-Z#]\w*;|%[0-9A-Fa-f]{2}|<[^>]+>|\$")
+
+
+def guard_text(name: str, text: str) -> str:
+    """Bricht ab, wenn HTML-Entities, Tags, Prozent-Escapes oder LaTeX drinstehen.
+
+    Am 29.03.2026 wurden Mias sec00/sec01 aus entity-kodiertem Text erzeugt und
+    sprachen an jeder Umlautstelle Kauderwelsch; die Neuvertonung am 02.09.2026
+    hat das repariert. Dieselbe Falle steht Amir und Kai offen, deshalb hier
+    derselbe Riegel wie in generate-audio-mia.mjs.
+    """
+    found = ESCAPE_RE.findall(text)
+    if found:
+        raise ValueError(
+            f"{name}: Text enthaelt Escapes/Tags/LaTeX: {' '.join(sorted(set(found)))}"
+        )
+    if not any(c in text for c in "äöüÄÖÜß"):
+        print(f"  WARNUNG {name}: kein einziger Umlaut im Text — Quelle pruefen")
+    return text
+
+
 def generate(voice_id: str, output_path: Path, text: str,
              stability: float = 0.40, similarity: float = 0.75, style: float = 0.5):
     """Generate a single audio clip."""
+    text = guard_text(output_path.name, text)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     print(f"  Generating: {output_path.name} ({len(text)} chars)...", end=" ", flush=True)
 
@@ -185,6 +215,11 @@ AMIR_CLIPS = [
      "ein Algorithmus. Ich ruf Mia an: DataPulse kann jetzt deine "
      "Hafenlichter-Spielerdaten analysieren! Und sie so: Geil! "
      "Und übrigens — Kai baut gerade das 3D-Sequel!"),
+    ("sec09-rationale-funktionen.mp3",
+     "Zweite Woche Praktikum, und ich baue den neuen Empfehlungs-Filter für DataPulse. Die Idee ist simpel: Relevanz pro Hörer, also Gesamtrelevanz geteilt durch Anzahl Hörer. Sauber, denke ich.\n\nDann kommt Yara vorbei, schaut auf den Bildschirm und fragt: \"Was passiert eigentlich, wenn ein Track null Hörer hat?\" Stille. Division durch null. Der Filter crasht.\n\nWillkommen bei den rationalen Funktionen. Das sind Funktionen, bei denen ein Polynom durch ein anderes geteilt wird. Und der springende Punkt ist immer derselbe: Der Nenner darf nicht null werden.\n\nAlso Schritt eins, immer: Definitionsmenge bestimmen. Nenner gleich null setzen, lösen, diese Stellen ausschließen. Bei mir war das genau die Stelle, an der Yara den Finger draufgelegt hat.\n\nAber jetzt wird es interessant. Nicht jede Nullstelle des Nenners ist eine Katastrophe. Es gibt zwei Fälle. Wenn nur der Nenner null wird, habe ich eine Polstelle. Die Funktion schießt dort ins Unendliche, und im Graph steht eine senkrechte Asymptote. Wenn aber Zähler und Nenner an derselben Stelle null werden, kann ich kürzen. Dann ist es nur eine hebbare Lücke, ein einzelner fehlender Punkt. Der Rest der Funktion ist völlig gesund.\n\nDas war für mich die eigentliche Erkenntnis: Ein Crash im Code heißt nicht automatisch, dass die Formel falsch ist. Manchmal ist es nur eine Lücke, die man wegkürzen kann.\n\nUnd dann noch das Verhalten für sehr große Werte. Wenn der Nenner schneller wächst als der Zähler, geht die Funktion gegen null. Wenn beide gleich schnell wachsen, geht sie gegen das Verhältnis der Leitkoeffizienten. Wächst der Zähler schneller, läuft sie davon. Das ist die waagerechte Asymptote, und für mich heißt sie: Wie verhält sich mein Filter bei Millionen Hörern?\n\nDrei Fragen also, jedes Mal. Wo wird der Nenner null? Ist es Polstelle oder Lücke? Was passiert im Unendlichen? Mein Filter läuft jetzt stabil. Und ich schaue seitdem bei jeder Division zweimal hin."),
+
+    ("sec10-lgs-gauss.mp3",
+     "Finn und ich trainieren ein einfaches Modell. Drei Features: Tempo, Lautstärke, Tanzbarkeit. Das Modell soll daraus eine Hörer-Bewertung schätzen. Jedes Feature bekommt ein Gewicht, und die Gewichte kennen wir noch nicht.\n\nWir haben drei Beispiel-Tracks, bei denen wir die Bewertung schon wissen. Also drei Gleichungen mit drei Unbekannten. Finn schaut auf das Whiteboard und sagt: \"Per Hand wird das nichts.\" Ich grinse. Doch. Mit Gauß.\n\nDas Gaußsche Eliminationsverfahren macht etwas sehr Mechanisches, und genau das ist seine Stärke. Ich schreibe die Koeffizienten in eine Tabelle, die erweiterte Koeffizienten-Matrix. Links die Faktoren vor den Unbekannten, rechts die Ergebnisse.\n\nDann räume ich von links auf. Mit der ersten Zeile erzeuge ich in allen darunterliegenden Zeilen eine Null in der ersten Spalte. Dazu addiere ich Vielfache der ersten Zeile zu den anderen. Danach dasselbe mit der zweiten Zeile für die zweite Spalte. Am Ende steht unten links nur noch Nullen. Das nennt man Stufenform.\n\nUnd jetzt kommt der schöne Teil: Die letzte Zeile enthält nur noch eine Unbekannte. Die rechne ich direkt aus. Damit gehe ich eine Zeile nach oben, setze ein, bekomme die nächste. Und so weiter nach oben. Rückwärtseinsetzen.\n\nDrei Sachen können dabei passieren. Normalfall: eine eindeutige Lösung. Oder eine Zeile wird komplett null gleich null, dann gibt es unendlich viele Lösungen und ich brauche einen Parameter. Oder eine Zeile sagt null gleich fünf, dann gibt es gar keine Lösung. Bei uns hieß der letzte Fall: Die Trainingsdaten widersprechen sich.\n\nFinn fragt, warum wir das nicht einfach die Bibliothek machen lassen. Klar machen wir das. Aber numpy dot linalg dot solve rechnet intern genau das, was ich hier von Hand gemacht habe. Und wenn die Funktion irgendwann meckert, die Matrix sei singulär, dann weiß ich jetzt, was sie meint."),
 ]
 
 
@@ -303,10 +338,69 @@ KAI_CLIPS = [
 ]
 
 
+def parse_args(argv):
+    """--only a,b  --list  --dry-run — analog zu generate-audio-mia.mjs."""
+    only, list_only, dry_run = None, False, False
+    i = 0
+    while i < len(argv):
+        a = argv[i]
+        if a == "--only" and i + 1 < len(argv):
+            only = [x.strip() for x in argv[i + 1].split(",") if x.strip()]
+            i += 1
+        elif a == "--list":
+            list_only = True
+        elif a in ("--dry-run", "--dryrun"):
+            dry_run = True
+        else:
+            print(f"Unbekanntes Argument: {a}")
+            sys.exit(2)
+        i += 1
+    return only, list_only, dry_run
+
+
+def selected(clips, only):
+    """Auswahl per Dateiname ODER Name ohne .mp3 — beide Schreibweisen zulassen."""
+    if only is None:
+        return clips
+    return [(fn, tx) for fn, tx in clips
+            if fn in only or fn[:-4] in only]
+
+
 def main():
+    only, list_only, dry_run = parse_args(sys.argv[1:])
+
+    if list_only:
+        print("AMIR:")
+        for fn, _ in AMIR_CLIPS:
+            print(f"  {fn[:-4]}")
+        print("KAI:")
+        for fn, _ in KAI_CLIPS:
+            print(f"  {fn[:-4]}")
+        return
+
+    amir = selected(AMIR_CLIPS, only)
+    kai = selected(KAI_CLIPS, only)
+
+    if only is not None:
+        known = {fn[:-4] for fn, _ in AMIR_CLIPS} | {fn[:-4] for fn, _ in KAI_CLIPS}
+        unknown = [k for k in only if k.replace(".mp3", "") not in known]
+        if unknown:
+            print(f"ERROR: unbekannte Clips: {', '.join(unknown)}")
+            print("       --list zeigt alle verfuegbaren Keys.")
+            sys.exit(2)
+        if not amir and not kai:
+            print("ERROR: --only hat nichts ausgewaehlt.")
+            sys.exit(2)
+
     print("=" * 50)
     print(" Mathe-Portal Audio: Amir + Kai")
     print(" ElevenLabs multilingual_v2")
+    if only is not None:
+        print(f" Auswahl: {len(amir) + len(kai)} von "
+              f"{len(AMIR_CLIPS) + len(KAI_CLIPS)} Clips")
+    else:
+        print(" ACHTUNG: ohne --only werden ALLE Clips neu erzeugt "
+              "(kostet Credits und ueberschreibt vorhandene MP3s).")
     print("=" * 50)
     print()
 
@@ -314,39 +408,50 @@ def main():
     failed = 0
 
     # --- AMIR ---
-    print("--- AMIR YILMAZ (Klasse 11, DataPulse) ---")
-    print(f"    Voice: Liam ({VOICE_AMIR})")
-    print()
-    for filename, text in AMIR_CLIPS:
-        path = BASE_DIR / "amir" / "audio" / filename
-        if generate(VOICE_AMIR, path, text, stability=0.40, similarity=0.75, style=0.5):
-            success += 1
-        else:
-            failed += 1
-
-    print()
+    if amir:
+        print("--- AMIR YILMAZ (Klasse 11, DataPulse) ---")
+        print(f"    Voice: Liam ({VOICE_AMIR})")
+        print()
+        for filename, text in amir:
+            path = BASE_DIR / "amir" / "audio" / filename
+            if dry_run:
+                guard_text(filename, text)
+                print(f"  [dry-run] {path}  ({len(text)} Zeichen)")
+                success += 1
+            elif generate(VOICE_AMIR, path, text, stability=0.40, similarity=0.75, style=0.5):
+                success += 1
+            else:
+                failed += 1
+        print()
 
     # --- KAI ---
-    print("--- KAI OKONKWO (Klasse 12, Hafenlichter 3D) ---")
-    print(f"    Voice: Charlie ({VOICE_KAI})")
-    print()
-    for filename, text in KAI_CLIPS:
-        path = BASE_DIR / "kai" / "audio" / filename
-        if generate(VOICE_KAI, path, text, stability=0.42, similarity=0.75, style=0.5):
-            success += 1
-        else:
-            failed += 1
+    if kai:
+        print("--- KAI OKONKWO (Klasse 12, Hafenlichter 3D) ---")
+        print(f"    Voice: Charlie ({VOICE_KAI})")
+        print()
+        for filename, text in kai:
+            path = BASE_DIR / "kai" / "audio" / filename
+            if dry_run:
+                guard_text(filename, text)
+                print(f"  [dry-run] {path}  ({len(text)} Zeichen)")
+                success += 1
+            elif generate(VOICE_KAI, path, text, stability=0.42, similarity=0.75, style=0.5):
+                success += 1
+            else:
+                failed += 1
 
     print()
     print("=" * 50)
     print(f" Done! {success} generated, {failed} failed")
-    print(f" Amir: {len(AMIR_CLIPS)} clips")
-    print(f" Kai:  {len(KAI_CLIPS)} clips")
+    print(f" Amir: {len(amir)} clips")
+    print(f" Kai:  {len(kai)} clips")
     print("=" * 50)
     print()
-    print("Deploy to server:")
-    print("  scp -i ~/.ssh/hetzner_ssh_key -r assets/amir/audio/* dirk@95.217.163.192:/home/dirk/docker/lernmodule/html/mathe-portal/assets/amir/audio/")
-    print("  scp -i ~/.ssh/hetzner_ssh_key -r assets/kai/audio/* dirk@95.217.163.192:/home/dirk/docker/lernmodule/html/mathe-portal/assets/kai/audio/")
+    print("Naechste Schritte:")
+    print("  1. Whisper-Gegenprobe:  tools/tts-check")
+    print("  2. audioFile in src/data/characters.js setzen")
+    print("  3. MP3s committen (public/assets/**/*.mp3 ist in .gitignore freigegeben)")
+    print("  4. Deploy:  bash deploy-mathe-portal.sh")
 
 
 if __name__ == "__main__":

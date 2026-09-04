@@ -1,2 +1,6 @@
 dist/
 node_modules/
+
+# Python-Bytecode der Audio-Generatoren
+__pycache__/
+*.pyc

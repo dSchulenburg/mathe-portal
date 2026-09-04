@@ -130,12 +130,12 @@ export const TOPIC_STORIES = {
   },
   '10-lineare-funktionen': {
     characterId: 'mia',
-    audioFile: null,
+    audioFile: `${import.meta.env.BASE_URL}assets/mia/audio/sec14-lineare-funktionen.mp3`,
     challenge: 'Plattform-Bewegung mit konstanter Geschwindigkeit',
   },
   '10-kreis': {
     characterId: 'mia',
-    audioFile: null,
+    audioFile: `${import.meta.env.BASE_URL}assets/mia/audio/sec15-kreis.mp3`,
     challenge: 'Runde Hitboxen für rotierende Spielobjekte',
   },
 
@@ -182,12 +182,12 @@ export const TOPIC_STORIES = {
   },
   '11-rationale-funktionen': {
     characterId: 'amir',
-    audioFile: null,
+    audioFile: `${import.meta.env.BASE_URL}assets/amir/audio/sec09-rationale-funktionen.mp3`,
     challenge: 'Lat encoder mit Polstellen-Behandlung',
   },
   '11-lgs-gauss': {
     characterId: 'amir',
-    audioFile: null,
+    audioFile: `${import.meta.env.BASE_URL}assets/amir/audio/sec10-lgs-gauss.mp3`,
     challenge: 'Feature-Gewichte aus Trainingsdaten lösen',
   },
 
