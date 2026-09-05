@@ -1,31 +1,251 @@
 export const batch12b = {
   '12-normalverteilung': {
-    story: { intro: 'Kai stoji pred finalnim problemem vyvazeni "Hafenlichter 3D": Loot-dropy musi pusobit ferove, ale zaroven vzrusujice. "Potrebuji rozdeleni, ktere vypada prirozene — hodne hodnot blizko prumeru, malo extremu", rika Kai. Odpoved ze stochastiky: normalni rozdeleni s jeho perfektni zvonovitou krivkou.', challenge: 'Kai musi kalibrovat system lootu a vykonu "Hafenlichter 3D" tak, aby odmeny byly ferove rozdeleny a casy snimku zustaly pod kritickym prahem.', outro: 'S normalnim rozdelenim Kai postavil elegantni system vyvazeni: Loot-dropy sledují zvonovou krivku kolem cilove hodnoty a sigma pravidla zarucuji, ze odlehle hodnoty jsou extremne vzacne.' },
-    objectives: { bell_curve: 'Chapat normalni rozdeleni $N(\\mu, \\sigma^2)$ jako spojite rozdeleni se zvonovou krivkou a interpretovat jeho parametry', sigma_rules: 'Pouzivat sigma pravidla ($68{,}3\\%$, $95{,}4\\%$, $99{,}7\\%$) pro rychle odhady pravdepodobnosti', z_transformation: 'Provadet $z$-transformaci a pocitat pravdepodobnosti se standardnim normalnim rozdelenim $\\Phi(z)$', central_limit_theorem: 'Znat centralni limitni vetu a vysvetlit, proc je normalni rozdeleni vsude' },
-    explanation: { intro: 'Normalni rozdeleni je nejdulezitejsi spojite rozdeleni statistiky — a potkavate ho vsude: vyska, merene hodnoty, casy snimku, vysledky zkousek. Jeho hustota ma ikonicky tvar zvonu, symetricky kolem stredni hodnoty $\\mu$. Smerodatna odchylka $\\sigma$ urcuje, jak siroky nebo uzky je zvon:', sigma_rules: 'Sigma pravidla jsou tvuj rychly nastroj: Hned ti reknou, kolik procent hodnot lezi v urcitem rozsahu kolem $\\mu$. V rozmezi $\\pm 1\\sigma$ lezi priblizne $68{,}3\\%$, v rozmezi $\\pm 2\\sigma$ priblizne $95{,}4\\%$ a v rozmezi $\\pm 3\\sigma$ skoro vse — $99{,}7\\%$:', kai_tip: 'V hernim vyvoji pouzivam sigma pravidla pri vyvazeni denne. Chci-li, aby 95% loot-dropu lezelo mezi 30 a 70 zlata, nastavim $\\mu = 50$ a $2\\sigma = 20$, tedy $\\sigma = 10$. Hotovo!', z_transformation: 'Ale co kdyz potrebujes presnou pravdepodobnost? Pak nastupuje $z$-transformace: Prepocitas svoji hodnotu $x$ na standardizovanou hodnotu $z$ a vyhledas v tabulce $\\Phi(z)$:', central_limit: 'Proc je normalni rozdeleni tak vsudypritomne? Centralni limitni veta dava odpoved: Kdyz sectes dostatecne mnoho nezavislych nahodnych velicin, jejich soucet se — bez ohledu na jednotliva rozdeleni — blizi normalnimu rozdeleni:' },
-    concepts: { normal_distribution: { title: 'Normalni rozdeleni $N(\\mu, \\sigma^2)$', desc: 'Spojite rozdeleni se zvonovou hustotou. $\\mu$ je stredni hodnota (stred zvonu), $\\sigma^2$ rozptyl (sirka zvonu). Plocha pod krivkou je vzdy 1. Symetricke kolem $\\mu$: Median = Modus = Stredni hodnota.' }, sigma_rules: { title: 'Sigma pravidla', desc: 'Tri zlata pravidla: $P(\\mu - \\sigma \\leq X \\leq \\mu + \\sigma) \\approx 68{,}3\\%$, $P(\\mu - 2\\sigma \\leq X \\leq \\mu + 2\\sigma) \\approx 95{,}4\\%$, $P(\\mu - 3\\sigma \\leq X \\leq \\mu + 3\\sigma) \\approx 99{,}7\\%$.' }, z_transformation: { title: '$z$-transformace', desc: 'Premeni kazde normalni rozdeleni na standardni $N(0, 1)$: $z = \\frac{x - \\mu}{\\sigma}$. Pak prectete $P(X \\leq x) = \\Phi(z)$ z tabulky.' } },
-    examples: { loot_balancing: { title: 'Pravdepodobnost loot-dropu', context: 'V "Hafenlichter 3D" bossove dropuji zlato, normalne rozdelene s $\\mu = 50$ a $\\sigma = 8$. Kai chce vedet: Jak pravdepodobny je legendarni drop alespon 70 zlata?', step1: 'Model — gold-dropy sledují normalni rozdeleni:', step2: '$z$-transformace — kolik smerodatnych odchylek je 70 od 50?', step3: 'Vyhledame v tabulce — precteme $\\Phi(2{,}5)$:', step4: 'Protejsi pravdepodobnost — jen $0{,}6\\%$ dostane 70+ zlata:', kai_comment: 'Perfektni! Legendarni drop u mene nez 1% hracu — to se citi vyjimecne, aniz by to bylo nefer.' }, frame_times: { title: 'Analyza casu snimku', context: 'Pri 60 FPS musi byt kazdy snimek vykreslen za $16{,}7\\,\\text{ms}$. Profiler ukazuje: Casy snimku jsou normalne rozdeleny s $\\mu = 16{,}7\\,\\text{ms}$ a $\\sigma = 2{,}1\\,\\text{ms}$. Jak casto hra laguje?', step1: 'Model — casy snimku jako normalni rozdeleni:', step2: '$z$-transformace pro lag prah $x = 20$:', step3: 'Tabulkova hodnota:', step4: 'Vypocteme — priblizne kazdy 17. snimek laguje:', kai_comment: 'Skoro 6% lagu — to je prilis na plynulou 3D hru. Musim optimalizovat renderer.' } },
-    realworld: { quality_control: { title: 'Kontrola kvality v prumyslu', desc: 'Tovarny pouzivaji $3\\sigma$ pravidlo: Pokud dil odchyluje vice nez $3\\sigma$ od cilove hodnoty, je vyrazen. Six-Sigma jde jeste dal — $6\\sigma$ znamena maximalne 3,4 chyb na milion dilu.' }, iq_scores: { title: 'IQ testy a standardizace', desc: 'IQ hodnoty jsou podle definice normalne rozdeleny s $\\mu = 100$ a $\\sigma = 15$. Priblizne $68\\%$ populace ma IQ mezi 85 a 115.' }, stock_returns: { title: 'Akciove vynosy a riziko', desc: 'Denni akciove vynosy se casto modeluji jako normalne rozdelene — $\\sigma$ je pak riziko. Portfoliovi manazeri pouzivaji $z$-transformaci k vypoctu pravdepodobnosti krachu.' } },
-    mistakes: { sigma_vs_variance: { wrong: 'Notace $N(\\mu, \\sigma)$ — smerodatna odchylka misto rozptylu', correct: 'Spravne je $N(\\mu, \\sigma^2)$ — druhy parametr je vzdy rozptyl', why: 'V notaci $N(\\mu, \\sigma^2)$ stoji druhy parametr za rozptyl $\\sigma^2$, ne za smerodatnou odchylku $\\sigma$. Zamena vede k uplne spatnym pravdepodobnostem.', kai_warning: 'Tahle chyba mi jednou zničila celé vyvážení kořisti. Myslel jsem $\\sigma = 8$, ale napsal $N(50, 8)$ — a to znamená $\\sigma = \\sqrt{8} \\approx 2{,}83$. Odměny byly příliš jednotvárné! Vždy pamatuj: $N(\\mu, \\sigma^2)$!' }, z_sign: { wrong: '$z$-vzorec naopak: $z = \\frac{\\mu - x}{\\sigma}$', correct: 'Spravne $z = \\frac{x - \\mu}{\\sigma}$ — hodnota minus stredni hodnota, ne naopak', why: 'Pokud zamenis citatel, ziskas spatne znamenko. Hodnota nad prumerem musi dat kladne $z$, pod prumerem zaporne.' } },
+    story: {
+      intro: 'Kai stojí před posledním problémem vyvážení „Hafenlichter 3D": kořist musí působit spravedlivě, a přesto napínavě. Když každý boss shodí přesně stejně zlata, je to nuda — při příliš velkém rozptylu si zase hráči stěžují na nespravedlnost. „Potřebuji rozdělení, které vypadá přirozeně — hodně hodnot blízko průměru, málo extrémů," říká Kai kolegyni Prie. Odpověď z přednášky o stochastice: normální rozdělení se svou dokonalou zvonovou křivkou.',
+      challenge: 'Kai musí systém kořisti a výkonu „Hafenlichter 3D" nastavit tak, aby byly odměny rozděleny spravedlivě a časy snímků zůstaly pod kritickou hranicí — normální rozdělení a jeho sigma pravidla mu k tomu dávají nástroj.',
+      outro: 'S normálním rozdělením postavil Kai elegantní systém vyvážení: kořist sleduje zvonovou křivku kolem cílové hodnoty a sigma pravidla zaručují, že odlehlé hodnoty jsou nesmírně vzácné. „Krása je v tom, že teď dokážu přesně spočítat, kolik procent hráčů zažije určitou hodnotu kořisti," vysvětluje týmu. A pomocí $z$-transformace srovnává zcela odlišné metriky — časy snímků, rozdělení poškození, délku hraní — na jediné škále. Zvonová křivka je všude.',
+    },
+    objectives: {
+      bell_curve: 'Rozumět normálnímu rozdělení $N(\\mu, \\sigma^2)$ jako spojitému rozdělení se zvonovou křivkou a vykládat jeho parametry',
+      sigma_rules: 'Používat sigma pravidla ($68{,}3\\%$, $95{,}4\\%$, $99{,}7\\%$) k rychlým odhadům pravděpodobnosti',
+      z_transformation: 'Provádět $z$-transformaci a počítat pravděpodobnosti pomocí normovaného normálního rozdělení $\\Phi(z)$',
+      central_limit_theorem: 'Znát centrální limitní větu a vysvětlit, proč se normální rozdělení objevuje všude',
+    },
+    explanation: {
+      intro: 'Normální rozdělení je nejdůležitější spojité rozdělení statistiky — a potkáš ho všude: u tělesných výšek, naměřených hodnot, časů snímků, výsledků zkoušek. Jeho hustota má ikonický zvonový tvar, symetrický kolem střední hodnoty $\\mu$. Směrodatná odchylka $\\sigma$ určuje, jak široký nebo úzký zvon je: malá $\\sigma$ = úzký vysoký zvon (malý rozptyl), velká $\\sigma$ = široký plochý zvon (velký rozptyl). Hustota má tvar:',
+      sigma_rules: 'Sigma pravidla jsou tvůj rychlý nástroj: hned ti řeknou, kolik procent všech hodnot leží v určitém rozmezí kolem $\\mu$ — bez tabulky, bez kalkulačky. V pásmu $\\pm 1\\sigma$ leží asi $68{,}3\\%$, v pásmu $\\pm 2\\sigma$ asi $95{,}4\\%$ a v pásmu $\\pm 3\\sigma$ téměř vše — $99{,}7\\%$. To znamená: hodnoty za hranicí $3\\sigma$ jsou nesmírně vzácné!',
+      kai_tip: 'V herním vývoji používám sigma pravidla při vyvažování denně. Chci-li, aby 95% kořisti leželo mezi 30 a 70 zlatými, nastavím $\\mu = 50$ a $2\\sigma = 20$, tedy $\\sigma = 10$. Hotovo! Pravidla mi hned dají rozdělení, aniž bych musel cokoli integrovat.',
+      z_transformation: 'Ale co když potřebuješ přesnou pravděpodobnost — ne jen sigma pravidla? Pak přichází na řadu $z$-transformace: převedeš svou hodnotu $x$ na normovanou hodnotu $z$ a podíváš se do tabulky normovaného normálního rozdělení $\\Phi(z)$. Hodnota $z$ ti řekne, o kolik směrodatných odchylek je $x$ vzdálena od střední hodnoty:',
+      central_limit: 'Proč je normální rozdělení tak všudypřítomné? Odpověď dává centrální limitní věta: sečteš-li dostatečně mnoho nezávislých náhodných veličin, blíží se jejich součet — bez ohledu na to, jak vypadají jednotlivá rozdělení — normálnímu rozdělení. Proto jsou průměry téměř vždy normálně rozdělené, i když jednotlivá data nejsou:',
+    },
+    concepts: {
+      normal_distribution: {
+        title: 'Normální rozdělení $N(\\mu, \\sigma^2)$',
+        desc: 'Spojité rozdělení se zvonovitou hustotou. $\\mu$ je střední hodnota (střed zvonu), $\\sigma^2$ rozptyl (šířka zvonu). Plocha pod křivkou je vždy 1. Symetrické kolem $\\mu$: medián = modus = střední hodnota.',
+      },
+      sigma_rules: {
+        title: 'Sigma pravidla',
+        desc: 'Tři zlatá pravidla: $P(\\mu - \\sigma \\leq X \\leq \\mu + \\sigma) \\approx 68{,}3\\%$, $P(\\mu - 2\\sigma \\leq X \\leq \\mu + 2\\sigma) \\approx 95{,}4\\%$, $P(\\mu - 3\\sigma \\leq X \\leq \\mu + 3\\sigma) \\approx 99{,}7\\%$. Nepostradatelná pro rychlé odhady.',
+      },
+      z_transformation: {
+        title: '$z$-transformace',
+        desc: 'Převádí každé normální rozdělení na normované normální rozdělení $N(0, 1)$: $z = \\frac{x - \\mu}{\\sigma}$. Poté odečteš $P(X \\leq x) = \\Phi(z)$ z tabulky. Tak se libovolná normální rozdělení stanou srovnatelnými.',
+      },
+    },
+    examples: {
+      loot_balancing: {
+        title: 'Pravděpodobnost padnutí kořisti',
+        context: 'V „Hafenlichter 3D" shazují bossové zlato s normálním rozdělením $\\mu = 50$ a $\\sigma = 8$. Kai chce vědět: jak pravděpodobné je legendární padnutí alespoň 70 zlatých?',
+        step1: 'Sestavit model — padnutí zlata sleduje normální rozdělení:',
+        step2: 'Použít $z$-transformaci — o kolik směrodatných odchylek je 70 vzdáleno od 50?',
+        step3: 'Nahlédnout do tabulky — odečíst $\\Phi(2{,}5)$:',
+        step4: 'Spočítat doplňkovou pravděpodobnost — jen $0{,}6\\%$ dostane 70 a více zlatých:',
+        kai_comment: 'Perfektní! Legendární kořist u méně než 1% hráčů — působí to výjimečně, aniž by to bylo nespravedlivé. Normální rozdělení mi dává úplnou kontrolu nad vzácností.',
+      },
+      frame_times: {
+        title: 'Analýza časů snímků',
+        context: 'Při 60 FPS musí být každý snímek vykreslen za $16{,}7\\,\\text{ms}$. Kaiův profiler ukazuje: časy snímků mají normální rozdělení s $\\mu = 16{,}7\\,\\text{ms}$ a $\\sigma = 2{,}1\\,\\text{ms}$. Jak často hra sekne (čas snímku $> 20\\,\\text{ms}$)?',
+        step1: 'Sestavit model — časy snímků jako normální rozdělení:',
+        step2: '$z$-transformace pro hranici seknutí $x = 20$:',
+        step3: 'Odečíst hodnotu z tabulky:',
+        step4: 'Spočítat doplňkovou pravděpodobnost — sekne přibližně každý 17. snímek:',
+        kai_comment: 'Skoro 6% seknutí — to je na plynulou 3D hru příliš. Musím optimalizovat renderer, dokud $\\sigma$ neklesne. Cíl: $\\sigma \\leq 1{,}5$, pak je zasaženo méně než 1,5% snímků.',
+      },
+    },
+    realworld: {
+      quality_control: {
+        title: 'Kontrola kvality v průmyslu',
+        desc: 'Továrny používají pravidlo $3\\sigma$: odchýlí-li se součástka od jmenovité míry o více než $3\\sigma$, je vyřazena. Řízení Six Sigma jde ještě dál — $6\\sigma$ znamená nejvýše 3,4 vady na milion dílů. Normální rozdělení je základem průmyslového zajišťování kvality.',
+      },
+      iq_scores: {
+        title: 'Testy IQ a standardizace',
+        desc: 'Hodnoty IQ jsou z definice normálně rozdělené s $\\mu = 100$ a $\\sigma = 15$. To znamená: asi $68\\%$ populace má IQ mezi 85 a 115 a asi $95\\%$ mezi 70 a 130. IQ 145 ($z = 3$) je stejně vzácné jako padnutí 70 zlatých!',
+      },
+      stock_returns: {
+        title: 'Výnosy akcií a riziko',
+        desc: 'Denní výnosy akcií se často modelují jako normálně rozdělené — $\\sigma$ je pak riziko. Portfolio manažeři používají $z$-transformaci k výpočtu pravděpodobnosti krachu. Ovšem: ve skutečnosti se extrémní výkyvy vyskytují častěji, než normální rozdělení předpovídá („těžké chvosty").',
+      },
+    },
+    mistakes: {
+      sigma_vs_variance: {
+        wrong: 'Zapsat normální rozdělení jako $N(\\mu, \\sigma)$ — směrodatná odchylka místo rozptylu',
+        correct: 'Správně je $N(\\mu, \\sigma^2)$ — druhý parametr je vždy rozptyl',
+        why: 'V zápisu $N(\\mu, \\sigma^2)$ znamená druhý parametr rozptyl $\\sigma^2$, nikoli směrodatnou odchylku $\\sigma$. Záměna vede k úplně chybným pravděpodobnostem — např. $N(0, 4)$ je rozdělení s $\\sigma = 2$, ne $\\sigma = 4$!',
+        kai_warning: 'Tahle chyba mi jednou zničila celé vyvážení kořisti. Myslel jsem $\\sigma = 8$, ale napsal $N(50, 8)$ — a to znamená $\\sigma = \\sqrt{8} \\approx 2{,}83$. Odměny byly příliš jednotvárné! Vždy pamatuj: $N(\\mu, \\sigma^2)$!',
+      },
+      z_sign: {
+        wrong: 'Vzorec pro $z$ obráceně: $z = \\frac{\\mu - x}{\\sigma}$',
+        correct: 'Správně je $z = \\frac{x - \\mu}{\\sigma}$ — hodnota mínus střední hodnota, ne naopak',
+        why: 'Prohodíš-li čitatel, dostaneš špatné znaménko. Hodnota nad průměrem musí dát kladné $z$, hodnota pod ním záporné. Při $x = 70$, $\\mu = 50$ je $z = +2{,}5$ (nad průměrem), nikoli $-2{,}5$.',
+      },
+    },
   },
 
   '12-matrizen': {
-    story: { intro: 'Kai dorazil k srdci "Hafenlichter 3D": 3D enginu. Kazdy objekt — kazda lod, kazda vlna, kazda lucerna — musi byt otocen, zmenen a posunut. "Ve 2D byly transformace jednoduche vzorce", vzpomina. "Ale ve 3D potrebujes system, ktery retezi libovolny pocet transformaci — a to jsou matice."', challenge: 'Kai musi pochopit a implementovat 3D transformace: Rotace, zmeny meritka a prechodove procesy, vse rizene nasobenim matic.', outro: 'Matice se staly Kaiovym kazdodennim nastrojem: Kazda 3D transformace je matice, kazda animace je posloupnost nasobeni matic, kazde prechodove chovani je stochasticka matice.' },
-    objectives: { matrix_operations: 'Scitat, nasobit matice a bezpecne pouzivat pocetni pravidla — zejmena nekomutativitu', transformation_matrices: 'Sestavovat transformacni matice pro otaceni, zmenu meritka a zrcadleni a aplikovat na vektory', stochastic_matrices: 'Pocitat stochasticke matice a fixni vektory pro prechodove procesy', inverse_matrix: 'Urcovat inverzni matici a chapat jeji vyznam jako "zpetna transformace"' },
-    explanation: { intro: 'Matice jsou obdelnikove tabulky cisel — ale jejich skutecna sila spociva v tom, ze reprezentuji zobrazeni. Matice $2 \\times 2$ transformuje 2D vektory, matice $3 \\times 3$ transformuje 3D vektory. Nasobeni znamena: radek krat sloupec, pak secist:', transformation: 'V 3D grafice je kazda geometricka transformace matice: Rotace, zmena meritka, zrcadleni.', kai_tip: 'V mem enginu retezim transformace nasobenim matic: Nejdriv zmena meritka, pak rotace, pak posun. Poradi je rozhodujici — matice nejsou komutativni! Proto ctu retezce matic vzdy zprava doleva.', stochastic: 'Stochasticke matice popisuji prechodove procesy. Fixni vektor $\\vec{v}_{\\text{fix}}$ s $T \\cdot \\vec{v}_{\\text{fix}} = \\vec{v}_{\\text{fix}}$ je dlouhodoby rovnovazny stav:', inverse: 'Inverzni matice $A^{-1}$ je "tlacitko zpet": $A \\cdot A^{-1} = I$ (jednotkova matice). Ne kazda matice ma inverzi — jen pokud $\\det(A) \\neq 0$:' },
-    concepts: { matrix_multiplication: { title: 'Nasobeni matic', desc: 'Radek krat sloupec: $(A \\cdot B)_{ij} = \\sum_k a_{ik} \\cdot b_{kj}$. Pocet sloupcu $A$ musi byt roven poctu radku $B$. Dulezite: $A \\cdot B \\neq B \\cdot A$ obecne!' }, transformation_matrix: { title: 'Transformacni matice', desc: 'Kazde linearni zobrazeni (rotace, zmena meritka, zrcadleni) se da zapsat jako matice. Vice transformaci se retezi nasobenim matic — cteno zprava doleva.' }, stochastic_matrix: { title: 'Stochasticka matice a fixni vektor', desc: 'Stochasticka matice ma v kazdem sloupci soucet 1 — popisuje prechodove pravdepodobnosti. Fixni vektor $\\vec{v}_{\\text{fix}}$ s $T \\cdot \\vec{v}_{\\text{fix}} = \\vec{v}_{\\text{fix}}$ je dlouhodoby rovnovazny stav nezavisly na startu.' } },
-    examples: { '3d_rotation': { title: '3D rotace pristavni lucerny', context: 'Kai chce otocit lucernu v pristavu o $90°$ kolem osy $z$. Lucerna je na bode $(3, 0, 5)$.', step1: 'Rotacni matice pro $90°$ kolem osy $z$ ($\\cos 90° = 0$, $\\sin 90° = 1$):', step2: 'Polohovy vektor lucerny jako sloupcovy vektor:', step3: 'Matice krat vektor — radek po radku:', step4: 'Vysledek: Lucerna je ted na $(0, 3, 5)$ — otocena o $90°$ v $xy$-rovine, $z$ beze zmeny:', kai_comment: 'Presne tak funguje kazdy snimek v mem enginu: Tisice vertexu se nasobi maticí modelu, pak matici pohledu, pak maticí projekce. Tri nasobeni matic na vertex — a GPU to zvladne v milisekundach!' }, player_states: { title: 'Chovani hracu jako Markuvuv retez', context: 'V "Hafenlichter 3D" hraci strídají Prozkoumavani (E) a Boj (K). Aktualne 60% prozkoumava.', step1: 'Prechodova matice $T$ a startovni vektor $\\vec{v}_0$:', step2: 'Jeden krok — $\\vec{v}_1 = T \\cdot \\vec{v}_0$:', step3: 'Fixni vektor — soustava rovnic $T \\cdot \\vec{v} = \\vec{v}$ s $x + y = 1$:', step4: 'Dlouhodobe 40% prozkoumava a 60% bojuje — nezavisle na startu:', kai_comment: 'To je zlato pro muj herní design! Fixni vektor mi ukazuje, ze hraci dlouhodobe vic bojuji nez prozkoumavaji. Pokud to chci srovnat, musim zmenit prechodove pravdepodobnosti.' } },
-    realworld: { computer_graphics: { title: 'Pocitacova grafika a 3D enginy', desc: 'Kazdy 3D engine (Unity, Unreal, Godot) stoji na nasobeni matic. MVP pipeline — $M_{\\text{proj}} \\cdot M_{\\text{view}} \\cdot M_{\\text{model}}$ — transformuje kazdy 3D bod na 2D obrazovku.' }, google_pagerank: { title: 'Google PageRank', desc: 'Puvodni vyhledavaci algoritmus Google modeluje web jako obrovskou stochastickou matici. Fixni vektor $\\vec{r} = T \\cdot \\vec{r}$ dava ranking.' }, robotics: { title: 'Robotika a rizeni stroju', desc: 'Roboticka ramena se skladaji z kloubu, kazdy provadi rotaci. Celkova pozice ruky plyne ze soucinu vsech rotacnich matic — to je primarna kinematika.' } },
-    mistakes: { commutative: { wrong: 'Nasobeni matic jako nasobeni cisel: $A \\cdot B = B \\cdot A$', correct: 'Matice NEJSOU komutativni: $A \\cdot B \\neq B \\cdot A$ obecne', why: 'Nejdriv otocit, pak posunout dava jiny vysledek nez nejdriv posunout, pak otocit. Proto: Transformacni retezce ctete vzdy zprava doleva!', kai_warning: 'Jednou jsem cely den hledal bug, protoze jsem prohod rotaci a translaci. Me lode se otacely kolem stredu sveta misto kolem vlastní osy!' }, stochastic_rows_cols: { wrong: 'Soucet radku = 1 u stochastickych matic se sloupcovymi vektory', correct: 'U sloupcovych vektoru musi byt soucet sloupcu 1: $\\sum_i t_{ij} = 1$', why: 'Konvence zavisi na tom, zda pouzivas radkove nebo sloupcove vektory. Ve skole je standard sloupcovy vektor — pak musi sloupce prechodove matice mit soucet 1.' } },
+    story: {
+      intro: 'Kai dorazil k srdci „Hafenlichter 3D": 3D enginu. Každý objekt ve hře — každá loď, každá vlna, každá lucerna v přístavu — musí jít otáčet, škálovat a posouvat. „Ve 2D byly transformace prostě vzorce," vzpomíná na Miiny začátky. „Ale ve 3D potřebuješ systém, který zřetězí libovolně mnoho transformací — a to jsou matice." Kai otevře kód shaderu a vidí matice všude: modelová matice, pohledová matice, projekční matice.',
+      challenge: 'Kai musí pochopit a implementovat 3D transformace pro svůj herní engine — rotaci, škálování a přechodové procesy, vše řízené násobením matic.',
+      outro: 'Matice se pro Kaie staly každodenním nástrojem: každá 3D transformace je matice, každá animace posloupnost násobení matic, každé přechodové chování stochastická matice. „Geniální je to, že ať je transformace jakkoli složitá — nakonec je to vždy $\\vec{x}\' = M \\cdot \\vec{x}$," říká. Matice MVP ($M_{\\text{proj}} \\cdot M_{\\text{view}} \\cdot M_{\\text{model}}$) teď proměňuje tisíce vrcholů Hafenlichter za snímek na pixely na obrazovce.',
+    },
+    objectives: {
+      matrix_operations: 'Sčítat a násobit matice a spolehlivě používat početní pravidla — zejména nekomutativitu',
+      transformation_matrices: 'Sestavovat transformační matice pro rotaci, škálování a osovou souměrnost a používat je na vektory',
+      stochastic_matrices: 'Počítat stochastické matice a pevné vektory pro přechodové procesy',
+      inverse_matrix: 'Určit inverzní matici a chápat její význam jako „zpětné transformace"',
+    },
+    explanation: {
+      intro: 'Matice jsou obdélníkové tabulky čísel — ale jejich skutečná síla spočívá v tom, že představují zobrazení. Matice $2 \\times 2$ transformuje 2D vektory, matice $3 \\times 3$ transformuje 3D vektory. Násobit znamená: řádek krát sloupec, pak sečíst. Pro $C = A \\cdot B$ platí:',
+      transformation: 'Ve 3D grafice je každá geometrická transformace maticí: rotace, škálování, osová souměrnost. Rotační matice kolem osy $z$ otočí bod $(x, y, z)$ o úhel $\\theta$ — a souřadnice $z$ zůstane nezměněná:',
+      kai_tip: 'Ve svém enginu zřetězuji transformace násobením matic: nejdřív škálovat, pak rotovat, pak posunout. Pořadí je přitom zásadní — matice nejsou komutativní! Nejdřív otočit a pak posunout dá něco úplně jiného než nejdřív posunout a pak otočit. Proto čtu řetězce matic vždy zprava doleva.',
+      stochastic: 'Stochastické matice popisují přechodové procesy: jak pravděpodobné je přejít z jednoho stavu do druhého? Každý sloupec dává v součtu 1 (u sloupcových vektorů). Vynásobíš-li stavový vektor $\\vec{v}_n$ přechodovou maticí $T$, dostaneš další stav $\\vec{v}_{n+1}$:',
+      inverse: 'Inverzní matice $A^{-1}$ je „tlačítko zpět": $A \\cdot A^{-1} = I$ (jednotková matice). Je-li $A$ rotace o $30°$, pak $A^{-1}$ je rotace o $-30°$. Ne každá matice má inverzní — jen když $\\det(A) \\neq 0$:',
+    },
+    concepts: {
+      matrix_multiplication: {
+        title: 'Násobení matic',
+        desc: 'Řádek krát sloupec: $(A \\cdot B)_{ij} = \\sum_k a_{ik} \\cdot b_{kj}$. Počet sloupců $A$ se musí rovnat počtu řádků $B$. Důležité: obecně $A \\cdot B \\neq B \\cdot A$! Na pořadí záleží.',
+      },
+      transformation_matrix: {
+        title: 'Transformační matice',
+        desc: 'Každé lineární zobrazení (rotaci, škálování, osovou souměrnost) lze vyjádřit maticí. Rotační matice $R(\\theta)$ otáčí vektory o úhel $\\theta$. Více transformací se zřetězuje násobením matic — čte se zprava doleva.',
+      },
+      stochastic_matrix: {
+        title: 'Stochastická matice a pevný vektor',
+        desc: 'Stochastická matice má v každém sloupci součet 1 — popisuje přechodové pravděpodobnosti. Pevný vektor $\\vec{v}_{\\text{fix}}$ s $T \\cdot \\vec{v}_{\\text{fix}} = \\vec{v}_{\\text{fix}}$ je dlouhodobý rovnovážný stav, nezávisle na výchozím stavu.',
+      },
+    },
+    examples: {
+      '3d_rotation': {
+        title: '3D rotace přístavní lucerny',
+        context: 'Kai chce otočit lucernu v přístavu o $90°$ kolem osy $z$. Lucerna je v bodě $(3, 0, 5)$. Jak spočítá novou polohu?',
+        step1: 'Sestavit rotační matici pro $90°$ kolem osy $z$ ($\\cos 90° = 0$, $\\sin 90° = 1$):',
+        step2: 'Zapsat polohový vektor lucerny jako sloupcový vektor:',
+        step3: 'Matice krát vektor — roznásobit řádek po řádku:',
+        step4: 'Výsledek: lucerna je nyní v $(0, 3, 5)$ — otočena o $90°$ v rovině $xy$, $z$ beze změny:',
+        kai_comment: 'Přesně tak funguje každý snímek v mém enginu: tisíce vrcholů se násobí modelovou maticí, pak pohledovou maticí (poloha kamery) a pak projekční maticí (perspektiva). Tři násobení matic na vrchol — a GPU to zvládne za milisekundy!',
+      },
+      player_states: {
+        title: 'Chování hráče jako Markovův řetězec',
+        context: 'V „Hafenlichter 3D" hráči střídají průzkum (P) a boj (B). Kai pozoroval: kdo zkoumá, ten v $70\\%$ případů zkoumá dál a v $30\\%$ přechází do boje. Kdo bojuje, zůstává v boji v $80\\%$ a v $20\\%$ se vrací k průzkumu. Právě teď zkoumá $60\\%$ hráčů.',
+        step1: 'Sestavit přechodovou matici $T$ a počáteční vektor $\\vec{v}_0$:',
+        step2: 'Spočítat jeden krok — $\\vec{v}_1 = T \\cdot \\vec{v}_0$:',
+        step3: 'Určit pevný vektor — vyřešit soustavu $T \\cdot \\vec{v} = \\vec{v}$ s podmínkou $x + y = 1$:',
+        step4: 'Dlouhodobě $40\\%$ zkoumá a $60\\%$ bojuje — nezávisle na začátku:',
+        kai_comment: 'To je pro můj herní design k nezaplacení! Pevný vektor mi ukazuje, že hráči dlouhodobě bojují víc, než zkoumají — ať začnou jakkoli. Chci-li to vyváženější, musím změnit přechodové pravděpodobnosti. Matice dělají chování hráčů vypočitatelným!',
+      },
+    },
+    realworld: {
+      computer_graphics: {
+        title: 'Počítačová grafika a 3D enginy',
+        desc: 'Každý 3D engine (Unity, Unreal, Godot) stojí na násobení matic. Pipeline MVP — $M_{\\text{proj}} \\cdot M_{\\text{view}} \\cdot M_{\\text{model}}$ — transformuje každý 3D bod na 2D obrazovku. Moderní GPU jsou v jádru mohutné stroje na násobení matic.',
+      },
+      google_pagerank: {
+        title: 'Google PageRank',
+        desc: 'Původní vyhledávací algoritmus Googlu modeluje web jako obrovskou stochastickou matici: každá webová stránka je stav, každý odkaz přechodová pravděpodobnost. Pevný vektor $\\vec{r} = T \\cdot \\vec{r}$ dává pořadí — stránky s nejvyššími hodnotami v pevném vektoru stojí úplně nahoře.',
+      },
+      robotics: {
+        title: 'Robotika a řízení strojů',
+        desc: 'Robotická ramena se skládají z kloubů, z nichž každý vykonává rotaci. Celková poloha ruky vyjde jako součin všech rotačních matic podél ramene. Tomu se říká dopředná kinematika — a inverzní matice řeší obrácenou úlohu: „jaké úhly kloubů potřebuji pro tuto polohu ruky?"',
+      },
+    },
+    mistakes: {
+      commutative: {
+        wrong: 'Zacházet s násobením matic jako s násobením čísel: $A \\cdot B = B \\cdot A$',
+        correct: 'Matice NEJSOU komutativní: obecně $A \\cdot B \\neq B \\cdot A$',
+        why: 'Nejdřív otočit a pak posunout dá jiný výsledek než nejdřív posunout a pak otočit. Ve 3D grafice vede prohozené pořadí k úplně chybným polohám. Proto: řetězce transformací čti vždy zprava doleva!',
+        kai_warning: 'Jednou jsem celý den hledal chybu, protože jsem prohodil rotaci a posunutí. Moje lodě se otáčely kolem středu světa místo kolem vlastní osy! Od té doby čtu řetězce matic vždy zprava doleva: $M_{\\text{translate}} \\cdot M_{\\text{rotate}} \\cdot \\vec{v}$ — nejdřív rotovat, pak posunout.',
+      },
+      stochastic_rows_cols: {
+        wrong: 'Předpokládat součet řádku = 1 u stochastických matic se sloupcovými vektory',
+        correct: 'U sloupcových vektorů musí být součet sloupce roven 1: $\\sum_i t_{ij} = 1$',
+        why: 'Konvence závisí na tom, zda používáš řádkové, nebo sloupcové vektory. Ve škole a na německých univerzitách je standardem sloupcový vektor — pak musí sloupce přechodové matice dávat v součtu 1. Každý sloupec popisuje: „ze stavu $j$ — jak se rozdělují přechody?"',
+      },
+    },
   },
 
   '12-abiturvorbereitung': {
-    story: { intro: 'Je noc vydani v hamburskem pristavu. Svetla Landungsbruecken se odrazi ve vode a na velkem platne pred Rybim trhem sviti nadpis: "Hafenlichter 3D". Kai stoji na podiu s mikrofonem a nemuze tomu uverit — tri roky vyvoje a ted je hra konecne hotova.', challenge: 'Nejdulezitejsi zkouska — maturita spoji analyzu, analytickou geometrii a stochastiku v jedne pisemce. Kai potrebuje strategii, ktera propoji vsechna temata a maximalizuje body.', outro: 'Premierova party v pristavu bezi, hudba hraje a Kai, Mia a Amir si pripijejí. "Tri roky matematiky", rika Mia. Matematika nikdy nebyla jen pocitani. Byla jazykem, kterym premenili sve napady ve skutecnost.' },
-    objectives: { exam_strategy: 'Vyvinout jasnou zkuskovou strategii: Projit ulohy, vypocitat pomer bodu k casu, lehke ulohy nejdriv', cross_topic_connections: 'Rozpoznat a vyuzit propojeni mezi analyzou, analytickou geometrii a stochastikou', time_management: 'Realisticky planovat casovy budget na ulohu a dodrzovat ho', error_prevention: 'Rozpoznat typicke chyby, provadet kontroly veroshodnosti a interpretovat vysledky v kontextu' },
-    explanation: { intro: 'Maturita neni sprint, ale strategicka hra — jako finalni boss s vice fazemi. Mas priblizne 4-5 hodin na tri velke tematicke bloky. Klic neni vedet vse, ale chytre priorizovat a ciste pracovat.', kai_rallying: 'Lide, tri roky jsme delali matiku — ne proto, ze jsme museli, ale proto, ze to byl klic k nasim projektum. Zkouska je jen titulky po finalnim boji. Jsme ready!', structure: 'Pisemka se typicky sklada ze tri povinnych casti — Analyza (casto nejvetsi blok), Analyticka geometrie a Stochastika.', time_strategy: 'Planuj cas umerne k bodum. Pokud uloha prinasi 10 ze 100 bodu, investuj priblizne $10\\%$ casu. A zlate pravidlo: Zacni s ulohami, ve kterych si jisty.', mia_wisdom: 'Vzpomínete na zaklady! Analyza funkci je vzdy stejne schema: Definicni obor, koreny, extremy, body zvratu, chovani pro $x \\to \\pm\\infty$.', checking: 'Po kazde casti ulohy: Kontrola veroshodnosti! Sedi jednotky? Davaji znamenka smysl? Pravdepodobnost vetsi nez 1 nebo zaporny obsah jsou okamzite varovne signaly.', amir_data: 'Vzdy kontroluji vysledky vuci krajnim pripadum: Co se stane pro $x = 0$? Pro velmi velke $x$? Konverguje moje reseni nebo diverguje?', confidence: 'To nejdulezitejsi na zaver: Vis vic, nez si myslis. Tri roky cviceni jsou v tvych rukou. Pokud u zkousky na chvili nebuiies vedet dal — dychej, precti si ulohu znovu a zacni s tim, co urcite umis. Kazdy bod se pocita.' },
-    concepts: { read_then_plan: { title: 'Cti → Planuj → Pocitej → Kontroluj', desc: 'Schema 4 kroku pro kazdou ulohu: (1) Celou precist, informace oznacit. (2) Naplánovat strategii reseni. (3) Ciste a prehledne pocitat. (4) Overit vysledek: jednotky, znamenka, veroshodnost, kontext.' }, point_maximizing: { title: 'Bodova efektivita', desc: 'Ne kazda uloha je stejne tezka na bod. Zacni s ulohami, kde ziskas nejvice bodu v nejkratsim case. Radeji nejdriv sebrat vsechny "lehke" body ve vsech ulohach.' }, plausibility_check: { title: 'Kontrola veroshodnosti', desc: 'Ctyri rychle testy proti chybam: (1) Jednotky: Pasi ke kontextu? (2) Znamenka: Dava zaporna hodnota smysl? (3) Limitni hodnoty: Co se stane pro $x \\to 0$ nebo $x \\to \\infty$? (4) Nacrt: Odpovida vysledek graficke predstave?' } },
-    examples: { mixed_analysis: { title: 'Typicka uloha z analyzy: Analyza krivky + Integral', context: 'Kai modeluje spotrebu energie 3D enginu funkci $f(x) = (2x - 1) \\cdot e^{-x}$.', step1: 'Funkce dana:', step2: 'Derivace pravidlem soucinu:', step3: 'Hledame extrem:', step4: 'Vypocet plochy:', mia_comment: 'To je presne ten vzorec: Derivace pravidlem soucinu, hledani korene, vypocet integralu. Funkce se meni, ale strategie zustava stejna.' }, mixed_stochastik: { title: 'Typicka uloha ze stochastiky: Test hypotezy', context: 'Amiruv A/B test: Z 50 uzivatelu normalne 8% klikne na novy button. Po redesignu chce otestovat, zda se mira zvysila ($\\alpha = 5\\%$).', step1: 'Model — binomicke rozdeleni s parametry:', step2: 'Hypotezy — jednostranny test nahoru:', step3: 'Hledame kritickou oblast:', step4: 'Oblast zamitnuti — od $k = 9$ se $H_0$ zamita:', amir_comment: 'Testy hypotez jsou v jadru rozhodovaci logika: Pocitas, jak nepravdepodobny je tvuj vysledek za $H_0$. Pokud nepravdepodobnejsi nez $\\alpha$, zamitas $H_0$.' } },
-    realworld: { release_day: { title: 'Den vydani: Kdyz se vse propoji', desc: 'Vydat hru je jako zkouska: Mesice pripravy ústí v rozhodujici moment.' }, project_management: { title: 'Projektovy management a priorizace', desc: 'Ve vyvoji softwaru priorizujes funkce podle dopadu a narocnosti — presne jako zkuskove ulohy podle bodu a obtiznosti.' }, lifelong_learning: { title: 'Celozivotni uceni', desc: 'Maturita neni konec, ale zacatek. Schopnost zpracovat nova temata je cennejsi nez jakykoli jednotlivy vzorec. Matematika vas naucila myslet.' } },
-    mistakes: { no_units_context: { wrong: 'Vysledek bez jednotky a kontextu: "$A = 12{,}5$"', correct: 'Vzdy s jednotkou a interpretaci: "$A = 12{,}5\\,\\text{PJ}$, coz odpovida $12{,}5\\,\\text{m}^2$"', why: 'U maturity jsou body za interpretaci v kontextu! Vzdy napis odpovědní vetu.', kai_warning: 'V hernim vyvoji nemaji cisla bez kontextu cenu. 12,5 — ceho? Pixelu? Sekund? Bodu poskozeni? Stejne na zkousce: Napis jednotku a formuluj odpoved.' }, skip_plausibility: { wrong: 'Ocividne chybny vysledek neni zpochybnen: $P(X = 5) = 1{,}3$', correct: 'Okamzite zpozornet: Pravdepodobnost nemuze byt nikdy vetsi nez 1!', why: 'Kontroly veroshodnosti stoji 10 sekund, ale mohou zachranit cele ulohy. Pravdepodobnosti lezi vzdy mezi 0 a 1, obsahy nejsou nikdy zaporne, $e^x > 0$ pro vsechna $x$.', mia_warning: 'V poslední písemce jsem našla přesně takovou chybu: můj integrál vyšel záporně, přestože funkce byla na celém intervalu kladná. Rychlá kontrola, odhalená chyba ve znaménku, opraveno — zachráněné 4 body. Vždy kontrolujte!' } },
+    story: {
+      intro: 'Je noc vydání v hamburském přístavu. Světla mol se zrcadlí ve vodě a na velkém plátně před rybím trhem svítí název: „Hafenlichter 3D". Kai stojí na pódiu s mikrofonem v ruce a skoro tomu nevěří — tři roky vývoje a teď je hra konečně hotová. V publiku zahlédne dvě známé tváře: Miu, která tehdy vším pohnula svou 2D pixelartovou hrou, a Amira, jehož algoritmy DataPulse řídí umělou inteligenci vedlejších postav. „Pamatujete," říká Kai do mikrofonu, „jak Mia začínala s lineárními funkcemi, aby pohybovala postavami po přímce? Pak Amir postavil datovou pipeline s derivacemi a binomickým rozdělením. A teď tu stojíme — s maticemi, integrály a normálním rozdělením jsme vytvořili celý 3D svět." Dav jásá. Ale než večírek pořádně začne, čeká Kaie ještě jedna zkouška: maturita z matematiky.',
+      challenge: 'Blíží se největší zkouška — maturita spojuje analýzu, analytickou geometrii a stochastiku v jedné písemce. Kai potřebuje strategii, která propojí všechna témata, maximalizuje body a vyhne se typickým chybám.',
+      outro: 'Večírek k vydání v přístavu běží, hraje hudba a Kai, Mia a Amir si připíjejí. „Tři roky matematiky," říká Mia, „od přímky k normálnímu rozdělení." „Od dat k neuronovým sítím," dodává Amir. „Od 2D pixelů k 3D enginu," uzavírá Kai. Dívají se na Labe, kde tančí přístavní světla — každé z nich jeden vrchol, transformovaný maticí, osvětlený exponenciální funkcí, vyvážený normálním rozdělením. Matematika nikdy nebyla jen počítání. Byla jazykem, kterým své nápady proměnili ve skutečnost. Hra je vydaná. Zkouška přijde. A ať dopadne jakkoli — cesta za to stála. Každá funkce, každá derivace, každý integrál je sem přivedly. K přístavu. K cíli. A na začátek všeho, co teprve přijde.',
+    },
+    objectives: {
+      exam_strategy: 'Vypracovat jasnou zkouškovou strategii: prohlédnout úlohy, spočítat poměr bodů a času, snadné úlohy nejdřív',
+      cross_topic_connections: 'Rozpoznávat a využívat souvislosti mezi analýzou, analytickou geometrií a stochastikou',
+      time_management: 'Realisticky plánovat časový rozpočet na úlohu a dodržet ho',
+      error_prevention: 'Rozpoznávat typické chyby, provádět kontroly věrohodnosti a vykládat výsledky ve věcném kontextu',
+    },
+    explanation: {
+      intro: 'Maturita není sprint, ale strategická hra — jako závěrečný boss s několika fázemi. Máš zhruba 4 až 5 hodin na tři velké tematické bloky. Klíčem není vědět všechno, ale chytře stanovit priority a pracovat pečlivě. Kai se to naučil na své hře: „Nemůžeš opravit každou chybu naráz. Opravíš ty, které mají největší dopad — a přesně tak přistoupíš ke zkoušce."',
+      kai_rallying: 'Lidi, dělali jsme matematiku tři roky — ne proto, že jsme museli, ale protože byla klíčem k našim projektům. Mia začala funkcemi, Amir trénoval svou umělou inteligenci stochastikou a já jsem maticemi postavil 3D svět. Maturita jsou jen titulky po závěrečném boji. Jsme připraveni!',
+      structure: 'Písemka se obvykle skládá ze tří povinných částí — analýza (často největší blok), analytická geometrie a stochastika. Body se rozdělují zhruba takto:',
+      time_strategy: 'Plánuj svůj čas úměrně bodům. Přináší-li úloha 10 ze 100 bodů, investuj do ní asi $10\\%$ svého času. A zlaté pravidlo: začni úlohami, kterými si jsi jistý. Každý jistý bod váží stejně jako ten těžce vydřený!',
+      mia_wisdom: 'Vzpomeňte si na základy! Vyšetření průběhu funkce je vždy stejné schéma: definiční obor, nulové body, extrémy, inflexní body, chování pro $x \\to \\pm\\infty$. Když znáte ten vzorec, je každá funkce jen jeho obměnou. Naučila jsem se to na svých herních postavách — každý pohyb je v jádru funkce.',
+      checking: 'Po každé dílčí úloze: kontrola věrohodnosti! Sedí jednotky? Dávají znaménka smysl? Leží výsledek v reálném rozmezí? Pravděpodobnost větší než 1 nebo záporný obsah jsou okamžité varovné signály — pak je lepší přepočítat než pokračovat.',
+      amir_data: 'Své výsledky vždy kontroluji na mezních případech: co se stane při $x = 0$? Při velmi velkých $x$? Konverguje mé řešení, nebo diverguje? Tenhle způsob myšlení z ladění platí stejně dobře i pro písemku. A ve stochastice: vždy ověř, zda platí $\\sum P = 1$!',
+      confidence: 'To nejdůležitější nakonec: umíš víc, než si myslíš. Tři roky cviku máš v rukou. Když se u zkoušky na chvíli zastavíš — vydechni, přečti si zadání znovu a začni tím, co umíš jistě. Každý bod se počítá. A pamatuj: matematika není talent, ale jazyk, který ses naučil. Mluv jím.',
+    },
+    concepts: {
+      read_then_plan: {
+        title: 'Číst → plánovat → počítat → kontrolovat',
+        desc: 'Čtyřkrokové schéma pro každou úlohu: (1) přečíst zadání celé, označit informace. (2) naplánovat postup řešení — které metody potřebuješ? (3) počítat pečlivě a přehledně. (4) zkontrolovat výsledek: jednotky, znaménka, věrohodnost, věcný kontext.',
+      },
+      point_maximizing: {
+        title: 'Bodová efektivita',
+        desc: 'Ne každá úloha je stejně obtížná na bod. Začni úlohami, kde získáš nejvíc bodů za nejkratší čas. Poslední dílčí úlohy bývají nejtěžší — je lepší nejdřív posbírat všechny „snadné" body ve všech úlohách a pak se vrátit k těžkým.',
+      },
+      plausibility_check: {
+        title: 'Kontrola věrohodnosti',
+        desc: 'Čtyři rychlé kontroly, které brání chybám z nepozornosti: (1) jednotky: sedí jednotka ke kontextu? (2) znaménka: dává tu záporná hodnota smysl? (3) limity: co se stane pro $x \\to 0$ nebo $x \\to \\infty$? (4) náčrt: odpovídá výsledek grafické představě?',
+      },
+    },
+    examples: {
+      mixed_analysis: {
+        title: 'Typická úloha z analýzy: vyšetření průběhu + integrál',
+        context: 'Kai modeluje spotřebu energie svého 3D enginu funkcí $f(x) = (2x - 1) \\cdot e^{-x}$. Urči extrémy a spočítej obsah plochy mezi grafem a osou $x$ na $[0;\\, 3]$.',
+        step1: 'Sestavit funkci — zde už je dána:',
+        step2: 'Derivace podle pravidla o součinu: $u = 2x - 1$, $v = e^{-x}$, tedy $f\'(x) = u\' \\cdot v + u \\cdot v\'$:',
+        step3: 'Najít extrém — položit $f\'(x) = 0$ ($e^{-x} > 0$ vždy, tedy závorka = 0):',
+        step4: 'Výpočet obsahu — integrace per partes nebo určení primitivní funkce:',
+        mia_comment: 'To je přesně ten vzorec, který mám na mysli: derivace podle pravidla o součinu, najít nulový bod, spočítat integrál. Funkce se mění, ale postup zůstává pořád stejný. Cvičte, dokud to nepůjde samo!',
+      },
+      mixed_stochastik: {
+        title: 'Typická úloha ze stochastiky: test hypotéz',
+        context: 'Amirův A/B test ukazuje: z 50 uživatelů kliká obvykle $8\\%$ na nové tlačítko. Po redesignu chce ověřit, zda míra prokliků vzrostla ($\\alpha = 5\\%$).',
+        step1: 'Sestavit model — binomické rozdělení s parametry:',
+        step2: 'Formulovat hypotézy — jednostranný test nahoru:',
+        step3: 'Hledat kritický obor — otestovat $k = 8$ ($P$ ještě příliš velké):',
+        step4: 'Určit kritický obor — od $k = 9$ se $H_0$ zamítá:',
+        amir_comment: 'Testy hypotéz jsou v jádru rozhodovací logika: spočítáš, jak nepravděpodobný je tvůj výsledek za platnosti $H_0$. Je-li nepravděpodobnější než $\\alpha$, zavrhneš $H_0$. Přesně tak dělám rozhodnutí založená na datech v DataPulse — jen s většími výběry!',
+      },
+    },
+    realworld: {
+      release_day: {
+        title: 'Den vydání: když se vše sejde',
+        desc: 'Vydat hru je jako zkouška: měsíce příprav vyústí v jeden rozhodující okamžik. Kaiovy „Hafenlichter 3D" spojují 2D základy (Mia), datovou analýzu (Amir) a 3D matematiku (Kai) — přesně jako maturita spojuje analýzu, geometrii a stochastiku. Příprava je vším.',
+      },
+      project_management: {
+        title: 'Projektové řízení a priority',
+        desc: 'Ve vývoji softwaru stanovuješ priority podle dopadu a náročnosti — přesně jako zkouškové úlohy podle bodů a obtížnosti. Vzorec $\\text{Efektivita} = \\frac{\\text{Body}}{\\text{Čas}}$ platí stejně i v zaměstnání: soustřeď se na to, co udělá největší rozdíl.',
+      },
+      lifelong_learning: {
+        title: 'Celoživotní učení',
+        desc: 'Maturita není konec, ale začátek. Mia studuje herní design, Amir datovou vědu a Kai mediální informatiku — a všude potřebují matematiku. Schopnost zapracovat se do nových témat má větší cenu než jakýkoli jednotlivý vzorec. Matematika vás naučila myslet.',
+      },
+    },
+    mistakes: {
+      no_units_context: {
+        wrong: 'Napsat výsledek bez jednotky a bez věcné souvislosti: „$A = 12{,}5$"',
+        correct: 'Vždy jednotka a interpretace: „$A = 12{,}5\\,\\text{PJ}$, což odpovídá $12{,}5\\,\\text{m}^2$"',
+        why: 'U maturity se dávají body za interpretaci ve věcném kontextu! Holý výsledek bez jednotky nebo vazby na zadání tě stojí snadné body. Vždy napiš odpovědní větu: „Obsah činí $12{,}5\\,\\text{m}^2$, což odpovídá osázené ploše parku."',
+        kai_warning: 'V herním vývoji nemají čísla bez kontextu žádnou cenu. 12,5 — čeho? Pixelů? Sekund? Bodů poškození? Stejně tak v písemce: napiš jednotku a zformuluj odpovědní větu. To jsou darované body!',
+      },
+      skip_plausibility: {
+        wrong: 'Nezpochybnit zjevně chybný výsledek: $P(X = 5) = 1{,}3$',
+        correct: 'Okamžitě zpozornět: pravděpodobnost nemůže být nikdy větší než 1!',
+        why: 'Kontroly věrohodnosti stojí 10 sekund, ale mohou zachránit celé úlohy. Pravděpodobnosti leží vždy mezi 0 a 1, obsahy nejsou nikdy záporné a $e^x > 0$ pro všechna $x$. Porušuje-li tvůj výsledek tato základní pravidla, stojí za tím početní chyba.',
+        mia_warning: 'V poslední písemce jsem našla přesně takovou chybu: můj integrál vyšel záporně, přestože funkce byla na celém intervalu kladná. Rychlá kontrola, odhalená chyba ve znaménku, opraveno — zachráněné 4 body. Vždy kontrolujte!',
+      },
+    },
   },
 };
