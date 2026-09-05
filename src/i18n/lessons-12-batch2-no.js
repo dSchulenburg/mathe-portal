@@ -33,7 +33,7 @@ export const batch12b = {
       stock_returns: { title: 'Aksjeavkastning og risiko', desc: 'Daglige aksjeavkastninger modelleres ofte som normalfordelt — $\\sigma$ er da risikoen.' },
     },
     mistakes: {
-      sigma_vs_variance: { wrong: 'Notere normalfordelingen med $N(\\mu, \\sigma)$ — standardavvik i stedet for varians', correct: 'Korrekt er $N(\\mu, \\sigma^2)$ — den andre parameteren er alltid variansen', why: 'Forvekslinger foerer til helt feil sannsynligheter.' },
+      sigma_vs_variance: { wrong: 'Notere normalfordelingen med $N(\\mu, \\sigma)$ — standardavvik i stedet for varians', correct: 'Korrekt er $N(\\mu, \\sigma^2)$ — den andre parameteren er alltid variansen', why: 'Forvekslinger foerer til helt feil sannsynligheter.', kai_warning: 'Den feilen ødela en gang hele loot-balanseringen min. Jeg mente $\\sigma = 8$, men skrev $N(50, 8)$ — og det betyr $\\sigma = \\sqrt{8} \\approx 2{,}83$. Gevinstene ble altfor ensartede! Husk alltid: $N(\\mu, \\sigma^2)$!' },
       z_sign: { wrong: '$z$-formelen feil vei: $z = \\frac{\\mu - x}{\\sigma}$', correct: 'Riktig er $z = \\frac{x - \\mu}{\\sigma}$', why: 'En verdi over gjennomsnittet maa gi positiv $z$, en under negativ.' },
     },
   },

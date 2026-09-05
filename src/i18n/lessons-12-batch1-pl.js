@@ -150,7 +150,7 @@ export const batch12a = {
       clinical_trials: { title: 'Badania kliniczne i leki', desc: 'Zanim lek zostanie dopuszczony, musi przejsc test hipotezy: $H_0$ mowi "Lek nie dziala lepiej niz placebo". Tylko gdy $p < \\alpha = 0{,}05$, skutecznosc jest uznana za udowodniona.' },
     },
     mistakes: {
-      accept_h0: { wrong: '$H_0$ "udowodniona": $p > \\alpha$ oznacza, ze $H_0$ jest prawdziwa', correct: 'Poprawnie: $p > \\alpha$ oznacza, ze $H_0$ nie moze byc odrzucona', why: 'Test hipotezy nigdy nie moze udowodnic $H_0$ — tylko odrzucic lub zachowac. "Nie odrzucic" oznacza: Dane nie wystarczaja do obalenia $H_0$.' },
+      accept_h0: { wrong: '$H_0$ "udowodniona": $p > \\alpha$ oznacza, ze $H_0$ jest prawdziwa', correct: 'Poprawnie: $p > \\alpha$ oznacza, ze $H_0$ nie moze byc odrzucona', why: 'Test hipotezy nigdy nie moze udowodnic $H_0$ — tylko odrzucic lub zachowac. "Nie odrzucic" oznacza: Dane nie wystarczaja do obalenia $H_0$.', kai_warning: 'To jak domniemanie niewinności w sądzie: „niewinny" nie znaczy „nie zrobił tego" — znaczy tylko, że dowody nie wystarczają. Tak samo z $H_0$: jeśli nie potrafię wykazać, że bohater A jest słabszy, nie znaczy to automatycznie, że jest idealnie zbalansowany!' },
       alpha_beta_confused: { wrong: 'Mniejsze $\\alpha$ automatycznie poprawia wszystko', correct: 'Mniejsze $\\alpha$ prowadzi przy stalym $n$ do wiekszego $\\beta$', why: 'Gdy robisz test surowszym (mniejsze $\\alpha$), potrzebujesz bardziej ekstremalnych danych do odrzucenia $H_0$. Tym samym rosnie prawdopodobienstwo przeoczenia rzeczywistego efektu ($\\beta$). Jedyne wyjscie: Wieksza probka $n$.' },
     },
   },
