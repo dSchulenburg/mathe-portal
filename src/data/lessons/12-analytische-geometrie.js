@@ -109,4 +109,42 @@ export const lesson = {
   ],
 
   prerequisites: ['11-vektorrechnung'],
+  connections: [
+    {
+      topicId: '11-vektorrechnung',
+      relation: 'baut-auf',
+      why: 'Geraden und Ebenen sind Vektoren mit Parametern davor',
+      bubble: {
+        character: 'euklid',
+        text: '$\\vec{x} = \\vec{p} + t\\vec{u}$ ist keine neue Idee, sondern ein Stützvektor und ein Richtungsvektor, den du beliebig streckst. Alles, was du über Addition und Vielfache weißt, wird hier zur Geometrie.',
+      },
+    },
+    {
+      topicId: '11-lgs-gauss',
+      relation: 'baut-auf',
+      why: 'Jeder Schnittpunkt und jede Lagebeziehung ist ein lineares Gleichungssystem',
+      bubble: {
+        character: 'euklid',
+        text: 'Ob zwei Geraden sich schneiden, ist die Frage, ob ein LGS lösbar ist. Keine Lösung heißt parallel oder windschief, genau eine heißt Schnittpunkt, unendlich viele heißen identisch. Gauß beantwortet Geometrie.',
+      },
+    },
+    {
+      topicId: '10-pythagoras',
+      relation: 'baut-auf',
+      why: 'Der Betrag eines Vektors ist Pythagoras in drei Dimensionen',
+      bubble: {
+        character: 'euklid',
+        text: '$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$. Jede Abstandsberechnung im Raum, jede Länge, jede Normierung geht auf $a^2 + b^2 = c^2$ zurück. Der Satz aus der 10 trägt bis ins Abitur.',
+      },
+    },
+    {
+      topicId: '12-matrizen',
+      relation: 'verwandt',
+      why: 'Drehungen und Spiegelungen im Raum sind Matrizen',
+      bubble: {
+        character: 'euklid',
+        text: 'Was du hier über Ebenen und Normalenvektoren lernst, beschreibt eine Matrix als Abbildung. Dieselbe Geometrie, in einer Schreibweise, die der Computer versteht.',
+      },
+    },
+  ],
 };

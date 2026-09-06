@@ -104,4 +104,42 @@ export const lesson = {
   ],
 
   prerequisites: [],
+  connections: [
+    {
+      topicId: '10-exp-wachstum',
+      relation: 'fuehrt-zu',
+      why: 'a^(m+n) = a^m mal a^n ist der Grund, warum Wachstum pro Schritt multipliziert statt addiert',
+      bubble: {
+        character: 'euklid',
+        text: 'Merk dir $a^{m+n} = a^m \\cdot a^n$ gut. Wenn gleich etwas «pro Jahr um 5 % wächst», dann steckt genau dieses Gesetz dahinter: Zwei Jahre hintereinander sind nicht $2 \\cdot 1{,}05$, sondern $1{,}05^2$. Wer hier addiert, rechnet den Rest der Oberstufe falsch.',
+      },
+    },
+    {
+      topicId: '11-exp-log',
+      relation: 'fuehrt-zu',
+      why: 'Die Logarithmusgesetze sind die Potenzgesetze rückwärts gelesen',
+      bubble: {
+        character: 'euklid',
+        text: 'Du lernst hier drei Regeln, die dir in der 11 noch einmal begegnen — nur gespiegelt. Aus $a^m \\cdot a^n = a^{m+n}$ wird $\\log(x \\cdot y) = \\log x + \\log y$. Der Logarithmus macht aus Mal ein Plus, weil die Potenz aus einem Plus ein Mal gemacht hat. Eine Regel, zwei Blickrichtungen.',
+      },
+    },
+    {
+      topicId: '11-ableitungsregeln',
+      relation: 'fuehrt-zu',
+      why: 'Die Potenzregel greift nur, wenn Wurzeln und Brüche als Potenzen geschrieben sind',
+      bubble: {
+        character: 'euklid',
+        text: 'Die Ableitungsregel $\\frac{d}{dx} x^n = n \\cdot x^{n-1}$ sieht harmlos aus, bis $\\sqrt{x}$ oder $\\frac{1}{x^2}$ auftaucht. Dann rettet dich nur, dass du $\\sqrt{x} = x^{1/2}$ und $\\frac{1}{x^2} = x^{-2}$ schreiben kannst. Genau das übst du hier.',
+      },
+    },
+    {
+      topicId: '10-aehnlichkeit',
+      relation: 'anwendung',
+      why: 'Streckt man eine Figur um k, wachsen Flächen mit k hoch 2 und Volumen mit k hoch 3',
+      bubble: {
+        character: 'euklid',
+        text: 'Ein Würfel mit doppelter Kantenlänge hat nicht das doppelte Volumen, sondern das achtfache: $2^3 = 8$. Flächen wachsen mit $k^2$, Volumen mit $k^3$. Das ist keine Geometrie-Eigenheit, das sind die Potenzgesetze in Lebensgröße.',
+      },
+    },
+  ],
 };

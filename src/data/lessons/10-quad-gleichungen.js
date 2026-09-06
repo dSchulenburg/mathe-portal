@@ -117,4 +117,42 @@ export const lesson = {
   ],
 
   prerequisites: ['10-quad-funktionen'],
+  connections: [
+    {
+      topicId: '10-quad-funktionen',
+      relation: 'fuehrt-zu',
+      why: 'Eine quadratische Gleichung lösen heißt die Nullstellen der zugehörigen Parabel finden',
+      bubble: {
+        character: 'euklid',
+        text: '$x^2 - 5x + 6 = 0$ zu lösen und die Nullstellen von $f(x) = x^2 - 5x + 6$ zu suchen ist dieselbe Frage in zwei Sprachen. Die pq-Formel gibt dir die Stellen, an denen die Parabel die x-Achse schneidet. Ist die Diskriminante negativ, hat die Gleichung keine Lösung — und die Parabel keinen Schnittpunkt. Dasselbe Nein, zweimal ausgesprochen.',
+      },
+    },
+    {
+      topicId: '11-kurvendiskussion',
+      relation: 'fuehrt-zu',
+      why: 'Nullstellen und Extremstellen führen immer wieder auf quadratische Gleichungen zurück',
+      bubble: {
+        character: 'euklid',
+        text: 'In der Kurvendiskussion setzt du $f(x) = 0$ und $f\'(x) = 0$. Bei einer Funktion dritten Grades ist $f\'$ quadratisch — du landest also wieder hier. Die pq-Formel ist kein Thema der Klasse 10, sie ist Handwerkszeug bis zum Abitur.',
+      },
+    },
+    {
+      topicId: '10-pythagoras',
+      relation: 'verwandt',
+      why: 'a hoch 2 + b hoch 2 = c hoch 2 nach einer Kathete aufgelöst ist eine rein quadratische Gleichung',
+      bubble: {
+        character: 'euklid',
+        text: '$a^2 + b^2 = c^2$ nach $a$ aufzulösen heißt $a^2 = c^2 - b^2$ zu lösen — eine quadratische Gleichung ohne lineares Glied. Deshalb steht dort eine Wurzel, und deshalb wirfst du die negative Lösung weg: Eine Seitenlänge ist nie negativ. Rechnerisch gibt es zwei Lösungen, geometrisch nur eine.',
+      },
+    },
+    {
+      topicId: '11-extremwertaufgaben',
+      relation: 'anwendung',
+      why: 'Ist die Zielfunktion quadratisch, liefert der Scheitelpunkt das Optimum ohne Ableitung',
+      bubble: {
+        character: 'euklid',
+        text: 'Beim größten Rechteck an einem festen Zaun ist die Zielfunktion quadratisch. Du kannst ableiten — oder den Scheitelpunkt bestimmen und bist fertig. Beide Wege führen zu $x = -\\frac{p}{2}$. Die Ableitung ist mächtiger, die quadratische Ergänzung ist schneller.',
+      },
+    },
+  ],
 };

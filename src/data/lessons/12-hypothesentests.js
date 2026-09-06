@@ -109,4 +109,42 @@ export const lesson = {
   ],
 
   prerequisites: ['11-binomialverteilung'],
+  connections: [
+    {
+      topicId: '11-binomialverteilung',
+      relation: 'baut-auf',
+      why: 'Der Signifikanztest ist eine Binomialverteilung mit einer Entscheidungsregel davor',
+      bubble: {
+        character: 'euklid',
+        text: 'Du berechnest weiter $P(X \\leq k)$ wie gewohnt. Neu ist nur, dass du vorher eine Grenze festlegst und danach eine Entscheidung triffst. Die Rechnung ist alt, die Frage ist neu.',
+      },
+    },
+    {
+      topicId: '12-normalverteilung',
+      relation: 'baut-auf',
+      why: 'Bei großen Stichproben tritt die Normalverteilung an die Stelle der Binomialverteilung',
+      bubble: {
+        character: 'euklid',
+        text: 'Ab $\\sigma > 3$ liegt die Glockenkurve nah genug an der Binomialverteilung, um sie zu ersetzen. Das ist keine Bequemlichkeit, sondern der Grund, warum Tests mit tausend Befragten überhaupt rechenbar sind.',
+      },
+    },
+    {
+      topicId: '11-bedingte-wahrscheinlichkeit',
+      relation: 'verwandt',
+      why: 'Fehler erster und zweiter Art sind bedingte Wahrscheinlichkeiten',
+      bubble: {
+        character: 'euklid',
+        text: '$\\alpha = P(\\text{ablehnen} \\mid H_0 \\text{ wahr})$: Der Fehler erster Art ist eine bedingte Wahrscheinlichkeit, keine absolute. Wer den Strich übersieht, verwechselt «5 % der Tests irren» mit «5 % der Aussagen sind falsch». Das ist der häufigste Denkfehler der gesamten Stochastik.',
+      },
+    },
+    {
+      topicId: '10-wahrscheinlichkeit',
+      relation: 'baut-auf',
+      why: 'Auch der Signifikanztest steht auf dem Gegenereignis',
+      bubble: {
+        character: 'euklid',
+        text: '$P(X > k) = 1 - P(X \\leq k)$ ist die Rechnung, die du hier ständig brauchst. Das Gegenereignis aus der 10 ist keine Anfängertechnik, es ist die Abkürzung, ohne die kein Ablehnungsbereich zu bestimmen wäre.',
+      },
+    },
+  ],
 };

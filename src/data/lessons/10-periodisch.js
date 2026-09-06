@@ -108,4 +108,42 @@ export const lesson = {
   ],
 
   prerequisites: ['10-trigonometrie'],
+  connections: [
+    {
+      topicId: '10-trigonometrie',
+      relation: 'baut-auf',
+      why: 'Sinus und Kosinus am Einheitskreis sind die Quelle jeder Schwingung',
+      bubble: {
+        character: 'euklid',
+        text: 'Am rechtwinkligen Dreieck war $\\sin(\\alpha)$ ein Verhältnis zweier Seiten. Am Einheitskreis wird daraus eine Höhe, die sich mit dem Winkel ändert — und wenn der Winkel weiterläuft, wiederholt sie sich. Genau da entsteht die Welle.',
+      },
+    },
+    {
+      topicId: '10-kreis',
+      relation: 'baut-auf',
+      why: 'Das Bogenmaß macht aus dem Kreis eine Zahlengerade',
+      bubble: {
+        character: 'euklid',
+        text: 'Erst im Bogenmaß wird die Periode zu $2\\pi$ statt zu $360°$, und erst damit lässt sich später ableiten. Der Umfang $2\\pi r$ ist der Grund, warum eine volle Umdrehung genau $2\\pi$ heißt.',
+      },
+    },
+    {
+      topicId: '11-ableitungsregeln',
+      relation: 'fuehrt-zu',
+      why: 'Die Ableitung des Sinus ist der Kosinus, verschoben um eine Viertelperiode',
+      bubble: {
+        character: 'euklid',
+        text: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$ sieht wie eine Regel zum Auswendiglernen aus. Sie ist aber sichtbar: Wo die Sinuskurve am steilsten steigt, hat der Kosinus seinen Höchstwert. Vier Ableitungen später bist du wieder beim Sinus.',
+      },
+    },
+    {
+      topicId: '10-funktionsklassen',
+      relation: 'verwandt',
+      why: 'Amplitude, Periode und Verschiebung sind dieselben Parameter wie bei der Parabel',
+      bubble: {
+        character: 'euklid',
+        text: '$f(x) = a \\cdot \\sin(b(x-d)) + e$ — vergleich das mit der Scheitelpunktform. $a$ streckt, $d$ verschiebt waagerecht, $e$ senkrecht. Neu ist nur $b$, und das staucht die Periode. Du lernst hier keine neue Grammatik, nur eine neue Vokabel.',
+      },
+    },
+  ],
 };

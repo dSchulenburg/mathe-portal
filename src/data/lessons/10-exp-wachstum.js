@@ -116,4 +116,42 @@ export const lesson = {
   ],
 
   prerequisites: [],
+  connections: [
+    {
+      topicId: '10-potenzgesetze',
+      relation: 'baut-auf',
+      why: 'Ohne die Potenzgesetze lässt sich kein Wachstumsfaktor zusammenfassen',
+      bubble: {
+        character: 'euklid',
+        text: '$1{,}05^3$ ist nicht $3 \\cdot 1{,}05$. Wer die Potenzgesetze überspringt, rechnet hier zuverlässig falsch — der häufigste Fehler ist, das Prozent pro Jahr einfach zu addieren.',
+      },
+    },
+    {
+      topicId: '11-exp-log',
+      relation: 'fuehrt-zu',
+      why: 'Nach dem Exponenten aufzulösen geht nur mit dem Logarithmus',
+      bubble: {
+        character: 'euklid',
+        text: 'Solange du fragst «wie viel nach 5 Jahren», genügt Einsetzen. Sobald du fragst «nach wie vielen Jahren ist es doppelt so viel», steht das $x$ im Exponenten: $1{,}05^x = 2$. Dafür brauchst du ein Werkzeug, das es dort herunterholt. Das ist der Logarithmus.',
+      },
+    },
+    {
+      topicId: '12-e-funktion-ln',
+      relation: 'fuehrt-zu',
+      why: 'Wird die Verzinsung immer feiner, landet man bei e',
+      bubble: {
+        character: 'euklid',
+        text: 'Jährlich, monatlich, täglich, stündlich verzinst: Die Werte steigen, aber nicht ins Unendliche. Sie laufen gegen $e \\approx 2{,}718$. Die eulersche Zahl ist keine Erfindung, sie ist der Grenzwert deiner eigenen Rechnung.',
+      },
+    },
+    {
+      topicId: '10-funktionsklassen',
+      relation: 'verwandt',
+      why: 'Linear wächst pro Schritt um dasselbe Plus, exponentiell um denselben Faktor',
+      bubble: {
+        character: 'euklid',
+        text: 'Der ganze Unterschied steckt in einem Wort: plus oder mal. Lineares Wachstum addiert jeden Schritt dieselbe Zahl, exponentielles multipliziert mit demselben Faktor. Auf lange Sicht gewinnt das Mal immer, egal wie klein der Faktor ist.',
+      },
+    },
+  ],
 };

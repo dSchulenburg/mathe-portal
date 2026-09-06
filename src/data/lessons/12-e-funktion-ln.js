@@ -111,4 +111,42 @@ export const lesson = {
   ],
 
   prerequisites: ['11-exp-log'],
+  connections: [
+    {
+      topicId: '11-exp-log',
+      relation: 'baut-auf',
+      why: 'e ist nur eine besondere Basis, ln nur ein besonderer Logarithmus',
+      bubble: {
+        character: 'euklid',
+        text: 'Alles, was du über $a^x$ und $\\log_a$ weißt, gilt hier weiter. Das Besondere an $e$ ist einzig: $\\frac{d}{dx}e^x = e^x$. Die Funktion, die ihre eigene Ableitung ist — deshalb nimmt die Analysis diese Basis und keine andere.',
+      },
+    },
+    {
+      topicId: '12-integralrechnung-vertieft',
+      relation: 'fuehrt-zu',
+      why: 'Das Integral von 1 durch x schließt die letzte Lücke der Potenzregel',
+      bubble: {
+        character: 'euklid',
+        text: 'Die Regel $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1}$ versagt bei $n = -1$, weil man nicht durch null teilt. Genau dort springt $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$ ein. Die Betragsstriche sind kein Schmuck: $\\ln$ gibt es nur für positive Zahlen, die Stammfunktion soll aber auch links der Null gelten.',
+      },
+    },
+    {
+      topicId: '12-normalverteilung',
+      relation: 'anwendung',
+      why: 'Die Gaußsche Glocke ist eine e-Funktion mit negativem quadratischem Exponenten',
+      bubble: {
+        character: 'euklid',
+        text: '$\\varphi(x) = \\frac{1}{\\sqrt{2\\pi}}e^{-x^2/2}$. Das Minus sorgt für den Abfall nach beiden Seiten, das Quadrat für die Symmetrie. Wer $e^x$ verstanden hat, sieht der Glockenkurve ihre Form direkt an.',
+      },
+    },
+    {
+      topicId: '11-ableitungsregeln',
+      relation: 'verwandt',
+      why: 'Die Kettenregel wird bei e-Funktionen zur Routine',
+      bubble: {
+        character: 'euklid',
+        text: '$\\frac{d}{dx}e^{kx} = k \\cdot e^{kx}$ ist die Kettenregel in ihrer freundlichsten Form: Die äußere Ableitung ändert nichts, die innere fällt als Faktor heraus. Deshalb ist $k$ in Wachstumsmodellen direkt die Wachstumsrate.',
+      },
+    },
+  ],
 };

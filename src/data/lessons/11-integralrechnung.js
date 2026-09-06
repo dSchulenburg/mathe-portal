@@ -110,4 +110,42 @@ export const lesson = {
   ],
 
   prerequisites: ['11-ableitungsregeln'],
+  connections: [
+    {
+      topicId: '11-ableitungsregeln',
+      relation: 'baut-auf',
+      why: 'Integrieren heißt die Ableitung rückwärts gehen',
+      bubble: {
+        character: 'euklid',
+        text: 'Jede Ableitungsregel, die du kennst, ist rückwärts eine Stammfunktionsregel. Aus $\\frac{d}{dx}x^3 = 3x^2$ wird $\\int 3x^2\\,dx = x^3 + C$. Das $+C$ ist der Preis dafür, dass die Ableitung die additive Konstante verschluckt hat.',
+      },
+    },
+    {
+      topicId: '10-diff-einfuehrung',
+      relation: 'baut-auf',
+      why: 'Der Hauptsatz verbindet Steigung und Fläche zu einer einzigen Idee',
+      bubble: {
+        character: 'euklid',
+        text: 'In der 10 ging es um die Steigung an einem Punkt, hier um die Fläche unter einer Kurve. Dass das dasselbe Thema ist, ist die überraschendste Aussage der Analysis: $\\int_a^b f\'(x)\\,dx = f(b) - f(a)$.',
+      },
+    },
+    {
+      topicId: '12-integralrechnung-vertieft',
+      relation: 'fuehrt-zu',
+      why: 'Partielle Integration und Substitution setzen genau hier an',
+      bubble: {
+        character: 'euklid',
+        text: 'Was du hier an Potenzfunktionen übst, wird in der 12 zum Werkzeug für Produkte und Verkettungen. Die Idee bleibt dieselbe, nur die Funktionen wehren sich mehr.',
+      },
+    },
+    {
+      topicId: '10-koerper',
+      relation: 'anwendung',
+      why: 'Rotationskörper sind Integrale, die man anfassen kann',
+      bubble: {
+        character: 'euklid',
+        text: '$V = \\pi \\int_a^b [f(x)]^2\\,dx$ — dreht man eine Kurve um die x-Achse, entsteht ein Körper, dessen Volumen ein Integral ist. Die Kegelformel $V = \\frac{1}{3}\\pi r^2 h$, die du in der 10 hingenommen hast, fällt damit aus der Rechnung heraus statt vom Himmel.',
+      },
+    },
+  ],
 };

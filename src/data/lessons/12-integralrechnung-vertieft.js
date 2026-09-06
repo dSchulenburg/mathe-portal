@@ -110,4 +110,42 @@ export const lesson = {
   ],
 
   prerequisites: ['11-integralrechnung'],
+  connections: [
+    {
+      topicId: '11-integralrechnung',
+      relation: 'baut-auf',
+      why: 'Substitution und partielle Integration bauen direkt auf dem Hauptsatz auf',
+      bubble: {
+        character: 'euklid',
+        text: 'Der Hauptsatz bleibt der Boden, auf dem alles steht. Neu sind nur die Werkzeuge, mit denen du eine Funktion so umformst, bis eine bekannte Stammfunktion sichtbar wird.',
+      },
+    },
+    {
+      topicId: '12-e-funktion-ln',
+      relation: 'baut-auf',
+      why: 'Ohne ln fehlt der Integralrechnung eine Stammfunktion',
+      bubble: {
+        character: 'euklid',
+        text: '$\\int \\frac{1}{x}\\,dx = \\ln|x| + C$ ist die Ausnahme, die die Potenzregel offen lässt. Und $\\int e^x\\,dx = e^x + C$ ist die bequemste Stammfunktion, die es gibt.',
+      },
+    },
+    {
+      topicId: '12-normalverteilung',
+      relation: 'anwendung',
+      why: 'Wahrscheinlichkeit ist bei stetigen Größen immer eine Fläche',
+      bubble: {
+        character: 'euklid',
+        text: '$P(a \\leq X \\leq b) = \\int_a^b \\varphi(x)\\,dx$. Deshalb ist $P(X = a) = 0$ bei stetigen Zufallsgrößen: Eine Fläche ohne Breite ist null. Das ist kein Rechentrick, das ist die Definition.',
+      },
+    },
+    {
+      topicId: '11-extremwertaufgaben',
+      relation: 'verwandt',
+      why: 'Der Mittelwert einer Funktion ist ein Integral, kein Durchschnitt endlich vieler Werte',
+      bubble: {
+        character: 'euklid',
+        text: '$\\bar{f} = \\frac{1}{b-a}\\int_a^b f(x)\\,dx$ ist der Mittelwert über ein Intervall. Wo du bei Extremwerten den besten einzelnen Punkt gesucht hast, fasst das Integral hier das ganze Intervall zusammen.',
+      },
+    },
+  ],
 };

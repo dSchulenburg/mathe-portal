@@ -113,4 +113,42 @@ export const lesson = {
   ],
 
   prerequisites: ['10-potenzgesetze'],
+  connections: [
+    {
+      topicId: '10-quad-gleichungen',
+      relation: 'baut-auf',
+      why: 'Die Nullstellen einer Parabel sind die Lösungen der zugehörigen Gleichung',
+      bubble: {
+        character: 'euklid',
+        text: 'Jede Frage nach einem Schnittpunkt mit der x-Achse ist eine quadratische Gleichung im Kostüm. $f(x) = 0$ ist keine neue Aufgabe, sondern dieselbe von der anderen Seite.',
+      },
+    },
+    {
+      topicId: '10-diff-einfuehrung',
+      relation: 'fuehrt-zu',
+      why: 'Die Parabel ist die erste Funktion, deren Steigung sich an jeder Stelle ändert',
+      bubble: {
+        character: 'euklid',
+        text: 'Bei der Geraden war die Steigung überall gleich. Bei der Parabel nicht mehr — und genau deshalb wird sie zum Einstieg in die Differentialrechnung. Die Ableitung $f\'(x) = 2x$ sagt dir: links vom Scheitel fällt es, rechts steigt es, im Scheitel ist die Steigung null.',
+      },
+    },
+    {
+      topicId: '11-extremwertaufgaben',
+      relation: 'anwendung',
+      why: 'Der Scheitelpunkt ist das Optimum, lange bevor man ableiten kann',
+      bubble: {
+        character: 'euklid',
+        text: 'Höchster Punkt eines Wurfs, größte Fläche, kleinste Kosten: Steckt eine Parabel dahinter, ist die Antwort der Scheitelpunkt. Du optimierst hier bereits, nur heißt es noch nicht so.',
+      },
+    },
+    {
+      topicId: '10-funktionsklassen',
+      relation: 'verwandt',
+      why: 'Die Parabel ist der Prototyp der nichtlinearen Funktionen',
+      bubble: {
+        character: 'euklid',
+        text: 'Verschieben, strecken, spiegeln: Was du an $f(x) = a(x-d)^2 + e$ verstehst, überträgst du später auf Sinus, Exponentialfunktion und Wurzel. Die Scheitelpunktform ist die Blaupause für jede Funktionsklasse, die danach kommt.',
+      },
+    },
+  ],
 };

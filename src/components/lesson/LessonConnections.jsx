@@ -1,6 +1,7 @@
 import { getTopic } from '../../data/topics';
 import { getCharacterById } from '../../data/characters';
 import LessonSection from './LessonSection';
+import MathText from './MathText';
 
 const RELATION_LABELS = {
   'baut-auf': 'baut auf',
@@ -76,7 +77,7 @@ export default function LessonConnections({ connections, t, accentColor, onNavig
                       {character.name}
                     </div>
                     <div style={{ fontSize: '0.85rem', color: 'var(--mp-text)', lineHeight: 1.45 }}>
-                      {conn.bubble.text}
+                      <MathText text={conn.bubble.text} />
                     </div>
                   </div>
                 </div>

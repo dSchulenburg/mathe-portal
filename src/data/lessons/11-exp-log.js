@@ -112,4 +112,42 @@ export const lesson = {
   ],
 
   prerequisites: ['10-exp-wachstum'],
+  connections: [
+    {
+      topicId: '10-potenzgesetze',
+      relation: 'baut-auf',
+      why: 'Jedes Logarithmusgesetz ist ein Potenzgesetz, von der anderen Seite gelesen',
+      bubble: {
+        character: 'euklid',
+        text: '$\\log_a(x \\cdot y) = \\log_a x + \\log_a y$ musst du nicht auswendig lernen, wenn du $a^{m+n} = a^m \\cdot a^n$ kannst. Der Logarithmus ist die Umkehrfunktion, also dreht er jede Regel um: Mal wird Plus, Potenz wird Mal.',
+      },
+    },
+    {
+      topicId: '10-exp-wachstum',
+      relation: 'baut-auf',
+      why: 'Der Logarithmus beantwortet die Frage, die beim Wachstum offen blieb',
+      bubble: {
+        character: 'euklid',
+        text: 'In der 10 konntest du ausrechnen, wie viel nach $n$ Schritten da ist. Die Umkehrfrage «nach wie vielen Schritten ist es doppelt so viel» blieb offen. Der Logarithmus ist genau die Antwort darauf.',
+      },
+    },
+    {
+      topicId: '12-e-funktion-ln',
+      relation: 'fuehrt-zu',
+      why: 'ln ist der Logarithmus zur Basis e, nichts anderes',
+      bubble: {
+        character: 'euklid',
+        text: '$\\ln x = \\log_e x$. Kein neues Konzept, nur eine besonders praktische Basis — praktisch, weil $e^x$ die einzige Funktion ist, die ihre eigene Ableitung ist. Alle Regeln, die du hier lernst, gelten dort unverändert.',
+      },
+    },
+    {
+      topicId: '11-ableitungsregeln',
+      relation: 'verwandt',
+      why: 'Die Basiswechselformel macht jede Exponentialfunktion ableitbar',
+      bubble: {
+        character: 'euklid',
+        text: '$a^x = e^{x \\ln a}$ sieht nach Spielerei aus, ist aber der Trick, mit dem $\\frac{d}{dx} a^x = a^x \\ln a$ überhaupt zustande kommt. Ohne Basiswechsel wäre jede Basis ein eigener Sonderfall.',
+      },
+    },
+  ],
 };
