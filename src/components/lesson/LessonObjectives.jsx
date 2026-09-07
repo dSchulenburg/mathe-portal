@@ -1,7 +1,12 @@
 import LessonSection from './LessonSection';
+import MathText from './MathText';
 
 /**
  * Learning objectives checklist — "Nach diesem Thema kannst du..."
+ *
+ * Der Text laeuft durch MathText: 27 Lernziel-Zeilen in 14 Themen enthalten
+ * Formeln, die hier bis zum 07.09.2026 als roher LaTeX-Quelltext auf dem
+ * Bildschirm standen. Siehe __tests__/LessonObjectives.math.test.jsx.
  */
 export default function LessonObjectives({ objectives, topicId, t, accentColor, onRead }) {
   if (!objectives?.length) return null;
@@ -32,7 +37,7 @@ export default function LessonObjectives({ objectives, topicId, t, accentColor, 
             lineHeight: 1.5,
           }}>
             <span style={{ color: 'var(--mp-success)', flexShrink: 0 }}>✓</span>
-            {t(`lessons.${topicId}.${key}`)}
+            <MathText text={t(`lessons.${topicId}.${key}`)} />
           </li>
         ))}
       </ul>
