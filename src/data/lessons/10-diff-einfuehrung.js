@@ -110,6 +110,15 @@ export const lesson = {
 
   connections: [
     {
+      topicId: '10-stetigkeit',
+      relation: 'fuehrt-zu',
+      why: 'Derselbe Grenzwertbegriff beantwortet eine zweite Frage: passt der Grenzwert zum Funktionswert?',
+      bubble: {
+        character: 'euklid',
+        text: 'Du hast hier den Limes gebaut, um eine Steigung zu bekommen. Dasselbe Werkzeug beantwortet noch eine Frage, und zwar eine grundlegendere: Läuft die Funktion an einer Stelle auf genau den Wert zu, den sie dort annimmt? Wenn ja, heißt sie dort stetig. Und es gilt eine Einbahnstraße, die du dir merken solltest: Wo du eine Tangente anlegen kannst, kann kein Sprung sein — aber nicht überall, wo kein Sprung ist, gibt es eine Tangente. $f(x) = |x|$ ist der Beweis.',
+      },
+    },
+    {
       topicId: '11-ableitungsregeln',
       relation: 'fuehrt-zu',
       why: 'Die Limes-Rechnung wird durch Regeln ersetzt — gleiche Idee, anderes Tempo',

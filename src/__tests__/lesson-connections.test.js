@@ -24,6 +24,16 @@ describe('Themen-Bruecken', () => {
     expect(arm).toEqual([]);
   });
 
+  it('macht jedes Thema auch von aussen erreichbar', () => {
+    // Die Gegenrichtung zur Regel darueber. Am 06.09. war die Luecke, dass
+    // Themen ANGESTEUERT wurden und selbst nicht weiterfuehrten. Ein neues
+    // Thema hat genau das umgekehrte Problem: es zeigt nach draussen, aber
+    // niemand zeigt hinein — im Bruecken-Netz ist es dann unsichtbar.
+    const eingehend = new Set(bruecken.map(c => c.topicId));
+    const unerreichbar = TOPICS.map(t => t.id).filter(id => !eingehend.has(id));
+    expect(unerreichbar).toEqual([]);
+  });
+
   it('zeigt nur auf Themen, die es gibt', () => {
     const tot = bruecken.filter(c => !getTopic(c.topicId)).map(c => `${c.von} -> ${c.topicId}`);
     expect(tot).toEqual([]);

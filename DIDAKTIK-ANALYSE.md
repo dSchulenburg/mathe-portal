@@ -3,6 +3,14 @@
 > Phase 1: Bestandsaufnahme aller 27 Themen, identifizierte Lücken und Querverbindungen.
 > Phase 2 (folgt): Konkrete Überarbeitung mit Priorisierung.
 
+> ## ⚠️ Stand dieses Dokuments: 07.09.2026
+>
+> **Dieses Dokument ist eine Momentaufnahme und altert.** Es beschreibt 27 Themen; es sind
+> inzwischen 33. Wer hier eine Lücke liest, prüft sie bitte erst gegen `src/data/topics.js` —
+> mehrere der unten genannten sind längst geschlossen, ohne dass es hier stand. Der Abschnitt
+> „Curriculare Lücken Analysis" trägt seit dem 07.09. einen Statusblock; die übrigen
+> Abschnitte sind unverändert vom Analysetag.
+
 **Analyse-Raster pro Thema:**
 1. Visualisierungslücke
 2. Pädagogische Tiefe
@@ -223,6 +231,30 @@ Die Stochastik ist **die Visualisierungs-Wüste** des Portals. 4 Themen, davon 3
 - `11-kurvendiskussion` — `kd-ea-002` in sich inkonsistent
 
 ### Curriculare Lücken Analysis
+
+**Status 07.09.2026 — gemessen, nicht geschätzt:**
+
+| # | Lücke | Stand |
+|---|-------|-------|
+| 1 | Lineare Funktionen | ✅ geschlossen — Thema `10-lineare-funktionen` |
+| 2 | Asymptoten / gebrochen-rational | ✅ geschlossen — Thema `11-rationale-funktionen` |
+| 3 | Stetigkeit | ✅ geschlossen 07.09. — Thema `10-stetigkeit`, 12 Aufgaben |
+| 4 | Logistisches / beschränktes Wachstum | ✅ geschlossen 07.09. — Thema `12-logistisches-wachstum`, 12 Aufgaben |
+| 5 | e als Grenzwert $\lim(1+1/n)^n$ | ⬜ offen |
+| 6 | Newton-Verfahren | ⬜ offen — die Intervallhalbierung ist seit 07.09. in `st-erw-001` vertreten, Newton selbst nicht |
+| 7 | Quotientenregel-Aufgaben | ✅ geschlossen 07.09. — 6 Aufgaben `abl-quot-001` … `-006`, dazu concepts-Block, Beispiel und Fehlerbild |
+
+Ebenfalls seither vorhanden, obwohl unten noch als Lücke geführt: **LGS / Gauß**
+(`11-lgs-gauss`) und **Kreis / Bogenmaß** (`10-kreis`).
+
+Die fünf **Lösungsschlüssel-Bugs** aus dem Abschnitt darunter sind ebenfalls alle repariert
+(am 07.09. nachgeprüft: `abi-basis-001` steht auf 13 und stimmt mit dem Rechenweg überein,
+der `Korrektur:`-Text in `ext-erw-004` ist verschwunden). Seit dem 07.09. rechnen die
+Testdateien `abl-exercises.test.js`, `stetigkeit-exercises.test.js` und
+`logistisch-exercises.test.js` numerische Lösungen mit `mathjs` unabhängig nach — diese
+Fehlerklasse kann in den betroffenen Themen nicht mehr unbemerkt entstehen.
+
+Originalfassung der Liste vom Analysetag:
 
 1. **Lineare Funktionen** als eigenständiges Topic — fehlt komplett (nur in `10-funktionsklassen` gestreift). Für MSA-Niveau wichtig.
 2. **Asymptoten und gebrochen-rationale Funktionen** — fehlt komplett (eine Aufgabe in `12-abi`). Klassisches 11er-Thema.

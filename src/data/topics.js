@@ -26,6 +26,8 @@ import { exercises as diffEinfuehrungEx } from './exercises/10-diff-einfuehrung'
 import { exercises as funktionsklassenEx } from './exercises/10-funktionsklassen';
 import { exercises as lineareFunktionenEx } from './exercises/10-lineare-funktionen';
 import { exercises as kreisEx } from './exercises/10-kreis';
+import { lesson as stetigkeitLesson } from './lessons/10-stetigkeit';
+import { exercises as stetigkeitEx } from './exercises/10-stetigkeit';
 
 // Klasse 11
 import { exercises as ableitungsregelnEx } from './exercises/11-ableitungsregeln';
@@ -58,6 +60,8 @@ import { exercises as normalverteilungEx } from './exercises/12-normalverteilung
 import { exercises as matrizenEx } from './exercises/12-matrizen';
 import { exercises as abivorbereitungEx } from './exercises/12-abiturvorbereitung';
 import { lesson as eFunktionLnLesson } from './lessons/12-e-funktion-ln';
+import { lesson as logistischLesson } from './lessons/12-logistisches-wachstum';
+import { exercises as logistischEx } from './exercises/12-logistisches-wachstum';
 import { lesson as integralVertieftLesson } from './lessons/12-integralrechnung-vertieft';
 import { lesson as analytischeGeoLesson } from './lessons/12-analytische-geometrie';
 import { lesson as hypothesentestsLesson } from './lessons/12-hypothesentests';
@@ -267,6 +271,34 @@ export const TOPICS = [
       yRange: [-2, 10],
     },
     station: 'SekanteTangente',
+  },
+  {
+    id: '10-stetigkeit',
+    grade: 10,
+    domain: 'analysis',
+    titleKey: 'Stetigkeit',
+    icon: '✂️',
+    color: '#06b6d4',
+    period: 'Klasse 10',
+    exercises: stetigkeitEx,
+    lesson: stetigkeitLesson,
+    plotter: {
+      // Zwei Funktionen mit derselben kritischen Stelle x = a, aber
+      // grundverschiedenem Verhalten: links eine hebbare Luecke (der Graph
+      // sieht aus wie eine Gerade und hat genau einen Punkt zu wenig),
+      // rechts eine Polstelle. Wer den Regler bewegt, sieht den Unterschied
+      // wandern — das ist der Kern des Themas.
+      title: 'Lücke oder Polstelle?',
+      functions: [
+        { expression: '(x^2 - a^2)/(x - a)', color: '#06b6d4', label: 'g(x) = (x²−a²)/(x−a) — Lücke bei a' },
+        { expression: '1/(x - a)', color: '#fb7185', label: 'h(x) = 1/(x−a) — Pol bei a' },
+      ],
+      sliders: [
+        { param: 'a', min: -3, max: 3, step: 0.5, initial: 1, label: 'kritische Stelle a' },
+      ],
+      xRange: [-5, 5],
+      yRange: [-6, 8],
+    },
   },
   {
     id: '10-funktionsklassen',
@@ -617,6 +649,34 @@ export const TOPICS = [
     lesson: matrizenLesson,
     plotter: null,
     station: 'MarkovDiagramm',
+  },
+  {
+    id: '12-logistisches-wachstum',
+    grade: 12,
+    domain: 'analysis',
+    titleKey: 'Beschränktes & logistisches Wachstum',
+    icon: '🌱',
+    color: '#34d399',
+    period: 'Klasse 12',
+    exercises: logistischEx,
+    lesson: logistischLesson,
+    plotter: {
+      // Die logistische Kurve gegen ihre eigene Anfangstangente: solange N
+      // klein gegen K ist, liegen beide uebereinander. Wer K herunterregelt,
+      // sieht die exponentielle Naeherung frueher auseinanderlaufen — das ist
+      // die Kernaussage des Themas in einem Regler.
+      title: 'Logistisch gegen exponentiell',
+      functions: [
+        { expression: 'K/(1 + 9*exp(-r*x))', color: '#34d399', label: 'N(t) logistisch' },
+        { expression: '(K/10)*exp(r*x)', color: '#fbbf24', label: 'exponentiell (gleicher Start)' },
+      ],
+      sliders: [
+        { param: 'K', min: 100, max: 600, step: 50, initial: 500, label: 'Kapazität K' },
+        { param: 'r', min: 0.1, max: 1, step: 0.1, initial: 0.4, label: 'Wachstumsrate r' },
+      ],
+      xRange: [0, 20],
+      yRange: [0, 650],
+    },
   },
   {
     id: '12-abiturvorbereitung',

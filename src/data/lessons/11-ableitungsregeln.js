@@ -46,6 +46,12 @@ export const lesson = {
       highlight: 'purple',
     },
     {
+      titleKey: 'concepts.quotient_rule.title',
+      descriptionKey: 'concepts.quotient_rule.desc',
+      formula: '\\left[\\frac{u}{v}\\right]\' = \\frac{u\' \\cdot v - u \\cdot v\'}{v^2}',
+      highlight: 'green',
+    },
+    {
       titleKey: 'concepts.chain_rule.title',
       descriptionKey: 'concepts.chain_rule.desc',
       formula: '[f(g(x))]\' = f\'(g(x)) \\cdot g\'(x)',
@@ -63,6 +69,17 @@ export const lesson = {
         { key: 'examples.power_sum.step3', formula: 'f\'(x) = 12x^3 - 6x^2 + 5' },
       ],
       characterComment: 'examples.power_sum.amir_comment',
+    },
+    {
+      titleKey: 'examples.quotient_rule.title',
+      contextKey: 'examples.quotient_rule.context',
+      steps: [
+        { key: 'examples.quotient_rule.step1', formula: 'f(x) = \\frac{x^2 + 1}{x - 1}, \\quad u = x^2 + 1, \\quad v = x - 1' },
+        { key: 'examples.quotient_rule.step2', formula: 'u\' = 2x, \\qquad v\' = 1' },
+        { key: 'examples.quotient_rule.step3', formula: 'f\'(x) = \\frac{2x \\cdot (x-1) - (x^2+1) \\cdot 1}{(x-1)^2}' },
+        { key: 'examples.quotient_rule.step4', formula: 'f\'(x) = \\frac{2x^2 - 2x - x^2 - 1}{(x-1)^2} = \\frac{x^2 - 2x - 1}{(x-1)^2}' },
+      ],
+      characterComment: 'examples.quotient_rule.amir_comment',
     },
     {
       titleKey: 'examples.chain_rule.title',
@@ -114,6 +131,14 @@ export const lesson = {
       wrongFormula: '[(3x+1)^4]\' = 4(3x+1)^3',
       correctFormula: '[(3x+1)^4]\' = 4(3x+1)^3 \\cdot 3 = 12(3x+1)^3',
       characterWarning: 'mistakes.chain_rule_forgotten.amir_warning',
+    },
+    {
+      wrongKey: 'mistakes.quotient_sign.wrong',
+      correctKey: 'mistakes.quotient_sign.correct',
+      explanationKey: 'mistakes.quotient_sign.why',
+      wrongFormula: '\\left[\\frac{u}{v}\\right]\' = \\frac{u \\cdot v\' - u\' \\cdot v}{v^2}',
+      correctFormula: '\\left[\\frac{u}{v}\\right]\' = \\frac{u\' \\cdot v - u \\cdot v\'}{v^2}',
+      characterWarning: 'mistakes.quotient_sign.amir_warning',
     },
   ],
 

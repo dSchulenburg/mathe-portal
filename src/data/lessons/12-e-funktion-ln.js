@@ -113,6 +113,15 @@ export const lesson = {
   prerequisites: ['11-exp-log'],
   connections: [
     {
+      topicId: '12-logistisches-wachstum',
+      relation: 'fuehrt-zu',
+      why: 'Beschränktes und logistisches Wachstum sind die wichtigste Anwendung der e-Funktion im Abitur',
+      bubble: {
+        character: 'euklid',
+        text: 'Hier hast du das Werkzeug, dort steht die Baustelle. Beide Wachstumsmodelle bestehen aus nichts als $e^{-kt}$ — und wenn du wissen willst, wann eine S-Kurve ihren Wendepunkt hat, löst du eine Logarithmusgleichung: $a\\,e^{-rt} = 1 \\Rightarrow t_W = \\frac{\\ln(a)}{r}$. Ohne $\\ln$ kommst du an diese Zahl nicht heran.',
+      },
+    },
+    {
       topicId: '11-exp-log',
       relation: 'baut-auf',
       why: 'e ist nur eine besondere Basis, ln nur ein besonderer Logarithmus',

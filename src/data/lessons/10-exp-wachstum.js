@@ -118,6 +118,15 @@ export const lesson = {
   prerequisites: [],
   connections: [
     {
+      topicId: '12-logistisches-wachstum',
+      relation: 'fuehrt-zu',
+      why: 'Reales Wachstum hat fast immer eine Grenze — das exponentielle Modell beschreibt nur den Anfang',
+      bubble: {
+        character: 'euklid',
+        text: 'Alles, was du hier lernst, stimmt — eine Weile lang. Kein Teich wird unendlich voll, kein Video von mehr Menschen gesehen, als es gibt. In Klasse 12 bekommt das Modell eine Kapazitätsgrenze $K$ und wird zur S-Kurve. Das Schöne daran: Am Anfang sind beide Kurven kaum zu unterscheiden. Deine Exponentialfunktion ist die Anfangstangente der logistischen — sie war nie falsch, nur begrenzt gültig.',
+      },
+    },
+    {
       topicId: '10-potenzgesetze',
       relation: 'baut-auf',
       why: 'Ohne die Potenzgesetze lässt sich kein Wachstumsfaktor zusammenfassen',

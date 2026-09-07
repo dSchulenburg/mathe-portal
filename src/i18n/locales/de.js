@@ -2,11 +2,13 @@ import { batch1 } from '../lessons-10-batch1';
 import { batch2 } from '../lessons-10-batch2';
 import { batch3 } from '../lessons-10-batch3';
 import { batch4 } from '../lessons-10-batch4';
+import { batch5 } from '../lessons-10-batch5';
 import { batch11a } from '../lessons-11-batch1';
 import { batch11b } from '../lessons-11-batch2';
 import { batch11c } from '../lessons-11-batch3';
 import { batch12a } from '../lessons-12-batch1';
 import { batch12b } from '../lessons-12-batch2';
+import { batch12c } from '../lessons-12-batch3';
 
 export default {
   portal: {
@@ -147,11 +149,13 @@ export default {
     ...batch2,
     ...batch3,
     ...batch4,
+    ...batch5,
     ...batch11a,
     ...batch11b,
     ...batch11c,
     ...batch12a,
     ...batch12b,
+    ...batch12c,
     '10-quad-funktionen': {
       story: {
         intro: 'Mia sitzt in ihrem kleinen Büro am Hamburger Hafen und starrt auf den Bildschirm. Lumi, ihre Spielfigur in "Hafenlichter", soll elegant über Kisten und Container springen — aber die Sprungkurve sieht einfach falsch aus. "Die Physik stimmt nicht", murmelt sie. Um eine realistische Sprungbahn zu programmieren, braucht Mia quadratische Funktionen.',

@@ -118,6 +118,15 @@ export const lesson = {
 
   connections: [
     {
+      topicId: '10-lineare-funktionen',
+      relation: 'verwandt',
+      why: 'Die lineare Funktion ist die erste der vier Grundklassen — hier dient sie als Vergleichsfolie, dort hat sie ein eigenes Thema',
+      bubble: {
+        character: 'euklid',
+        text: 'Die Gerade ist der einfachste Fall und deshalb der Maßstab für alle anderen: konstante Änderung pro Schritt. Quadratisch heißt, die Änderung ändert sich; exponentiell heißt, sie ändert sich prozentual. Wer $m$ und $b$ sicher lesen kann, erkennt die anderen Klassen daran, worin sie von der Geraden abweichen.',
+      },
+    },
+    {
       topicId: '10-quad-funktionen',
       relation: 'verwandt',
       why: 'Eine Funktionsklasse — die quadratische ist eine von vier Grundtypen',

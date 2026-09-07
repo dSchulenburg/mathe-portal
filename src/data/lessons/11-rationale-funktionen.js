@@ -120,6 +120,15 @@ export const lesson = {
 
   connections: [
     {
+      topicId: '10-stetigkeit',
+      relation: 'baut-auf',
+      why: 'Hebbare Lücke und Polstelle wurden dort zum ersten Mal unterschieden — hier bekommen sie eine Rechenregel',
+      bubble: {
+        character: 'euklid',
+        text: 'Die Frage „Lücke oder Pol?" kennst du schon aus Klasse 10. Neu ist hier nur, dass du sie am Term entscheidest, statt am Graphen: Kürzt sich der kritische Faktor aus dem Nenner heraus, ist die Lücke hebbar und du kannst den fehlenden Punkt nachtragen. Bleibt er stehen, ist es eine Polstelle mit senkrechter Asymptote — und da ist nichts zu retten.',
+      },
+    },
+    {
       topicId: '11-kurvendiskussion',
       relation: 'verwandt',
       why: 'Asymptoten erweitern die klassische Kurvendiskussion um neue Eigenschaften',

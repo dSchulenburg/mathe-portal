@@ -675,4 +675,271 @@ export const exercises = [
       "Die Kettenregel wird zweimal angewandt: einmal für $\\sin(u^3)$ und einmal für $(x^2+1)^3$.",
     tags: ['step-solver', 'kettenregel', 'mehrfache-verkettung', 'sinus', 'ea'],
   },
+
+  // ─── QUOTIENTENREGEL ──────────────────────────────────────────────────────
+  // Die Regel stand seit jeher als Formel in der Lesson, hatte aber keine
+  // einzige Aufgabe (DIDAKTIK-ANALYSE.md, "Curriculum-Luecken"). Die
+  // numerischen Loesungen werden in abl-exercises.test.js symbolisch
+  // nachgerechnet — nicht abgeschrieben.
+
+  {
+    id: 'abl-quot-001',
+    topicId: '11-ableitungsregeln',
+    type: 'numeric-input',
+    diffLevel: 'basis',
+    competencies: ['kommunikation'],
+    points: 5,
+    timeEstimate: 3,
+    data: {
+      questionText:
+        'Leite $f(x) = \\dfrac{x}{x+1}$ mit der Quotientenregel ab und berechne $f\'(1)$.',
+      correctValue: 0.25,
+      tolerance: 0.001,
+    },
+    hintKeys: [
+      '„NAZ minus ZAN durch N Quadrat": $u = x$, $v = x+1$, also $u\' = 1$ und $v\' = 1$.',
+      'Der Zähler kürzt sich stark zusammen: $1 \\cdot (x+1) - x \\cdot 1 = 1$.',
+    ],
+    solutionKey:
+      '$f\'(x) = \\dfrac{1 \\cdot (x+1) - x \\cdot 1}{(x+1)^2} = \\dfrac{1}{(x+1)^2}$. ' +
+      'Für $x = 1$: $f\'(1) = \\dfrac{1}{4} = 0{,}25$.',
+    tags: ['quotientenregel', 'basis-ableitung'],
+  },
+  {
+    id: 'abl-quot-002',
+    topicId: '11-ableitungsregeln',
+    type: 'multiple-choice',
+    diffLevel: 'basis',
+    competencies: ['kommunikation'],
+    points: 5,
+    timeEstimate: 2,
+    data: {
+      questionText:
+        'Welcher Ausdruck ist die Quotientenregel für $\\left[\\dfrac{u(x)}{v(x)}\\right]\'$?',
+      options: [
+        { id: 'a', text: '$\\dfrac{u\' \\cdot v - u \\cdot v\'}{v^2}$', correct: true },
+        { id: 'b', text: '$\\dfrac{u \\cdot v\' - u\' \\cdot v}{v^2}$', correct: false },
+        { id: 'c', text: '$\\dfrac{u\' \\cdot v + u \\cdot v\'}{v^2}$', correct: false },
+        { id: 'd', text: '$\\dfrac{u\'}{v\'}$', correct: false },
+      ],
+    },
+    hintKeys: [
+      'Anders als bei der Produktregel steht im Zähler ein Minus — und die Reihenfolge ist nicht beliebig.',
+    ],
+    solutionKey:
+      'Richtig ist (a). Merkhilfe „NAZ minus ZAN": **N**enner mal **A**bleitung des **Z**ählers, ' +
+      'minus **Z**ähler mal **A**bleitung des **N**enners, alles durch $v^2$. ' +
+      'Antwort (b) ist dieselbe Formel mit vertauschten Vorzeichen — das Ergebnis hat dann überall ' +
+      'das falsche Vorzeichen. (c) ist der Produktregel-Zähler, (d) ist der klassische Trugschluss, ' +
+      'man dürfe Zähler und Nenner einzeln ableiten.',
+    tags: ['quotientenregel', 'verstaendnis'],
+  },
+  {
+    id: 'abl-quot-003',
+    topicId: '11-ableitungsregeln',
+    type: 'numeric-input',
+    diffLevel: 'standard',
+    competencies: ['kommunikation', 'kritisches-denken'],
+    points: 10,
+    timeEstimate: 5,
+    data: {
+      questionText:
+        'Gegeben ist $f(x) = \\dfrac{2x^2 - 3}{x^2 + 1}$. Berechne $f\'(1)$.',
+      correctValue: 2.5,
+      tolerance: 0.01,
+    },
+    hintKeys: [
+      '$u = 2x^2 - 3$, $v = x^2 + 1$, also $u\' = 4x$ und $v\' = 2x$.',
+      'Im Zähler heben sich die $x^3$-Terme auf — es bleibt $10x$.',
+    ],
+    solutionKey:
+      '$f\'(x) = \\dfrac{4x(x^2+1) - (2x^2-3) \\cdot 2x}{(x^2+1)^2} ' +
+      '= \\dfrac{4x^3 + 4x - 4x^3 + 6x}{(x^2+1)^2} = \\dfrac{10x}{(x^2+1)^2}$. ' +
+      'Für $x = 1$: $f\'(1) = \\dfrac{10}{4} = 2{,}5$.',
+    tags: ['quotientenregel', 'gebrochen-rational'],
+  },
+  {
+    id: 'abl-quot-004',
+    topicId: '11-ableitungsregeln',
+    type: 'step-solver',
+    diffLevel: 'standard',
+    competencies: ['kritisches-denken', 'kommunikation'],
+    points: 15,
+    timeEstimate: 8,
+    contextKey: 'Betriebsoptimum',
+    data: {
+      questionText:
+        'Eine kleine Werkstatt produziert Longboards. Die Gesamtkosten für $x$ Boards betragen ' +
+        '$K(x) = 0{,}5x^2 + 8x + 200$ (in €). Die Stückkosten $k(x)$ sind die Gesamtkosten pro Board. ' +
+        'Bei welcher Stückzahl arbeitet die Werkstatt am günstigsten?',
+      steps: [
+        {
+          instruction: 'Wie lautet die Stückkostenfunktion $k(x)$?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: '$k(x) = \\dfrac{0{,}5x^2 + 8x + 200}{x}$' },
+            { id: 'b', text: '$k(x) = 0{,}5x^2 + 8x + 200 - x$' },
+            { id: 'c', text: '$k(x) = x \\cdot (0{,}5x^2 + 8x + 200)$' },
+          ],
+          correctId: 'a',
+          showAnswer:
+            'Stückkosten = Gesamtkosten geteilt durch Stückzahl: $k(x) = \\dfrac{K(x)}{x}$. ' +
+            'Damit ist $k$ ein Quotient — und genau deshalb brauchst du hier die Quotientenregel.',
+        },
+        {
+          instruction: 'Leite $k(x)$ mit der Quotientenregel ab. Wie lautet $k\'(x)$?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: '$k\'(x) = \\dfrac{0{,}5x^2 - 200}{x^2}$' },
+            { id: 'b', text: '$k\'(x) = \\dfrac{0{,}5x^2 + 200}{x^2}$' },
+            { id: 'c', text: '$k\'(x) = \\dfrac{x + 8}{1}$' },
+          ],
+          correctId: 'a',
+          showAnswer:
+            '$u = 0{,}5x^2 + 8x + 200$ mit $u\' = x + 8$; $v = x$ mit $v\' = 1$. ' +
+            '$k\'(x) = \\dfrac{(x+8) \\cdot x - (0{,}5x^2 + 8x + 200) \\cdot 1}{x^2} ' +
+            '= \\dfrac{0{,}5x^2 - 200}{x^2}$. Die $8x$ heben sich weg.',
+        },
+        {
+          instruction: 'Setze $k\'(x) = 0$. Bei welcher Stückzahl liegt das Betriebsoptimum?',
+          type: 'numeric-input',
+          expected: 20,
+          tolerance: 0.01,
+          unit: 'Boards',
+          showAnswer:
+            'Ein Bruch ist null, wenn sein Zähler null ist: $0{,}5x^2 - 200 = 0 \\Rightarrow x^2 = 400 ' +
+            '\\Rightarrow x = 20$ (die negative Lösung entfällt, Stückzahlen sind positiv).',
+        },
+        {
+          instruction: 'Wie hoch sind die Stückkosten im Optimum (in €)?',
+          type: 'numeric-input',
+          expected: 28,
+          tolerance: 0.01,
+          unit: '€',
+          showAnswer:
+            '$k(20) = \\dfrac{0{,}5 \\cdot 400 + 8 \\cdot 20 + 200}{20} = \\dfrac{560}{20} = 28$ €.',
+        },
+      ],
+    },
+    hintKeys: [
+      'Stückkosten sind immer ein Quotient — Gesamtkosten durch Stückzahl.',
+      'Ein Bruch wird null, wenn der Zähler null wird. Der Nenner $x^2$ interessiert dabei nicht.',
+    ],
+    solutionKey:
+      '$k(x) = \\dfrac{0{,}5x^2 + 8x + 200}{x}$, $k\'(x) = \\dfrac{0{,}5x^2 - 200}{x^2}$. ' +
+      'Aus $k\'(x) = 0$ folgt $x = 20$ Boards mit $k(20) = 28$ €. ' +
+      'Das ist das Betriebsoptimum: darunter drücken die Fixkosten von 200 € pro Board zu stark, ' +
+      'darüber wachsen die variablen Kosten schneller als die Stückzahl.',
+    tags: ['step-solver', 'quotientenregel', 'sachkontext', 'stueckkosten', 'betriebsoptimum'],
+  },
+  {
+    id: 'abl-quot-005',
+    topicId: '11-ableitungsregeln',
+    type: 'error-analysis',
+    diffLevel: 'erweitert',
+    competencies: ['kritisches-denken'],
+    points: 12,
+    timeEstimate: 6,
+    data: {
+      questionText:
+        'Lina leitet $f(x) = \\dfrac{x^2 + 1}{x - 1}$ ab. Finde den Fehler in ihrer Rechnung.',
+      steps: [
+        {
+          content: '$u = x^2 + 1$, $v = x - 1$, also $u\' = 2x$ und $v\' = 1$',
+          hasError: false,
+        },
+        {
+          content: '$f\'(x) = \\dfrac{(x^2+1) \\cdot 1 - 2x \\cdot (x-1)}{(x-1)^2}$',
+          hasError: true,
+          errorExplanation:
+            'Lina hat den Zähler vertauscht: sie rechnet $u \\cdot v\' - u\' \\cdot v$ statt ' +
+            '$u\' \\cdot v - u \\cdot v\'$. Das dreht das Vorzeichen der gesamten Ableitung um. ' +
+            'Richtig ist $\\dfrac{2x(x-1) - (x^2+1) \\cdot 1}{(x-1)^2}$.',
+        },
+        {
+          content: '$f\'(x) = \\dfrac{-x^2 + 2x + 1}{(x-1)^2}$',
+          hasError: false,
+        },
+      ],
+    },
+    hintKeys: [
+      'Rechne selbst mit „NAZ minus ZAN" und vergleiche Zeile für Zeile.',
+      'Prüfe die Probe: für $x = 2$ ist $f\'(2) = -1$. Was liefert Linas Term?',
+    ],
+    solutionKey:
+      'Schritt 2 ist falsch. Richtig: $f\'(x) = \\dfrac{2x(x-1) - (x^2+1)}{(x-1)^2} ' +
+      '= \\dfrac{x^2 - 2x - 1}{(x-1)^2}$. ' +
+      'Linas Term ist das exakte Negative davon — Schritt 3 ist deshalb ' +
+      '**in sich korrekt weitergerechnet** und trotzdem falsch. ' +
+      'Das ist typisch für Vorzeichenfehler: sie fallen erst bei der Probe auf. ' +
+      'Für $x = 2$ ergibt die richtige Ableitung $\\dfrac{4-4-1}{1} = -1$, Linas Version $+1$.',
+    tags: ['fehleranalyse', 'quotientenregel', 'vorzeichen'],
+  },
+  {
+    id: 'abl-quot-006',
+    topicId: '11-ableitungsregeln',
+    type: 'step-solver',
+    diffLevel: 'erweitert',
+    competencies: ['kritisches-denken', 'kommunikation'],
+    points: 15,
+    timeEstimate: 8,
+    contextKey: 'Herleitung',
+    data: {
+      questionText:
+        'Der Tangens ist als $\\tan(x) = \\dfrac{\\sin(x)}{\\cos(x)}$ definiert. ' +
+        'Leite die Ableitung des Tangens selbst her — mit der Quotientenregel.',
+      steps: [
+        {
+          instruction: 'Wie lauten $u\'$ und $v\'$ für $u = \\sin(x)$ und $v = \\cos(x)$?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: '$u\' = \\cos(x)$, $v\' = -\\sin(x)$' },
+            { id: 'b', text: '$u\' = \\cos(x)$, $v\' = \\sin(x)$' },
+            { id: 'c', text: '$u\' = -\\cos(x)$, $v\' = \\sin(x)$' },
+          ],
+          correctId: 'a',
+          showAnswer:
+            '$[\\sin(x)]\' = \\cos(x)$ und $[\\cos(x)]\' = -\\sin(x)$. ' +
+            'Das Minus beim Kosinus ist hier entscheidend.',
+        },
+        {
+          instruction: 'Setze in die Quotientenregel ein. Wie lautet der Zähler?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: '$\\cos^2(x) + \\sin^2(x)$' },
+            { id: 'b', text: '$\\cos^2(x) - \\sin^2(x)$' },
+            { id: 'c', text: '$2\\sin(x)\\cos(x)$' },
+          ],
+          correctId: 'a',
+          showAnswer:
+            '$u\'v - uv\' = \\cos(x) \\cdot \\cos(x) - \\sin(x) \\cdot (-\\sin(x)) ' +
+            '= \\cos^2(x) + \\sin^2(x)$. Aus dem Minus der Regel und dem Minus der ' +
+            'Kosinus-Ableitung wird ein Plus.',
+        },
+        {
+          instruction: 'Vereinfache den Zähler mit dem trigonometrischen Pythagoras. Wie lautet $\\tan\'(x)$?',
+          type: 'multiple-choice',
+          options: [
+            { id: 'a', text: '$\\tan\'(x) = \\dfrac{1}{\\cos^2(x)}$' },
+            { id: 'b', text: '$\\tan\'(x) = \\dfrac{1}{\\sin^2(x)}$' },
+            { id: 'c', text: '$\\tan\'(x) = \\cos^2(x) + \\sin^2(x)$' },
+          ],
+          correctId: 'a',
+          showAnswer:
+            '$\\sin^2(x) + \\cos^2(x) = 1$, also $\\tan\'(x) = \\dfrac{1}{\\cos^2(x)}$. ' +
+            'Diese Ableitung steht in jeder Formelsammlung — aber jetzt weißt du, woher sie kommt.',
+        },
+      ],
+    },
+    hintKeys: [
+      'Der trigonometrische Pythagoras lautet $\\sin^2(x) + \\cos^2(x) = 1$.',
+      'Achte auf die zwei Minuszeichen: eines steckt in der Quotientenregel, eines in $[\\cos(x)]\' = -\\sin(x)$.',
+    ],
+    solutionKey:
+      '$\\tan\'(x) = \\dfrac{\\cos(x)\\cos(x) - \\sin(x)(-\\sin(x))}{\\cos^2(x)} ' +
+      '= \\dfrac{\\cos^2(x) + \\sin^2(x)}{\\cos^2(x)} = \\dfrac{1}{\\cos^2(x)}$. ' +
+      'Der Tangens ist überall dort nicht differenzierbar, wo $\\cos(x) = 0$ ist — ' +
+      'also genau an seinen Polstellen bei $x = \\tfrac{\\pi}{2} + k\\pi$.',
+    tags: ['step-solver', 'quotientenregel', 'trigonometrie', 'tangens', 'herleitung', 'ea'],
+  },
 ];
