@@ -3,7 +3,7 @@ export const batch11a = {
     story: {
       intro: 'Amirs ML-Modell für DataPulse liefert brauchbare Songempfehlungen — aber das Training dauert ewig. "Gradient Descent ist im Prinzip nichts anderes als Ableitungen", erklärt ihm seine Mathe-Professorin. "Wenn du verstehst, wie Ableitungsregeln funktionieren, verstehst du auch, warum dein Modell lernt." Amir beschließt, die Regeln systematisch durchzuarbeiten.',
       challenge: 'Amir will verstehen, wie sein ML-Modell intern die Verlustfunktion ableitet — dafür braucht er Potenz-, Summen-, Produkt- und Kettenregel.',
-      outro: 'Amir hat jetzt ein solides Fundament: Potenzregel für einfache Terme, Summen- und Faktorregel für zusammengesetzte Ausdruecke, Produktregel für Multiplikationen und die Kettenregel für verschachtelte Funktionen. "Jetzt verstehe ich endlich, was PyTorch im Hintergrund mit Autograd macht", sagt er zufrieden.',
+      outro: 'Amir hat jetzt ein solides Fundament: Potenzregel für einfache Terme, Summen- und Faktorregel für zusammengesetzte Ausdrücke, Produktregel für Multiplikationen und die Kettenregel für verschachtelte Funktionen. "Jetzt verstehe ich endlich, was PyTorch im Hintergrund mit Autograd macht", sagt er zufrieden.',
     },
     objectives: {
       power_rule: 'Die Potenzregel sicher anwenden: $f(x) = x^n$ ableiten',
@@ -76,7 +76,7 @@ export const batch11a = {
       },
       marginal_cost: {
         title: 'Grenzkosten in der Wirtschaft',
-        desc: 'Die Ableitung der Kostenfunktion $K(x)$ gibt die Grenzkosten: Was kostet eine weitere produzierte Einheit? Unternehmen nutzen das taeglich für Preiskalkulation.',
+        desc: 'Die Ableitung der Kostenfunktion $K(x)$ gibt die Grenzkosten: Was kostet eine weitere produzierte Einheit? Unternehmen nutzen das täglich für Preiskalkulation.',
       },
       acceleration: {
         title: 'Beschleunigung in der Physik',
@@ -107,8 +107,8 @@ export const batch11a = {
 
   '11-kurvendiskussion': {
     story: {
-      intro: 'Amirs Empfehlungsalgorithmus spuckt Ergebnisse aus — aber sind sie wirklich optimal? "Du musst die Verlustfunktion komplett analysieren", sagt sein Professor. "Wo sind die Minima? Wo die Wendepunkte?" Amir merkt: Eine vollstaendige Kurvendiskussion zeigt ihm, ob sein Modell wirklich das globale Minimum gefunden hat oder in einem lokalen Minimum feststeckt.',
-      challenge: 'Amir analysiert die Verlustlandschaft seines Modells: Nullstellen, Extrema, Wendepunkte und Monotonie einer Funktion vollstaendig bestimmen.',
+      intro: 'Amirs Empfehlungsalgorithmus spuckt Ergebnisse aus — aber sind sie wirklich optimal? "Du musst die Verlustfunktion komplett analysieren", sagt sein Professor. "Wo sind die Minima? Wo die Wendepunkte?" Amir merkt: Eine vollständige Kurvendiskussion zeigt ihm, ob sein Modell wirklich das globale Minimum gefunden hat oder in einem lokalen Minimum feststeckt.',
+      challenge: 'Amir analysiert die Verlustlandschaft seines Modells: Nullstellen, Extrema, Wendepunkte und Monotonie einer Funktion vollständig bestimmen.',
       outro: 'Amir kann jetzt jede ganzrationale Funktion komplett charakterisieren: Nullstellen finden, Hoch- und Tiefpunkte bestimmen, Wendepunkte berechnen und das Monotonieverhalten ablesen. "Wenn ich die Verlustlandschaft so zeichne, sehe ich sofort, ob mein Optimizer im richtigen Tal gelandet ist", sagt er.',
     },
     objectives: {
@@ -117,11 +117,11 @@ export const batch11a = {
       monotonicity_symmetry: 'Monotonieverhalten und Symmetrie einer Funktion analysieren',
     },
     explanation: {
-      intro: 'Eine Kurvendiskussion ist die vollstaendige Analyse einer Funktion. Wir beginnen mit den Nullstellen — den Stellen, an denen der Graph die $x$-Achse schneidet:',
-      extrema: 'Extrempunkte (Hoch- und Tiefpunkte) findest du dort, wo die erste Ableitung Null wird. Aber Vorsicht: Nicht jede Nullstelle von $f\'$ ist automatisch ein Extremum! Du brauchst die zweite Ableitung zur Bestaetigung:',
-      amir_tip: 'Die Loss-Landschaft meines Modells hat viele lokale Minima. Mit der Kurvendiskussion kann ich prüfen, ob ein kritischer Punkt wirklich ein Minimum ist — oder nur ein Sattelpunkt, an dem der Optimizer haengenbleibt.',
-      inflection: 'Wendepunkte markieren den Übergang zwischen Links- und Rechtskruemmung. Hier ändert sich das Kruemmungsverhalten — die zweite Ableitung wechselt das Vorzeichen:',
-      monotonicity: 'Das Monotonieverhalten verraet dir, wo die Funktion steigt und wo sie faellt. Du liest es direkt aus dem Vorzeichen der ersten Ableitung ab:',
+      intro: 'Eine Kurvendiskussion ist die vollständige Analyse einer Funktion. Wir beginnen mit den Nullstellen — den Stellen, an denen der Graph die $x$-Achse schneidet:',
+      extrema: 'Extrempunkte (Hoch- und Tiefpunkte) findest du dort, wo die erste Ableitung Null wird. Aber Vorsicht: Nicht jede Nullstelle von $f\'$ ist automatisch ein Extremum! Du brauchst die zweite Ableitung zur Bestätigung:',
+      amir_tip: 'Die Loss-Landschaft meines Modells hat viele lokale Minima. Mit der Kurvendiskussion kann ich prüfen, ob ein kritischer Punkt wirklich ein Minimum ist — oder nur ein Sattelpunkt, an dem der Optimizer hängenbleibt.',
+      inflection: 'Wendepunkte markieren den Übergang zwischen Links- und Rechtskrümmung. Hier ändert sich das Krümmungsverhalten — die zweite Ableitung wechselt das Vorzeichen:',
+      monotonicity: 'Das Monotonieverhalten verrät dir, wo die Funktion steigt und wo sie fällt. Du liest es direkt aus dem Vorzeichen der ersten Ableitung ab:',
     },
     concepts: {
       extrema: {
@@ -130,7 +130,7 @@ export const batch11a = {
       },
       inflection: {
         title: 'Wendepunkte',
-        desc: 'Wo die Kruemmung wechselt: $f\'\'(x_0) = 0$ UND $f\'\'\'(x_0) \\neq 0$. Bei Normalverteilungen markieren Wendepunkte die Standardabweichung.',
+        desc: 'Wo die Krümmung wechselt: $f\'\'(x_0) = 0$ UND $f\'\'\'(x_0) \\neq 0$. Bei Normalverteilungen markieren Wendepunkte die Standardabweichung.',
       },
       symmetry: {
         title: 'Symmetrie',
@@ -139,20 +139,20 @@ export const batch11a = {
     },
     examples: {
       complete_analysis: {
-        title: 'Vollstaendige Kurvendiskussion',
+        title: 'Vollständige Kurvendiskussion',
         context: 'Amir untersucht eine kubische Funktion — ähnlich wie Verlustfunktionen mit mehreren Extrema.',
         step1: 'Gegeben ist die Funktion — wir analysieren sie komplett:',
         step2: 'Erste Ableitung bilden und Nullstellen bestimmen (notwendige Bedingung für Extrema):',
         step3: 'Zweite Ableitung an den kritischen Stellen auswerten (hinreichende Bedingung): Negativer Wert = Hochpunkt, positiver Wert = Tiefpunkt:',
-        step4: 'Wendepunkt über $f\'\' = 0$ bestimmen und mit dritter Ableitung bestaetigen:',
+        step4: 'Wendepunkt über $f\'\' = 0$ bestimmen und mit dritter Ableitung bestätigen:',
         amir_comment: 'Genau so analysiere ich die Loss-Landschaft: Erst kritische Punkte finden, dann prüfen ob Minimum oder Sattelpunkt. Bei hochdimensionalen Funktionen macht mein Optimizer das numerisch — aber das Prinzip ist identisch.',
       },
       graph_properties: {
         title: 'Symmetrie und Extrema nutzen',
-        context: 'Eine symmetrische Funktion — die Hälfte der Arbeit entfaellt durch Symmetrie.',
+        context: 'Eine symmetrische Funktion — die Hälfte der Arbeit entfällt durch Symmetrie.',
         step1: 'Gegeben ist eine Funktion 4. Grades — wir prüfen zuerst Symmetrie:',
         step2: 'Einsetzen von $-x$: Alle Exponenten gerade, also $f(-x) = f(x)$ — achsensymmetrisch! Extrema kommen symmetrisch vor:',
-        step3: 'Erste Ableitung Null setzen — durch Symmetrie genuegt es, die positiven Lösungen zu finden:',
+        step3: 'Erste Ableitung Null setzen — durch Symmetrie genügt es, die positiven Lösungen zu finden:',
         step4: 'Funktionswerte berechnen — dank Symmetrie gilt $f(\\sqrt{2}) = f(-\\sqrt{2})$:',
         amir_comment: 'Symmetrie in Daten ist Gold wert: Wenn ich weiss, dass meine Verlustfunktion symmetrisch ist, muss ich nur die Hälfte des Parameterraums durchsuchen. Das halbiert die Trainingszeit!',
       },
@@ -160,14 +160,14 @@ export const batch11a = {
     realworld: {
       data_distribution: {
         title: 'Datenverteilungen analysieren',
-        desc: 'Die Normalverteilung hat Wendepunkte bei $\\mu \\pm \\sigma$. Kurvendiskussion verraet dir, wo sich die meisten Datenpunkte konzentrieren und wo die Streuung beginnt.',
+        desc: 'Die Normalverteilung hat Wendepunkte bei $\\mu \\pm \\sigma$. Kurvendiskussion verrät dir, wo sich die meisten Datenpunkte konzentrieren und wo die Streuung beginnt.',
       },
       profit_analysis: {
         title: 'Gewinnmaximierung',
-        desc: 'Die Gewinnfunktion $G(x)$ hat ein Maximum — die optimale Produktionsmenge. Kurvendiskussion zeigt exakt, bei welcher Stueckzahl der Gewinn maximal ist.',
+        desc: 'Die Gewinnfunktion $G(x)$ hat ein Maximum — die optimale Produktionsmenge. Kurvendiskussion zeigt exakt, bei welcher Stückzahl der Gewinn maximal ist.',
       },
       population_growth: {
-        title: 'Bevoelkerungswachstum',
+        title: 'Bevölkerungswachstum',
         desc: 'Der Wendepunkt einer Wachstumskurve markiert den Moment, ab dem das Wachstum abnimmt. Epidemiologen nutzen genau diese Analyse für Infektionskurven.',
       },
     },
@@ -176,12 +176,12 @@ export const batch11a = {
         wrong: 'Jede Nullstelle von $f\'$ ist automatisch ein Extrempunkt',
         correct: 'Nullstelle von $f\'$ PLUS Vorzeichenwechsel oder $f\'\' \\neq 0$ prüfen',
         why: 'Bei $f(x) = x^3$ ist $f\'(0) = 0$, aber kein Extremum — sondern ein Sattelpunkt! Du MUSST die hinreichende Bedingung ($f\'\' \\neq 0$ oder Vorzeichenwechsel von $f\'$) prüfen.',
-        amir_warning: 'In höheren Dimensionen heissen solche Stellen "Saddle Points" — der Optimizer bleibt dort haengen und denkt, er hat ein Minimum gefunden. Immer die zweite Ableitung checken!',
+        amir_warning: 'In höheren Dimensionen heissen solche Stellen "Saddle Points" — der Optimizer bleibt dort hängen und denkt, er hat ein Minimum gefunden. Immer die zweite Ableitung checken!',
       },
       inflection_second_only: {
         wrong: '$f\'\'(x_0) = 0$ reicht für einen Wendepunkt',
-        correct: '$f\'\'(x_0) = 0$ UND $f\'\'\'(x_0) \\neq 0$ zusammen bestaetigen den Wendepunkt',
-        why: 'Bei $f(x) = x^4$ ist $f\'\'(0) = 0$, aber kein Wendepunkt — die Kruemmung wechselt nicht! Die dritte Ableitung muss ungleich Null sein, um den Kruemmungswechsel zu garantieren.',
+        correct: '$f\'\'(x_0) = 0$ UND $f\'\'\'(x_0) \\neq 0$ zusammen bestätigen den Wendepunkt',
+        why: 'Bei $f(x) = x^4$ ist $f\'\'(0) = 0$, aber kein Wendepunkt — die Krümmung wechselt nicht! Die dritte Ableitung muss ungleich Null sein, um den Krümmungswechsel zu garantieren.',
         amir_warning: 'Gleiche Falle wie bei Extrema: Die notwendige Bedingung allein reicht nie. Immer die hinreichende Bedingung prüfen — sonst vertraust du einem falschen Ergebnis.',
       },
     },
@@ -189,7 +189,7 @@ export const batch11a = {
 
   '11-extremwertaufgaben': {
     story: {
-      intro: 'DataPulse soll auf dem Handy laufen — aber Amirs Modell braucht zu viel Speicher. "Du musst die Netzwerkarchitektur optimieren", sagt seine Teamkollegin Sara. "Maximale Genauigkeit bei minimalem Speicherverbrauch." Amir erkennt: Das ist eine klassische Extremwertaufgabe — eine Größe optimieren, während eine andere Größe eingeschraenkt ist.',
+      intro: 'DataPulse soll auf dem Handy laufen — aber Amirs Modell braucht zu viel Speicher. "Du musst die Netzwerkarchitektur optimieren", sagt seine Teamkollegin Sara. "Maximale Genauigkeit bei minimalem Speicherverbrauch." Amir erkennt: Das ist eine klassische Extremwertaufgabe — eine Größe optimieren, während eine andere Größe eingeschränkt ist.',
       challenge: 'Amir will die beste Modellarchitektur finden: maximale Vorhersagequalität unter der Nebenbedingung begrenzter Rechenressourcen.',
       outro: 'Amir hat das Prinzip verstanden: Zielfunktion aufstellen, Nebenbedingung einsetzen, auf eine Variable reduzieren, ableiten, Null setzen, prüfen. "Ob Dosendimensionen oder Modellparameter — das Schema ist immer dasselbe", stellt er fest. Sein Modell passt jetzt auf 50 MB.',
     },
@@ -199,41 +199,41 @@ export const batch11a = {
       verify_extremum: 'Mit der zweiten Ableitung prüfen, ob ein Maximum oder Minimum vorliegt, und Randwerte berücksichtigen',
     },
     explanation: {
-      intro: 'Bei Extremwertaufgaben geht es immer um dasselbe: Eine Größe soll möglichst groß oder klein werden (Zielfunktion), während eine Einschraenkung gilt (Nebenbedingung):',
-      strategy: 'Die Strategie ist immer gleich: (1) Zielfunktion aufstellen — was soll optimiert werden? (2) Nebenbedingung finden — welche Einschraenkung gilt? (3) Nebenbedingung nach einer Variablen aufloesen und in die Zielfunktion einsetzen. (4) Ableiten, Null setzen, prüfen.',
+      intro: 'Bei Extremwertaufgaben geht es immer um dasselbe: Eine Größe soll möglichst groß oder klein werden (Zielfunktion), während eine Einschränkung gilt (Nebenbedingung):',
+      strategy: 'Die Strategie ist immer gleich: (1) Zielfunktion aufstellen — was soll optimiert werden? (2) Nebenbedingung finden — welche Einschränkung gilt? (3) Nebenbedingung nach einer Variablen auflösen und in die Zielfunktion einsetzen. (4) Ableiten, Null setzen, prüfen.',
       amir_tip: 'Hyperparameter-Tuning ist genau so eine Extremwertaufgabe: Ich will den Validierungsfehler minimieren (Zielfunktion), aber mein GPU-Speicher ist begrenzt (Nebenbedingung). Das Schema aus dem Mathe-Unterricht funktioniert 1:1!',
-      substitution: 'Nach dem Einsetzen der Nebenbedingung haengt die Zielfunktion nur noch von einer Variablen ab. Jetzt wird ganz normal abgeleitet und die kritische Stelle geprueft:',
+      substitution: 'Nach dem Einsetzen der Nebenbedingung hängt die Zielfunktion nur noch von einer Variablen ab. Jetzt wird ganz normal abgeleitet und die kritische Stelle geprüft:',
       domain_check: 'Vergiss nicht den Definitionsbereich! Bei realen Problemen gibt es oft Grenzen (z.B. $r > 0$ bei einem Radius). Vergleiche den Funktionswert an der kritischen Stelle mit den Randwerten — manchmal liegt das Optimum am Rand.',
     },
     concepts: {
       target_function: {
         title: 'Zielfunktion',
-        desc: 'Die Größe, die optimiert werden soll — maximaler Gewinn, minimale Oberflaeche, beste Genauigkeit. Haengt anfangs oft von zwei Variablen ab.',
+        desc: 'Die Größe, die optimiert werden soll — maximaler Gewinn, minimale Oberfläche, beste Genauigkeit. Hängt anfangs oft von zwei Variablen ab.',
       },
       constraint: {
         title: 'Nebenbedingung',
-        desc: 'Die Einschraenkung, die gilt — festes Volumen, begrenztes Budget, begrenzte Parameter. Erlaubt es, eine Variable zu eliminieren und die Zielfunktion auf eine Variable zu reduzieren.',
+        desc: 'Die Einschränkung, die gilt — festes Volumen, begrenztes Budget, begrenzte Parameter. Erlaubt es, eine Variable zu eliminieren und die Zielfunktion auf eine Variable zu reduzieren.',
       },
       boundary_check: {
-        title: 'Randwertpruefung',
-        desc: 'Das Optimum kann auch am Rand des Definitionsbereichs liegen. Immer $f(x_{opt})$ mit den Funktionswerten an den Raendern $f(a)$ und $f(b)$ vergleichen.',
+        title: 'Randwertprüfung',
+        desc: 'Das Optimum kann auch am Rand des Definitionsbereichs liegen. Immer $f(x_{opt})$ mit den Funktionswerten an den Rändern $f(a)$ und $f(b)$ vergleichen.',
       },
     },
     examples: {
       can_volume: {
         title: 'Dose mit minimalem Materialverbrauch',
         context: 'Eine zylindrische Dose soll 330 ml fassen — bei möglichst wenig Blech.',
-        step1: 'Nebenbedingung: Das Volumen ist fest. Nach $h$ aufloesen, um eine Variable zu eliminieren:',
-        step2: 'Zielfunktion (Oberflaeche) aufstellen und $h$ einsetzen — jetzt haengt alles nur noch von $r$ ab:',
-        step3: 'Ableiten, Null setzen und nach $r$ aufloesen — das ist der optimale Radius:',
+        step1: 'Nebenbedingung: Das Volumen ist fest. Nach $h$ auflösen, um eine Variable zu eliminieren:',
+        step2: 'Zielfunktion (Oberfläche) aufstellen und $h$ einsetzen — jetzt hängt alles nur noch von $r$ ab:',
+        step3: 'Ableiten, Null setzen und nach $r$ auflösen — das ist der optimale Radius:',
         step4: 'Zweite Ableitung prüfen: Positiv bedeutet Minimum — wir haben tatsächlich die sparsamste Dose gefunden:',
         amir_comment: 'Das ist exakt wie Modellkompression: Feste Genauigkeit (Nebenbedingung), minimale Parameteranzahl (Zielfunktion). Ich ersetze $r$ durch "Layerbreite" und $h$ durch "Tiefe" — gleiches Prinzip!',
       },
       profit_max: {
         title: 'Maximaler Gewinn',
         context: 'Ein Startup will den optimalen Preis für sein Abo-Modell finden.',
-        step1: 'Gewinnfunktion aufstellen: Erloes minus Kosten — hier schon in einer Variablen:',
-        step2: 'Ableitung Null setzen — die optimale Stueckzahl:',
+        step1: 'Gewinnfunktion aufstellen: Erlös minus Kosten — hier schon in einer Variablen:',
+        step2: 'Ableitung Null setzen — die optimale Stückzahl:',
         step3: 'Zweite Ableitung ist negativ — also ein Maximum. Der Gewinn wird hier tatsächlich maximal:',
         step4: 'Maximalen Gewinn berechnen durch Einsetzen:',
         amir_comment: 'Preisoptimierung ist ein Klassiker in Data Science. Bei DataPulse könnten wir die optimale Abo-Stufe genauso berechnen — Gewinn maximieren unter der Bedingung, dass Nutzer nicht abspringen.',
@@ -246,7 +246,7 @@ export const batch11a = {
       },
       packaging: {
         title: 'Verpackungsdesign',
-        desc: 'Minimaler Materialverbrauch bei festem Volumen — genau das lösen Ingenieure taeglich. Jede Getraenkedose, jeder Karton ist das Ergebnis einer Extremwertaufgabe.',
+        desc: 'Minimaler Materialverbrauch bei festem Volumen — genau das lösen Ingenieure täglich. Jede Getränkedose, jeder Karton ist das Ergebnis einer Extremwertaufgabe.',
       },
       solar_panel: {
         title: 'Solarpanel-Ausrichtung',
@@ -257,35 +257,35 @@ export const batch11a = {
       no_constraint: {
         wrong: 'Zielfunktion mit zwei Variablen direkt ableiten',
         correct: 'Erst Nebenbedingung einsetzen, dann ableiten',
-        why: 'Mit zwei Variablen kannst du nicht einfach nach $x$ ableiten — $y$ ändert sich mit! Du MUSST die Nebenbedingung nutzen, um $y$ durch $x$ auszudruecken. Erst dann haengt alles von einer Variablen ab.',
+        why: 'Mit zwei Variablen kannst du nicht einfach nach $x$ ableiten — $y$ ändert sich mit! Du MUSST die Nebenbedingung nutzen, um $y$ durch $x$ auszudrücken. Erst dann hängt alles von einer Variablen ab.',
         amir_warning: 'Das ist wie ein ML-Modell mit zu vielen freien Parametern: Ohne Constraints kein sinnvolles Optimum. Die Nebenbedingung reduziert die Freiheitsgrade — genau wie Regularisierung.',
       },
       no_boundary: {
         wrong: 'Kritische Stelle als globales Optimum annehmen',
         correct: 'Kritische Stelle mit Randwerten vergleichen',
-        why: 'Auf einem beschraenkten Intervall $[a, b]$ kann das Optimum am Rand liegen! $f\'(x_0) = 0$ liefert nur lokale Kandidaten. Du musst $f(x_0)$, $f(a)$ und $f(b)$ vergleichen.',
-        amir_warning: 'In der Praxis hat jeder Parameter einen erlaubten Bereich. Meine Lernrate darf nicht negativ sein, die Batchgroesse nicht über den GPU-Speicher hinaus. Randwerte prüfen ist Pflicht!',
+        why: 'Auf einem beschränkten Intervall $[a, b]$ kann das Optimum am Rand liegen! $f\'(x_0) = 0$ liefert nur lokale Kandidaten. Du musst $f(x_0)$, $f(a)$ und $f(b)$ vergleichen.',
+        amir_warning: 'In der Praxis hat jeder Parameter einen erlaubten Bereich. Meine Lernrate darf nicht negativ sein, die Batchgröße nicht über den GPU-Speicher hinaus. Randwerte prüfen ist Pflicht!',
       },
     },
   },
 
   '11-integralrechnung': {
     story: {
-      intro: 'DataPulse läuft — aber Amir braucht eine neue Metrik: Wie viele Songs hören Nutzer insgesamt pro Woche? Er hat die Hörrate $r(t)$ als Funktion der Zeit, aber er braucht die Gesamtanzahl. "Rate mal Zeit ergibt Menge — aber die Rate ändert sich staendig", gruebelst Amir. Sein Kumpel Kai grinst: "Klingt nach einem Integral."',
-      challenge: 'Amir will aus der zeitabhaengigen Hörrate $r(t)$ die Gesamtzahl gehörter Songs berechnen — das führt ihn zur Integralrechnung.',
-      outro: 'Amir kann jetzt Stammfunktionen bilden, bestimmte Integrale berechnen und Flaechen zwischen Kurven bestimmen. "Integration ist die Umkehrung der Ableitung — und in der Praxis summiere ich damit kontinuierliche Daten auf", fasst er zusammen. Seine Weekly-Listening-Metrik steht.',
+      intro: 'DataPulse läuft — aber Amir braucht eine neue Metrik: Wie viele Songs hören Nutzer insgesamt pro Woche? Er hat die Hörrate $r(t)$ als Funktion der Zeit, aber er braucht die Gesamtanzahl. "Rate mal Zeit ergibt Menge — aber die Rate ändert sich ständig", grübelst Amir. Sein Kumpel Kai grinst: "Klingt nach einem Integral."',
+      challenge: 'Amir will aus der zeitabhängigen Hörrate $r(t)$ die Gesamtzahl gehörter Songs berechnen — das führt ihn zur Integralrechnung.',
+      outro: 'Amir kann jetzt Stammfunktionen bilden, bestimmte Integrale berechnen und Flächen zwischen Kurven bestimmen. "Integration ist die Umkehrung der Ableitung — und in der Praxis summiere ich damit kontinuierliche Daten auf", fasst er zusammen. Seine Weekly-Listening-Metrik steht.',
     },
     objectives: {
       antiderivative: 'Stammfunktionen mit der Potenzregel rückwärts bilden und die Integrationskonstante $C$ verstehen',
       definite_integral: 'Bestimmte Integrale mit dem Hauptsatz berechnen: $\\int_a^b f(x)\\,dx = F(b) - F(a)$',
-      fundamental_theorem: 'Den Hauptsatz der Differential- und Integralrechnung verstehen und bei Flaechenberechnungen anwenden',
+      fundamental_theorem: 'Den Hauptsatz der Differential- und Integralrechnung verstehen und bei Flächenberechnungen anwenden',
     },
     explanation: {
-      intro: 'Integration ist die Umkehrung der Ableitung: Wenn $F\'(x) = f(x)$, dann ist $F(x)$ eine Stammfunktion von $f(x)$. Die allgemeine Stammfunktion enthaelt immer die Konstante $C$:',
-      power_rule_integral: 'Die Potenzregel rückwärts: Exponent um 1 erhoehen und durch den neuen Exponenten teilen. Das funktioniert für alle $n \\neq -1$:',
+      intro: 'Integration ist die Umkehrung der Ableitung: Wenn $F\'(x) = f(x)$, dann ist $F(x)$ eine Stammfunktion von $f(x)$. Die allgemeine Stammfunktion enthält immer die Konstante $C$:',
+      power_rule_integral: 'Die Potenzregel rückwärts: Exponent um 1 erhöhen und durch den neuen Exponenten teilen. Das funktioniert für alle $n \\neq -1$:',
       amir_tip: 'Integration ist wie Aggregation in Datenbanken: Ableitung gibt die momentane Änderungsrate, Integration summiert alles auf. Wenn ich die Downloads pro Stunde kenne, gibt mir das Integral die Gesamtdownloads über einen Zeitraum.',
       definite_integral: 'Das bestimmte Integral berechnet den "Gesamteffekt" zwischen zwei Grenzen. Der Hauptsatz macht es einfach: Stammfunktion an der oberen Grenze minus Stammfunktion an der unteren Grenze:',
-      area_interpretation: 'Geometrisch ist das bestimmte Integral die Flaeche zwischen Kurve und $x$-Achse. Achtung: Flaechen unterhalb der $x$-Achse zählen negativ! Für die echte Flaeche brauchst du den Betrag:',
+      area_interpretation: 'Geometrisch ist das bestimmte Integral die Fläche zwischen Kurve und $x$-Achse. Achtung: Flächen unterhalb der $x$-Achse zählen negativ! Für die echte Fläche brauchst du den Betrag:',
     },
     concepts: {
       antiderivative: {
@@ -294,26 +294,26 @@ export const batch11a = {
       },
       definite_integral: {
         title: 'Bestimmtes Integral',
-        desc: 'Berechnet die vorzeichenbehaftete Flaeche zwischen $f(x)$ und der $x$-Achse von $a$ bis $b$. Obere Grenze einsetzen minus untere Grenze einsetzen.',
+        desc: 'Berechnet die vorzeichenbehaftete Fläche zwischen $f(x)$ und der $x$-Achse von $a$ bis $b$. Obere Grenze einsetzen minus untere Grenze einsetzen.',
       },
       fundamental_theorem: {
         title: 'Hauptsatz der Analysis',
-        desc: 'Verbindet Ableitung und Integral: Ableiten und Integrieren sind Umkehroperationen. Das bestimmte Integral laesst sich über die Stammfunktion berechnen.',
+        desc: 'Verbindet Ableitung und Integral: Ableiten und Integrieren sind Umkehroperationen. Das bestimmte Integral lässt sich über die Stammfunktion berechnen.',
       },
     },
     examples: {
       area_calculation: {
-        title: 'Flaeche zwischen Parabel und $x$-Achse',
-        context: 'Amir visualisiert die Verteilung von Hörzeit als Flaeche unter einer Kurve.',
+        title: 'Fläche zwischen Parabel und $x$-Achse',
+        context: 'Amir visualisiert die Verteilung von Hörzeit als Fläche unter einer Kurve.',
         step1: 'Funktion und Nullstellen bestimmen — das sind unsere Integrationsgrenzen:',
         step2: 'Stammfunktion bilden mit der Potenzregel rückwärts:',
         step3: 'Bestimmtes Integral berechnen: Obere Grenze einsetzen minus untere Grenze einsetzen:',
-        step4: 'Das Integral ist negativ, weil die Parabel unterhalb der $x$-Achse liegt. Für die Flaeche den Betrag nehmen:',
+        step4: 'Das Integral ist negativ, weil die Parabel unterhalb der $x$-Achse liegt. Für die Fläche den Betrag nehmen:',
         amir_comment: 'Negative Integrale machen in der Datenanalyse total Sinn: Wenn $f(x)$ die Abweichung vom Durchschnitt ist, zeigt ein negatives Integral, dass die Werte insgesamt unter dem Schnitt lagen.',
       },
       distance_from_velocity: {
         title: 'Strecke aus Geschwindigkeit berechnen',
-        context: 'Wie weit faehrt ein autonom fahrendes Auto in 4 Sekunden?',
+        context: 'Wie weit fährt ein autonom fahrendes Auto in 4 Sekunden?',
         step1: 'Gegeben ist die Geschwindigkeitsfunktion:',
         step2: 'Die Gesamtstrecke ist das Integral der Geschwindigkeit über die Zeit:',
         step3: 'Stammfunktion bilden — jeden Term einzeln integrieren:',
@@ -324,7 +324,7 @@ export const batch11a = {
     realworld: {
       data_aggregation: {
         title: 'Datenaggregation über Zeit',
-        desc: 'Wenn die Datenrate $r(t)$ bekannt ist, liefert das Integral die Gesamtmenge über einen Zeitraum. So berechnen Streaming-Dienste monatliche Hörminuten aus sekuendlichen Daten.',
+        desc: 'Wenn die Datenrate $r(t)$ bekannt ist, liefert das Integral die Gesamtmenge über einen Zeitraum. So berechnen Streaming-Dienste monatliche Hörminuten aus sekündlichen Daten.',
       },
       energy_consumption: {
         title: 'Energieverbrauch',
@@ -332,21 +332,21 @@ export const batch11a = {
       },
       probability: {
         title: 'Wahrscheinlichkeiten',
-        desc: 'Die Wahrscheinlichkeit, dass eine Zufallsvariable zwischen $a$ und $b$ liegt, ist die Flaeche unter der Dichtefunktion — also ein bestimmtes Integral. Die Grundlage aller Statistik.',
+        desc: 'Die Wahrscheinlichkeit, dass eine Zufallsvariable zwischen $a$ und $b$ liegt, ist die Fläche unter der Dichtefunktion — also ein bestimmtes Integral. Die Grundlage aller Statistik.',
       },
     },
     mistakes: {
       constant_forgotten: {
         wrong: 'Integrationskonstante $C$ bei unbestimmten Integralen vergessen',
-        correct: 'Immer $+ C$ anhaengen beim unbestimmten Integral',
-        why: 'Wenn $F\'(x) = 2x$, dann ist sowohl $x^2$ als auch $x^2 + 7$ eine Stammfunktion. Das $+C$ repraesentiert alle möglichen Stammfunktionen. Beim bestimmten Integral kürzt sich $C$ raus — dort darfst du es weglassen.',
+        correct: 'Immer $+ C$ anhängen beim unbestimmten Integral',
+        why: 'Wenn $F\'(x) = 2x$, dann ist sowohl $x^2$ als auch $x^2 + 7$ eine Stammfunktion. Das $+C$ repräsentiert alle möglichen Stammfunktionen. Beim bestimmten Integral kürzt sich $C$ raus — dort darfst du es weglassen.',
         amir_warning: 'In der Praxis ist $C$ die Anfangsbedingung: Wie viele Songs hatte der Nutzer schon gehört, bevor wir angefangen haben zu messen? Ohne $C$ fehlt der Startwert, und deine Berechnung startet bei Null statt beim echten Wert.',
       },
       negative_area: {
-        wrong: 'Integral direkt als Flaeche interpretieren, auch wenn negativ',
-        correct: 'Für echte Flaechen den Betrag der Integralwerte nehmen',
-        why: 'Das Integral $\\int_a^b f(x)\\,dx$ kann negativ sein, wenn $f(x) < 0$. Das ist korrekt als vorzeichenbehaftete Flaeche. Wenn du die geometrische Flaeche brauchst, musst du $|f(x)|$ integrieren oder die Teilflaechen einzeln berechnen.',
-        amir_warning: 'Stell dir vor, du berechnest die Gesamthoerzeit und bekommst ein negatives Ergebnis — das waere offensichtlich falsch. Bei Flaechenproblemen immer prüfen, ob die Funktion das Vorzeichen wechselt, und Teilintervalle separat berechnen!',
+        wrong: 'Integral direkt als Fläche interpretieren, auch wenn negativ',
+        correct: 'Für echte Flächen den Betrag der Integralwerte nehmen',
+        why: 'Das Integral $\\int_a^b f(x)\\,dx$ kann negativ sein, wenn $f(x) < 0$. Das ist korrekt als vorzeichenbehaftete Fläche. Wenn du die geometrische Fläche brauchst, musst du $|f(x)|$ integrieren oder die Teilflächen einzeln berechnen.',
+        amir_warning: 'Stell dir vor, du berechnest die Gesamthörzeit und bekommst ein negatives Ergebnis — das wäre offensichtlich falsch. Bei Flächenproblemen immer prüfen, ob die Funktion das Vorzeichen wechselt, und Teilintervalle separat berechnen!',
       },
     },
   },

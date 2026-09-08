@@ -101,7 +101,7 @@ export const lesson = {
       correctKey: 'mistakes.no_boundary.correct',
       explanationKey: 'mistakes.no_boundary.why',
       wrongFormula: 'f\'(x_0) = 0 \\;\\Rightarrow\\; \\text{globales Optimum}',
-      correctFormula: 'f(x_0) \\text{ vergleichen mit } f(a),\\; f(b) \\text{ an den Raendern}',
+      correctFormula: 'f(x_0) \\text{ vergleichen mit } f(a),\\; f(b) \\text{ an den Rändern}',
       characterWarning: 'mistakes.no_boundary.amir_warning',
     },
   ],

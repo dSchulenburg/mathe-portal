@@ -22,7 +22,7 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Eine Stammfunktion F(x) erfuellt F′(x) = f(x).',
+      'Eine Stammfunktion F(x) erfüllt F′(x) = f(x).',
       'Potenzregel rückwärts: ∫xⁿ dx = xⁿ⁺¹/(n+1). Also ∫3x² dx = ?',
     ],
     solutionKey:
@@ -52,7 +52,7 @@ export const exercises = [
     ],
     solutionKey:
       'F(x) = x². ∫₀² 2x dx = [x²]₀² = 2² − 0² = 4 − 0 = 4. ' +
-      'Das entspricht der Flaeche unter der Geraden y = 2x von 0 bis 2 (Dreieck: ½ · 2 · 4 = 4 ✓).',
+      'Das entspricht der Fläche unter der Geraden y = 2x von 0 bis 2 (Dreieck: ½ · 2 · 4 = 4 ✓).',
     tags: ['bestimmtes-integral', 'potenzregel', 'grenzen'],
   },
 
@@ -93,7 +93,7 @@ export const exercises = [
     timeEstimate: 4,
     data: {
       questionText:
-        'Berechne die Flaeche unter der Geraden f(x) = 3 von x = 0 bis x = 4 ' +
+        'Berechne die Fläche unter der Geraden f(x) = 3 von x = 0 bis x = 4 ' +
         'mithilfe des Integrals ∫₀⁴ 3 dx.',
       correctValue: 12,
       tolerance: 0.01,
@@ -104,7 +104,7 @@ export const exercises = [
     ],
     solutionKey:
       '∫₀⁴ 3 dx = [3x]₀⁴ = 12 − 0 = 12. ' +
-      'Geometrisch: Rechteck mit Breite 4 und Höhe 3 → Flaeche = 4 · 3 = 12. ✓',
+      'Geometrisch: Rechteck mit Breite 4 und Höhe 3 → Fläche = 4 · 3 = 12. ✓',
     tags: ['integral', 'konstante-funktion', 'flaeche'],
   },
 
@@ -121,8 +121,8 @@ export const exercises = [
         'Was ist der geometrische Inhalt des bestimmten Integrals ∫ₐᵇ f(x) dx, ' +
         'wenn f(x) ≥ 0 auf [a; b]?',
       options: [
-        { id: 'a', text: 'Die Flaeche zwischen dem Graphen von f und der x-Achse', correct: true },
-        { id: 'b', text: 'Die Laenge des Graphen von a bis b', correct: false },
+        { id: 'a', text: 'Die Fläche zwischen dem Graphen von f und der x-Achse', correct: true },
+        { id: 'b', text: 'Die Länge des Graphen von a bis b', correct: false },
         { id: 'c', text: 'Der Mittelwert von f(x) auf [a; b]', correct: false },
         { id: 'd', text: 'Die Steigung von f an der Stelle x = a', correct: false },
       ],
@@ -132,7 +132,7 @@ export const exercises = [
       'Jedes Rechteck hat Breite dx und Höhe f(x).',
     ],
     solutionKey:
-      'Das bestimmte Integral ∫ₐᵇ f(x) dx gibt (für f ≥ 0) die Flaeche unter dem Graphen ' +
+      'Das bestimmte Integral ∫ₐᵇ f(x) dx gibt (für f ≥ 0) die Fläche unter dem Graphen ' +
       'zwischen x = a und x = b und der x-Achse an. Das ist die geometrische Grundinterpretation.',
     tags: ['interpretation', 'flaeche', 'grundbegriff'],
   },
@@ -151,7 +151,7 @@ export const exercises = [
     timeEstimate: 6,
     data: {
       questionText:
-        'Berechne die Flaeche unter der Parabel f(x) = x² − 1 von x = 1 bis x = 3 ' +
+        'Berechne die Fläche unter der Parabel f(x) = x² − 1 von x = 1 bis x = 3 ' +
         '(der Graph liegt dort über der x-Achse). Bestimme ∫₁³ (x² − 1) dx.',
       correctValue: 5.33,
       tolerance: 0.02,
@@ -163,7 +163,7 @@ export const exercises = [
     solutionKey:
       'F(x) = x³/3 − x. F(3) = 27/3 − 3 = 9 − 3 = 6. F(1) = 1/3 − 1 = −2/3. ' +
       '∫₁³ (x²−1) dx = 6 − (−2/3) = 6 + 2/3 = 20/3 ≈ 6.67.' +
-      ' Hinweis: Falls Aufgabenstellung Flaeche ab 0 bis 3 gemeint war, ' +
+      ' Hinweis: Falls Aufgabenstellung Fläche ab 0 bis 3 gemeint war, ' +
       'muss das Vorzeichen beachtet werden.',
     tags: ['parabel', 'bestimmtes-integral', 'flaeche'],
   },
@@ -176,11 +176,11 @@ export const exercises = [
     competencies: ['kommunikation', 'kritisches-denken'],
     points: 12,
     timeEstimate: 8,
-    contextKey: 'Pool befuellen',
+    contextKey: 'Pool befüllen',
     data: {
       questionText:
         'Wasser fliesst in einen Pool mit der Rate f(t) = 2t + 1 Liter pro Minute (0 ≤ t ≤ 5). ' +
-        'Bestimme die gesamte eingefuellte Wassermenge in den ersten 5 Minuten.',
+        'Bestimme die gesamte eingefüllte Wassermenge in den ersten 5 Minuten.',
       steps: [
         {
           instruction: 'Welche Stammfunktion F(t) gehört zu f(t) = 2t + 1?',
@@ -231,7 +231,7 @@ export const exercises = [
       questionText:
         'Ein Marathon-Läufer hat in der ersten Stunde die Geschwindigkeit ' +
         'v(t) = 12 − 2t km/h (t in Stunden, 0 ≤ t ≤ 1). ' +
-        'Berechne die in dieser Stunde zurueckgelegte Strecke s = ∫₀¹ v(t) dt (in km).',
+        'Berechne die in dieser Stunde zurückgelegte Strecke s = ∫₀¹ v(t) dt (in km).',
       correctValue: 11,
       tolerance: 0.01,
       unit: 'km',
@@ -256,7 +256,7 @@ export const exercises = [
     contextKey: 'Wasserverbrauch',
     data: {
       questionText:
-        'Der stundliche Wasserverbrauch eines Haushalts laesst sich beschreiben durch ' +
+        'Der stundliche Wasserverbrauch eines Haushalts lässt sich beschreiben durch ' +
         'f(t) = 0.5t² − 3t + 6 (Liter/h, 0 ≤ t ≤ 6). ' +
         'Berechne den Gesamtverbrauch von t = 0 bis t = 6 Stunden (in Liter).',
       correctValue: 18,
@@ -298,7 +298,7 @@ export const exercises = [
         },
         {
           id: 'c',
-          text: '∫f(x)dx entspricht dem Flaecheninhalt unter f(x)',
+          text: '∫f(x)dx entspricht dem Flächeninhalt unter f(x)',
           correct: false,
         },
         {
@@ -358,9 +358,9 @@ export const exercises = [
     timeEstimate: 10,
     data: {
       questionText:
-        'Berechne die Flaeche zwischen f(x) = x² − 4 und der x-Achse auf [−3; 3]. ' +
+        'Berechne die Fläche zwischen f(x) = x² − 4 und der x-Achse auf [−3; 3]. ' +
         'Achtung: f hat Nullstellen bei x = ±2. ' +
-        'Die Flaeche ergibt sich als |∫₋₃⁻² (x²−4) dx| + |∫₋₂² (x²−4) dx| + |∫₂³ (x²−4) dx|. ' +
+        'Die Fläche ergibt sich als |∫₋₃⁻² (x²−4) dx| + |∫₋₂² (x²−4) dx| + |∫₂³ (x²−4) dx|. ' +
         '(Hinweis: Stammfunktion F(x) = x³/3 − 4x.)',
       correctValue: 15.33,
       tolerance: 0.05,
@@ -375,7 +375,7 @@ export const exercises = [
       'I₁ = ∫₋₃⁻² (x²−4)dx = F(−2)−F(−3) = (−8/3+8)−(−9+12) = 16/3−3 = 7/3. ' +
       'I₂ = |∫₋₂² (x²−4)dx| = |F(2)−F(−2)| = |(8/3−8)−(−8/3+8)| = |16/3−16| = 32/3. ' +
       'I₃ = ∫₂³ (x²−4)dx = F(3)−F(2) = (9−12)−(8/3−8) = −3+16/3 = 7/3. ' +
-      'Gesamtflaeche = 7/3 + 32/3 + 7/3 = 46/3 ≈ 15,33 FE.',
+      'Gesamtfläche = 7/3 + 32/3 + 7/3 = 46/3 ≈ 15,33 FE.',
     tags: ['vorzeichenwechsel', 'flaeche', 'nullstellen', 'absolutbetrag'],
   },
 
@@ -419,7 +419,7 @@ export const exercises = [
     timeEstimate: 8,
     data: {
       questionText:
-        'Schueler Tim berechnet ∫₋₂² x² dx. Finde den Fehler in seiner Lösung:',
+        'Schüler Tim berechnet ∫₋₂² x² dx. Finde den Fehler in seiner Lösung:',
       steps: [
         {
           content: 'Stammfunktion: F(x) = x³/3',
@@ -440,13 +440,13 @@ export const exercises = [
           hasError: true,
           errorExplanation:
             'Folgefehler. Korrekt: F(2) − F(−2) = 8/3 − (−8/3) = 16/3 ≈ 5.33. ' +
-            'Die Flaeche unter x² (nicht-negativer Graph) kann nicht 0 sein!',
+            'Die Fläche unter x² (nicht-negativer Graph) kann nicht 0 sein!',
         },
       ],
     },
     hintKeys: [
-      'Prüfe (−2)³ sorgfaeltig: (−2)³ = −2 · −2 · −2 = −8.',
-      'Geometrische Kontrolle: x² ≥ 0 → Flaeche muss positiv sein.',
+      'Prüfe (−2)³ sorgfältig: (−2)³ = −2 · −2 · −2 = −8.',
+      'Geometrische Kontrolle: x² ≥ 0 → Fläche muss positiv sein.',
     ],
     solutionKey:
       'F(−2) = (−2)³/3 = −8/3. ∫₋₂² x² dx = 8/3 − (−8/3) = 16/3 ≈ 5.33.',
@@ -488,7 +488,7 @@ export const exercises = [
         },
         {
           instruction:
-            'Das exakte Integral betraegt ∫₀² x² dx = [x³/3]₀² = 8/3 ≈ 2.667. ' +
+            'Das exakte Integral beträgt ∫₀² x² dx = [x³/3]₀² = 8/3 ≈ 2.667. ' +
             'Wie groß ist der absolute Fehler der Riemann-Summe?',
           type: 'numeric-input',
           expected: 0.92,
@@ -498,8 +498,8 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Linkssumme nutzt den linken Rand jedes Teilintervalls als Höhenannaehrung.',
-      'Δx = (b−a)/n = 2/4 = 0.5. Berechne f an den linken Raendern: 0, 0.5, 1, 1.5.',
+      'Linkssumme nutzt den linken Rand jedes Teilintervalls als Höhenannäherung.',
+      'Δx = (b−a)/n = 2/4 = 0.5. Berechne f an den linken Rändern: 0, 0.5, 1, 1.5.',
     ],
     solutionKey:
       'L₄ = 0.5 · (0 + 0.25 + 1 + 2.25) = 1.75. Exaktes Integral: 8/3 ≈ 2.67. ' +
@@ -518,7 +518,7 @@ export const exercises = [
     contextKey: 'Stromverbrauch',
     data: {
       questionText:
-        'Der Stromverbrauch eines Betriebs laesst sich durch p(t) = −t² + 8t (kW) ' +
+        'Der Stromverbrauch eines Betriebs lässt sich durch p(t) = −t² + 8t (kW) ' +
         'modellieren (0 ≤ t ≤ 8, t in Stunden). ' +
         'Berechne die gesamte verbrauchte Energie (in kWh) in diesem Zeitraum: ∫₀⁸ p(t) dt.',
       correctValue: 85.33,
@@ -550,7 +550,7 @@ export const exercises = [
     contextKey: 'CO2-Emissionen — Gesamtausstoss',
     data: {
       questionText:
-        'Die CO2-Emissionsrate eines Kraftwerks betraegt in den nächsten 10 Jahren ' +
+        'Die CO2-Emissionsrate eines Kraftwerks beträgt in den nächsten 10 Jahren ' +
         'e(t) = −0.5t² + 2t + 20 (Tonnen/Jahr, 0 ≤ t ≤ 10). ' +
         'Berechne den gesamten CO2-Ausstoss über diesen Zeitraum.',
       steps: [
@@ -581,7 +581,7 @@ export const exercises = [
         },
         {
           instruction:
-            'Wie viel Prozent des Ausstosses entfaellt auf die ersten 5 Jahre? ' +
+            'Wie viel Prozent des Ausstosses entfällt auf die ersten 5 Jahre? ' +
             '(E(5) = −125/6 + 25 + 100 ≈ 104.17. Anteil = E(5)/E(10) · 100 %)',
           type: 'numeric-input',
           expected: 78.1,
@@ -639,13 +639,13 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Der Hauptsatz verbindet zwei scheinbar verschiedene Konzepte: Steigung (Ableitung) und Flaeche (Integral).',
+      'Der Hauptsatz verbindet zwei scheinbar verschiedene Konzepte: Steigung (Ableitung) und Fläche (Integral).',
       'Die Konstante C kürzt sich bei F(b) − F(a) heraus: (F(b)+C) − (F(a)+C) = F(b) − F(a).',
     ],
     solutionKey:
       'Der Hauptsatz verbindet Differentiation (lokale Eigenschaft: Steigung) und Integration ' +
       '(globale Eigenschaft: kumulierte Größe). Die C-Konstante spielt beim bestimmten Integral ' +
-      'keine Rolle, da sie sich wegkuerzt. Der Satz gilt allgemein für stetige Funktionen, ' +
+      'keine Rolle, da sie sich wegkürzt. Der Satz gilt allgemein für stetige Funktionen, ' +
       'nicht nur Polynome.',
     tags: ['hauptsatz', 'integration', 'differentiation', 'ea', 'grundverstaendnis'],
   },

@@ -1,7 +1,7 @@
 export const batch3 = {
   '10-periodisch': {
     story: {
-      intro: 'Mia scrollt durch die Animationsliste von Hafenlichter und runzelt die Stirn. Lumis Atem-Animation sieht aus wie ein Roboter — abgehackt und unnatuerlich. Auch die Wellen im Hafen wirken steif, und der Tag-Nacht-Zyklus springt statt zu fliessen. "Alles, was sich wiederholt, braucht eine Schwingung", sagt Tim. "Sinus und Cosinus — die sind dafür gemacht." Mia öffnet ihren Taschenrechner und taucht ein in die Welt der periodischen Funktionen.',
+      intro: 'Mia scrollt durch die Animationsliste von Hafenlichter und runzelt die Stirn. Lumis Atem-Animation sieht aus wie ein Roboter — abgehackt und unnatürlich. Auch die Wellen im Hafen wirken steif, und der Tag-Nacht-Zyklus springt statt zu fliessen. "Alles, was sich wiederholt, braucht eine Schwingung", sagt Tim. "Sinus und Cosinus — die sind dafür gemacht." Mia öffnet ihren Taschenrechner und taucht ein in die Welt der periodischen Funktionen.',
       challenge: 'Atem-Animation, Wellengang und Tag-Nacht-Zyklus sollen natürlich schwingen statt ruckeln.',
       outro: 'Lumis Atem hebt und senkt sich jetzt sanft, die Hafenwellen rollen gleichmäßig ans Ufer, und das Licht wechselt fliessend von Morgenrot zu Mitternachtsblau. "Sinusfunktionen sind überall in der Natur", sagt Jule. Mia nickt: "Und jetzt sind sie auch in Hafenlichter."',
     },
@@ -9,10 +9,10 @@ export const batch3 = {
       periodic_functions: 'Periodische Funktionen erkennen und von nicht-periodischen unterscheiden',
       amplitude_period: 'Amplitude und Periode aus Graphen und Gleichungen ablesen',
       frequency: 'Die Frequenz berechnen und ihre Bedeutung erklären',
-      modeling: 'Reale Vorgaenge mit Sinusfunktionen modellieren',
+      modeling: 'Reale Vorgänge mit Sinusfunktionen modellieren',
     },
     explanation: {
-      intro: 'Manche Vorgaenge wiederholen sich immer wieder: dein Herzschlag, die Gezeiten, die Jahreszeiten. In der Mathematik beschreiben wir solche Schwingungen mit periodischen Funktionen. Die wichtigste davon ist die Sinusfunktion:',
+      intro: 'Manche Vorgänge wiederholen sich immer wieder: dein Herzschlag, die Gezeiten, die Jahreszeiten. In der Mathematik beschreiben wir solche Schwingungen mit periodischen Funktionen. Die wichtigste davon ist die Sinusfunktion:',
       parameters: 'Die allgemeine Sinusfunktion hat vier Parameter, die du wie Regler an einem Mischpult verstehen kannst: $A$ steuert die Höhe der Schwingung (Amplitude), $b$ beeinflusst, wie schnell sich die Schwingung wiederholt (Periode), $c$ verschiebt die Kurve nach links oder rechts, und $d$ verschiebt sie nach oben oder unten.',
       mia_tip: 'Für Lumis Atem-Animation nutze ich $A = 3$ Pixel und $T = 4$ Sekunden. Das heisst: Alle 4 Sekunden atmet Lumi einmal ein und aus, und die Brust bewegt sich 3 Pixel hoch und runter. Ganz natürlich!',
       graph_reading: 'Um eine periodische Funktion vom Graphen abzulesen, suchst du nach dem Muster, das sich wiederholt. Der Abstand zwischen zwei identischen Stellen heisst Periode $T$. Mathematisch bedeutet Periodizität:',
@@ -25,7 +25,7 @@ export const batch3 = {
       },
       period: {
         title: 'Periode',
-        desc: 'Die Periode $T$ ist die Laenge eines vollstaendigen Schwingungszyklus. Nach der Zeit $T$ wiederholt sich alles exakt. Je größer $b$, desto kürzer die Periode.',
+        desc: 'Die Periode $T$ ist die Länge eines vollständigen Schwingungszyklus. Nach der Zeit $T$ wiederholt sich alles exakt. Je größer $b$, desto kürzer die Periode.',
       },
       frequency: {
         title: 'Frequenz',
@@ -37,9 +37,9 @@ export const batch3 = {
         title: 'Sinusfunktion vom Graphen ablesen',
         context: 'Mia hat einen Welleneffekt im Spiel und will die passende Gleichung finden.',
         step1: 'Höchsten und tiefsten Punkt ablesen: $y_{\\max} = 3$ und $y_{\\min} = -3$. Die Amplitude ist die halbe Differenz — die Welle schwingt 3 Einheiten nach oben und unten.',
-        step2: 'Periode ablesen: Ein vollstaendiger Zyklus dauert $4\\pi$ Einheiten. Daraus berechnen wir $b$ mit der Formel $b = \\frac{2\\pi}{T}$ — das ergibt $0{,}5$.',
+        step2: 'Periode ablesen: Ein vollständiger Zyklus dauert $4\\pi$ Einheiten. Daraus berechnen wir $b$ mit der Formel $b = \\frac{2\\pi}{T}$ — das ergibt $0{,}5$.',
         step3: 'Gleichung zusammensetzen: Da die Mittellinie bei $y = 0$ liegt ($d = 0$) und kein Phasenverschiebung ($c = 0$) erkennbar ist, lautet die Funktion einfach:',
-        mia_comment: 'Amplitude 3, Periode $4\\pi$ — damit schaukeln die Hafenwellen schön langsam. Für schnellere Wellen erhoehe ich einfach $b$!',
+        mia_comment: 'Amplitude 3, Periode $4\\pi$ — damit schaukeln die Hafenwellen schön langsam. Für schnellere Wellen erhöhe ich einfach $b$!',
       },
       ferris_wheel: {
         title: 'Riesenrad modellieren',
@@ -47,14 +47,14 @@ export const batch3 = {
         step1: 'Amplitude bestimmen: Der Radius ist die halbe Höhe, also $A = 30\\,\\text{m}$. Die Mittellinie liegt bei $d = 5 + 30 = 35\\,\\text{m}$ (Boden + Radius).',
         step2: 'Periode ist eine volle Umdrehung: $T = 10\\,\\text{min}$. Daraus folgt $b = \\frac{2\\pi}{10} = \\frac{\\pi}{5}$.',
         step3: 'Startpunkt beachten: Unten starten heisst, wir verschieben den Sinus um $-\\frac{\\pi}{2}$ (der Sinus startet normalerweise in der Mitte, nicht unten).',
-        step4: 'Probe: Nach 2,5 Minuten (Viertelumdrehung) sollte die Gondel auf Mittelhoehe sein. Einsetzen: $\\sin(0) = 0$, also $h = 35\\,\\text{m}$. Stimmt!',
+        step4: 'Probe: Nach 2,5 Minuten (Viertelumdrehung) sollte die Gondel auf Mittelhöhe sein. Einsetzen: $\\sin(0) = 0$, also $h = 35\\,\\text{m}$. Stimmt!',
         mia_comment: 'Genau so funktioniert auch der Tag-Nacht-Zyklus in Hafenlichter: Sinus mit $T = 24$ (ein Spieltag) und Verschiebung, damit es um Mitternacht am dunkelsten ist.',
       },
     },
     realworld: {
       heartbeat: {
         title: 'Dein Herzschlag',
-        desc: 'Dein Herz schlaegt etwa 72-mal pro Minute — das sind 1,2 Schlaege pro Sekunde. Die elektrischen Signale deines Herzens (EKG) zeigen eine periodische Kurve. Aerzte lesen Amplitude und Frequenz ab, um Herzprobleme zu erkennen.',
+        desc: 'Dein Herz schlägt etwa 72-mal pro Minute — das sind 1,2 Schläge pro Sekunde. Die elektrischen Signale deines Herzens (EKG) zeigen eine periodische Kurve. Ärzte lesen Amplitude und Frequenz ab, um Herzprobleme zu erkennen.',
       },
       tides: {
         title: 'Ebbe und Flut',
@@ -69,22 +69,22 @@ export const batch3 = {
       period_frequency: {
         wrong: 'Periode und Frequenz verwechselt',
         correct: 'Frequenz ist der Kehrwert der Periode',
-        why: 'Wenn die Periode $T = 2\\,\\text{s}$ betraegt, schwingt es alle 2 Sekunden einmal. Die Frequenz ist dann $f = \\frac{1}{2} = 0{,}5\\,\\text{Hz}$ — nicht $2\\,\\text{Hz}$! Frequenz = "Wie oft pro Sekunde?", Periode = "Wie lange dauert ein Zyklus?"',
-        mia_warning: 'Dieser Fehler hat dazu gefuehrt, dass Lumis Atem doppelt so schnell war — sie sah aus wie nach einem Sprint!',
+        why: 'Wenn die Periode $T = 2\\,\\text{s}$ beträgt, schwingt es alle 2 Sekunden einmal. Die Frequenz ist dann $f = \\frac{1}{2} = 0{,}5\\,\\text{Hz}$ — nicht $2\\,\\text{Hz}$! Frequenz = "Wie oft pro Sekunde?", Periode = "Wie lange dauert ein Zyklus?"',
+        mia_warning: 'Dieser Fehler hat dazu geführt, dass Lumis Atem doppelt so schnell war — sie sah aus wie nach einem Sprint!',
       },
       b_value: {
         wrong: '$b$ mit der Periode gleichgesetzt',
         correct: '$b$ und $T$ über die Formel umrechnen',
-        why: '$b$ ist NICHT die Periode, sondern haengt über $T = \\frac{2\\pi}{b}$ mit ihr zusammen. Wenn die Periode $4\\pi$ ist, dann ist $b = \\frac{2\\pi}{4\\pi} = 0{,}5$ — nicht $4\\pi$!',
+        why: '$b$ ist NICHT die Periode, sondern hängt über $T = \\frac{2\\pi}{b}$ mit ihr zusammen. Wenn die Periode $4\\pi$ ist, dann ist $b = \\frac{2\\pi}{4\\pi} = 0{,}5$ — nicht $4\\pi$!',
       },
     },
   },
 
   '10-diff-einfuehrung': {
     story: {
-      intro: 'Hafenlichter läuft — aber es ruckelt. Mia öffnet den Performance-Monitor und sieht: In manchen Szenen bricht die Framerate auf 15 FPS ein. "Wo genau wird es langsam?", fragt Tim. "Ich brauche nicht den Durchschnitt über die ganze Szene, sondern die exakte Stelle, an der die Performance einbricht." Jule laechelt: "Das ist genau die Frage, die zur Erfindung der Differentialrechnung gefuehrt hat — die momentane Änderungsrate."',
+      intro: 'Hafenlichter läuft — aber es ruckelt. Mia öffnet den Performance-Monitor und sieht: In manchen Szenen bricht die Framerate auf 15 FPS ein. "Wo genau wird es langsam?", fragt Tim. "Ich brauche nicht den Durchschnitt über die ganze Szene, sondern die exakte Stelle, an der die Performance einbricht." Jule lächelt: "Das ist genau die Frage, die zur Erfindung der Differentialrechnung geführt hat — die momentane Änderungsrate."',
       challenge: 'Die exakte Stelle finden, an der die Framerate einbricht — nicht nur den Durchschnitt.',
-      outro: 'Mia hat die kritische Stelle gefunden: Genau bei Frame 847 explodiert die Renderzeit, weil dort 200 Partikel gleichzeitig gespawnt werden. "Ohne die momentane Änderungsrate haette ich ewig gesucht", sagt sie. Tim nickt: "Newton haette das auch so gemacht — nur ohne Performance-Monitor."',
+      outro: 'Mia hat die kritische Stelle gefunden: Genau bei Frame 847 explodiert die Renderzeit, weil dort 200 Partikel gleichzeitig gespawnt werden. "Ohne die momentane Änderungsrate hätte ich ewig gesucht", sagt sie. Tim nickt: "Newton hätte das auch so gemacht — nur ohne Performance-Monitor."',
     },
     objectives: {
       average_rate: 'Die durchschnittliche Änderungsrate (Sekantensteigung) berechnen und interpretieren',
@@ -93,11 +93,11 @@ export const batch3 = {
       derivative_notation: 'Die verschiedenen Schreibweisen der Ableitung kennen und anwenden',
     },
     explanation: {
-      intro: 'Stell dir vor, du faehrst mit dem Fahrrad zur Schule. Dein Tacho zeigt 20 km/h — das ist deine momentane Geschwindigkeit. Aber wie berechnet man die? Wenn du sagst "Ich bin 10 km in 30 Minuten gefahren", ist das ein Durchschnitt. Die momentane Geschwindigkeit an einem bestimmten Punkt ist etwas Anderes — und genau darum geht es in der Differentialrechnung.',
-      secant_to_tangent: 'Die Idee ist genial einfach: Berechne die Durchschnittssteigung zwischen zwei Punkten, und dann ruecke die Punkte immer näher zusammen. Im Grenzfall — wenn der Abstand gegen Null geht — erhaeltst du die Steigung in einem einzigen Punkt. Das ist die Ableitung:',
+      intro: 'Stell dir vor, du fährst mit dem Fahrrad zur Schule. Dein Tacho zeigt 20 km/h — das ist deine momentane Geschwindigkeit. Aber wie berechnet man die? Wenn du sagst "Ich bin 10 km in 30 Minuten gefahren", ist das ein Durchschnitt. Die momentane Geschwindigkeit an einem bestimmten Punkt ist etwas Anderes — und genau darum geht es in der Differentialrechnung.',
+      secant_to_tangent: 'Die Idee ist genial einfach: Berechne die Durchschnittssteigung zwischen zwei Punkten, und dann rücke die Punkte immer näher zusammen. Im Grenzfall — wenn der Abstand gegen Null geht — erhältst du die Steigung in einem einzigen Punkt. Das ist die Ableitung:',
       mia_tip: 'Die durchschnittliche Framerate über 10 Sekunden sagt mir nichts. Ich brauche die momentane Rate bei Frame 847! Genau wie beim Tacho: Der zeigt nicht den Durchschnitt der ganzen Fahrt, sondern wie schnell du JETZT bist.',
-      derivative_meaning: 'Die Ableitung $f\'(x_0)$ hat eine klare Bedeutung: Sie gibt die Steigung der Tangente an den Graphen im Punkt $x_0$ an. Ist $f\'(x_0) > 0$, steigt die Funktion dort. Ist $f\'(x_0) < 0$, faellt sie. Ist $f\'(x_0) = 0$, hat die Funktion dort (möglicherweise) einen Hoch- oder Tiefpunkt. Es gibt verschiedene Schreibweisen:',
-      geometric_interpretation: 'Geometrisch passiert Folgendes: Die Sekante durch zwei Punkte auf dem Graphen dreht sich, wenn die Punkte zusammenruecken. Im Grenzfall wird die Sekante zur Tangente — einer Geraden, die den Graphen in genau einem Punkt "beruehrt". Die Steigung dieser Tangente ist die Ableitung.',
+      derivative_meaning: 'Die Ableitung $f\'(x_0)$ hat eine klare Bedeutung: Sie gibt die Steigung der Tangente an den Graphen im Punkt $x_0$ an. Ist $f\'(x_0) > 0$, steigt die Funktion dort. Ist $f\'(x_0) < 0$, fällt sie. Ist $f\'(x_0) = 0$, hat die Funktion dort (möglicherweise) einen Hoch- oder Tiefpunkt. Es gibt verschiedene Schreibweisen:',
+      geometric_interpretation: 'Geometrisch passiert Folgendes: Die Sekante durch zwei Punkte auf dem Graphen dreht sich, wenn die Punkte zusammenrücken. Im Grenzfall wird die Sekante zur Tangente — einer Geraden, die den Graphen in genau einem Punkt "berührt". Die Steigung dieser Tangente ist die Ableitung.',
     },
     concepts: {
       difference_quotient: {
@@ -110,15 +110,15 @@ export const batch3 = {
       },
       derivative_notation: {
         title: 'Schreibweisen der Ableitung',
-        desc: 'Es gibt drei gaengige Schreibweisen: $f\'(x)$ (Lagrange, am haeufigsten in der Schule), $\\frac{\\mathrm{d}f}{\\mathrm{d}x}$ (Leibniz, betont den Bruch-Charakter) und $\\dot{y}$ (Newton, vor allem in der Physik für Zeitableitungen).',
+        desc: 'Es gibt drei gängige Schreibweisen: $f\'(x)$ (Lagrange, am häufigsten in der Schule), $\\frac{\\mathrm{d}f}{\\mathrm{d}x}$ (Leibniz, betont den Bruch-Charakter) und $\\dot{y}$ (Newton, vor allem in der Physik für Zeitableitungen).',
       },
     },
     examples: {
       average_speed: {
         title: 'Durchschnittliche Geschwindigkeit',
-        context: 'Ein Ball rollt eine Rampe hinunter. Die Strecke haengt quadratisch von der Zeit ab.',
+        context: 'Ein Ball rollt eine Rampe hinunter. Die Strecke hängt quadratisch von der Zeit ab.',
         step1: 'Gegeben ist die Weg-Zeit-Funktion. Nach 2 Sekunden ist der Ball 2 m weit, nach 4 Sekunden 8 m.',
-        step2: 'Durchschnittliche Geschwindigkeit zwischen $t = 2$ und $t = 4$: Wir teilen die Streckentoenderung durch die Zeitaenderung. Das ergibt $3\\,\\text{m/s}$ im Durchschnitt.',
+        step2: 'Durchschnittliche Geschwindigkeit zwischen $t = 2$ und $t = 4$: Wir teilen die Streckenänderung durch die Zeitänderung. Das ergibt $3\\,\\text{m/s}$ im Durchschnitt.',
         step3: 'Jetzt verkleinern wir das Intervall: Zwischen $t = 2$ und $t = 2{,}1$ ergibt sich $2{,}05\\,\\text{m/s}$. Je kürzer das Intervall, desto näher kommen wir an die momentane Geschwindigkeit bei $t = 2$.',
         mia_comment: 'Genau so funktioniert mein Performance-Monitor: Er misst die Framerate in immer kürzeren Intervallen, bis ich die exakte Stelle finde, wo es hakt.',
       },
@@ -139,24 +139,24 @@ export const batch3 = {
       },
       stock_trends: {
         title: 'Aktienkurse & Trends',
-        desc: 'Wenn eine Aktie "steigt", meinen Analysten die positive Ableitung des Kurses. Die Steigung der Tangente an den Kursverlauf zeigt den Trend: positiv = Aufwaertstrend, negativ = Abwärtstrend, null = Wendepunkt.',
+        desc: 'Wenn eine Aktie "steigt", meinen Analysten die positive Ableitung des Kurses. Die Steigung der Tangente an den Kursverlauf zeigt den Trend: positiv = Aufwärtstrend, negativ = Abwärtstrend, null = Wendepunkt.',
       },
       speedometer: {
         title: 'Tacho im Auto',
-        desc: 'Dein Tacho zeigt die momentane Geschwindigkeit — mathematisch die Ableitung der Weg-Funktion nach der Zeit. GPS-Geraete berechnen sie als Grenzwert aus sehr kurzen Zeitintervallen.',
+        desc: 'Dein Tacho zeigt die momentane Geschwindigkeit — mathematisch die Ableitung der Weg-Funktion nach der Zeit. GPS-Geräte berechnen sie als Grenzwert aus sehr kurzen Zeitintervallen.',
       },
     },
     mistakes: {
       average_vs_instant: {
         wrong: 'Durchschnitt = Momentanwert',
         correct: 'Durchschnitt und Momentanwert unterscheiden',
-        why: 'Die durchschnittliche Änderungsrate über ein Intervall $[1;\\,5]$ ist NICHT gleich der momentanen Änderungsrate bei $x = 3$ (der Mitte). Das gilt nur bei linearen Funktionen! Bei gekruemmten Graphen weichen beide Werte ab.',
-        mia_warning: 'Ich habe zuerst die durchschnittliche Framerate berechnet und gedacht, alles sei ok. Aber lokal gab es massive Einbrueche! Der Durchschnitt hat das Problem verborgen.',
+        why: 'Die durchschnittliche Änderungsrate über ein Intervall $[1;\\,5]$ ist NICHT gleich der momentanen Änderungsrate bei $x = 3$ (der Mitte). Das gilt nur bei linearen Funktionen! Bei gekrümmten Graphen weichen beide Werte ab.',
+        mia_warning: 'Ich habe zuerst die durchschnittliche Framerate berechnet und gedacht, alles sei ok. Aber lokal gab es massive Einbrüche! Der Durchschnitt hat das Problem verborgen.',
       },
       secant_tangent: {
         wrong: 'Sekantensteigung = Tangentensteigung',
         correct: 'Die Tangente ist der Grenzfall der Sekante',
-        why: 'Die Sekante schneidet den Graphen in zwei Punkten, die Tangente beruehrt ihn in einem. Erst wenn die zwei Punkte zusammenruecken ($h \\to 0$), wird die Sekante zur Tangente. Ohne Grenzwert ist es nur eine Näherung.',
+        why: 'Die Sekante schneidet den Graphen in zwei Punkten, die Tangente berührt ihn in einem. Erst wenn die zwei Punkte zusammenrücken ($h \\to 0$), wird die Sekante zur Tangente. Ohne Grenzwert ist es nur eine Näherung.',
       },
     },
   },
@@ -170,7 +170,7 @@ export const batch3 = {
     objectives: {
       identify_types: 'Die vier großen Funktionsklassen (linear, quadratisch, exponentiell, logarithmisch) an Gleichungen und Graphen erkennen',
       compare_growth: 'Das Wachstumsverhalten der Funktionsklassen vergleichen und ordnen',
-      match_context: 'Zur Sachsituation die passende Funktionsklasse wählen und begruenden',
+      match_context: 'Zur Sachsituation die passende Funktionsklasse wählen und begründen',
       graph_recognition: 'Graphen den richtigen Funktionstypen zuordnen',
     },
     explanation: {
@@ -190,21 +190,21 @@ export const batch3 = {
       },
       exponential: {
         title: 'Exponentielle Funktionen',
-        desc: 'Wachstum um einen festen Prozentsatz: Je mehr da ist, desto mehr kommt dazu. Verdopplung in gleichen Zeitabstaenden. Wächst langfristig schneller als jede Potenzfunktion.',
+        desc: 'Wachstum um einen festen Prozentsatz: Je mehr da ist, desto mehr kommt dazu. Verdopplung in gleichen Zeitabständen. Wächst langfristig schneller als jede Potenzfunktion.',
       },
       logarithmic: {
         title: 'Logarithmische Funktionen',
-        desc: 'Die Umkehrfunktion der Exponentialfunktion. Wächst anfangs schnell, dann immer langsamer. Modelliert Saettigungseffekte und Lernkurven.',
+        desc: 'Die Umkehrfunktion der Exponentialfunktion. Wächst anfangs schnell, dann immer langsamer. Modelliert Sättigungseffekte und Lernkurven.',
       },
     },
     examples: {
       identify_type: {
         title: 'Funktionstyp an Wertetabellen erkennen',
-        context: 'Drei Datensaetze liegen vor. Welcher Typ passt jeweils?',
+        context: 'Drei Datensätze liegen vor. Welcher Typ passt jeweils?',
         step1: 'Teste auf linear: Bilde die Differenzen aufeinanderfolgender $y$-Werte. Sind sie konstant, ist die Funktion linear.',
         step2: 'Teste auf exponentiell: Bilde die Quotienten aufeinanderfolgender $y$-Werte. Sind sie konstant, ist die Funktion exponentiell.',
         step3: 'Teste auf quadratisch: Bilde die zweiten Differenzen (Differenzen der Differenzen). Sind diese konstant, ist die Funktion quadratisch.',
-        mia_comment: 'Genau so teste ich mein Balancing: Ich lasse 100 Runden simulieren und prüfe, ob die Werte dem gewuenschten Wachstumstyp folgen. Wenn die zweiten Differenzen abdriften, stimmt etwas nicht.',
+        mia_comment: 'Genau so teste ich mein Balancing: Ich lasse 100 Runden simulieren und prüfe, ob die Werte dem gewünschten Wachstumstyp folgen. Wenn die zweiten Differenzen abdriften, stimmt etwas nicht.',
       },
       game_mechanics: {
         title: 'Spielmechaniken modellieren',
@@ -213,13 +213,13 @@ export const batch3 = {
         step2: 'Fallschaden: Aus 2 m Höhe leichter Schaden, aus 10 m viel mehr. Die Schadenszunahme beschleunigt sich — quadratisch. Macht physikalisch Sinn (Energie = $\\frac{1}{2}mv^2$).',
         step3: 'XP-Bedarf pro Level: Level 2 braucht 150 XP, Level 3 braucht 225 XP, Level 4 braucht 337 XP. Der Bedarf wächst immer um 50% — exponentiell. So bleiben höhere Level eine echte Herausforderung.',
         step4: 'Lernkurve (Skill): Am Anfang lernt man schnell, später immer langsamer. Nach $t$ Stunden Spielzeit beherrscht man $20 \\cdot \\log_2(t+1)$ Prozent der Mechaniken — logarithmisch.',
-        mia_comment: 'Das ist der Kern von Game-Design: Die richtige Kurve für die richtige Mechanik. Lineares XP waere langweilig, exponentieller Fallschaden waere unfair. Jeder Funktionstyp hat seinen Sweet Spot!',
+        mia_comment: 'Das ist der Kern von Game-Design: Die richtige Kurve für die richtige Mechanik. Lineares XP wäre langweilig, exponentieller Fallschaden wäre unfair. Jeder Funktionstyp hat seinen Sweet Spot!',
       },
     },
     realworld: {
       app_users: {
         title: 'Virale App-Downloads',
-        desc: 'Wenn jeder Nutzer zwei Freunde einlaedt und die wieder zwei, verdoppeln sich die Downloads. Am Anfang kaum sichtbar, dann explosionsartig — typisch exponentiell. TikTok, Instagram und WhatsApp sind so gewachsen.',
+        desc: 'Wenn jeder Nutzer zwei Freunde einlädt und die wieder zwei, verdoppeln sich die Downloads. Am Anfang kaum sichtbar, dann explosionsartig — typisch exponentiell. TikTok, Instagram und WhatsApp sind so gewachsen.',
       },
       salary: {
         title: 'Taschengeld & Gehalt',
@@ -227,20 +227,20 @@ export const batch3 = {
       },
       learning_curve: {
         title: 'Lernfortschritt',
-        desc: 'Neues Instrument, neuer Sport, neue Sprache: Am Anfang machst du riesige Fortschritte, dann wird es immer schwerer, besser zu werden. Das ist eine logarithmische Saettigungskurve — und ganz normal!',
+        desc: 'Neues Instrument, neuer Sport, neue Sprache: Am Anfang machst du riesige Fortschritte, dann wird es immer schwerer, besser zu werden. Das ist eine logarithmische Sättigungskurve — und ganz normal!',
       },
     },
     mistakes: {
       exp_vs_quad: {
         wrong: '"Exponentiell" und "quadratisch" sind dasselbe',
         correct: 'Exponentiell wächst VIEL schneller als quadratisch',
-        why: 'Bei kleinen Zahlen sehen $x^2$ und $2^x$ ähnlich aus: $4^2 = 16$ und $2^4 = 16$. Aber bei $x = 10$: $10^2 = 100$ gegenueber $2^{10} = 1024$. Exponentielles Wachstum überholt jede Potenzfunktion!',
+        why: 'Bei kleinen Zahlen sehen $x^2$ und $2^x$ ähnlich aus: $4^2 = 16$ und $2^4 = 16$. Aber bei $x = 10$: $10^2 = 100$ gegenüber $2^{10} = 1024$. Exponentielles Wachstum überholt jede Potenzfunktion!',
         mia_warning: 'Ich hatte den XP-Bedarf zuerst quadratisch statt exponentiell gemacht. Ergebnis: Ab Level 20 war das Spiel viel zu leicht, weil die Spieler schneller XP sammelten als der Bedarf wuchs.',
       },
       all_curves_linear: {
         wrong: 'Jedes Wachstum ist linear',
         correct: 'Erst den Wachstumstyp prüfen',
-        why: 'Nur weil sich etwas "verdoppelt", heisst das nicht, dass es linear ist! "Alle 3 Tage doppelt so viele Follower" ist exponentiell, nicht linear. Linear waere: "Jeden Tag 100 neue Follower". Der Unterschied: konstante Zunahme (linear) vs. konstanter Faktor (exponentiell).',
+        why: 'Nur weil sich etwas "verdoppelt", heisst das nicht, dass es linear ist! "Alle 3 Tage doppelt so viele Follower" ist exponentiell, nicht linear. Linear wäre: "Jeden Tag 100 neue Follower". Der Unterschied: konstante Zunahme (linear) vs. konstanter Faktor (exponentiell).',
       },
     },
   },

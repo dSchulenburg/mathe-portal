@@ -14,7 +14,7 @@ export const exercises = [
     data: {
       questionText:
         'Welche der folgenden Funktionen beschreibt eine Zielfunktion für das Problem ' +
-        '"Maximiere den Flaecheninhalt eines Rechtecks mit gegebenem Umfang U = 20 m"? ' +
+        '"Maximiere den Flächeninhalt eines Rechtecks mit gegebenem Umfang U = 20 m"? ' +
         'Die Seiten seien x und y, wobei y = 10 − x.',
       options: [
         { id: 'a', text: 'A(x) = x · (10 − x)', correct: true },
@@ -24,12 +24,12 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Flaeche eines Rechtecks = Laenge · Breite.',
+      'Fläche eines Rechtecks = Länge · Breite.',
       'Die Nebenbedingung 2x + 2y = 20 liefert y = 10 − x.',
     ],
     solutionKey:
       'Die Zielfunktion ist A(x) = x · y. Mit y = 10 − x ergibt sich A(x) = x(10 − x). ' +
-      'Umfang und Summe der Seiten sind keine Flaechen.',
+      'Umfang und Summe der Seiten sind keine Flächen.',
     tags: ['zielfunktion', 'rechteck', 'flaeche'],
   },
 
@@ -132,8 +132,8 @@ export const exercises = [
     contextKey: 'Dose optimieren — maximales Volumen',
     data: {
       questionText:
-        'Eine zylindrische Dose soll aus einem Blech mit der Gesamtflaeche 150π cm² ' +
-        'gefertigt werden. Gesamtflaeche = 2πr² + 2πrh = 150π. ' +
+        'Eine zylindrische Dose soll aus einem Blech mit der Gesamtfläche 150π cm² ' +
+        'gefertigt werden. Gesamtfläche = 2πr² + 2πrh = 150π. ' +
         'Damit gilt h = (75 − r²) / r. ' +
         'Die Zielfunktion für das Volumen lautet V(r) = πr²h = π(75r − r³). ' +
         'Bei welchem Radius r (in cm) ist das Volumen maximal?',
@@ -163,7 +163,7 @@ export const exercises = [
     data: {
       questionText:
         'Eine zylindrische Konservendose soll ein Volumen von 500 ml = 500 cm³ fassen. ' +
-        'Das verwendete Blech (Oberflaeche) soll minimal sein. ' +
+        'Das verwendete Blech (Oberfläche) soll minimal sein. ' +
         'Mit V = πr²h = 500 folgt h = 500 / (πr²). ' +
         'Die Zielfunktion ist O(r) = 2πr² + 1000/r. ' +
         'Bilde O′(r), setze = 0 und berechne den optimalen Radius r auf eine Dezimalstelle. ' +
@@ -190,16 +190,16 @@ export const exercises = [
     competencies: ['kommunikation', 'kritisches-denken'],
     points: 12,
     timeEstimate: 8,
-    contextKey: 'Gartenplanung — maximale Flaeche',
+    contextKey: 'Gartenplanung — maximale Fläche',
     data: {
       questionText:
-        'Ein rechteckiger Garten soll mit 40 m Zaun eingezaeumt werden. ' +
+        'Ein rechteckiger Garten soll mit 40 m Zaun eingezäunt werden. ' +
         'Eine Seite bildet eine vorhandene Mauer (kein Zaun nötig). ' +
-        'Bestimme die Abmessungen für maximale Flaeche.',
+        'Bestimme die Abmessungen für maximale Fläche.',
       steps: [
         {
           instruction: 'Stelle die Zielfunktion auf. Mit 2x + y = 40 gilt y = 40 − 2x. ' +
-            'Die Flaeche ist A(x) = x · y. Was ergibt sich?',
+            'Die Fläche ist A(x) = x · y. Was ergibt sich?',
           type: 'multiple-choice',
           options: [
             { id: 'a', text: 'A(x) = x(40 − 2x) = 40x − 2x²' },
@@ -217,7 +217,7 @@ export const exercises = [
           showAnswer: 'A′(x) = 40 − 4x = 0 → x = 10 m',
         },
         {
-          instruction: 'Berechne die maximale Flaeche A(10):',
+          instruction: 'Berechne die maximale Fläche A(10):',
           type: 'numeric-input',
           expected: 200,
           tolerance: 0.1,
@@ -226,13 +226,13 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Zeichne eine Skizze: eine Mauer als eine Laengsseite, Zaun um die anderen drei Seiten.',
-      'Nebenbedingung: 2x + y = 40 (x = Breite, y = Laenge parallel zur Mauer).',
+      'Zeichne eine Skizze: eine Mauer als eine Längsseite, Zaun um die anderen drei Seiten.',
+      'Nebenbedingung: 2x + y = 40 (x = Breite, y = Länge parallel zur Mauer).',
       'A′(x) = 40 − 4x. Nullstelle gibt das Maximum.',
     ],
     solutionKey:
       'Zielfunktion A(x) = 40x − 2x². A′(x) = 40 − 4x = 0 → x = 10 m. ' +
-      'y = 40 − 20 = 20 m. Maximale Flaeche: A(10) = 200 m².',
+      'y = 40 − 20 = 20 m. Maximale Fläche: A(10) = 200 m².',
     tags: ['step-solver', 'garten', 'rechteck', 'sachkontext'],
   },
 
@@ -248,11 +248,11 @@ export const exercises = [
     data: {
       questionText:
         'Ein Unternehmen hat die Kostenfunktion K(x) = 0.5x² − 20x + 500 (Euro) ' +
-        'für x Stueck (x ∈ [0; 50]). ' +
-        'Bei welcher Stueckzahl x sind die Kosten minimal?',
+        'für x Stück (x ∈ [0; 50]). ' +
+        'Bei welcher Stückzahl x sind die Kosten minimal?',
       correctValue: 20,
       tolerance: 0.01,
-      unit: 'Stueck',
+      unit: 'Stück',
     },
     hintKeys: [
       'Bilde K′(x) und setze K′(x) = 0.',
@@ -274,7 +274,7 @@ export const exercises = [
     timeEstimate: 4,
     data: {
       questionText:
-        'Bei einer Extremwertaufgabe erhaeelt man die kritische Stelle x = 4. ' +
+        'Bei einer Extremwertaufgabe erhält man die kritische Stelle x = 4. ' +
         'Die zweite Ableitung der Zielfunktion hat den Wert f″(4) = −6. ' +
         'Was folgt daraus?',
       options: [
@@ -306,7 +306,7 @@ export const exercises = [
     competencies: ['kreativität', 'kritisches-denken'],
     points: 15,
     timeEstimate: 10,
-    contextKey: 'Festival-Buehne — optimale Sichtweite',
+    contextKey: 'Festival-Bühne — optimale Sichtweite',
     data: {
       questionText:
         'Eine Festival-Bühne ist 8 m hoch (Oberkante 11 m, Unterkante 3 m über Augenhöhe). ' +
@@ -341,11 +341,11 @@ export const exercises = [
     contextKey: 'Tiny-House-Grundriss',
     data: {
       questionText:
-        'Ein quadratisches Tiny-House-Grundstueck hat 16 m Zaun. ' +
+        'Ein quadratisches Tiny-House-Grundstück hat 16 m Zaun. ' +
         'Ein rechteckiger Innenbereich (Wohnen + Schlafen) soll durch eine Trennwand ' +
         'in zwei gleiche Teile geteilt werden. Der Zaun bildet drei Seiten des Rechtecks; ' +
         'die vierte Seite ist die Hauswand. Die Trennwand läuft parallel zu den kurzen Seiten. ' +
-        'Gesamtllaenge Zaun + Trennwand: 2x + y + x = 3x + y = 16, also y = 16 − 3x. ' +
+        'Gesamtllänge Zaun + Trennwand: 2x + y + x = 3x + y = 16, also y = 16 − 3x. ' +
         'Zielfunktion: A(x) = x · y = x(16 − 3x). ' +
         'Bei welchem x (in m) ist A maximal?',
       correctValue: 2.67,
@@ -376,7 +376,7 @@ export const exercises = [
       pairs: [
         {
           id: 'a',
-          left: 'Rechteck mit Umfang 24 m — maximale Flaeche',
+          left: 'Rechteck mit Umfang 24 m — maximale Fläche',
           right: 'A(x) = x(12 − x)',
         },
         {
@@ -386,7 +386,7 @@ export const exercises = [
         },
         {
           id: 'c',
-          left: 'Zylinder mit Oberflaeche 6π — maximales Volumen',
+          left: 'Zylinder mit Oberfläche 6π — maximales Volumen',
           right: 'V(r) = π r(3 − r²)',
         },
         {
@@ -458,8 +458,8 @@ export const exercises = [
     contextKey: 'Optimierung mit zwei Nebenbedingungen',
     data: {
       questionText:
-        'Ein offener Behaelter (ohne Deckel) in Form eines Quaders soll ' +
-        'aus 48 cm² Blech gefertigt werden. Der quadratische Boden hat Seitenlaenge x, ' +
+        'Ein offener Behälter (ohne Deckel) in Form eines Quaders soll ' +
+        'aus 48 cm² Blech gefertigt werden. Der quadratische Boden hat Seitenlänge x, ' +
         'die Höhe sei h. Nebenbedingung: x² + 4xh = 48 → h = (48 − x²) / (4x). ' +
         'Volumen: V(x) = x²h. Bestimme x für maximales Volumen.',
       steps: [
@@ -522,8 +522,8 @@ export const exercises = [
     timeEstimate: 10,
     data: {
       questionText:
-        'Beweise-Aufgabe: Schueler Jonas behauptet, das Quadrat habe unter allen Rechtecken ' +
-        'mit gleichem Umfang den größten Flaecheninhalt. ' +
+        'Beweise-Aufgabe: Schüler Jonas behauptet, das Quadrat habe unter allen Rechtecken ' +
+        'mit gleichem Umfang den größten Flächeninhalt. ' +
         'Analysiere seinen Beweis auf Fehler:',
       steps: [
         {
@@ -533,7 +533,7 @@ export const exercises = [
         },
         {
           content:
-            'Die Flaeche ist A(x) = x · y = x(U/2 − x) = Ux/2 − x².',
+            'Die Fläche ist A(x) = x · y = x(U/2 − x) = Ux/2 − x².',
           hasError: false,
         },
         {

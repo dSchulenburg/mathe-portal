@@ -138,7 +138,7 @@ export const exercises = [
       'Substituiere z = x². Es entsteht: z² - 5z + 4 = 0.',
       'Löse für z, dann nimm die Wurzel für x.',
     ],
-    solutionKey: 'z = x²: z² - 5z + 4 = 0 → (z-1)(z-4) = 0 → z₁ = 1, z₂ = 4. Ruecksubstitution: x² = 1 → x = ±1; x² = 4 → x = ±2. Größte positive Lösung: x = 2.',
+    solutionKey: 'z = x²: z² - 5z + 4 = 0 → (z-1)(z-4) = 0 → z₁ = 1, z₂ = 4. Rücksubstitution: x² = 1 → x = ±1; x² = 4 → x = ±2. Größte positive Lösung: x = 2.',
     tags: ['biquadratisch', 'substitution'],
   },
 
@@ -184,7 +184,7 @@ export const exercises = [
       'Genau eine Lösung bedeutet D = 0.',
       'D = (p/2)² - 9 = 0 → (p/2)² = 9 → p/2 = ±3 → p = ±6.',
     ],
-    solutionKey: 'D = (p/2)² - 9 = 0 → (p/2)² = 9 → p/2 = ±3 → p = 6 oder p = -6. Beide Werte ergeben eine Doppelloesung.',
+    solutionKey: 'D = (p/2)² - 9 = 0 → (p/2)² = 9 → p/2 = ±3 → p = 6 oder p = -6. Beide Werte ergeben eine Doppellösung.',
     tags: ['parameter', 'diskriminante', 'lösungsanzahl'],
   },
 
@@ -197,15 +197,15 @@ export const exercises = [
     points: 10,
     timeEstimate: 6,
     data: {
-      questionText: 'Löse die Wurzelgleichung √(x + 3) = x - 1. Gib die gueltigen Lösung(en) an — wie viele gibt es?',
+      questionText: 'Löse die Wurzelgleichung √(x + 3) = x - 1. Gib die gültigen Lösung(en) an — wie viele gibt es?',
       correctValue: 1,
       tolerance: 0,
     },
     hintKeys: [
       'Quadriere beide Seiten: x + 3 = (x - 1)² = x² - 2x + 1.',
-      'Probe nicht vergessen! Beide Lösungen müssen gueltig sein (√ ≥ 0, x - 1 ≥ 0).',
+      'Probe nicht vergessen! Beide Lösungen müssen gültig sein (√ ≥ 0, x - 1 ≥ 0).',
     ],
-    solutionKey: 'x + 3 = x² - 2x + 1 → x² - 3x - 2 = 0 → Warte: x² - 3x - 2 = 0 hat x = (3 ± √17)/2. Probe: x₁ ≈ 3.56 (gueltig), x₂ ≈ -0.56 gibt x - 1 < 0 (ungueltig). Genau 1 gueltige Lösung.',
+    solutionKey: 'x + 3 = x² - 2x + 1 → x² - 3x - 2 = 0 → Warte: x² - 3x - 2 = 0 hat x = (3 ± √17)/2. Probe: x₁ ≈ 3.56 (gültig), x₂ ≈ -0.56 gibt x - 1 < 0 (ungültig). Genau 1 gültige Lösung.',
     tags: ['wurzelgleichung', 'probe', 'quadratische-gleichung'],
   },
 
@@ -219,14 +219,14 @@ export const exercises = [
     competencies: ['kreativität', 'kommunikation'],
     points: 15,
     timeEstimate: 8,
-    contextKey: 'Ein rechteckiges Grundstueck hat einen Umfang von 40 m. Die Flaeche des Grundstuecks betraegt 96 m².',
+    contextKey: 'Ein rechteckiges Grundstück hat einen Umfang von 40 m. Die Fläche des Grundstücks beträgt 96 m².',
     data: {
-      questionText: 'Stelle eine quadratische Gleichung für die Laenge x (in Metern) einer Seite auf und löse sie. Gib die größere Seitenlaenge an.',
+      questionText: 'Stelle eine quadratische Gleichung für die Länge x (in Metern) einer Seite auf und löse sie. Gib die größere Seitenlänge an.',
       correctValue: 12,
       tolerance: 0.1,
     },
     hintKeys: [
-      'Umfang: 2(x + y) = 40 → y = 20 - x. Flaeche: x · y = 96.',
+      'Umfang: 2(x + y) = 40 → y = 20 - x. Fläche: x · y = 96.',
       'Einsetzen: x(20 - x) = 96 → x² - 20x + 96 = 0.',
     ],
     solutionKey: 'y = 20 - x; x(20 - x) = 96 → x² - 20x + 96 = 0 → p = -20, q = 96. x = 10 ± √(100 - 96) = 10 ± 2. x₁ = 12, x₂ = 8. Die größere Seite ist 12 m.',
@@ -272,7 +272,7 @@ export const exercises = [
         { content: 'x₁ = -3 + √31 ≈ 2.57, x₂ = -3 - √31 ≈ -8.57', hasError: true, errorExplanation: 'Folge des Rechenfehlers. Richtig: x₁ = -3 + 2 = -1, x₂ = -3 - 2 = -5.' },
       ],
     },
-    hintKeys: ['Prüfe Schritt 3 sorgfaeltig: Wie berechnet sich (p/2)²?'],
+    hintKeys: ['Prüfe Schritt 3 sorgfältig: Wie berechnet sich (p/2)²?'],
     solutionKey: 'Der Fehler liegt in Schritt 3: (6/2)² = 3² = 9, nicht 36. Richtig: x = -3 ± √(9 - 5) = -3 ± 2 → x₁ = -1, x₂ = -5.',
     tags: ['fehleranalyse', 'pq-formel', '4k-kritisches-denken'],
   },
@@ -294,7 +294,7 @@ export const exercises = [
       'Multipliziere beide Seiten mit x(x - 1), um die Nenner zu beseitigen.',
       'Es entsteht: (x + 2)(x - 1) + x² = 3x(x - 1).',
     ],
-    solutionKey: 'Multiplizieren mit x(x-1): (x+2)(x-1) + x² = 3x(x-1). x²+x-2 + x² = 3x²-3x → 2x²+x-2 = 3x²-3x → x²-4x+2 = 0. p=-4, q=2: x = 2 ± √2. x₁ = 2+√2 ≈ 3.41, x₂ = 2-√2 ≈ 0.59. Probe: beide gueltig. Größere Lösung: x ≈ 3.41.',
+    solutionKey: 'Multiplizieren mit x(x-1): (x+2)(x-1) + x² = 3x(x-1). x²+x-2 + x² = 3x²-3x → 2x²+x-2 = 3x²-3x → x²-4x+2 = 0. p=-4, q=2: x = 2 ± √2. x₁ = 2+√2 ≈ 3.41, x₂ = 2-√2 ≈ 0.59. Probe: beide gültig. Größere Lösung: x ≈ 3.41.',
     tags: ['bruchgleichung', 'gleichung-aufstellen', 'probe'],
   },
 
@@ -306,7 +306,7 @@ export const exercises = [
     competencies: ['kreativität', 'kommunikation'],
     points: 15,
     timeEstimate: 9,
-    contextKey: 'Ein Zug legt eine Strecke von 240 km zurueck. Ein zweiter Zug ist 20 km/h schneller und benötigt für dieselbe Strecke 1 Stunde weniger.',
+    contextKey: 'Ein Zug legt eine Strecke von 240 km zurück. Ein zweiter Zug ist 20 km/h schneller und benötigt für dieselbe Strecke 1 Stunde weniger.',
     data: {
       questionText: 'Stelle eine quadratische Gleichung für die Geschwindigkeit v (in km/h) des langsameren Zuges auf und löse sie. Gib v an.',
       correctValue: 60,
@@ -316,7 +316,7 @@ export const exercises = [
       'Zeit = Strecke / Geschwindigkeit. Zug 1: t₁ = 240/v; Zug 2: t₂ = 240/(v+20).',
       't₁ - t₂ = 1 → 240/v - 240/(v+20) = 1. Multipliziere mit v(v+20).',
     ],
-    solutionKey: '240/v - 240/(v+20) = 1. Multiplizieren mit v(v+20): 240(v+20) - 240v = v(v+20) → 4800 = v² + 20v → v² + 20v - 4800 = 0. p = 20, q = -4800. v = -10 ± √(100 + 4800) = -10 ± 70. v₁ = 60 (gueltig), v₂ = -80 (unsinning). v = 60 km/h.',
+    solutionKey: '240/v - 240/(v+20) = 1. Multiplizieren mit v(v+20): 240(v+20) - 240v = v(v+20) → 4800 = v² + 20v → v² + 20v - 4800 = 0. p = 20, q = -4800. v = -10 ± √(100 + 4800) = -10 ± 70. v₁ = 60 (gültig), v₂ = -80 (unsinning). v = 60 km/h.',
     tags: ['sachkontext', 'geschwindigkeit-zeit', 'gleichung-aufstellen'],
   },
 

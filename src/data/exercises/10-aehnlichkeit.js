@@ -20,7 +20,7 @@ export const exercises = [
       'Berechne z. B. 6 cm ÷ 4 cm.',
     ],
     solutionKey:
-      'k = 6/4 = 9/6 = 12/8 = 1,5. Der Ähnlichkeitsfaktor betraegt k = 1,5.',
+      'k = 6/4 = 9/6 = 12/8 = 1,5. Der Ähnlichkeitsfaktor beträgt k = 1,5.',
     tags: ['ähnlichkeitsfaktor', 'dreiecke'],
   },
 
@@ -58,7 +58,7 @@ export const exercises = [
     timeEstimate: 3,
     data: {
       questionText:
-        'Zwei Quadrate haben die Seitenlaengen 5 cm und 5 cm. Welche Aussage trifft zu?',
+        'Zwei Quadrate haben die Seitenlängen 5 cm und 5 cm. Welche Aussage trifft zu?',
       options: [
         { id: 'a', text: 'Sie sind kongruent (deckungsgleich).', correct: true },
         { id: 'b', text: 'Sie sind ähnlich, aber nicht kongruent.', correct: false },
@@ -72,7 +72,7 @@ export const exercises = [
       'Kongruenz ist ein Spezialfall der Ähnlichkeit (k = 1).',
     ],
     solutionKey:
-      'Beide Quadrate haben Seitenlaenge 5 cm, also k = 1. Gleiche Form und gleiche Größe → kongruent. Antwort a) ist korrekt. (d) ist zwar mathematisch auch richtig, beschreibt den Begriff aber nicht vollstaendig als kongruent.)',
+      'Beide Quadrate haben Seitenlänge 5 cm, also k = 1. Gleiche Form und gleiche Größe → kongruent. Antwort a) ist korrekt. (d) ist zwar mathematisch auch richtig, beschreibt den Begriff aber nicht vollständig als kongruent.)',
     tags: ['kongruenz', 'ähnlichkeit', 'begriffe'],
   },
 
@@ -162,13 +162,13 @@ export const exercises = [
     timeEstimate: 5,
     data: {
       questionText:
-        'Flaechenverhaeltnis ähnlicher Figuren: Zwei ähnliche Dreiecke haben den Ähnlichkeitsfaktor k = 3. Das kleinere Dreieck hat eine Flaeche von 8 cm². Wie groß ist die Flaeche des größeren Dreiecks in cm²?',
+        'Flächenverhältnis ähnlicher Figuren: Zwei ähnliche Dreiecke haben den Ähnlichkeitsfaktor k = 3. Das kleinere Dreieck hat eine Fläche von 8 cm². Wie groß ist die Fläche des größeren Dreiecks in cm²?',
       correctValue: 72,
       tolerance: 0.1,
       unit: 'cm²',
     },
     hintKeys: [
-      'Bei ähnlichen Figuren gilt: Flaechenverhaeltnis = k².',
+      'Bei ähnlichen Figuren gilt: Flächenverhältnis = k².',
       'A_gross = k² · A_klein = 3² · 8 cm².',
     ],
     solutionKey:
@@ -186,13 +186,13 @@ export const exercises = [
     timeEstimate: 5,
     data: {
       questionText:
-        'Volumenverhaeltnis ähnlicher Koerper: Zwei ähnliche Zylinder haben den Ähnlichkeitsfaktor k = 2. Der kleinere Zylinder hat ein Volumen von 50 cm³. Wie groß ist das Volumen des größeren Zylinders in cm³?',
+        'Volumenverhältnis ähnlicher Körper: Zwei ähnliche Zylinder haben den Ähnlichkeitsfaktor k = 2. Der kleinere Zylinder hat ein Volumen von 50 cm³. Wie groß ist das Volumen des größeren Zylinders in cm³?',
       correctValue: 400,
       tolerance: 0.5,
       unit: 'cm³',
     },
     hintKeys: [
-      'Bei ähnlichen Koerpern gilt: Volumenverhaeltnis = k³.',
+      'Bei ähnlichen Körpern gilt: Volumenverhältnis = k³.',
       'V_gross = k³ · V_klein = 2³ · 50 cm³.',
     ],
     solutionKey:
@@ -213,14 +213,14 @@ export const exercises = [
     contextKey: 'baum-schatten',
     data: {
       questionText:
-        'Baumhoehe bestimmen: Ein 1,80 m großer Mensch wirft bei Sonnenschein einen Schatten von 2,40 m. Zur selben Zeit wirft ein Baum einen Schatten von 16 m. Wie hoch ist der Baum in m?',
+        'Baumhöhe bestimmen: Ein 1,80 m großer Mensch wirft bei Sonnenschein einen Schatten von 2,40 m. Zur selben Zeit wirft ein Baum einen Schatten von 16 m. Wie hoch ist der Baum in m?',
       correctValue: 12,
       tolerance: 0.05,
       unit: 'm',
     },
     hintKeys: [
       'Mensch und Baum bilden ähnliche rechtwinklige Dreiecke (Sonne ist sehr weit entfernt, parallele Strahlen).',
-      'Verhaeltnis: Koerpergroesse / Schattенlaenge ist für beide gleich.',
+      'Verhältnis: Körpergröße / Schattенlänge ist für beide gleich.',
       '1,80 / 2,40 = h_Baum / 16',
     ],
     solutionKey:
@@ -239,14 +239,14 @@ export const exercises = [
     contextKey: 'modellbau',
     data: {
       questionText:
-        'Modellbau: Ein Flugzeugmodell wird im Massstab 1 : 72 gebaut. Das echte Flugzeug hat eine Fluegelfläche von 260 m². Wie groß ist die Fluegelfläche des Modells in cm²? (Runde auf ganze cm².)',
+        'Modellbau: Ein Flugzeugmodell wird im Massstab 1 : 72 gebaut. Das echte Flugzeug hat eine Flügelfläche von 260 m². Wie groß ist die Flügelfläche des Modells in cm²? (Runde auf ganze cm².)',
       correctValue: 501,
       tolerance: 1,
       unit: 'cm²',
     },
     hintKeys: [
       'Massstab 1 : 72 → Ähnlichkeitsfaktor k = 1/72.',
-      'Flaechenverhaeltnis = k² = (1/72)².',
+      'Flächenverhältnis = k² = (1/72)².',
       'A_Modell = A_echt · k² = 260 m² · (1/72)². Einheit umrechnen: 1 m² = 10 000 cm².',
     ],
     solutionKey:
@@ -280,7 +280,7 @@ export const exercises = [
           content: 'CD = AB · SC / SA = 6 · 3 / 4 = 4,5 cm',
           hasError: true,
           errorExplanation:
-            'Falsch, weil der Ansatz in Schritt 2 fehlerhaft war. Korrekt: SD = SB · SC / SA = 10 · 3 / 4 = 7,5 cm. CD = SD - SC = 7,5 - 3 = 4,5 cm. (Zufaellig gleiches Ergebnis, aber falscher Rechenweg!)',
+            'Falsch, weil der Ansatz in Schritt 2 fehlerhaft war. Korrekt: SD = SB · SC / SA = 10 · 3 / 4 = 7,5 cm. CD = SD - SC = 7,5 - 3 = 4,5 cm. (Zufällig gleiches Ergebnis, aber falscher Rechenweg!)',
         },
       ],
     },
@@ -289,7 +289,7 @@ export const exercises = [
       'Niemals Abschnitt durch Abschnitt vergleichen (SA/AB ≠ SC/CD).',
     ],
     solutionKey:
-      'Schritt 2 ist fehlerhaft: Korrekt ist SA/SB = SC/SD, also 4/10 = 3/SD → SD = 7,5 cm → CD = 7,5 - 3 = 4,5 cm. Das Ergebnis ist hier zufaellig gleich, der Rechenweg war aber falsch.',
+      'Schritt 2 ist fehlerhaft: Korrekt ist SA/SB = SC/SD, also 4/10 = 3/SD → SD = 7,5 cm → CD = 7,5 - 3 = 4,5 cm. Das Ergebnis ist hier zufällig gleich, der Rechenweg war aber falsch.',
     tags: ['fehleranalyse', 'strahlensatz', 'typischer-fehler'],
   },
 
@@ -301,10 +301,10 @@ export const exercises = [
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'],
     points: 12,
     timeEstimate: 10,
-    contextKey: 'fotovergroesserung',
+    contextKey: 'fotovergrößerung',
     data: {
       questionText:
-        'Fotovergroesserung: Ein Originalfoto hat die Abmessungen 9 cm × 13 cm. Es soll so vergrößert werden, dass die laengere Seite 39 cm betraegt. Wie lang ist dann die kürzere Seite des vergrößerten Fotos in cm?',
+        'Fotovergrößerung: Ein Originalfoto hat die Abmessungen 9 cm × 13 cm. Es soll so vergrößert werden, dass die längere Seite 39 cm beträgt. Wie lang ist dann die kürzere Seite des vergrößerten Fotos in cm?',
       correctValue: 27,
       tolerance: 0.05,
       unit: 'cm',
@@ -331,17 +331,17 @@ export const exercises = [
     contextKey: 'modellbau',
     data: {
       questionText:
-        'Modell-Massstab: Ein Architekturmodell wird im Massstab $1 : 500$ gebaut. Das echte Gebaeude ist $12{,}0\\,\\text{m}$ hoch. Wie hoch ist das Gebaeudemodell in cm?',
+        'Modell-Massstab: Ein Architekturmodell wird im Massstab $1 : 500$ gebaut. Das echte Gebäude ist $12{,}0\\,\\text{m}$ hoch. Wie hoch ist das Gebäudemodell in cm?',
       correctValue: 2.4,
       tolerance: 0.05,
       unit: 'cm',
     },
     hintKeys: [
       'Massstab $1 : 500$ bedeutet: $1\\,\\text{cm}$ im Modell entspricht $500\\,\\text{cm}$ in der Realität.',
-      'Modellhoehe $= \\dfrac{\\text{echte Höhe}}{500}$. Rechne zuerst $12{,}0\\,\\text{m}$ in cm um.',
+      'Modellhöhe $= \\dfrac{\\text{echte Höhe}}{500}$. Rechne zuerst $12{,}0\\,\\text{m}$ in cm um.',
     ],
     solutionKey:
-      '$12{,}0\\,\\text{m} = 1200\\,\\text{cm}$. Modellhoehe $= \\dfrac{1200}{500} = 2{,}4\\,\\text{cm}$.',
+      '$12{,}0\\,\\text{m} = 1200\\,\\text{cm}$. Modellhöhe $= \\dfrac{1200}{500} = 2{,}4\\,\\text{cm}$.',
     tags: ['massstab', 'modellbau', 'sachkontext', 'einheitenumrechnung'],
   },
 
@@ -369,12 +369,12 @@ export const exercises = [
         },
         {
           id: 'c',
-          text: 'Die Verhaeltnisse entsprechender Seiten sind alle gleich (proportional).',
+          text: 'Die Verhältnisse entsprechender Seiten sind alle gleich (proportional).',
           correct: true,
         },
         {
           id: 'd',
-          text: 'Die Dreiecke müssen dieselbe Flaeche haben.',
+          text: 'Die Dreiecke müssen dieselbe Fläche haben.',
           correct: false,
         },
       ],
@@ -384,7 +384,7 @@ export const exercises = [
       'Prüfe jede Aussage einzeln: Geht es um Winkel oder Seiten? Exakt gleich oder nur proportional?',
     ],
     solutionKey:
-      'Ähnliche Dreiecke haben (a) gleiche Winkel und (c) proportionale Seiten. Die Seiten müssen NICHT gleich lang sein (b falsch) und die Flaechen können verschieden sein (d falsch).',
+      'Ähnliche Dreiecke haben (a) gleiche Winkel und (c) proportionale Seiten. Die Seiten müssen NICHT gleich lang sein (b falsch) und die Flächen können verschieden sein (d falsch).',
     tags: ['ähnlichkeit', 'dreiecke', 'begriffe', 'winkel', 'proportional'],
   },
 
@@ -401,7 +401,7 @@ export const exercises = [
     contextKey: 'schatten',
     data: {
       questionText:
-        'Baumhoehe per Schattenmessung: An einem sonnigen Tag wirft eine $1{,}70\\,\\text{m}$ große Person einen Schatten von $2{,}50\\,\\text{m}$ Laenge. Zur gleichen Zeit wirft ein nahe stehender Baum einen Schatten von $8{,}00\\,\\text{m}$. Wie hoch ist der Baum?',
+        'Baumhöhe per Schattenmessung: An einem sonnigen Tag wirft eine $1{,}70\\,\\text{m}$ große Person einen Schatten von $2{,}50\\,\\text{m}$ Länge. Zur gleichen Zeit wirft ein nahe stehender Baum einen Schatten von $8{,}00\\,\\text{m}$. Wie hoch ist der Baum?',
       steps: [
         {
           instruction:
@@ -425,7 +425,7 @@ export const exercises = [
         },
         {
           instruction:
-            'Lösche die Gleichung nach $h$ auf und berechne die Baumhoehe in Metern.',
+            'Lösche die Gleichung nach $h$ auf und berechne die Baumhöhe in Metern.',
           type: 'numeric',
           expected: 5.44,
           tolerance: 0.05,
@@ -435,7 +435,7 @@ export const exercises = [
     },
     hintKeys: [
       'Gleichzeitig = gleicher Sonnenwinkel → ähnliche rechtwinklige Dreiecke.',
-      'Proportion: $\\dfrac{\\text{Koerperhoehe}}{\\text{Schattенlaenge}} = \\dfrac{\\text{Baumhoehe}}{\\text{Baumschatten}}$.',
+      'Proportion: $\\dfrac{\\text{Körperhöhe}}{\\text{Schattенlänge}} = \\dfrac{\\text{Baumhöhe}}{\\text{Baumschatten}}$.',
       '$h = \\dfrac{1{,}70 \\cdot 8{,}00}{2{,}50}$',
     ],
     solutionKey:
@@ -478,11 +478,11 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Prüfe, ob das Verhaeltnis aller drei Seiten gleich ist: $\\dfrac{a_2}{a_1} = \\dfrac{b_2}{b_1} = \\dfrac{c_2}{c_1}$.',
+      'Prüfe, ob das Verhältnis aller drei Seiten gleich ist: $\\dfrac{a_2}{a_1} = \\dfrac{b_2}{b_1} = \\dfrac{c_2}{c_1}$.',
       'Bekannte Pythagoraische Tripel: $(3,4,5)$, $(5,12,13)$, $(8,15,17)$.',
     ],
     solutionKey:
-      'A–P $(k=2)$, B–Q $(k=2)$, C–R $(k=0{,}5)$, D–S $(k=\\tfrac{1}{3})$. Alle Seitenverhaeltnisse sind konstant.',
+      'A–P $(k=2)$, B–Q $(k=2)$, C–R $(k=0{,}5)$, D–S $(k=\\tfrac{1}{3})$. Alle Seitenverhältnisse sind konstant.',
     tags: ['ähnliche-dreiecke', 'proportionale-seiten', 'drag-match', 'pythagoraeische-tripel'],
   },
 
@@ -509,7 +509,7 @@ export const exercises = [
           content: '$SD = \\dfrac{9 \\cdot 4}{6} = 6\\,\\text{cm}$',
           hasError: true,
           errorExplanation:
-            'Falsch, weil Schritt 1 fehlerhaft war. Korrekt: $SD = \\dfrac{SB \\cdot SC}{SA} = \\dfrac{9 \\cdot 4}{6} = 6\\,\\text{cm}$. Hier ist das Ergebnis zufaellig richtig, der Ansatz war aber falsch.',
+            'Falsch, weil Schritt 1 fehlerhaft war. Korrekt: $SD = \\dfrac{SB \\cdot SC}{SA} = \\dfrac{9 \\cdot 4}{6} = 6\\,\\text{cm}$. Hier ist das Ergebnis zufällig richtig, der Ansatz war aber falsch.',
         },
         {
           content: '$CD = SD - SC = 6 - 4 = 2\\,\\text{cm}$',
@@ -519,10 +519,10 @@ export const exercises = [
     },
     hintKeys: [
       'Erster Strahlensatz: $\\dfrac{SA}{SB} = \\dfrac{SC}{SD}$ — immer Gesamtstrecken vom Scheitel vergleichen.',
-      'Niemals Strecken von verschiedenen Strahlen direkt gegenueberstellen.',
+      'Niemals Strecken von verschiedenen Strahlen direkt gegenüberstellen.',
     ],
     solutionKey:
-      'Schritt 1 ist fehlerhaft: Die richtige Proportion lautet $\\dfrac{SA}{SB} = \\dfrac{SC}{SD}$. Das Ergebnis $SD = 6\\,\\text{cm}$ ist zufaellig korrekt, der Rechenweg aber falsch.',
+      'Schritt 1 ist fehlerhaft: Die richtige Proportion lautet $\\dfrac{SA}{SB} = \\dfrac{SC}{SD}$. Das Ergebnis $SD = 6\\,\\text{cm}$ ist zufällig korrekt, der Rechenweg aber falsch.',
     tags: ['fehleranalyse', 'strahlensatz', 'typischer-fehler', 'proportion'],
   },
 
@@ -543,7 +543,7 @@ export const exercises = [
       steps: [
         {
           instruction:
-            'Berechne den Massstab der Karte. $1{,}5\\,\\text{cm}$ entspricht $500\\,\\text{m}$ in der Realität. Gib den Massstab als Verhaeltnis $1 : n$ an. Welcher Wert ist $n$?',
+            'Berechne den Massstab der Karte. $1{,}5\\,\\text{cm}$ entspricht $500\\,\\text{m}$ in der Realität. Gib den Massstab als Verhältnis $1 : n$ an. Welcher Wert ist $n$?',
           type: 'numeric',
           expected: 33333,
           tolerance: 500,
@@ -551,7 +551,7 @@ export const exercises = [
         },
         {
           instruction:
-            'Berechne die reale Entfernung zwischen den Haltestellen. Die Bildschirmstrecke betraegt $4{,}2\\,\\text{cm}$. Nutze den Massstab aus Schritt 1. Gib die Entfernung in Metern an.',
+            'Berechne die reale Entfernung zwischen den Haltestellen. Die Bildschirmstrecke beträgt $4{,}2\\,\\text{cm}$. Nutze den Massstab aus Schritt 1. Gib die Entfernung in Metern an.',
           type: 'numeric',
           expected: 1400,
           tolerance: 50,
@@ -581,7 +581,7 @@ export const exercises = [
     },
     hintKeys: [
       'Massstab: $1\\,\\text{cm}$ auf der Karte entspricht $\\dfrac{500}{1{,}5}\\,\\text{m}$ in der Realität.',
-      'Reale Entfernung $= $ Kartenlaenge $\\times$ Massstabszahl. Einheiten beachten!',
+      'Reale Entfernung $= $ Kartenlänge $\\times$ Massstabszahl. Einheiten beachten!',
     ],
     solutionKey:
       '(1) $1{,}5\\,\\text{cm} \\hat{=} 500\\,\\text{m} = 50\\,000\\,\\text{cm} \\Rightarrow 1\\,\\text{cm} \\hat{=} \\dfrac{50000}{1{,}5} \\approx 33\\,333\\,\\text{cm}$, Massstab $\\approx 1 : 33\\,333$. (2) $d = \\dfrac{4{,}2 \\cdot 500}{1{,}5} = 1400\\,\\text{m}$.',
@@ -603,27 +603,27 @@ export const exercises = [
         {
           id: '1',
           left: '$\\dfrac{SA}{SB} = \\dfrac{SC}{SD}$',
-          right: 'Erster Strahlensatz: Verhaeltnis der Gesamtstrecken auf beiden Strahlen vom Scheitel S',
+          right: 'Erster Strahlensatz: Verhältnis der Gesamtstrecken auf beiden Strahlen vom Scheitel S',
         },
         {
           id: '2',
           left: '$\\dfrac{SA}{AB} = \\dfrac{SC}{CD}$',
-          right: 'Zweiter Strahlensatz: Verhaeltnis von Gesamtstrecke zu Abschnitt ist auf beiden Strahlen gleich',
+          right: 'Zweiter Strahlensatz: Verhältnis von Gesamtstrecke zu Abschnitt ist auf beiden Strahlen gleich',
         },
         {
           id: '3',
           left: '$\\dfrac{AB}{CD} = \\dfrac{SA}{SC}$',
-          right: 'Parallelenstrecken verhalten sich wie die zugehoerigen Gesamtstrecken vom Scheitel',
+          right: 'Parallelenstrecken verhalten sich wie die zugehörigen Gesamtstrecken vom Scheitel',
         },
         {
           id: '4',
           left: '$k = \\dfrac{SB}{SA} = \\dfrac{SD}{SC}$',
-          right: 'Ähnlichkeitsfaktor k: Streckungsverhaeltnis vom kleineren zum größeren Strahl',
+          right: 'Ähnlichkeitsfaktor k: Streckungsverhältnis vom kleineren zum größeren Strahl',
         },
       ],
     },
     hintKeys: [
-      'Erster Strahlensatz: Gesamtstrecken desselben Strahls stehen im gleichen Verhaeltnis.',
+      'Erster Strahlensatz: Gesamtstrecken desselben Strahls stehen im gleichen Verhältnis.',
       'Zweiter Strahlensatz: Abschnitte auf parallelen Geraden verhalten sich wie die Strecken vom Scheitel.',
     ],
     solutionKey:
@@ -641,17 +641,17 @@ export const exercises = [
     timeEstimate: 8,
     data: {
       questionText:
-        'Zwei ähnliche Dreiecke haben den Ähnlichkeitsfaktor $k = 1{,}5$ (groß zu klein). Der Umfang des kleineren Dreiecks betraegt $24\\,\\text{cm}$. Berechne den Umfang des größeren Dreiecks in cm.',
+        'Zwei ähnliche Dreiecke haben den Ähnlichkeitsfaktor $k = 1{,}5$ (groß zu klein). Der Umfang des kleineren Dreiecks beträgt $24\\,\\text{cm}$. Berechne den Umfang des größeren Dreiecks in cm.',
       correctValue: 36,
       tolerance: 0.1,
       unit: 'cm',
     },
     hintKeys: [
-      'Bei ähnlichen Figuren verhaelt sich der Umfang genauso wie die Seiten: Umfang-Verhaeltnis $= k$.',
+      'Bei ähnlichen Figuren verhält sich der Umfang genauso wie die Seiten: Umfang-Verhältnis $= k$.',
       '$U_{\\text{groß}} = k \\cdot U_{\\text{klein}} = 1{,}5 \\cdot 24\\,\\text{cm}$.',
     ],
     solutionKey:
-      '$U_{\\text{groß}} = k \\cdot U_{\\text{klein}} = 1{,}5 \\cdot 24 = 36\\,\\text{cm}$. Der Umfang des größeren Dreiecks betraegt $36\\,\\text{cm}$.',
+      '$U_{\\text{groß}} = k \\cdot U_{\\text{klein}} = 1{,}5 \\cdot 24 = 36\\,\\text{cm}$. Der Umfang des größeren Dreiecks beträgt $36\\,\\text{cm}$.',
     tags: ['umfang', 'ähnlichkeitsfaktor', 'dreiecke', 'linear'],
   },
 
@@ -665,10 +665,10 @@ export const exercises = [
     competencies: ['kritisches-denken', 'kommunikation', 'kreativität'],
     points: 15,
     timeEstimate: 12,
-    contextKey: 'fotovergroesserung',
+    contextKey: 'fotovergrößerung',
     data: {
       questionText:
-        'Foto-Postervergroesserung: Ein digitales Foto hat das Format $10\\,\\text{cm} \\times 15\\,\\text{cm}$. Es soll auf ein Poster mit einer Breite von $60\\,\\text{cm}$ vergrößert werden. Berechne (1) den Vergrößerungsfaktor, (2) die Höhe des Posters und (3) das Flaechenverhaeltnis von Poster zu Original.',
+        'Foto-Postervergrößerung: Ein digitales Foto hat das Format $10\\,\\text{cm} \\times 15\\,\\text{cm}$. Es soll auf ein Poster mit einer Breite von $60\\,\\text{cm}$ vergrößert werden. Berechne (1) den Vergrößerungsfaktor, (2) die Höhe des Posters und (3) das Flächenverhältnis von Poster zu Original.',
       steps: [
         {
           instruction:
@@ -680,7 +680,7 @@ export const exercises = [
         },
         {
           instruction:
-            'Berechne die Höhe des vergrößerten Posters in cm. Die Originalhoehe betraegt $15\\,\\text{cm}$.',
+            'Berechne die Höhe des vergrößerten Posters in cm. Die Originalhöhe beträgt $15\\,\\text{cm}$.',
           type: 'numeric',
           expected: 90,
           tolerance: 0.5,
@@ -688,7 +688,7 @@ export const exercises = [
         },
         {
           instruction:
-            'Berechne das Flaechenverhaeltnis $\\dfrac{A_{\\text{Poster}}}{A_{\\text{Original}}}$. Nutze $k^2$.',
+            'Berechne das Flächenverhältnis $\\dfrac{A_{\\text{Poster}}}{A_{\\text{Original}}}$. Nutze $k^2$.',
           type: 'numeric',
           expected: 36,
           tolerance: 0.1,
@@ -698,11 +698,11 @@ export const exercises = [
     },
     hintKeys: [
       '$k = \\dfrac{\\text{neue Breite}}{\\text{alte Breite}} = \\dfrac{60}{10}$.',
-      'Alle Laengenmasse werden mit $k$ multipliziert, Flaechenmasse mit $k^2$.',
+      'Alle Längenmasse werden mit $k$ multipliziert, Flächenmasse mit $k^2$.',
       '$A_{\\text{Poster}} = 60 \\cdot 90 = 5400\\,\\text{cm}^2$, $A_{\\text{Original}} = 10 \\cdot 15 = 150\\,\\text{cm}^2$.',
     ],
     solutionKey:
-      '(1) $k = \\dfrac{60}{10} = 6$. (2) Höhe $= 15 \\cdot 6 = 90\\,\\text{cm}$. (3) Flaechenverhaeltnis $= k^2 = 36$ (Poster ist 36-mal so groß wie das Original).',
+      '(1) $k = \\dfrac{60}{10} = 6$. (2) Höhe $= 15 \\cdot 6 = 90\\,\\text{cm}$. (3) Flächenverhältnis $= k^2 = 36$ (Poster ist 36-mal so groß wie das Original).',
     tags: ['foto', 'sachkontext', 'k-quadrat', 'flaechenverhaeltnis', 'step-solver', 'ea'],
   },
 
@@ -716,21 +716,21 @@ export const exercises = [
     timeEstimate: 8,
     data: {
       questionText:
-        'Warum ist das Flaechenverhaeltnis ähnlicher Figuren $k^2$ und nicht $k$? Wähle die beste Begruendung.',
+        'Warum ist das Flächenverhältnis ähnlicher Figuren $k^2$ und nicht $k$? Wähle die beste Begründung.',
       options: [
         {
           id: 'a',
-          text: 'Weil Flaechen zweidimensional sind: Laenge UND Breite werden jeweils mit $k$ multipliziert, sodass $A_{\\text{groß}} = (k \\cdot l) \\cdot (k \\cdot b) = k^2 \\cdot l \\cdot b = k^2 \\cdot A_{\\text{klein}}$.',
+          text: 'Weil Flächen zweidimensional sind: Länge UND Breite werden jeweils mit $k$ multipliziert, sodass $A_{\\text{groß}} = (k \\cdot l) \\cdot (k \\cdot b) = k^2 \\cdot l \\cdot b = k^2 \\cdot A_{\\text{klein}}$.',
           correct: true,
         },
         {
           id: 'b',
-          text: 'Weil man bei Flaechen immer quadrieren muss — das ist eine Rechenregel für Ähnlichkeit.',
+          text: 'Weil man bei Flächen immer quadrieren muss — das ist eine Rechenregel für Ähnlichkeit.',
           correct: false,
         },
         {
           id: 'c',
-          text: 'Weil $k^2$ immer größer als $k$ ist und Flaechen immer größer als Laengen sind.',
+          text: 'Weil $k^2$ immer größer als $k$ ist und Flächen immer größer als Längen sind.',
           correct: false,
         },
         {
@@ -742,10 +742,10 @@ export const exercises = [
     },
     hintKeys: [
       'Denke an ein Rechteck mit Seiten $l$ und $b$: Was passiert mit jeder Seite bei Ähnlichkeit?',
-      'Flaeche $= $ Laenge $\\times$ Breite. Wenn beide Masse mit $k$ multipliziert werden …',
+      'Fläche $= $ Länge $\\times$ Breite. Wenn beide Masse mit $k$ multipliziert werden …',
     ],
     solutionKey:
-      'Antwort (a): Eine Flaeche ergibt sich aus dem Produkt zweier Laengenmasse. Da beide mit $k$ skaliert werden, ergibt sich $k \\cdot k = k^2$ als Flaechenverhaeltnis. Der Umfang (eindimensional) skaliert mit $k$, das Volumen (dreidimensional) mit $k^3$.',
+      'Antwort (a): Eine Fläche ergibt sich aus dem Produkt zweier Längenmasse. Da beide mit $k$ skaliert werden, ergibt sich $k \\cdot k = k^2$ als Flächenverhältnis. Der Umfang (eindimensional) skaliert mit $k$, das Volumen (dreidimensional) mit $k^3$.',
     tags: ['flaechenverhaeltnis', 'k-quadrat', 'begruendung', 'konzept', 'ea'],
   },
 ];

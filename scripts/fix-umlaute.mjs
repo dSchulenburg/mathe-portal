@@ -1,264 +1,218 @@
 #!/usr/bin/env node
 /**
- * fix-umlaute.mjs — Repariert Umlaut-Transliterationen (oe/ue/ae/ss) in
- * deutschen Aufgaben- und Lerninhalts-Daten des Mathe-Portals.
+ * fix-umlaute.mjs — repariert Umlaut-Transliterationen (oe/ue/ae) in den
+ * DEUTSCHEN Aufgaben- und Lerninhalts-Daten des Mathe-Portals.
  *
- * Strategie: strenge Whitelist deutscher Wortstämme. Suffix wird per
- * Capture-Group erhalten, damit Inflexionen mit einem Eintrag erfasst
- * werden ("geoeffnet" + "geoeffnete" + "geoeffneter" → ein Stamm).
+ * WO ERSETZT WIRD -- die wichtigste Regel dieses Werkzeugs:
+ * ausschliesslich INNERHALB von Zeichenkettenliteralen, und dort nur in
+ * solchen, die ein LEERZEICHEN enthalten.
  *
- * Längste Stämme zuerst (Sort), damit "ueberpruef" vor "ueber" greift.
- * Idempotent: mehrmaliger Lauf macht nichts kaputt.
+ * Begruendung ist gemessen, nicht geschaetzt (08.09.2026, 82 deutsche
+ * Dateien): von den Literalen mit ae/oe/ue haben 633 ein Leerzeichen -- das
+ * ist die Prosa. Die 169 ohne Leerzeichen sind ausnahmslos Slugs, Tags, IDs
+ * oder Asset-Pfade: 'fuehrt-zu', '10-koerper', 'aehn-basis-001',
+ * '.../sec07-koerper.mp3'. Kein einziges davon ist sichtbarer Text, und jedes
+ * davon zerbricht, wenn man es "repariert".
  *
- * Aufruf: node scripts/fix-umlaute.mjs
+ * Bis zum 08.09.2026 arbeitete das Skript ZEILENWEISE. Sein eigener CAVEAT
+ * warnte davor ("JS-Identifier in Code-Lines, z.B. exercises: aehnlichkeitEx,
+ * werden ggf. trotzdem getroffen") -- und genau das trat im Trockenlauf ein:
+ *
+ *   -import { exercises as aehnlichkeitEx } from './exercises/10-aehnlichkeit';
+ *   +import { exercises as aehnlichkeitEx } from './exercises/10-ähnlichkeit';
+ *   -    exercises: aehnlichkeitEx,
+ *   +    exercises: ähnlichkeitEx,
+ *
+ * Importpfad zerschossen, Bezeichner umbenannt, Alias nicht -- ReferenceError
+ * beim Start. Dieselbe Familie wie die "zwei kaputten Laeufe", die der alte
+ * Kommentar erwaehnte. Die Leerzeichen-Regel schliesst sie aus.
+ *
+ * DREI DURCHGAENGE je Literal, in dieser Reihenfolge:
+ *
+ *   1. TIPPFEHLER  Drei benannte Einzelfaelle. Muessen ZUERST laufen, sonst
+ *                  macht Durchgang 3 aus 'Streckentoenderung' erst
+ *                  'Streckentönderung' und die Korrektur greift ins Leere.
+ *   2. WORTANFANG  Die \b-verankerten Staemme aus fix-umlaute-stems.mjs.
+ *                  Inhaltlich unveraendert seit 5824c18 (02.05.2026).
+ *   3. MEDIAL      Die Staemme aus fix-umlaute-medial.mjs, an jeder Stelle im
+ *                  Wort. Nachtrag zu dem, was 5824c18 selbst offen liess:
+ *                  "Verbleibende Reste sind Compound-Woerter (z. B.
+ *                  Abhaengigkeit, Annaeherung) in Story-Texten — werden
+ *                  separat ergaenzt." Gemessen: bei 134 von 292 betroffenen
+ *                  Woertern steht die Transliteration erst ab Zeichen 5,
+ *                  ein \b-Stamm kann die nicht erreichen.
+ *
+ * Durchgang 3 schuetzt jedes Wort einzeln ueber TRANSLIT_UNVERDAECHTIG:
+ * 'blaue', 'aktuell', 'Frequenz', 'kongruent', 'congruence', 'Bluetooth'
+ * bleiben unangetastet.
+ *
+ * Uebersetzungen bleiben tabu (siehe isDeFile). Nur locales/de.js und die
+ * deutschen Batch-/Datendateien werden angefasst.
+ *
+ * Idempotent: ein zweiter Lauf aendert nichts mehr.
+ *
+ * Aufruf:
+ *   node scripts/fix-umlaute.mjs --dry    # zeigt nur, was passieren wuerde
+ *   node scripts/fix-umlaute.mjs          # schreibt
+ *
+ * Was danach noch offen ist, zeigt scripts/umlaut-bericht.mjs.
  */
+import { readFileSync, writeFileSync } from 'node:fs';
+import { replacers, walk, isDeFile } from './fix-umlaute-stems.mjs';
+import { MEDIAL, TRANSLIT_UNVERDAECHTIG } from './fix-umlaute-medial.mjs';
 
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+// Laengste Staemme zuerst, damit 'verstoess' vor 'stoess' greift und
+// 'natuerlich' vor 'ueb'.
+const MEDIAL_SORTIERT = [...MEDIAL].sort((a, b) => b[0].length - a[0].length);
 
-// Stamm-Mappings — Phase 1 strenge Whitelist.
-// Reihenfolge egal, wird nach Länge desc. sortiert.
-const stems = [
-  // — sehr spezifische, lange Stämme (zuerst greifen)
-  ['ueberpruef', 'überprüf'],
-  ['beruecksicht', 'berücksicht'],
-  ['einfuehrung', 'einführung'],
-  ['ausfuehrlich', 'ausführlich'],
-  ['ausfuehrung', 'ausführung'],
-  ['durchfuehr', 'durchführ'],
-  ['gluecksrad', 'glücksrad'],
-  ['natuerlich', 'natürlich'],
-  ['gewoehnlich', 'gewöhnlich'],
-  ['unmoeglich', 'unmöglich'],
-  ['tatsaechlich', 'tatsächlich'],
-  ['ungefaehr', 'ungefähr'],
-  ['regelmaess', 'regelmäß'],
-  ['gleichmaess', 'gleichmäß'],
-  ['benoetig', 'benötig'],
-  ['veraender', 'veränder'],
-  ['verkuerz', 'verkürz'],
-  ['unueblich', 'unüblich'],
-  ['gluecklich', 'glücklich'],
-  ['bruechig', 'brüchig'],
-  ['ausgewaehlt', 'ausgewählt'],
-  ['grundgleich', null], // ok wie es ist
-  ['gleichgewicht', null], // ok
-
-  // — mittlere Stämme
-  ['geoeffn', 'geöffn'],
-  ['oeffn', 'öffn'],
-  ['naehern', 'nähern'],
-  ['naechst', 'nächst'],
-  ['aehnlich', 'ähnlich'],
-  ['erklaer', 'erklär'],
-  ['gemaess', 'gemäß'],
-  ['gehoer', 'gehör'],
-  ['hoechst', 'höchst'],
-  ['troest', 'tröst'],
-  ['schoen', 'schön'],
-  ['wuerde', 'würde'],
-  ['wuerf', 'würf'], // würfel, würfeln
-  ['fruehen', 'frühen'],
-  ['frueher', 'früher'],
-  ['truebe', 'trübe'],
-  ['waehl', 'wähl'], // wählen, gewählt, Auswahl etc — careful, "waehlbar" auch
-  ['waehrend', 'während'],
-
-  // — kurze, häufige Stämme
-  ['zaehl', 'zähl'],
-  ['naeh', 'näh'],   // näher, nähe, nähern
-  ['spaet', 'spät'],
-  ['aender', 'änder'],
-  ['noetig', 'nötig'],
-  ['hoeh', 'höh'],
-  ['hoer', 'hör'],
-  ['loes', 'lös'],
-  ['koenn', 'könn'],
-  ['moegl', 'mögl'],
-  ['pruef', 'prüf'],
-  ['muess', 'müss'],
-  ['duerf', 'dürf'],
-  ['drueck', 'drück'],
-  ['glueck', 'glück'],
-  ['gruen', 'grün'],
-  ['fuehr', 'führ'],   // führen, führung
-  ['fuehl', 'fühl'],   // fühlen, gefühl
-  ['fuell', 'füll'],   // füllen, fülle
-  ['groess', 'größ'],  // größer, größe, größte
-  ['schliess', 'schließ'],
-  ['beschliess', 'beschließ'],
-
-  // — Standalone words (kurz, mit \b...\b)
-  ['fuer', 'für'],
-  ['ueber', 'über'],
-  ['gross', 'groß'],
-  ['spass', 'spaß'],
-  ['fuenf', 'fünf'],
-  // 'weiss' ausgelassen — kann legitim englisch sein
-  // 'masse' ausgelassen — Masse vs. Maße ist mehrdeutig
-
-  // Phase 2: weitere häufige Stämme aus dem Story-/Lesson-Korpus
-  ['sprueh', 'sprüh'],
-  ['loesch', 'lösch'],
-  ['gegenstueck', 'gegenstück'],
-  ['waechs', 'wächs'],
-  ['zerfaell', 'zerfäll'],
-  ['praezis', 'präzis'],
-  ['ergaenz', 'ergänz'],
-  ['aeusser', 'äußer'],
-  ['rueckwaert', 'rückwärt'],
-  ['beruehmt', 'berühmt'],
-  ['laeuf', 'läuf'],
-  ['erlaeut', 'erläut'],
-  ['schluessel', 'schlüssel'],
-  ['daemm', 'dämm'],
-  ['kuerz', 'kürz'],
-  ['fluessig', 'flüssig'],
-  ['gegensaetz', 'gegensätz'],
-  ['plaetz', 'plätz'],
-  ['saetz', 'sätz'],         // Sätze, sätzen
-  ['gequae', 'gequä'],       // gequält, gequälte
-  ['quaelen', 'quälen'],
-  ['quaelt', 'quält'],
-  ['hoehl', 'höhl'],         // Höhle, höhlen
-  ['vergroesser', 'vergrößer'],
-
-  // Phase 3: Compounds mit Präfixen (über die \b sonst nicht greift)
-  ['geloesch', 'gelösch'],
-  ['dafuer', 'dafür'],
-  ['hierfuer', 'hierfür'],
-  ['wofuer', 'wofür'],
-  ['darueber', 'darüber'],
-  ['hierueber', 'hierüber'],
-  ['worueber', 'worüber'],
-  ['nuetz', 'nütz'],         // nützlich, nützen
-  ['haelft', 'hälft'],
-  ['uebrig', 'übrig'],
-
-  // Phase 4: Compounds aus Story-Texten
-  ['abhaengig', 'abhängig'],
-  ['unabhaengig', 'unabhängig'],
-  ['abschaetz', 'abschätz'],
-  ['abstaen', 'abständ'],
-  ['abstuerz', 'abstürz'],
-  ['abwaert', 'abwärt'],
-  ['annaeher', 'annäher'],
-  ['anfaeng', 'anfäng'],
-  ['ausgewaehl', 'ausgewähl'],
-  ['gewaehl', 'gewähl'],
-  ['gewaehrt', 'gewährt'],
-  ['einsetz', null],         // ok
-  ['umfaeng', 'umfäng'],
-  ['veraender', 'veränder'],
-  ['vergaeng', 'vergäng'],
-  ['ablaeuf', 'abläuf'],
-
-  // ok-Wörter (no-op skip-list für Klarheit)
-  ['vorhand', null],
-  ['unvermeid', null],
-  ['wahrgenomm', null],
-  ['darunter', null],
+/**
+ * Drei Tippfehler im Bestand, die KEINE Transliterationen sind und deshalb von
+ * keinem Stamm erreicht werden koennen. Am 08.09.2026 uebrig geblieben und
+ * einzeln im Quelltext nachgesehen:
+ *
+ *   'erhaeelt'            doppeltes e  -> erhält   (11-extremwertaufgaben)
+ *   'Höhenannaehrung'     fehlendes e  -> Höhenannäherung (11-integralrechnung)
+ *   'Streckentoenderung'  o statt a    -> Streckenänderung (lessons-10-batch3;
+ *                                        der Nachbarsatz schreibt korrekt
+ *                                        'Zeitaenderung')
+ *
+ * Bewusst benannte Einzelfaelle und keine Staemme: ein Stamm wuerde
+ * suggerieren, dahinter stecke eine Regel.
+ */
+const TIPPFEHLER = [
+  ['erhaeelt', 'erhält'],
+  ['Höhenannaehrung', 'Höhenannäherung'],
+  ['Streckentoenderung', 'Streckenänderung'],
+  ['eingezaeumt', 'eingezäunt'],      // 'einzäunen', nicht 'einzäumen' (10-exp-wachstum)
+  ['gegenlaeudig', 'gegenläufig'],    // d statt f (12-hypothesentests)
 ];
 
-const allStems = stems
-  .filter(([_, repl]) => repl !== null)
-  .sort((a, b) => b[0].length - a[0].length);
+/** Ein einzelnes Wort medial reparieren -- oder unveraendert zurueckgeben. */
+function medialWort(wort) {
+  if (!/ae|oe|ue/i.test(wort)) return wort;
+  if (!TRANSLIT_UNVERDAECHTIG(wort)) return wort;
+  // VERSALIEN (UEBER 2 %) behandeln wir eigens: sie haben eine Binnenmajuskel
+  // und wuerden sonst vom naechsten Test aussortiert.
+  const versalien = wort.length > 1 && wort === wort.toUpperCase() && wort !== wort.toLowerCase();
+  // Binnenmajuskel (GarageBand, CamelCase-Bezeichner): Finger weg, die
+  // Gross-/Kleinbehandlung unten wuerde sie zerstoeren.
+  if (!versalien && /.[A-ZÄÖÜ]/.test(wort)) return wort;
 
-function capitalize(s) {
-  return s[0].toUpperCase() + s.slice(1);
+  const klein = wort.toLowerCase();
+  let s = klein;
+  for (const [ascii, utf8] of MEDIAL_SORTIERT) s = s.split(ascii).join(utf8);
+  if (s === klein) return wort;
+
+  if (versalien) return s.toUpperCase();
+  return wort[0] !== wort[0].toLowerCase() ? s[0].toUpperCase() + s.slice(1) : s;
 }
 
-// Baut zwei Replacer pro Stamm: lowercase + capitalized
-function makeReplacers(stems) {
-  return stems.flatMap(([asciiStem, utf8Stem]) => [
-    [new RegExp(`\\b${asciiStem}(\\w*)`, 'g'), `${utf8Stem}$1`],
-    [new RegExp(`\\b${capitalize(asciiStem)}(\\w*)`, 'g'), `${capitalize(utf8Stem)}$1`],
-  ]);
-}
+const zaehler = { tippfehler: 0, stamm: 0, medial: 0 };
 
-// Generelles Pattern: deutsche -ität-Endung
-// "itaet" am Wortende ist im Deutschen praktisch immer "-ität"
-// (Realität, Komplexität, Universität, Opazität, ...)
-const ityPatterns = [
-  [/\b(\w{2,})itaet\b/g, '$1ität'],
-  [/\b(\w{2,})itaeten\b/g, '$1itäten'],
-  [/\b(\w{2,})itaets(\w*)/g, '$1itäts$2'],
-];
+/** Die drei Durchgaenge auf den INHALT eines Literals. */
+function repariereText(text) {
+  let s = text;
 
-const replacers = [...makeReplacers(allStems), ...ityPatterns];
+  for (const [falsch, richtig] of TIPPFEHLER) {
+    const teile = s.split(falsch);
+    if (teile.length > 1) { zaehler.tippfehler += teile.length - 1; s = teile.join(richtig); }
+  }
 
-// Slug/ID-Felder dürfen NICHT angefasst werden — IDs sind URL-safe ASCII.
-// Auch Import-/Export-Statements sind tabu (Pfade enthalten Slugs).
-// CAVEAT: JS-Identifier in Code-Lines (z.B. "exercises: aehnlichkeitEx")
-// werden ggf. trotzdem getroffen, wenn ein Stamm mitten im Identifier
-// matcht. Workaround: solche Lines manuell zurücksetzen oder strikten
-// String-only-Modus (ASCII '...' Quotes) ergänzen.
-// Lerneffekt aus zwei kaputten Läufen: '10-aehnlichkeit' wurde zu
-// '10-ähnlichkeit' ersetzt, was Imports und Routing zerschossen hat.
-const SLUG_OR_IMPORT_LINE =
-  /(?:^|[\s,])(?:id|topicId|tags?|slug|key)\s*:|^\s*(?:import|export)\b|from\s*['"]/;
+  for (const [re, ersatz] of replacers) {
+    re.lastIndex = 0;
+    s = s.replace(re, (...args) => {
+      zaehler.stamm += 1;
+      return ersatz.replace(/\$(\d+)/g, (_, n) => args[Number(n)]);
+    });
+  }
 
-function fixContent(content) {
-  let count = 0;
-  const lines = content.split('\n');
-  const fixedLines = lines.map((line) => {
-    // Skip Lines mit Slug/ID-Feldern komplett — Inhalte dürfen ASCII bleiben
-    if (SLUG_OR_IMPORT_LINE.test(line)) return line;
-
-    let fixed = line;
-    for (const [re, repl] of replacers) {
-      fixed = fixed.replace(re, (...args) => {
-        count++;
-        return repl.replace(/\$(\d+)/g, (_, n) => args[parseInt(n, 10)]);
-      });
-    }
-    return fixed;
+  s = s.replace(/[A-Za-zÄÖÜäöüß]+/g, (wort) => {
+    const fertig = medialWort(wort);
+    if (fertig !== wort) zaehler.medial += 1;
+    return fertig;
   });
-  return { result: fixedLines.join('\n'), count };
+
+  return s;
 }
 
-function* walk(dir) {
-  for (const entry of readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === 'node_modules' || entry.name === '__tests__' || entry.name.startsWith('.')) continue;
-    const path = join(dir, entry.name);
-    if (entry.isDirectory()) {
-      yield* walk(path);
-    } else if (entry.isFile() && entry.name.endsWith('.js')) {
-      yield path;
-    }
-  }
+
+/**
+ * Schluessel, hinter denen sichtbarer Text steht -- im Gegensatz zu
+ * id/tags/slug/key. Erlaubt die Ausnahme unten fuer einwortige Titel.
+ */
+const PROSA_KEY = /(?:^|[\s,{])(?:title|text|intro|summary|desc|description|why|prompt|question|label|hint|content|answer|solution|contextKey|step\d*|feedback|explanation|caption|placeholder|unit)\s*:\s*$/;
+
+/** Sieht dieses Literal nach Schluesselpfad, Slug oder Datei aus? */
+const BEZEICHNERFORM = /[./\_-]/;
+
+/**
+ * Ist der Inhalt dieses Literals sichtbarer Text?
+ *
+ * Grundregel: Prosa hat Leerzeichen, Bezeichner nicht. Gemessen ueber die
+ * 82 deutschen Dateien -- 157 der einwortigen Literale mit ae/oe/ue sind
+ * Slugs, Tags, IDs oder Asset-Pfade ('fuehrt-zu', '10-koerper',
+ * 'aehn-basis-001'), kein einziges davon sichtbarer Text.
+ *
+ * AUSNAHME: einwortige Werte hinter einem Prosa-Schluessel. Davon gibt es
+ * genau sechs, und drei sind echte Titel, die SuS lesen --
+ * title: 'Randwertpruefung', 'Bevoelkerungswachstum', 'Fotovergroesserung'.
+ * Die beiden i18n-Schluesselpfade darunter ('examples.luecke.context')
+ * bleiben trotzdem tabu: BEZEICHNERFORM haelt alles mit Punkt, Bindestrich,
+ * Unterstrich oder Schraegstrich heraus.
+ */
+function istProsa(text, davor) {
+  if (/\s/.test(text)) return true;
+  return PROSA_KEY.test(davor) && !BEZEICHNERFORM.test(text);
 }
 
-function isDeFile(path) {
-  // Skip translation-files (lessons-XX-batchY-CC.js mit 2-Letter-Code)
-  if (/lessons-\d+-batch\d+-(?:cs|da|en|es|fr|it|nl|no|pl|pt|ru|uk)\.js$/i.test(path)) return false;
-  // Include alle data/ + i18n DE-Files (lessons-XX-batchY.js ohne CC)
-  return path.includes('data') || /lessons-\d+-batch\d+\.js$/i.test(path);
+const LITERAL = /(['"`])((?:\\.|(?!\1)[^\\])*)\1/g;
+
+function repariereDatei(inhalt) {
+  return inhalt.split('\n').map((zeile) => {
+    // Import-/Export-Zeilen bleiben ganz aussen vor. Die frueher hier
+    // zusaetzlich gesperrten id/tags/slug/key-Zeilen NICHT mehr: das war zu
+    // grob und kostete 16 echte Treffer, weil in diesen Dateien Prosa und
+    // id-Feld auf derselben Zeile stehen ("Die Flaeche zwischen dem Graphen
+    // von f und der x-Achse"). Den Slug-Schutz leistet jetzt praeziser die
+    // Leerzeichen-Regel eine Ebene tiefer.
+    if (/^\s*(?:import|export)\b/.test(zeile)) return zeile;
+    return zeile.replace(LITERAL, (ganz, q, text, versatz) => {
+      if (!istProsa(text, zeile.slice(0, versatz))) return ganz;
+      return q + repariereText(text) + q;
+    });
+  }).join('\n');
 }
 
-let totalFiles = 0;
-let changedFiles = 0;
-let totalReplacements = 0;
-const summary = [];
+const trocken = process.argv.includes('--dry');
+let dateien = 0;
+let geaendert = 0;
+const bericht = [];
 
-for (const file of walk('src')) {
-  if (!isDeFile(file)) continue;
-  totalFiles++;
+for (const datei of walk('src')) {
+  if (!isDeFile(datei)) continue;
+  dateien += 1;
 
-  const original = readFileSync(file, 'utf-8');
-  const { result: fixed, count } = fixContent(original);
+  const vorher = { ...zaehler };
+  const original = readFileSync(datei, 'utf-8');
+  const neu = repariereDatei(original);
+  if (original === neu) continue;
 
-  if (original !== fixed) {
-    changedFiles++;
-    writeFileSync(file, fixed, 'utf-8');
-    summary.push({ file, count });
-    totalReplacements += count;
-  }
+  geaendert += 1;
+  bericht.push({
+    datei,
+    tippfehler: zaehler.tippfehler - vorher.tippfehler,
+    stamm: zaehler.stamm - vorher.stamm,
+    medial: zaehler.medial - vorher.medial,
+  });
+  if (!trocken) writeFileSync(datei, neu, 'utf-8');
 }
 
-console.log(`\nDateien gescannt:    ${totalFiles}`);
-console.log(`Dateien geändert:    ${changedFiles}`);
-console.log(`Replacements gesamt: ${totalReplacements}`);
-console.log(`\nGeänderte Dateien (sortiert nach Anzahl):`);
-summary.sort((a, b) => b.count - a.count);
-summary.forEach((s) => console.log(`  ${s.count.toString().padStart(4)}  ${s.file}`));
+if (trocken) console.log('\nTROCKENLAUF — es wurde nichts geschrieben.\n');
+console.log(`Dateien geprueft:  ${dateien}`);
+console.log(`Dateien geaendert: ${geaendert}`);
+console.log(`Ersetzungen:       ${zaehler.tippfehler} Tippfehler + ${zaehler.stamm} Wortanfang + ${zaehler.medial} medial`);
+console.log('\nJe Datei (Tippfehler / Wortanfang / medial):');
+bericht.sort((x, y) => (y.stamm + y.medial + y.tippfehler) - (x.stamm + x.medial + x.tippfehler));
+for (const b of bericht) {
+  console.log(`  ${String(b.tippfehler).padStart(2)} / ${String(b.stamm).padStart(4)} / ${String(b.medial).padStart(4)}  ${b.datei}`);
+}

@@ -11,7 +11,7 @@ export const exercises = [
     timeEstimate: 2,
     data: {
       questionText:
-        'Eine Population verdoppelt sich jede Stunde. Der Wachstumsfaktor betraegt:',
+        'Eine Population verdoppelt sich jede Stunde. Der Wachstumsfaktor beträgt:',
       correctValue: 2,
       tolerance: 0.01,
     },
@@ -100,7 +100,7 @@ export const exercises = [
     timeEstimate: 4,
     data: {
       questionText:
-        'Eine Bakterienkolonie startet mit 200 Bakterien und verdoppelt sich taeglichlich. Nach wie vielen Tagen (Verdopplungszeit) betraegt die Anzahl 1600? Gib die Anzahl der Tage an.',
+        'Eine Bakterienkolonie startet mit 200 Bakterien und verdoppelt sich täglichlich. Nach wie vielen Tagen (Verdopplungszeit) beträgt die Anzahl 1600? Gib die Anzahl der Tage an.',
       correctValue: 3,
       tolerance: 0,
     },
@@ -202,7 +202,7 @@ export const exercises = [
       'b muss positiv sein.',
     ],
     solutionKey:
-      '50 · b^2 = 200 → b^2 = 4 → b = 2. (b = -2 entfaellt, da b > 0.)',
+      '50 · b^2 = 200 → b^2 = 4 → b = 2. (b = -2 entfällt, da b > 0.)',
     tags: ['wachstumsprozess', 'modellieren', 'wachstumsfaktor'],
   },
 
@@ -263,7 +263,7 @@ export const exercises = [
     points: 15,
     timeEstimate: 8,
     contextKey:
-      'Um 9:00 Uhr werden in einer Petrischale 500 Bakterien gezaehlt. Um 11:00 Uhr sind es bereits 4500. Die Anzahl wächst exponentiell: N(t) = 500 · b^t (t in Stunden ab 9:00 Uhr).',
+      'Um 9:00 Uhr werden in einer Petrischale 500 Bakterien gezählt. Um 11:00 Uhr sind es bereits 4500. Die Anzahl wächst exponentiell: N(t) = 500 · b^t (t in Stunden ab 9:00 Uhr).',
     data: {
       questionText:
         'Bestimme den Wachstumsfaktor b und berechne damit, wie viele Bakterien um 13:00 Uhr (t = 4) erwartet werden.',
@@ -288,10 +288,10 @@ export const exercises = [
     points: 15,
     timeEstimate: 8,
     contextKey:
-      'Carbon-14 hat eine Halbwertszeit von 5730 Jahren. Von einem Holzfund wurden noch 60 % des urspruenglichen C-14-Gehalts gemessen.',
+      'Carbon-14 hat eine Halbwertszeit von 5730 Jahren. Von einem Holzfund wurden noch 60 % des ursprünglichen C-14-Gehalts gemessen.',
     data: {
       questionText:
-        'Wie alt ist das Holzstueck in Jahren? Runde auf ganze Jahre. (Nutze: t = T₁/₂ · log(0,6) / log(0,5))',
+        'Wie alt ist das Holzstück in Jahren? Runde auf ganze Jahre. (Nutze: t = T₁/₂ · log(0,6) / log(0,5))',
       correctValue: 4223,
       tolerance: 5,
     },
@@ -316,7 +316,7 @@ export const exercises = [
       'Bank A bietet 5 % Zinsen pro Jahr (Zinseszins). Bank B bietet 4,8 % pro Halbjahr. Startkapital: 1000 Euro.',
     data: {
       questionText:
-        'Welchen Betrag (in Euro, gerundet auf Cent) hat man bei Bank B nach 2 Jahren? (Zinsen werden 2-mal jaehrlich gutgeschrieben.)',
+        'Welchen Betrag (in Euro, gerundet auf Cent) hat man bei Bank B nach 2 Jahren? (Zinsen werden 2-mal jährlich gutgeschrieben.)',
       correctValue: 1206.27,
       tolerance: 0.02,
     },
@@ -339,14 +339,14 @@ export const exercises = [
     timeEstimate: 6,
     data: {
       questionText:
-        'Ein Schueler löst folgende Aufgabe: "Eine Bakterienkolonie startet mit 200 Bakterien und wächst um 50 % pro Stunde. Wie viele Bakterien gibt es nach 3 Stunden?" Finde den Fehler im Rechenweg:',
+        'Ein Schüler löst folgende Aufgabe: "Eine Bakterienkolonie startet mit 200 Bakterien und wächst um 50 % pro Stunde. Wie viele Bakterien gibt es nach 3 Stunden?" Finde den Fehler im Rechenweg:',
       steps: [
         { content: 'Wachstum 50 % pro Stunde → Wachstumsfaktor b', hasError: false },
         {
           content: 'b = 0,5 (weil 50 % → 0,5)',
           hasError: true,
           errorExplanation:
-            'Falsch: 50 % Zunahme bedeutet b = 1 + 0,5 = 1,5, nicht 0,5. b = 0,5 waere ein Rueckgang auf 50 %.',
+            'Falsch: 50 % Zunahme bedeutet b = 1 + 0,5 = 1,5, nicht 0,5. b = 0,5 wäre ein Rückgang auf 50 %.',
         },
         { content: 'N(t) = 200 · 0,5^t', hasError: false },
         { content: 'N(3) = 200 · 0,5^3 = 200 · 0,125 = 25', hasError: false },
@@ -370,10 +370,10 @@ export const exercises = [
     points: 15,
     timeEstimate: 10,
     contextKey:
-      'Die Weltbevoelkerung betrug im Jahr 2000 ca. 6,1 Milliarden Menschen. Das jaehrliche Wachstum betraegt ca. 1,1 %. Modell: B(t) = 6,1 · 1,011^t (t = Jahre ab 2000, B in Mrd.)',
+      'Die Weltbevölkerung betrug im Jahr 2000 ca. 6,1 Milliarden Menschen. Das jährliche Wachstum beträgt ca. 1,1 %. Modell: B(t) = 6,1 · 1,011^t (t = Jahre ab 2000, B in Mrd.)',
     data: {
       questionText:
-        'In welchem Jahr überschreitet die Weltbevoelkerung nach diesem Modell die 8-Milliarden-Marke? (Gib die Jahreszahl an. Runde t auf ganze Jahre auf.)',
+        'In welchem Jahr überschreitet die Weltbevölkerung nach diesem Modell die 8-Milliarden-Marke? (Gib die Jahreszahl an. Runde t auf ganze Jahre auf.)',
       correctValue: 2025,
       tolerance: 1,
     },

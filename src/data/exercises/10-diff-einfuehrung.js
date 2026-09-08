@@ -24,7 +24,7 @@ export const exercises = [
     ],
     solutionKey:
       'Δy/Δx = (f(3) − f(1)) / (3 − 1) = (9 − 1) / 2 = 8 / 2 = 4. ' +
-      'Die mittlere Änderungsrate betraegt 4.',
+      'Die mittlere Änderungsrate beträgt 4.',
     tags: ['mittlere-änderungsrate', 'differenzenquotient'],
   },
 
@@ -130,7 +130,7 @@ export const exercises = [
     ],
     solutionKey:
       '[(2+h)² − 4] / h = [4 + 4h + h² − 4] / h = (4h + h²) / h = 4 + h. ' +
-      'Für h → 0 ergibt sich f′(2) = 4. Die Tangentensteigung betraegt 4.',
+      'Für h → 0 ergibt sich f′(2) = 4. Die Tangentensteigung beträgt 4.',
     tags: ['tangente', 'grenzwert', 'parabel'],
   },
 
@@ -242,7 +242,7 @@ export const exercises = [
         {
           id: 'c',
           text:
-            'Die momentane Änderungsrate laesst sich direkt aus der Funktionsgleichung ' +
+            'Die momentane Änderungsrate lässt sich direkt aus der Funktionsgleichung ' +
             'ohne Grenzwertbetrachtung ablesen.',
           correct: false,
         },
@@ -305,7 +305,7 @@ export const exercises = [
     contextKey: 'Sachkontext: Autofahrt',
     data: {
       questionText:
-        'Ein Auto legt in t Sekunden den Weg s(t) = 2t² Meter zurueck. ' +
+        'Ein Auto legt in t Sekunden den Weg s(t) = 2t² Meter zurück. ' +
         'Berechne die Momentangeschwindigkeit (in m/s) zur Zeit t = 3 s, ' +
         'indem du s′(3) bestimmst.',
       correctValue: 12,
@@ -332,7 +332,7 @@ export const exercises = [
     timeEstimate: 8,
     data: {
       questionText:
-        'Schuelerin Anna berechnet den Differenzenquotienten für f(x) = x² ' +
+        'Schülerin Anna berechnet den Differenzenquotienten für f(x) = x² ' +
         'an der Stelle x₀ = 2 mit Schrittweite h = 1. Analysiere ihre Rechnung:',
       steps: [
         {
@@ -356,7 +356,7 @@ export const exercises = [
           hasError: true,
           errorExplanation:
             'Durch den Vorzeichenfehler in Schritt 3 ist das Ergebnis falsch. ' +
-            'Die korrekte mittlere Änderungsrate betraegt 5.',
+            'Die korrekte mittlere Änderungsrate beträgt 5.',
         },
       ],
     },
@@ -365,8 +365,8 @@ export const exercises = [
       'Differenzenquotient = [f(x₀ + h) − f(x₀)] / h (Minus, nicht Plus!)',
     ],
     solutionKey:
-      'In Schritt 3 steht faelschlicherweise ein Pluszeichen. ' +
-      'Korrekt ist [f(3) − f(2)] / 1 = 5. Die mittlere Änderungsrate betraegt 5.',
+      'In Schritt 3 steht fälschlicherweise ein Pluszeichen. ' +
+      'Korrekt ist [f(3) − f(2)] / 1 = 5. Die mittlere Änderungsrate beträgt 5.',
     tags: ['fehleranalyse', 'differenzenquotient', 'vorzeichenfehler'],
   },
 
@@ -431,7 +431,7 @@ export const exercises = [
         },
         {
           id: 'd',
-          text: 'Ein U-foermiger Graph mit Scheitel bei (0|−1)',
+          text: 'Ein U-förmiger Graph mit Scheitel bei (0|−1)',
           correct: false,
         },
       ],

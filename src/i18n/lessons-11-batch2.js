@@ -3,7 +3,7 @@ export const batch11b = {
     story: {
       intro: 'Amirs Musik-Empfehlungsalgorithmus hat ein Problem: Die Beliebtheit neuer Songs steigt anfangs explosionsartig — aber wie schnell genau? Und wann flacht der Hype ab? "Ich brauche eine Funktion, die extrem schnelles Wachstum beschreibt und trotzdem berechenbar bleibt", sagt Amir zu Yara. Die Antwort: die Exponentialfunktion mit der Eulerschen Zahl $e$ — und ihr Gegenstück, der natürliche Logarithmus.',
       challenge: 'Amir muss die Wachstumskurve von Song-Streams modellieren und vorhersagen, wann ein Track seinen Peak erreicht — dafür braucht er Exponentialgleichungen und Logarithmen.',
-      outro: 'Mit $e$-Funktion und $\\ln$ kann Amir jetzt berechnen, wann ein Song seinen Höhepunkt erreicht und wie schnell das Interesse danach abfaellt. "Das Coole ist: Der natürliche Logarithmus macht jede Exponentialgleichung lösbar", erklärt er Finn. DataPulse sagt jetzt Song-Trends mit erstaunlicher Präzision voraus.',
+      outro: 'Mit $e$-Funktion und $\\ln$ kann Amir jetzt berechnen, wann ein Song seinen Höhepunkt erreicht und wie schnell das Interesse danach abfällt. "Das Coole ist: Der natürliche Logarithmus macht jede Exponentialgleichung lösbar", erklärt er Finn. DataPulse sagt jetzt Song-Trends mit erstaunlicher Präzision voraus.',
     },
     objectives: {
       e_function: 'Die $e$-Funktion als natürliche Wachstumsfunktion verstehen und anwenden',
@@ -15,13 +15,13 @@ export const batch11b = {
       intro: 'Die Eulersche Zahl $e \\approx 2{,}718$ ist die wichtigste Konstante für Wachstumsprozesse. Warum ausgerechnet $e$? Weil die Funktion $f(x) = e^x$ eine einzigartige Eigenschaft hat: Ihre Ableitung ist sie selbst — $f\'(x) = e^x$. Das bedeutet: Die Wachstumsrate ist immer proportional zum aktuellen Wert. Perfekt für natürliches Wachstum!',
       natural_log: 'Der natürliche Logarithmus $\\ln(x)$ ist die Umkehrfunktion von $e^x$. Wenn du wissen willst, welchen Exponenten du brauchst, um einen bestimmten Wert zu erreichen — dann ist $\\ln$ dein Werkzeug. Die beiden Funktionen heben sich gegenseitig auf:',
       amir_tip: 'In meinem ML-Code taucht $\\ln$ überall auf — in der Loss-Funktion, bei der Normalisierung, in der Softmax-Formel. Der Grund: $\\ln$ verwandelt Multiplikation in Addition und macht riesige Zahlen handhabbar. Deshalb rechnen wir oft mit "Log-Likelihood" statt mit Wahrscheinlichkeiten direkt!',
-      log_rules: 'Die drei Logarithmengesetze sind extrem nützlich — sie verwandeln komplexe Ausdruecke in einfachere. Die Grundidee: Logarithmen machen aus Multiplikation Addition, aus Division Subtraktion und aus Potenzen Multiplikation:',
-      solving: 'Um eine Exponentialgleichung nach $x$ aufzuloesen, wendest du auf beiden Seiten den $\\ln$ an. Der Logarithmus "holt den Exponenten runter" — das ist der Schlüsselschritt:',
+      log_rules: 'Die drei Logarithmengesetze sind extrem nützlich — sie verwandeln komplexe Ausdrücke in einfachere. Die Grundidee: Logarithmen machen aus Multiplikation Addition, aus Division Subtraktion und aus Potenzen Multiplikation:',
+      solving: 'Um eine Exponentialgleichung nach $x$ aufzulösen, wendest du auf beiden Seiten den $\\ln$ an. Der Logarithmus "holt den Exponenten runter" — das ist der Schlüsselschritt:',
     },
     concepts: {
       e_function: {
         title: '$e$-Funktion',
-        desc: 'Die allgemeine Form $f(x) = a \\cdot e^{kx}$: $a$ ist der Startwert, $k$ bestimmt die Wachstumsgeschwindigkeit. Bei $k > 0$ wächst die Funktion, bei $k < 0$ faellt sie (exponentieller Zerfall). Die $e$-Funktion ist ihre eigene Ableitung — deshalb modelliert sie natürliches Wachstum perfekt.',
+        desc: 'Die allgemeine Form $f(x) = a \\cdot e^{kx}$: $a$ ist der Startwert, $k$ bestimmt die Wachstumsgeschwindigkeit. Bei $k > 0$ wächst die Funktion, bei $k < 0$ fällt sie (exponentieller Zerfall). Die $e$-Funktion ist ihre eigene Ableitung — deshalb modelliert sie natürliches Wachstum perfekt.',
       },
       natural_log: {
         title: 'Natürlicher Logarithmus',
@@ -39,42 +39,42 @@ export const batch11b = {
         step1: 'Gleichung aufstellen — wann erreichen die Streams den Wert 15?',
         step2: 'Durch 3 teilen, um $e^{2x}$ zu isolieren:',
         step3: 'Auf beiden Seiten den $\\ln$ anwenden — der Exponent "kommt runter":',
-        step4: 'Nach $x$ aufloesen — durch den Koeffizienten 2 teilen:',
-        amir_comment: 'Das ist das Muster, das ich staendig brauche: Isolieren, Logarithmieren, Aufloesen. Funktioniert bei jeder Exponentialgleichung!',
+        step4: 'Nach $x$ auflösen — durch den Koeffizienten 2 teilen:',
+        amir_comment: 'Das ist das Muster, das ich ständig brauche: Isolieren, Logarithmieren, Auflösen. Funktioniert bei jeder Exponentialgleichung!',
       },
       half_life: {
         title: 'Halbwertszeit berechnen',
-        context: 'Nach dem Peak verliert ein viraler Song taeglich Hörer. Amir modelliert den Rueckgang mit $N(t) = 1000 \\cdot e^{-0{,}1t}$.',
-        step1: 'Das Modell: 1000 aktive Hörer zum Zeitpunkt $t = 0$, exponentieller Rueckgang:',
+        context: 'Nach dem Peak verliert ein viraler Song täglich Hörer. Amir modelliert den Rückgang mit $N(t) = 1000 \\cdot e^{-0{,}1t}$.',
+        step1: 'Das Modell: 1000 aktive Hörer zum Zeitpunkt $t = 0$, exponentieller Rückgang:',
         step2: 'Halbwertszeit bedeutet: Wann sind noch 500 Hörer übrig?',
         step3: 'Isolieren und logarithmieren — $\\ln$ auf beide Seiten:',
-        step4: 'Nach $t$ aufloesen — nach ca. 6{,}93 Tagen hat sich die Hörerzahl halbiert:',
+        step4: 'Nach $t$ auflösen — nach ca. 6{,}93 Tagen hat sich die Hörerzahl halbiert:',
         amir_comment: 'Die Halbwertszeit ist konstant! Egal ob 1000, 500 oder 250 Hörer — es dauert immer ca. 6{,}93 Tage bis zur nächsten Halbierung. Das ist die Magie des exponentiellen Zerfalls.',
       },
     },
     realworld: {
       user_retention: {
         title: 'User Retention bei Apps',
-        desc: 'Wie viele Nutzer bleiben nach einer Woche aktiv? Bei den meisten Apps faellt die Retention exponentiell: $R(t) = R_0 \\cdot e^{-\\lambda t}$. DataPulse nutzt dieses Modell, um vorherzusagen, wie viele User nach 30 Tagen noch dabei sind — und wann gezielt Push-Benachrichtigungen kommen sollten.',
+        desc: 'Wie viele Nutzer bleiben nach einer Woche aktiv? Bei den meisten Apps fällt die Retention exponentiell: $R(t) = R_0 \\cdot e^{-\\lambda t}$. DataPulse nutzt dieses Modell, um vorherzusagen, wie viele User nach 30 Tagen noch dabei sind — und wann gezielt Push-Benachrichtigungen kommen sollten.',
       },
       compound_interest: {
         title: 'Stetige Verzinsung',
-        desc: 'Banken rechnen mit jaehrlicher Verzinsung, aber in der Theorie gibt es auch stetige Verzinsung: $K(t) = K_0 \\cdot e^{rt}$. Je oefter du Zinsen berechnest (taeglich, stuendlich, sekuendlich...), desto näher kommst du an $e^{rt}$ heran. Das ist der Grenzwert!',
+        desc: 'Banken rechnen mit jährlicher Verzinsung, aber in der Theorie gibt es auch stetige Verzinsung: $K(t) = K_0 \\cdot e^{rt}$. Je öfter du Zinsen berechnest (täglich, stündlich, sekündlich...), desto näher kommst du an $e^{rt}$ heran. Das ist der Grenzwert!',
       },
       decibel: {
         title: 'Dezibel-Skala',
-        desc: 'Lautstaerke wird logarithmisch gemessen: $L = 10 \\cdot \\log_{10}(I/I_0)$. Verdoppelt sich die Schallintensität, steigt der Pegel nur um ca. $3\\,\\text{dB}$. Deshalb klingen 10 Gitarren nicht 10-mal so laut wie eine — unser Gehör arbeitet logarithmisch!',
+        desc: 'Lautstärke wird logarithmisch gemessen: $L = 10 \\cdot \\log_{10}(I/I_0)$. Verdoppelt sich die Schallintensität, steigt der Pegel nur um ca. $3\\,\\text{dB}$. Deshalb klingen 10 Gitarren nicht 10-mal so laut wie eine — unser Gehör arbeitet logarithmisch!',
       },
     },
     mistakes: {
       ln_sum: {
         wrong: '$\\ln(a + b) = \\ln(a) + \\ln(b)$ — Summe aufgespalten',
         correct: '$\\ln(a \\cdot b) = \\ln(a) + \\ln(b)$ — nur Produkte lassen sich aufspalten',
-        why: 'Die Produktregel gilt NUR für Multiplikation, nicht für Addition! Es gibt keine einfache Formel für $\\ln(a + b)$. Das ist einer der haeufigsten Fehler überhaupt.',
+        why: 'Die Produktregel gilt NUR für Multiplikation, nicht für Addition! Es gibt keine einfache Formel für $\\ln(a + b)$. Das ist einer der häufigsten Fehler überhaupt.',
         amir_warning: 'Dieser Bug hat mich mal zwei Stunden Debugging gekostet. Meine Likelihood-Berechnung war komplett falsch, weil ich $\\ln(p_1 + p_2)$ statt $\\ln(p_1 \\cdot p_2)$ benutzt habe. Logarithmen spalten Produkte auf — nicht Summen!',
       },
       ln_cancel: {
-        wrong: '$\\ln(e^x) = e \\cdot x$ — den Logarithmus falsch aufgeloest',
+        wrong: '$\\ln(e^x) = e \\cdot x$ — den Logarithmus falsch aufgelöst',
         correct: '$\\ln(e^x) = x$ — der Logarithmus hebt die Exponentialfunktion auf',
         why: '$\\ln$ und $e^x$ sind Umkehrfunktionen — sie heben sich gegenseitig auf. Das Ergebnis ist einfach der Exponent $x$, ohne Faktor $e$ davor.',
       },
@@ -85,7 +85,7 @@ export const batch11b = {
     story: {
       intro: 'DataPulse hat ein neues Feature gelauncht, und Amir will wissen: Wie wahrscheinlich ist es, dass von 100 Testnutzern mindestens 15 auf den neuen Button klicken? Jeder User klickt oder klickt nicht — ein klassisches Ja/Nein-Experiment, das sich $n$-mal wiederholt. "Das ist kein Zufall mehr, das ist Binomialverteilung", sagt Prof. Nguyen im Seminar.',
       challenge: 'Amir braucht die Wahrscheinlichkeit für eine bestimmte Anzahl Klicks bei $n$ unabhängigen Versuchen — die Binomialverteilung liefert die exakte Antwort.',
-      outro: 'Amir hat jetzt ein statistisches Framework für A/B-Tests. Er kann berechnen, ob ein Ergebnis signifikant ist oder nur zufaellig zustandekam. "Die Binomialverteilung ist das Fundament für fast jeden statistischen Test in der Praxis", erklärt er Yara. DataPulse trifft Entscheidungen jetzt datenbasiert statt aus dem Bauch heraus.',
+      outro: 'Amir hat jetzt ein statistisches Framework für A/B-Tests. Er kann berechnen, ob ein Ergebnis signifikant ist oder nur zufällig zustandekam. "Die Binomialverteilung ist das Fundament für fast jeden statistischen Test in der Praxis", erklärt er Yara. DataPulse trifft Entscheidungen jetzt datenbasiert statt aus dem Bauch heraus.',
     },
     objectives: {
       bernoulli: 'Bernoulli-Experimente erkennen und die Erfolgswahrscheinlichkeit $p$ bestimmen',
@@ -94,16 +94,16 @@ export const batch11b = {
       standard_deviation: 'Standardabweichung $\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}$ bestimmen und als Streuungsmass nutzen',
     },
     explanation: {
-      intro: 'Stell dir vor, du wiederholst ein Experiment $n$-mal, und jedes Mal gibt es nur zwei Ausgaenge: Erfolg (Wahrscheinlichkeit $p$) oder Misserfolg (Wahrscheinlichkeit $1-p$). Die Binomialverteilung verraet dir, wie wahrscheinlich genau $k$ Erfolge bei $n$ Versuchen sind:',
-      bernoulli: 'Die Basis ist das Bernoulli-Experiment — ein einzelner Versuch mit genau zwei Ausgaengen. Drei Bedingungen müssen gelten: (1) nur zwei Ergebnisse, (2) die Wahrscheinlichkeit $p$ bleibt bei jedem Versuch gleich, (3) die Versuche sind voneinander unabhängig. Der Binomialkoeffizient zählt die möglichen Anordnungen:',
-      amir_tip: 'Der Binomialkoeffizient $\\binom{n}{k}$ zählt, auf wie viele Arten du $k$ Erfolge auf $n$ Versuche verteilen kannst. In meinem Code ist das die Funktion scipy.special.comb(n, k). Für große $n$ berechne ich lieber die kumulative Verteilung — Einzelwahrscheinlichkeiten aufzusummieren waere viel zu langsam!',
+      intro: 'Stell dir vor, du wiederholst ein Experiment $n$-mal, und jedes Mal gibt es nur zwei Ausgänge: Erfolg (Wahrscheinlichkeit $p$) oder Misserfolg (Wahrscheinlichkeit $1-p$). Die Binomialverteilung verrät dir, wie wahrscheinlich genau $k$ Erfolge bei $n$ Versuchen sind:',
+      bernoulli: 'Die Basis ist das Bernoulli-Experiment — ein einzelner Versuch mit genau zwei Ausgängen. Drei Bedingungen müssen gelten: (1) nur zwei Ergebnisse, (2) die Wahrscheinlichkeit $p$ bleibt bei jedem Versuch gleich, (3) die Versuche sind voneinander unabhängig. Der Binomialkoeffizient zählt die möglichen Anordnungen:',
+      amir_tip: 'Der Binomialkoeffizient $\\binom{n}{k}$ zählt, auf wie viele Arten du $k$ Erfolge auf $n$ Versuche verteilen kannst. In meinem Code ist das die Funktion scipy.special.comb(n, k). Für große $n$ berechne ich lieber die kumulative Verteilung — Einzelwahrscheinlichkeiten aufzusummieren wäre viel zu langsam!',
       expected_value: 'Der Erwartungswert $E(X) = n \\cdot p$ sagt dir, wie viele Erfolge du "im Durchschnitt" erwartest. Bei 100 Versuchen mit $p = 0{,}15$ erwartest du $E(X) = 15$ Erfolge. Aber das heisst nicht, dass es jedes Mal genau 15 sind! Wie stark die Ergebnisse schwanken, misst die Standardabweichung:',
       standard_deviation: 'Die Standardabweichung $\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}$ zeigt die typische Streuung um den Erwartungswert. Faustregeln: Etwa 68% der Ergebnisse liegen in $E(X) \\pm \\sigma$, etwa 95% in $E(X) \\pm 2\\sigma$. Je größer $n$, desto schmaler wird die Verteilung relativ zum Erwartungswert.',
     },
     concepts: {
       bernoulli: {
         title: 'Bernoulli-Experiment',
-        desc: 'Ein Zufallsexperiment mit genau zwei Ausgaengen: Erfolg (Wahrscheinlichkeit $p$) oder Misserfolg ($1-p$). Beispiele: Muenzwurf, Klick/Kein-Klick, Tor/Kein-Tor. Die Binomialverteilung entsteht durch $n$-fache unabhängige Wiederholung.',
+        desc: 'Ein Zufallsexperiment mit genau zwei Ausgängen: Erfolg (Wahrscheinlichkeit $p$) oder Misserfolg ($1-p$). Beispiele: Münzwurf, Klick/Kein-Klick, Tor/Kein-Tor. Die Binomialverteilung entsteht durch $n$-fache unabhängige Wiederholung.',
       },
       binomial_formula: {
         title: 'Binomialformel',
@@ -116,42 +116,42 @@ export const batch11b = {
     },
     examples: {
       coin_flips: {
-        title: 'Muenzwurf: genau 7 von 10 Mal Kopf',
-        context: 'Amir testet seinen Zufallsgenerator: Bei 10 fairen Muenzwuerfen — wie wahrscheinlich ist genau 7-mal Kopf?',
-        step1: 'Parameter bestimmen: $n = 10$ Würfe, $p = 0{,}5$ (faire Muenze), gesucht: $k = 7$ Mal Kopf.',
+        title: 'Münzwurf: genau 7 von 10 Mal Kopf',
+        context: 'Amir testet seinen Zufallsgenerator: Bei 10 fairen Münzwürfen — wie wahrscheinlich ist genau 7-mal Kopf?',
+        step1: 'Parameter bestimmen: $n = 10$ Würfe, $p = 0{,}5$ (faire Münze), gesucht: $k = 7$ Mal Kopf.',
         step2: 'Binomialkoeffizient berechnen — auf wie viele Arten können 7 Kopf auf 10 Würfe verteilt sein?',
         step3: 'In die Binomialformel einsetzen: Anordnungen $\\times$ Erfolge $\\times$ Misserfolge:',
-        step4: 'Ausrechnen — die Wahrscheinlichkeit betraegt ca. 11{,}7%, also eher unwahrscheinlich:',
-        amir_comment: 'Nur 11{,}7% — das zeigt: Auch bei einer fairen Muenze ist 7 von 10 Mal Kopf nicht besonders überraschend, aber auch nicht der Normalfall. Mein Zufallsgenerator scheint okay zu sein!',
+        step4: 'Ausrechnen — die Wahrscheinlichkeit beträgt ca. 11{,}7%, also eher unwahrscheinlich:',
+        amir_comment: 'Nur 11{,}7% — das zeigt: Auch bei einer fairen Münze ist 7 von 10 Mal Kopf nicht besonders überraschend, aber auch nicht der Normalfall. Mein Zufallsgenerator scheint okay zu sein!',
       },
       quality_control: {
         title: 'Qualitätskontrolle in der Produktion',
-        context: 'Eine Fabrik hat eine Fehlerquote von 2%. Amir berechnet: Wie wahrscheinlich ist es, dass in einer Stichprobe von 20 Stueck kein einziges defekt ist?',
-        step1: 'Parameter: $n = 20$ Stueck, Fehlerquote $p = 0{,}02$, gesucht: $k = 0$ defekte Teile.',
+        context: 'Eine Fabrik hat eine Fehlerquote von 2%. Amir berechnet: Wie wahrscheinlich ist es, dass in einer Stichprobe von 20 Stück kein einziges defekt ist?',
+        step1: 'Parameter: $n = 20$ Stück, Fehlerquote $p = 0{,}02$, gesucht: $k = 0$ defekte Teile.',
         step2: 'Einsetzen: $\\binom{20}{0} = 1$, und $0{,}02^0 = 1$ — es bleiben nur die Misserfolge:',
         step3: 'Vereinfachen — übrig bleibt $0{,}98^{20}$:',
         step4: 'Ergebnis: Mit ca. 66{,}8% Wahrscheinlichkeit ist kein Teil defekt — gar nicht so sicher!',
-        amir_comment: 'Nur zwei Drittel Chance auf null Fehler bei 2% Fehlerquote! Das zeigt: Auch kleine Wahrscheinlichkeiten summieren sich bei vielen Versuchen. Bei $n = 100$ waere $P(X = 0) \\approx 13{,}3\\%$ — da findet man fast sicher einen Fehler.',
+        amir_comment: 'Nur zwei Drittel Chance auf null Fehler bei 2% Fehlerquote! Das zeigt: Auch kleine Wahrscheinlichkeiten summieren sich bei vielen Versuchen. Bei $n = 100$ wäre $P(X = 0) \\approx 13{,}3\\%$ — da findet man fast sicher einen Fehler.',
       },
     },
     realworld: {
       ab_testing: {
         title: 'A/B-Testing bei DataPulse',
-        desc: 'Amir testet zwei Versionen der App: Version A hat eine Klickrate von 12%, Version B von 15%. Mit der Binomialverteilung berechnet er, ob der Unterschied statistisch signifikant ist — oder ob er auch durch Zufall haette entstehen können. Das ist die Grundlage jedes A/B-Tests.',
+        desc: 'Amir testet zwei Versionen der App: Version A hat eine Klickrate von 12%, Version B von 15%. Mit der Binomialverteilung berechnet er, ob der Unterschied statistisch signifikant ist — oder ob er auch durch Zufall hätte entstehen können. Das ist die Grundlage jedes A/B-Tests.',
       },
       medicine: {
         title: 'Medizinische Studien',
-        desc: 'Bei Medikamententests zählt man: Wie viele Patienten werden gesund? Ist die Heilungsrate signifikant besser als beim Placebo? Die Binomialverteilung liefert die Antwort — und schuetzt vor voreiligen Schluessen bei zu kleinen Stichproben.',
+        desc: 'Bei Medikamententests zählt man: Wie viele Patienten werden gesund? Ist die Heilungsrate signifikant besser als beim Placebo? Die Binomialverteilung liefert die Antwort — und schützt vor voreiligen Schlüssen bei zu kleinen Stichproben.',
       },
       surveys: {
         title: 'Meinungsumfragen & Fehlertoleranz',
-        desc: 'Wenn bei einer Umfrage 52% für "Ja" stimmen — ist das wirklich eine Mehrheit? Die Standardabweichung $\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}$ zeigt, wie breit das Konfidenzintervall ist. Bei $n = 100$ waere $\\sigma \\approx 5\\%$ — das Ergebnis könnte also auch 47% oder 57% sein.',
+        desc: 'Wenn bei einer Umfrage 52% für "Ja" stimmen — ist das wirklich eine Mehrheit? Die Standardabweichung $\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}$ zeigt, wie breit das Konfidenzintervall ist. Bei $n = 100$ wäre $\\sigma \\approx 5\\%$ — das Ergebnis könnte also auch 47% oder 57% sein.',
       },
     },
     mistakes: {
       forget_binomial_coeff: {
         wrong: 'Binomialkoeffizient vergessen: $P(X=k) = p^k \\cdot (1-p)^{n-k}$',
-        correct: 'Vollstaendige Formel mit $\\binom{n}{k}$',
+        correct: 'Vollständige Formel mit $\\binom{n}{k}$',
         why: 'Ohne $\\binom{n}{k}$ zählt die Formel nur EINE bestimmte Reihenfolge — z.B. erst $k$ Erfolge, dann $n-k$ Misserfolge. Aber die Erfolge können an verschiedenen Stellen auftreten! Der Binomialkoeffizient zählt alle möglichen Anordnungen.',
         amir_warning: 'Stell dir vor, du würfest 3-mal und willst genau 2 Sechsen. Es gibt 3 Möglichkeiten: 6-6-X, 6-X-6, X-6-6. Der Binomialkoeffizient $\\binom{3}{2} = 3$ zählt genau das. Ohne ihn bekommst du nur ein Drittel der richtigen Wahrscheinlichkeit!',
       },
@@ -176,9 +176,9 @@ export const batch11b = {
       tree_diagrams: 'Baumdiagramme und Vierfeldertafeln als Hilfsmittel einsetzen',
     },
     explanation: {
-      intro: 'Die bedingte Wahrscheinlichkeit $P(A \\mid B)$ beantwortet die Frage: "Wie wahrscheinlich ist $A$, wenn wir bereits wissen, dass $B$ eingetreten ist?" Das Wissen über $B$ verändert die Wahrscheinlichkeit — der Stichprobenraum schrumpft auf die Faelle, in denen $B$ gilt:',
+      intro: 'Die bedingte Wahrscheinlichkeit $P(A \\mid B)$ beantwortet die Frage: "Wie wahrscheinlich ist $A$, wenn wir bereits wissen, dass $B$ eingetreten ist?" Das Wissen über $B$ verändert die Wahrscheinlichkeit — der Stichprobenraum schrumpft auf die Fälle, in denen $B$ gilt:',
       multiplication_rule: 'Die Multiplikationsregel folgt direkt aus der Definition: Wenn du die Wahrscheinlichkeit von "$A$ und $B$ gleichzeitig" berechnen willst, multiplizierst du $P(B)$ mit der bedingten Wahrscheinlichkeit $P(A \\mid B)$:',
-      amir_tip: 'In meinem Empfehlungscode nutze ich bedingte Wahrscheinlichkeiten staendig: $P(\\text{like}_Y \\mid \\text{like}_X)$ — die Wahrscheinlichkeit, dass ein User Song $Y$ mag, gegeben dass er Song $X$ gelikt hat. Das ist das Herzstueck jedes Collaborative Filters!',
+      amir_tip: 'In meinem Empfehlungscode nutze ich bedingte Wahrscheinlichkeiten ständig: $P(\\text{like}_Y \\mid \\text{like}_X)$ — die Wahrscheinlichkeit, dass ein User Song $Y$ mag, gegeben dass er Song $X$ gelikt hat. Das ist das Herzstück jedes Collaborative Filters!',
       bayes: 'Der Satz von Bayes ist die Magie: Er dreht die Richtung um. Wenn du $P(B \\mid A)$ kennst, aber $P(A \\mid B)$ brauchst, liefert Bayes die Lösung. Die Formel sieht kompliziert aus, aber der Kern ist einfach: Du gewichtest mit der Basiswahrscheinlichkeit (Prior):',
       total_probability: 'Für den Nenner im Satz von Bayes brauchst du oft die totale Wahrscheinlichkeit. Sie zerlegt $P(B)$ in alle möglichen Wege, auf denen $B$ eintreten kann — über $A$ oder über $\\bar{A}$ (nicht-$A$):',
       independence: 'Zwei Ereignisse sind stochastisch unabhängig, wenn das Wissen über das eine die Wahrscheinlichkeit des anderen nicht verändert. Formal: $P(A \\mid B) = P(A)$ — das Eintreten von $B$ hat keinen Einfluss auf $A$. Aequivalent dazu gilt:',
@@ -190,7 +190,7 @@ export const batch11b = {
       },
       bayes: {
         title: 'Satz von Bayes',
-        desc: 'Die Formel zum Umdrehen der Richtung: $P(A \\mid B) = \\frac{P(B \\mid A) \\cdot P(A)}{P(B)}$. $P(A)$ ist der Prior (Vorwissen), $P(A \\mid B)$ der Posterior (aktualisierte Einschaetzung nach Beobachtung von $B$). Bayessche Statistik ist die Grundlage von Spam-Filtern und Diagnosesystemen.',
+        desc: 'Die Formel zum Umdrehen der Richtung: $P(A \\mid B) = \\frac{P(B \\mid A) \\cdot P(A)}{P(B)}$. $P(A)$ ist der Prior (Vorwissen), $P(A \\mid B)$ der Posterior (aktualisierte Einschätzung nach Beobachtung von $B$). Bayessche Statistik ist die Grundlage von Spam-Filtern und Diagnosesystemen.',
       },
       independence: {
         title: 'Stochastische Unabhängigkeit',
@@ -200,7 +200,7 @@ export const batch11b = {
     examples: {
       medical_test: {
         title: 'Medizinischer Test — Base Rate Fallacy',
-        context: 'Ein Krankheitstest ist zu 99% korrekt. Die Krankheit betrifft 1% der Bevoelkerung. Wenn der Test positiv ist — wie wahrscheinlich ist man wirklich krank?',
+        context: 'Ein Krankheitstest ist zu 99% korrekt. Die Krankheit betrifft 1% der Bevölkerung. Wenn der Test positiv ist — wie wahrscheinlich ist man wirklich krank?',
         step1: 'Gegeben: $P(K) = 0{,}01$ (Krankheit), $P(+ \\mid K) = 0{,}99$ (Sensitivität), $P(+ \\mid \\bar{K}) = 0{,}05$ (falsch-positiv Rate).',
         step2: 'Totale Wahrscheinlichkeit für ein positives Ergebnis berechnen — beide Wege (krank + gesund):',
         step3: 'Satz von Bayes anwenden — $P(K \\mid +)$ ist gesucht:',
@@ -209,12 +209,12 @@ export const batch11b = {
       },
       spam_filter: {
         title: 'Spam-Filter mit Bayes',
-        context: 'Amirs E-Mail-Filter soll lernen: Wenn eine Mail das Wort "Gewinn" enthaelt — ist sie Spam?',
+        context: 'Amirs E-Mail-Filter soll lernen: Wenn eine Mail das Wort "Gewinn" enthält — ist sie Spam?',
         step1: 'Gegebene Daten: 30% aller Mails sind Spam, 80% der Spam-Mails enthalten "Gewinn", aber auch 10% der normalen Mails:',
-        step2: 'Totale Wahrscheinlichkeit, dass eine Mail "Gewinn" enthaelt:',
+        step2: 'Totale Wahrscheinlichkeit, dass eine Mail "Gewinn" enthält:',
         step3: 'Bayes: Wie wahrscheinlich ist Spam, wenn "Gewinn" vorkommt?',
         step4: 'Ergebnis: 77{,}4% — eine Mail mit "Gewinn" ist mit hoher Wahrscheinlichkeit Spam:',
-        amir_comment: 'Genau so funktioniert ein Naive-Bayes-Classifier! Je mehr Woerter du hinzufuegst, desto präziser wird der Filter. DataPulse nutzt das gleiche Prinzip: Statt Woertern analysieren wir Hörmuster, statt Spam/Nicht-Spam klassifizieren wir Genre-Vorlieben.',
+        amir_comment: 'Genau so funktioniert ein Naive-Bayes-Classifier! Je mehr Wörter du hinzufügst, desto präziser wird der Filter. DataPulse nutzt das gleiche Prinzip: Statt Wörtern analysieren wir Hörmuster, statt Spam/Nicht-Spam klassifizieren wir Genre-Vorlieben.',
       },
     },
     realworld: {
@@ -224,24 +224,24 @@ export const batch11b = {
       },
       weather: {
         title: 'Wettervorhersage',
-        desc: 'Meteorologen aktualisieren ihre Vorhersage staendig mit Bayes: $P(\\text{Regen} \\mid \\text{Wolken, Druck, Wind})$. Jede neue Messung verfeinert die Prognose. Deshalb ändert sich die Regenwahrscheinlichkeit im Laufe des Tages — das ist Bayes in Aktion!',
+        desc: 'Meteorologen aktualisieren ihre Vorhersage ständig mit Bayes: $P(\\text{Regen} \\mid \\text{Wolken, Druck, Wind})$. Jede neue Messung verfeinert die Prognose. Deshalb ändert sich die Regenwahrscheinlichkeit im Laufe des Tages — das ist Bayes in Aktion!',
       },
       fraud_detection: {
         title: 'Betrugserkennung',
-        desc: 'Amirs Payment-System erkennt verdaechtige Transaktionen mit Bayes: Wenn ein Alarm ausloest — wie wahrscheinlich ist echter Betrug? Genau wie beim Medizintest: Die Base Rate entscheidet! Bei einer Betrugsquote von 0{,}1% sind die meisten Alarme Fehlalarme.',
+        desc: 'Amirs Payment-System erkennt verdächtige Transaktionen mit Bayes: Wenn ein Alarm auslöst — wie wahrscheinlich ist echter Betrug? Genau wie beim Medizintest: Die Base Rate entscheidet! Bei einer Betrugsquote von 0{,}1% sind die meisten Alarme Fehlalarme.',
       },
     },
     mistakes: {
       confuse_direction: {
         wrong: '$P(A \\mid B) = P(B \\mid A)$ — die Richtung verwechselt',
         correct: 'Die Richtung umdrehen geht nur mit Bayes!',
-        why: '$P(A \\mid B)$ und $P(B \\mid A)$ sind voellig verschiedene Werte. Beispiel: $P(\\text{nass} \\mid \\text{Regen}) = 0{,}99$, aber $P(\\text{Regen} \\mid \\text{nass}) \\ll 0{,}99$ — man kann auch von einer Sprinkleranlage nass werden. Den Satz von Bayes brauchst du, um die Richtung umzukehren.',
-        amir_warning: 'Diesen Fehler sehe ich in Code-Reviews staendig! Jemand berechnet $P(\\text{click} \\mid \\text{bought})$ und benutzt es als $P(\\text{bought} \\mid \\text{click})$. Das kann den Empfehlungsalgorithmus komplett ruinieren. Bayes ist Pflicht!',
+        why: '$P(A \\mid B)$ und $P(B \\mid A)$ sind völlig verschiedene Werte. Beispiel: $P(\\text{nass} \\mid \\text{Regen}) = 0{,}99$, aber $P(\\text{Regen} \\mid \\text{nass}) \\ll 0{,}99$ — man kann auch von einer Sprinkleranlage nass werden. Den Satz von Bayes brauchst du, um die Richtung umzukehren.',
+        amir_warning: 'Diesen Fehler sehe ich in Code-Reviews ständig! Jemand berechnet $P(\\text{click} \\mid \\text{bought})$ und benutzt es als $P(\\text{bought} \\mid \\text{click})$. Das kann den Empfehlungsalgorithmus komplett ruinieren. Bayes ist Pflicht!',
       },
       ignore_base_rate: {
         wrong: 'Die Basisrate ignoriert (Base Rate Fallacy)',
         correct: 'Immer $P(A)$ — die Prior-Wahrscheinlichkeit — berücksichtigen',
-        why: 'Ein 99%-genauer Test klingt beeindruckend, aber wenn die Krankheit nur 1% betrifft, ist $P(K \\mid +) \\approx 16{,}7\\%$. Die niedrige Basisrate $P(K) = 0{,}01$ dominiert das Ergebnis. Ohne den Prior erhaeltst du eine voellig verzerrte Einschaetzung.',
+        why: 'Ein 99%-genauer Test klingt beeindruckend, aber wenn die Krankheit nur 1% betrifft, ist $P(K \\mid +) \\approx 16{,}7\\%$. Die niedrige Basisrate $P(K) = 0{,}01$ dominiert das Ergebnis. Ohne den Prior erhältst du eine völlig verzerrte Einschätzung.',
       },
     },
   },
@@ -261,15 +261,15 @@ export const batch11b = {
     explanation: {
       intro: 'Ein Vektor beschreibt eine Verschiebung im Raum — oder allgemeiner: eine geordnete Liste von Zahlen. Im $\\mathbb{R}^3$ hat ein Vektor drei Komponenten, die du als Spalte schreibst. In der Datenanalyse können Vektoren auch 50 oder 500 Dimensionen haben — das Prinzip bleibt gleich:',
       addition: 'Vektoren addierst du komponentenweise — jede Zeile für sich. Geometrisch legst du den zweiten Vektor ans Ende des ersten (Spitze-an-Fuss-Methode). Das Ergebnis ist der direkte Weg vom Start zum Ziel:',
-      amir_tip: 'In meinem Python-Code sind Vektoren einfach numpy-Arrays. Die Addition $\\vec{a} + \\vec{b}$ wird automatisch elementweise ausgefuehrt — np.array([3,4]) + np.array([-1,2]) ergibt np.array([2,6]). Genau das Gleiche wie in der Mathe!',
-      scalar_product: 'Das Skalarprodukt (auch: inneres Produkt) zweier Vektoren ergibt eine einzelne Zahl — keinen Vektor! Du multiplizierst die Komponenten paarweise und addierst alles auf. Das Ergebnis verraet dir, wie stark die Vektoren "in die gleiche Richtung zeigen":',
-      length: 'Die Laenge (der Betrag) eines Vektors berechnet sich über den Satz des Pythagoras — erweitert auf drei Dimensionen. Im 2D-Fall ist es der bekannte $\\sqrt{x^2 + y^2}$, im 3D kommt $z^2$ dazu:',
+      amir_tip: 'In meinem Python-Code sind Vektoren einfach numpy-Arrays. Die Addition $\\vec{a} + \\vec{b}$ wird automatisch elementweise ausgeführt — np.array([3,4]) + np.array([-1,2]) ergibt np.array([2,6]). Genau das Gleiche wie in der Mathe!',
+      scalar_product: 'Das Skalarprodukt (auch: inneres Produkt) zweier Vektoren ergibt eine einzelne Zahl — keinen Vektor! Du multiplizierst die Komponenten paarweise und addierst alles auf. Das Ergebnis verrät dir, wie stark die Vektoren "in die gleiche Richtung zeigen":',
+      length: 'Die Länge (der Betrag) eines Vektors berechnet sich über den Satz des Pythagoras — erweitert auf drei Dimensionen. Im 2D-Fall ist es der bekannte $\\sqrt{x^2 + y^2}$, im 3D kommt $z^2$ dazu:',
       angle: 'Die wichtigste Anwendung des Skalarprodukts: Der Winkel zwischen zwei Vektoren. Die Formel verbindet das algebraische Skalarprodukt mit der geometrischen Interpretation. Dieser Winkel ist in der ML-Welt als "Cosine Similarity" das Standardmass für Ähnlichkeit:',
     },
     concepts: {
       vector: {
         title: 'Vektor',
-        desc: 'Eine geordnete Liste von Zahlen als Spalte geschrieben. Im $\\mathbb{R}^2$ hat ein Vektor 2 Komponenten, im $\\mathbb{R}^3$ drei. Geometrisch ist er ein Pfeil mit Richtung und Laenge. In der Datenanalyse repraesentiert ein Vektor ein Objekt mit seinen Eigenschaften — z.B. einen Song mit Tempo, Energie und Stimmung.',
+        desc: 'Eine geordnete Liste von Zahlen als Spalte geschrieben. Im $\\mathbb{R}^2$ hat ein Vektor 2 Komponenten, im $\\mathbb{R}^3$ drei. Geometrisch ist er ein Pfeil mit Richtung und Länge. In der Datenanalyse repräsentiert ein Vektor ein Objekt mit seinen Eigenschaften — z.B. einen Song mit Tempo, Energie und Stimmung.',
       },
       scalar_product: {
         title: 'Skalarprodukt',
@@ -277,33 +277,33 @@ export const batch11b = {
       },
       vector_length: {
         title: 'Betrag eines Vektors',
-        desc: 'Die Laenge $|\\vec{a}| = \\sqrt{a_1^2 + a_2^2 + a_3^2}$ — verallgemeinerter Pythagoras. Ein Vektor mit Betrag 1 heisst Einheitsvektor. In der ML-Welt normalisiert man Vektoren oft auf Laenge 1, um nur die Richtung zu vergleichen.',
+        desc: 'Die Länge $|\\vec{a}| = \\sqrt{a_1^2 + a_2^2 + a_3^2}$ — verallgemeinerter Pythagoras. Ein Vektor mit Betrag 1 heisst Einheitsvektor. In der ML-Welt normalisiert man Vektoren oft auf Länge 1, um nur die Richtung zu vergleichen.',
       },
     },
     examples: {
       force_addition: {
-        title: 'Kraefte als Vektoren addieren',
-        context: 'Zwei Kraefte wirken auf ein Objekt — Amir berechnet die resultierende Gesamtkraft.',
-        step1: 'Die beiden Kraefte als 2D-Vektoren gegeben:',
+        title: 'Kräfte als Vektoren addieren',
+        context: 'Zwei Kräfte wirken auf ein Objekt — Amir berechnet die resultierende Gesamtkraft.',
+        step1: 'Die beiden Kräfte als 2D-Vektoren gegeben:',
         step2: 'Komponentenweise addieren — jede Zeile einzeln:',
         step3: 'Betrag der Gesamtkraft berechnen (Pythagoras):',
-        step4: 'Ausrechnen — die Gesamtkraft betraegt ca. $6{,}32\\,\\text{N}$:',
-        amir_comment: 'Das gleiche Prinzip nutzen wir bei DataPulse: Statt Kraeften addieren wir Feature-Vektoren. Wenn ein User zwei Genres mag, ist der kombinierte Geschmacks-Vektor die Summe — damit finden wir Songs, die zu beiden Genres passen!',
+        step4: 'Ausrechnen — die Gesamtkraft beträgt ca. $6{,}32\\,\\text{N}$:',
+        amir_comment: 'Das gleiche Prinzip nutzen wir bei DataPulse: Statt Kräften addieren wir Feature-Vektoren. Wenn ein User zwei Genres mag, ist der kombinierte Geschmacks-Vektor die Summe — damit finden wir Songs, die zu beiden Genres passen!',
       },
       angle_vectors: {
         title: 'Winkel zwischen Song-Vektoren',
         context: 'Amir vergleicht zwei Songs: Song A hat den Feature-Vektor $(1, 2, 3)$ und Song B $(4, -1, 2)$. Wie ähnlich sind sie?',
         step1: 'Die Feature-Vektoren der beiden Songs:',
         step2: 'Skalarprodukt berechnen — Komponenten paarweise multiplizieren und aufaddieren:',
-        step3: 'Betraege beider Vektoren berechnen:',
-        step4: 'Cosinus-Formel anwenden — der Winkel betraegt ca. $62{,}2°$:',
-        amir_comment: 'Ein Winkel von $62{,}2°$ bedeutet: Die Songs sind teilweise ähnlich, aber nicht extrem. Bei $0°$ waeren sie identisch (gleiche Proportionen), bei $90°$ komplett verschieden. In meinem Code steht: similarity = np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))',
+        step3: 'Beträge beider Vektoren berechnen:',
+        step4: 'Cosinus-Formel anwenden — der Winkel beträgt ca. $62{,}2°$:',
+        amir_comment: 'Ein Winkel von $62{,}2°$ bedeutet: Die Songs sind teilweise ähnlich, aber nicht extrem. Bei $0°$ wären sie identisch (gleiche Proportionen), bei $90°$ komplett verschieden. In meinem Code steht: similarity = np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))',
       },
     },
     realworld: {
       embeddings: {
         title: 'Word Embeddings & Song Embeddings',
-        desc: 'In der ML-Welt werden Woerter, Songs und Bilder als hochdimensionale Vektoren dargestellt (Embeddings). Die Cosine Similarity $\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}$ misst ihre Ähnlichkeit. Ein beruhmtes Beispiel: "Koenig" $-$ "Mann" $+$ "Frau" $\\approx$ "Koenigin" — Vektorarithmetik mit Wortbedeutungen!',
+        desc: 'In der ML-Welt werden Wörter, Songs und Bilder als hochdimensionale Vektoren dargestellt (Embeddings). Die Cosine Similarity $\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}$ misst ihre Ähnlichkeit. Ein beruhmtes Beispiel: "König" $-$ "Mann" $+$ "Frau" $\\approx$ "Königin" — Vektorarithmetik mit Wortbedeutungen!',
       },
       navigation: {
         title: 'Navigation & Robotik',
@@ -319,12 +319,12 @@ export const batch11b = {
         wrong: 'Skalarprodukt ergibt einen Vektor',
         correct: 'Das Skalarprodukt ergibt eine ZAHL ($\\in \\mathbb{R}$)',
         why: 'Beim Skalarprodukt multiplizierst du komponentenweise und ADDIERST — das Ergebnis ist eine einzelne Zahl, kein Vektor. Verwechsle es nicht mit dem Kreuzprodukt (das ergibt tatsächlich einen Vektor, kommt aber erst später).',
-        amir_warning: 'In numpy: np.dot(a, b) gibt eine Zahl zurueck, np.cross(a, b) gibt einen Vektor zurueck. Wenn dein Similarity-Score ploetzlich ein Array statt einer Zahl ist, hast du das falsche Produkt benutzt!',
+        amir_warning: 'In numpy: np.dot(a, b) gibt eine Zahl zurück, np.cross(a, b) gibt einen Vektor zurück. Wenn dein Similarity-Score plötzlich ein Array statt einer Zahl ist, hast du das falsche Produkt benutzt!',
       },
       length_sum: {
         wrong: '$|\\vec{a}| = a_1 + a_2 + a_3$ — Komponenten einfach addiert',
         correct: '$|\\vec{a}| = \\sqrt{a_1^2 + a_2^2 + a_3^2}$ — Pythagoras anwenden!',
-        why: 'Die Laenge eines Vektors ist der euklidische Abstand vom Ursprung — und der folgt dem Satz des Pythagoras. Einfaches Addieren der Komponenten waere die Manhattan-Distanz (auch nützlich, aber etwas anderes!).',
+        why: 'Die Länge eines Vektors ist der euklidische Abstand vom Ursprung — und der folgt dem Satz des Pythagoras. Einfaches Addieren der Komponenten wäre die Manhattan-Distanz (auch nützlich, aber etwas anderes!).',
       },
     },
   },

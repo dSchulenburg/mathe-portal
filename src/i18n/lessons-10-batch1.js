@@ -1,13 +1,13 @@
 export const batch1 = {
   '10-quad-gleichungen': {
     story: {
-      intro: 'Mia hat Lumis Sprungkurve hinbekommen — aber jetzt steckt sie fest. In Level 3 von "Hafenlichter" muss Lumi auf einer sich bewegenden Plattform landen. "Ich brauche den exakten Zeitpunkt, wann die Sprungkurve die Plattform trifft", sagt Mia zu Tim. Das bedeutet: Sie muss eine quadratische Gleichung lösen. Nicht nur die Funktion zeichnen, sondern ganz konkret nach $x$ aufloesen.',
+      intro: 'Mia hat Lumis Sprungkurve hinbekommen — aber jetzt steckt sie fest. In Level 3 von "Hafenlichter" muss Lumi auf einer sich bewegenden Plattform landen. "Ich brauche den exakten Zeitpunkt, wann die Sprungkurve die Plattform trifft", sagt Mia zu Tim. Das bedeutet: Sie muss eine quadratische Gleichung lösen. Nicht nur die Funktion zeichnen, sondern ganz konkret nach $x$ auflösen.',
       challenge: 'Mia muss berechnen, wann Lumis Sprungkurve die bewegliche Plattform schneidet — das führt auf eine quadratische Gleichung.',
       outro: 'Mia hat drei Methoden in ihrem Werkzeugkasten: pq-Formel, quadratische Ergänzung und Faktorisieren. Je nach Gleichung wählt sie die passende Methode — und Lumi landet jetzt punktgenau auf jeder Plattform. "Das ist wie ein Schweizer Taschenmesser", grinst sie.',
     },
     objectives: {
       solve: 'Quadratische Gleichungen sicher lösen und Lösungsmenge angeben',
-      pq_formula: 'Die pq-Formel anwenden — inklusive Sonderfaelle (keine oder eine Lösung)',
+      pq_formula: 'Die pq-Formel anwenden — inklusive Sonderfälle (keine oder eine Lösung)',
       completing_square: 'Quadratische Ergänzung als Lösungsweg verstehen und durchführen',
       factoring: 'Quadratische Gleichungen durch Faktorisieren lösen',
     },
@@ -16,8 +16,8 @@ export const batch1 = {
       normal_form: 'Für die pq-Formel brauchen wir die Normalform — das heisst, der Koeffizient vor $x^2$ muss genau 1 sein. Ist das nicht der Fall, teilen wir die gesamte Gleichung durch $a$:',
       mia_tip: 'Ich merke mir: Erst alles auf eine Seite bringen, damit rechts Null steht. Dann durch den Koeffizienten vor $x^2$ teilen. Erst DANN darf ich die pq-Formel benutzen!',
       pq_formula: 'Die pq-Formel ist das Universalwerkzeug für quadratische Gleichungen in Normalform. Du liest $p$ und $q$ direkt ab und setzt ein:',
-      completing_square: 'Die quadratische Ergänzung funktioniert so: Du formst die linke Seite in ein perfektes Quadrat um. Dazu addierst du $(\\frac{p}{2})^2$ auf beiden Seiten. Das Ergebnis ist ein Ausdruck der Form $(x + \\frac{p}{2})^2$, den du leicht nach $x$ aufloesen kannst.',
-      factoring: 'Wenn du die Nullstellen $x_1$ und $x_2$ kennst (oder erraten kannst), laesst sich die Gleichung als Produkt zweier Klammern schreiben. Das Produkt ist Null, wenn mindestens ein Faktor Null ist:',
+      completing_square: 'Die quadratische Ergänzung funktioniert so: Du formst die linke Seite in ein perfektes Quadrat um. Dazu addierst du $(\\frac{p}{2})^2$ auf beiden Seiten. Das Ergebnis ist ein Ausdruck der Form $(x + \\frac{p}{2})^2$, den du leicht nach $x$ auflösen kannst.',
+      factoring: 'Wenn du die Nullstellen $x_1$ und $x_2$ kennst (oder erraten kannst), lässt sich die Gleichung als Produkt zweier Klammern schreiben. Das Produkt ist Null, wenn mindestens ein Faktor Null ist:',
     },
     concepts: {
       pq_formula: {
@@ -26,7 +26,7 @@ export const batch1 = {
       },
       completing_square: {
         title: 'Quadratische Ergänzung',
-        desc: 'Du vervollstaendigst die linke Seite zu einem perfekten Quadrat. Besonders nützlich, wenn du den Scheitelpunkt einer Parabel bestimmen willst.',
+        desc: 'Du vervollständigst die linke Seite zu einem perfekten Quadrat. Besonders nützlich, wenn du den Scheitelpunkt einer Parabel bestimmen willst.',
       },
       discriminant: {
         title: 'Diskriminante',
@@ -53,7 +53,7 @@ export const batch1 = {
         step1: 'Wir starten mit der Gleichung in Normalform:',
         step2: 'Erst das konstante Glied auf die rechte Seite bringen:',
         step3: 'Jetzt die quadratische Ergänzung: $(\\frac{6}{2})^2 = 9$ auf beiden Seiten addieren:',
-        step4: 'Die linke Seite ist jetzt ein perfektes Quadrat — Wurzel ziehen ergibt zwei Faelle:',
+        step4: 'Die linke Seite ist jetzt ein perfektes Quadrat — Wurzel ziehen ergibt zwei Fälle:',
         step5: 'Beide Lösungen berechnen:',
         mia_comment: 'Gleiche Gleichung, gleiche Lösungen, anderer Weg. Ich nutze die quadratische Ergänzung, wenn ich den Scheitelpunkt der Parabel auch brauche — zwei Fliegen mit einer Klappe!',
       },
@@ -61,11 +61,11 @@ export const batch1 = {
     realworld: {
       angry_birds: {
         title: 'Angry Birds & Wurfparabeln',
-        desc: 'Jeder Wurf in Angry Birds folgt einer Parabel. Die Gleichung $h(t) = 0$ verraet dir, wann das Objekt den Boden trifft. Physiker nutzen dieselbe Formel für echte Wurfbewegungen.',
+        desc: 'Jeder Wurf in Angry Birds folgt einer Parabel. Die Gleichung $h(t) = 0$ verrät dir, wann das Objekt den Boden trifft. Physiker nutzen dieselbe Formel für echte Wurfbewegungen.',
       },
       breakeven: {
         title: 'Gewinnzone finden',
-        desc: 'Ein Unternehmen will wissen: Ab welcher Stueckzahl machen wir Gewinn? Der Gewinn $G(x) = 0$ liefert die Break-Even-Punkte — meistens eine quadratische Gleichung.',
+        desc: 'Ein Unternehmen will wissen: Ab welcher Stückzahl machen wir Gewinn? Der Gewinn $G(x) = 0$ liefert die Break-Even-Punkte — meistens eine quadratische Gleichung.',
       },
       rocket: {
         title: 'Raketenstarts',
@@ -96,11 +96,11 @@ export const batch1 = {
     objectives: {
       sin_cos_tan: 'Sinus, Kosinus und Tangens im rechtwinkligen Dreieck sicher anwenden',
       unit_circle: 'Den Einheitskreis verstehen und Werte ablesen können',
-      angle_calculations: 'Winkel und Seitenlaengen mit trigonometrischen Funktionen berechnen',
+      angle_calculations: 'Winkel und Seitenlängen mit trigonometrischen Funktionen berechnen',
       real_problems: 'Praxisaufgaben mit Trigonometrie lösen (Höhen, Entfernungen, Winkel)',
     },
     explanation: {
-      intro: 'Trigonometrie verbindet Winkel mit Seitenlaengen. In jedem rechtwinkligen Dreieck gelten drei grundlegende Verhaeltnisse — benannt nach dem Winkel $\\alpha$, den du betrachtest:',
+      intro: 'Trigonometrie verbindet Winkel mit Seitenlängen. In jedem rechtwinkligen Dreieck gelten drei grundlegende Verhältnisse — benannt nach dem Winkel $\\alpha$, den du betrachtest:',
       mia_tip: 'Mein Merksatz: "GAGA HaHa GAGA" — Gegenkathete durch Hypotenuse (sin), Ankathete durch Hypotenuse (cos), Gegenkathete durch Ankathete (tan). Klingt albern, vergisst man aber nie!',
       unit_circle: 'Der Einheitskreis hat den Radius 1 und seinen Mittelpunkt im Ursprung. Für jeden Winkel $\\alpha$ liefert er direkt die Werte: Die $x$-Koordinate ist $\\cos(\\alpha)$, die $y$-Koordinate ist $\\sin(\\alpha)$. Damit gilt immer:',
       special_angles: 'Bestimmte Winkel solltest du auswendig kennen: $\\sin(30°) = 0{,}5$, $\\cos(60°) = 0{,}5$, $\\sin(45°) = \\cos(45°) = \\frac{\\sqrt{2}}{2} \\approx 0{,}707$. Tipp: Beim Einheitskreis kannst du diese Werte geometrisch ablesen.',
@@ -108,15 +108,15 @@ export const batch1 = {
     concepts: {
       sine: {
         title: 'Sinus',
-        desc: 'Das Verhaeltnis von Gegenkathete zu Hypotenuse. Im Einheitskreis entspricht $\\sin(\\alpha)$ der $y$-Koordinate des Punktes auf dem Kreis.',
+        desc: 'Das Verhältnis von Gegenkathete zu Hypotenuse. Im Einheitskreis entspricht $\\sin(\\alpha)$ der $y$-Koordinate des Punktes auf dem Kreis.',
       },
       cosine: {
         title: 'Kosinus',
-        desc: 'Das Verhaeltnis von Ankathete zu Hypotenuse. Im Einheitskreis entspricht $\\cos(\\alpha)$ der $x$-Koordinate. Kosinus und Sinus sind um $90°$ verschoben.',
+        desc: 'Das Verhältnis von Ankathete zu Hypotenuse. Im Einheitskreis entspricht $\\cos(\\alpha)$ der $x$-Koordinate. Kosinus und Sinus sind um $90°$ verschoben.',
       },
       tangent: {
         title: 'Tangens',
-        desc: 'Das Verhaeltnis von Gegenkathete zu Ankathete — oder aequivalent $\\frac{\\sin(\\alpha)}{\\cos(\\alpha)}$. Ideal für Steigungen und Neigungswinkel.',
+        desc: 'Das Verhältnis von Gegenkathete zu Ankathete — oder aequivalent $\\frac{\\sin(\\alpha)}{\\cos(\\alpha)}$. Ideal für Steigungen und Neigungswinkel.',
       },
       unit_circle: {
         title: 'Einheitskreis',
@@ -126,7 +126,7 @@ export const batch1 = {
     examples: {
       height_tan: {
         title: 'Höhe mit dem Tangens berechnen',
-        context: 'Mia misst den Winkel zum Leuchtturm-Dach: $35°$. Die Entfernung zum Turm betraegt $50\\,\\text{m}$.',
+        context: 'Mia misst den Winkel zum Leuchtturm-Dach: $35°$. Die Entfernung zum Turm beträgt $50\\,\\text{m}$.',
         step1: 'Skizze: Die Entfernung ist die Ankathete, die gesuchte Höhe ist die Gegenkathete. Also Tangens:',
         step2: 'Nach der Höhe $h$ umstellen — beide Seiten mit $50\\,\\text{m}$ multiplizieren:',
         step3: 'Taschenrechner (DEG-Modus!): $\\tan(35°) \\approx 0{,}7002$ einsetzen und ausrechnen:',
@@ -139,7 +139,7 @@ export const batch1 = {
         step2: 'Sinus-Wert ablesen — die $y$-Koordinate des Punktes auf dem Einheitskreis:',
         step3: 'Kosinus-Wert ablesen — die $x$-Koordinate:',
         step4: 'Der Punkt auf dem Einheitskreis hat also die Koordinaten:',
-        mia_comment: 'Im Einheitskreis sehe ich sin und cos als Laengen. Das macht es viel anschaulicher als nur Zahlen in einer Tabelle!',
+        mia_comment: 'Im Einheitskreis sehe ich sin und cos als Längen. Das macht es viel anschaulicher als nur Zahlen in einer Tabelle!',
       },
     },
     realworld: {
@@ -148,11 +148,11 @@ export const batch1 = {
         desc: 'Dein Smartphone berechnet Richtungen mit Trigonometrie. Die Funktion atan2 wandelt $x$- und $y$-Koordinaten in einen Winkel um — so weiss Google Maps, in welche Richtung du gehen musst.',
       },
       building_height: {
-        title: 'Gebaeudehoehen messen',
-        desc: 'Architekten und Vermesser messen Gebaeudehoehen, ohne aufs Dach zu klettern. Mit einem Winkelmesser und dem Tangens reichen Abstand und Winkel voellig aus.',
+        title: 'Gebäudehöhen messen',
+        desc: 'Architekten und Vermesser messen Gebäudehöhen, ohne aufs Dach zu klettern. Mit einem Winkelmesser und dem Tangens reichen Abstand und Winkel völlig aus.',
       },
       music: {
-        title: 'Toene & Schallwellen',
+        title: 'Töne & Schallwellen',
         desc: 'Jeder Ton ist eine Sinuswelle. Der Kammerton A hat 440 Schwingungen pro Sekunde — beschrieben durch $f(t) = \\sin(880\\pi t)$. Musik ist angewandte Trigonometrie!',
       },
     },
@@ -160,7 +160,7 @@ export const batch1 = {
       sin_cos_swap: {
         wrong: 'Sinus und Kosinus verwechselt',
         correct: 'Sinus = Gegenkathete/Hypotenuse',
-        why: 'Sinus gehört zur Gegenkathete (die Seite gegenueber dem Winkel), Kosinus zur Ankathete (die Seite neben dem Winkel). Verwechselst du sie, bekommst du den falschen Wert.',
+        why: 'Sinus gehört zur Gegenkathete (die Seite gegenüber dem Winkel), Kosinus zur Ankathete (die Seite neben dem Winkel). Verwechselst du sie, bekommst du den falschen Wert.',
         mia_warning: 'Passiert mir immer noch manchmal! Ich male mir das Dreieck hin und beschrifte die Seiten relativ zum Winkel. Dann sehe ich sofort, was Gegen- und was Ankathete ist.',
       },
       deg_rad: {
@@ -174,8 +174,8 @@ export const batch1 = {
   '10-exp-wachstum': {
     story: {
       intro: 'Hafenlichter soll einen Multiplayer-Modus bekommen. Mia testet die Server mit 10 Spielern — alles läuft smooth. Aber Tim warnt: "Was passiert bei 100? Bei 1000? Wenn das Spiel viral geht, verdoppelt sich die Spielerzahl vielleicht alle paar Tage." Mia rechnet nach und erschrickt: Exponentielles Wachstum ist viel schneller, als man denkt.',
-      challenge: 'Die Serverlast wuechst nicht linear mit den Spielern, sondern exponentiell. Mia muss vorhersagen, wann die Server überlastet sind.',
-      outro: 'Mia hat ein Modell gebaut, das die Spielerzahl-Entwicklung vorhersagt. Dank der Exponentialfunktion weiss sie jetzt: Wenn die Verdopplungszeit bei 3 Tagen liegt, braucht sie nach 2 Wochen 32-mal so viel Serverkapazität. "Lieber frueh skalieren als spät abstürzen", beschließt sie.',
+      challenge: 'Die Serverlast wüchst nicht linear mit den Spielern, sondern exponentiell. Mia muss vorhersagen, wann die Server überlastet sind.',
+      outro: 'Mia hat ein Modell gebaut, das die Spielerzahl-Entwicklung vorhersagt. Dank der Exponentialfunktion weiss sie jetzt: Wenn die Verdopplungszeit bei 3 Tagen liegt, braucht sie nach 2 Wochen 32-mal so viel Serverkapazität. "Lieber früh skalieren als spät abstürzen", beschließt sie.',
     },
     objectives: {
       exponential_functions: 'Exponentialfunktionen erkennen und von linearen Funktionen unterscheiden',
@@ -184,8 +184,8 @@ export const batch1 = {
       model_real_world: 'Reale Wachstums- und Zerfallsprozesse mit Exponentialfunktionen modellieren',
     },
     explanation: {
-      intro: 'Bei linearem Wachstum kommt in jedem Schritt der gleiche Betrag dazu. Bei exponentiellem Wachstum wird in jedem Schritt mit dem gleichen Faktor multipliziert. Das klingt ähnlich — führt aber zu voellig unterschiedlichen Ergebnissen:',
-      growth_factor: 'Der Wachstumsfaktor $b$ verraet dir alles: Wächst etwas um $p\\%$ pro Zeiteinheit, ist der Faktor größer als 1. Nimmt etwas um $p\\%$ ab (Zerfall), ist er kleiner als 1:',
+      intro: 'Bei linearem Wachstum kommt in jedem Schritt der gleiche Betrag dazu. Bei exponentiellem Wachstum wird in jedem Schritt mit dem gleichen Faktor multipliziert. Das klingt ähnlich — führt aber zu völlig unterschiedlichen Ergebnissen:',
+      growth_factor: 'Der Wachstumsfaktor $b$ verrät dir alles: Wächst etwas um $p\\%$ pro Zeiteinheit, ist der Faktor größer als 1. Nimmt etwas um $p\\%$ ab (Zerfall), ist er kleiner als 1:',
       mia_tip: 'Lineare Funktionen addieren, Exponentialfunktionen multiplizieren. Bei 10% Wachstum pro Tag ist der Faktor $b = 1{,}10$ — nach 7 Tagen also $1{,}10^7 \\approx 1{,}95$, fast eine Verdopplung! Das hat mich bei der Serverplanung überrascht.',
       half_life: 'Die Halbwertszeit $t_H$ ist die Zeit, nach der noch die Hälfte übrig ist. Sie ist konstant — egal, mit wie viel du startest. Das ist das Besondere am exponentiellen Zerfall:',
       doubling_time: 'Das Gegenstück beim Wachstum: Die Verdopplungszeit $t_V$ sagt dir, nach welcher Zeit sich der Wert verdoppelt hat. Auch sie bleibt immer gleich:',
@@ -201,7 +201,7 @@ export const batch1 = {
       },
       half_life: {
         title: 'Halbwertszeit',
-        desc: 'Die Zeit, bis sich ein Wert halbiert hat. Typisch für radioaktiven Zerfall, Medikamente im Koerper oder Akku-Entladung. Die Halbwertszeit ist vom Startwert unabhängig.',
+        desc: 'Die Zeit, bis sich ein Wert halbiert hat. Typisch für radioaktiven Zerfall, Medikamente im Körper oder Akku-Entladung. Die Halbwertszeit ist vom Startwert unabhängig.',
       },
       euler_base: {
         title: 'Natürliche Exponentialfunktion',
@@ -231,7 +231,7 @@ export const batch1 = {
     realworld: {
       tiktok: {
         title: 'Virale TikTok-Videos',
-        desc: 'Ein virales Video bekommt anfangs 100 Views. Wenn jeder Zuschauer es 1,8 Leuten zeigt, explodieren die Zahlen: Nach 10 Runden sind es schon über 35.000 Views. Algorithmen verstaerken diesen Effekt noch.',
+        desc: 'Ein virales Video bekommt anfangs 100 Views. Wenn jeder Zuschauer es 1,8 Leuten zeigt, explodieren die Zahlen: Nach 10 Runden sind es schon über 35.000 Views. Algorithmen verstärken diesen Effekt noch.',
       },
       battery: {
         title: 'Akku-Entladung',
@@ -239,7 +239,7 @@ export const batch1 = {
       },
       pandemic: {
         title: 'Pandemie-Ausbreitung',
-        desc: 'COVID-19 hat gezeigt, was "exponentielles Wachstum" bedeutet: Ohne Massnahmen verdoppelten sich die Fallzahlen alle 3 Tage. Nach einem Monat waere das Faktor $2^{10} = 1024$.',
+        desc: 'COVID-19 hat gezeigt, was "exponentielles Wachstum" bedeutet: Ohne Massnahmen verdoppelten sich die Fallzahlen alle 3 Tage. Nach einem Monat wäre das Faktor $2^{10} = 1024$.',
       },
     },
     mistakes: {
@@ -247,7 +247,7 @@ export const batch1 = {
         wrong: 'Lineares statt exponentielles Modell',
         correct: 'Prozentuale Änderung = Exponentialfunktion',
         why: '"5% Wachstum pro Jahr" ist NICHT $+5$ pro Jahr, sondern $\\cdot 1{,}05$ pro Jahr. Bei linearem Modell wächst der Betrag konstant, beim exponentiellen wächst er immer schneller.',
-        mia_warning: 'Ich hatte zuerst $\\text{Spieler}(t) = 100 + 50t$ gerechnet. Die echten Zahlen lagen nach einer Woche 3x so hoch! Exponentielles Wachstum unterschaetzt man fast immer.',
+        mia_warning: 'Ich hatte zuerst $\\text{Spieler}(t) = 100 + 50t$ gerechnet. Die echten Zahlen lagen nach einer Woche 3x so hoch! Exponentielles Wachstum unterschätzt man fast immer.',
       },
       wrong_growth_factor: {
         wrong: 'Prozentzahl direkt als Faktor eingesetzt',
