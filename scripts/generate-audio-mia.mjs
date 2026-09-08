@@ -1,4 +1,12 @@
 #!/usr/bin/env node
+
+// ABNAHMETEST NICHT VERGESSEN. Erzeugte Narrationen werden nicht abgehoert,
+// bevor sie live gehen -- zwei Mia-Clips sprachen deshalb seit dem 29.03.2026
+// an jeder Umlautstelle Kauderwelsch und fielen erst am 02.09. auf. Nach einem
+// Lauf hier:
+//     python tools/tts-check/check.py <mp3-ordner> <quelltexte.json>
+// Exit-Code != 0, sobald eine Datei unter 60 % Umlaut-Trefferquote liegt.
+// Details: tools/tts-check/README.md
 /**
  * Erzeugt Mias ElevenLabs-Narration (Klasse 10, „Hafenlichter“) für jeden Eintrag in
  * scripts/mia-narration.js → public/assets/mia/audio/<key>.mp3.

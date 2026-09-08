@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+
+# ABNAHMETEST NICHT VERGESSEN. Erzeugte Narrationen werden nicht abgehoert,
+# bevor sie live gehen -- zwei Mia-Clips sprachen deshalb seit dem 29.03.2026
+# an jeder Umlautstelle Kauderwelsch und fielen erst am 02.09. auf. Nach einem
+# Lauf hier:
+#     python tools/tts-check/check.py <mp3-ordner> <quelltexte.json>
+# Exit-Code != 0, sobald eine Datei unter 60 % Umlaut-Trefferquote liegt.
+# Details: tools/tts-check/README.md
 """Generate Amir (Kl.11) + Kai (Kl.12) audio clips via ElevenLabs API.
 Uses eleven_multilingual_v2 for German pronunciation.
 Style: Jugendsprache, energisch, etwas schneller als normal.
