@@ -30,22 +30,6 @@ function postHeatmapEntry(sectionId) {
     .finally(() => clearTimeout(timer));
 }
 
-// Once-per-day dedup. `hasEntryForSectionToday` was expected on the store but
-// is not part of the pinned @lernmodule/journal v0.1.0 API — derive it from
-// getEntriesForModule so the modal doesn't re-fire for a section already
-// reflected on today. Degrades to "show modal" if the method is unavailable.
-function hasEntryForSectionToday(store, moduleId, sectionId) {
-  if (typeof store.getEntriesForModule !== 'function') return false;
-  const today = new Date().toDateString();
-  return store
-    .getEntriesForModule(moduleId)
-    .some(
-      (e) =>
-        e.sectionId === sectionId &&
-        new Date(e.timestamp).toDateString() === today
-    );
-}
-
 /**
  * Mount-component for the journal MikroCard. Listens for the
  * `journal:section-complete` window event, fetches a reflection prompt
@@ -69,7 +53,7 @@ export default function MikroCardMount() {
       // Skip if user already skipped this section in this session
       if (store.isSkippedThisSession(moduleId, sectionId)) return;
       // Or if there's already an entry for this section today
-      if (hasEntryForSectionToday(store, moduleId, sectionId)) return;
+      if (store.hasEntryForSectionToday(moduleId, sectionId)) return;
 
       setTrigger({ sectionId, concepts, character });
     }
