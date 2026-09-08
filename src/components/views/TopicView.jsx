@@ -29,6 +29,7 @@ import StoryOutro from '../lesson/StoryOutro';
 import { getCharacterForTopic, TOPIC_STORIES } from '../../data/characters';
 import { useTranslation } from '../../i18n/useTranslation';
 import { useDisplayMode } from '../../context/DisplayModeContext';
+import { vorschauText } from '../../utils/mathVorschau';
 
 function ensureRegistered(topicId) {
   const topic = getTopic(topicId);
@@ -434,8 +435,7 @@ export default function TopicView({ topicId, onBack }) {
                       }}>
                         {idx + 1}/{levelExercises.length}
                       </span>
-                      {exercise.data?.questionText?.slice(0, 80)}
-                      {exercise.data?.questionText?.length > 80 ? '…' : ''}
+                      {vorschauText(exercise.data?.questionText, 80)}
                     </span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       {isCompleted && (
@@ -472,7 +472,7 @@ export default function TopicView({ topicId, onBack }) {
                         fontSize: '0.8rem',
                       }}
                     >
-                      <span>{idx + 1}/{levelExercises.length} — {exercise.data?.questionText?.slice(0, 50)}{exercise.data?.questionText?.length > 50 ? '…' : ''}</span>
+                      <span>{idx + 1}/{levelExercises.length} — {vorschauText(exercise.data?.questionText, 50)}</span>
                       <span>▲</span>
                     </button>
 
