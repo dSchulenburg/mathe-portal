@@ -2,11 +2,13 @@ import { batch1 } from '../lessons-10-batch1-es';
 import { batch2 } from '../lessons-10-batch2-es';
 import { batch3 } from '../lessons-10-batch3-es';
 import { batch4 } from '../lessons-10-batch4-es';
+import { batch5 } from '../lessons-10-batch5-es';
 import { batch11a } from '../lessons-11-batch1-es';
 import { batch11b } from '../lessons-11-batch2-es';
 import { batch11c } from '../lessons-11-batch3-es';
 import { batch12a } from '../lessons-12-batch1-es';
 import { batch12b } from '../lessons-12-batch2-es';
+import { batch12c } from '../lessons-12-batch3-es';
 
 export default {
   portal: {
@@ -145,11 +147,13 @@ export default {
     ...batch2,
     ...batch3,
     ...batch4,
+    ...batch5,
     ...batch11a,
     ...batch11b,
     ...batch11c,
     ...batch12a,
     ...batch12b,
+    ...batch12c,
     '10-quad-funktionen': {
       story: {
         intro: 'Mia está sentada en su pequeña oficina en el puerto de Hamburgo mirando la pantalla. Lumi, su personaje del juego "Hafenlichter", debe saltar elegantemente sobre cajas y contenedores — pero la curva de salto se ve simplemente mal. "La física no está bien", murmura. Para programar una trayectoria de salto realista, Mia necesita funciones cuadráticas.',

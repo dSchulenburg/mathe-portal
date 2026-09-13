@@ -2,11 +2,13 @@ import { batch1 } from '../lessons-10-batch1-da';
 import { batch2 } from '../lessons-10-batch2-da';
 import { batch3 } from '../lessons-10-batch3-da';
 import { batch4 } from '../lessons-10-batch4-da';
+import { batch5 } from '../lessons-10-batch5-da';
 import { batch11a } from '../lessons-11-batch1-da';
 import { batch11b } from '../lessons-11-batch2-da';
 import { batch11c } from '../lessons-11-batch3-da';
 import { batch12a } from '../lessons-12-batch1-da';
 import { batch12b } from '../lessons-12-batch2-da';
+import { batch12c } from '../lessons-12-batch3-da';
 
 export default {
   portal: {
@@ -145,11 +147,13 @@ export default {
     ...batch2,
     ...batch3,
     ...batch4,
+    ...batch5,
     ...batch11a,
     ...batch11b,
     ...batch11c,
     ...batch12a,
     ...batch12b,
+    ...batch12c,
     '10-quad-funktionen': {
       story: {
         intro: 'Mia sidder paa sit lille kontor ved Hamburgs havn og stirrer paa skaermen. Lumi, hendes spilfigur i "Havnelys", skal hoppe elegant over kasser og containere — men springkurven ser bare forkert ud. "Fysikken stemmer ikke", mumler hun. For at programmere en realistisk springbane har Mia brug for kvadratiske funktioner.',

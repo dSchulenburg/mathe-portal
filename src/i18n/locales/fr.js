@@ -2,11 +2,13 @@ import { batch1 } from '../lessons-10-batch1-fr';
 import { batch2 } from '../lessons-10-batch2-fr';
 import { batch3 } from '../lessons-10-batch3-fr';
 import { batch4 } from '../lessons-10-batch4-fr';
+import { batch5 } from '../lessons-10-batch5-fr';
 import { batch11a } from '../lessons-11-batch1-fr';
 import { batch11b } from '../lessons-11-batch2-fr';
 import { batch11c } from '../lessons-11-batch3-fr';
 import { batch12a } from '../lessons-12-batch1-fr';
 import { batch12b } from '../lessons-12-batch2-fr';
+import { batch12c } from '../lessons-12-batch3-fr';
 
 export default {
   portal: {
@@ -145,11 +147,13 @@ export default {
     ...batch2,
     ...batch3,
     ...batch4,
+    ...batch5,
     ...batch11a,
     ...batch11b,
     ...batch11c,
     ...batch12a,
     ...batch12b,
+    ...batch12c,
     '10-quad-funktionen': {
       story: {
         intro: 'Mia est assise dans son petit bureau au port de Hambourg et fixe l\'ecran. Lumi, son personnage dans "Lumieres du Port", doit sauter elegamment par-dessus des caisses et des conteneurs — mais la courbe de saut a l\'air completement fausse. "La physique n\'est pas bonne", murmure-t-elle. Pour programmer une trajectoire de saut realiste, Mia a besoin de fonctions quadratiques.',

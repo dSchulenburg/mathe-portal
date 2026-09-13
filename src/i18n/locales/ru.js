@@ -2,11 +2,13 @@ import { batch1 } from '../lessons-10-batch1-ru';
 import { batch2 } from '../lessons-10-batch2-ru';
 import { batch3 } from '../lessons-10-batch3-ru';
 import { batch4 } from '../lessons-10-batch4-ru';
+import { batch5 } from '../lessons-10-batch5-ru';
 import { batch11a } from '../lessons-11-batch1-ru';
 import { batch11b } from '../lessons-11-batch2-ru';
 import { batch11c } from '../lessons-11-batch3-ru';
 import { batch12a } from '../lessons-12-batch1-ru';
 import { batch12b } from '../lessons-12-batch2-ru';
+import { batch12c } from '../lessons-12-batch3-ru';
 
 export default {
   portal: {
@@ -145,11 +147,13 @@ export default {
     ...batch2,
     ...batch3,
     ...batch4,
+    ...batch5,
     ...batch11a,
     ...batch11b,
     ...batch11c,
     ...batch12a,
     ...batch12b,
+    ...batch12c,
     '10-quad-funktionen': {
       story: {
         intro: 'Mia сидит в своём маленьком офисе у Гамбургской гавани и смотрит на экран. Lumi, её игровой персонаж в "Hafenlichter", должен элегантно прыгать через ящики и контейнеры — но кривая прыжка выглядит неправильно. "Физика не сходится", бормочет она. Чтобы запрограммировать реалистичную траекторию прыжка, Mia нужны квадратичные функции.',

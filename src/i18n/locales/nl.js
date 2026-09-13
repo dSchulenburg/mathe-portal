@@ -2,11 +2,13 @@ import { batch1 } from '../lessons-10-batch1-nl';
 import { batch2 } from '../lessons-10-batch2-nl';
 import { batch3 } from '../lessons-10-batch3-nl';
 import { batch4 } from '../lessons-10-batch4-nl';
+import { batch5 } from '../lessons-10-batch5-nl';
 import { batch11a } from '../lessons-11-batch1-nl';
 import { batch11b } from '../lessons-11-batch2-nl';
 import { batch11c } from '../lessons-11-batch3-nl';
 import { batch12a } from '../lessons-12-batch1-nl';
 import { batch12b } from '../lessons-12-batch2-nl';
+import { batch12c } from '../lessons-12-batch3-nl';
 
 export default {
   portal: {
@@ -145,11 +147,13 @@ export default {
     ...batch2,
     ...batch3,
     ...batch4,
+    ...batch5,
     ...batch11a,
     ...batch11b,
     ...batch11c,
     ...batch12a,
     ...batch12b,
+    ...batch12c,
     '10-quad-funktionen': {
       story: {
         intro: 'Mia zit in haar kleine kantoor aan de Hamburger haven en staart naar het scherm. Lumi, haar spelkarakter in "Hafenlichter", moet elegant over kisten en containers springen — maar de springcurve ziet er gewoon verkeerd uit. "De fysica klopt niet", mompelt ze. Om een realistische springbaan te programmeren heeft Mia kwadratische functies nodig.',

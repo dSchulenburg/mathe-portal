@@ -2,11 +2,13 @@ import { batch1 } from '../lessons-10-batch1-cs';
 import { batch2 } from '../lessons-10-batch2-cs';
 import { batch3 } from '../lessons-10-batch3-cs';
 import { batch4 } from '../lessons-10-batch4-cs';
+import { batch5 } from '../lessons-10-batch5-cs';
 import { batch11a } from '../lessons-11-batch1-cs';
 import { batch11b } from '../lessons-11-batch2-cs';
 import { batch11c } from '../lessons-11-batch3-cs';
 import { batch12a } from '../lessons-12-batch1-cs';
 import { batch12b } from '../lessons-12-batch2-cs';
+import { batch12c } from '../lessons-12-batch3-cs';
 
 export default {
   portal: {
@@ -145,11 +147,13 @@ export default {
     ...batch2,
     ...batch3,
     ...batch4,
+    ...batch5,
     ...batch11a,
     ...batch11b,
     ...batch11c,
     ...batch12a,
     ...batch12b,
+    ...batch12c,
     '10-quad-funktionen': {
       story: {
         intro: 'Mia sedi ve sve male kancelari v hamburskem pristavu a zira na obrazovku. Lumi, jeji herni postava v "Hafenlichter", ma elegantne preskakovat bedny a kontejnery — ale krivka skoku vypada proste spatne. "Fyzika nesedi", mumlá. Aby naprogramovala realistickou trajektorii skoku, potrebuje Mia kvadraticke funkce.',

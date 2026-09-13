@@ -2,11 +2,13 @@ import { batch1 } from '../lessons-10-batch1-en';
 import { batch2 } from '../lessons-10-batch2-en';
 import { batch3 } from '../lessons-10-batch3-en';
 import { batch4 } from '../lessons-10-batch4-en';
+import { batch5 } from '../lessons-10-batch5-en';
 import { batch11a } from '../lessons-11-batch1-en';
 import { batch11b } from '../lessons-11-batch2-en';
 import { batch11c } from '../lessons-11-batch3-en';
 import { batch12a } from '../lessons-12-batch1-en';
 import { batch12b } from '../lessons-12-batch2-en';
+import { batch12c } from '../lessons-12-batch3-en';
 
 export default {
   portal: {
@@ -145,11 +147,13 @@ export default {
     ...batch2,
     ...batch3,
     ...batch4,
+    ...batch5,
     ...batch11a,
     ...batch11b,
     ...batch11c,
     ...batch12a,
     ...batch12b,
+    ...batch12c,
     '10-quad-funktionen': {
       story: {
         intro: 'Mia sits in her small office at Hamburg Harbor, staring at the screen. Lumi, her game character in "Harbor Lights," is supposed to jump elegantly over crates and containers — but the jump curve looks all wrong. "The physics aren\'t right," she murmurs. To program a realistic jump trajectory, Mia needs quadratic functions.',
