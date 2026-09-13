@@ -167,7 +167,7 @@ export const portalBatch1 = {
     "10-aehnlichkeit": {
       "0": "Dlaczego $\\sin(30°)$ to zawsze $0{,}5$ — niezależnie od tego, jak duży jest trójkąt? Właśnie przez podobieństwo. Wszystkie trójkąty prostokątne z tym samym kątem są podobne, więc mają te same stosunki boków. Trygonometria to twierdzenie Talesa innymi słowami.",
       "1": "Jeśli podwoisz wszystkie wymiary ostrosłupa, jego objętość wzrośnie ośmiokrotnie ($2^3 = 8$). To sześcienne skalowanie jest powodem, dla którego małe zwierzęta są względnie silniejsze od dużych — geometria jest wszędzie.",
-      "2": "(3, 4, 5) przeskalowane przez $k=2$ daje (6, 8, 10), przez $k=7$ daje (21, 28, 35) — i wszystkie pozostają prostokątne. Podobieństwo dziedziczy kąt prosty, bo przy rozciąganiu zależność $a^2 + b^2 = c^2$ się nie zmienia."
+      "2": "(3, 4, 5) przeskalowane przez $k=2$ daje (6, 8, 10), przez $k=7$ daje (21, 28, 35) — i wszystkie pozostają prostokątne. Podobieństwo dziedziczy kąt prosty, bo przy rozciąganiu wszystkie boki mnoży się przez to samo $k$: $(ka)^2 + (kb)^2 = k^2(a^2 + b^2) = (kc)^2$."
     },
     "10-periodisch": {
       "0": "W trójkącie prostokątnym $\\sin(\\alpha)$ był stosunkiem dwóch boków. Na okręgu jednostkowym staje się wysokością, która zmienia się razem z kątem — a gdy kąt biegnie dalej, ta wysokość się powtarza. Właśnie tak powstaje fala.",
@@ -176,7 +176,7 @@ export const portalBatch1 = {
       "3": "$f(x) = a \\cdot \\sin(b(x-d)) + e$ — porównaj to z postacią kanoniczną. $a$ rozciąga, $d$ przesuwa w poziomie, $e$ w pionie. Nowe jest tylko $b$, które ściska okres. Nie uczysz się tu nowej gramatyki, tylko jednego nowego słówka."
     },
     "10-diff-einfuehrung": {
-      "0": "Zbudowałeś tu granicę, żeby otrzymać nachylenie. To samo narzędzie odpowiada jeszcze na jedno pytanie, i to bardziej podstawowe: czy funkcja w danym punkcie zmierza dokładnie do wartości, którą tam przyjmuje? Jeśli tak, nazywamy ją tam ciągłą. I obowiązuje ulica jednokierunkowa, którą warto zapamiętać: gdzie da się przyłożyć styczną, tam nie może być skoku — ale nie wszędzie, gdzie nie ma skoku, istnieje styczna. $f(x) = |x|$ jest dowodem.",
+      "0": "Zbudowałeś tu granicę, żeby otrzymać nachylenie. W temacie „Ciągłość” to samo narzędzie zadaje inne pytanie: czy funkcja w danym punkcie skacze, czy przechodzi przez niego bez odrywania ołówka? Gdzie da się przyłożyć styczną, tam nie ma skoku. Dlaczego w drugą stronę to nie działa, zobaczysz właśnie tam.",
       "1": "To, co tutaj mozolnie liczysz granicą z h, w klasie 11 zajmie jedną linijkę: $f(x) = x^2 \\Rightarrow f'(x) = 2x$. Ta reguła nie bierze się znikąd — to dokładnie ten rachunek z granicą, który teraz ćwiczysz, załatwiony raz na zawsze.",
       "2": "Używasz $f(x) = x^2$ jako funkcji do ćwiczeń — i to nie przypadkiem. Parabole to najprostsze krzywe, na których nachylenie się zmienia. Prosta miałaby wszędzie to samo nachylenie — nie byłoby czego odkrywać.",
       "3": "Po co liczyć nachylenie stycznej? W klasie 11 zobaczysz: dokładnie tam, gdzie $f'(x) = 0$ — gdzie styczna jest pozioma — leżą maksima i minima. Z granicy robi się narzędzie do optymalizacji.",
@@ -192,7 +192,7 @@ export const portalBatch1 = {
       "0": "Prosta to najprostszy przypadek i dlatego miara dla wszystkich innych: stała zmiana na krok. Kwadratowa znaczy, że zmiana sama się zmienia; wykładnicza znaczy, że zmienia się procentowo. Kto pewnie odczytuje $m$ i $b$, rozpozna inne rodzaje funkcji po tym, czym różnią się od prostej.",
       "1": "Parabole już widziałeś — tutaj widzisz, gdzie stoją na rodzinnym zdjęciu wszystkich funkcji. Liniowa, kwadratowa, wykładnicza, logarytmiczna — czworo krewnych o zupełnie różnych charakterach.",
       "2": "Wzrost wykładniczy wyprzedza każdą funkcję wielomianową — na dłuższą metę. Porównaj sam: dla x = 10 mamy 2ˣ = 1024, a x² tylko 100.",
-      "3": "W klasie 11 zobaczysz: każdy rodzaj funkcji ma własną regułę różniczkowania. Liniowa → stała, kwadratowa → liniowa, wykładnicza → pozostaje wykładnicza. Kształt zostaje zachowany."
+      "3": "W klasie 11 zobaczysz: każdy rodzaj funkcji ma własną regułę różniczkowania. Liniowa → stała, kwadratowa → liniowa, wykładnicza → pozostaje wykładnicza. Tylko funkcja wykładnicza zachowuje przy różniczkowaniu swój kształt."
     },
     "10-lineare-funktionen": {
       "0": "Funkcje liniowe to najprostsza rodzina funkcji. Wystarczy jeden dodatkowy wyraz x², a za chwilę będziesz rysować parabole — logika zostaje ta sama: zrozumieć wzór, odczytać wykres.",
@@ -277,7 +277,7 @@ export const portalBatch1 = {
       "0": "$\\vec{x} = \\vec{p} + t\\vec{u}$ to nie nowa idea, tylko wektor zaczepienia i wektor kierunkowy, który dowolnie rozciągasz. Wszystko, co wiesz o dodawaniu i wielokrotnościach wektorów, staje się tu geometrią.",
       "1": "Czy dwie proste się przecinają, to pytanie, czy układ równań ma rozwiązanie. Brak rozwiązania oznacza proste równoległe albo skośne, dokładnie jedno — punkt przecięcia, nieskończenie wiele — proste pokrywające się. Gauss odpowiada na pytania geometrii.",
       "2": "$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$. Każde obliczenie odległości w przestrzeni, każda długość, każda normalizacja sprowadza się do $a^2 + b^2 = c^2$. Twierdzenie z klasy 10 niesie cię aż do matury.",
-      "3": "To, czego uczysz się tu o płaszczyznach i wektorach normalnych, opisuje macierz jako przekształcenie. Ta sama geometria, w zapisie, który rozumie komputer."
+      "3": "Również macierz opisuje geometrię: przekształca wektory, obraca, rozciąga i odbija przestrzeń. To, czego uczysz się tu o wektorach, płaszczyznach i wektorach normalnych, wraca tam, w zapisie, który rozumie komputer."
     },
     "12-hypothesentests": {
       "0": "Dalej liczysz $P(X \\leq k)$ jak zwykle. Nowe jest tylko to, że wcześniej ustalasz granicę, a potem podejmujesz decyzję. Rachunek jest stary, pytanie jest nowe.",

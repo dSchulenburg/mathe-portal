@@ -40,7 +40,7 @@ export const batch12a = {
         step2: 'Differentiér med kædereglen — indre funktion $g(t) = -0{,}03t$, indre afledet $g\'(t) = -0{,}03$:',
         step3: 'Beregn starthastigheden — ved $t = 0$ forsvinder 150 partikler i sekundet:',
         step4: 'Bestem halveringstiden — løs $N(t_{1/2}) = \\frac{N_0}{2}$ med $\\ln$:',
-        kai_comment: 'Efter 23 sekunder er halvdelen af partiklerne væk — det vil sige, jeg kan frigive hukommelse allerede inden da til den næste eksplosion. I motoren sætter jeg sletningsgrænsen ved $5\\%$ uigennemsigtighed, hvilket er ca. $3 \\cdot t_{1/2} \\approx 70\\,\\text{s}$.',
+        kai_comment: 'Efter 23 sekunder er halvdelen af partiklerne væk — det vil sige, jeg kan frigive hukommelse allerede inden da til den næste eksplosion. I motoren sætter jeg sletningsgrænsen ved $5\\%$ uigennemsigtighed, hvilket er ca. $4{,}3 \\cdot t_{1/2} \\approx 100\\,\\text{s}$.',
       },
       ln_curve_analysis: {
         title: 'Funktionsundersøgelse med $e$-funktion',
@@ -193,7 +193,7 @@ export const batch12a = {
       },
       distance_formula: {
         title: 'Afstand punkt-plan',
-        desc: 'Den korteste afstand fra et punkt $P$ til en plan er længden af lodret fra $P$ ned på planen. Formlen $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ beregner denne afstand direkte ud fra koordinatformen. Den numeriske værdi i tælleren er afgørende — uden den kunne der komme en negativ "afstand" ud.',
+        desc: 'Den korteste afstand fra et punkt $P$ til en plan er længden af lodret fra $P$ ned på planen. Formlen $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ beregner denne afstand direkte ud fra koordinatformen. Den numeriske værdi i tælleren er afgørende — uden den kunne der komme en negativ "afstand" ud.',
       },
     },
     examples: {
@@ -238,8 +238,8 @@ export const batch12a = {
         kai_warning: 'Den fejl genkender man straks: flader, der er belyst "indefra", mens ydersiden er mørk. Sker, når normalvektoren peger den forkerte vej. Vær altid konsekvent med rækkefølgen — $\\overrightarrow{AB} \\times \\overrightarrow{AC}$, aldrig omvendt!',
       },
       distance_abs_forgotten: {
-        wrong: 'Glemme numerisk værdi i tælleren: $d = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
-        correct: 'Med numerisk værdi: $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
+        wrong: 'Glemme numerisk værdi i tælleren: $d(P,E) = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
+        correct: 'Med numerisk værdi: $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
         why: 'Afstande er altid positive! Uden den numeriske værdi i tælleren kan der komme en negativ værdi ud, hvis punktet ligger på den "anden side" af planen. Til en prøve koster det point, i en spilmotor fører det til objekter, der falder gennem vægge.',
       },
     },
@@ -259,8 +259,8 @@ export const batch12a = {
     },
     explanation: {
       intro: 'En hypotesetest er en struktureret fremgangsmåde til at træffe en beslutning på grundlag af data. Du starter med en formodning (nulhypotesen $H_0$), indsamler data og undersøger, om data taler imod $H_0$. Alternativhypotesen $H_1$ beskriver det, du egentlig formoder:',
-      significance: 'Signifikansniveauet $\\alpha$ er den maksimale sandsynlighed, hvormed du fejlagtigt forkaster $H_0$ (type 1-fejl). Typiske værdier er $\\alpha = 0{,}05$ (5\\%) eller $\\alpha = 0{,}01$ (1\\%). Jo mindre $\\alpha$, desto strengere er testen — men desto lettere overser man ægte effekter:',
-      kai_tip: 'Tænk på hypotesetest som et anti-cheat-system: $H_0$ betyder "spilleren snyder IKKE". $\\alpha = 0{,}05$ betyder: kun i 5\\% af tilfældene udelukker jeg en ærlig spiller. Jeg vil holde $\\alpha$ lille for at beskytte de uskyldige — men gør jeg den for lille, slipper de ægte snydere igennem. Det er alfa-beta-afvejningen!',
+      significance: 'Signifikansniveauet $\\alpha$ er den maksimale sandsynlighed, hvormed du fejlagtigt forkaster $H_0$ (type 1-fejl). Typiske værdier er $\\alpha = 0{,}05$ (5%) eller $\\alpha = 0{,}01$ (1%). Jo mindre $\\alpha$, desto strengere er testen — men desto lettere overser man ægte effekter:',
+      kai_tip: 'Tænk på hypotesetest som et anti-cheat-system: $H_0$ betyder "spilleren snyder IKKE". $\\alpha = 0{,}05$ betyder: kun i 5% af tilfældene udelukker jeg en ærlig spiller. Jeg vil holde $\\alpha$ lille for at beskytte de uskyldige — men gør jeg den for lille, slipper de ægte snydere igennem. Det er alfa-beta-afvejningen!',
       rejection_region: 'Forkastelsesområdet indeholder alle testresultater, der er så ekstreme, at vi forkaster $H_0$. Ved en venstresidet test ($H_1\\colon p < p_0$) ligger forkastelsesområdet til venstre — du beregner det største tal $k$, for hvilket $P(X \\leq k) \\leq \\alpha$ gælder:',
       error_types: 'Der kan ske to fejl: type 1-fejl ($\\alpha$) — du forkaster $H_0$, selv om den er sand ("falsk alarm"). Type 2-fejl ($\\beta$) — du beholder $H_0$, selv om $H_1$ er sand ("overset effekt"). Ved fast stikprøvestørrelse $n$ gælder: gør du $\\alpha$ mindre, bliver $\\beta$ større — og omvendt:',
     },
@@ -271,7 +271,7 @@ export const batch12a = {
       },
       significance_level: {
         title: 'Signifikansniveau $\\alpha$',
-        desc: 'Den øvre grænse for sandsynligheden for en type 1-fejl. Ved $\\alpha = 0{,}05$ accepterer du en risiko på 5\\% for fejlagtigt at forkaste $H_0$. Sædvanlige værdier: $0{,}10$ (eksplorativ), $0{,}05$ (standard), $0{,}01$ (streng). $\\alpha$ fastlægges FØR testen — aldrig justeret bagefter!',
+        desc: 'Den øvre grænse for sandsynligheden for en type 1-fejl. Ved $\\alpha = 0{,}05$ accepterer du en risiko på 5% for fejlagtigt at forkaste $H_0$. Sædvanlige værdier: $0{,}10$ (eksplorativ), $0{,}05$ (standard), $0{,}01$ (streng). $\\alpha$ fastlægges FØR testen — aldrig justeret bagefter!',
       },
       error_types: {
         title: 'Type 1- og type 2-fejl',
@@ -286,16 +286,16 @@ export const batch12a = {
         step2: 'Forsøgsopstilling: $n = 100$ kampe, $X$ = antal sejre til helt A, binomialfordelt:',
         step3: 'Beregn sandsynligheden for $X \\leq 40$ under $H_0$ (kumuleret binomialfordeling):',
         step4: 'Testbeslutning: $p$-værdi $0{,}028 < \\alpha = 0{,}05$ — $H_0$ forkastes. Helt A er signifikant for svag:',
-        kai_comment: 'Det var det statistiske bevis, jeg havde brug for til balanceteamet. 40 ud af 100 ser "næsten okay" ud, men testen viser: ved fair balancering ville man kun se et så ekstremt resultat i 2{,}8\\% af tilfældene. Det er nok til en nerf-opdatering!',
+        kai_comment: 'Det var det statistiske bevis, jeg havde brug for til balanceteamet. 40 ud af 100 ser "næsten okay" ud, men testen viser: ved fair balancering ville man kun se et så ekstremt resultat i 2,8% af tilfældene. Det er nok til en nerf-opdatering!',
       },
       crash_rate: {
         title: 'Undersøg nedbrudsraten efter opdateringen',
-        context: 'Efter et patch skal nedbrudsraten højst være 2\\%. I 200 testsessioner går spillet ned 8 gange. Er det for meget?',
-        step1: 'Opstil hypoteser — højresidet, fordi Kai vil undersøge, om raten ligger OVER 2\\%:',
+        context: 'Efter et patch skal nedbrudsraten højst være 2%. I 200 testsessioner går spillet ned 8 gange. Er det for meget?',
+        step1: 'Opstil hypoteser — højresidet, fordi Kai vil undersøge, om raten ligger OVER 2%:',
         step2: 'Data: $n = 200$ sessioner, $X = 8$ nedbrud (observeret: $\\hat{p} = 4\\%$):',
         step3: 'Beregn sandsynligheden for $X \\geq 8$ under $H_0$ — det er $p$-værdien:',
-        step4: 'Testbeslutning: $p$-værdi $0{,}042 < \\alpha = 0{,}05$ — nedbrudsraten er signifikant forhøjet:',
-        kai_comment: 'Uden testen havde jeg måske sagt "8 nedbrud på 200 sessioner, det går nok". Men hypotesetesten viser: sandsynligheden for at se så mange nedbrud ved en ægte rate på 2\\% er under 5\\%. Patchet skal gennemarbejdes igen.',
+        step4: 'Testbeslutning: $p$-værdi $0{,}049 < \\alpha = 0{,}05$ — nedbrudsraten er signifikant forhøjet:',
+        kai_comment: 'Uden testen havde jeg måske sagt "8 nedbrud på 200 sessioner, det går nok". Men hypotesetesten viser: sandsynligheden for at se så mange nedbrud ved en ægte rate på 2% er under 5%. Patchet skal gennemarbejdes igen.',
       },
     },
     realworld: {

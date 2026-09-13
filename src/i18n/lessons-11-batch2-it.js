@@ -39,8 +39,8 @@ export const batch11b = {
         step1: 'Il modello: 1000 ascoltatori attivi al tempo $t = 0$, decadimento esponenziale:',
         step2: 'Tempo di dimezzamento significa: quando restano 500 ascoltatori?',
         step3: 'Isolare e logaritmizzare — $\\ln$ a entrambi i lati:',
-        step4: 'Risolvere per $t$ — dopo circa 6{,}93 giorni il numero di ascoltatori si è dimezzato:',
-        amir_comment: 'Il tempo di dimezzamento è costante! Che siano 1000, 500 o 250 ascoltatori — ci vogliono sempre circa 6{,}93 giorni fino al prossimo dimezzamento. Questa è la magia del decadimento esponenziale.',
+        step4: 'Risolvere per $t$ — dopo circa 6,93 giorni il numero di ascoltatori si è dimezzato:',
+        amir_comment: 'Il tempo di dimezzamento è costante! Che siano 1000, 500 o 250 ascoltatori — ci vogliono sempre circa 6,93 giorni fino al prossimo dimezzamento. Questa è la magia del decadimento esponenziale.',
       },
     },
     realworld: {
@@ -94,8 +94,8 @@ export const batch11b = {
         step1: 'Determinare i parametri: $n = 10$ lanci, $p = 0{,}5$ (moneta equa), cercato: $k = 7$ volte testa.',
         step2: 'Calcolare il coefficiente binomiale — in quanti modi possono essere distribuiti 7 testa su 10 lanci?',
         step3: 'Sostituire nella formula binomiale: disposizioni $\\times$ successi $\\times$ insuccessi:',
-        step4: 'Risultato — la probabilità è circa l\'11{,}7%, quindi piuttosto improbabile:',
-        amir_comment: 'Solo l\'11{,}7% — questo mostra: anche con una moneta equa, 7 su 10 volte testa non è particolarmente sorprendente, ma nemmeno la norma. Il mio generatore di numeri casuali sembra a posto!',
+        step4: 'Risultato — la probabilità è circa l\'11,7%, quindi piuttosto improbabile:',
+        amir_comment: 'Solo l\'11,7% — questo mostra: anche con una moneta equa, 7 su 10 volte testa non è particolarmente sorprendente, ma nemmeno la norma. Il mio generatore di numeri casuali sembra a posto!',
       },
       quality_control: {
         title: 'Controllo qualità nella produzione',
@@ -103,7 +103,7 @@ export const batch11b = {
         step1: 'Parametri: $n = 20$ pezzi, tasso di difetti $p = 0{,}02$, cercato: $k = 0$ pezzi difettosi.',
         step2: 'Sostituire: $\\binom{20}{0} = 1$, e $0{,}02^0 = 1$ — restano solo gli insuccessi:',
         step3: 'Semplificare — resta $0{,}98^{20}$:',
-        step4: 'Risultato: con circa il 66{,}8% di probabilità nessun pezzo è difettoso — non così sicuro!',
+        step4: 'Risultato: con circa il 66,8% di probabilità nessun pezzo è difettoso — non così sicuro!',
         amir_comment: 'Solo due terzi di probabilità di zero difetti con un tasso del 2%! Questo mostra: anche piccole probabilità si sommano con molti tentativi. Con $n = 100$ sarebbe $P(X = 0) \\approx 13{,}3\\%$ — lì si trova quasi sicuramente un difetto.',
       },
     },
@@ -155,11 +155,11 @@ export const batch11b = {
     examples: {
       medical_test: {
         title: 'Test medico — Base Rate Fallacy',
-        context: 'Un test per una malattia è accurato al 99%. La malattia colpisce l\'1% della popolazione. Se il test è positivo — quanto è probabile essere davvero malati?',
+        context: 'Un test per una malattia riconosce il 99% dei malati, ma risulta positivo anche nel 5% dei sani. La malattia colpisce l\'1% della popolazione. Se il test è positivo — quanto è probabile essere davvero malati?',
         step1: 'Dati: $P(K) = 0{,}01$ (malattia), $P(+ \\mid K) = 0{,}99$ (sensibilità), $P(+ \\mid \\bar{K}) = 0{,}05$ (tasso di falsi positivi).',
         step2: 'Calcolare la probabilità totale di un risultato positivo — entrambi i percorsi (malato + sano):',
         step3: 'Applicare il teorema di Bayes — cercato $P(K \\mid +)$:',
-        step4: 'Risultato: solo il 16{,}7% di probabilità di essere davvero malato — nonostante il 99% di accuratezza del test!',
+        step4: 'Risultato: solo il 16,7% di probabilità di essere davvero malato — anche se il test riconosce il 99% dei malati!',
         amir_comment: 'Questa è la Base Rate Fallacy! Il test è super accurato, ma poiché la malattia è così rara ($P(K) = 1\\%$), la maggior parte dei test positivi sono falsi positivi. Nel mondo ML questo significa: Precision e Recall non sono la stessa cosa!',
       },
       spam_filter: {
@@ -168,7 +168,7 @@ export const batch11b = {
         step1: 'Dati: il 30% di tutte le email sono spam, l\'80% delle email spam contengono "Vincita", ma anche il 10% delle email normali:',
         step2: 'Probabilità totale che un\'email contenga "Vincita":',
         step3: 'Bayes: quanto è probabile lo spam se appare "Vincita"?',
-        step4: 'Risultato: 77{,}4% — un\'email con "Vincita" è con alta probabilità spam:',
+        step4: 'Risultato: 77,4% — un\'email con "Vincita" è con alta probabilità spam:',
         amir_comment: 'Esattamente così funziona un Naive Bayes Classifier! Più parole aggiungi, più preciso diventa il filtro. DataPulse usa lo stesso principio: invece di parole analizziamo pattern di ascolto, invece di spam/non spam classifichiamo preferenze di genere.',
       },
     },
@@ -187,7 +187,7 @@ export const batch11b = {
       ignore_base_rate: {
         wrong: 'Ignorare il tasso di base (Base Rate Fallacy)',
         correct: 'Considerare sempre $P(A)$ — la probabilità a priori',
-        why: 'Un test accurato al 99% sembra impressionante, ma se la malattia colpisce solo l\'1%, $P(K \\mid +) \\approx 16{,}7\\%$. Il basso tasso di base $P(K) = 0{,}01$ domina il risultato. Senza il Prior ottieni una stima completamente distorta.',
+        why: 'Un test che riconosce il 99% dei malati sembra impressionante, ma se la malattia colpisce solo l\'1%, $P(K \\mid +) \\approx 16{,}7\\%$. Il basso tasso di base $P(K) = 0{,}01$ domina il risultato. Senza il Prior ottieni una stima completamente distorta.',
       },
     },
   },

@@ -83,7 +83,7 @@ export const batch12b = {
 
   '12-matrizen': {
     story: {
-      intro: 'Kai ist beim Herzstuck von "Hafenlichter 3D" angekommen: der 3D-Engine. Jedes Objekt im Spiel — jedes Schiff, jede Welle, jede Laterne am Hafen — muss gedreht, skaliert und verschoben werden können. "In 2D waren Transformationen einfach Formeln", erinnert er sich an Mias Anfänge. "Aber in 3D brauchst du ein System, das beliebig viele Transformationen verkettet — und das sind Matrizen." Kai öffnet den Shader-Code und sieht Matrizen überall: Model-Matrix, View-Matrix, Projection-Matrix.',
+      intro: 'Kai ist beim Herzstück von "Hafenlichter 3D" angekommen: der 3D-Engine. Jedes Objekt im Spiel — jedes Schiff, jede Welle, jede Laterne am Hafen — muss gedreht, skaliert und verschoben werden können. "In 2D waren Transformationen einfach Formeln", erinnert er sich an Mias Anfänge. "Aber in 3D brauchst du ein System, das beliebig viele Transformationen verkettet — und das sind Matrizen." Kai öffnet den Shader-Code und sieht Matrizen überall: Model-Matrix, View-Matrix, Projection-Matrix.',
       challenge: 'Kai muss die 3D-Transformationen für seine Game-Engine verstehen und implementieren — Rotation, Skalierung und Übergangsprozesse, alles gesteuert durch Matrizenmultiplikation.',
       outro: 'Matrizen sind für Kai zum täglichen Werkzeug geworden: Jede 3D-Transformation ist eine Matrix, jede Animation eine Folge von Matrizenmultiplikationen, jedes Übergangsverhalten eine stochastische Matrix. "Das Geniale ist: Egal wie komplex die Transformation — am Ende ist es immer $\\vec{x}\' = M \\cdot \\vec{x}$", sagt er. Die MVP-Matrix ($M_{\\text{proj}} \\cdot M_{\\text{view}} \\cdot M_{\\text{model}}$) verwandelt jetzt tausende Hafenlichter-Vertices pro Frame in Pixel auf dem Bildschirm.',
     },
@@ -94,16 +94,16 @@ export const batch12b = {
       inverse_matrix: 'Die inverse Matrix bestimmen und ihre Bedeutung als "Rücktransformation" verstehen',
     },
     explanation: {
-      intro: 'Matrizen sind rechteckige Zahlentabellen — aber ihre wahre Kraft liegt darin, dass sie Abbildungen darstellen. Eine $2 \\times 2$-Matrix transformiert 2D-Vektoren, eine $3 \\times 3$-Matrix transformiert 3D-Vektoren. Multiplikation heisst: Zeile mal Spalte, dann aufsummieren. Für $C = A \\cdot B$ gilt:',
+      intro: 'Matrizen sind rechteckige Zahlentabellen — aber ihre wahre Kraft liegt darin, dass sie Abbildungen darstellen. Eine $2 \\times 2$-Matrix transformiert 2D-Vektoren, eine $3 \\times 3$-Matrix transformiert 3D-Vektoren. Multiplikation heißt: Zeile mal Spalte, dann aufsummieren. Für $C = A \\cdot B$ gilt:',
       transformation: 'In der 3D-Grafik ist jede geometrische Transformation eine Matrix: Rotation, Skalierung, Spiegelung. Die Rotationsmatrix um die $z$-Achse dreht einen Punkt $(x, y, z)$ um den Winkel $\\theta$ — und die $z$-Koordinate bleibt unverändert:',
-      kai_tip: 'In meiner Engine verkettte ich Transformationen durch Matrizenmultiplikation: Erst skalieren, dann rotieren, dann verschieben. Die Reihenfolge ist dabei entscheidend — Matrizen sind nicht kommutativ! Erst drehen, dann verschieben ergibt etwas völlig anderes als erst verschieben, dann drehen. Deshalb lese ich Matrizenketten immer von rechts nach links.',
+      kai_tip: 'In meiner Engine verkette ich Transformationen durch Matrizenmultiplikation: Erst skalieren, dann rotieren, dann verschieben. Die Reihenfolge ist dabei entscheidend — Matrizen sind nicht kommutativ! Erst drehen, dann verschieben ergibt etwas völlig anderes als erst verschieben, dann drehen. Deshalb lese ich Matrizenketten immer von rechts nach links.',
       stochastic: 'Stochastische Matrizen beschreiben Übergangsprozesse: Wie wahrscheinlich ist es, von einem Zustand in einen anderen zu wechseln? Jede Spalte summiert sich zu 1 (bei Spaltenvektoren). Wenn du den Zustandsvektor $\\vec{v}_n$ mit der Übergangsmatrix $T$ multiplizierst, bekommst du den nächsten Zustand $\\vec{v}_{n+1}$:',
       inverse: 'Die inverse Matrix $A^{-1}$ ist die "Rückgängig-Taste": $A \\cdot A^{-1} = I$ (Einheitsmatrix). Wenn $A$ eine Rotation um $30°$ ist, dann ist $A^{-1}$ die Rotation um $-30°$. Nicht jede Matrix hat eine Inverse — nur wenn $\\det(A) \\neq 0$:',
     },
     concepts: {
       matrix_multiplication: {
         title: 'Matrizenmultiplikation',
-        desc: 'Zeile mal Spalte: $(A \\cdot B)_{ij} = \\sum_k a_{ik} \\cdot b_{kj}$. Die Spaltenanzahl von $A$ muss gleich der Zeilenanzahl von $B$ sein. Wichtig: $A \\cdot B \\neq B \\cdot A$ im Allgemeinen! Reihenfolge matters.',
+        desc: 'Zeile mal Spalte: $(A \\cdot B)_{ij} = \\sum_k a_{ik} \\cdot b_{kj}$. Die Spaltenanzahl von $A$ muss gleich der Zeilenanzahl von $B$ sein. Wichtig: $A \\cdot B \\neq B \\cdot A$ im Allgemeinen! Die Reihenfolge zählt.',
       },
       transformation_matrix: {
         title: 'Transformationsmatrix',
@@ -183,7 +183,7 @@ export const batch12b = {
       mia_wisdom: 'Erinnert euch an die Basics! Funktionsanalyse ist immer das gleiche Schema: Definitionsbereich, Nullstellen, Extremstellen, Wendepunkte, Verhalten für $x \\to \\pm\\infty$. Wenn ihr das Muster kennt, ist jede Funktion nur eine Variation davon. Das habe ich bei meinen Spielfiguren gelernt — jede Bewegung ist im Kern eine Funktion.',
       checking: 'Nach jeder Teilaufgabe: Plausibilitätscheck! Stimmen die Einheiten? Haben die Vorzeichen Sinn? Liegt das Ergebnis in einem realistischen Bereich? Eine Wahrscheinlichkeit größer als 1 oder ein negatives Flächenmass sind sofortige Warnsignale — dann lieber nochmal nachrechnen als weitermachen.',
       amir_data: 'Ich checke meine Ergebnisse immer gegen Grenzfälle: Was passiert für $x = 0$? Für sehr große $x$? Konvergiert meine Lösung oder divergiert sie? Diese Denkweise aus dem Debugging gilt genauso für die Klausur. Und bei Stochastik: Immer prüfen, ob $\\sum P = 1$ gilt!',
-      confidence: 'Das Wichtigste zum Schluss: Du weisst mehr, als du denkst. Drei Jahre Übung stecken in deinen Händen. Wenn du in der Prüfung kurz nicht weiterweisst — atme durch, lies die Aufgabe nochmal, und fang mit dem an, was du sicher kannst. Jeder Punkt zählt. Und denk daran: Mathe ist kein Talent, sondern eine Sprache, die du gelernt hast. Sprich sie.',
+      confidence: 'Das Wichtigste zum Schluss: Du weißt mehr, als du denkst. Drei Jahre Übung stecken in deinen Händen. Wenn du in der Prüfung kurz nicht weiterweißt — atme durch, lies die Aufgabe nochmal, und fang mit dem an, was du sicher kannst. Jeder Punkt zählt. Und denk daran: Mathe ist kein Talent, sondern eine Sprache, die du gelernt hast. Sprich sie.',
     },
     concepts: {
       read_then_plan: {

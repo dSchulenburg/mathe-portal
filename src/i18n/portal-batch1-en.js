@@ -167,7 +167,7 @@ export const portalBatch1 = {
     "10-aehnlichkeit": {
       "0": "Why is $\\sin(30°)$ always $0{,}5$ — no matter how big the triangle is? Precisely because of similarity. All right triangles with the same angle are similar, so they have the same side ratios. Trigonometry is the intercept theorem with different vocabulary.",
       "1": "If you double all measurements of a pyramid, its volume becomes eight times as big ($2^3 = 8$). This cubic scaling is why small animals are relatively stronger than large ones — geometry is everywhere.",
-      "2": "(3, 4, 5) scales with $k=2$ to (6, 8, 10), with $k=7$ to (21, 28, 35) — and all of them keep their right angle. Similarity passes the right angle on, because the relationship $a^2 + b^2 = c^2$ doesn't change when you stretch."
+      "2": "(3, 4, 5) scales with $k=2$ to (6, 8, 10), with $k=7$ to (21, 28, 35) — and all of them keep their right angle. Similarity passes the right angle on, because stretching multiplies every side by the same $k$: $(ka)^2 + (kb)^2 = k^2(a^2 + b^2) = (kc)^2$."
     },
     "10-periodisch": {
       "0": "In the right triangle, $\\sin(\\alpha)$ was a ratio of two sides. On the unit circle it becomes a height that changes with the angle — and when the angle keeps going, it repeats. That's exactly where the wave is born.",
@@ -176,7 +176,7 @@ export const portalBatch1 = {
       "3": "$f(x) = a \\cdot \\sin(b(x-d)) + e$ — compare this with vertex form. $a$ stretches, $d$ shifts horizontally, $e$ vertically. The only new one is $b$, and it squeezes the period. You're not learning new grammar here, just one new word."
     },
     "10-diff-einfuehrung": {
-      "0": "Here you built the limit to get a slope. The same tool answers another, more basic question: does the function approach exactly the value it takes at a point? If yes, it's called continuous there. And there's a one-way street worth remembering: where you can draw a tangent, there can't be a jump — but not every place without a jump has a tangent. $f(x) = |x|$ is the proof.",
+      "0": "Here you built the limit to get a slope. In the topic Continuity, the same tool asks a different question: does the function jump at a point, or does it run through without lifting the pen? Where you can draw a tangent, there is no jump. Why the converse doesn't hold, you'll see there.",
       "1": "What you work out the hard way here with the h-limit takes one line in grade 11: $f(x) = x^2 \\Rightarrow f'(x) = 2x$. The rule doesn't come out of nowhere — it's exactly the limit calculation you're practicing now, done once and for all.",
       "2": "You use $f(x) = x^2$ as a practice function — and not by accident. Parabolas are the simplest curves where the slope changes. A straight line would have the same slope everywhere — nothing to discover there.",
       "3": "What's the point of calculating the tangent slope? In grade 11 you'll see: exactly where $f'(x) = 0$ — where the tangent is horizontal — you find the maxima and minima. The limit becomes a tool for optimization.",
@@ -192,7 +192,7 @@ export const portalBatch1 = {
       "0": "The straight line is the simplest case and therefore the yardstick for all the others: constant change per step. Quadratic means the change itself changes; exponential means it changes by a percentage. If you can read $m$ and $b$ confidently, you'll recognize the other types by how they differ from the line.",
       "1": "You've already seen parabolas — here you see where they stand in the family portrait of all functions. Linear, quadratic, exponential, logarithmic — four relatives with very different personalities.",
       "2": "Exponential growth overtakes every polynomial function — in the long run. Compare for yourself: at x = 10, 2ˣ = 1024, but x² is only 100.",
-      "3": "In grade 11 you'll see: every type of function has its own derivative rule. Linear → constant, quadratic → linear, exponential → stays exponential. The shape is preserved."
+      "3": "In grade 11 you'll see: every type of function has its own derivative rule. Linear → constant, quadratic → linear, exponential → stays exponential. Only the exponential function keeps its shape when you take the derivative."
     },
     "10-lineare-funktionen": {
       "0": "Linear functions are the simplest family of functions. With just one extra x² term you'll soon be drawing parabolas — the logic stays the same: understand the term, interpret the graph.",
@@ -277,7 +277,7 @@ export const portalBatch1 = {
       "0": "$\\vec{x} = \\vec{p} + t\\vec{u}$ isn't a new idea, just a position vector plus a direction vector that you stretch as much as you like. Everything you know about adding and multiplying vectors turns into geometry here.",
       "1": "Whether two lines intersect is the question of whether a linear system has a solution. No solution means parallel or skew, exactly one means an intersection point, infinitely many mean identical. Geometry questions, answered by Gauss.",
       "2": "$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$. Every distance calculation in space, every length, every normalization goes back to $a^2 + b^2 = c^2$. The theorem from grade 10 carries you all the way to the final exam.",
-      "3": "What you learn here about planes and normal vectors, a matrix describes as a mapping. The same geometry, written in a way a computer understands."
+      "3": "A matrix describes geometry too: it maps vectors, rotating, stretching and reflecting space. What you learn here about vectors, planes and normal vectors comes back there, written in a way a computer understands."
     },
     "12-hypothesentests": {
       "0": "You keep calculating $P(X \\leq k)$ as usual. The only new thing is that you set a limit beforehand and make a decision afterwards. The calculation is old, the question is new.",

@@ -1,9 +1,9 @@
 export const batch3 = {
   '10-periodisch': {
     story: {
-      intro: 'Mia scrollt durch die Animationsliste von Hafenlichter und runzelt die Stirn. Lumis Atem-Animation sieht aus wie ein Roboter — abgehackt und unnatürlich. Auch die Wellen im Hafen wirken steif, und der Tag-Nacht-Zyklus springt statt zu fliessen. "Alles, was sich wiederholt, braucht eine Schwingung", sagt Tim. "Sinus und Cosinus — die sind dafür gemacht." Mia öffnet ihren Taschenrechner und taucht ein in die Welt der periodischen Funktionen.',
+      intro: 'Mia scrollt durch die Animationsliste von Hafenlichter und runzelt die Stirn. Lumis Atem-Animation sieht aus wie ein Roboter — abgehackt und unnatürlich. Auch die Wellen im Hafen wirken steif, und der Tag-Nacht-Zyklus springt statt zu fließen. "Alles, was sich wiederholt, braucht eine Schwingung", sagt Tim. "Sinus und Cosinus — die sind dafür gemacht." Mia öffnet ihren Taschenrechner und taucht ein in die Welt der periodischen Funktionen.',
       challenge: 'Atem-Animation, Wellengang und Tag-Nacht-Zyklus sollen natürlich schwingen statt ruckeln.',
-      outro: 'Lumis Atem hebt und senkt sich jetzt sanft, die Hafenwellen rollen gleichmäßig ans Ufer, und das Licht wechselt fliessend von Morgenrot zu Mitternachtsblau. "Sinusfunktionen sind überall in der Natur", sagt Jule. Mia nickt: "Und jetzt sind sie auch in Hafenlichter."',
+      outro: 'Lumis Atem hebt und senkt sich jetzt sanft, die Hafenwellen rollen gleichmäßig ans Ufer, und das Licht wechselt fließend von Morgenrot zu Mitternachtsblau. "Sinusfunktionen sind überall in der Natur", sagt Jule. Mia nickt: "Und jetzt sind sie auch in Hafenlichter."',
     },
     objectives: {
       periodic_functions: 'Periodische Funktionen erkennen und von nicht-periodischen unterscheiden',
@@ -14,8 +14,8 @@ export const batch3 = {
     explanation: {
       intro: 'Manche Vorgänge wiederholen sich immer wieder: dein Herzschlag, die Gezeiten, die Jahreszeiten. In der Mathematik beschreiben wir solche Schwingungen mit periodischen Funktionen. Die wichtigste davon ist die Sinusfunktion:',
       parameters: 'Die allgemeine Sinusfunktion hat vier Parameter, die du wie Regler an einem Mischpult verstehen kannst: $A$ steuert die Höhe der Schwingung (Amplitude), $b$ beeinflusst, wie schnell sich die Schwingung wiederholt (Periode), $c$ verschiebt die Kurve nach links oder rechts, und $d$ verschiebt sie nach oben oder unten.',
-      mia_tip: 'Für Lumis Atem-Animation nutze ich $A = 3$ Pixel und $T = 4$ Sekunden. Das heisst: Alle 4 Sekunden atmet Lumi einmal ein und aus, und die Brust bewegt sich 3 Pixel hoch und runter. Ganz natürlich!',
-      graph_reading: 'Um eine periodische Funktion vom Graphen abzulesen, suchst du nach dem Muster, das sich wiederholt. Der Abstand zwischen zwei identischen Stellen heisst Periode $T$. Mathematisch bedeutet Periodizität:',
+      mia_tip: 'Für Lumis Atem-Animation nutze ich $A = 3$ Pixel und $T = 4$ Sekunden. Das heißt: Alle 4 Sekunden atmet Lumi einmal ein und aus, und die Brust bewegt sich 3 Pixel hoch und runter. Ganz natürlich!',
+      graph_reading: 'Um eine periodische Funktion vom Graphen abzulesen, suchst du nach dem Muster, das sich wiederholt. Der Abstand zwischen zwei identischen Stellen heißt Periode $T$. Mathematisch bedeutet Periodizität:',
       applications: 'Periodische Funktionen sind das mathematische Werkzeug für alles, was schwingt: Schallwellen, Wechselstrom, Pendel, Lichtwellen und sogar die Umlaufbahnen von Planeten. Immer wenn sich ein Vorgang regelmäßig wiederholt, steckt eine Sinusfunktion (oder ihre Verwandten) dahinter.',
     },
     concepts: {
@@ -46,7 +46,7 @@ export const batch3 = {
         context: 'Ein Riesenrad mit 60 m Durchmesser dreht sich alle 10 Minuten einmal. Die unterste Gondel ist 5 m über dem Boden.',
         step1: 'Amplitude bestimmen: Der Radius ist die halbe Höhe, also $A = 30\\,\\text{m}$. Die Mittellinie liegt bei $d = 5 + 30 = 35\\,\\text{m}$ (Boden + Radius).',
         step2: 'Periode ist eine volle Umdrehung: $T = 10\\,\\text{min}$. Daraus folgt $b = \\frac{2\\pi}{10} = \\frac{\\pi}{5}$.',
-        step3: 'Startpunkt beachten: Unten starten heisst, wir verschieben den Sinus um $-\\frac{\\pi}{2}$ (der Sinus startet normalerweise in der Mitte, nicht unten).',
+        step3: 'Startpunkt beachten: Unten starten heißt, wir verschieben den Sinus um $-\\frac{\\pi}{2}$ (der Sinus startet normalerweise in der Mitte, nicht unten).',
         step4: 'Probe: Nach 2,5 Minuten (Viertelumdrehung) sollte die Gondel auf Mittelhöhe sein. Einsetzen: $\\sin(0) = 0$, also $h = 35\\,\\text{m}$. Stimmt!',
         mia_comment: 'Genau so funktioniert auch der Tag-Nacht-Zyklus in Hafenlichter: Sinus mit $T = 24$ (ein Spieltag) und Verschiebung, damit es um Mitternacht am dunkelsten ist.',
       },
@@ -177,7 +177,7 @@ export const batch3 = {
       intro: 'In der Mathematik gibt es verschiedene "Familien" von Funktionen — jede mit eigenem Charakter. Manche wachsen gleichmäßig, andere immer schneller, wieder andere immer langsamer. Die vier wichtigsten Klassen für die 10. Klasse sind:',
       mia_tip: 'Im Game-Design nutze ich jede Funktionsklasse für etwas anderes: Lineares Wachstum für vorhersehbare Dinge (Laufgeschwindigkeit), quadratisches für Dinge, die sich "aufschaukeln" (Fallschaden), exponentielles für Herausforderungen (XP-Bedarf) und logarithmisches für Lerneffekte (Skill-Fortschritt).',
       growth_comparison: 'Entscheidend ist: Wie schnell wächst jede Funktionsklasse für große $x$-Werte? Die Reihenfolge ist immer dieselbe — egal welche konkreten Zahlen du einsetzt:',
-      choosing_functions: 'Die richtige Funktion für ein Problem zu wählen, ist eine Schlüsselkompetenz. Frag dich: Ist die Änderung konstant (linear)? Beschleunigt sie sich gleichmäßig (quadratisch)? Verdoppelt sich der Wert in gleichen Abständden (exponentiell)? Wird der Zuwachs immer kleiner (logarithmisch)?',
+      choosing_functions: 'Die richtige Funktion für ein Problem zu wählen, ist eine Schlüsselkompetenz. Frag dich: Ist die Änderung konstant (linear)? Beschleunigt sie sich gleichmäßig (quadratisch)? Verdoppelt sich der Wert in gleichen Abständen (exponentiell)? Wird der Zuwachs immer kleiner (logarithmisch)?',
     },
     concepts: {
       linear: {
@@ -240,7 +240,7 @@ export const batch3 = {
       all_curves_linear: {
         wrong: 'Jedes Wachstum ist linear',
         correct: 'Erst den Wachstumstyp prüfen',
-        why: 'Nur weil sich etwas "verdoppelt", heisst das nicht, dass es linear ist! "Alle 3 Tage doppelt so viele Follower" ist exponentiell, nicht linear. Linear wäre: "Jeden Tag 100 neue Follower". Der Unterschied: konstante Zunahme (linear) vs. konstanter Faktor (exponentiell).',
+        why: 'Nur weil sich etwas "verdoppelt", heißt das nicht, dass es linear ist! "Alle 3 Tage doppelt so viele Follower" ist exponentiell, nicht linear. Linear wäre: "Jeden Tag 100 neue Follower". Der Unterschied: konstante Zunahme (linear) vs. konstanter Faktor (exponentiell).',
       },
     },
   },

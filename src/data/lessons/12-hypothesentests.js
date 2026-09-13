@@ -63,8 +63,8 @@ export const lesson = {
       steps: [
         { key: 'examples.crash_rate.step1', formula: 'H_0\\colon p = 0{,}02 \\quad H_1\\colon p > 0{,}02 \\quad \\alpha = 0{,}05' },
         { key: 'examples.crash_rate.step2', formula: 'n = 200 \\text{ Sessions},\\; X = 8 \\text{ Abstürze}' },
-        { key: 'examples.crash_rate.step3', formula: 'P(X \\geq 8) = 1 - P(X \\leq 7) \\approx 0{,}042' },
-        { key: 'examples.crash_rate.step4', formula: '0{,}042 < 0{,}05 \\;\\Rightarrow\\; H_0 \\text{ ablehnen: Crash-Rate ist signifikant erhöht}' },
+        { key: 'examples.crash_rate.step3', formula: 'P(X \\geq 8) = 1 - P(X \\leq 7) \\approx 0{,}049' },
+        { key: 'examples.crash_rate.step4', formula: '0{,}049 < 0{,}05 \\;\\Rightarrow\\; H_0 \\text{ ablehnen: Crash-Rate ist signifikant erhöht}' },
       ],
       characterComment: 'examples.crash_rate.kai_comment',
     },

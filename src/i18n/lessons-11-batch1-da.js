@@ -16,7 +16,7 @@ export const batch11a = {
       constant_factor: 'Konstante faktorer beholdes ved differentiation, og ved summer må du differentiere led for led. Det gør sammensatte udtryk overskuelige:',
       amir_tip: 'I min ML-kode gemmer sig overalt summer og faktorer — tabsfunktionen er en enorm sum over alle datapunkter. At jeg må differentiere hvert led for sig gør Backpropagation overhovedet muligt!',
       product_rule: 'Når to funktioner multipliceres, må du IKKE bare differentiere begge enkeltvis. I stedet gælder produktreglen — "første gange den afledede af anden plus anden gange den afledede af første":',
-      quotient_rule: 'Til brøker af funktioner findes kvotientreglen. Huskeregel: "NAT minus TAN gennem N i anden" (N = nævner, T = tæller, A = afledet):',
+      quotient_rule: 'Til brøker af funktioner findes kvotientreglen. Huskeregel: "NAT minus TAN gennem N i anden" (N = nævner, T = tæller, A = afledet). I modsætning til produktreglen kommer det her an på rækkefølgen — minusset gør formlen usymmetrisk:',
       chain_rule: 'Ved sammensatte funktioner — altså en funktion inde i en funktion — har du brug for kædereglen. Du differentierer "udefra og ind" og multiplicerer med den indre afledede:',
     },
     concepts: {

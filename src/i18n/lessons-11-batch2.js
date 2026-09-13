@@ -48,8 +48,8 @@ export const batch11b = {
         step1: 'Das Modell: 1000 aktive Hörer zum Zeitpunkt $t = 0$, exponentieller Rückgang:',
         step2: 'Halbwertszeit bedeutet: Wann sind noch 500 Hörer übrig?',
         step3: 'Isolieren und logarithmieren — $\\ln$ auf beide Seiten:',
-        step4: 'Nach $t$ auflösen — nach ca. 6{,}93 Tagen hat sich die Hörerzahl halbiert:',
-        amir_comment: 'Die Halbwertszeit ist konstant! Egal ob 1000, 500 oder 250 Hörer — es dauert immer ca. 6{,}93 Tage bis zur nächsten Halbierung. Das ist die Magie des exponentiellen Zerfalls.',
+        step4: 'Nach $t$ auflösen — nach ca. 6,93 Tagen hat sich die Hörerzahl halbiert:',
+        amir_comment: 'Die Halbwertszeit ist konstant! Egal ob 1000, 500 oder 250 Hörer — es dauert immer ca. 6,93 Tage bis zur nächsten Halbierung. Das ist die Magie des exponentiellen Zerfalls.',
       },
     },
     realworld: {
@@ -91,13 +91,13 @@ export const batch11b = {
       bernoulli: 'Bernoulli-Experimente erkennen und die Erfolgswahrscheinlichkeit $p$ bestimmen',
       binomial_formula: 'Die Binomialformel anwenden, um $P(X = k)$ zu berechnen',
       expected_value: 'Erwartungswert $E(X) = n \\cdot p$ berechnen und interpretieren',
-      standard_deviation: 'Standardabweichung $\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}$ bestimmen und als Streuungsmass nutzen',
+      standard_deviation: 'Standardabweichung $\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}$ bestimmen und als Streuungsmaß nutzen',
     },
     explanation: {
       intro: 'Stell dir vor, du wiederholst ein Experiment $n$-mal, und jedes Mal gibt es nur zwei Ausgänge: Erfolg (Wahrscheinlichkeit $p$) oder Misserfolg (Wahrscheinlichkeit $1-p$). Die Binomialverteilung verrät dir, wie wahrscheinlich genau $k$ Erfolge bei $n$ Versuchen sind:',
       bernoulli: 'Die Basis ist das Bernoulli-Experiment — ein einzelner Versuch mit genau zwei Ausgängen. Drei Bedingungen müssen gelten: (1) nur zwei Ergebnisse, (2) die Wahrscheinlichkeit $p$ bleibt bei jedem Versuch gleich, (3) die Versuche sind voneinander unabhängig. Der Binomialkoeffizient zählt die möglichen Anordnungen:',
       amir_tip: 'Der Binomialkoeffizient $\\binom{n}{k}$ zählt, auf wie viele Arten du $k$ Erfolge auf $n$ Versuche verteilen kannst. In meinem Code ist das die Funktion scipy.special.comb(n, k). Für große $n$ berechne ich lieber die kumulative Verteilung — Einzelwahrscheinlichkeiten aufzusummieren wäre viel zu langsam!',
-      expected_value: 'Der Erwartungswert $E(X) = n \\cdot p$ sagt dir, wie viele Erfolge du "im Durchschnitt" erwartest. Bei 100 Versuchen mit $p = 0{,}15$ erwartest du $E(X) = 15$ Erfolge. Aber das heisst nicht, dass es jedes Mal genau 15 sind! Wie stark die Ergebnisse schwanken, misst die Standardabweichung:',
+      expected_value: 'Der Erwartungswert $E(X) = n \\cdot p$ sagt dir, wie viele Erfolge du "im Durchschnitt" erwartest. Bei 100 Versuchen mit $p = 0{,}15$ erwartest du $E(X) = 15$ Erfolge. Aber das heißt nicht, dass es jedes Mal genau 15 sind! Wie stark die Ergebnisse schwanken, misst die Standardabweichung:',
       standard_deviation: 'Die Standardabweichung $\\sigma = \\sqrt{n \\cdot p \\cdot (1-p)}$ zeigt die typische Streuung um den Erwartungswert. Faustregeln: Etwa 68% der Ergebnisse liegen in $E(X) \\pm \\sigma$, etwa 95% in $E(X) \\pm 2\\sigma$. Je größer $n$, desto schmaler wird die Verteilung relativ zum Erwartungswert.',
     },
     concepts: {
@@ -121,8 +121,8 @@ export const batch11b = {
         step1: 'Parameter bestimmen: $n = 10$ Würfe, $p = 0{,}5$ (faire Münze), gesucht: $k = 7$ Mal Kopf.',
         step2: 'Binomialkoeffizient berechnen — auf wie viele Arten können 7 Kopf auf 10 Würfe verteilt sein?',
         step3: 'In die Binomialformel einsetzen: Anordnungen $\\times$ Erfolge $\\times$ Misserfolge:',
-        step4: 'Ausrechnen — die Wahrscheinlichkeit beträgt ca. 11{,}7%, also eher unwahrscheinlich:',
-        amir_comment: 'Nur 11{,}7% — das zeigt: Auch bei einer fairen Münze ist 7 von 10 Mal Kopf nicht besonders überraschend, aber auch nicht der Normalfall. Mein Zufallsgenerator scheint okay zu sein!',
+        step4: 'Ausrechnen — die Wahrscheinlichkeit beträgt ca. 11,7%, also eher unwahrscheinlich:',
+        amir_comment: 'Nur 11,7% — das zeigt: Auch bei einer fairen Münze ist 7 von 10 Mal Kopf nicht besonders überraschend, aber auch nicht der Normalfall. Mein Zufallsgenerator scheint okay zu sein!',
       },
       quality_control: {
         title: 'Qualitätskontrolle in der Produktion',
@@ -130,7 +130,7 @@ export const batch11b = {
         step1: 'Parameter: $n = 20$ Stück, Fehlerquote $p = 0{,}02$, gesucht: $k = 0$ defekte Teile.',
         step2: 'Einsetzen: $\\binom{20}{0} = 1$, und $0{,}02^0 = 1$ — es bleiben nur die Misserfolge:',
         step3: 'Vereinfachen — übrig bleibt $0{,}98^{20}$:',
-        step4: 'Ergebnis: Mit ca. 66{,}8% Wahrscheinlichkeit ist kein Teil defekt — gar nicht so sicher!',
+        step4: 'Ergebnis: Mit ca. 66,8% Wahrscheinlichkeit ist kein Teil defekt — gar nicht so sicher!',
         amir_comment: 'Nur zwei Drittel Chance auf null Fehler bei 2% Fehlerquote! Das zeigt: Auch kleine Wahrscheinlichkeiten summieren sich bei vielen Versuchen. Bei $n = 100$ wäre $P(X = 0) \\approx 13{,}3\\%$ — da findet man fast sicher einen Fehler.',
       },
     },
@@ -181,7 +181,7 @@ export const batch11b = {
       amir_tip: 'In meinem Empfehlungscode nutze ich bedingte Wahrscheinlichkeiten ständig: $P(\\text{like}_Y \\mid \\text{like}_X)$ — die Wahrscheinlichkeit, dass ein User Song $Y$ mag, gegeben dass er Song $X$ gelikt hat. Das ist das Herzstück jedes Collaborative Filters!',
       bayes: 'Der Satz von Bayes ist die Magie: Er dreht die Richtung um. Wenn du $P(B \\mid A)$ kennst, aber $P(A \\mid B)$ brauchst, liefert Bayes die Lösung. Die Formel sieht kompliziert aus, aber der Kern ist einfach: Du gewichtest mit der Basiswahrscheinlichkeit (Prior):',
       total_probability: 'Für den Nenner im Satz von Bayes brauchst du oft die totale Wahrscheinlichkeit. Sie zerlegt $P(B)$ in alle möglichen Wege, auf denen $B$ eintreten kann — über $A$ oder über $\\bar{A}$ (nicht-$A$):',
-      independence: 'Zwei Ereignisse sind stochastisch unabhängig, wenn das Wissen über das eine die Wahrscheinlichkeit des anderen nicht verändert. Formal: $P(A \\mid B) = P(A)$ — das Eintreten von $B$ hat keinen Einfluss auf $A$. Aequivalent dazu gilt:',
+      independence: 'Zwei Ereignisse sind stochastisch unabhängig, wenn das Wissen über das eine die Wahrscheinlichkeit des anderen nicht verändert. Formal: $P(A \\mid B) = P(A)$ — das Eintreten von $B$ hat keinen Einfluss auf $A$. Äquivalent dazu gilt:',
     },
     concepts: {
       conditional_prob: {
@@ -200,12 +200,12 @@ export const batch11b = {
     examples: {
       medical_test: {
         title: 'Medizinischer Test — Base Rate Fallacy',
-        context: 'Ein Krankheitstest ist zu 99% korrekt. Die Krankheit betrifft 1% der Bevölkerung. Wenn der Test positiv ist — wie wahrscheinlich ist man wirklich krank?',
+        context: 'Ein Krankheitstest erkennt 99 % der Kranken, schlägt aber auch bei 5 % der Gesunden an. Die Krankheit betrifft 1% der Bevölkerung. Wenn der Test positiv ist — wie wahrscheinlich ist man wirklich krank?',
         step1: 'Gegeben: $P(K) = 0{,}01$ (Krankheit), $P(+ \\mid K) = 0{,}99$ (Sensitivität), $P(+ \\mid \\bar{K}) = 0{,}05$ (falsch-positiv Rate).',
         step2: 'Totale Wahrscheinlichkeit für ein positives Ergebnis berechnen — beide Wege (krank + gesund):',
         step3: 'Satz von Bayes anwenden — $P(K \\mid +)$ ist gesucht:',
-        step4: 'Ergebnis: Nur 16{,}7% Wahrscheinlichkeit, wirklich krank zu sein — trotz 99% Testgenauigkeit!',
-        amir_comment: 'Das ist die Base Rate Fallacy! Der Test ist super genau, aber weil die Krankheit so selten ist ($P(K) = 1\\%$), sind die meisten positiven Tests falsch-positiv. In der ML-Welt heisst das: Precision und Recall sind nicht dasselbe!',
+        step4: 'Ergebnis: Nur 16,7% Wahrscheinlichkeit, wirklich krank zu sein — obwohl der Test 99 % der Kranken erkennt!',
+        amir_comment: 'Das ist die Base Rate Fallacy! Der Test ist super genau, aber weil die Krankheit so selten ist ($P(K) = 1\\%$), sind die meisten positiven Tests falsch-positiv. In der ML-Welt heißt das: Precision und Recall sind nicht dasselbe!',
       },
       spam_filter: {
         title: 'Spam-Filter mit Bayes',
@@ -213,7 +213,7 @@ export const batch11b = {
         step1: 'Gegebene Daten: 30% aller Mails sind Spam, 80% der Spam-Mails enthalten "Gewinn", aber auch 10% der normalen Mails:',
         step2: 'Totale Wahrscheinlichkeit, dass eine Mail "Gewinn" enthält:',
         step3: 'Bayes: Wie wahrscheinlich ist Spam, wenn "Gewinn" vorkommt?',
-        step4: 'Ergebnis: 77{,}4% — eine Mail mit "Gewinn" ist mit hoher Wahrscheinlichkeit Spam:',
+        step4: 'Ergebnis: 77,4% — eine Mail mit "Gewinn" ist mit hoher Wahrscheinlichkeit Spam:',
         amir_comment: 'Genau so funktioniert ein Naive-Bayes-Classifier! Je mehr Wörter du hinzufügst, desto präziser wird der Filter. DataPulse nutzt das gleiche Prinzip: Statt Wörtern analysieren wir Hörmuster, statt Spam/Nicht-Spam klassifizieren wir Genre-Vorlieben.',
       },
     },
@@ -228,7 +228,7 @@ export const batch11b = {
       },
       fraud_detection: {
         title: 'Betrugserkennung',
-        desc: 'Amirs Payment-System erkennt verdächtige Transaktionen mit Bayes: Wenn ein Alarm auslöst — wie wahrscheinlich ist echter Betrug? Genau wie beim Medizintest: Die Base Rate entscheidet! Bei einer Betrugsquote von 0{,}1% sind die meisten Alarme Fehlalarme.',
+        desc: 'Amirs Payment-System erkennt verdächtige Transaktionen mit Bayes: Wenn ein Alarm auslöst — wie wahrscheinlich ist echter Betrug? Genau wie beim Medizintest: Die Base Rate entscheidet! Bei einer Betrugsquote von 0,1% sind die meisten Alarme Fehlalarme.',
       },
     },
     mistakes: {
@@ -241,7 +241,7 @@ export const batch11b = {
       ignore_base_rate: {
         wrong: 'Die Basisrate ignoriert (Base Rate Fallacy)',
         correct: 'Immer $P(A)$ — die Prior-Wahrscheinlichkeit — berücksichtigen',
-        why: 'Ein 99%-genauer Test klingt beeindruckend, aber wenn die Krankheit nur 1% betrifft, ist $P(K \\mid +) \\approx 16{,}7\\%$. Die niedrige Basisrate $P(K) = 0{,}01$ dominiert das Ergebnis. Ohne den Prior erhältst du eine völlig verzerrte Einschätzung.',
+        why: 'Ein Test, der 99 % der Kranken erkennt, klingt beeindruckend, aber wenn die Krankheit nur 1% betrifft, ist $P(K \\mid +) \\approx 16{,}7\\%$. Die niedrige Basisrate $P(K) = 0{,}01$ dominiert das Ergebnis. Ohne den Prior erhältst du eine völlig verzerrte Einschätzung.',
       },
     },
   },
@@ -260,7 +260,7 @@ export const batch11b = {
     },
     explanation: {
       intro: 'Ein Vektor beschreibt eine Verschiebung im Raum — oder allgemeiner: eine geordnete Liste von Zahlen. Im $\\mathbb{R}^3$ hat ein Vektor drei Komponenten, die du als Spalte schreibst. In der Datenanalyse können Vektoren auch 50 oder 500 Dimensionen haben — das Prinzip bleibt gleich:',
-      addition: 'Vektoren addierst du komponentenweise — jede Zeile für sich. Geometrisch legst du den zweiten Vektor ans Ende des ersten (Spitze-an-Fuss-Methode). Das Ergebnis ist der direkte Weg vom Start zum Ziel:',
+      addition: 'Vektoren addierst du komponentenweise — jede Zeile für sich. Geometrisch legst du den zweiten Vektor ans Ende des ersten (Spitze-an-Fuß-Methode). Das Ergebnis ist der direkte Weg vom Start zum Ziel:',
       amir_tip: 'In meinem Python-Code sind Vektoren einfach numpy-Arrays. Die Addition $\\vec{a} + \\vec{b}$ wird automatisch elementweise ausgeführt — np.array([3,4]) + np.array([-1,2]) ergibt np.array([2,6]). Genau das Gleiche wie in der Mathe!',
       scalar_product: 'Das Skalarprodukt (auch: inneres Produkt) zweier Vektoren ergibt eine einzelne Zahl — keinen Vektor! Du multiplizierst die Komponenten paarweise und addierst alles auf. Das Ergebnis verrät dir, wie stark die Vektoren "in die gleiche Richtung zeigen":',
       length: 'Die Länge (der Betrag) eines Vektors berechnet sich über den Satz des Pythagoras — erweitert auf drei Dimensionen. Im 2D-Fall ist es der bekannte $\\sqrt{x^2 + y^2}$, im 3D kommt $z^2$ dazu:',
@@ -277,7 +277,7 @@ export const batch11b = {
       },
       vector_length: {
         title: 'Betrag eines Vektors',
-        desc: 'Die Länge $|\\vec{a}| = \\sqrt{a_1^2 + a_2^2 + a_3^2}$ — verallgemeinerter Pythagoras. Ein Vektor mit Betrag 1 heisst Einheitsvektor. In der ML-Welt normalisiert man Vektoren oft auf Länge 1, um nur die Richtung zu vergleichen.',
+        desc: 'Die Länge $|\\vec{a}| = \\sqrt{a_1^2 + a_2^2 + a_3^2}$ — verallgemeinerter Pythagoras. Ein Vektor mit Betrag 1 heißt Einheitsvektor. In der ML-Welt normalisiert man Vektoren oft auf Länge 1, um nur die Richtung zu vergleichen.',
       },
     },
     examples: {
@@ -303,7 +303,7 @@ export const batch11b = {
     realworld: {
       embeddings: {
         title: 'Word Embeddings & Song Embeddings',
-        desc: 'In der ML-Welt werden Wörter, Songs und Bilder als hochdimensionale Vektoren dargestellt (Embeddings). Die Cosine Similarity $\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}$ misst ihre Ähnlichkeit. Ein beruhmtes Beispiel: "König" $-$ "Mann" $+$ "Frau" $\\approx$ "Königin" — Vektorarithmetik mit Wortbedeutungen!',
+        desc: 'In der ML-Welt werden Wörter, Songs und Bilder als hochdimensionale Vektoren dargestellt (Embeddings). Die Cosine Similarity $\\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}$ misst ihre Ähnlichkeit. Ein berühmtes Beispiel: "König" $-$ "Mann" $+$ "Frau" $\\approx$ "Königin" — Vektorarithmetik mit Wortbedeutungen!',
       },
       navigation: {
         title: 'Navigation & Robotik',

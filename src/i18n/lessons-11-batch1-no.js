@@ -16,7 +16,7 @@ export const batch11a = {
       constant_factor: 'Konstante faktorer beholdes ved derivasjon, og ved summer kan du derivere ledd for ledd. Det gjør sammensatte uttrykk oversiktlige:',
       amir_tip: 'I ML-koden min stikker summer og faktorer overalt — tapsfunksjonen er en enorm sum over alle datapunkter. At jeg får derivere hvert ledd for seg gjør Backpropagation i det hele tatt mulig!',
       product_rule: 'Når to funksjoner multipliseres, får du IKKE bare derivere begge for seg. I stedet gjelder produktregelen — "første ganger den deriverte av andre pluss andre ganger den deriverte av første":',
-      quotient_rule: 'For brøker av funksjoner finnes kvotientregelen. Huskeregel: "NAT minus TAN gjennom N i annen" (N = nevner, T = teller, A = derivert):',
+      quotient_rule: 'For brøker av funksjoner finnes kvotientregelen. Huskeregel: "NAT minus TAN gjennom N i annen" (N = nevner, T = teller, A = derivert). I motsetning til produktregelen kommer det her an på rekkefølgen — minustegnet gjør formelen usymmetrisk:',
       chain_rule: 'Ved sammensatte funksjoner — altså en funksjon inni en funksjon — trenger du kjerneregelen. Du deriverer "utenfra og inn" og multipliserer med den indre deriverte:',
     },
     concepts: {

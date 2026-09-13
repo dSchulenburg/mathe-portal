@@ -167,7 +167,7 @@ export const portalBatch1 = {
     "10-aehnlichkeit": {
       "0": "Por que $\\sin(30°)$ é sempre $0{,}5$ — não importa o tamanho do triângulo? Justamente por causa da semelhança. Todos os triângulos retângulos com o mesmo ângulo são semelhantes, então têm as mesmas razões entre os lados. Trigonometria é o teorema de Tales com outro vocabulário.",
       "1": "Se você dobra todas as medidas de uma pirâmide, o volume fica oito vezes maior ($2^3 = 8$). Esse crescimento ao cubo é o motivo de os animais pequenos serem, proporcionalmente, mais fortes que os grandes — a geometria está em todo lugar.",
-      "2": "(3, 4, 5) com $k=2$ vira (6, 8, 10), com $k=7$ vira (21, 28, 35) — e todos continuam sendo triângulos retângulos. A semelhança herda o ângulo reto, porque a relação $a^2 + b^2 = c^2$ não muda quando você estica."
+      "2": "(3, 4, 5) com $k=2$ vira (6, 8, 10), com $k=7$ vira (21, 28, 35) — e todos continuam sendo triângulos retângulos. A semelhança herda o ângulo reto, porque, ao esticar, todos os lados são multiplicados pelo mesmo $k$: $(ka)^2 + (kb)^2 = k^2(a^2 + b^2) = (kc)^2$."
     },
     "10-periodisch": {
       "0": "No triângulo retângulo, $\\sin(\\alpha)$ era uma razão entre dois lados. No círculo unitário, isso vira uma altura que muda com o ângulo — e, quando o ângulo continua girando, ela se repete. É exatamente aí que nasce a onda.",
@@ -176,7 +176,7 @@ export const portalBatch1 = {
       "3": "$f(x) = a \\cdot \\sin(b(x-d)) + e$ — compare com a forma do vértice. $a$ estica, $d$ desloca na horizontal, $e$ na vertical. A única novidade é $b$, que comprime o período. Aqui você não aprende uma gramática nova, só uma palavra nova."
     },
     "10-diff-einfuehrung": {
-      "0": "Aqui você construiu o limite para obter uma inclinação. A mesma ferramenta responde a outra pergunta, ainda mais básica: num ponto, a função se aproxima exatamente do valor que ela assume ali? Se sim, ela é chamada de contínua nesse ponto. E existe uma rua de mão única que vale guardar: onde dá para traçar uma tangente, não pode haver salto — mas nem todo ponto sem salto tem tangente. $f(x) = |x|$ é a prova.",
+      "0": "Aqui você construiu o limite para obter uma inclinação. No tema Continuidade, a mesma ferramenta faz outra pergunta: a função dá um salto num ponto ou passa por ele sem tirar o lápis do papel? Onde dá para traçar uma tangente, não há salto. Por que a recíproca não vale, você vê lá.",
       "1": "O que você calcula aqui com esforço usando o limite em h, no 11º ano sai em uma linha: $f(x) = x^2 \\Rightarrow f'(x) = 2x$. A regra não vem do nada — é exatamente o cálculo de limite que você está praticando, resolvido de uma vez por todas.",
       "2": "Você usa $f(x) = x^2$ como função de treino — e não por acaso. Parábolas são as curvas mais simples em que a inclinação muda. Uma reta teria a mesma inclinação em todo lugar — não haveria nada para descobrir.",
       "3": "Para que serve calcular a inclinação da tangente? No 11º ano você vai ver: exatamente onde $f'(x) = 0$ — onde a tangente fica horizontal — estão os máximos e os mínimos. O limite vira uma ferramenta de otimização.",
@@ -192,7 +192,7 @@ export const portalBatch1 = {
       "0": "A reta é o caso mais simples e, por isso, a referência para todos os outros: variação constante a cada passo. Quadrática quer dizer que a variação varia; exponencial, que ela varia em porcentagem. Quem lê $m$ e $b$ com segurança reconhece os outros tipos pelo que os diferencia da reta.",
       "1": "Você já viu parábolas — aqui você vê onde elas aparecem no retrato de família de todas as funções. Linear, quadrática, exponencial, logarítmica — quatro parentes com personalidades bem diferentes.",
       "2": "O crescimento exponencial ultrapassa qualquer função polinomial — a longo prazo. Compare você mesmo: com x = 10, 2ˣ = 1024, e x² só 100.",
-      "3": "No 11º ano você vai ver: cada tipo de função tem sua própria regra de derivação. Linear → constante, quadrática → linear, exponencial → continua exponencial. A forma se mantém."
+      "3": "No 11º ano você vai ver: cada tipo de função tem sua própria regra de derivação. Linear → constante, quadrática → linear, exponencial → continua exponencial. Só a função exponencial mantém sua forma ao ser derivada."
     },
     "10-lineare-funktionen": {
       "0": "Funções lineares são a família de funções mais simples. Com só um termo x² a mais, você logo vai desenhar parábolas — a lógica continua a mesma: entender o termo, interpretar o gráfico.",
@@ -277,7 +277,7 @@ export const portalBatch1 = {
       "0": "$\\vec{x} = \\vec{p} + t\\vec{u}$ não é uma ideia nova, e sim um vetor de posição e um vetor diretor que você estica à vontade. Tudo o que você sabe sobre soma e múltiplos vira geometria aqui.",
       "1": "Saber se duas retas se cruzam é saber se um sistema linear tem solução. Nenhuma solução: paralelas ou reversas. Exatamente uma: ponto de interseção. Infinitas: são a mesma reta. A álgebra de Gauss responde às perguntas da geometria.",
       "2": "$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$. Todo cálculo de distância no espaço, todo comprimento, toda normalização remonta a $a^2 + b^2 = c^2$. O teorema do 10º ano acompanha você até o Abitur.",
-      "3": "O que você aprende aqui sobre planos e vetores normais, uma matriz descreve como transformação. A mesma geometria, numa escrita que o computador entende."
+      "3": "Uma matriz também descreve geometria: ela transforma vetores, gira, estica e espelha o espaço. O que você aprende aqui sobre vetores, planos e vetores normais reaparece lá, numa escrita que o computador entende."
     },
     "12-hypothesentests": {
       "0": "Você continua calculando $P(X \\leq k)$ como sempre. A única novidade é que antes você fixa um limite e depois toma uma decisão. O cálculo é velho; a pergunta é nova.",

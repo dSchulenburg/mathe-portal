@@ -40,7 +40,7 @@ export const batch12a = {
         step2: 'Derivare con la regola della catena — funzione interna $g(t) = -0{,}03t$, derivata interna $g\'(t) = -0{,}03$:',
         step3: 'Calcolare il tasso iniziale — per $t = 0$ spariscono 150 particelle al secondo:',
         step4: 'Determinare il tempo di dimezzamento — risolvere $N(t_{1/2}) = \\frac{N_0}{2}$ con $\\ln$:',
-        kai_comment: 'Dopo 23 secondi metà delle particelle è sparita — quindi posso liberare memoria già prima per la prossima esplosione. Nel motore imposto la soglia di eliminazione al $5\\%$ di opacità, cioè circa $3 \\cdot t_{1/2} \\approx 70\\,\\text{s}$.',
+        kai_comment: 'Dopo 23 secondi metà delle particelle è sparita — quindi posso liberare memoria già prima per la prossima esplosione. Nel motore imposto la soglia di eliminazione al $5\\%$ di opacità, cioè circa $4{,}3 \\cdot t_{1/2} \\approx 100\\,\\text{s}$.',
       },
       ln_curve_analysis: {
         title: 'Studio di funzione con la funzione $e$',
@@ -193,7 +193,7 @@ export const batch12a = {
       },
       distance_formula: {
         title: 'Distanza punto-piano',
-        desc: 'La distanza minima di un punto $P$ da un piano è la lunghezza della perpendicolare da $P$ al piano. La formula $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ calcola questa distanza direttamente dalla forma cartesiana. Il valore assoluto al numeratore è decisivo — senza potrebbe risultare una "distanza" negativa.',
+        desc: 'La distanza minima di un punto $P$ da un piano è la lunghezza della perpendicolare da $P$ al piano. La formula $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ calcola questa distanza direttamente dalla forma cartesiana. Il valore assoluto al numeratore è decisivo — senza potrebbe risultare una "distanza" negativa.',
       },
     },
     examples: {
@@ -238,8 +238,8 @@ export const batch12a = {
         kai_warning: 'Questo bug si riconosce subito: superfici illuminate "dall\'interno", mentre il lato esterno resta buio. Succede quando il vettore normale punta nella direzione sbagliata. Sii sempre coerente con l\'ordine — $\\overrightarrow{AB} \\times \\overrightarrow{AC}$, mai al contrario!',
       },
       distance_abs_forgotten: {
-        wrong: 'Dimenticare il valore assoluto al numeratore: $d = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
-        correct: 'Con il valore assoluto: $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
+        wrong: 'Dimenticare il valore assoluto al numeratore: $d(P,E) = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
+        correct: 'Con il valore assoluto: $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
         why: 'Le distanze sono sempre positive! Senza il valore assoluto al numeratore può uscire un valore negativo quando il punto si trova "dall\'altra parte" del piano. Nella verifica ti costa punti, nel motore di gioco porta a oggetti che cadono attraverso i muri.',
       },
     },
@@ -259,8 +259,8 @@ export const batch12a = {
     },
     explanation: {
       intro: 'Un test d\'ipotesi è un procedimento strutturato per prendere una decisione sulla base dei dati. Parti da una supposizione (ipotesi nulla $H_0$), raccogli dati e verifichi se i dati parlano contro $H_0$. L\'ipotesi alternativa $H_1$ descrive ciò che in realtà sospetti:',
-      significance: 'Il livello di significatività $\\alpha$ è la probabilità massima con cui rifiuti $H_0$ per errore (errore di I tipo). Valori tipici sono $\\alpha = 0{,}05$ (5\\%) o $\\alpha = 0{,}01$ (1\\%). Più piccolo è $\\alpha$, più il test è severo — ma tanto più facilmente non ci si accorge di effetti reali:',
-      kai_tip: 'Pensate ai test d\'ipotesi come a un sistema anti-cheat: $H_0$ significa "Il giocatore NON bara". $\\alpha = 0{,}05$ vuol dire: solo nel 5\\% dei casi banno un giocatore onesto. Voglio tenere $\\alpha$ piccolo per proteggere gli innocenti — ma se lo rendo troppo piccolo, i veri cheater passano. È il compromesso alfa-beta!',
+      significance: 'Il livello di significatività $\\alpha$ è la probabilità massima con cui rifiuti $H_0$ per errore (errore di I tipo). Valori tipici sono $\\alpha = 0{,}05$ (5%) o $\\alpha = 0{,}01$ (1%). Più piccolo è $\\alpha$, più il test è severo — ma tanto più facilmente non ci si accorge di effetti reali:',
+      kai_tip: 'Pensate ai test d\'ipotesi come a un sistema anti-cheat: $H_0$ significa "Il giocatore NON bara". $\\alpha = 0{,}05$ vuol dire: solo nel 5% dei casi banno un giocatore onesto. Voglio tenere $\\alpha$ piccolo per proteggere gli innocenti — ma se lo rendo troppo piccolo, i veri cheater passano. È il compromesso alfa-beta!',
       rejection_region: 'La regione di rifiuto contiene tutti i risultati del test così estremi da farci rifiutare $H_0$. In un test unilaterale sinistro ($H_1\\colon p < p_0$) la regione di rifiuto sta a sinistra — calcoli il numero $k$ più grande per cui vale $P(X \\leq k) \\leq \\alpha$:',
       error_types: 'Possono capitare due errori: errore di I tipo ($\\alpha$) — rifiuti $H_0$ anche se è vera ("falso allarme"). Errore di II tipo ($\\beta$) — mantieni $H_0$ anche se è vera $H_1$ ("effetto mancato"). Con numerosità del campione $n$ fissata vale: se riduci $\\alpha$, $\\beta$ aumenta — e viceversa:',
     },
@@ -271,7 +271,7 @@ export const batch12a = {
       },
       significance_level: {
         title: 'Livello di significatività $\\alpha$',
-        desc: 'Il limite superiore per la probabilità di un errore di I tipo. Con $\\alpha = 0{,}05$ accetti un rischio del 5\\% di rifiutare $H_0$ per errore. Valori usuali: $0{,}10$ (esplorativo), $0{,}05$ (standard), $0{,}01$ (severo). $\\alpha$ si fissa PRIMA del test — mai adattato a posteriori!',
+        desc: 'Il limite superiore per la probabilità di un errore di I tipo. Con $\\alpha = 0{,}05$ accetti un rischio del 5% di rifiutare $H_0$ per errore. Valori usuali: $0{,}10$ (esplorativo), $0{,}05$ (standard), $0{,}01$ (severo). $\\alpha$ si fissa PRIMA del test — mai adattato a posteriori!',
       },
       error_types: {
         title: 'Errori di I e II tipo',
@@ -286,16 +286,16 @@ export const batch12a = {
         step2: 'Impostazione dell\'esperimento: $n = 100$ partite, $X$ = numero di vittorie dell\'eroe A, con distribuzione binomiale:',
         step3: 'Calcolare la probabilità di $X \\leq 40$ sotto $H_0$ (distribuzione binomiale cumulata):',
         step4: 'Decisione del test: valore $p$ $0{,}028 < \\alpha = 0{,}05$ — $H_0$ viene rifiutata. L\'eroe A è significativamente troppo debole:',
-        kai_comment: 'Era la prova statistica che mi serviva per il team di bilanciamento. 40 su 100 sembra "quasi okay", ma il test mostra: con un bilanciamento equo un risultato così estremo si vedrebbe solo nel 2{,}8\\% dei casi. Basta per un aggiornamento con nerf!',
+        kai_comment: 'Era la prova statistica che mi serviva per il team di bilanciamento. 40 su 100 sembra "quasi okay", ma il test mostra: con un bilanciamento equo un risultato così estremo si vedrebbe solo nel 2,8% dei casi. Basta per un aggiornamento con nerf!',
       },
       crash_rate: {
         title: 'Verificare il tasso di crash dopo un aggiornamento',
-        context: 'Dopo una patch il tasso di crash dovrebbe essere al massimo del 2\\%. In 200 sessioni di test il gioco va in crash 8 volte. È troppo?',
-        step1: 'Formulare le ipotesi — test unilaterale destro, perché Kai vuole verificare se il tasso è SOPRA il 2\\%:',
+        context: 'Dopo una patch il tasso di crash dovrebbe essere al massimo del 2%. In 200 sessioni di test il gioco va in crash 8 volte. È troppo?',
+        step1: 'Formulare le ipotesi — test unilaterale destro, perché Kai vuole verificare se il tasso è SOPRA il 2%:',
         step2: 'Dati: $n = 200$ sessioni, $X = 8$ crash (osservato: $\\hat{p} = 4\\%$):',
         step3: 'Calcolare la probabilità di $X \\geq 8$ sotto $H_0$ — questo è il valore $p$:',
-        step4: 'Decisione del test: valore $p$ $0{,}042 < \\alpha = 0{,}05$ — il tasso di crash è significativamente aumentato:',
-        kai_comment: 'Senza il test forse avrei detto "8 crash su 200 sessioni, ci può stare". Ma il test d\'ipotesi mostra: la probabilità di vedere così tanti crash con un tasso reale del 2\\% è sotto il 5\\%. La patch va rivista.',
+        step4: 'Decisione del test: valore $p$ $0{,}049 < \\alpha = 0{,}05$ — il tasso di crash è significativamente aumentato:',
+        kai_comment: 'Senza il test forse avrei detto "8 crash su 200 sessioni, ci può stare". Ma il test d\'ipotesi mostra: la probabilità di vedere così tanti crash con un tasso reale del 2% è sotto il 5%. La patch va rivista.',
       },
     },
     realworld: {

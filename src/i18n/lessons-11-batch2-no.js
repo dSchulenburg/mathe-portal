@@ -48,8 +48,8 @@ export const batch11b = {
         step1: 'Modellen: 1000 aktive lyttere ved tidspunktet $t = 0$, eksponentiell nedgang:',
         step2: 'Halveringstid betyr: når er det 500 lyttere igjen?',
         step3: 'Isolér og logaritmér — $\\ln$ på begge sider:',
-        step4: 'Løs med hensyn på $t$ — etter ca. 6{,}93 dager er lyttertallet halvert:',
-        amir_comment: 'Halveringstiden er konstant! Uansett om det er 1000, 500 eller 250 lyttere — det går alltid ca. 6{,}93 dager til neste halvering. Det er magien i eksponentielt henfall.',
+        step4: 'Løs med hensyn på $t$ — etter ca. 6,93 dager er lyttertallet halvert:',
+        amir_comment: 'Halveringstiden er konstant! Uansett om det er 1000, 500 eller 250 lyttere — det går alltid ca. 6,93 dager til neste halvering. Det er magien i eksponentielt henfall.',
       },
     },
     realworld: {
@@ -121,8 +121,8 @@ export const batch11b = {
         step1: 'Bestem parametrene: $n = 10$ kast, $p = 0{,}5$ (rettferdig mynt), søkes: $k = 7$ ganger kron.',
         step2: 'Regn ut binomialkoeffisienten — på hvor mange måter kan 7 kron fordeles på 10 kast?',
         step3: 'Sett inn i binomialformelen: plasseringer $\\times$ suksesser $\\times$ fiaskoer:',
-        step4: 'Regn ut — sannsynligheten er ca. 11{,}7%, altså heller usannsynlig:',
-        amir_comment: 'Bare 11{,}7% — det viser: selv med en rettferdig mynt er 7 kron av 10 ikke særlig overraskende, men heller ikke normaltilfellet. Tilfeldighetsgeneratoren min ser ut til å være i orden!',
+        step4: 'Regn ut — sannsynligheten er ca. 11,7%, altså heller usannsynlig:',
+        amir_comment: 'Bare 11,7% — det viser: selv med en rettferdig mynt er 7 kron av 10 ikke særlig overraskende, men heller ikke normaltilfellet. Tilfeldighetsgeneratoren min ser ut til å være i orden!',
       },
       quality_control: {
         title: 'Kvalitetskontroll i produksjonen',
@@ -130,7 +130,7 @@ export const batch11b = {
         step1: 'Parametre: $n = 20$ deler, feilrate $p = 0{,}02$, søkes: $k = 0$ defekte deler.',
         step2: 'Sett inn: $\\binom{20}{0} = 1$, og $0{,}02^0 = 1$ — bare fiaskoene blir igjen:',
         step3: 'Forenkl — igjen står $0{,}98^{20}$:',
-        step4: 'Resultat: med ca. 66{,}8% sannsynlighet er ingen del defekt — slett ikke så sikkert!',
+        step4: 'Resultat: med ca. 66,8% sannsynlighet er ingen del defekt — slett ikke så sikkert!',
         amir_comment: 'Bare to tredels sjanse for null feil ved en feilrate på 2%! Det viser: selv små sannsynligheter hoper seg opp ved mange forsøk. Ved $n = 100$ ville $P(X = 0) \\approx 13{,}3\\%$ — der finner man nesten sikkert en feil.',
       },
     },
@@ -200,11 +200,11 @@ export const batch11b = {
     examples: {
       medical_test: {
         title: 'Medisinsk test — grunnrate-feilslutningen',
-        context: 'En sykdomstest er korrekt i 99% av tilfellene. Sykdommen rammer 1% av befolkningen. Hvis testen er positiv — hvor sannsynlig er man da virkelig syk?',
+        context: 'En sykdomstest oppdager 99% av de syke, men slår også ut hos 5% av de friske. Sykdommen rammer 1% av befolkningen. Hvis testen er positiv — hvor sannsynlig er man da virkelig syk?',
         step1: 'Gitt: $P(K) = 0{,}01$ (sykdom), $P(+ \\mid K) = 0{,}99$ (sensitivitet), $P(+ \\mid \\bar{K}) = 0{,}05$ (falsk positiv-rate).',
         step2: 'Regn ut den totale sannsynligheten for et positivt resultat — begge veier (syke + friske):',
         step3: 'Bruk Bayes\' setning — $P(K \\mid +)$ søkes:',
-        step4: 'Resultat: bare 16{,}7% sannsynlighet for virkelig å være syk — til tross for 99% testnøyaktighet!',
+        step4: 'Resultat: bare 16,7% sannsynlighet for virkelig å være syk — selv om testen oppdager 99% av de syke!',
         amir_comment: 'Det er grunnrate-feilslutningen! Testen er svært presis, men fordi sykdommen er så sjelden ($P(K) = 1\\%$), er de fleste positive testene falskt positive. I ML-verdenen betyr det: presisjon og gjenkalling er ikke det samme!',
       },
       spam_filter: {
@@ -213,7 +213,7 @@ export const batch11b = {
         step1: 'Gitte data: 30% av alle e-poster er spam, 80% av spam-e-postene inneholder "gevinst", men også 10% av de vanlige:',
         step2: 'Total sannsynlighet for at en e-post inneholder "gevinst":',
         step3: 'Bayes: hvor sannsynlig er spam når "gevinst" forekommer?',
-        step4: 'Resultat: 77{,}4% — en e-post med "gevinst" er med høy sannsynlighet spam:',
+        step4: 'Resultat: 77,4% — en e-post med "gevinst" er med høy sannsynlighet spam:',
         amir_comment: 'Nettopp slik fungerer en naiv Bayes-klassifikator! Jo flere ord du legger til, desto mer presist blir filteret. DataPulse bruker samme prinsipp: i stedet for ord analyserer vi lyttemønstre, og i stedet for spam/ikke-spam klassifiserer vi sjangerpreferanser.',
       },
     },
@@ -228,7 +228,7 @@ export const batch11b = {
       },
       fraud_detection: {
         title: 'Svindeloppdaging',
-        desc: 'Amirs betalingssystem oppdager mistenkelige transaksjoner med Bayes: når en alarm utløses — hvor sannsynlig er ekte svindel? Akkurat som ved den medisinske testen: grunnraten avgjør! Ved en svindelrate på 0{,}1% er de fleste alarmene falske.',
+        desc: 'Amirs betalingssystem oppdager mistenkelige transaksjoner med Bayes: når en alarm utløses — hvor sannsynlig er ekte svindel? Akkurat som ved den medisinske testen: grunnraten avgjør! Ved en svindelrate på 0,1% er de fleste alarmene falske.',
       },
     },
     mistakes: {
@@ -241,7 +241,7 @@ export const batch11b = {
       ignore_base_rate: {
         wrong: 'Ignorere grunnraten (grunnrate-feilslutningen)',
         correct: 'Ta alltid hensyn til $P(A)$ — prior-sannsynligheten',
-        why: 'En test med 99% nøyaktighet høres imponerende ut, men rammer sykdommen bare 1%, er $P(K \\mid +) \\approx 16{,}7\\%$. Den lave grunnraten $P(K) = 0{,}01$ dominerer resultatet. Uten prior får du en helt forvrengt vurdering.',
+        why: 'En test som oppdager 99% av de syke, høres imponerende ut, men rammer sykdommen bare 1%, er $P(K \\mid +) \\approx 16{,}7\\%$. Den lave grunnraten $P(K) = 0{,}01$ dominerer resultatet. Uten prior får du en helt forvrengt vurdering.',
       },
     },
   },

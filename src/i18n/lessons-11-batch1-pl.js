@@ -16,7 +16,7 @@ export const batch11a = {
       constant_factor: 'Stałe współczynniki pozostają przy różniczkowaniu, a sumy można różniczkować wyraz po wyrazie. To sprawia, że złożone wyrażenia są przejrzyste:',
       amir_tip: 'W moim kodzie ML wszędzie są sumy i współczynniki — funkcja straty to ogromna suma po wszystkich punktach danych. To, że mogę różniczkować każdy wyraz osobno, sprawia, że backpropagation w ogóle jest możliwe!',
       product_rule: 'Gdy dwie funkcje są mnożone, NIE wolno po prostu różniczkować każdej z osobna. Zamiast tego obowiązuje reguła iloczynu — "pierwsza razy pochodna drugiej plus druga razy pochodna pierwszej":',
-      quotient_rule: 'Dla ułamków funkcji istnieje reguła ilorazu. Pomoc pamięciowa: "Mianownik razy pochodna licznika minus licznik razy pochodna mianownika przez mianownik do kwadratu":',
+      quotient_rule: 'Dla ułamków funkcji istnieje reguła ilorazu. Pomoc pamięciowa: "Mianownik razy pochodna licznika minus licznik razy pochodna mianownika przez mianownik do kwadratu". W przeciwieństwie do reguły iloczynu tutaj liczy się kolejność — minus sprawia, że wzór jest niesymetryczny:',
       chain_rule: 'Przy zagnieżdżonych funkcjach — czyli funkcji w funkcji — potrzebujesz reguły łańcuchowej. Różniczkujesz "od zewnątrz do wewnątrz" i mnożysz przez pochodną wewnętrzną:',
     },
     concepts: {

@@ -41,7 +41,7 @@ export default function LessonRealWorld({ examples, topicId, t, accentColor, onR
                 color: 'var(--mp-text)',
                 display: 'block',
               }}>
-                {t(`lessons.${topicId}.${ex.titleKey}`)}
+                <MathText text={t(`lessons.${topicId}.${ex.titleKey}`)} />
               </strong>
               <p style={{
                 margin: '0.2rem 0 0',

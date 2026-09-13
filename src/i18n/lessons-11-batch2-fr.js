@@ -200,11 +200,11 @@ export const batch11b = {
     examples: {
       medical_test: {
         title: 'Test médical — le piège du taux de base',
-        context: 'Un test de dépistage est fiable à 99 %. La maladie touche 1 % de la population. Si le test est positif — quelle est la probabilité d\'être vraiment malade ?',
+        context: 'Un test de dépistage détecte 99 % des malades, mais réagit aussi chez 5 % des personnes en bonne santé. La maladie touche 1 % de la population. Si le test est positif — quelle est la probabilité d\'être vraiment malade ?',
         step1: 'Données : $P(K) = 0{,}01$ (maladie), $P(+ \\mid K) = 0{,}99$ (sensibilité), $P(+ \\mid \\bar{K}) = 0{,}05$ (taux de faux positifs).',
         step2: 'Calculer la probabilité totale d\'un résultat positif — par les deux chemins (malade + en bonne santé) :',
         step3: 'Appliquer le théorème de Bayes — on cherche $P(K \\mid +)$ :',
-        step4: 'Résultat : seulement 16,7 % de probabilité d\'être vraiment malade — malgré une fiabilité du test de 99 % !',
+        step4: 'Résultat : seulement 16,7 % de probabilité d\'être vraiment malade — alors que le test détecte 99 % des malades !',
         amir_comment: 'C\'est le piège du taux de base ! Le test est très précis, mais comme la maladie est très rare ($P(K) = 1\\%$), la plupart des tests positifs sont des faux positifs. Dans le monde du ML, on dit : la précision et le rappel, ce n\'est pas la même chose !',
       },
       spam_filter: {
@@ -241,7 +241,7 @@ export const batch11b = {
       ignore_base_rate: {
         wrong: 'Taux de base ignoré (piège du taux de base)',
         correct: 'Toujours tenir compte de $P(A)$ — la probabilité a priori',
-        why: 'Un test fiable à 99 % paraît impressionnant, mais si la maladie ne touche que 1 %, alors $P(K \\mid +) \\approx 16{,}7\\%$. Le faible taux de base $P(K) = 0{,}01$ domine le résultat. Sans la probabilité a priori, tu obtiens une estimation complètement faussée.',
+        why: 'Un test qui détecte 99 % des malades paraît impressionnant, mais si la maladie ne touche que 1 %, alors $P(K \\mid +) \\approx 16{,}7\\%$. Le faible taux de base $P(K) = 0{,}01$ domine le résultat. Sans la probabilité a priori, tu obtiens une estimation complètement faussée.',
       },
     },
   },

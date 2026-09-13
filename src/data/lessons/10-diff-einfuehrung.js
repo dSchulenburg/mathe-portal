@@ -115,7 +115,7 @@ export const lesson = {
       why: 'Derselbe Grenzwertbegriff beantwortet eine zweite Frage: passt der Grenzwert zum Funktionswert?',
       bubble: {
         character: 'euklid',
-        text: 'Du hast hier den Limes gebaut, um eine Steigung zu bekommen. Dasselbe Werkzeug beantwortet noch eine Frage, und zwar eine grundlegendere: Läuft die Funktion an einer Stelle auf genau den Wert zu, den sie dort annimmt? Wenn ja, heißt sie dort stetig. Und es gilt eine Einbahnstraße, die du dir merken solltest: Wo du eine Tangente anlegen kannst, kann kein Sprung sein — aber nicht überall, wo kein Sprung ist, gibt es eine Tangente. $f(x) = |x|$ ist der Beweis.',
+        text: 'Du hast hier den Limes gebaut, um eine Steigung zu bekommen. Im Thema Stetigkeit stellt dasselbe Werkzeug eine andere Frage: Springt die Funktion an einer Stelle, oder läuft sie ohne Absetzen durch? Wo du eine Tangente anlegen kannst, gibt es keinen Sprung. Warum der Umkehrschluss nicht gilt, siehst du dort.',
       },
     },
     {

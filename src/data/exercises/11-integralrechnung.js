@@ -128,7 +128,7 @@ export const exercises = [
       ],
     },
     hintKeys: [
-      'Das bestimmte Integral summiert unendlich viele infinitesimal duenne Rechtecke.',
+      'Das bestimmte Integral summiert unendlich viele infinitesimal dünne Rechtecke.',
       'Jedes Rechteck hat Breite dx und Höhe f(x).',
     ],
     solutionKey:

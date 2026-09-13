@@ -40,7 +40,7 @@ export const batch12a = {
         step2: 'Oblicz pochodną z regułą łańcuchową — funkcja wewnętrzna $g(t) = -0{,}03t$, pochodna wewnętrzna $g\'(t) = -0{,}03$:',
         step3: 'Oblicz tempo początkowe — przy $t = 0$ znika 150 cząsteczek na sekundę:',
         step4: 'Wyznacz okres połowicznego rozpadu — rozwiąż $N(t_{1/2}) = \\frac{N_0}{2}$ za pomocą $\\ln$:',
-        kai_comment: 'Po 23 sekundach połowa cząsteczek znika — to znaczy, że mogę wcześniej zwolnić pamięć na następną eksplozję. W silniku ustawiam próg usuwania na $5\\%$ nieprzezroczystości, co daje około $3 \\cdot t_{1/2} \\approx 70\\,\\text{s}$.',
+        kai_comment: 'Po 23 sekundach połowa cząsteczek znika — to znaczy, że mogę wcześniej zwolnić pamięć na następną eksplozję. W silniku ustawiam próg usuwania na $5\\%$ nieprzezroczystości, co daje około $4{,}3 \\cdot t_{1/2} \\approx 100\\,\\text{s}$.',
       },
       ln_curve_analysis: {
         title: 'Badanie przebiegu funkcji z funkcją $e$',
@@ -193,7 +193,7 @@ export const batch12a = {
       },
       distance_formula: {
         title: 'Odległość punktu od płaszczyzny',
-        desc: 'Najkrótsza odległość punktu $P$ od płaszczyzny to długość rzutu prostopadłego (odcinka prostopadłego) z $P$ na płaszczyznę. Wzór $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ oblicza tę odległość bezpośrednio z postaci ogólnej. Wartość bezwzględna w liczniku jest kluczowa — bez niej mogłaby wyjść ujemna "odległość".',
+        desc: 'Najkrótsza odległość punktu $P$ od płaszczyzny to długość rzutu prostopadłego (odcinka prostopadłego) z $P$ na płaszczyznę. Wzór $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ oblicza tę odległość bezpośrednio z postaci ogólnej. Wartość bezwzględna w liczniku jest kluczowa — bez niej mogłaby wyjść ujemna "odległość".',
       },
     },
     examples: {
@@ -238,8 +238,8 @@ export const batch12a = {
         kai_warning: 'Ten błąd widać od razu: powierzchnie oświetlone "od środka", podczas gdy strona zewnętrzna pozostaje ciemna. Zdarza się to, gdy wektor normalny wskazuje w złą stronę. Zawsze trzymaj się konsekwentnie jednej kolejności — $\\overrightarrow{AB} \\times \\overrightarrow{AC}$, nigdy odwrotnie!',
       },
       distance_abs_forgotten: {
-        wrong: 'Zapomniana wartość bezwzględna w liczniku: $d = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
-        correct: 'Z wartością bezwzględną: $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
+        wrong: 'Zapomniana wartość bezwzględna w liczniku: $d(P,E) = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
+        correct: 'Z wartością bezwzględną: $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
         why: 'Odległości są zawsze dodatnie! Bez wartości bezwzględnej w liczniku może wyjść wartość ujemna, jeśli punkt leży po "drugiej stronie" płaszczyzny. Na sprawdzianie oznacza to utratę punktów, a w silniku gry — obiekty, które przelatują przez ściany.',
       },
     },
@@ -259,8 +259,8 @@ export const batch12a = {
     },
     explanation: {
       intro: 'Test hipotezy to uporządkowana procedura podejmowania decyzji na podstawie danych. Zaczynasz od przypuszczenia (hipoteza zerowa $H_0$), zbierasz dane i sprawdzasz, czy dane przemawiają przeciwko $H_0$. Hipoteza alternatywna $H_1$ opisuje to, co właściwie podejrzewasz:',
-      significance: 'Poziom istotności $\\alpha$ to maksymalne prawdopodobieństwo, z jakim błędnie odrzucasz $H_0$ (błąd I rodzaju). Typowe wartości to $\\alpha = 0{,}05$ (5\\%) lub $\\alpha = 0{,}01$ (1\\%). Im mniejsze $\\alpha$, tym surowszy test — ale tym łatwiej przeoczyć prawdziwe efekty:',
-      kai_tip: 'Pomyślcie o testach hipotez jak o systemie anti-cheat: $H_0$ oznacza "Gracz NIE oszukuje". $\\alpha = 0{,}05$ znaczy: tylko w 5\\% przypadków banuję uczciwego gracza. Chcę, żeby $\\alpha$ było małe, żeby chronić niewinnych — ale jeśli zrobię je za małe, prawdziwi oszuści się prześlizgną. To jest kompromis alfa–beta!',
+      significance: 'Poziom istotności $\\alpha$ to maksymalne prawdopodobieństwo, z jakim błędnie odrzucasz $H_0$ (błąd I rodzaju). Typowe wartości to $\\alpha = 0{,}05$ (5%) lub $\\alpha = 0{,}01$ (1%). Im mniejsze $\\alpha$, tym surowszy test — ale tym łatwiej przeoczyć prawdziwe efekty:',
+      kai_tip: 'Pomyślcie o testach hipotez jak o systemie anti-cheat: $H_0$ oznacza "Gracz NIE oszukuje". $\\alpha = 0{,}05$ znaczy: tylko w 5% przypadków banuję uczciwego gracza. Chcę, żeby $\\alpha$ było małe, żeby chronić niewinnych — ale jeśli zrobię je za małe, prawdziwi oszuści się prześlizgną. To jest kompromis alfa–beta!',
       rejection_region: 'Obszar odrzucenia zawiera wszystkie wyniki testu, które są tak skrajne, że odrzucamy $H_0$. W teście lewostronnym ($H_1\\colon p < p_0$) obszar odrzucenia leży po lewej stronie — obliczasz największą liczbę $k$, dla której zachodzi $P(X \\leq k) \\leq \\alpha$:',
       error_types: 'Mogą się zdarzyć dwa błędy: błąd I rodzaju ($\\alpha$) — odrzucasz $H_0$, choć jest prawdziwa ("fałszywy alarm"). Błąd II rodzaju ($\\beta$) — zachowujesz $H_0$, choć prawdziwa jest $H_1$ ("przeoczony efekt"). Przy stałej liczebności próby $n$ obowiązuje: gdy zmniejszasz $\\alpha$, $\\beta$ rośnie — i odwrotnie:',
     },
@@ -271,7 +271,7 @@ export const batch12a = {
       },
       significance_level: {
         title: 'Poziom istotności $\\alpha$',
-        desc: 'Górna granica prawdopodobieństwa błędu I rodzaju. Przy $\\alpha = 0{,}05$ akceptujesz 5\\% ryzyka, że błędnie odrzucisz $H_0$. Typowe wartości: $0{,}10$ (eksploracyjnie), $0{,}05$ (standard), $0{,}01$ (surowo). $\\alpha$ ustala się PRZED testem — nigdy nie dopasowuje się go po fakcie!',
+        desc: 'Górna granica prawdopodobieństwa błędu I rodzaju. Przy $\\alpha = 0{,}05$ akceptujesz 5% ryzyka, że błędnie odrzucisz $H_0$. Typowe wartości: $0{,}10$ (eksploracyjnie), $0{,}05$ (standard), $0{,}01$ (surowo). $\\alpha$ ustala się PRZED testem — nigdy nie dopasowuje się go po fakcie!',
       },
       error_types: {
         title: 'Błędy I i II rodzaju',
@@ -286,16 +286,16 @@ export const batch12a = {
         step2: 'Schemat doświadczenia: $n = 100$ meczów, $X$ = liczba zwycięstw bohatera A, rozkład dwumianowy:',
         step3: 'Oblicz prawdopodobieństwo $X \\leq 40$ przy założeniu $H_0$ (dystrybuanta rozkładu dwumianowego):',
         step4: 'Decyzja testowa: wartość $p$ $0{,}028 < \\alpha = 0{,}05$ — $H_0$ zostaje odrzucona. Bohater A jest istotnie za słaby:',
-        kai_comment: 'To był statystyczny dowód, którego potrzebowałem dla zespołu od balansu. 40 na 100 wygląda "prawie w porządku", ale test pokazuje: przy uczciwym balansie tak skrajny wynik zdarzałby się tylko w 2{,}8\\% przypadków. To wystarczy na aktualizację z osłabieniem (nerfem)!',
+        kai_comment: 'To był statystyczny dowód, którego potrzebowałem dla zespołu od balansu. 40 na 100 wygląda "prawie w porządku", ale test pokazuje: przy uczciwym balansie tak skrajny wynik zdarzałby się tylko w 2,8% przypadków. To wystarczy na aktualizację z osłabieniem (nerfem)!',
       },
       crash_rate: {
         title: 'Sprawdzanie wskaźnika awarii po aktualizacji',
-        context: 'Po poprawce wskaźnik awarii ma wynosić najwyżej 2\\%. W 200 sesjach testowych gra zawiesza się 8 razy. Czy to za dużo?',
-        step1: 'Sformułuj hipotezy — test prawostronny, bo Kai chce sprawdzić, czy wskaźnik jest POWYŻEJ 2\\%:',
+        context: 'Po poprawce wskaźnik awarii ma wynosić najwyżej 2%. W 200 sesjach testowych gra zawiesza się 8 razy. Czy to za dużo?',
+        step1: 'Sformułuj hipotezy — test prawostronny, bo Kai chce sprawdzić, czy wskaźnik jest POWYŻEJ 2%:',
         step2: 'Dane: $n = 200$ sesji, $X = 8$ awarii (zaobserwowano: $\\hat{p} = 4\\%$):',
         step3: 'Oblicz prawdopodobieństwo $X \\geq 8$ przy założeniu $H_0$ — to jest wartość $p$:',
-        step4: 'Decyzja testowa: wartość $p$ $0{,}042 < \\alpha = 0{,}05$ — wskaźnik awarii jest istotnie podwyższony:',
-        kai_comment: 'Bez testu może powiedziałbym "8 awarii na 200 sesji, jakoś to będzie". Ale test hipotezy pokazuje: prawdopodobieństwo zobaczenia tylu awarii przy prawdziwym wskaźniku 2\\% jest mniejsze niż 5\\%. Poprawkę trzeba jeszcze raz przerobić.',
+        step4: 'Decyzja testowa: wartość $p$ $0{,}049 < \\alpha = 0{,}05$ — wskaźnik awarii jest istotnie podwyższony:',
+        kai_comment: 'Bez testu może powiedziałbym "8 awarii na 200 sesji, jakoś to będzie". Ale test hipotezy pokazuje: prawdopodobieństwo zobaczenia tylu awarii przy prawdziwym wskaźniku 2% jest mniejsze niż 5%. Poprawkę trzeba jeszcze raz przerobić.',
       },
     },
     realworld: {

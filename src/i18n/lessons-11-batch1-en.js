@@ -16,7 +16,7 @@ export const batch11a = {
       constant_factor: 'Constant factors are preserved when differentiating, and sums can be differentiated term by term. This keeps composite terms manageable:',
       amir_tip: 'In my ML code, sums and factors are everywhere — the loss function is a huge sum over all data points. The fact that I can differentiate each term individually is what makes backpropagation possible in the first place!',
       product_rule: 'When two functions are multiplied, you must NOT simply differentiate each one separately. Instead, the product rule applies — "first times derivative of second plus second times derivative of first":',
-      quotient_rule: 'For quotients of functions, there is the quotient rule. Mnemonic: "Lo d-Hi minus Hi d-Lo over Lo Lo" (Lo = denominator, Hi = numerator, d = derivative):',
+      quotient_rule: 'For quotients of functions, there is the quotient rule. Mnemonic: "Lo d-Hi minus Hi d-Lo over Lo Lo" (Lo = denominator, Hi = numerator, d = derivative). Unlike the product rule, the order matters here — the minus makes the formula asymmetric:',
       chain_rule: 'For nested functions — a function inside a function — you need the chain rule. You differentiate "from outside to inside" and multiply by the inner derivative:',
     },
     concepts: {

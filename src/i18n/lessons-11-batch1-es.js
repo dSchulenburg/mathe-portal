@@ -16,7 +16,7 @@ export const batch11a = {
       constant_factor: 'Los factores constantes se mantienen al derivar, y en sumas puedes derivar término a término. Eso hace los términos compuestos más claros:',
       amir_tip: 'En mi código ML hay sumas y factores por todas partes — la función de pérdida es una enorme suma sobre todos los puntos de datos. ¡Que pueda derivar cada término individualmente es lo que hace posible la retropropagación!',
       product_rule: 'Cuando dos funciones se multiplican, NO puedes simplemente derivar ambas por separado. En su lugar se aplica la regla del producto — "primera por derivada de la segunda más segunda por derivada de la primera":',
-      quotient_rule: 'Para cocientes de funciones existe la regla del cociente. Regla mnemotécnica: "NAD menos DAN entre N al cuadrado" (N = denominador, D = numerador, A = derivada):',
+      quotient_rule: 'Para cocientes de funciones existe la regla del cociente. Regla mnemotécnica: "NAD menos DAN entre N al cuadrado" (N = denominador, D = numerador, A = derivada). A diferencia de la regla del producto, aquí el orden importa: el menos hace que la fórmula sea asimétrica:',
       chain_rule: 'En funciones anidadas — es decir, una función dentro de otra — necesitas la regla de la cadena. Derivas "de fuera hacia dentro" y multiplicas por la derivada interior:',
     },
     concepts: {

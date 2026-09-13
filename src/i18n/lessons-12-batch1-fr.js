@@ -40,7 +40,7 @@ export const batch12a = {
         step2: 'Dériver avec la règle des fonctions composées — fonction intérieure $g(t) = -0{,}03t$, dérivée intérieure $g\'(t) = -0{,}03$ :',
         step3: 'Calculer le taux initial — à $t = 0$, 150 particules disparaissent par seconde :',
         step4: 'Déterminer la demi-vie — résoudre $N(t_{1/2}) = \\frac{N_0}{2}$ avec $\\ln$ :',
-        kai_comment: 'Au bout de 23 secondes, la moitié des particules a disparu — je peux donc libérer de la mémoire dès avant la prochaine explosion. Dans le moteur, je place le seuil de suppression à $5\\%$ d\'opacité, c\'est-à-dire environ $3 \\cdot t_{1/2} \\approx 70\\,\\text{s}$.',
+        kai_comment: 'Au bout de 23 secondes, la moitié des particules a disparu — je peux donc libérer de la mémoire dès avant la prochaine explosion. Dans le moteur, je place le seuil de suppression à $5\\%$ d\'opacité, c\'est-à-dire environ $4{,}3 \\cdot t_{1/2} \\approx 100\\,\\text{s}$.',
       },
       ln_curve_analysis: {
         title: 'Étude de fonction avec une fonction $e$',
@@ -193,7 +193,7 @@ export const batch12a = {
       },
       distance_formula: {
         title: 'Distance point-plan',
-        desc: 'La plus courte distance d\'un point $P$ à un plan est la longueur de la perpendiculaire abaissée de $P$ sur le plan. La formule $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ calcule cette distance directement à partir de la forme cartésienne. La valeur absolue au numérateur est essentielle — sans elle, on pourrait obtenir une « distance » négative.',
+        desc: 'La plus courte distance d\'un point $P$ à un plan est la longueur de la perpendiculaire abaissée de $P$ sur le plan. La formule $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ calcule cette distance directement à partir de la forme cartésienne. La valeur absolue au numérateur est essentielle — sans elle, on pourrait obtenir une « distance » négative.',
       },
     },
     examples: {
@@ -238,8 +238,8 @@ export const batch12a = {
         kai_warning: 'On reconnaît ce bug tout de suite : des surfaces éclairées « de l\'intérieur » alors que l\'extérieur reste sombre. Ça arrive quand le vecteur normal pointe dans la mauvaise direction. Toujours rester cohérent avec l\'ordre — $\\overrightarrow{AB} \\times \\overrightarrow{AC}$, jamais l\'inverse !',
       },
       distance_abs_forgotten: {
-        wrong: 'Valeur absolue oubliée au numérateur : $d = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
-        correct: 'Avec valeur absolue : $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
+        wrong: 'Valeur absolue oubliée au numérateur : $d(P,E) = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
+        correct: 'Avec valeur absolue : $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
         why: 'Les distances sont toujours positives ! Sans la valeur absolue au numérateur, on peut obtenir une valeur négative quand le point se trouve de « l\'autre côté » du plan. En contrôle, cela coûte des points ; dans le moteur de jeu, cela donne des objets qui tombent à travers les murs.',
       },
     },
@@ -294,7 +294,7 @@ export const batch12a = {
         step1: 'Formuler les hypothèses — test unilatéral à droite, car Kai veut vérifier si le taux dépasse 2 % :',
         step2: 'Données : $n = 200$ sessions, $X = 8$ plantages (observé : $\\hat{p} = 4\\%$) :',
         step3: 'Calculer la probabilité de $X \\geq 8$ sous $H_0$ — c\'est la valeur $p$ :',
-        step4: 'Décision : valeur $p$ $0{,}042 < \\alpha = 0{,}05$ — le taux de plantages est significativement plus élevé :',
+        step4: 'Décision : valeur $p$ $0{,}049 < \\alpha = 0{,}05$ — le taux de plantages est significativement plus élevé :',
         kai_comment: 'Sans le test, j\'aurais peut-être dit « 8 plantages sur 200 sessions, ça passe ». Mais le test d\'hypothèse montre : la probabilité de voir autant de plantages avec un vrai taux de 2 % est inférieure à 5 %. Le patch doit être retravaillé.',
       },
     },

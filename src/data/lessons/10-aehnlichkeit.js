@@ -127,7 +127,7 @@ export const lesson = {
       why: 'Pythagoras-Tripel skalieren mit jedem k zu neuen Tripeln',
       bubble: {
         character: 'euklid',
-        text: '(3, 4, 5) skaliert mit $k=2$ zu (6, 8, 10), mit $k=7$ zu (21, 28, 35) — und alle bleiben rechtwinklig. Ähnlichkeit erbt Rechtwinkligkeit, weil sich die Verhältnisse $a^2 + b^2 = c^2$ beim Strecken nicht ändern.',
+        text: '(3, 4, 5) skaliert mit $k=2$ zu (6, 8, 10), mit $k=7$ zu (21, 28, 35) — und alle bleiben rechtwinklig. Ähnlichkeit erbt Rechtwinkligkeit, weil beim Strecken alle Seiten mit demselben $k$ multipliziert werden: $(ka)^2 + (kb)^2 = k^2(a^2 + b^2) = (kc)^2$.',
       },
     },
   ],

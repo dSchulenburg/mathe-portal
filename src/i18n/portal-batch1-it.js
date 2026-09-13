@@ -167,7 +167,7 @@ export const portalBatch1 = {
     "10-aehnlichkeit": {
       "0": "Perché $\\sin(30°)$ è sempre $0{,}5$ — qualunque sia la grandezza del triangolo? Proprio per la similitudine. Tutti i triangoli rettangoli con lo stesso angolo sono simili, quindi hanno gli stessi rapporti tra i lati. La trigonometria è il teorema di Talete con un altro vocabolario.",
       "1": "Se raddoppi tutte le misure di una piramide, il suo volume diventa otto volte più grande ($2^3 = 8$). Questa crescita al cubo è il motivo per cui gli animali piccoli sono, in proporzione, più forti di quelli grandi — la geometria è ovunque.",
-      "2": "(3, 4, 5) con $k=2$ diventa (6, 8, 10), con $k=7$ diventa (21, 28, 35) — e restano tutti triangoli rettangoli. La similitudine eredita l'angolo retto, perché la relazione $a^2 + b^2 = c^2$ non cambia quando ingrandisci."
+      "2": "(3, 4, 5) con $k=2$ diventa (6, 8, 10), con $k=7$ diventa (21, 28, 35) — e restano tutti triangoli rettangoli. La similitudine eredita l'angolo retto, perché ingrandendo tutti i lati vengono moltiplicati per lo stesso $k$: $(ka)^2 + (kb)^2 = k^2(a^2 + b^2) = (kc)^2$."
     },
     "10-periodisch": {
       "0": "Nel triangolo rettangolo $\\sin(\\alpha)$ era un rapporto tra due lati. Sulla circonferenza goniometrica diventa un'altezza che cambia con l'angolo — e se l'angolo continua a girare, si ripete. È proprio lì che nasce l'onda.",
@@ -176,7 +176,7 @@ export const portalBatch1 = {
       "3": "$f(x) = a \\cdot \\sin(b(x-d)) + e$ — confrontala con la forma del vertice. $a$ dilata, $d$ trasla in orizzontale, $e$ in verticale. L'unica novità è $b$, che comprime il periodo. Qui non impari una grammatica nuova, solo una parola nuova."
     },
     "10-diff-einfuehrung": {
-      "0": "Qui hai costruito il limite per ottenere una pendenza. Lo stesso strumento risponde a un'altra domanda, ancora più fondamentale: in un punto, la funzione tende esattamente al valore che assume lì? Se sì, si dice continua in quel punto. E vale una strada a senso unico da ricordare: dove puoi tracciare una tangente non può esserci un salto — ma non ovunque manchi un salto esiste una tangente. $f(x) = |x|$ ne è la prova.",
+      "0": "Qui hai costruito il limite per ottenere una pendenza. Nel tema Continuità lo stesso strumento pone un'altra domanda: in un punto la funzione fa un salto, oppure prosegue senza staccare la penna dal foglio? Dove puoi tracciare una tangente, non c'è nessun salto. Perché il contrario non vale, lo vedrai lì.",
       "1": "Quello che qui calcoli con fatica con il limite in h, in classe 11 lo fai in una riga: $f(x) = x^2 \\Rightarrow f'(x) = 2x$. La regola non nasce dal nulla: è proprio il calcolo del limite che stai esercitando, fatto una volta per tutte.",
       "2": "Usi $f(x) = x^2$ come funzione di esercizio — e non per caso. Le parabole sono le curve più semplici in cui la pendenza cambia. Una retta avrebbe ovunque la stessa pendenza — non ci sarebbe niente da scoprire.",
       "3": "A cosa serve calcolare la pendenza della tangente? In classe 11 lo vedrai: proprio dove $f'(x) = 0$ — dove la tangente è orizzontale — si trovano massimi e minimi. Il limite diventa uno strumento per ottimizzare.",
@@ -192,7 +192,7 @@ export const portalBatch1 = {
       "0": "La retta è il caso più semplice e per questo il metro di paragone per tutti gli altri: variazione costante a ogni passo. Quadratica significa che la variazione cambia; esponenziale, che cambia in percentuale. Chi sa leggere con sicurezza $m$ e $b$ riconosce le altre classi da come si discostano dalla retta.",
       "1": "Hai già visto le parabole — qui vedi dove stanno nella foto di famiglia di tutte le funzioni. Lineare, quadratica, esponenziale, logaritmica — quattro parenti dal carattere molto diverso.",
       "2": "La crescita esponenziale supera qualsiasi funzione polinomiale — alla lunga. Confronta tu stesso: per x = 10, 2ˣ = 1024, x² solo 100.",
-      "3": "In classe 11 vedrai: ogni classe di funzioni ha la sua regola di derivazione. Lineare → costante, quadratica → lineare, esponenziale → resta esponenziale. La forma si conserva."
+      "3": "In classe 11 vedrai: ogni classe di funzioni ha la sua regola di derivazione. Lineare → costante, quadratica → lineare, esponenziale → resta esponenziale. Solo la funzione esponenziale conserva la sua forma quando la derivi."
     },
     "10-lineare-funktionen": {
       "0": "Le funzioni lineari sono la famiglia di funzioni più semplice. Con un solo termine x² in più, presto disegnerai parabole — la logica resta la stessa: capire l'espressione, interpretare il grafico.",
@@ -277,7 +277,7 @@ export const portalBatch1 = {
       "0": "$\\vec{x} = \\vec{p} + t\\vec{u}$ non è un'idea nuova, ma un vettore posizione e un vettore direttore che allunghi a piacere. Tutto quello che sai su somma e multipli qui diventa geometria.",
       "1": "Sapere se due rette si intersecano significa sapere se un sistema lineare ha soluzione. Nessuna soluzione: parallele o sghembe. Esattamente una: punto di intersezione. Infinite: coincidenti. L'algebra di Gauss risponde alle domande della geometria.",
       "2": "$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$. Ogni calcolo di distanza nello spazio, ogni lunghezza, ogni normalizzazione risale a $a^2 + b^2 = c^2$. Il teorema della classe 10 ti accompagna fino all'Abitur.",
-      "3": "Quello che qui impari su piani e vettori normali, una matrice lo descrive come trasformazione. La stessa geometria, in una scrittura che il computer capisce."
+      "3": "Anche una matrice descrive la geometria: trasforma i vettori, ruota, allunga e riflette lo spazio. Quello che qui impari su vettori, piani e vettori normali lo ritroverai lì, in una scrittura che il computer capisce."
     },
     "12-hypothesentests": {
       "0": "Continui a calcolare $P(X \\leq k)$ come sempre. L'unica novità è che prima fissi un limite e dopo prendi una decisione. Il calcolo è vecchio, la domanda è nuova.",

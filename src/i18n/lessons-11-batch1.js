@@ -154,7 +154,7 @@ export const batch11a = {
         step2: 'Einsetzen von $-x$: Alle Exponenten gerade, also $f(-x) = f(x)$ — achsensymmetrisch! Extrema kommen symmetrisch vor:',
         step3: 'Erste Ableitung Null setzen — durch Symmetrie genügt es, die positiven Lösungen zu finden:',
         step4: 'Funktionswerte berechnen — dank Symmetrie gilt $f(\\sqrt{2}) = f(-\\sqrt{2})$:',
-        amir_comment: 'Symmetrie in Daten ist Gold wert: Wenn ich weiss, dass meine Verlustfunktion symmetrisch ist, muss ich nur die Hälfte des Parameterraums durchsuchen. Das halbiert die Trainingszeit!',
+        amir_comment: 'Symmetrie in Daten ist Gold wert: Wenn ich weiß, dass meine Verlustfunktion symmetrisch ist, muss ich nur die Hälfte des Parameterraums durchsuchen. Das halbiert die Trainingszeit!',
       },
     },
     realworld: {

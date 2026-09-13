@@ -150,7 +150,7 @@ export const lesson = {
       why: 'Jede Funktionsklasse hat eine charakteristische Ableitung',
       bubble: {
         character: 'euklid',
-        text: 'In Klasse 11 wirst du sehen: Jede Funktionsklasse hat ihre eigene Ableitungsregel. Linear → konstant, quadratisch → linear, exponentiell → bleibt exponentiell. Die Form bleibt erhalten.',
+        text: 'In Klasse 11 wirst du sehen: Jede Funktionsklasse hat ihre eigene Ableitungsregel. Linear → konstant, quadratisch → linear, exponentiell → bleibt exponentiell. Nur die Exponentialfunktion behält beim Ableiten ihre Form.',
       },
     },
   ],

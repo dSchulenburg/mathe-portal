@@ -40,7 +40,7 @@ export const batch12a = {
         step2: 'Derivar com a regra da cadeia — função interior $g(t) = -0{,}03t$, derivada interior $g\'(t) = -0{,}03$:',
         step3: 'Calcular a taxa inicial — em $t = 0$ desaparecem 150 partículas por segundo:',
         step4: 'Determinar o tempo de meia-vida — resolver $N(t_{1/2}) = \\frac{N_0}{2}$ com o $\\ln$:',
-        kai_comment: 'Ao fim de 23 segundos já desapareceu metade das partículas — ou seja, posso libertar memória ainda antes disso para a explosão seguinte. No motor coloco o limiar de eliminação em $5\\%$ de opacidade, o que dá cerca de $3 \\cdot t_{1/2} \\approx 70\\,\\text{s}$.',
+        kai_comment: 'Ao fim de 23 segundos já desapareceu metade das partículas — ou seja, posso libertar memória ainda antes disso para a explosão seguinte. No motor coloco o limiar de eliminação em $5\\%$ de opacidade, o que dá cerca de $4{,}3 \\cdot t_{1/2} \\approx 100\\,\\text{s}$.',
       },
       ln_curve_analysis: {
         title: 'Estudo de função com função $e$',
@@ -193,7 +193,7 @@ export const batch12a = {
       },
       distance_formula: {
         title: 'Distância ponto-plano',
-        desc: 'A distância mais curta de um ponto $P$ a um plano é o comprimento da perpendicular de $P$ ao plano. A fórmula $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ calcula essa distância diretamente a partir da forma cartesiana. O módulo no numerador é decisivo — sem ele poderia sair uma «distância» negativa.',
+        desc: 'A distância mais curta de um ponto $P$ a um plano é o comprimento da perpendicular de $P$ ao plano. A fórmula $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ calcula essa distância diretamente a partir da forma cartesiana. O módulo no numerador é decisivo — sem ele poderia sair uma «distância» negativa.',
       },
     },
     examples: {
@@ -238,8 +238,8 @@ export const batch12a = {
         kai_warning: 'Este bug reconhece-se logo: superfícies iluminadas «por dentro», enquanto o lado de fora fica escuro. Acontece quando o vetor normal aponta no sentido errado. Mantém sempre a ordem coerente — $\\overrightarrow{AB} \\times \\overrightarrow{AC}$, nunca ao contrário!',
       },
       distance_abs_forgotten: {
-        wrong: 'Esquecer o módulo no numerador: $d = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
-        correct: 'Com módulo: $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
+        wrong: 'Esquecer o módulo no numerador: $d(P,E) = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
+        correct: 'Com módulo: $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
         why: 'As distâncias são sempre positivas! Sem o módulo no numerador pode sair um valor negativo se o ponto estiver do «outro lado» do plano. Num teste isso custa pontos; num motor de jogo leva a objetos que atravessam paredes.',
       },
     },
@@ -259,8 +259,8 @@ export const batch12a = {
     },
     explanation: {
       intro: 'Um teste de hipóteses é um procedimento estruturado para tomar uma decisão com base em dados. Partes de uma suposição (hipótese nula $H_0$), recolhes dados e verificas se os dados falam contra $H_0$. A hipótese alternativa $H_1$ descreve aquilo que na verdade suspeitas:',
-      significance: 'O nível de significância $\\alpha$ é a probabilidade máxima com que rejeitas $H_0$ erradamente (erro de tipo I). Valores típicos são $\\alpha = 0{,}05$ (5\\%) ou $\\alpha = 0{,}01$ (1\\%). Quanto menor for $\\alpha$, mais rigoroso é o teste — mas mais facilmente se deixam passar efeitos verdadeiros:',
-      kai_tip: 'Pensem nos testes de hipóteses como num sistema anti-batota: $H_0$ significa «o jogador NÃO está a fazer batota». $\\alpha = 0{,}05$ significa: apenas em 5\\% dos casos bano um jogador honesto. Quero manter o $\\alpha$ pequeno para proteger os inocentes — mas se o tornar pequeno demais, os batoteiros verdadeiros escapam. É esse o compromisso alfa-beta!',
+      significance: 'O nível de significância $\\alpha$ é a probabilidade máxima com que rejeitas $H_0$ erradamente (erro de tipo I). Valores típicos são $\\alpha = 0{,}05$ (5%) ou $\\alpha = 0{,}01$ (1%). Quanto menor for $\\alpha$, mais rigoroso é o teste — mas mais facilmente se deixam passar efeitos verdadeiros:',
+      kai_tip: 'Pensem nos testes de hipóteses como num sistema anti-batota: $H_0$ significa «o jogador NÃO está a fazer batota». $\\alpha = 0{,}05$ significa: apenas em 5% dos casos bano um jogador honesto. Quero manter o $\\alpha$ pequeno para proteger os inocentes — mas se o tornar pequeno demais, os batoteiros verdadeiros escapam. É esse o compromisso alfa-beta!',
       rejection_region: 'A região de rejeição contém todos os resultados de teste tão extremos que levam a rejeitar $H_0$. Num teste unilateral à esquerda ($H_1\\colon p < p_0$) a região de rejeição fica à esquerda — calculas o maior número $k$ para o qual vale $P(X \\leq k) \\leq \\alpha$:',
       error_types: 'Podem acontecer dois erros: erro de tipo I ($\\alpha$) — rejeitas $H_0$ apesar de ela ser verdadeira («falso alarme»). Erro de tipo II ($\\beta$) — mantens $H_0$ apesar de $H_1$ ser verdadeira («efeito falhado»). Com um tamanho de amostra $n$ fixo vale: se diminuíres $\\alpha$, o $\\beta$ aumenta — e vice-versa:',
     },
@@ -271,7 +271,7 @@ export const batch12a = {
       },
       significance_level: {
         title: 'Nível de significância $\\alpha$',
-        desc: 'O limite superior da probabilidade de um erro de tipo I. Com $\\alpha = 0{,}05$ aceitas um risco de 5\\% de rejeitar $H_0$ erradamente. Valores habituais: $0{,}10$ (exploratório), $0{,}05$ (padrão), $0{,}01$ (rigoroso). O $\\alpha$ define-se ANTES do teste — nunca se ajusta a posteriori!',
+        desc: 'O limite superior da probabilidade de um erro de tipo I. Com $\\alpha = 0{,}05$ aceitas um risco de 5% de rejeitar $H_0$ erradamente. Valores habituais: $0{,}10$ (exploratório), $0{,}05$ (padrão), $0{,}01$ (rigoroso). O $\\alpha$ define-se ANTES do teste — nunca se ajusta a posteriori!',
       },
       error_types: {
         title: 'Erros de tipo I e de tipo II',
@@ -286,16 +286,16 @@ export const batch12a = {
         step2: 'Montagem experimental: $n = 100$ partidas, $X$ = número de vitórias do herói A, com distribuição binomial:',
         step3: 'Calcular a probabilidade de $X \\leq 40$ sob $H_0$ (distribuição binomial acumulada):',
         step4: 'Decisão do teste: valor $p$ de $0{,}028 < \\alpha = 0{,}05$ — $H_0$ é rejeitada. O herói A é significativamente demasiado fraco:',
-        kai_comment: 'Foi esta a prova estatística de que precisava para a equipa de equilíbrio. 40 em 100 parece «quase aceitável», mas o teste mostra: com um equilíbrio justo só se veria um resultado tão extremo em 2{,}8\\% dos casos. Isso chega para uma atualização de nerf!',
+        kai_comment: 'Foi esta a prova estatística de que precisava para a equipa de equilíbrio. 40 em 100 parece «quase aceitável», mas o teste mostra: com um equilíbrio justo só se veria um resultado tão extremo em 2,8% dos casos. Isso chega para uma atualização de nerf!',
       },
       crash_rate: {
         title: 'Verificar a taxa de falhas depois da atualização',
-        context: 'Depois de um patch, a taxa de falhas deve ser no máximo de 2\\%. Em 200 sessões de teste o jogo falha 8 vezes. Será demasiado?',
-        step1: 'Formular as hipóteses — unilateral à direita, porque o Kai quer verificar se a taxa está ACIMA de 2\\%:',
+        context: 'Depois de um patch, a taxa de falhas deve ser no máximo de 2%. Em 200 sessões de teste o jogo falha 8 vezes. Será demasiado?',
+        step1: 'Formular as hipóteses — unilateral à direita, porque o Kai quer verificar se a taxa está ACIMA de 2%:',
         step2: 'Dados: $n = 200$ sessões, $X = 8$ falhas (observado: $\\hat{p} = 4\\%$):',
         step3: 'Calcular a probabilidade de $X \\geq 8$ sob $H_0$ — é esse o valor $p$:',
-        step4: 'Decisão do teste: valor $p$ de $0{,}042 < \\alpha = 0{,}05$ — a taxa de falhas está significativamente aumentada:',
-        kai_comment: 'Sem o teste talvez tivesse dito «8 falhas em 200 sessões, até está bem». Mas o teste de hipóteses mostra: a probabilidade de ver tantas falhas com uma taxa verdadeira de 2\\% é inferior a 5\\%. O patch tem de ser revisto.',
+        step4: 'Decisão do teste: valor $p$ de $0{,}049 < \\alpha = 0{,}05$ — a taxa de falhas está significativamente aumentada:',
+        kai_comment: 'Sem o teste talvez tivesse dito «8 falhas em 200 sessões, até está bem». Mas o teste de hipóteses mostra: a probabilidade de ver tantas falhas com uma taxa verdadeira de 2% é inferior a 5%. O patch tem de ser revisto.',
       },
     },
     realworld: {

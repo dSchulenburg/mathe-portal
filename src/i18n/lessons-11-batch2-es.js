@@ -48,8 +48,8 @@ export const batch11b = {
         step1: 'El modelo: 1000 oyentes activos en el instante $t = 0$, caída exponencial:',
         step2: 'Semivida significa: ¿cuándo quedan 500 oyentes?',
         step3: 'Aislar y tomar logaritmos: $\\ln$ en ambos miembros:',
-        step4: 'Despejar $t$: al cabo de unos 6{,}93 días el número de oyentes se ha reducido a la mitad:',
-        amir_comment: '¡El tiempo de semivida es constante! Da igual que sean 1000, 500 o 250 oyentes: hasta la siguiente reducción a la mitad pasan siempre unos 6{,}93 días. Esa es la magia del decaimiento exponencial.',
+        step4: 'Despejar $t$: al cabo de unos 6,93 días el número de oyentes se ha reducido a la mitad:',
+        amir_comment: '¡El tiempo de semivida es constante! Da igual que sean 1000, 500 o 250 oyentes: hasta la siguiente reducción a la mitad pasan siempre unos 6,93 días. Esa es la magia del decaimiento exponencial.',
       },
     },
     realworld: {
@@ -121,8 +121,8 @@ export const batch11b = {
         step1: 'Determinar los parámetros: $n = 10$ lanzamientos, $p = 0{,}5$ (moneda equilibrada), se busca: $k = 7$ veces cara.',
         step2: 'Calcular el coeficiente binomial: ¿de cuántas maneras pueden repartirse 7 caras en 10 lanzamientos?',
         step3: 'Sustituir en la fórmula binomial: disposiciones $\\times$ éxitos $\\times$ fracasos:',
-        step4: 'Calcular: la probabilidad es de alrededor del 11{,}7%, así que más bien improbable:',
-        amir_comment: 'Solo un 11{,}7%: eso muestra que, incluso con una moneda equilibrada, 7 caras de 10 no es nada especialmente sorprendente, pero tampoco es el caso normal. ¡Mi generador de números aleatorios parece estar bien!',
+        step4: 'Calcular: la probabilidad es de alrededor del 11,7%, así que más bien improbable:',
+        amir_comment: 'Solo un 11,7%: eso muestra que, incluso con una moneda equilibrada, 7 caras de 10 no es nada especialmente sorprendente, pero tampoco es el caso normal. ¡Mi generador de números aleatorios parece estar bien!',
       },
       quality_control: {
         title: 'Control de calidad en la producción',
@@ -130,7 +130,7 @@ export const batch11b = {
         step1: 'Parámetros: $n = 20$ piezas, tasa de defectos $p = 0{,}02$, se busca: $k = 0$ piezas defectuosas.',
         step2: 'Sustituir: $\\binom{20}{0} = 1$ y $0{,}02^0 = 1$; quedan solo los fracasos:',
         step3: 'Simplificar: queda $0{,}98^{20}$:',
-        step4: 'Resultado: con alrededor del 66{,}8% de probabilidad ninguna pieza está defectuosa. ¡No es tan seguro como parecía!',
+        step4: 'Resultado: con alrededor del 66,8% de probabilidad ninguna pieza está defectuosa. ¡No es tan seguro como parecía!',
         amir_comment: '¡Solo dos tercios de probabilidad de cero defectos con una tasa del 2%! Eso muestra que incluso las probabilidades pequeñas se acumulan en muchos ensayos. Con $n = 100$ sería $P(X = 0) \\approx 13{,}3\\%$: ahí se encuentra un defecto casi con seguridad.',
       },
     },
@@ -200,11 +200,11 @@ export const batch11b = {
     examples: {
       medical_test: {
         title: 'Prueba médica: falacia de la tasa base',
-        context: 'Una prueba de una enfermedad es correcta en el 99% de los casos. La enfermedad afecta al 1% de la población. Si la prueba da positivo, ¿qué probabilidad hay de estar realmente enfermo?',
+        context: 'Una prueba de una enfermedad detecta al 99% de los enfermos, pero también da positivo en el 5% de las personas sanas. La enfermedad afecta al 1% de la población. Si la prueba da positivo, ¿qué probabilidad hay de estar realmente enfermo?',
         step1: 'Datos: $P(K) = 0{,}01$ (enfermedad), $P(+ \\mid K) = 0{,}99$ (sensibilidad), $P(+ \\mid \\bar{K}) = 0{,}05$ (tasa de falsos positivos).',
         step2: 'Calcular la probabilidad total de un resultado positivo: los dos caminos (enfermos + sanos):',
         step3: 'Aplicar el teorema de Bayes: se busca $P(K \\mid +)$:',
-        step4: 'Resultado: solo un 16{,}7% de probabilidad de estar realmente enfermo, ¡pese al 99% de precisión de la prueba!',
+        step4: 'Resultado: solo un 16,7% de probabilidad de estar realmente enfermo, ¡aunque la prueba detecta al 99% de los enfermos!',
         amir_comment: '¡Esa es la falacia de la tasa base! La prueba es muy precisa, pero como la enfermedad es tan rara ($P(K) = 1\\%$), la mayoría de los positivos son falsos positivos. En el mundo del ML eso significa: ¡precisión y exhaustividad no son lo mismo!',
       },
       spam_filter: {
@@ -213,7 +213,7 @@ export const batch11b = {
         step1: 'Datos dados: el 30% de todos los mensajes son spam, el 80% de los mensajes de spam contienen «premio», pero también el 10% de los normales:',
         step2: 'Probabilidad total de que un mensaje contenga «premio»:',
         step3: 'Bayes: ¿qué probabilidad hay de que sea spam si aparece «premio»?',
-        step4: 'Resultado: 77{,}4%; un mensaje con «premio» es con alta probabilidad spam:',
+        step4: 'Resultado: 77,4%; un mensaje con «premio» es con alta probabilidad spam:',
         amir_comment: '¡Así funciona exactamente un clasificador Naive Bayes! Cuantas más palabras añadas, más preciso se vuelve el filtro. DataPulse usa el mismo principio: en lugar de palabras analizamos patrones de escucha y, en lugar de spam/no spam, clasificamos preferencias de género.',
       },
     },
@@ -228,7 +228,7 @@ export const batch11b = {
       },
       fraud_detection: {
         title: 'Detección de fraude',
-        desc: 'El sistema de pagos de Amir detecta transacciones sospechosas con Bayes: cuando salta una alarma, ¿qué probabilidad hay de fraude real? Igual que en la prueba médica: ¡decide la tasa base! Con una tasa de fraude del 0{,}1% la mayoría de las alarmas son falsas.',
+        desc: 'El sistema de pagos de Amir detecta transacciones sospechosas con Bayes: cuando salta una alarma, ¿qué probabilidad hay de fraude real? Igual que en la prueba médica: ¡decide la tasa base! Con una tasa de fraude del 0,1% la mayoría de las alarmas son falsas.',
       },
     },
     mistakes: {
@@ -241,7 +241,7 @@ export const batch11b = {
       ignore_base_rate: {
         wrong: 'Ignorar la tasa base (falacia de la tasa base)',
         correct: 'Tener siempre en cuenta $P(A)$, la probabilidad a priori',
-        why: 'Una prueba con un 99% de precisión suena impresionante, pero si la enfermedad solo afecta al 1%, entonces $P(K \\mid +) \\approx 16{,}7\\%$. La baja tasa base $P(K) = 0{,}01$ domina el resultado. Sin la probabilidad a priori obtienes una estimación completamente sesgada.',
+        why: 'Una prueba que detecta al 99% de los enfermos suena impresionante, pero si la enfermedad solo afecta al 1%, entonces $P(K \\mid +) \\approx 16{,}7\\%$. La baja tasa base $P(K) = 0{,}01$ domina el resultado. Sin la probabilidad a priori obtienes una estimación completamente sesgada.',
       },
     },
   },

@@ -167,7 +167,7 @@ export const portalBatch1 = {
     "10-aehnlichkeit": {
       "0": "Pourquoi $\\sin(30°)$ vaut-il toujours $0{,}5$ — quelle que soit la taille du triangle ? Justement à cause de la similitude. Tous les triangles rectangles qui ont le même angle sont semblables, donc ils ont les mêmes rapports de côtés. La trigonométrie, c'est Thalès avec un autre vocabulaire.",
       "1": "Si tu doubles toutes les dimensions d'une pyramide, son volume est multiplié par huit ($2^3 = 8$). Ce changement d'échelle au cube explique pourquoi les petits animaux sont proportionnellement plus forts que les grands — la géométrie est partout.",
-      "2": "Avec $k=2$, (3, 4, 5) devient (6, 8, 10), avec $k=7$ il devient (21, 28, 35) — et tous restent rectangles. La similitude conserve l'angle droit, parce que la relation $a^2 + b^2 = c^2$ ne change pas quand on agrandit."
+      "2": "Avec $k=2$, (3, 4, 5) devient (6, 8, 10), avec $k=7$ il devient (21, 28, 35) — et tous restent rectangles. La similitude conserve l'angle droit, parce que quand on agrandit, tous les côtés sont multipliés par le même $k$ : $(ka)^2 + (kb)^2 = k^2(a^2 + b^2) = (kc)^2$."
     },
     "10-periodisch": {
       "0": "Dans le triangle rectangle, $\\sin(\\alpha)$ était un rapport entre deux côtés. Sur le cercle trigonométrique, il devient une hauteur qui change avec l'angle — et quand l'angle continue de tourner, elle se répète. C'est exactement là que naît l'onde.",
@@ -176,7 +176,7 @@ export const portalBatch1 = {
       "3": "$f(x) = a \\cdot \\sin(b(x-d)) + e$ — compare avec la forme canonique. $a$ étire, $d$ décale horizontalement, $e$ verticalement. Seul $b$ est nouveau : il comprime la période. Tu n'apprends pas une nouvelle grammaire ici, juste un nouveau mot de vocabulaire."
     },
     "10-diff-einfuehrung": {
-      "0": "Ici, tu as construit la limite pour obtenir une pente. Le même outil répond à une autre question, encore plus fondamentale : en un point, la fonction tend-elle exactement vers la valeur qu'elle prend en ce point ? Si oui, on dit qu'elle y est continue. Et il y a un sens unique à retenir : là où on peut tracer une tangente, il ne peut pas y avoir de saut — mais partout où il n'y a pas de saut, il n'y a pas forcément de tangente. $f(x) = |x|$ en est la preuve.",
+      "0": "Ici, tu as construit la limite pour obtenir une pente. Dans le thème Continuité, le même outil pose une autre question : la fonction fait-elle un saut en un point, ou passe-t-elle sans lever le crayon ? Là où on peut tracer une tangente, il n'y a pas de saut. Pourquoi la réciproque est fausse, tu le verras là-bas.",
       "1": "Ce que tu calcules ici laborieusement avec la limite en h se fait en une ligne en 11e année : $f(x) = x^2 \\Rightarrow f'(x) = 2x$. La règle ne sort pas de nulle part — c'est exactement le calcul de limite que tu t'entraînes à faire, réglé une fois pour toutes.",
       "2": "Tu utilises $f(x) = x^2$ comme fonction d'entraînement — et ce n'est pas un hasard. Les paraboles sont les courbes les plus simples dont la pente change. Une droite aurait la même pente partout — il n'y aurait rien à découvrir.",
       "3": "À quoi ça sert de calculer la pente de la tangente ? En 11e année, tu verras : c'est exactement là où $f'(x) = 0$ — là où la tangente est horizontale — que se trouvent les maximums et les minimums. La limite devient un outil d'optimisation.",
@@ -192,7 +192,7 @@ export const portalBatch1 = {
       "0": "La droite est le cas le plus simple, et c'est pour ça qu'elle sert de référence à toutes les autres : une variation constante à chaque pas. Du second degré, ça veut dire que la variation elle-même varie ; exponentielle, qu'elle varie en pourcentage. Si tu lis $m$ et $b$ sans hésiter, tu reconnaîtras les autres familles à ce qui les distingue de la droite.",
       "1": "Tu as déjà vu des paraboles — ici, tu vois où elles se placent sur la photo de famille de toutes les fonctions. Affine, second degré, exponentielle, logarithme — quatre membres de la famille aux caractères très différents.",
       "2": "La croissance exponentielle dépasse n'importe quelle fonction polynôme — à long terme. Compare toi-même : pour x = 10, 2ˣ = 1024, x² seulement 100.",
-      "3": "En 11e année, tu verras : chaque famille de fonctions a sa propre règle de dérivation. Affine → constante, second degré → affine, exponentielle → reste exponentielle. La forme se conserve."
+      "3": "En 11e année, tu verras : chaque famille de fonctions a sa propre règle de dérivation. Affine → constante, second degré → affine, exponentielle → reste exponentielle. Seule l'exponentielle garde sa forme quand on la dérive."
     },
     "10-lineare-funktionen": {
       "0": "Les fonctions affines sont la famille de fonctions la plus simple. Avec un seul terme en x² en plus, tu vas bientôt dessiner des paraboles — la logique reste la même : comprendre l'expression, interpréter le graphique.",
@@ -277,7 +277,7 @@ export const portalBatch1 = {
       "0": "$\\vec{x} = \\vec{p} + t\\vec{u}$ n'est pas une idée nouvelle : c'est un point de départ et un vecteur directeur que tu étires autant que tu veux. Tout ce que tu sais sur l'addition et la multiplication des vecteurs devient ici de la géométrie.",
       "1": "Savoir si deux droites se coupent, c'est savoir si un système linéaire a une solution. Aucune solution : parallèles ou non coplanaires ; exactement une : point d'intersection ; une infinité : confondues. Gauss répond aux questions de géométrie.",
       "2": "$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$. Chaque calcul de distance dans l'espace, chaque longueur, chaque normalisation remonte à $a^2 + b^2 = c^2$. Le théorème de la 10e année te porte jusqu'au bac.",
-      "3": "Ce que tu apprends ici sur les plans et les vecteurs normaux décrit une matrice comme une transformation. La même géométrie, dans une écriture que l'ordinateur comprend."
+      "3": "Une matrice décrit elle aussi de la géométrie : elle transforme des vecteurs, fait tourner, étire et reflète l'espace. Ce que tu apprends ici sur les vecteurs, les plans et les vecteurs normaux y réapparaît, dans une écriture que l'ordinateur comprend."
     },
     "12-hypothesentests": {
       "0": "Tu continues à calculer $P(X \\leq k)$ comme d'habitude. La seule nouveauté : tu fixes une limite avant, et tu prends une décision après. Le calcul est ancien, la question est nouvelle.",

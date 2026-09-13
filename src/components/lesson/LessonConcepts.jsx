@@ -43,7 +43,7 @@ export default function LessonConcepts({ concepts, topicId, t, accentColor, onRe
                 fontWeight: 700,
                 color,
               }}>
-                {t(`lessons.${topicId}.${concept.titleKey}`)}
+                <MathText text={t(`lessons.${topicId}.${concept.titleKey}`)} />
               </h4>
               <p style={{
                 margin: '0.3rem 0 0',

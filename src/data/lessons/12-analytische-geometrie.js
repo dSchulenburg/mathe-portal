@@ -103,8 +103,8 @@ export const lesson = {
       wrongKey: 'mistakes.distance_abs_forgotten.wrong',
       correctKey: 'mistakes.distance_abs_forgotten.correct',
       explanationKey: 'mistakes.distance_abs_forgotten.why',
-      wrongFormula: 'd = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}',
-      correctFormula: 'd = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}',
+      wrongFormula: 'd(P,E) = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}',
+      correctFormula: 'd(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}',
     },
   ],
 
@@ -143,7 +143,7 @@ export const lesson = {
       why: 'Drehungen und Spiegelungen im Raum sind Matrizen',
       bubble: {
         character: 'euklid',
-        text: 'Was du hier über Ebenen und Normalenvektoren lernst, beschreibt eine Matrix als Abbildung. Dieselbe Geometrie, in einer Schreibweise, die der Computer versteht.',
+        text: 'Auch eine Matrix beschreibt Geometrie: Sie bildet Vektoren ab, dreht, streckt und spiegelt den Raum. Was du hier über Vektoren, Ebenen und Normalenvektoren lernst, taucht dort wieder auf, in einer Schreibweise, die der Computer versteht.',
       },
     },
   ],

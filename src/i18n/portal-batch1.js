@@ -168,7 +168,7 @@ export const portalBatch1 = {
     "10-aehnlichkeit": {
       "0": "Warum ist $\\sin(30°)$ immer $0{,}5$ — egal wie groß das Dreieck ist? Genau wegen der Ähnlichkeit. Alle rechtwinkligen Dreiecke mit dem gleichen Winkel sind ähnlich, also haben sie gleiche Seitenverhältnisse. Trigonometrie ist Strahlensatz mit anderem Vokabular.",
       "1": "Verdoppelst du alle Maße einer Pyramide, wird ihr Volumen achtfach so groß ($2^3 = 8$). Diese kubische Skalierung ist der Grund, warum kleine Tiere relativ stärker sind als große — die Geometrie steckt überall.",
-      "2": "(3, 4, 5) skaliert mit $k=2$ zu (6, 8, 10), mit $k=7$ zu (21, 28, 35) — und alle bleiben rechtwinklig. Ähnlichkeit erbt Rechtwinkligkeit, weil sich die Verhältnisse $a^2 + b^2 = c^2$ beim Strecken nicht ändern."
+      "2": "(3, 4, 5) skaliert mit $k=2$ zu (6, 8, 10), mit $k=7$ zu (21, 28, 35) — und alle bleiben rechtwinklig. Ähnlichkeit erbt Rechtwinkligkeit, weil beim Strecken alle Seiten mit demselben $k$ multipliziert werden: $(ka)^2 + (kb)^2 = k^2(a^2 + b^2) = (kc)^2$."
     },
     "10-periodisch": {
       "0": "Am rechtwinkligen Dreieck war $\\sin(\\alpha)$ ein Verhältnis zweier Seiten. Am Einheitskreis wird daraus eine Höhe, die sich mit dem Winkel ändert — und wenn der Winkel weiterläuft, wiederholt sie sich. Genau da entsteht die Welle.",
@@ -177,7 +177,7 @@ export const portalBatch1 = {
       "3": "$f(x) = a \\cdot \\sin(b(x-d)) + e$ — vergleich das mit der Scheitelpunktform. $a$ streckt, $d$ verschiebt waagerecht, $e$ senkrecht. Neu ist nur $b$, und das staucht die Periode. Du lernst hier keine neue Grammatik, nur eine neue Vokabel."
     },
     "10-diff-einfuehrung": {
-      "0": "Du hast hier den Limes gebaut, um eine Steigung zu bekommen. Dasselbe Werkzeug beantwortet noch eine Frage, und zwar eine grundlegendere: Läuft die Funktion an einer Stelle auf genau den Wert zu, den sie dort annimmt? Wenn ja, heißt sie dort stetig. Und es gilt eine Einbahnstraße, die du dir merken solltest: Wo du eine Tangente anlegen kannst, kann kein Sprung sein — aber nicht überall, wo kein Sprung ist, gibt es eine Tangente. $f(x) = |x|$ ist der Beweis.",
+      "0": "Du hast hier den Limes gebaut, um eine Steigung zu bekommen. Im Thema Stetigkeit stellt dasselbe Werkzeug eine andere Frage: Springt die Funktion an einer Stelle, oder läuft sie ohne Absetzen durch? Wo du eine Tangente anlegen kannst, gibt es keinen Sprung. Warum der Umkehrschluss nicht gilt, siehst du dort.",
       "1": "Was du hier mühevoll mit dem h-Limes berechnest, geht in Klasse 11 in einer Zeile: $f(x) = x^2 \\Rightarrow f'(x) = 2x$. Die Regel kommt nicht aus dem Nichts — sie ist genau die Limes-Rechnung, die du gerade übst, ein für alle Mal erledigt.",
       "2": "Du nutzt $f(x) = x^2$ als Übungsfunktion — und nicht zufällig. Parabeln sind die einfachsten Kurven, an denen die Steigung sich ändert. Eine Gerade hätte überall dieselbe Steigung — da gäbe es nichts zu entdecken.",
       "3": "Was bringt es, die Tangentensteigung auszurechnen? In Klasse 11 wirst du sehen: Genau dort, wo $f'(x) = 0$ — wo die Tangente waagrecht liegt — sitzen die Maxima und Minima. Aus dem Limes wird ein Werkzeug zur Optimierung.",
@@ -193,7 +193,7 @@ export const portalBatch1 = {
       "0": "Die Gerade ist der einfachste Fall und deshalb der Maßstab für alle anderen: konstante Änderung pro Schritt. Quadratisch heißt, die Änderung ändert sich; exponentiell heißt, sie ändert sich prozentual. Wer $m$ und $b$ sicher lesen kann, erkennt die anderen Klassen daran, worin sie von der Geraden abweichen.",
       "1": "Du hast schon Parabeln gesehen — hier siehst du, wo sie im Familienporträt aller Funktionen stehen. Linear, quadratisch, exponentiell, logarithmisch — vier Verwandte mit ganz unterschiedlichen Charakteren.",
       "2": "Exponentielles Wachstum überholt jede Polynomfunktion — auf lange Sicht. Vergleiche es selbst: bei x = 10 ist 2ˣ = 1024, x² nur 100.",
-      "3": "In Klasse 11 wirst du sehen: Jede Funktionsklasse hat ihre eigene Ableitungsregel. Linear → konstant, quadratisch → linear, exponentiell → bleibt exponentiell. Die Form bleibt erhalten."
+      "3": "In Klasse 11 wirst du sehen: Jede Funktionsklasse hat ihre eigene Ableitungsregel. Linear → konstant, quadratisch → linear, exponentiell → bleibt exponentiell. Nur die Exponentialfunktion behält beim Ableiten ihre Form."
     },
     "10-lineare-funktionen": {
       "0": "Lineare Funktionen sind die einfachste Funktionsfamilie. Mit nur einem zusätzlichen x²-Term wirst du gleich Parabeln zeichnen — die Logik bleibt dieselbe: Term verstehen, Graph deuten.",
@@ -219,7 +219,7 @@ export const portalBatch1 = {
     },
     "11-extremwertaufgaben": {
       "0": "Mathematisch passiert hier nichts Neues: $f'(x) = 0$ und mit $f''$ prüfen. Was anders ist, ist der Weg dorthin: Erst musst du aus einer Sachsituation überhaupt eine Funktion bauen. Modellieren ist die eigentliche Kunst.",
-      "1": "Wenn deine Zielfunktion am Ende eine Parabel ist, brauchst du gar keine Ableitung — du kennst den Scheitelpunkt schon aus Klasse 10. Quadratische Optimierung ist Extremwert „mit blossem Auge\".",
+      "1": "Wenn deine Zielfunktion am Ende eine Parabel ist, brauchst du gar keine Ableitung — du kennst den Scheitelpunkt schon aus Klasse 10. Quadratische Optimierung ist Extremwert „mit bloßem Auge\".",
       "2": "In Klasse 12 wirst du Extrema von e-Funktionen suchen — wann ist die Wirkstoffkonzentration am höchsten, wann der Energieverbrauch am geringsten. Die Methode bleibt, nur die Funktionsklasse wird reicher."
     },
     "11-integralrechnung": {
@@ -278,7 +278,7 @@ export const portalBatch1 = {
       "0": "$\\vec{x} = \\vec{p} + t\\vec{u}$ ist keine neue Idee, sondern ein Stützvektor und ein Richtungsvektor, den du beliebig streckst. Alles, was du über Addition und Vielfache weißt, wird hier zur Geometrie.",
       "1": "Ob zwei Geraden sich schneiden, ist die Frage, ob ein LGS lösbar ist. Keine Lösung heißt parallel oder windschief, genau eine heißt Schnittpunkt, unendlich viele heißen identisch. Gauß beantwortet Geometrie.",
       "2": "$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$. Jede Abstandsberechnung im Raum, jede Länge, jede Normierung geht auf $a^2 + b^2 = c^2$ zurück. Der Satz aus der 10 trägt bis ins Abitur.",
-      "3": "Was du hier über Ebenen und Normalenvektoren lernst, beschreibt eine Matrix als Abbildung. Dieselbe Geometrie, in einer Schreibweise, die der Computer versteht."
+      "3": "Auch eine Matrix beschreibt Geometrie: Sie bildet Vektoren ab, dreht, streckt und spiegelt den Raum. Was du hier über Vektoren, Ebenen und Normalenvektoren lernst, taucht dort wieder auf, in einer Schreibweise, die der Computer versteht."
     },
     "12-hypothesentests": {
       "0": "Du berechnest weiter $P(X \\leq k)$ wie gewohnt. Neu ist nur, dass du vorher eine Grenze festlegst und danach eine Entscheidung triffst. Die Rechnung ist alt, die Frage ist neu.",

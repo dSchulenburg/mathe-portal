@@ -48,8 +48,8 @@ export const batch11b = {
         step1: 'O modelo: 1000 ouvintes ativos no instante $t = 0$, queda exponencial:',
         step2: 'Meia-vida significa: quando restam 500 ouvintes?',
         step3: 'Isolar e logaritmizar — $\\ln$ em ambos os membros:',
-        step4: 'Resolver em ordem a $t$ — ao fim de cerca de 6{,}93 dias o número de ouvintes reduziu-se a metade:',
-        amir_comment: 'O tempo de meia-vida é constante! Não interessa se são 1000, 500 ou 250 ouvintes — até à redução seguinte para metade passam sempre cerca de 6{,}93 dias. É essa a magia do decaimento exponencial.',
+        step4: 'Resolver em ordem a $t$ — ao fim de cerca de 6,93 dias o número de ouvintes reduziu-se a metade:',
+        amir_comment: 'O tempo de meia-vida é constante! Não interessa se são 1000, 500 ou 250 ouvintes — até à redução seguinte para metade passam sempre cerca de 6,93 dias. É essa a magia do decaimento exponencial.',
       },
     },
     realworld: {
@@ -121,8 +121,8 @@ export const batch11b = {
         step1: 'Determinar os parâmetros: $n = 10$ lançamentos, $p = 0{,}5$ (moeda equilibrada), procura-se: $k = 7$ vezes cara.',
         step2: 'Calcular o coeficiente binomial — de quantas maneiras podem 7 caras distribuir-se por 10 lançamentos?',
         step3: 'Substituir na fórmula binomial: disposições $\\times$ sucessos $\\times$ insucessos:',
-        step4: 'Calcular — a probabilidade é de cerca de 11{,}7%, portanto até é pouco provável:',
-        amir_comment: 'Apenas 11{,}7% — isto mostra: mesmo com uma moeda equilibrada, 7 caras em 10 não é nada de especialmente surpreendente, mas também não é o caso normal. O meu gerador de números aleatórios parece estar em condições!',
+        step4: 'Calcular — a probabilidade é de cerca de 11,7%, portanto até é pouco provável:',
+        amir_comment: 'Apenas 11,7% — isto mostra: mesmo com uma moeda equilibrada, 7 caras em 10 não é nada de especialmente surpreendente, mas também não é o caso normal. O meu gerador de números aleatórios parece estar em condições!',
       },
       quality_control: {
         title: 'Controlo de qualidade na produção',
@@ -130,7 +130,7 @@ export const batch11b = {
         step1: 'Parâmetros: $n = 20$ peças, taxa de defeito $p = 0{,}02$, procura-se: $k = 0$ peças defeituosas.',
         step2: 'Substituir: $\\binom{20}{0} = 1$ e $0{,}02^0 = 1$ — restam apenas os insucessos:',
         step3: 'Simplificar — sobra $0{,}98^{20}$:',
-        step4: 'Resultado: com cerca de 66{,}8% de probabilidade nenhuma peça está defeituosa — nem por isso tão seguro!',
+        step4: 'Resultado: com cerca de 66,8% de probabilidade nenhuma peça está defeituosa — nem por isso tão seguro!',
         amir_comment: 'Apenas dois terços de hipóteses de zero defeitos com uma taxa de 2%! Isto mostra: mesmo probabilidades pequenas se acumulam em muitos ensaios. Com $n = 100$ seria $P(X = 0) \\approx 13{,}3\\%$ — aí encontra-se quase de certeza um defeito.',
       },
     },
@@ -200,11 +200,11 @@ export const batch11b = {
     examples: {
       medical_test: {
         title: 'Teste médico — falácia da taxa de base',
-        context: 'Um teste para uma doença é correto em 99% dos casos. A doença afeta 1% da população. Se o teste der positivo — qual é a probabilidade de a pessoa estar realmente doente?',
+        context: 'Um teste para uma doença deteta 99% dos doentes, mas também dá positivo em 5% das pessoas saudáveis. A doença afeta 1% da população. Se o teste der positivo — qual é a probabilidade de a pessoa estar realmente doente?',
         step1: 'Dados: $P(K) = 0{,}01$ (doença), $P(+ \\mid K) = 0{,}99$ (sensibilidade), $P(+ \\mid \\bar{K}) = 0{,}05$ (taxa de falsos positivos).',
         step2: 'Calcular a probabilidade total de um resultado positivo — os dois caminhos (doentes + saudáveis):',
         step3: 'Aplicar o teorema de Bayes — procura-se $P(K \\mid +)$:',
-        step4: 'Resultado: apenas 16{,}7% de probabilidade de estar realmente doente — apesar dos 99% de precisão do teste!',
+        step4: 'Resultado: apenas 16,7% de probabilidade de estar realmente doente — embora o teste detete 99% dos doentes!',
         amir_comment: 'É esta a falácia da taxa de base! O teste é muito preciso, mas como a doença é tão rara ($P(K) = 1\\%$), a maioria dos testes positivos são falsos positivos. No mundo do ML isso significa: precisão e revocação não são a mesma coisa!',
       },
       spam_filter: {
@@ -213,7 +213,7 @@ export const batch11b = {
         step1: 'Dados: 30% de todas as mensagens são spam, 80% das mensagens de spam contêm «prémio», mas também 10% das mensagens normais:',
         step2: 'Probabilidade total de uma mensagem conter «prémio»:',
         step3: 'Bayes: qual é a probabilidade de ser spam se ocorre «prémio»?',
-        step4: 'Resultado: 77{,}4% — uma mensagem com «prémio» é com elevada probabilidade spam:',
+        step4: 'Resultado: 77,4% — uma mensagem com «prémio» é com elevada probabilidade spam:',
         amir_comment: 'É exatamente assim que funciona um classificador Naive Bayes! Quantas mais palavras acrescentares, mais preciso fica o filtro. O DataPulse usa o mesmo princípio: em vez de palavras analisamos padrões de escuta e, em vez de spam/não-spam, classificamos preferências de género.',
       },
     },
@@ -228,7 +228,7 @@ export const batch11b = {
       },
       fraud_detection: {
         title: 'Deteção de fraude',
-        desc: 'O sistema de pagamentos do Amir deteta transações suspeitas com Bayes: quando dispara um alarme — qual é a probabilidade de ser fraude verdadeira? Tal como no teste médico: é a taxa de base que decide! Com uma taxa de fraude de 0{,}1% a maioria dos alarmes são falsos.',
+        desc: 'O sistema de pagamentos do Amir deteta transações suspeitas com Bayes: quando dispara um alarme — qual é a probabilidade de ser fraude verdadeira? Tal como no teste médico: é a taxa de base que decide! Com uma taxa de fraude de 0,1% a maioria dos alarmes são falsos.',
       },
     },
     mistakes: {
@@ -241,7 +241,7 @@ export const batch11b = {
       ignore_base_rate: {
         wrong: 'Ignorar a taxa de base (falácia da taxa de base)',
         correct: 'Considerar sempre $P(A)$ — a probabilidade a priori',
-        why: 'Um teste com 99% de precisão soa impressionante, mas se a doença só afeta 1%, então $P(K \\mid +) \\approx 16{,}7\\%$. A baixa taxa de base $P(K) = 0{,}01$ domina o resultado. Sem a probabilidade a priori obténs uma estimativa completamente enviesada.',
+        why: 'Um teste que deteta 99% dos doentes soa impressionante, mas se a doença só afeta 1%, então $P(K \\mid +) \\approx 16{,}7\\%$. A baixa taxa de base $P(K) = 0{,}01$ domina o resultado. Sem a probabilidade a priori obténs uma estimativa completamente enviesada.',
       },
     },
   },

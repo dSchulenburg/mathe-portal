@@ -167,7 +167,7 @@ export const portalBatch1 = {
     "10-aehnlichkeit": {
       "0": "Proč je $\\sin(30°)$ vždycky $0{,}5$ — ať je trojúhelník jakkoli velký? Právě kvůli podobnosti. Všechny pravoúhlé trojúhelníky se stejným úhlem jsou podobné, takže mají stejné poměry stran. Trigonometrie je podobnost jinými slovy.",
       "1": "Když zdvojnásobíš všechny rozměry jehlanu, jeho objem vzroste osmkrát ($2^3 = 8$). Toto kubické škálování je důvod, proč jsou malá zvířata poměrně silnější než velká — geometrie je všude.",
-      "2": "(3, 4, 5) se s $k=2$ změní na (6, 8, 10), s $k=7$ na (21, 28, 35) — a všechny zůstanou pravoúhlé. Podobnost dědí pravý úhel, protože se vztah $a^2 + b^2 = c^2$ při zvětšování nemění."
+      "2": "(3, 4, 5) se s $k=2$ změní na (6, 8, 10), s $k=7$ na (21, 28, 35) — a všechny zůstanou pravoúhlé. Podobnost dědí pravý úhel, protože se při zvětšování všechny strany násobí stejným $k$: $(ka)^2 + (kb)^2 = k^2(a^2 + b^2) = (kc)^2$."
     },
     "10-periodisch": {
       "0": "V pravoúhlém trojúhelníku byl $\\sin(\\alpha)$ poměr dvou stran. Na jednotkové kružnici se z něj stane výška, která se mění s úhlem — a když úhel běží dál, opakuje se. Právě tam vzniká vlna.",
@@ -176,7 +176,7 @@ export const portalBatch1 = {
       "3": "$f(x) = a \\cdot \\sin(b(x-d)) + e$ — porovnej to s vrcholovým tvarem. $a$ natahuje, $d$ posouvá vodorovně, $e$ svisle. Nové je jen $b$, které stlačuje periodu. Neučíš se tu novou gramatiku, jen jedno nové slovíčko."
     },
     "10-diff-einfuehrung": {
-      "0": "Tady sis postavil limitu, abys dostal sklon. Stejný nástroj odpoví ještě na jednu otázku, a to základnější: blíží se funkce v určitém bodě přesně k hodnotě, kterou tam má? Pokud ano, říkáme, že je tam spojitá. A platí jednosměrka, kterou si zapamatuj: kde se dá přiložit tečna, nemůže být skok — ale ne všude, kde není skok, existuje tečna. Důkazem je $f(x) = |x|$.",
+      "0": "Tady sis postavil limitu, abys dostal sklon. V tématu spojitost klade stejný nástroj jinou otázku: skáče funkce v určitém bodě, nebo jím prochází bez přerušení? Kde se dá přiložit tečna, není žádný skok. Proč opačné tvrzení neplatí, uvidíš tam.",
       "1": "Co tady pracně počítáš limitou s h, zvládneš v 11. ročníku na jednom řádku: $f(x) = x^2 \\Rightarrow f'(x) = 2x$. To pravidlo nespadlo z nebe — je to přesně ten výpočet s limitou, který teď trénuješ, vyřízený jednou provždy.",
       "2": "Jako cvičnou funkci používáš $f(x) = x^2$ — a ne náhodou. Paraboly jsou nejjednodušší křivky, u kterých se sklon mění. Přímka by měla všude stejný sklon — nebylo by co objevovat.",
       "3": "K čemu je dobré počítat sklon tečny? V 11. ročníku uvidíš: přesně tam, kde $f'(x) = 0$ — kde je tečna vodorovná — leží maxima a minima. Z limity se stane nástroj pro optimalizaci.",
@@ -192,7 +192,7 @@ export const portalBatch1 = {
       "0": "Přímka je nejjednodušší případ, a proto měřítko pro všechny ostatní: stálá změna na jeden krok. Kvadratická znamená, že se mění i ta změna; exponenciální znamená, že se mění procentně. Kdo spolehlivě přečte $m$ a $b$, pozná ostatní typy podle toho, v čem se od přímky liší.",
       "1": "Paraboly už jsi viděl — tady vidíš, kde stojí na rodinné fotce všech funkcí. Lineární, kvadratická, exponenciální, logaritmická — čtyři příbuzné s úplně odlišnými povahami.",
       "2": "Exponenciální růst předběhne každou polynomickou funkci — z dlouhodobého hlediska. Porovnej sám: pro x = 10 je 2ˣ = 1024, x² jen 100.",
-      "3": "V 11. ročníku uvidíš: každý typ funkce má své vlastní pravidlo derivování. Lineární → konstantní, kvadratická → lineární, exponenciální → zůstane exponenciální. Tvar se zachová."
+      "3": "V 11. ročníku uvidíš: každý typ funkce má své vlastní pravidlo derivování. Lineární → konstantní, kvadratická → lineární, exponenciální → zůstane exponenciální. Jen exponenciální funkce si při derivování zachová svůj tvar."
     },
     "10-lineare-funktionen": {
       "0": "Lineární funkce jsou nejjednodušší rodina funkcí. S jediným členem x² navíc budeš za chvíli kreslit paraboly — logika zůstává stejná: pochopit předpis, vyčíst graf.",
@@ -277,7 +277,7 @@ export const portalBatch1 = {
       "0": "$\\vec{x} = \\vec{p} + t\\vec{u}$ není nová myšlenka, ale bodový vektor a směrový vektor, který libovolně natahuješ. Všechno, co víš o sčítání a násobcích vektorů, se tu stává geometrií.",
       "1": "Jestli se dvě přímky protínají, je otázka, jestli má soustava rovnic řešení. Žádné řešení znamená rovnoběžné nebo mimoběžné, právě jedno znamená průsečík, nekonečně mnoho znamená totožné. Gauss odpovídá na otázky geometrie.",
       "2": "$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$. Každý výpočet vzdálenosti v prostoru, každá délka, každá normalizace se vrací k $a^2 + b^2 = c^2$. Věta z 10. ročníku tě nese až k maturitě.",
-      "3": "Co se tu učíš o rovinách a normálových vektorech, popisuje matici jako zobrazení. Stejná geometrie, v zápisu, kterému rozumí počítač."
+      "3": "I matice popisuje geometrii: zobrazuje vektory, otáčí, natahuje a zrcadlí prostor. Co se tu učíš o vektorech, rovinách a normálových vektorech, se tam znovu objeví, v zápisu, kterému rozumí počítač."
     },
     "12-hypothesentests": {
       "0": "Dál počítáš $P(X \\leq k)$ jako obvykle. Nové je jen to, že předem stanovíš hranici a potom se rozhodneš. Výpočet je starý, otázka je nová.",

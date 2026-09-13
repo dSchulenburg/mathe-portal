@@ -48,8 +48,8 @@ export const batch11b = {
         step1: 'Modellen: 1000 aktive lyttere til tidspunktet $t = 0$, eksponentielt fald:',
         step2: 'Halveringstid betyder: hvornår er der 500 lyttere tilbage?',
         step3: 'Isolér og logaritmér — $\\ln$ på begge sider:',
-        step4: 'Løs med hensyn til $t$ — efter ca. 6{,}93 dage er lytterantallet halveret:',
-        amir_comment: 'Halveringstiden er konstant! Uanset om det er 1000, 500 eller 250 lyttere — der går altid ca. 6{,}93 dage til den næste halvering. Det er det eksponentielle henfalds magi.',
+        step4: 'Løs med hensyn til $t$ — efter ca. 6,93 dage er lytterantallet halveret:',
+        amir_comment: 'Halveringstiden er konstant! Uanset om det er 1000, 500 eller 250 lyttere — der går altid ca. 6,93 dage til den næste halvering. Det er det eksponentielle henfalds magi.',
       },
     },
     realworld: {
@@ -121,8 +121,8 @@ export const batch11b = {
         step1: 'Bestem parametrene: $n = 10$ kast, $p = 0{,}5$ (fair mønt), søges: $k = 7$ gange plat.',
         step2: 'Beregn binomialkoefficienten — på hvor mange måder kan 7 plat fordeles på 10 kast?',
         step3: 'Indsæt i binomialformlen: placeringer $\\times$ successer $\\times$ fiaskoer:',
-        step4: 'Regn ud — sandsynligheden er ca. 11{,}7%, altså snarere usandsynligt:',
-        amir_comment: 'Kun 11{,}7% — det viser: selv med en fair mønt er 7 plat ud af 10 ikke særligt overraskende, men heller ikke normaltilfældet. Min tilfældighedsgenerator ser ud til at være i orden!',
+        step4: 'Regn ud — sandsynligheden er ca. 11,7%, altså snarere usandsynligt:',
+        amir_comment: 'Kun 11,7% — det viser: selv med en fair mønt er 7 plat ud af 10 ikke særligt overraskende, men heller ikke normaltilfældet. Min tilfældighedsgenerator ser ud til at være i orden!',
       },
       quality_control: {
         title: 'Kvalitetskontrol i produktionen',
@@ -130,7 +130,7 @@ export const batch11b = {
         step1: 'Parametre: $n = 20$ stykker, fejlrate $p = 0{,}02$, søges: $k = 0$ defekte dele.',
         step2: 'Indsæt: $\\binom{20}{0} = 1$, og $0{,}02^0 = 1$ — kun fiaskoerne bliver tilbage:',
         step3: 'Forenkl — tilbage står $0{,}98^{20}$:',
-        step4: 'Resultat: med ca. 66{,}8% sandsynlighed er ingen del defekt — slet ikke så sikkert!',
+        step4: 'Resultat: med ca. 66,8% sandsynlighed er ingen del defekt — slet ikke så sikkert!',
         amir_comment: 'Kun to tredjedeles chance for nul fejl ved en fejlrate på 2%! Det viser: selv små sandsynligheder hober sig op ved mange forsøg. Ved $n = 100$ ville $P(X = 0) \\approx 13{,}3\\%$ — der finder man næsten med sikkerhed en fejl.',
       },
     },
@@ -200,11 +200,11 @@ export const batch11b = {
     examples: {
       medical_test: {
         title: 'Medicinsk test — base rate fallacy',
-        context: 'En sygdomstest er korrekt i 99% af tilfældene. Sygdommen rammer 1% af befolkningen. Hvis testen er positiv — hvor sandsynligt er man så virkelig syg?',
+        context: 'En sygdomstest opdager 99% af de syge, men slår også ud hos 5% af de raske. Sygdommen rammer 1% af befolkningen. Hvis testen er positiv — hvor sandsynligt er man så virkelig syg?',
         step1: 'Givet: $P(K) = 0{,}01$ (sygdom), $P(+ \\mid K) = 0{,}99$ (sensitivitet), $P(+ \\mid \\bar{K}) = 0{,}05$ (falsk positiv-rate).',
         step2: 'Beregn den totale sandsynlighed for et positivt resultat — begge veje (syge + raske):',
         step3: 'Anvend Bayes\' sætning — $P(K \\mid +)$ søges:',
-        step4: 'Resultat: kun 16{,}7% sandsynlighed for virkelig at være syg — trods 99% testnøjagtighed!',
+        step4: 'Resultat: kun 16,7% sandsynlighed for virkelig at være syg — selvom testen opdager 99% af de syge!',
         amir_comment: 'Det er base rate fallacy! Testen er meget præcis, men fordi sygdommen er så sjælden ($P(K) = 1\\%$), er de fleste positive tests falsk positive. I ML-verdenen betyder det: precision og recall er ikke det samme!',
       },
       spam_filter: {
@@ -213,7 +213,7 @@ export const batch11b = {
         step1: 'Givne data: 30% af alle mails er spam, 80% af spammails indeholder "gevinst", men også 10% af de normale mails:',
         step2: 'Total sandsynlighed for, at en mail indeholder "gevinst":',
         step3: 'Bayes: hvor sandsynligt er spam, når "gevinst" forekommer?',
-        step4: 'Resultat: 77{,}4% — en mail med "gevinst" er med høj sandsynlighed spam:',
+        step4: 'Resultat: 77,4% — en mail med "gevinst" er med høj sandsynlighed spam:',
         amir_comment: 'Præcis sådan fungerer en Naive Bayes-klassifikator! Jo flere ord du tilføjer, desto mere præcist bliver filtret. DataPulse bruger samme princip: i stedet for ord analyserer vi lyttemønstre, og i stedet for spam/ikke-spam klassificerer vi genrepræferencer.',
       },
     },
@@ -228,7 +228,7 @@ export const batch11b = {
       },
       fraud_detection: {
         title: 'Svindeldetektion',
-        desc: 'Amirs betalingssystem opdager mistænkelige transaktioner med Bayes: når en alarm udløses — hvor sandsynligt er ægte svindel så? Præcis som ved den medicinske test: grundraten afgør det! Ved en svindelrate på 0{,}1% er de fleste alarmer falske.',
+        desc: 'Amirs betalingssystem opdager mistænkelige transaktioner med Bayes: når en alarm udløses — hvor sandsynligt er ægte svindel så? Præcis som ved den medicinske test: grundraten afgør det! Ved en svindelrate på 0,1% er de fleste alarmer falske.',
       },
     },
     mistakes: {
@@ -241,7 +241,7 @@ export const batch11b = {
       ignore_base_rate: {
         wrong: 'Ignorere grundraten (base rate fallacy)',
         correct: 'Tag altid $P(A)$ — prior-sandsynligheden — med i betragtning',
-        why: 'En test med 99% nøjagtighed lyder imponerende, men rammer sygdommen kun 1%, er $P(K \\mid +) \\approx 16{,}7\\%$. Den lave grundrate $P(K) = 0{,}01$ dominerer resultatet. Uden prior får du en fuldstændig forvrænget vurdering.',
+        why: 'En test, der opdager 99% af de syge, lyder imponerende, men rammer sygdommen kun 1%, er $P(K \\mid +) \\approx 16{,}7\\%$. Den lave grundrate $P(K) = 0{,}01$ dominerer resultatet. Uden prior får du en fuldstændig forvrænget vurdering.',
       },
     },
   },

@@ -87,8 +87,8 @@ export const exercises = [
   {
     id: 'quad-erw-001', topicId: '10-quad-funktionen', type: 'numeric-input', diffLevel: 'erweitert',
     competencies: ['kreativität', 'kommunikation'], points: 15, timeEstimate: 8,
-    contextKey: 'Ein Fussball wird abgeschossen. Die Flughöhe h(t) = -5t² + 20t beschreibt die Höhe in Metern nach t Sekunden.',
-    data: { questionText: 'Bestimme die maximale Flughöhe des Fussballs (in Metern).', correctValue: 20, tolerance: 0.1 },
+    contextKey: 'Ein Fußball wird abgeschossen. Die Flughöhe h(t) = -5t² + 20t beschreibt die Höhe in Metern nach t Sekunden.',
+    data: { questionText: 'Bestimme die maximale Flughöhe des Fußballs (in Metern).', correctValue: 20, tolerance: 0.1 },
     hintKeys: ['Die maximale Höhe ist der Scheitel der Parabel.', 'Scheitelpunkt: t_s = -b/(2a) = -20/(2·(-5)) = 2. Dann h(2) einsetzen.'],
     solutionKey: 'h(t) = -5t² + 20t. Scheitel bei t = -20/(2·(-5)) = 2. h(2) = -5·4 + 40 = 20 Meter.',
     tags: ['sachkontext', 'modellierung', 'abiturrelevant'],

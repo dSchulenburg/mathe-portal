@@ -96,7 +96,7 @@ export default function StoryScene({ character, story, topicStory, t, onRead }) 
             fontWeight: 600,
             color: character.color,
           }}>
-            🎯 {challenge}
+            🎯 <MathText text={challenge} />
           </div>
         )}
 

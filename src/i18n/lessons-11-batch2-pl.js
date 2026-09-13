@@ -48,8 +48,8 @@ export const batch11b = {
         step1: 'Model: 1000 aktywnych słuchaczy w chwili $t = 0$, rozpad wykładniczy:',
         step2: 'Okres połowicznego rozpadu oznacza: Kiedy zostanie 500 słuchaczy?',
         step3: 'Izolujemy i logarytmujemy — $\\ln$ po obu stronach:',
-        step4: 'Rozwiązujemy względem $t$ — po około 6{,}93 dniach liczba słuchaczy maleje o połowę:',
-        amir_comment: 'Okres połowicznego rozpadu jest stały! Niezależnie od tego, czy jest 1000, 500 czy 250 słuchaczy — zawsze trwa około 6{,}93 dnia do następnego połowienia. To magia rozpadu wykładniczego.',
+        step4: 'Rozwiązujemy względem $t$ — po około 6,93 dniach liczba słuchaczy maleje o połowę:',
+        amir_comment: 'Okres połowicznego rozpadu jest stały! Niezależnie od tego, czy jest 1000, 500 czy 250 słuchaczy — zawsze trwa około 6,93 dnia do następnego połowienia. To magia rozpadu wykładniczego.',
       },
     },
     realworld: {
@@ -121,8 +121,8 @@ export const batch11b = {
         step1: 'Parametry: $n = 10$ rzutów, $p = 0{,}5$ (uczciwa moneta), szukane: $k = 7$ razy orzeł.',
         step2: 'Obliczamy współczynnik dwumianowy — na ile sposobów można rozłożyć 7 orłów na 10 rzutów?',
         step3: 'Wstawiamy do wzoru dwumianowego: Układy $\\times$ sukcesy $\\times$ porażki:',
-        step4: 'Obliczamy — prawdopodobieństwo wynosi ok. 11{,}7%, więc raczej mało prawdopodobne:',
-        amir_comment: 'Tylko 11{,}7% — to pokazuje: Nawet przy uczciwej monecie 7 z 10 orłów nie jest szczególnie zaskakujące, ale też nie jest normalne. Mój generator losowy chyba jest w porządku!',
+        step4: 'Obliczamy — prawdopodobieństwo wynosi ok. 11,7%, więc raczej mało prawdopodobne:',
+        amir_comment: 'Tylko 11,7% — to pokazuje: Nawet przy uczciwej monecie 7 z 10 orłów nie jest szczególnie zaskakujące, ale też nie jest normalne. Mój generator losowy chyba jest w porządku!',
       },
       quality_control: {
         title: 'Kontrola jakości w produkcji',
@@ -130,7 +130,7 @@ export const batch11b = {
         step1: 'Parametry: $n = 20$ sztuk, wskaźnik wadliwości $p = 0{,}02$, szukane: $k = 0$ wadliwych.',
         step2: 'Wstawiamy: $\\binom{20}{0} = 1$ i $0{,}02^0 = 1$ — zostają tylko porażki:',
         step3: 'Upraszczamy — zostaje $0{,}98^{20}$:',
-        step4: 'Wynik: Z prawdopodobieństwem ok. 66{,}8% żadna część nie jest wadliwa — wcale nie takie pewne!',
+        step4: 'Wynik: Z prawdopodobieństwem ok. 66,8% żadna część nie jest wadliwa — wcale nie takie pewne!',
         amir_comment: 'Tylko dwie trzecie szansy na zero błędów przy 2% wadliwości! To pokazuje: Nawet małe prawdopodobieństwa sumują się przy wielu próbach. Przy $n = 100$ byłoby $P(X = 0) \\approx 13{,}3\\%$ — prawie na pewno znajdziesz błąd.',
       },
     },
@@ -200,11 +200,11 @@ export const batch11b = {
     examples: {
       medical_test: {
         title: 'Test medyczny — pułapka stawki bazowej',
-        context: 'Test na chorobę jest w 99% prawidłowy. Choroba dotyczy 1% populacji. Jeśli test jest pozytywny — jak prawdopodobne jest, że naprawdę jesteś chory?',
+        context: 'Test na chorobę wykrywa 99% chorych, ale reaguje też u 5% zdrowych. Choroba dotyczy 1% populacji. Jeśli test jest pozytywny — jak prawdopodobne jest, że naprawdę jesteś chory?',
         step1: 'Dane: $P(K) = 0{,}01$ (choroba), $P(+ \\mid K) = 0{,}99$ (czułość), $P(+ \\mid \\bar{K}) = 0{,}05$ (wskaźnik fałszywych wyników pozytywnych).',
         step2: 'Obliczamy całkowite prawdopodobieństwo pozytywnego wyniku — obie drogi (chory + zdrowy):',
         step3: 'Stosujemy twierdzenie Bayesa — szukamy $P(K \\mid +)$:',
-        step4: 'Wynik: Tylko 16{,}7% prawdopodobieństwa, że naprawdę jesteś chory — mimo 99% dokładności testu!',
+        step4: 'Wynik: Tylko 16,7% prawdopodobieństwa, że naprawdę jesteś chory — choć test wykrywa 99% chorych!',
         amir_comment: 'To jest pułapka stawki bazowej! Test jest super dokładny, ale ponieważ choroba jest tak rzadka ($P(K) = 1\\%$), większość pozytywnych testów to fałszywe alarmy. W świecie ML to znaczy: Precyzja i czułość to nie to samo!',
       },
       spam_filter: {
@@ -213,14 +213,14 @@ export const batch11b = {
         step1: 'Dane: 30% wszystkich maili to spam, 80% maili spamowych zawiera "wygrana", ale też 10% normalnych maili:',
         step2: 'Całkowite prawdopodobieństwo, że mail zawiera "wygrana":',
         step3: 'Bayes: Jak prawdopodobny jest spam, jeśli występuje "wygrana"?',
-        step4: 'Wynik: 77{,}4% — mail ze słowem "wygrana" jest z dużym prawdopodobieństwem spamem:',
+        step4: 'Wynik: 77,4% — mail ze słowem "wygrana" jest z dużym prawdopodobieństwem spamem:',
         amir_comment: 'Dokładnie tak działa klasyfikator Naive Bayes! Im więcej słów dodasz, tym precyzyjniejszy staje się filtr. DataPulse używa tej samej zasady: Zamiast słów analizujemy wzorce słuchania, zamiast spam/nie-spam klasyfikujemy preferencje gatunkowe.',
       },
     },
     realworld: {
       recommendation: { title: 'Rekomendacje muzyczne w DataPulse', desc: 'Filtrowanie kolaboratywne bazuje na prawdopodobieństwach warunkowych: $P(\\text{like}_Y \\mid \\text{like}_X)$ — "Kto lubi piosenkę X, z jakim prawdopodobieństwem lubi też piosenkę Y?" Spotify, Netflix i DataPulse obliczają miliony takich warunkowych prawdopodobieństw w czasie rzeczywistym.' },
       weather: { title: 'Prognoza pogody', desc: 'Meteorolodzy ciągle aktualizują prognozę za pomocą Bayesa: $P(\\text{Deszcz} \\mid \\text{Chmury, Ciśnienie, Wiatr})$. Każdy nowy pomiar udokładnia prognozę. Dlatego prawdopodobieństwo deszczu zmienia się w ciągu dnia — to Bayes w akcji!' },
-      fraud_detection: { title: 'Wykrywanie oszustw', desc: 'System płatności Amira rozpoznaje podejrzane transakcje za pomocą Bayesa: Jeśli alarm się włącza — jak prawdopodobne jest prawdziwe oszustwo? Dokładnie jak przy teście medycznym: Stawka bazowa decyduje! Przy wskaźniku oszustw 0{,}1% większość alarmów to fałszywe alarmy.' },
+      fraud_detection: { title: 'Wykrywanie oszustw', desc: 'System płatności Amira rozpoznaje podejrzane transakcje za pomocą Bayesa: Jeśli alarm się włącza — jak prawdopodobne jest prawdziwe oszustwo? Dokładnie jak przy teście medycznym: Stawka bazowa decyduje! Przy wskaźniku oszustw 0,1% większość alarmów to fałszywe alarmy.' },
     },
     mistakes: {
       confuse_direction: {
@@ -232,7 +232,7 @@ export const batch11b = {
       ignore_base_rate: {
         wrong: 'Ignorowanie stawki bazowej (Base Rate Fallacy)',
         correct: 'Zawsze uwzględniaj $P(A)$ — prawdopodobieństwo a priori',
-        why: 'Test o 99% dokładności brzmi imponująco, ale jeśli choroba dotyczy tylko 1%, to $P(K \\mid +) \\approx 16{,}7\\%$. Niska stawka bazowa $P(K) = 0{,}01$ dominuje wynik. Bez prior dostaniesz zupełnie zniekształconą ocenę.',
+        why: 'Test, który wykrywa 99% chorych, brzmi imponująco, ale jeśli choroba dotyczy tylko 1%, to $P(K \\mid +) \\approx 16{,}7\\%$. Niska stawka bazowa $P(K) = 0{,}01$ dominuje wynik. Bez prior dostaniesz zupełnie zniekształconą ocenę.',
       },
     },
   },

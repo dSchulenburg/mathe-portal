@@ -40,7 +40,7 @@ export const batch12a = {
         step2: 'Differentiate using the chain rule — inner function $g(t) = -0{,}03t$, inner derivative $g\'(t) = -0{,}03$:',
         step3: 'Calculate the initial rate — at $t = 0$, 150 particles disappear per second:',
         step4: 'Determine the half-life — solve $N(t_{1/2}) = \\frac{N_0}{2}$ using $\\ln$:',
-        kai_comment: 'After 23 seconds, half the particles are gone — that means I can already start freeing memory before the next explosion. In the engine, I set the kill threshold at $5\\%$ opacity, which is about $3 \\cdot t_{1/2} \\approx 70\\,\\text{s}$.',
+        kai_comment: 'After 23 seconds, half the particles are gone — that means I can already start freeing memory before the next explosion. In the engine, I set the kill threshold at $5\\%$ opacity, which is about $4{,}3 \\cdot t_{1/2} \\approx 100\\,\\text{s}$.',
       },
       ln_curve_analysis: {
         title: 'Curve analysis with $e$-function',
@@ -193,7 +193,7 @@ export const batch12a = {
       },
       distance_formula: {
         title: 'Point-to-Plane Distance',
-        desc: 'The shortest distance from a point $P$ to a plane is the length of the perpendicular from $P$ to the plane. The formula $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ computes this distance directly from the coordinate form. The absolute value in the numerator is crucial — without it, a negative "distance" could result.',
+        desc: 'The shortest distance from a point $P$ to a plane is the length of the perpendicular from $P$ to the plane. The formula $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ computes this distance directly from the coordinate form. The absolute value in the numerator is crucial — without it, a negative "distance" could result.',
       },
     },
     examples: {
@@ -238,8 +238,8 @@ export const batch12a = {
         kai_warning: 'You spot this bug immediately: Surfaces lit "from the inside" while the outside is dark. Happens when the normal vector points in the wrong direction. Always be consistent with the order — $\\overrightarrow{AB} \\times \\overrightarrow{AC}$, never the other way!',
       },
       distance_abs_forgotten: {
-        wrong: 'Forgetting the absolute value in the numerator: $d = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
-        correct: 'With absolute value: $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
+        wrong: 'Forgetting the absolute value in the numerator: $d(P,E) = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
+        correct: 'With absolute value: $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
         why: 'Distances are always positive! Without the absolute value in the numerator, a negative value can result when the point is on the "other side" of the plane. In an exam, that\'s a point deduction; in a game engine, it leads to objects falling through walls.',
       },
     },
@@ -259,7 +259,7 @@ export const batch12a = {
     },
     explanation: {
       intro: 'A hypothesis test is a structured procedure for making a decision based on data. You start with an assumption (null hypothesis $H_0$), collect data, and check whether the data speak against $H_0$. The alternative hypothesis $H_1$ describes what you actually suspect:',
-      significance: 'The significance level $\\alpha$ is the maximum probability of wrongly rejecting $H_0$ (Type I error). Typical values are $\\alpha = 0{,}05$ (5\\%) or $\\alpha = 0{,}01$ (1\\%). The smaller $\\alpha$, the stricter the test — but the more likely you are to miss real effects:',
+      significance: 'The significance level $\\alpha$ is the maximum probability of wrongly rejecting $H_0$ (Type I error). Typical values are $\\alpha = 0{,}05$ (5%) or $\\alpha = 0{,}01$ (1%). The smaller $\\alpha$, the stricter the test — but the more likely you are to miss real effects:',
       kai_tip: 'Think of hypothesis tests like an anti-cheat system: $H_0$ means "The player is NOT cheating." $\\alpha = 0{,}05$ means: Only in 5% of cases do I ban an honest player. I want to keep $\\alpha$ small to protect the innocent — but if I make it too small, real cheaters slip through. That\'s the alpha-beta trade-off!',
       rejection_region: 'The rejection region contains all test results that are so extreme that we reject $H_0$. For a left-sided test ($H_1\\colon p < p_0$), the rejection region is on the left — you calculate the largest number $k$ for which $P(X \\leq k) \\leq \\alpha$:',
       error_types: 'Two errors can occur: Type I error ($\\alpha$) — you reject $H_0$ even though it\'s true ("false alarm"). Type II error ($\\beta$) — you keep $H_0$ even though $H_1$ is true ("missed effect"). With a fixed sample size $n$: If you decrease $\\alpha$, $\\beta$ increases — and vice versa:',
@@ -294,7 +294,7 @@ export const batch12a = {
         step1: 'Formulate hypotheses — right-sided, because Kai wants to check if the rate is ABOVE 2%:',
         step2: 'Data: $n = 200$ sessions, $X = 8$ crashes (observed: $\\hat{p} = 4\\%$):',
         step3: 'Calculate the probability of $X \\geq 8$ under $H_0$ — this is the $p$-value:',
-        step4: 'Test decision: $p$-value $0{,}042 < \\alpha = 0{,}05$ — the crash rate has significantly increased:',
+        step4: 'Test decision: $p$-value $0{,}049 < \\alpha = 0{,}05$ — the crash rate has significantly increased:',
         kai_comment: 'Without the test, I might have said "8 crashes in 200 sessions, that\'s fine." But the hypothesis test shows: The probability of seeing this many crashes at a true 2% rate is below 5%. The patch needs reworking.',
       },
     },

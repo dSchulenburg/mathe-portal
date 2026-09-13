@@ -40,7 +40,7 @@ export const batch12a = {
         step2: 'Derivér med kjerneregelen — indre funksjon $g(t) = -0{,}03t$, indre derivert $g\'(t) = -0{,}03$:',
         step3: 'Regn ut starthastigheten — ved $t = 0$ forsvinner 150 partikler i sekundet:',
         step4: 'Bestem halveringstiden — løs $N(t_{1/2}) = \\frac{N_0}{2}$ med $\\ln$:',
-        kai_comment: 'Etter 23 sekunder er halvparten av partiklene borte — det vil si at jeg kan frigjøre minne allerede før det til neste eksplosjon. I motoren setter jeg slettegrensen ved $5\\%$ dekkevne, som er ca. $3 \\cdot t_{1/2} \\approx 70\\,\\text{s}$.',
+        kai_comment: 'Etter 23 sekunder er halvparten av partiklene borte — det vil si at jeg kan frigjøre minne allerede før det til neste eksplosjon. I motoren setter jeg slettegrensen ved $5\\%$ dekkevne, som er ca. $4{,}3 \\cdot t_{1/2} \\approx 100\\,\\text{s}$.',
       },
       ln_curve_analysis: {
         title: 'Funksjonsdrøfting med $e$-funksjon',
@@ -193,7 +193,7 @@ export const batch12a = {
       },
       distance_formula: {
         title: 'Avstand punkt-plan',
-        desc: 'Den korteste avstanden fra et punkt $P$ til et plan er lengden av normalen fra $P$ ned på planet. Formelen $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ regner ut denne avstanden direkte fra koordinatformen. Absoluttverdien i telleren er avgjørende — uten den kunne det komme ut en negativ "avstand".',
+        desc: 'Den korteste avstanden fra et punkt $P$ til et plan er lengden av normalen fra $P$ ned på planet. Formelen $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ regner ut denne avstanden direkte fra koordinatformen. Absoluttverdien i telleren er avgjørende — uten den kunne det komme ut en negativ "avstand".',
       },
     },
     examples: {
@@ -238,8 +238,8 @@ export const batch12a = {
         kai_warning: 'Den buggen kjenner man igjen med én gang: flater som er belyst "innenfra", mens utsiden er mørk. Skjer når normalvektoren peker feil vei. Vær alltid konsekvent med rekkefølgen — $\\overrightarrow{AB} \\times \\overrightarrow{AC}$, aldri omvendt!',
       },
       distance_abs_forgotten: {
-        wrong: 'Glemme absoluttverdien i telleren: $d = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
-        correct: 'Med absoluttverdi: $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
+        wrong: 'Glemme absoluttverdien i telleren: $d(P,E) = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
+        correct: 'Med absoluttverdi: $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
         why: 'Avstander er alltid positive! Uten absoluttverdien i telleren kan det komme ut en negativ verdi om punktet ligger på den "andre siden" av planet. På en prøve koster det poeng, i en spillmotor fører det til objekter som faller gjennom vegger.',
       },
     },
@@ -259,8 +259,8 @@ export const batch12a = {
     },
     explanation: {
       intro: 'En hypotesetest er en strukturert framgangsmåte for å ta en avgjørelse på grunnlag av data. Du starter med en antakelse (nullhypotesen $H_0$), samler data og undersøker om dataene taler mot $H_0$. Alternativhypotesen $H_1$ beskriver det du egentlig antar:',
-      significance: 'Signifikansnivået $\\alpha$ er den største sannsynligheten for at du feilaktig forkaster $H_0$ (type 1-feil). Typiske verdier er $\\alpha = 0{,}05$ (5\\%) eller $\\alpha = 0{,}01$ (1\\%). Jo mindre $\\alpha$, desto strengere er testen — men desto lettere overser man ekte effekter:',
-      kai_tip: 'Tenk på hypotesetester som et anti-juks-system: $H_0$ betyr "spilleren jukser IKKE". $\\alpha = 0{,}05$ betyr: bare i 5\\% av tilfellene utestenger jeg en ærlig spiller. Jeg vil holde $\\alpha$ liten for å beskytte de uskyldige — men gjør jeg den for liten, slipper de ekte jukserne unna. Det er alfa-beta-avveiingen!',
+      significance: 'Signifikansnivået $\\alpha$ er den største sannsynligheten for at du feilaktig forkaster $H_0$ (type 1-feil). Typiske verdier er $\\alpha = 0{,}05$ (5%) eller $\\alpha = 0{,}01$ (1%). Jo mindre $\\alpha$, desto strengere er testen — men desto lettere overser man ekte effekter:',
+      kai_tip: 'Tenk på hypotesetester som et anti-juks-system: $H_0$ betyr "spilleren jukser IKKE". $\\alpha = 0{,}05$ betyr: bare i 5% av tilfellene utestenger jeg en ærlig spiller. Jeg vil holde $\\alpha$ liten for å beskytte de uskyldige — men gjør jeg den for liten, slipper de ekte jukserne unna. Det er alfa-beta-avveiingen!',
       rejection_region: 'Forkastningsområdet inneholder alle testresultater som er så ekstreme at vi forkaster $H_0$. Ved en venstresidig test ($H_1\\colon p < p_0$) ligger forkastningsområdet til venstre — du regner ut det største tallet $k$ som oppfyller $P(X \\leq k) \\leq \\alpha$:',
       error_types: 'To feil kan skje: type 1-feil ($\\alpha$) — du forkaster $H_0$ selv om den er sann ("falsk alarm"). Type 2-feil ($\\beta$) — du beholder $H_0$ selv om $H_1$ er sann ("oversett effekt"). Ved fast utvalgsstørrelse $n$ gjelder: gjør du $\\alpha$ mindre, blir $\\beta$ større — og omvendt:',
     },
@@ -271,7 +271,7 @@ export const batch12a = {
       },
       significance_level: {
         title: 'Signifikansnivå $\\alpha$',
-        desc: 'Den øvre grensen for sannsynligheten for en type 1-feil. Ved $\\alpha = 0{,}05$ godtar du en risiko på 5\\% for feilaktig å forkaste $H_0$. Vanlige verdier: $0{,}10$ (utforskende), $0{,}05$ (standard), $0{,}01$ (streng). $\\alpha$ fastsettes FØR testen — aldri justert i etterkant!',
+        desc: 'Den øvre grensen for sannsynligheten for en type 1-feil. Ved $\\alpha = 0{,}05$ godtar du en risiko på 5% for feilaktig å forkaste $H_0$. Vanlige verdier: $0{,}10$ (utforskende), $0{,}05$ (standard), $0{,}01$ (streng). $\\alpha$ fastsettes FØR testen — aldri justert i etterkant!',
       },
       error_types: {
         title: 'Type 1- og type 2-feil',
@@ -286,16 +286,16 @@ export const batch12a = {
         step2: 'Forsøksoppsett: $n = 100$ kamper, $X$ = antall seire for helt A, binomisk fordelt:',
         step3: 'Regn ut sannsynligheten for $X \\leq 40$ under $H_0$ (kumulativ binomisk fordeling):',
         step4: 'Testavgjørelse: $p$-verdi $0{,}028 < \\alpha = 0{,}05$ — $H_0$ forkastes. Helt A er signifikant for svak:',
-        kai_comment: 'Det var det statistiske beviset jeg trengte til balanseteamet. 40 av 100 ser "nesten greit" ut, men testen viser: ved rettferdig balansering ville man bare sett et så ekstremt resultat i 2{,}8\\% av tilfellene. Det holder til en nerf-oppdatering!',
+        kai_comment: 'Det var det statistiske beviset jeg trengte til balanseteamet. 40 av 100 ser "nesten greit" ut, men testen viser: ved rettferdig balansering ville man bare sett et så ekstremt resultat i 2,8% av tilfellene. Det holder til en nerf-oppdatering!',
       },
       crash_rate: {
         title: 'Undersøk krasjraten etter oppdateringen',
-        context: 'Etter en oppdatering skal krasjraten være høyst 2\\%. I 200 testøkter krasjer spillet 8 ganger. Er det for mye?',
-        step1: 'Sett opp hypotesene — høyresidig, fordi Kai vil undersøke om raten ligger OVER 2\\%:',
+        context: 'Etter en oppdatering skal krasjraten være høyst 2%. I 200 testøkter krasjer spillet 8 ganger. Er det for mye?',
+        step1: 'Sett opp hypotesene — høyresidig, fordi Kai vil undersøke om raten ligger OVER 2%:',
         step2: 'Data: $n = 200$ økter, $X = 8$ krasj (observert: $\\hat{p} = 4\\%$):',
         step3: 'Regn ut sannsynligheten for $X \\geq 8$ under $H_0$ — det er $p$-verdien:',
-        step4: 'Testavgjørelse: $p$-verdi $0{,}042 < \\alpha = 0{,}05$ — krasjraten er signifikant forhøyet:',
-        kai_comment: 'Uten testen hadde jeg kanskje sagt "8 krasj på 200 økter, det går nok". Men hypotesetesten viser: sannsynligheten for å se så mange krasj ved en ekte rate på 2\\% er under 5\\%. Oppdateringen må gjennomarbeides på nytt.',
+        step4: 'Testavgjørelse: $p$-verdi $0{,}049 < \\alpha = 0{,}05$ — krasjraten er signifikant forhøyet:',
+        kai_comment: 'Uten testen hadde jeg kanskje sagt "8 krasj på 200 økter, det går nok". Men hypotesetesten viser: sannsynligheten for å se så mange krasj ved en ekte rate på 2% er under 5%. Oppdateringen må gjennomarbeides på nytt.',
       },
     },
     realworld: {

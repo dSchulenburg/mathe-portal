@@ -40,7 +40,7 @@ export const batch12a = {
         step2: 'Derivar con la regla de la cadena: función interior $g(t) = -0{,}03t$, derivada interior $g\'(t) = -0{,}03$:',
         step3: 'Calcular la tasa inicial: en $t = 0$ desaparecen 150 partículas por segundo:',
         step4: 'Determinar el tiempo de semivida: resolver $N(t_{1/2}) = \\frac{N_0}{2}$ con el $\\ln$:',
-        kai_comment: 'A los 23 segundos ha desaparecido la mitad de las partículas, así que puedo liberar memoria incluso antes para la siguiente explosión. En el motor pongo el umbral de eliminación en el $5\\%$ de opacidad, que son unos $3 \\cdot t_{1/2} \\approx 70\\,\\text{s}$.',
+        kai_comment: 'A los 23 segundos ha desaparecido la mitad de las partículas, así que puedo liberar memoria incluso antes para la siguiente explosión. En el motor pongo el umbral de eliminación en el $5\\%$ de opacidad, que son unos $4{,}3 \\cdot t_{1/2} \\approx 100\\,\\text{s}$.',
       },
       ln_curve_analysis: {
         title: 'Estudio de función con función $e$',
@@ -193,7 +193,7 @@ export const batch12a = {
       },
       distance_formula: {
         title: 'Distancia punto-plano',
-        desc: 'La distancia más corta de un punto $P$ a un plano es la longitud de la perpendicular desde $P$ al plano. La fórmula $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ calcula esa distancia directamente a partir de la forma general. El valor absoluto del numerador es decisivo: sin él podría salir una «distancia» negativa.',
+        desc: 'La distancia más corta de un punto $P$ a un plano es la longitud de la perpendicular desde $P$ al plano. La fórmula $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ calcula esa distancia directamente a partir de la forma general. El valor absoluto del numerador es decisivo: sin él podría salir una «distancia» negativa.',
       },
     },
     examples: {
@@ -238,8 +238,8 @@ export const batch12a = {
         kai_warning: 'Este fallo se reconoce al instante: superficies iluminadas «desde dentro» mientras la cara exterior queda oscura. Ocurre cuando el vector normal apunta en el sentido equivocado. ¡Sé siempre coherente con el orden: $\\overrightarrow{AB} \\times \\overrightarrow{AC}$, nunca al revés!',
       },
       distance_abs_forgotten: {
-        wrong: 'Olvidar el valor absoluto en el numerador: $d = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
-        correct: 'Con valor absoluto: $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
+        wrong: 'Olvidar el valor absoluto en el numerador: $d(P,E) = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
+        correct: 'Con valor absoluto: $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
         why: '¡Las distancias son siempre positivas! Sin el valor absoluto en el numerador puede salir un valor negativo si el punto está al «otro lado» del plano. En un examen eso cuesta puntos; en un motor de juego provoca objetos que atraviesan paredes.',
       },
     },
@@ -259,8 +259,8 @@ export const batch12a = {
     },
     explanation: {
       intro: 'Un contraste de hipótesis es un procedimiento estructurado para tomar una decisión a partir de datos. Partes de una suposición (la hipótesis nula $H_0$), reúnes datos y compruebas si los datos van en contra de $H_0$. La hipótesis alternativa $H_1$ describe lo que en realidad sospechas:',
-      significance: 'El nivel de significación $\\alpha$ es la probabilidad máxima con la que rechazas $H_0$ erróneamente (error de tipo I). Valores típicos son $\\alpha = 0{,}05$ (5\\%) o $\\alpha = 0{,}01$ (1\\%). Cuanto menor sea $\\alpha$, más estricto es el contraste, pero más fácil resulta pasar por alto efectos reales:',
-      kai_tip: 'Pensad en los contrastes de hipótesis como en un sistema antitrampas: $H_0$ significa «el jugador NO hace trampas». $\\alpha = 0{,}05$ significa que solo en el 5\\% de los casos baneo a un jugador honesto. Quiero mantener $\\alpha$ pequeño para proteger a los inocentes, pero si lo hago demasiado pequeño, los tramposos de verdad se cuelan. ¡Ese es el compromiso alfa-beta!',
+      significance: 'El nivel de significación $\\alpha$ es la probabilidad máxima con la que rechazas $H_0$ erróneamente (error de tipo I). Valores típicos son $\\alpha = 0{,}05$ (5%) o $\\alpha = 0{,}01$ (1%). Cuanto menor sea $\\alpha$, más estricto es el contraste, pero más fácil resulta pasar por alto efectos reales:',
+      kai_tip: 'Pensad en los contrastes de hipótesis como en un sistema antitrampas: $H_0$ significa «el jugador NO hace trampas». $\\alpha = 0{,}05$ significa que solo en el 5% de los casos baneo a un jugador honesto. Quiero mantener $\\alpha$ pequeño para proteger a los inocentes, pero si lo hago demasiado pequeño, los tramposos de verdad se cuelan. ¡Ese es el compromiso alfa-beta!',
       rejection_region: 'La región de rechazo contiene todos los resultados tan extremos que llevan a rechazar $H_0$. En un contraste unilateral por la izquierda ($H_1\\colon p < p_0$) la región de rechazo queda a la izquierda: calculas el mayor número $k$ para el que se cumple $P(X \\leq k) \\leq \\alpha$:',
       error_types: 'Pueden ocurrir dos errores: error de tipo I ($\\alpha$), rechazas $H_0$ aunque sea cierta («falsa alarma»). Error de tipo II ($\\beta$), mantienes $H_0$ aunque $H_1$ sea cierta («efecto no detectado»). Con un tamaño de muestra $n$ fijo se cumple: si reduces $\\alpha$, $\\beta$ aumenta, y al revés:',
     },
@@ -271,7 +271,7 @@ export const batch12a = {
       },
       significance_level: {
         title: 'Nivel de significación $\\alpha$',
-        desc: 'La cota superior de la probabilidad de un error de tipo I. Con $\\alpha = 0{,}05$ aceptas un riesgo del 5\\% de rechazar $H_0$ erróneamente. Valores habituales: $0{,}10$ (exploratorio), $0{,}05$ (estándar), $0{,}01$ (estricto). ¡$\\alpha$ se fija ANTES del contraste, nunca se ajusta a posteriori!',
+        desc: 'La cota superior de la probabilidad de un error de tipo I. Con $\\alpha = 0{,}05$ aceptas un riesgo del 5% de rechazar $H_0$ erróneamente. Valores habituales: $0{,}10$ (exploratorio), $0{,}05$ (estándar), $0{,}01$ (estricto). ¡$\\alpha$ se fija ANTES del contraste, nunca se ajusta a posteriori!',
       },
       error_types: {
         title: 'Errores de tipo I y de tipo II',
@@ -286,16 +286,16 @@ export const batch12a = {
         step2: 'Diseño experimental: $n = 100$ partidas, $X$ = número de victorias del héroe A, con distribución binomial:',
         step3: 'Calcular la probabilidad de $X \\leq 40$ bajo $H_0$ (distribución binomial acumulada):',
         step4: 'Decisión del contraste: valor $p$ de $0{,}028 < \\alpha = 0{,}05$; se rechaza $H_0$. El héroe A es significativamente demasiado débil:',
-        kai_comment: 'Esa era la prueba estadística que necesitaba para el equipo de equilibrio. 40 de 100 parece «casi normal», pero el contraste muestra que, con un equilibrio justo, solo se vería un resultado tan extremo en el 2{,}8\\% de los casos. ¡Suficiente para una actualización de ajuste!',
+        kai_comment: 'Esa era la prueba estadística que necesitaba para el equipo de equilibrio. 40 de 100 parece «casi normal», pero el contraste muestra que, con un equilibrio justo, solo se vería un resultado tan extremo en el 2,8% de los casos. ¡Suficiente para una actualización de ajuste!',
       },
       crash_rate: {
         title: 'Comprobar la tasa de fallos tras la actualización',
-        context: 'Tras un parche, la tasa de fallos debe ser como máximo del 2\\%. En 200 sesiones de prueba el juego se cierra 8 veces. ¿Es demasiado?',
-        step1: 'Plantear las hipótesis: unilateral por la derecha, porque Kai quiere comprobar si la tasa está POR ENCIMA del 2\\%:',
+        context: 'Tras un parche, la tasa de fallos debe ser como máximo del 2%. En 200 sesiones de prueba el juego se cierra 8 veces. ¿Es demasiado?',
+        step1: 'Plantear las hipótesis: unilateral por la derecha, porque Kai quiere comprobar si la tasa está POR ENCIMA del 2%:',
         step2: 'Datos: $n = 200$ sesiones, $X = 8$ cierres (observado: $\\hat{p} = 4\\%$):',
         step3: 'Calcular la probabilidad de $X \\geq 8$ bajo $H_0$: ese es el valor $p$:',
-        step4: 'Decisión del contraste: valor $p$ de $0{,}042 < \\alpha = 0{,}05$; la tasa de fallos está significativamente elevada:',
-        kai_comment: 'Sin el contraste quizá habría dicho «8 cierres en 200 sesiones, no está mal». Pero el contraste de hipótesis muestra que la probabilidad de ver tantos cierres con una tasa real del 2\\% es inferior al 5\\%. Hay que revisar el parche otra vez.',
+        step4: 'Decisión del contraste: valor $p$ de $0{,}049 < \\alpha = 0{,}05$; la tasa de fallos está significativamente elevada:',
+        kai_comment: 'Sin el contraste quizá habría dicho «8 cierres en 200 sesiones, no está mal». Pero el contraste de hipótesis muestra que la probabilidad de ver tantos cierres con una tasa real del 2% es inferior al 5%. Hay que revisar el parche otra vez.',
       },
     },
     realworld: {

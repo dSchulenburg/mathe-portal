@@ -198,6 +198,22 @@ function report(lang, file, kind, detail) {
   findings.push({ lang, file, kind, detail });
 }
 
+/**
+ * ROH: LaTeX-Syntax AUSSERHALB von $...$. MathText rendert nur die Spans als
+ * KaTeX; alles andere landet woertlich auf dem Bildschirm — "6{,}93 Tage",
+ * "5\%". Befund 13.09.2026: 15 Keys in de UND in fast allen Uebersetzungen.
+ * Geprueft wird auch die deutsche Quelle, denn dort entsteht der Fehler.
+ */
+function checkRaw(lang, file, flat) {
+  if (skip.includes('raw')) return;
+  for (const [k, v] of flat) {
+    if (typeof v !== 'string') continue;
+    const outside = v.replace(/\$[^$]*\$/g, ' ');
+    const hits = outside.match(/\{,\}|\\[a-zA-Z%,;!]+/g);
+    if (hits) report(lang, file, 'ROH', `${k}: ${[...new Set(hits)].join(' ')} ausserhalb von $...$`);
+  }
+}
+
 const sources = germanSources();
 if (sources.length === 0) {
   console.error(`Keine deutschen Quelldateien in ${I18N_DIR} gefunden.`);
@@ -214,6 +230,7 @@ for (const src of sources) {
     continue;
   }
   const deFlat = flatten(de.data);
+  if (!only || only.includes('de')) checkRaw('de', src, deFlat);
 
   for (const lang of langs) {
     const file = `${base}-${lang}.js`;
@@ -238,6 +255,7 @@ for (const src of sources) {
     }
 
     const trFlat = flatten(tr.data);
+    checkRaw(lang, file, trFlat);
 
     // 1. Key-Parity
     if (!skip.includes('keys')) {

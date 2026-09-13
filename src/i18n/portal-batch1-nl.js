@@ -167,7 +167,7 @@ export const portalBatch1 = {
     "10-aehnlichkeit": {
       "0": "Waarom is $\\sin(30°)$ altijd $0{,}5$ — hoe groot de driehoek ook is? Juist door gelijkvormigheid. Alle rechthoekige driehoeken met dezelfde hoek zijn gelijkvormig, dus hebben ze dezelfde verhoudingen tussen de zijden. Goniometrie is de stelling van Thales met andere woorden.",
       "1": "Verdubbel je alle maten van een piramide, dan wordt het volume acht keer zo groot ($2^3 = 8$). Deze kubische schaling is de reden waarom kleine dieren naar verhouding sterker zijn dan grote — meetkunde zit overal.",
-      "2": "(3, 4, 5) schaalt met $k=2$ naar (6, 8, 10), met $k=7$ naar (21, 28, 35) — en ze blijven allemaal rechthoekig. Gelijkvormigheid erft de rechte hoek, omdat de verhouding $a^2 + b^2 = c^2$ bij het vergroten niet verandert."
+      "2": "(3, 4, 5) schaalt met $k=2$ naar (6, 8, 10), met $k=7$ naar (21, 28, 35) — en ze blijven allemaal rechthoekig. Gelijkvormigheid erft de rechte hoek, omdat bij het vergroten alle zijden met dezelfde $k$ worden vermenigvuldigd: $(ka)^2 + (kb)^2 = k^2(a^2 + b^2) = (kc)^2$."
     },
     "10-periodisch": {
       "0": "In de rechthoekige driehoek was $\\sin(\\alpha)$ een verhouding van twee zijden. Op de eenheidscirkel wordt dat een hoogte die met de hoek verandert — en als de hoek doorloopt, herhaalt ze zich. Precies daar ontstaat de golf.",
@@ -176,7 +176,7 @@ export const portalBatch1 = {
       "3": "$f(x) = a \\cdot \\sin(b(x-d)) + e$ — vergelijk dat met de topvorm. $a$ rekt uit, $d$ verschuift horizontaal, $e$ verticaal. Alleen $b$ is nieuw, en die drukt de periode in elkaar. Je leert hier geen nieuwe grammatica, alleen één nieuw woord."
     },
     "10-diff-einfuehrung": {
-      "0": "Je hebt hier de limiet gebouwd om een helling te krijgen. Hetzelfde gereedschap beantwoordt nog een vraag, en wel een fundamentelere: loopt de functie op een plek precies naar de waarde die ze daar aanneemt? Zo ja, dan heet ze daar continu. En er geldt een eenrichtingsstraat die je moet onthouden: waar je een raaklijn kunt tekenen, kan geen sprong zitten — maar niet overal waar geen sprong is, bestaat een raaklijn. $f(x) = |x|$ is het bewijs.",
+      "0": "Je hebt hier de limiet gebouwd om een helling te krijgen. In het onderwerp continuïteit stelt hetzelfde gereedschap een andere vraag: maakt de functie op een plek een sprong, of loopt ze door zonder de pen op te tillen? Waar je een raaklijn kunt tekenen, is er geen sprong. Waarom het omgekeerde niet geldt, zie je daar.",
       "1": "Wat je hier moeizaam met de h-limiet uitrekent, gaat in klas 11 in één regel: $f(x) = x^2 \\Rightarrow f'(x) = 2x$. De regel komt niet uit het niets — het is precies de limietberekening die je nu oefent, één keer voor altijd gedaan.",
       "2": "Je gebruikt $f(x) = x^2$ als oefenfunctie — en dat is geen toeval. Parabolen zijn de eenvoudigste krommen waarbij de helling verandert. Een rechte lijn zou overal dezelfde helling hebben — dan viel er niets te ontdekken.",
       "3": "Wat heb je eraan om de helling van de raaklijn uit te rekenen? In klas 11 zie je het: precies daar waar $f'(x) = 0$ — waar de raaklijn horizontaal ligt — zitten de maxima en minima. Zo wordt de limiet een gereedschap om te optimaliseren.",
@@ -192,7 +192,7 @@ export const portalBatch1 = {
       "0": "De rechte lijn is het eenvoudigste geval en daarom de maatstaf voor alle andere: constante verandering per stap. Kwadratisch betekent: de verandering verandert; exponentieel betekent: ze verandert procentueel. Wie $m$ en $b$ zeker kan aflezen, herkent de andere families aan de manier waarop ze van de rechte lijn afwijken.",
       "1": "Je hebt al parabolen gezien — hier zie je waar ze op het familieportret van alle functies staan. Lineair, kwadratisch, exponentieel, logaritmisch — vier familieleden met heel verschillende karakters.",
       "2": "Exponentiële groei haalt elke veeltermfunctie in — op de lange duur. Vergelijk zelf: bij x = 10 is 2ˣ = 1024, x² maar 100.",
-      "3": "In klas 11 zie je: elke functiefamilie heeft haar eigen afgeleide-regel. Lineair → constant, kwadratisch → lineair, exponentieel → blijft exponentieel. De vorm blijft behouden."
+      "3": "In klas 11 zie je: elke functiefamilie heeft haar eigen afgeleide-regel. Lineair → constant, kwadratisch → lineair, exponentieel → blijft exponentieel. Alleen de exponentiële functie behoudt bij het differentiëren haar vorm."
     },
     "10-lineare-funktionen": {
       "0": "Lineaire functies zijn de eenvoudigste functiefamilie. Met maar één extra x²-term teken je straks parabolen — de logica blijft dezelfde: formule begrijpen, grafiek uitleggen.",
@@ -277,7 +277,7 @@ export const portalBatch1 = {
       "0": "$\\vec{x} = \\vec{p} + t\\vec{u}$ is geen nieuw idee, maar een steunvector plus een richtingsvector die je willekeurig uitrekt. Alles wat je over optellen en veelvouden weet, wordt hier meetkunde.",
       "1": "Of twee lijnen elkaar snijden, is de vraag of een stelsel vergelijkingen oplosbaar is. Geen oplossing betekent evenwijdig of kruisend, precies één betekent snijpunt, oneindig veel betekent samenvallend. Gauss rekent, en de meetkunde krijgt antwoord.",
       "2": "$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$. Elke afstandsberekening in de ruimte, elke lengte, elke normering gaat terug op $a^2 + b^2 = c^2$. De stelling uit klas 10 draagt je tot aan het eindexamen.",
-      "3": "Wat je hier over vlakken en normaalvectoren leert, beschrijft een matrix als afbeelding. Dezelfde meetkunde, in een notatie die de computer begrijpt."
+      "3": "Ook een matrix beschrijft meetkunde: ze beeldt vectoren af, draait, rekt en spiegelt de ruimte. Wat je hier over vectoren, vlakken en normaalvectoren leert, komt daar terug, in een notatie die de computer begrijpt."
     },
     "12-hypothesentests": {
       "0": "Je berekent gewoon verder $P(X \\leq k)$ zoals je gewend bent. Nieuw is alleen dat je vooraf een grens vastlegt en daarna een beslissing neemt. De berekening is oud, de vraag is nieuw.",

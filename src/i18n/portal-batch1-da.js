@@ -167,7 +167,7 @@ export const portalBatch1 = {
     "10-aehnlichkeit": {
       "0": "Hvorfor er $\\sin(30°)$ altid $0{,}5$ — uanset hvor stor trekanten er? Netop på grund af ligedannethed. Alle retvinklede trekanter med den samme vinkel er ligedannede, så de har de samme sideforhold. Trigonometri er ligedannethed med et andet ordforråd.",
       "1": "Fordobler du alle mål på en pyramide, bliver dens rumfang otte gange så stort ($2^3 = 8$). Denne kubiske skalering er grunden til, at små dyr er relativt stærkere end store — geometrien findes overalt.",
-      "2": "(3, 4, 5) skaleres med $k=2$ til (6, 8, 10), med $k=7$ til (21, 28, 35) — og alle forbliver retvinklede. Ligedannethed arver den rette vinkel, fordi forholdet $a^2 + b^2 = c^2$ ikke ændrer sig, når man strækker."
+      "2": "(3, 4, 5) skaleres med $k=2$ til (6, 8, 10), med $k=7$ til (21, 28, 35) — og alle forbliver retvinklede. Ligedannethed arver den rette vinkel, fordi alle sider ganges med det samme $k$, når man strækker: $(ka)^2 + (kb)^2 = k^2(a^2 + b^2) = (kc)^2$."
     },
     "10-periodisch": {
       "0": "I den retvinklede trekant var $\\sin(\\alpha)$ forholdet mellem to sider. På enhedscirklen bliver det til en højde, der ændrer sig med vinklen — og når vinklen fortsætter, gentager den sig. Præcis dér opstår bølgen.",
@@ -176,7 +176,7 @@ export const portalBatch1 = {
       "3": "$f(x) = a \\cdot \\sin(b(x-d)) + e$ — sammenlign det med toppunktsformen. $a$ strækker, $d$ forskyder vandret, $e$ lodret. Kun $b$ er nyt, og det trykker perioden sammen. Du lærer ikke ny grammatik her, bare en ny glose."
     },
     "10-diff-einfuehrung": {
-      "0": "Her har du bygget grænseværdien for at få en hældning. Det samme værktøj besvarer endnu et spørgsmål, og et mere grundlæggende: Går funktionen i et punkt mod præcis den værdi, den har dér? Hvis ja, kaldes den kontinuert dér. Og der gælder en ensrettet gade, som du bør huske: Hvor du kan tegne en tangent, kan der ikke være et spring — men der findes ikke en tangent overalt, hvor der ikke er et spring. $f(x) = |x|$ er beviset.",
+      "0": "Her har du bygget grænseværdien for at få en hældning. I emnet kontinuitet stiller det samme værktøj et andet spørgsmål: Springer funktionen i et punkt, eller løber den igennem uden at løfte blyanten? Hvor du kan tegne en tangent, er der intet spring. Hvorfor det omvendte ikke gælder, ser du dér.",
       "1": "Det, du her møjsommeligt regner ud med h-grænseværdien, klarer du i 11. klasse på én linje: $f(x) = x^2 \\Rightarrow f'(x) = 2x$. Reglen kommer ikke ud af det blå — den er præcis den grænseværdiudregning, du øver nu, gjort én gang for alle.",
       "2": "Du bruger $f(x) = x^2$ som øvefunktion — og det er ikke tilfældigt. Parabler er de enkleste kurver, hvor hældningen ændrer sig. En ret linje ville have samme hældning overalt — så var der intet at opdage.",
       "3": "Hvad nytter det at regne tangentens hældning ud? I 11. klasse ser du det: Netop dér, hvor $f'(x) = 0$ — hvor tangenten ligger vandret — sidder maksima og minima. Grænseværdien bliver til et værktøj til optimering.",
@@ -192,7 +192,7 @@ export const portalBatch1 = {
       "0": "Den rette linje er det enkleste tilfælde og derfor målestokken for alle de andre: konstant ændring per skridt. Kvadratisk betyder, at ændringen ændrer sig; eksponentiel betyder, at den ændrer sig procentvis. Den, der sikkert kan aflæse $m$ og $b$, genkender de andre typer på, hvordan de afviger fra linjen.",
       "1": "Du har allerede set parabler — her ser du, hvor de står på familiebilledet af alle funktioner. Lineær, kvadratisk, eksponentiel, logaritmisk — fire slægtninge med helt forskellige personligheder.",
       "2": "Eksponentiel vækst overhaler ethvert polynomium — i det lange løb. Sammenlign selv: ved x = 10 er 2ˣ = 1024, x² kun 100.",
-      "3": "I 11. klasse ser du: Hver funktionstype har sin egen differentiationsregel. Lineær → konstant, kvadratisk → lineær, eksponentiel → forbliver eksponentiel. Formen bevares."
+      "3": "I 11. klasse ser du: Hver funktionstype har sin egen differentiationsregel. Lineær → konstant, kvadratisk → lineær, eksponentiel → forbliver eksponentiel. Kun eksponentialfunktionen bevarer sin form, når man differentierer."
     },
     "10-lineare-funktionen": {
       "0": "Lineære funktioner er den enkleste funktionsfamilie. Med bare ét ekstra x²-led tegner du snart parabler — logikken er den samme: forstå forskriften, tolke grafen.",
@@ -277,7 +277,7 @@ export const portalBatch1 = {
       "0": "$\\vec{x} = \\vec{p} + t\\vec{u}$ er ikke en ny idé, men en stedvektor og en retningsvektor, som du strækker, så meget du vil. Alt, hvad du ved om addition og multipla, bliver til geometri her.",
       "1": "Om to linjer skærer hinanden, er spørgsmålet om, hvorvidt et ligningssystem kan løses. Ingen løsning betyder parallelle eller vindskæve, præcis én betyder skæringspunkt, uendeligt mange betyder sammenfaldende. Gauss regner, og geometrien får svar.",
       "2": "$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$. Enhver afstandsberegning i rummet, enhver længde, enhver normering går tilbage til $a^2 + b^2 = c^2$. Sætningen fra 10. klasse bærer helt til eksamen.",
-      "3": "Det, du lærer her om planer og normalvektorer, beskriver en matrix som afbildning. Den samme geometri, i en skrivemåde, som computeren forstår."
+      "3": "Også en matrix beskriver geometri: Den afbilder vektorer, drejer, strækker og spejler rummet. Det, du lærer her om vektorer, planer og normalvektorer, dukker op igen dér, i en skrivemåde, som computeren forstår."
     },
     "12-hypothesentests": {
       "0": "Du beregner $P(X \\leq k)$ som du plejer. Nyt er kun, at du fastlægger en grænse på forhånd og træffer en beslutning bagefter. Udregningen er gammel, spørgsmålet er nyt.",

@@ -55,7 +55,7 @@ function WorkedExample({ example, topicId, character, t, accentColor }) {
         fontWeight: 600,
         color: accentColor,
       }}>
-        {t(`lessons.${topicId}.${example.titleKey}`)}
+        <MathText text={t(`lessons.${topicId}.${example.titleKey}`)} />
       </h4>
 
       {/* Context (optional) */}

@@ -124,7 +124,7 @@ export const lesson = {
       why: 'Der Scheitelpunkt einer Parabel ist das einfachste Optimum überhaupt',
       bubble: {
         character: 'euklid',
-        text: 'Wenn deine Zielfunktion am Ende eine Parabel ist, brauchst du gar keine Ableitung — du kennst den Scheitelpunkt schon aus Klasse 10. Quadratische Optimierung ist Extremwert „mit blossem Auge".',
+        text: 'Wenn deine Zielfunktion am Ende eine Parabel ist, brauchst du gar keine Ableitung — du kennst den Scheitelpunkt schon aus Klasse 10. Quadratische Optimierung ist Extremwert „mit bloßem Auge".',
       },
     },
     {

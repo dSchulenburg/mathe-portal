@@ -40,7 +40,7 @@ export const batch12a = {
         step2: 'Derivovat řetězovým pravidlem — vnitřní funkce $g(t) = -0{,}03t$, vnitřní derivace $g\'(t) = -0{,}03$:',
         step3: 'Spočítat počáteční rychlost — při $t = 0$ mizí 150 částic za sekundu:',
         step4: 'Určit poločas — vyřešit $N(t_{1/2}) = \\frac{N_0}{2}$ pomocí $\\ln$:',
-        kai_comment: 'Po 23 sekundách je polovina částic pryč — to znamená, že můžu uvolnit paměť ještě dřív pro další explozi. V enginu nastavuji práh smazání na $5\\%$ neprůhlednosti, což je zhruba $3 \\cdot t_{1/2} \\approx 70\\,\\text{s}$.',
+        kai_comment: 'Po 23 sekundách je polovina částic pryč — to znamená, že můžu uvolnit paměť ještě dřív pro další explozi. V enginu nastavuji práh smazání na $5\\%$ neprůhlednosti, což je zhruba $4{,}3 \\cdot t_{1/2} \\approx 100\\,\\text{s}$.',
       },
       ln_curve_analysis: {
         title: 'Vyšetření průběhu s $e$-funkcí',
@@ -193,7 +193,7 @@ export const batch12a = {
       },
       distance_formula: {
         title: 'Vzdálenost bod-rovina',
-        desc: 'Nejkratší vzdálenost bodu $P$ od roviny je délka kolmice z $P$ na rovinu. Vzorec $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ počítá tuto vzdálenost přímo z obecného tvaru. Absolutní hodnota v čitateli je zásadní — bez ní by mohla vyjít záporná „vzdálenost".',
+        desc: 'Nejkratší vzdálenost bodu $P$ od roviny je délka kolmice z $P$ na rovinu. Vzorec $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ počítá tuto vzdálenost přímo z obecného tvaru. Absolutní hodnota v čitateli je zásadní — bez ní by mohla vyjít záporná „vzdálenost".',
       },
     },
     examples: {
@@ -238,8 +238,8 @@ export const batch12a = {
         kai_warning: 'Tuhle chybu poznáš okamžitě: plochy osvětlené „zevnitř", zatímco vnější strana zůstává temná. Stává se, když normálový vektor ukazuje špatným směrem. Vždy dodržuj stejné pořadí — $\\overrightarrow{AB} \\times \\overrightarrow{AC}$, nikdy naopak!',
       },
       distance_abs_forgotten: {
-        wrong: 'Zapomenutá absolutní hodnota v čitateli: $d = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
-        correct: 'S absolutní hodnotou: $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
+        wrong: 'Zapomenutá absolutní hodnota v čitateli: $d(P,E) = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
+        correct: 'S absolutní hodnotou: $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
         why: 'Vzdálenosti jsou vždy kladné! Bez absolutní hodnoty v čitateli může vyjít záporná hodnota, pokud bod leží na „druhé straně" roviny. V písemce to stojí body, v herním enginu to vede k objektům, které propadají stěnami.',
       },
     },
@@ -259,8 +259,8 @@ export const batch12a = {
     },
     explanation: {
       intro: 'Test hypotéz je strukturovaný postup, jak na základě dat učinit rozhodnutí. Začneš s domněnkou (nulová hypotéza $H_0$), sesbíráš data a ověříš, zda data mluví proti $H_0$. Alternativní hypotéza $H_1$ popisuje to, co vlastně předpokládáš:',
-      significance: 'Hladina významnosti $\\alpha$ je největší pravděpodobnost, s níž mylně zamítneš $H_0$ (chyba prvního druhu). Typické hodnoty jsou $\\alpha = 0{,}05$ (5\\%) nebo $\\alpha = 0{,}01$ (1\\%). Čím menší $\\alpha$, tím přísnější test — ale tím snáz přehlédneš skutečné efekty:',
-      kai_tip: 'Představte si testy hypotéz jako antipodvodní systém: $H_0$ znamená „hráč NEPODVÁDÍ". $\\alpha = 0{,}05$ znamená: jen v 5\\% případů zabanuji poctivého hráče. Chci držet $\\alpha$ malé, abych chránil nevinné — ale když ho udělám příliš malé, skuteční podvodníci proklouznou. To je kompromis alfa-beta!',
+      significance: 'Hladina významnosti $\\alpha$ je největší pravděpodobnost, s níž mylně zamítneš $H_0$ (chyba prvního druhu). Typické hodnoty jsou $\\alpha = 0{,}05$ (5%) nebo $\\alpha = 0{,}01$ (1%). Čím menší $\\alpha$, tím přísnější test — ale tím snáz přehlédneš skutečné efekty:',
+      kai_tip: 'Představte si testy hypotéz jako antipodvodní systém: $H_0$ znamená „hráč NEPODVÁDÍ". $\\alpha = 0{,}05$ znamená: jen v 5% případů zabanuji poctivého hráče. Chci držet $\\alpha$ malé, abych chránil nevinné — ale když ho udělám příliš malé, skuteční podvodníci proklouznou. To je kompromis alfa-beta!',
       rejection_region: 'Kritický obor obsahuje všechny výsledky testu tak extrémní, že $H_0$ zamítneme. U levostranného testu ($H_1\\colon p < p_0$) leží kritický obor vlevo — spočítáš největší číslo $k$, pro které platí $P(X \\leq k) \\leq \\alpha$:',
       error_types: 'Mohou nastat dvě chyby: chyba prvního druhu ($\\alpha$) — zamítneš $H_0$, přestože platí („falešný poplach"). Chyba druhého druhu ($\\beta$) — ponecháš $H_0$, přestože platí $H_1$ („přehlédnutý efekt"). Při pevném rozsahu výběru $n$ platí: zmenšíš-li $\\alpha$, vzroste $\\beta$ — a naopak:',
     },
@@ -271,7 +271,7 @@ export const batch12a = {
       },
       significance_level: {
         title: 'Hladina významnosti $\\alpha$',
-        desc: 'Horní mez pravděpodobnosti chyby prvního druhu. Při $\\alpha = 0{,}05$ přijímáš 5\\% riziko, že $H_0$ mylně zamítneš. Obvyklé hodnoty: $0{,}10$ (průzkumné), $0{,}05$ (standard), $0{,}01$ (přísné). $\\alpha$ se stanoví PŘED testem — nikdy se nedolaďuje dodatečně!',
+        desc: 'Horní mez pravděpodobnosti chyby prvního druhu. Při $\\alpha = 0{,}05$ přijímáš 5% riziko, že $H_0$ mylně zamítneš. Obvyklé hodnoty: $0{,}10$ (průzkumné), $0{,}05$ (standard), $0{,}01$ (přísné). $\\alpha$ se stanoví PŘED testem — nikdy se nedolaďuje dodatečně!',
       },
       error_types: {
         title: 'Chyby prvního a druhého druhu',
@@ -286,16 +286,16 @@ export const batch12a = {
         step2: 'Uspořádání pokusu: $n = 100$ zápasů, $X$ = počet vítězství hrdiny A, binomicky rozdělené:',
         step3: 'Spočítat pravděpodobnost $X \\leq 40$ za platnosti $H_0$ (kumulativní binomické rozdělení):',
         step4: 'Testové rozhodnutí: $p$-hodnota $0{,}028 < \\alpha = 0{,}05$ — $H_0$ se zamítá. Hrdina A je významně příliš slabý:',
-        kai_comment: 'To byl ten statistický důkaz, který jsem potřeboval pro tým vyvážení. 40 ze 100 vypadá „skoro v pohodě", ale test ukazuje: při spravedlivém vyvážení by se tak extrémní výsledek objevil jen ve 2{,}8\\% případů. To stačí na oslabující aktualizaci!',
+        kai_comment: 'To byl ten statistický důkaz, který jsem potřeboval pro tým vyvážení. 40 ze 100 vypadá „skoro v pohodě", ale test ukazuje: při spravedlivém vyvážení by se tak extrémní výsledek objevil jen ve 2,8% případů. To stačí na oslabující aktualizaci!',
       },
       crash_rate: {
         title: 'Ověření míry pádů po aktualizaci',
-        context: 'Po patchi má být míra pádů nejvýše 2\\%. Ve 200 testovacích sezeních hra spadne 8krát. Je to příliš?',
-        step1: 'Stanovit hypotézy — pravostranně, protože Kai chce ověřit, zda míra leží NAD 2\\%:',
+        context: 'Po patchi má být míra pádů nejvýše 2%. Ve 200 testovacích sezeních hra spadne 8krát. Je to příliš?',
+        step1: 'Stanovit hypotézy — pravostranně, protože Kai chce ověřit, zda míra leží NAD 2%:',
         step2: 'Data: $n = 200$ sezení, $X = 8$ pádů (pozorováno: $\\hat{p} = 4\\%$):',
         step3: 'Spočítat pravděpodobnost $X \\geq 8$ za platnosti $H_0$ — to je $p$-hodnota:',
-        step4: 'Testové rozhodnutí: $p$-hodnota $0{,}042 < \\alpha = 0{,}05$ — míra pádů je významně zvýšená:',
-        kai_comment: 'Bez testu bych možná řekl „8 pádů na 200 sezení, to je v pohodě". Ale test hypotéz ukazuje: pravděpodobnost, že při skutečné 2\\% míře uvidíme tolik pádů, je pod 5\\%. Patch se musí ještě jednou přepracovat.',
+        step4: 'Testové rozhodnutí: $p$-hodnota $0{,}049 < \\alpha = 0{,}05$ — míra pádů je významně zvýšená:',
+        kai_comment: 'Bez testu bych možná řekl „8 pádů na 200 sezení, to je v pohodě". Ale test hypotéz ukazuje: pravděpodobnost, že při skutečné 2% míře uvidíme tolik pádů, je pod 5%. Patch se musí ještě jednou přepracovat.',
       },
     },
     realworld: {

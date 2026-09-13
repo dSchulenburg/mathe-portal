@@ -200,11 +200,11 @@ export const batch11b = {
     examples: {
       medical_test: {
         title: 'Medical Test — Base Rate Fallacy',
-        context: 'A disease test is 99% accurate. The disease affects 1% of the population. If the test is positive — how likely are you really sick?',
+        context: 'A disease test detects 99% of people who are sick, but also comes back positive for 5% of healthy people. The disease affects 1% of the population. If the test is positive — how likely are you really sick?',
         step1: 'Given: $P(K) = 0{,}01$ (disease), $P(+ \\mid K) = 0{,}99$ (sensitivity), $P(+ \\mid \\bar{K}) = 0{,}05$ (false positive rate).',
         step2: 'Calculate the total probability of a positive result — both paths (sick + healthy):',
         step3: 'Apply Bayes\' theorem — $P(K \\mid +)$ is what we\'re looking for:',
-        step4: 'Result: Only 16.7% probability of actually being sick — despite 99% test accuracy!',
+        step4: 'Result: Only 16.7% probability of actually being sick — even though the test detects 99% of sick people!',
         amir_comment: 'That\'s the base rate fallacy! The test is super accurate, but because the disease is so rare ($P(K) = 1\\%$), most positive tests are false positives. In the ML world, this means: Precision and recall are not the same thing!',
       },
       spam_filter: {
@@ -241,7 +241,7 @@ export const batch11b = {
       ignore_base_rate: {
         wrong: 'Ignoring the base rate (Base Rate Fallacy)',
         correct: 'Always consider $P(A)$ — the prior probability',
-        why: 'A 99% accurate test sounds impressive, but if the disease only affects 1%, then $P(K \\mid +) \\approx 16{,}7\\%$. The low base rate $P(K) = 0{,}01$ dominates the result. Without the prior, you get a completely distorted estimate.',
+        why: 'A test that detects 99% of sick people sounds impressive, but if the disease only affects 1%, then $P(K \\mid +) \\approx 16{,}7\\%$. The low base rate $P(K) = 0{,}01$ dominates the result. Without the prior, you get a completely distorted estimate.',
       },
     },
   },

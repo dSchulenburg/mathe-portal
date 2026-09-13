@@ -40,7 +40,7 @@ export const batch12a = {
         step2: 'Differentiëren met de kettingregel — binnenste functie $g(t) = -0{,}03t$, binnenste afgeleide $g\'(t) = -0{,}03$:',
         step3: 'Beginsnelheid berekenen — bij $t = 0$ verdwijnen 150 deeltjes per seconde:',
         step4: 'Halveringstijd bepalen — $N(t_{1/2}) = \\frac{N_0}{2}$ oplossen met $\\ln$:',
-        kai_comment: 'Na 23 seconden is de helft van de deeltjes weg — dat betekent dat ik al eerder geheugen kan vrijmaken voor de volgende explosie. In de engine leg ik de verwijderdrempel bij $5\\%$ dekking, dat is ongeveer $3 \\cdot t_{1/2} \\approx 70\\,\\text{s}$.',
+        kai_comment: 'Na 23 seconden is de helft van de deeltjes weg — dat betekent dat ik al eerder geheugen kan vrijmaken voor de volgende explosie. In de engine leg ik de verwijderdrempel bij $5\\%$ dekking, dat is ongeveer $4{,}3 \\cdot t_{1/2} \\approx 100\\,\\text{s}$.',
       },
       ln_curve_analysis: {
         title: 'Functieonderzoek met $e$-functie',
@@ -193,7 +193,7 @@ export const batch12a = {
       },
       distance_formula: {
         title: 'Afstand punt-vlak',
-        desc: 'De kortste afstand van een punt $P$ tot een vlak is de lengte van de loodlijn van $P$ op het vlak. De formule $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ berekent deze afstand direct uit de coördinatenvorm. De absolute waarde in de teller is essentieel — zonder die zou er een negatieve "afstand" uit kunnen komen.',
+        desc: 'De kortste afstand van een punt $P$ tot een vlak is de lengte van de loodlijn van $P$ op het vlak. De formule $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ berekent deze afstand direct uit de coördinatenvorm. De absolute waarde in de teller is essentieel — zonder die zou er een negatieve "afstand" uit kunnen komen.',
       },
     },
     examples: {
@@ -238,8 +238,8 @@ export const batch12a = {
         kai_warning: 'Deze bug herken je meteen: vlakken die "van binnenuit" belicht worden, terwijl de buitenkant donker blijft. Dat gebeurt als de normaalvector de verkeerde kant op wijst. Wees altijd consequent met de volgorde — $\\overrightarrow{AB} \\times \\overrightarrow{AC}$, nooit andersom!',
       },
       distance_abs_forgotten: {
-        wrong: 'Absolute waarde in de teller vergeten: $d = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
-        correct: 'Met absolute waarde: $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
+        wrong: 'Absolute waarde in de teller vergeten: $d(P,E) = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
+        correct: 'Met absolute waarde: $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
         why: 'Afstanden zijn altijd positief! Zonder de absolute waarde in de teller kan er een negatieve waarde uitkomen als het punt aan de "andere kant" van het vlak ligt. Op het examen kost dat punten, in de game-engine leidt het tot objecten die door muren vallen.',
       },
     },
@@ -259,8 +259,8 @@ export const batch12a = {
     },
     explanation: {
       intro: 'Een hypothesetoets is een gestructureerde methode om op basis van data een beslissing te nemen. Je begint met een aanname (nulhypothese $H_0$), verzamelt data en controleert of de data tegen $H_0$ pleiten. De alternatieve hypothese $H_1$ beschrijft wat je eigenlijk vermoedt:',
-      significance: 'Het significantieniveau $\\alpha$ is de maximale kans waarmee je $H_0$ ten onrechte verwerpt (fout van de 1e soort). Typische waarden zijn $\\alpha = 0{,}05$ (5\\%) of $\\alpha = 0{,}01$ (1\\%). Hoe kleiner $\\alpha$, hoe strenger de toets — maar hoe eerder je echte effecten over het hoofd ziet:',
-      kai_tip: 'Denk aan hypothesetoetsen als een anti-cheatsysteem: $H_0$ betekent "De speler cheat NIET". $\\alpha = 0{,}05$ betekent: slechts in 5\\% van de gevallen ban ik een eerlijke speler. Ik wil $\\alpha$ klein houden om onschuldigen te beschermen — maar als ik hem te klein maak, glippen echte cheaters erdoor. Dat is de alfa-bèta-afweging!',
+      significance: 'Het significantieniveau $\\alpha$ is de maximale kans waarmee je $H_0$ ten onrechte verwerpt (fout van de 1e soort). Typische waarden zijn $\\alpha = 0{,}05$ (5%) of $\\alpha = 0{,}01$ (1%). Hoe kleiner $\\alpha$, hoe strenger de toets — maar hoe eerder je echte effecten over het hoofd ziet:',
+      kai_tip: 'Denk aan hypothesetoetsen als een anti-cheatsysteem: $H_0$ betekent "De speler cheat NIET". $\\alpha = 0{,}05$ betekent: slechts in 5% van de gevallen ban ik een eerlijke speler. Ik wil $\\alpha$ klein houden om onschuldigen te beschermen — maar als ik hem te klein maak, glippen echte cheaters erdoor. Dat is de alfa-bèta-afweging!',
       rejection_region: 'Het kritieke gebied bevat alle toetsresultaten die zo extreem zijn dat we $H_0$ verwerpen. Bij een linkszijdige toets ($H_1\\colon p < p_0$) ligt het kritieke gebied links — je berekent het grootste getal $k$ waarvoor $P(X \\leq k) \\leq \\alpha$ geldt:',
       error_types: 'Er kunnen twee fouten gebeuren: fout van de 1e soort ($\\alpha$) — je verwerpt $H_0$, hoewel die klopt ("vals alarm"). Fout van de 2e soort ($\\beta$) — je behoudt $H_0$, hoewel $H_1$ klopt ("gemist effect"). Bij een vaste steekproefomvang $n$ geldt: als je $\\alpha$ verkleint, wordt $\\beta$ groter — en omgekeerd:',
     },
@@ -271,7 +271,7 @@ export const batch12a = {
       },
       significance_level: {
         title: 'Significantieniveau $\\alpha$',
-        desc: 'De bovengrens voor de kans op een fout van de 1e soort. Bij $\\alpha = 0{,}05$ accepteer je een risico van 5\\% om $H_0$ ten onrechte te verwerpen. Gebruikelijke waarden: $0{,}10$ (verkennend), $0{,}05$ (standaard), $0{,}01$ (streng). $\\alpha$ wordt VOOR de toets vastgelegd — nooit achteraf aangepast!',
+        desc: 'De bovengrens voor de kans op een fout van de 1e soort. Bij $\\alpha = 0{,}05$ accepteer je een risico van 5% om $H_0$ ten onrechte te verwerpen. Gebruikelijke waarden: $0{,}10$ (verkennend), $0{,}05$ (standaard), $0{,}01$ (streng). $\\alpha$ wordt VOOR de toets vastgelegd — nooit achteraf aangepast!',
       },
       error_types: {
         title: 'Fouten van de 1e en 2e soort',
@@ -286,16 +286,16 @@ export const batch12a = {
         step2: 'Opzet: $n = 100$ matches, $X$ = aantal overwinningen van held A, binomiaal verdeeld:',
         step3: 'Kans op $X \\leq 40$ onder $H_0$ berekenen (cumulatieve binomiale verdeling):',
         step4: 'Toetsbeslissing: $p$-waarde $0{,}028 < \\alpha = 0{,}05$ — $H_0$ wordt verworpen. Held A is significant te zwak:',
-        kai_comment: 'Dat was het statistische bewijs dat ik nodig had voor het balance-team. 40 van de 100 lijkt "bijna oké", maar de toets laat zien: bij eerlijke balancing zou je zo\'n extreem resultaat maar in 2{,}8\\% van de gevallen zien. Dat is genoeg voor een nerf-update!',
+        kai_comment: 'Dat was het statistische bewijs dat ik nodig had voor het balance-team. 40 van de 100 lijkt "bijna oké", maar de toets laat zien: bij eerlijke balancing zou je zo\'n extreem resultaat maar in 2,8% van de gevallen zien. Dat is genoeg voor een nerf-update!',
       },
       crash_rate: {
         title: 'Crashpercentage na update controleren',
-        context: 'Na een patch mag het crashpercentage maximaal 2\\% zijn. In 200 testsessies crasht het spel 8 keer. Is dat te veel?',
-        step1: 'Hypothesen opstellen — rechtszijdig, omdat Kai wil controleren of het percentage BOVEN 2\\% ligt:',
+        context: 'Na een patch mag het crashpercentage maximaal 2% zijn. In 200 testsessies crasht het spel 8 keer. Is dat te veel?',
+        step1: 'Hypothesen opstellen — rechtszijdig, omdat Kai wil controleren of het percentage BOVEN 2% ligt:',
         step2: 'Data: $n = 200$ sessies, $X = 8$ crashes (waargenomen: $\\hat{p} = 4\\%$):',
         step3: 'Kans op $X \\geq 8$ onder $H_0$ berekenen — dat is de $p$-waarde:',
-        step4: 'Toetsbeslissing: $p$-waarde $0{,}042 < \\alpha = 0{,}05$ — het crashpercentage is significant verhoogd:',
-        kai_comment: 'Zonder de toets had ik misschien gezegd "8 crashes bij 200 sessies, dat valt wel mee". Maar de hypothesetoets laat zien: de kans om bij een echt percentage van 2\\% zoveel crashes te zien, ligt onder 5\\%. De patch moet opnieuw worden bewerkt.',
+        step4: 'Toetsbeslissing: $p$-waarde $0{,}049 < \\alpha = 0{,}05$ — het crashpercentage is significant verhoogd:',
+        kai_comment: 'Zonder de toets had ik misschien gezegd "8 crashes bij 200 sessies, dat valt wel mee". Maar de hypothesetoets laat zien: de kans om bij een echt percentage van 2% zoveel crashes te zien, ligt onder 5%. De patch moet opnieuw worden bewerkt.',
       },
     },
     realworld: {

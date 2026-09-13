@@ -2,7 +2,7 @@ export const batch12a = {
   '12-e-funktion-ln': {
     story: {
       intro: 'Das Partikelsystem von "Hafenlichter 3D" sieht grandios aus — Funken sprühen, Nebel wabert, Feuer lodert. Aber Kai hat ein Performance-Problem: Tausende Partikel gleichzeitig bringen die GPU ins Schwitzen. "Ich muss berechnen, wie schnell Partikel verblassen, damit ich sie rechtzeitig aus dem Speicher werfe", erklärt er Mia. Die Antwort liegt in der $e$-Funktion und ihrem Gegenstück, dem natürlichen Logarithmus — den Werkzeugen für alles, was exponentiell wächst oder zerfällt.',
-      challenge: 'Kai muss die Lebensdauer von Partikeln mathematisch modellieren: Wie schnell verblasst ein Funke? Wann ist eine Rauchpartikel so transparent, dass sie gelöscht werden kann? Dafür braucht er die Kettenregel für $e$-Funktionen, Ableitungen von $\\ln$ und das Lösen von Zerfallsgleichungen.',
+      challenge: 'Kai muss die Lebensdauer von Partikeln mathematisch modellieren: Wie schnell verblasst ein Funke? Wann ist ein Rauchpartikel so transparent, dass es gelöscht werden kann? Dafür braucht er die Kettenregel für $e$-Funktionen, Ableitungen von $\\ln$ und das Lösen von Zerfallsgleichungen.',
       outro: 'Mit verketteten $e$-Funktionen und $\\ln$-Ableitungen hat Kai ein smartes Partikelsystem gebaut: Jeder Funke folgt einer präzisen Zerfallskurve, jede Rauchpartikel wird exakt dann recycelt, wenn ihre Opazität unter die Wahrnehmungsschwelle fällt. "Die Kettenregel ist quasi mein Performance-Optimizer", grinst Kai. "Die GPU dankt es mir mit 60 statt 30 FPS." Mia ergänzt: "Und das Beste — dieselbe Mathematik beschreibt auch radioaktiven Zerfall und Ladekurven von Kondensatoren."',
     },
     objectives: {
@@ -40,7 +40,7 @@ export const batch12a = {
         step2: 'Ableiten mit der Kettenregel — innere Funktion $g(t) = -0{,}03t$, innere Ableitung $g\'(t) = -0{,}03$:',
         step3: 'Anfangsrate berechnen — bei $t = 0$ verschwinden 150 Partikel pro Sekunde:',
         step4: 'Halbwertszeit bestimmen — $N(t_{1/2}) = \\frac{N_0}{2}$ auflösen mit $\\ln$:',
-        kai_comment: 'Nach 23 Sekunden ist die Hälfte der Partikel weg — das heisst, ich kann schon vorher Speicher freigeben für die nächste Explosion. In der Engine setze ich die Kill-Schwelle bei $5\\%$ Opazität, das sind etwa $3 \\cdot t_{1/2} \\approx 70\\,\\text{s}$.',
+        kai_comment: 'Nach 23 Sekunden ist die Hälfte der Partikel weg — das heißt, ich kann schon vorher Speicher freigeben für die nächste Explosion. In der Engine setze ich die Kill-Schwelle bei $5\\%$ Opazität, das sind etwa $4{,}3 \\cdot t_{1/2} \\approx 100\\,\\text{s}$.',
       },
       ln_curve_analysis: {
         title: 'Kurvendiskussion mit $e$-Funktion',
@@ -83,8 +83,8 @@ export const batch12a = {
 
   '12-integralrechnung-vertieft': {
     story: {
-      intro: 'Für "Hafenlichter 3D" baut Kai einen prozeduralen Level-Generator: Brücken, Tunnel und Häuser sollen aus mathematischen Kurven entstehen, die um Achsen rotiert werden. "Stellt euch vor, ich definiere ein Profil und lasse es rotieren — schon habe ich eine Säule, eine Kuppel oder ein Schiffsrumpf", schwärmt Kai. Aber wie berechnet er das exakte Volumen dieser 3D-Körper? Die Antwort: Rotationsvolumina, partielle Integration und ein paar elegante Integrationstechniken.',
-      challenge: 'Kai muss Volumen von 3D-Objekten berechnen, die durch Rotation von Kurven entstehen. Ausserdem braucht er partielle Integration für komplexe Beleuchtungsformeln und muss prüfen, ob bestimmte Integrale überhaupt konvergieren.',
+      intro: 'Für "Hafenlichter 3D" baut Kai einen prozeduralen Level-Generator: Brücken, Tunnel und Häuser sollen aus mathematischen Kurven entstehen, die um Achsen rotiert werden. "Stellt euch vor, ich definiere ein Profil und lasse es rotieren — schon habe ich eine Säule, eine Kuppel oder einen Schiffsrumpf", schwärmt Kai. Aber wie berechnet er das exakte Volumen dieser 3D-Körper? Die Antwort: Rotationsvolumina, partielle Integration und ein paar elegante Integrationstechniken.',
+      challenge: 'Kai muss Volumen von 3D-Objekten berechnen, die durch Rotation von Kurven entstehen. Außerdem braucht er partielle Integration für komplexe Beleuchtungsformeln und muss prüfen, ob bestimmte Integrale überhaupt konvergieren.',
       outro: 'Der Level-Generator läuft: Kai dreht Kurvenprofile um Achsen und erhält perfekte 3D-Körper mit exakt berechnetem Volumen. "Partielle Integration war der Schlüssel für die Beleuchtungs-Integrale", erzählt er Amir, "und uneigentliche Integrale zeigen mir, wann ein Lichteffekt endliche Gesamtenergie hat — selbst wenn er theoretisch unendlich weit reicht." Mia nickt: "Dieselbe Mathematik nutzen Ingenieure, um Behälter zu dimensionieren und Physiker, um Wellenenergie zu berechnen."',
     },
     objectives: {
@@ -97,7 +97,7 @@ export const batch12a = {
       intro: 'In Klasse 11 hast du bestimmte Integrale als Flächeninhalt kennengelernt. Jetzt kommen drei neue Techniken dazu. Die erste ist die partielle Integration — die "Umkehrung" der Produktregel. Wenn du ein Produkt wie $x \\cdot e^x$ integrieren musst, zerlegst du es in $u$ und $v\'$:',
       substitution: 'Die zweite Technik ist die Substitution — die "Umkehrung" der Kettenregel beim Ableiten. Wenn eine Funktion "in einer anderen steckt", ersetzt du die innere Funktion durch eine neue Variable:',
       kai_tip: 'Mein Trick für partielle Integration: "LIATE" — Logarithmus, Inverse Trig, Algebraisch, Trigonometrisch, Exponentiell. Das ist die Reihenfolge, in der du $u$ wählst. Also bei $\\int x \\cdot e^x\\,\\mathrm{d}x$ ist $u = x$ (algebraisch) und $v\' = e^x$ (exponentiell). Bei $\\int x \\cdot \\ln(x)\\,\\mathrm{d}x$ ist $u = \\ln(x)$ und $v\' = x$. Funktioniert fast immer!',
-      rotation_volume: 'Jetzt wird es dreidimensional: Wenn du den Graphen von $f(x)$ um die $x$-Achse rotierst, entsteht ein Rotationskörper. Sein Volumen berechnest du, indem du dir den Körper aus unendlich vielen duennen Kreisscheiben zusammengesetzt vorstellst — jede Scheibe hat den Radius $f(x)$:',
+      rotation_volume: 'Jetzt wird es dreidimensional: Wenn du den Graphen von $f(x)$ um die $x$-Achse rotierst, entsteht ein Rotationskörper. Sein Volumen berechnest du, indem du dir den Körper aus unendlich vielen dünnen Kreisscheiben zusammengesetzt vorstellst — jede Scheibe hat den Radius $f(x)$:',
       improper: 'Was passiert, wenn eine Integrationsgrenze $\\infty$ ist? Oder der Integrand an einer Stelle unbeschränkt wird? Dann sprechen wir von uneigentlichen Integralen. Du ersetzt die Problemstelle durch einen Grenzwert und prüfst, ob ein endlicher Wert herauskommt:',
     },
     concepts: {
@@ -111,7 +111,7 @@ export const batch12a = {
       },
       improper_integral: {
         title: 'Uneigentliche Integrale',
-        desc: 'Integrale mit $\\infty$ als Grenze oder unbeschränktem Integranden. Du ersetzt die Problemstelle durch eine Variable und bildest den Grenzwert. Wenn der Grenzwert existiert und endlich ist, heisst das Integral konvergent — sonst divergent. Klassiker: $\\int_1^\\infty \\frac{1}{x^2}\\,\\mathrm{d}x = 1$ konvergiert, aber $\\int_1^\\infty \\frac{1}{x}\\,\\mathrm{d}x$ divergiert.',
+        desc: 'Integrale mit $\\infty$ als Grenze oder unbeschränktem Integranden. Du ersetzt die Problemstelle durch eine Variable und bildest den Grenzwert. Wenn der Grenzwert existiert und endlich ist, heißt das Integral konvergent — sonst divergent. Klassiker: $\\int_1^\\infty \\frac{1}{x^2}\\,\\mathrm{d}x = 1$ konvergiert, aber $\\int_1^\\infty \\frac{1}{x}\\,\\mathrm{d}x$ divergiert.',
       },
     },
     examples: {
@@ -153,7 +153,7 @@ export const batch12a = {
         wrong: 'Quadrieren vergessen: $V = \\pi \\int_a^b f(x)\\,\\mathrm{d}x$',
         correct: 'Korrekt quadriert: $V = \\pi \\int_a^b [f(x)]^2\\,\\mathrm{d}x$',
         why: 'Jede Kreisscheibe hat die Fläche $\\pi r^2$ mit $r = f(x)$. Ohne das Quadrieren berechnest du keine Kreisfläche, sondern etwas völlig anderes. Eselsbrücke: "Pi-r-Quadrat" — das Quadrat gehört zur Kreisformel!',
-        kai_warning: 'Ich habe diesen Fehler mal bei einem Game-Jam gemacht — meine Säule hatte nur ein Bruchteil des korrekten Volumens und ist in der Physik-Simulation zusammengeklappt. Seitdem schreibe ich mir die Formel immer groß an den Monitor: $V = \\pi \\int [f(x)]^2$!',
+        kai_warning: 'Ich habe diesen Fehler mal bei einem Game-Jam gemacht — meine Säule hatte nur einen Bruchteil des korrekten Volumens und ist in der Physik-Simulation zusammengeklappt. Seitdem schreibe ich mir die Formel immer groß an den Monitor: $V = \\pi \\int [f(x)]^2$!',
       },
       improper_no_limit: {
         wrong: 'Direkt $\\infty$ einsetzen statt Grenzwert zu bilden',
@@ -166,19 +166,19 @@ export const batch12a = {
   '12-analytische-geometrie': {
     story: {
       intro: 'Die 3D-Welt von "Hafenlichter 3D" nimmt Gestalt an: Hafenkräne, Gebäudefassaden, Wasserflächen — alles besteht aus Dreiecken, und jedes Dreieck liegt in einer Ebene. "Für realistische Beleuchtung muss ich für jede Fläche den Normalenvektor berechnen", erklärt Kai. "Und für Collision Detection brauche ich Schnittpunkte von Geraden mit Ebenen." Willkommen in der analytischen Geometrie des Raums — der Mathematik hinter jeder 3D-Engine.',
-      challenge: 'Kai muss Ebenengleichungen aus drei Punkten aufstellen, Normalenvektoren per Kreuzprodukt berechnen, Gerade-Ebene-Schnittpunkte finden und Abständde zwischen Objekten bestimmen — alles in Echtzeit für seine Game-Engine.',
-      outro: 'Kais Collision-Detection-System funktioniert einwandfrei: Geschosse treffen Wände, Charaktere stehen auf Böden, und die Beleuchtung berechnet für jede Fläche den perfekten Lichteinfall über Normalenvektoren. "Das Kreuzprodukt ist mein meistgenutztes Tool", sagt Kai. "Zwei Richtungsvektoren rein, Normalenvektor raus — und schon weiss ich, wie die Fläche im Raum steht." Amir ergänzt: "Und die Abstandsformel checkt, ob ein Spieler nah genug an einem Objekt ist, um es aufzuheben."',
+      challenge: 'Kai muss Ebenengleichungen aus drei Punkten aufstellen, Normalenvektoren per Kreuzprodukt berechnen, Gerade-Ebene-Schnittpunkte finden und Abstände zwischen Objekten bestimmen — alles in Echtzeit für seine Game-Engine.',
+      outro: 'Kais Collision-Detection-System funktioniert einwandfrei: Geschosse treffen Wände, Charaktere stehen auf Böden, und die Beleuchtung berechnet für jede Fläche den perfekten Lichteinfall über Normalenvektoren. "Das Kreuzprodukt ist mein meistgenutztes Tool", sagt Kai. "Zwei Richtungsvektoren rein, Normalenvektor raus — und schon weiß ich, wie die Fläche im Raum steht." Amir ergänzt: "Und die Abstandsformel checkt, ob ein Spieler nah genug an einem Objekt ist, um es aufzuheben."',
     },
     objectives: {
       plane_equations: 'Ebenengleichungen in Parameter-, Normalen- und Koordinatenform aufstellen und ineinander umwandeln',
       line_plane_intersection: 'Schnittpunkte von Geraden mit Ebenen berechnen und Lagebeziehungen bestimmen',
-      distances_3d: 'Abständde im Raum berechnen: Punkt-Ebene, Punkt-Gerade und Gerade-Gerade',
+      distances_3d: 'Abstände im Raum berechnen: Punkt-Ebene, Punkt-Gerade und Gerade-Gerade',
       cross_product: 'Das Kreuzprodukt beherrschen und zur Normalenvektor-Berechnung einsetzen',
     },
     explanation: {
       intro: 'Ebenen im dreidimensionalen Raum kannst du auf verschiedene Arten beschreiben. Die Parameterform startet bei einem Stützpunkt $\\vec{a}$ und spannt die Ebene mit zwei Richtungsvektoren $\\vec{u}$ und $\\vec{v}$ auf. Jeder Punkt der Ebene lässt sich durch passende Werte für $r$ und $s$ erreichen:',
       normal_form: 'Eleganter ist oft die Normalenform: Ein Vektor $\\vec{n}$, der senkrecht auf der Ebene steht (der Normalenvektor), und ein Punkt $\\vec{a}$ in der Ebene genügen, um die gesamte Ebene zu beschreiben. Daraus lässt sich die Koordinatenform ableiten — eine einzelne Gleichung mit $x_1$, $x_2$ und $x_3$:',
-      kai_tip: 'In meiner 3D-Engine speichere ich jede Fläche in Koordinatenform — drei Koeffizienten und eine Konstante, das wars. Zum Rendern brauche ich den Normalenvektor für die Beleuchtung ($\\vec{n} \\cdot \\vec{l} = \\cos\\theta$ — das Skalarprodukt mit dem Lichtvektor gibt den Helligkeitswert). Und für Physik brauche ich Schnittpunkte und Abständde. Alle drei Formen sind nützlich — jede für einen anderen Zweck!',
+      kai_tip: 'In meiner 3D-Engine speichere ich jede Fläche in Koordinatenform — drei Koeffizienten und eine Konstante, das wars. Zum Rendern brauche ich den Normalenvektor für die Beleuchtung ($\\vec{n} \\cdot \\vec{l} = \\cos\\theta$ — das Skalarprodukt mit dem Lichtvektor gibt den Helligkeitswert). Und für Physik brauche ich Schnittpunkte und Abstände. Alle drei Formen sind nützlich — jede für einen anderen Zweck!',
       cross_product: 'Das Kreuzprodukt $\\vec{u} \\times \\vec{v}$ liefert einen Vektor, der senkrecht auf beiden Eingabevektoren steht — perfekt, um aus zwei Richtungsvektoren den Normalenvektor zu berechnen. Achtung: Die Reihenfolge ist wichtig (antikommutativ)!',
       distance_point_plane: 'Der Abstand eines Punktes $P$ von einer Ebene $E$ lässt sich mit der Hesseschen Normalform elegant berechnen. Du setzt den Punkt in die Koordinatengleichung ein, nimmst den Betrag und teilst durch die Länge des Normalenvektors:',
     },
@@ -193,7 +193,7 @@ export const batch12a = {
       },
       distance_formula: {
         title: 'Abstand Punkt-Ebene',
-        desc: 'Der kürzeste Abstand eines Punktes $P$ zu einer Ebene ist die Länge des Lots von $P$ auf die Ebene. Die Formel $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ berechnet diesen Abstand direkt aus der Koordinatenform. Der Betrag im Zähler ist entscheidend — ohne ihn könnte ein negativer "Abstand" herauskommen.',
+        desc: 'Der kürzeste Abstand eines Punktes $P$ zu einer Ebene ist die Länge des Lots von $P$ auf die Ebene. Die Formel $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$ berechnet diesen Abstand direkt aus der Koordinatenform. Der Betrag im Zähler ist entscheidend — ohne ihn könnte ein negativer "Abstand" herauskommen.',
       },
     },
     examples: {
@@ -238,9 +238,9 @@ export const batch12a = {
         kai_warning: 'Diesen Bug erkennt man sofort: Flächen, die "von innen" beleuchtet sind, während die Aussenseite dunkel bleibt. Passiert, wenn der Normalenvektor in die falsche Richtung zeigt. Immer konsistent mit der Reihenfolge sein — $\\overrightarrow{AB} \\times \\overrightarrow{AC}$, nie andersrum!',
       },
       distance_abs_forgotten: {
-        wrong: 'Betrag im Zähler vergessen: $d = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
-        correct: 'Mit Betrag: $d = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
-        why: 'Abständde sind immer positiv! Ohne den Betrag im Zähler kann ein negativer Wert herauskommen, wenn der Punkt auf der "anderen Seite" der Ebene liegt. In der Klausur ist das ein Punktabzug, in der Game-Engine führt es zu Objekten, die durch Wände fallen.',
+        wrong: 'Betrag im Zähler vergessen: $d(P,E) = \\frac{\\vec{n} \\cdot \\vec{p} - d}{|\\vec{n}|}$',
+        correct: 'Mit Betrag: $d(P,E) = \\frac{|\\vec{n} \\cdot \\vec{p} - d|}{|\\vec{n}|}$',
+        why: 'Abstände sind immer positiv! Ohne den Betrag im Zähler kann ein negativer Wert herauskommen, wenn der Punkt auf der "anderen Seite" der Ebene liegt. In der Klausur ist das ein Punktabzug, in der Game-Engine führt es zu Objekten, die durch Wände fallen.',
       },
     },
   },
@@ -249,7 +249,7 @@ export const batch12a = {
     story: {
       intro: 'Vor dem Release von "Hafenlichter 3D" steht der große Playtest an: 200 Tester spielen eine Woche lang und Kai muss harte Entscheidungen treffen. Ist das Balancing fair? Ist die Crash-Rate akzeptabel? "Bauchgefühl reicht nicht", sagt Mia. "Du brauchst einen statistischen Test, der dir sagt, ob ein beobachteter Effekt echt ist — oder nur Zufall." Willkommen bei den Hypothesentests: der Mathematik hinter datengetriebenen Entscheidungen.',
       challenge: 'Kai muss entscheiden, ob beobachtete Unterschiede im Playtest statistisch signifikant sind. Ist Held A wirklich schwächer als Held B, oder hatte er nur Pech? Ist die neue Crash-Rate wirklich gestiegen? Dafür braucht er Nullhypothesen, Signifikanzniveaus und den Umgang mit Fehlerarten.',
-      outro: 'Der Playtest ist ausgewertet: Kai hat statistisch nachgewiesen, dass Held A zu schwach ist ($p = 0{,}028 < 0{,}05$), und die Crash-Rate im neuen Build signifikant gestiegen ist. "Ohne Hypothesentests hätte ich diese Probleme vielleicht ignoriert", gibt er zu. Mia ergänzt: "Das Schöne ist: Du weisst jetzt genau, wie sicher deine Entscheidung ist — das Signifikanzniveau quantifiziert dein Risiko, falsch zu liegen."',
+      outro: 'Der Playtest ist ausgewertet: Kai hat statistisch nachgewiesen, dass Held A zu schwach ist ($p = 0{,}028 < 0{,}05$), und die Crash-Rate im neuen Build signifikant gestiegen ist. "Ohne Hypothesentests hätte ich diese Probleme vielleicht ignoriert", gibt er zu. Mia ergänzt: "Das Schöne ist: Du weißt jetzt genau, wie sicher deine Entscheidung ist — das Signifikanzniveau quantifiziert dein Risiko, falsch zu liegen."',
     },
     objectives: {
       null_hypothesis: 'Null- und Alternativhypothese korrekt aufstellen und zwischen ein- und zweiseitigen Tests unterscheiden',
@@ -259,8 +259,8 @@ export const batch12a = {
     },
     explanation: {
       intro: 'Ein Hypothesentest ist ein strukturiertes Verfahren, um auf Basis von Daten eine Entscheidung zu treffen. Du startest mit einer Vermutung (Nullhypothese $H_0$), sammelst Daten und prüfst, ob die Daten gegen $H_0$ sprechen. Die Alternativhypothese $H_1$ beschreibt, was du eigentlich vermutest:',
-      significance: 'Das Signifikanzniveau $\\alpha$ ist die maximale Wahrscheinlichkeit, mit der du $H_0$ fälschlicherweise ablehnst (Fehler 1. Art). Typische Werte sind $\\alpha = 0{,}05$ (5\\%) oder $\\alpha = 0{,}01$ (1\\%). Je kleiner $\\alpha$, desto strenger der Test — aber desto eher übersieht man echte Effekte:',
-      kai_tip: 'Denkt an Hypothesentests wie an ein Anti-Cheat-System: $H_0$ heisst "Der Spieler cheated NICHT". $\\alpha = 0{,}05$ bedeutet: Nur in 5\\% der Fälle banne ich einen ehrlichen Spieler. Ich will $\\alpha$ klein halten, um Unschuldige zu schützen — aber wenn ich es zu klein mache, rutschen echte Cheater durch. Das ist der Alpha-Beta-Trade-off!',
+      significance: 'Das Signifikanzniveau $\\alpha$ ist die maximale Wahrscheinlichkeit, mit der du $H_0$ fälschlicherweise ablehnst (Fehler 1. Art). Typische Werte sind $\\alpha = 0{,}05$ (5%) oder $\\alpha = 0{,}01$ (1%). Je kleiner $\\alpha$, desto strenger der Test — aber desto eher übersieht man echte Effekte:',
+      kai_tip: 'Denkt an Hypothesentests wie an ein Anti-Cheat-System: $H_0$ heißt "Der Spieler cheated NICHT". $\\alpha = 0{,}05$ bedeutet: Nur in 5% der Fälle banne ich einen ehrlichen Spieler. Ich will $\\alpha$ klein halten, um Unschuldige zu schützen — aber wenn ich es zu klein mache, rutschen echte Cheater durch. Das ist der Alpha-Beta-Trade-off!',
       rejection_region: 'Der Ablehnungsbereich enthält alle Testergebnisse, die so extrem sind, dass wir $H_0$ ablehnen. Bei einem linksseitigen Test ($H_1\\colon p < p_0$) liegt der Ablehnungsbereich links — du berechnest die größte Zahl $k$, für die $P(X \\leq k) \\leq \\alpha$ gilt:',
       error_types: 'Zwei Fehler können passieren: Fehler 1. Art ($\\alpha$) — du lehnst $H_0$ ab, obwohl sie stimmt ("Fehlalarm"). Fehler 2. Art ($\\beta$) — du behältst $H_0$ bei, obwohl $H_1$ stimmt ("verpasster Effekt"). Bei festem Stichprobenumfang $n$ gilt: Wenn du $\\alpha$ verkleinerst, wird $\\beta$ größer — und umgekehrt:',
     },
@@ -271,7 +271,7 @@ export const batch12a = {
       },
       significance_level: {
         title: 'Signifikanzniveau $\\alpha$',
-        desc: 'Die Obergrenze für die Wahrscheinlichkeit eines Fehlers 1. Art. Bei $\\alpha = 0{,}05$ akzeptierst du ein 5\\%-Risiko, $H_0$ fälschlicherweise abzulehnen. Übliche Werte: $0{,}10$ (explorativ), $0{,}05$ (Standard), $0{,}01$ (streng). $\\alpha$ wird VOR dem Test festgelegt — nie nachträglich angepasst!',
+        desc: 'Die Obergrenze für die Wahrscheinlichkeit eines Fehlers 1. Art. Bei $\\alpha = 0{,}05$ akzeptierst du ein 5%-Risiko, $H_0$ fälschlicherweise abzulehnen. Übliche Werte: $0{,}10$ (explorativ), $0{,}05$ (Standard), $0{,}01$ (streng). $\\alpha$ wird VOR dem Test festgelegt — nie nachträglich angepasst!',
       },
       error_types: {
         title: 'Fehler 1. und 2. Art',
@@ -286,16 +286,16 @@ export const batch12a = {
         step2: 'Versuchsaufbau: $n = 100$ Matches, $X$ = Anzahl Siege von Held A, binomialverteilt:',
         step3: 'Wahrscheinlichkeit für $X \\leq 40$ unter $H_0$ berechnen (kumulierte Binomialverteilung):',
         step4: 'Testentscheidung: $p$-Wert $0{,}028 < \\alpha = 0{,}05$ — $H_0$ wird abgelehnt. Held A ist signifikant zu schwach:',
-        kai_comment: 'Das war der statistische Beweis, den ich für das Balance-Team brauchte. 40 von 100 sieht "fast okay" aus, aber der Test zeigt: Bei fairem Balancing würde man so ein extremes Ergebnis nur in 2{,}8\\% der Fälle sehen. Das reicht für ein Nerf-Update!',
+        kai_comment: 'Das war der statistische Beweis, den ich für das Balance-Team brauchte. 40 von 100 sieht "fast okay" aus, aber der Test zeigt: Bei fairem Balancing würde man so ein extremes Ergebnis nur in 2,8% der Fälle sehen. Das reicht für ein Nerf-Update!',
       },
       crash_rate: {
         title: 'Crash-Rate nach Update prüfen',
-        context: 'Nach einem Patch soll die Crash-Rate bei maximal 2\\% liegen. In 200 Test-Sessions crasht das Spiel 8-mal. Ist das zu viel?',
-        step1: 'Hypothesen aufstellen — rechtsseitig, weil Kai prüfen will, ob die Rate ÜBER 2\\% liegt:',
+        context: 'Nach einem Patch soll die Crash-Rate bei maximal 2% liegen. In 200 Test-Sessions crasht das Spiel 8-mal. Ist das zu viel?',
+        step1: 'Hypothesen aufstellen — rechtsseitig, weil Kai prüfen will, ob die Rate ÜBER 2% liegt:',
         step2: 'Daten: $n = 200$ Sessions, $X = 8$ Abstürze (beobachtet: $\\hat{p} = 4\\%$):',
         step3: 'Wahrscheinlichkeit für $X \\geq 8$ unter $H_0$ berechnen — das ist der $p$-Wert:',
-        step4: 'Testentscheidung: $p$-Wert $0{,}042 < \\alpha = 0{,}05$ — die Crash-Rate ist signifikant erhöht:',
-        kai_comment: 'Ohne den Test hätte ich vielleicht gesagt "8 Crashes bei 200 Sessions, das passt schon". Aber der Hypothesentest zeigt: Die Wahrscheinlichkeit, bei einer echten 2\\%-Rate so viele Crashes zu sehen, liegt unter 5\\%. Der Patch muss nochmal überarbeitet werden.',
+        step4: 'Testentscheidung: $p$-Wert $0{,}049 < \\alpha = 0{,}05$ — die Crash-Rate ist signifikant erhöht:',
+        kai_comment: 'Ohne den Test hätte ich vielleicht gesagt "8 Crashes bei 200 Sessions, das passt schon". Aber der Hypothesentest zeigt: Die Wahrscheinlichkeit, bei einer echten 2%-Rate so viele Crashes zu sehen, liegt unter 5%. Der Patch muss nochmal überarbeitet werden.',
       },
     },
     realworld: {
@@ -316,8 +316,8 @@ export const batch12a = {
       accept_h0: {
         wrong: '$H_0$ "bewiesen": $p > \\alpha$ bedeutet $H_0$ ist wahr',
         correct: 'Korrekt formuliert: $p > \\alpha$ bedeutet $H_0$ kann nicht abgelehnt werden',
-        why: 'Ein Hypothesentest kann $H_0$ nie beweisen — nur ablehnen oder beibehalten. "Nicht ablehnen" heisst: Die Daten reichen nicht aus, um $H_0$ zu widerlegen. Vielleicht ist der Effekt zu klein, vielleicht die Stichprobe zu klein. Deshalb sagt man "beibehalten" oder "nicht ablehnen", nie "akzeptieren" oder "bewiesen".',
-        kai_warning: 'Das ist wie Unschuldsvermutung vor Gericht: "Nicht schuldig" heisst nicht "unschuldig" — es heisst nur, dass die Beweise nicht ausreichen. Genauso bei $H_0$: Wenn ich nicht nachweisen kann, dass Held A schwächer ist, heisst das nicht automatisch, dass er perfekt balanciert ist!',
+        why: 'Ein Hypothesentest kann $H_0$ nie beweisen — nur ablehnen oder beibehalten. "Nicht ablehnen" heißt: Die Daten reichen nicht aus, um $H_0$ zu widerlegen. Vielleicht ist der Effekt zu klein, vielleicht die Stichprobe zu klein. Deshalb sagt man "beibehalten" oder "nicht ablehnen", nie "akzeptieren" oder "bewiesen".',
+        kai_warning: 'Das ist wie Unschuldsvermutung vor Gericht: "Nicht schuldig" heißt nicht "unschuldig" — es heißt nur, dass die Beweise nicht ausreichen. Genauso bei $H_0$: Wenn ich nicht nachweisen kann, dass Held A schwächer ist, heißt das nicht automatisch, dass er perfekt balanciert ist!',
       },
       alpha_beta_confused: {
         wrong: 'Annahme: Kleineres $\\alpha$ verbessert automatisch alles',

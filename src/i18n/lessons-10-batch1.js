@@ -13,7 +13,7 @@ export const batch1 = {
     },
     explanation: {
       intro: 'Eine quadratische Gleichung hat die allgemeine Form mit dem höchsten Exponenten 2. Im Gegensatz zu linearen Gleichungen ($x$ hoch 1) kann sie null, eine oder zwei Lösungen haben. Die allgemeine Form lautet:',
-      normal_form: 'Für die pq-Formel brauchen wir die Normalform — das heisst, der Koeffizient vor $x^2$ muss genau 1 sein. Ist das nicht der Fall, teilen wir die gesamte Gleichung durch $a$:',
+      normal_form: 'Für die pq-Formel brauchen wir die Normalform — das heißt, der Koeffizient vor $x^2$ muss genau 1 sein. Ist das nicht der Fall, teilen wir die gesamte Gleichung durch $a$:',
       mia_tip: 'Ich merke mir: Erst alles auf eine Seite bringen, damit rechts Null steht. Dann durch den Koeffizienten vor $x^2$ teilen. Erst DANN darf ich die pq-Formel benutzen!',
       pq_formula: 'Die pq-Formel ist das Universalwerkzeug für quadratische Gleichungen in Normalform. Du liest $p$ und $q$ direkt ab und setzt ein:',
       completing_square: 'Die quadratische Ergänzung funktioniert so: Du formst die linke Seite in ein perfektes Quadrat um. Dazu addierst du $(\\frac{p}{2})^2$ auf beiden Seiten. Das Ergebnis ist ein Ausdruck der Form $(x + \\frac{p}{2})^2$, den du leicht nach $x$ auflösen kannst.',
@@ -145,7 +145,7 @@ export const batch1 = {
     realworld: {
       compass: {
         title: 'Navigation & GPS',
-        desc: 'Dein Smartphone berechnet Richtungen mit Trigonometrie. Die Funktion atan2 wandelt $x$- und $y$-Koordinaten in einen Winkel um — so weiss Google Maps, in welche Richtung du gehen musst.',
+        desc: 'Dein Smartphone berechnet Richtungen mit Trigonometrie. Die Funktion atan2 wandelt $x$- und $y$-Koordinaten in einen Winkel um — so weiß Google Maps, in welche Richtung du gehen musst.',
       },
       building_height: {
         title: 'Gebäudehöhen messen',
@@ -175,7 +175,7 @@ export const batch1 = {
     story: {
       intro: 'Hafenlichter soll einen Multiplayer-Modus bekommen. Mia testet die Server mit 10 Spielern — alles läuft smooth. Aber Tim warnt: "Was passiert bei 100? Bei 1000? Wenn das Spiel viral geht, verdoppelt sich die Spielerzahl vielleicht alle paar Tage." Mia rechnet nach und erschrickt: Exponentielles Wachstum ist viel schneller, als man denkt.',
       challenge: 'Die Serverlast wüchst nicht linear mit den Spielern, sondern exponentiell. Mia muss vorhersagen, wann die Server überlastet sind.',
-      outro: 'Mia hat ein Modell gebaut, das die Spielerzahl-Entwicklung vorhersagt. Dank der Exponentialfunktion weiss sie jetzt: Wenn die Verdopplungszeit bei 3 Tagen liegt, braucht sie nach 2 Wochen 32-mal so viel Serverkapazität. "Lieber früh skalieren als spät abstürzen", beschließt sie.',
+      outro: 'Mia hat ein Modell gebaut, das die Spielerzahl-Entwicklung vorhersagt. Dank der Exponentialfunktion weiß sie jetzt: Wenn die Verdopplungszeit bei 3 Tagen liegt, braucht sie nach 2 Wochen 32-mal so viel Serverkapazität. "Lieber früh skalieren als spät abstürzen", beschließt sie.',
     },
     objectives: {
       exponential_functions: 'Exponentialfunktionen erkennen und von linearen Funktionen unterscheiden',
