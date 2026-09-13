@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from '../../i18n/useTranslation';
 import { getTopicStory } from '../../data/characters';
 import { getTopic } from '../../data/topics';
+import { topicTitle } from '../../i18n/topicTitle';
 import { useMathStore } from '../../store/mathStore';
 import StoryScene from './StoryScene';
 import AdultIntroBanner from './AdultIntroBanner';
@@ -33,7 +34,7 @@ export default function LessonLayer({ lesson, topicId, topicColor, completionPct
   const character = topicStory?.character;
   const accentColor = character?.color || topicColor || 'var(--mp-primary)';
 
-  const bannerTitle = getTopic(topicId)?.titleKey || topicId;
+  const bannerTitle = topicTitle(t, getTopic(topicId)) || topicId;
   const resolvedObjectives = (lesson.objectives || []).map(key =>
     t(`lessons.${topicId}.${key}`)
   );
@@ -121,6 +122,7 @@ export default function LessonLayer({ lesson, topicId, topicColor, completionPct
 
           <LessonConnections
             connections={lesson.connections}
+            topicId={topicId}
             t={t}
             accentColor={accentColor}
             onNavigate={onNavigateTopic}

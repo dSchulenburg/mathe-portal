@@ -9,11 +9,11 @@ export const batch3 = {
       periodic_functions: 'Periodieke functies herkennen en van niet-periodieke onderscheiden',
       amplitude_period: 'Amplitude en periode uit grafieken en vergelijkingen aflezen',
       frequency: 'De frequentie berekenen en haar betekenis uitleggen',
-      modeling: 'Reele verschijnselen met sinusfuncties modelleren',
+      modeling: 'Reële verschijnselen met sinusfuncties modelleren',
     },
     explanation: {
       intro: 'Sommige processen herhalen zich steeds weer: je hartslag, de getijden, de seizoenen. In de wiskunde beschrijven we zulke trillingen met periodieke functies. De belangrijkste is de sinusfunctie:',
-      parameters: 'De algemene sinusfunctie heeft vier parameters die je kunt zien als regelaars op een mengpaneel: $A$ regelt de hoogte van de trilling (amplitude), $b$ beinvloedt hoe snel de trilling zich herhaalt (periode), $c$ verschuift de curve naar links of rechts, en $d$ verschuift haar omhoog of omlaag.',
+      parameters: 'De algemene sinusfunctie heeft vier parameters die je kunt zien als regelaars op een mengpaneel: $A$ regelt de hoogte van de trilling (amplitude), $b$ beïnvloedt hoe snel de trilling zich herhaalt (periode), $c$ verschuift de curve naar links of rechts, en $d$ verschuift haar omhoog of omlaag.',
       mia_tip: 'Voor Lumis ademanimatie gebruik ik $A = 3$ pixels en $T = 4$ seconden. Dat betekent: elke 4 seconden ademt Lumi een keer in en uit, en de borst beweegt 3 pixels op en neer. Helemaal natuurlijk!',
       graph_reading: 'Om een periodieke functie van de grafiek af te lezen, zoek je naar het patroon dat zich herhaalt. De afstand tussen twee identieke punten heet periode $T$. Wiskundig betekent periodiciteit:',
       applications: 'Periodieke functies zijn het wiskundige gereedschap voor alles wat trilt: geluidsgolven, wisselstroom, slingers, lichtgolven en zelfs de banen van planeten. Telkens wanneer een proces zich regelmatig herhaalt, zit er een sinusfunctie (of haar verwanten) achter.',
@@ -82,7 +82,7 @@ export const batch3 = {
 
   '10-diff-einfuehrung': {
     story: {
-      intro: 'Hafenlichter draait — maar het hapert. Mia opent de prestatiemonitor en ziet: in sommige scenes zakt de framerate naar 15 FPS. "Waar precies wordt het langzaam?", vraagt Tim. "Ik heb niet het gemiddelde over de hele scene nodig, maar de exacte plek waar de prestatie instort." Jule glimlacht: "Dat is precies de vraag die leidde tot de uitvinding van de differentiaalrekening — de momentane veranderingssnelheid."',
+      intro: 'Hafenlichter draait — maar het hapert. Mia opent de prestatiemonitor en ziet: in sommige scènes zakt de framerate naar 15 FPS. "Waar precies wordt het langzaam?", vraagt Tim. "Ik heb niet het gemiddelde over de hele scène nodig, maar de exacte plek waar de prestatie instort." Jule glimlacht: "Dat is precies de vraag die leidde tot de uitvinding van de differentiaalrekening — de momentane veranderingssnelheid."',
       challenge: 'De exacte plek vinden waar de framerate instort — niet alleen het gemiddelde.',
       outro: 'Mia heeft de kritieke plek gevonden: precies bij frame 847 explodeert de rendertijd, omdat er 200 deeltjes tegelijk worden aangemaakt. "Zonder de momentane veranderingssnelheid had ik eeuwig gezocht", zegt ze. Tim knikt: "Newton zou het ook zo gedaan hebben — alleen zonder prestatiemonitor."',
     },
@@ -101,12 +101,12 @@ export const batch3 = {
     },
     concepts: {
       difference_quotient: {
-        title: 'Differentiequotient',
+        title: 'Differentiequotiënt',
         desc: 'De gemiddelde veranderingssnelheid tussen twee punten. Berekent de helling van de secant — een rechte die de grafiek in twee punten snijdt.',
       },
       differential_quotient: {
-        title: 'Differentiaalquotient (afgeleide)',
-        desc: 'De momentane veranderingssnelheid op een punt. Ontstaat wanneer $h$ in het differentiequotient naar nul gaat. Geeft de raaklijntanning aan.',
+        title: 'Differentiaalquotiënt (afgeleide)',
+        desc: 'De momentane veranderingssnelheid op een punt. Ontstaat wanneer $h$ in het differentiequotiënt naar nul gaat. Geeft de raaklijntanning aan.',
       },
       derivative_notation: {
         title: 'Notaties van de afgeleide',
@@ -125,7 +125,7 @@ export const batch3 = {
       instantaneous_rate: {
         title: 'Momentane veranderingssnelheid berekenen',
         context: 'Bepaal de afgeleide van $f(x) = x^2$ in het punt $x_0 = 3$.',
-        step1: 'We vullen $f(x) = x^2$ en $x_0 = 3$ in het differentiequotient in. Gezocht: wat gebeurt er als $h$ naar 0 gaat?',
+        step1: 'We vullen $f(x) = x^2$ en $x_0 = 3$ in het differentiequotiënt in. Gezocht: wat gebeurt er als $h$ naar 0 gaat?',
         step2: 'Teller uitrekenen: $(3+h)^2 = 9 + 6h + h^2$. Min $f(3) = 9$ geeft $6h + h^2$ in de teller.',
         step3: 'Delen door $h$ (dat mag omdat $h \\neq 0$ in het limietproces): er blijft $6 + h$ over.',
         step4: 'Limiet bepalen: voor $h \\to 0$ wordt $6 + h$ gelijk aan $6$. De helling van de raaklijn bij $x = 3$ is dus exact $6$.',
@@ -189,12 +189,12 @@ export const batch3 = {
         desc: 'De veranderingssnelheid zelf verandert lineair — er komt steeds sneller meer bij (of minder). De grafiek is een parabool met toppunt.',
       },
       exponential: {
-        title: 'Exponentiele functies',
+        title: 'Exponentiële functies',
         desc: 'Groei met een vast percentage: hoe meer er is, hoe meer erbij komt. Verdubbeling in gelijke tijdsintervallen. Groeit op de lange termijn sneller dan elke machtsfunctie.',
       },
       logarithmic: {
         title: 'Logaritmische functies',
-        desc: 'De omkeerfunctie van de exponentiele functie. Groeit in het begin snel, daarna steeds langzamer. Modelleert verzadigingseffecten en leercurves.',
+        desc: 'De omkeerfunctie van de exponentiële functie. Groeit in het begin snel, daarna steeds langzamer. Modelleert verzadigingseffecten en leercurves.',
       },
     },
     examples: {
@@ -202,7 +202,7 @@ export const batch3 = {
         title: 'Functietype herkennen aan waardetabellen',
         context: 'Er liggen drie datasets voor. Welk type past bij elk?',
         step1: 'Test op lineair: bepaal de verschillen van opeenvolgende $y$-waarden. Zijn ze constant, dan is de functie lineair.',
-        step2: 'Test op exponentieel: bepaal de quotienten van opeenvolgende $y$-waarden. Zijn ze constant, dan is de functie exponentieel.',
+        step2: 'Test op exponentieel: bepaal de quotiënten van opeenvolgende $y$-waarden. Zijn ze constant, dan is de functie exponentieel.',
         step3: 'Test op kwadratisch: bepaal de tweede verschillen (verschillen van de verschillen). Zijn die constant, dan is de functie kwadratisch.',
         mia_comment: 'Precies zo test ik mijn balancering: ik laat 100 rondes simuleren en controleer of de waarden het gewenste groeitype volgen. Als de tweede verschillen afwijken, klopt er iets niet.',
       },
@@ -213,7 +213,7 @@ export const batch3 = {
         step2: 'Valschade: van 2 m hoogte lichte schade, van 10 m veel meer. De schadetoename versnelt — kwadratisch. Natuurkundig logisch (energie = $\\frac{1}{2}mv^2$).',
         step3: 'XP-vereisten per level: level 2 vereist 150 XP, level 3 vereist 225 XP, level 4 vereist 337 XP. De vraag groeit steeds met 50% — exponentieel. Zo blijven hogere levels een echte uitdaging.',
         step4: 'Leercurve (vaardigheid): in het begin leer je snel, later steeds langzamer. Na $t$ uur speeltijd beheers je $20 \\cdot \\log_2(t+1)$ procent van de mechanieken — logaritmisch.',
-        mia_comment: 'Dit is de kern van game design: de juiste curve voor de juiste mechaniek. Lineaire XP zou saai zijn, exponentiele valschade oneerlijk. Elk functietype heeft zijn sweet spot!',
+        mia_comment: 'Dit is de kern van game design: de juiste curve voor de juiste mechaniek. Lineaire XP zou saai zijn, exponentiële valschade oneerlijk. Elk functietype heeft zijn sweet spot!',
       },
     },
     realworld: {
@@ -234,7 +234,7 @@ export const batch3 = {
       exp_vs_quad: {
         wrong: '"Exponentieel" en "kwadratisch" zijn hetzelfde',
         correct: 'Exponentieel groeit VEEL sneller dan kwadratisch',
-        why: 'Bij kleine getallen lijken $x^2$ en $2^x$ op elkaar: $4^2 = 16$ en $2^4 = 16$. Maar bij $x = 10$: $10^2 = 100$ tegenover $2^{10} = 1024$. Exponentiele groei haalt elke machtsfunctie in!',
+        why: 'Bij kleine getallen lijken $x^2$ en $2^x$ op elkaar: $4^2 = 16$ en $2^4 = 16$. Maar bij $x = 10$: $10^2 = 100$ tegenover $2^{10} = 1024$. Exponentiële groei haalt elke machtsfunctie in!',
         mia_warning: 'Ik had de XP-vereisten eerst kwadratisch in plaats van exponentieel gemaakt. Resultaat: vanaf level 20 was het spel veel te makkelijk, omdat spelers sneller XP verzamelden dan de vraag groeide.',
       },
       all_curves_linear: {

@@ -9,8 +9,10 @@ import { batch11c } from '../lessons-11-batch3-da';
 import { batch12a } from '../lessons-12-batch1-da';
 import { batch12b } from '../lessons-12-batch2-da';
 import { batch12c } from '../lessons-12-batch3-da';
+import { portalBatch1 } from '../portal-batch1-da';
 
 export default {
+  ...portalBatch1,
   portal: {
     title: '∫nfinity',
     subtitle: '∫nfinity',

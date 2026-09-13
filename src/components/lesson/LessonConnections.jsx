@@ -2,7 +2,9 @@ import { getTopic } from '../../data/topics';
 import { getCharacterById } from '../../data/characters';
 import LessonSection from './LessonSection';
 import MathText from './MathText';
+import { topicTitle, bridgeText } from '../../i18n/topicTitle';
 
+// Deutscher Rueckfall; uebersetzt wird ueber relations.<relation> (portal-batch1).
 const RELATION_LABELS = {
   'baut-auf': 'baut auf',
   'fuehrt-zu': 'führt zu',
@@ -22,14 +24,22 @@ const RELATION_COLORS = {
  * Distinct from LessonPrerequisites: prerequisites are structural ("you must know X first"),
  * connections are conceptual ("this idea reappears here in a new costume").
  */
-export default function LessonConnections({ connections, t, accentColor, onNavigate }) {
+function relationLabel(t, relation) {
+  const fallback = RELATION_LABELS[relation] || relation;
+  if (typeof t !== 'function') return fallback;
+  const key = `relations.${relation}`;
+  const str = t(key);
+  return typeof str === 'string' && str !== key ? str : fallback;
+}
+
+export default function LessonConnections({ connections, topicId, t, accentColor, onNavigate }) {
   if (!connections?.length) return null;
 
   return (
     <LessonSection
       icon="🌉"
-      title={t ? t('lesson.connections') : 'Brücken zu anderen Themen'}
-      subtitle={t ? t('lesson.connectionsSubtitle') : 'Wo dieselbe Idee wieder auftaucht'}
+      title={t ? t('connectionsSection.title') : 'Brücken zu anderen Themen'}
+      subtitle={t ? t('connectionsSection.subtitle') : 'Wo dieselbe Idee wieder auftaucht'}
       accentColor={accentColor}
       defaultOpen={false}
     >
@@ -39,7 +49,7 @@ export default function LessonConnections({ connections, t, accentColor, onNavig
           if (!topic) return null;
           const character = getCharacterById(conn.bubble?.character);
           const relColor = RELATION_COLORS[conn.relation] || 'var(--mp-muted)';
-          const relLabel = RELATION_LABELS[conn.relation] || conn.relation;
+          const relLabel = relationLabel(t, conn.relation);
 
           return (
             <div key={idx} style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
@@ -77,7 +87,7 @@ export default function LessonConnections({ connections, t, accentColor, onNavig
                       {character.name}
                     </div>
                     <div style={{ fontSize: '0.85rem', color: 'var(--mp-text)', lineHeight: 1.45 }}>
-                      <MathText text={conn.bubble.text} />
+                      <MathText text={bridgeText(t, topicId, idx, conn.bubble.text)} />
                     </div>
                   </div>
                 </div>
@@ -102,7 +112,7 @@ export default function LessonConnections({ connections, t, accentColor, onNavig
               >
                 <span style={{ fontSize: '1.1rem' }}>{topic.icon}</span>
                 <span style={{ flex: 1, fontSize: '0.85rem', fontWeight: 500 }}>
-                  {topic.titleKey}
+                  {topicTitle(t, topic)}
                 </span>
                 <span
                   style={{

@@ -9,8 +9,10 @@ import { batch11c } from '../lessons-11-batch3';
 import { batch12a } from '../lessons-12-batch1';
 import { batch12b } from '../lessons-12-batch2';
 import { batch12c } from '../lessons-12-batch3';
+import { portalBatch1 } from '../portal-batch1';
 
 export default {
+  ...portalBatch1,
   portal: {
     title: '∫nfinity',
     subtitle: 'Mathematik — die universelle Sprache',

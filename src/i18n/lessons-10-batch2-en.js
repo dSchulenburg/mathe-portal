@@ -246,7 +246,7 @@ export const batch2 = {
     realworld: {
       maps: {
         title: 'Maps & Navigation',
-        desc: 'Google Maps shows the world at scale. Zoom level 15 corresponds to about $1:18,000$. Each zoom level doubles the scale factor — exactly like similarity in geometry.',
+        desc: 'Google Maps shows the world at scale. Zoom level 15 corresponds to about $1:18{,}000$. Each zoom level doubles the scale factor — exactly like similarity in geometry.',
       },
       architecture: {
         title: 'Architectural Models',

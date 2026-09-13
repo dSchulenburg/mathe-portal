@@ -82,6 +82,8 @@ describe('LessonConnections rendert Formeln', () => {
       fs.readFileSync('src/components/lesson/LessonConnections.jsx', 'utf8'),
     );
     expect(quelle).toContain("import MathText from './MathText'");
-    expect(quelle).toMatch(/<MathText\s+text=\{conn\.bubble\.text\}/);
+    // Seit 13.09.2026 laeuft der Text vorher durch bridgeText() (Uebersetzung
+    // bridges.<topicId>.<n>, Rueckfall auf bubble.text) — beides muss drinbleiben.
+    expect(quelle).toMatch(/<MathText\s+text=\{bridgeText\(t, topicId, idx, conn\.bubble\.text\)\}/);
   });
 });

@@ -1,7 +1,7 @@
 export const batch5 = {
   '10-stetigkeit': {
     story: {
-      intro: 'Mia crée pour Lumières du Port un mini-jeu de parking : Lumi gare la camionnette de livraison et doit payer en venant la récupérer. Mia programme le tarif — 2,00 € jusqu\'à une heure, 3,50 € au-delà. Pendant les tests, Tim remarque quelque chose : « Si tu arrives une seconde trop tard, ça coûte tout à coup 1,50 € de plus. C\'est un bug ? » Mia regarde le graphe. Il n\'est pas cassé — il fait un saut. Et ce saut porte justement un nom.',
+      intro: 'Mia crée pour Hafenlichter un mini-jeu de parking : Lumi gare la camionnette de livraison et doit payer en venant la récupérer. Mia programme le tarif — 2,00 € jusqu\'à une heure, 3,50 € au-delà. Pendant les tests, Tim remarque quelque chose : « Si tu arrives une seconde trop tard, ça coûte tout à coup 1,50 € de plus. C\'est un bug ? » Mia regarde le graphe. Il n\'est pas cassé — il fait un saut. Et ce saut porte justement un nom.',
       challenge: 'Quand une fonction fait-elle un vrai saut, quand lui manque-t-il un seul point, et quand part-elle vers l\'infini ? Mia doit distinguer ces trois cas sans hésiter pour décider quels tarifs elle a le droit de construire ainsi.',
       outro: 'Mia sait maintenant vérifier en tout point suspect si une fonction est continue : limite à gauche, limite à droite, valeur de la fonction — si les trois concordent, tout va bien. Et elle sait quels trous elle peut réparer et lesquels non. Le tarif du parking, lui, reste discontinu. Ce n\'est pas un bug, c\'est une décision commerciale.',
     },

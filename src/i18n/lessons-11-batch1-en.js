@@ -32,6 +32,10 @@ export const batch11a = {
         title: 'Product Rule',
         desc: 'For the product of two functions: Derivative of first times second plus first times derivative of second. Indispensable whenever two variable expressions are multiplied.',
       },
+      quotient_rule: {
+        title: 'Quotient Rule',
+        desc: 'For fractions: denominator times derivative of the numerator, minus numerator times derivative of the denominator, divided by the squared denominator. The minus is the difference from the product rule — and the most common source of errors. Needed wherever something is "per" something else: unit cost, speed, concentration.',
+      },
       chain_rule: {
         title: 'Chain Rule',
         desc: 'Differentiate the outer function, leave the inner one as is, then multiply by the derivative of the inner function. The heart of backpropagation in neural networks.',
@@ -45,6 +49,15 @@ export const batch11a = {
         step2: 'Apply the power rule to each term: Exponent as factor, exponent minus 1. The constant $-7$ drops out:',
         step3: 'Combining gives the derivative function:',
         amir_comment: 'That\'s exactly what the gradient of my polynomial features looks like. Each term contributes to the slope — and PyTorch does this automatically for thousands of parameters simultaneously.',
+      },
+      quotient_rule: {
+        title: 'Differentiating a rational function with the quotient rule',
+        context: 'Amir measures how many requests his server handles per running second — one quantity per another, so a fraction.',
+        step1: 'First, name the numerator and the denominator. If you skip this, you will mix them up later:',
+        step2: 'Differentiate each one separately — that is the easy part:',
+        step3: 'Now substitute: denominator times derivative of the numerator, minus numerator times derivative of the denominator, all over $v^2$:',
+        step4: 'Multiply out and simplify. The denominator stays as a square, it is not multiplied out:',
+        amir_comment: 'Important: the denominator stays $(x-1)^2$. I used to dutifully multiply it out and that blocked me from cancelling. In curve sketching you want to be able to see the zeros of the denominator — as a factor, not as a polynomial.',
       },
       chain_rule: {
         title: 'Nested function with the chain rule',
@@ -82,6 +95,12 @@ export const batch11a = {
         correct: 'Always multiply by the inner derivative',
         why: 'For $[(3x+1)^4]\'$, it\'s not enough to just bring down the exponent. You MUST multiply by the derivative of the inner term $(3x+1)\' = 3$. Without the inner derivative, the factor 3 is missing.',
         amir_warning: 'Imagine forgetting the inner derivative for one layer in a neural network — the gradient would be completely wrong and the model learns nonsense. The chain rule is not optional!',
+      },
+      quotient_sign: {
+        wrong: 'Swapping the numerator of the quotient rule: $u \\cdot v\' - u\' \\cdot v$',
+        correct: 'Denominator times derivative of the numerator comes first: $u\' \\cdot v - u \\cdot v\'$',
+        why: 'The product rule is symmetric — you may swap the two terms and the result stays the same. The quotient rule has a minus, so the order is fixed. If you swap it, you get exactly the negative of the correct derivative. The tricky part: the term looks plausible, you keep calculating correctly, and still every sign is wrong in the end. A maximum turns into a minimum.',
+        amir_warning: 'Check at a simple point. For $f(x) = \\frac{x}{x+1}$ the function is increasing everywhere, so $f\'$ must be positive. If you get something negative, you have flipped the numerator — that costs you ten seconds and saves the whole task.',
       },
     },
   },

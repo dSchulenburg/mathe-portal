@@ -1,5 +1,6 @@
 import { getTopic } from '../../data/topics';
 import LessonSection from './LessonSection';
+import { topicTitle } from '../../i18n/topicTitle';
 
 /**
  * Prerequisite topic links — clickable cards to navigate back.
@@ -40,7 +41,7 @@ export default function LessonPrerequisites({ prerequisites, t, accentColor, onN
           >
             <span style={{ fontSize: '1.1rem' }}>{topic.icon}</span>
             <span style={{ flex: 1, fontSize: '0.85rem', fontWeight: 500 }}>
-              {topic.titleKey}
+              {topicTitle(t, topic)}
             </span>
             <span style={{ fontSize: '0.75rem', color: 'var(--mp-muted)' }}>
               {topic.period} →

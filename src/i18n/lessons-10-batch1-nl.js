@@ -13,8 +13,8 @@ export const batch1 = {
     },
     explanation: {
       intro: 'Een kwadratische vergelijking heeft de algemene vorm met hoogste exponent 2. In tegenstelling tot lineaire vergelijkingen ($x$ tot de macht 1) kan ze nul, een of twee oplossingen hebben. De algemene vorm luidt:',
-      normal_form: 'Voor de abc-formule hebben we de genormaliseerde vorm nodig — dat wil zeggen, de coefficient voor $x^2$ moet precies 1 zijn. Is dat niet het geval, dan delen we de hele vergelijking door $a$:',
-      mia_tip: 'Ik onthoud: eerst alles naar een kant brengen, zodat rechts nul staat. Dan delen door de coefficient voor $x^2$. Pas DAARNA mag ik de abc-formule gebruiken!',
+      normal_form: 'Voor de abc-formule hebben we de genormaliseerde vorm nodig — dat wil zeggen, de coëfficiënt voor $x^2$ moet precies 1 zijn. Is dat niet het geval, dan delen we de hele vergelijking door $a$:',
+      mia_tip: 'Ik onthoud: eerst alles naar één kant brengen, zodat rechts nul staat. Dan delen door de coëfficiënt voor $x^2$. Pas DAARNA mag ik de abc-formule gebruiken!',
       pq_formula: 'De abc-formule is het universele gereedschap voor kwadratische vergelijkingen in genormaliseerde vorm. Je leest $p$ en $q$ direct af en vult in:',
       completing_square: 'Kwadraatafsplitsen werkt zo: je vormt de linkerkant om tot een perfect kwadraat. Daarvoor tel je $(\\frac{p}{2})^2$ bij beide kanten op. Het resultaat is een uitdrukking van de vorm $(x + \\frac{p}{2})^2$, die je gemakkelijk naar $x$ kunt oplossen.',
       factoring: 'Als je de nulpunten $x_1$ en $x_2$ kent (of kunt raden), kun je de vergelijking schrijven als product van twee haakjes. Het product is nul als minstens een factor nul is:',
@@ -22,7 +22,7 @@ export const batch1 = {
     concepts: {
       pq_formula: {
         title: 'abc-formule',
-        desc: 'Het standaardgereedschap voor kwadratische vergelijkingen in genormaliseerde vorm. Werkt altijd — je hebt alleen $p$ (coefficient van $x$) en $q$ (constante term) nodig.',
+        desc: 'Het standaardgereedschap voor kwadratische vergelijkingen in genormaliseerde vorm. Werkt altijd — je hebt alleen $p$ (coëfficiënt van $x$) en $q$ (constante term) nodig.',
       },
       completing_square: {
         title: 'Kwadraatafsplitsen',
@@ -30,7 +30,7 @@ export const batch1 = {
       },
       discriminant: {
         title: 'Discriminant',
-        desc: 'De uitdrukking onder de wortel in de abc-formule: $D > 0$ geeft twee oplossingen, $D = 0$ geeft precies een, $D < 0$ betekent geen reele oplossing.',
+        desc: 'De uitdrukking onder de wortel in de abc-formule: $D > 0$ geeft twee oplossingen, $D = 0$ geeft precies een, $D < 0$ betekent geen reële oplossing.',
       },
       factoring: {
         title: 'Factoriseren',
@@ -41,7 +41,7 @@ export const batch1 = {
       pq_application: {
         title: 'Vergelijking oplossen met de abc-formule',
         context: 'Mia berekent wanneer Lumis springcurve het platform bij $y = 0$ raakt.',
-        step1: 'De vergelijking is al in genormaliseerde vorm (coefficient voor $x^2$ is 1):',
+        step1: 'De vergelijking is al in genormaliseerde vorm (coëfficiënt voor $x^2$ is 1):',
         step2: 'We lezen $p$ en $q$ af — let op de tekens:',
         step3: 'Waarden invullen in de abc-formule en stap voor stap uitrekenen:',
         step4: 'Twee oplossingen — Lumi raakt het platform op twee punten:',
@@ -120,7 +120,7 @@ export const batch1 = {
       },
       unit_circle: {
         title: 'Eenheidscirkel',
-        desc: 'Een cirkel met straal 1. Elk punt op de cirkel heeft coordinaten $(\\cos(\\alpha) \\mid \\sin(\\alpha))$. Zo kun je sin en cos voor alle hoeken definieren — niet alleen voor scherpe hoeken.',
+        desc: 'Een cirkel met straal 1. Elk punt op de cirkel heeft coördinaten $(\\cos(\\alpha) \\mid \\sin(\\alpha))$. Zo kun je sin en cos voor alle hoeken definiëren — niet alleen voor scherpe hoeken.',
       },
     },
     examples: {
@@ -138,14 +138,14 @@ export const batch1 = {
         step1: 'Hoek omrekenen (optioneel): $60°$ komt overeen met $\\frac{\\pi}{3}$ in radialen:',
         step2: 'Sinuswaarde aflezen — de $y$-coordinaat van het punt op de eenheidscirkel:',
         step3: 'Cosinuswaarde aflezen — de $x$-coordinaat:',
-        step4: 'Het punt op de eenheidscirkel heeft dus de coordinaten:',
+        step4: 'Het punt op de eenheidscirkel heeft dus de coördinaten:',
         mia_comment: 'Op de eenheidscirkel zie ik sin en cos als lengten. Dat maakt het veel aanschouwelijker dan alleen getallen in een tabel!',
       },
     },
     realworld: {
       compass: {
         title: 'Navigatie en GPS',
-        desc: 'Je smartphone berekent richtingen met goniometrie. De functie atan2 zet $x$- en $y$-coordinaten om in een hoek — zo weet Google Maps in welke richting je moet lopen.',
+        desc: 'Je smartphone berekent richtingen met goniometrie. De functie atan2 zet $x$- en $y$-coördinaten om in een hoek — zo weet Google Maps in welke richting je moet lopen.',
       },
       building_height: {
         title: 'Gebouwhoogten meten',
@@ -173,26 +173,26 @@ export const batch1 = {
 
   '10-exp-wachstum': {
     story: {
-      intro: 'Hafenlichter moet een multiplayermodus krijgen. Mia test de servers met 10 spelers — alles draait soepel. Maar Tim waarschuwt: "Wat gebeurt er bij 100? Bij 1000? Als het spel viraal gaat, verdubbelt het aantal spelers misschien elke paar dagen." Mia rekent na en schrikt: exponentiele groei is veel sneller dan je denkt.',
+      intro: 'Hafenlichter moet een multiplayermodus krijgen. Mia test de servers met 10 spelers — alles draait soepel. Maar Tim waarschuwt: "Wat gebeurt er bij 100? Bij 1000? Als het spel viraal gaat, verdubbelt het aantal spelers misschien elke paar dagen." Mia rekent na en schrikt: exponentiële groei is veel sneller dan je denkt.',
       challenge: 'De serverbelasting groeit niet lineair met de spelers, maar exponentieel. Mia moet voorspellen wanneer de servers overbelast raken.',
-      outro: 'Mia heeft een model gebouwd dat de ontwikkeling van het spelersaantal voorspelt. Dankzij de exponentiele functie weet ze nu: als de verdubbelingstijd 3 dagen is, heeft ze na 2 weken 32 keer zoveel servercapaciteit nodig. "Liever vroeg opschalen dan laat crashen", besluit ze.',
+      outro: 'Mia heeft een model gebouwd dat de ontwikkeling van het spelersaantal voorspelt. Dankzij de exponentiële functie weet ze nu: als de verdubbelingstijd 3 dagen is, heeft ze na 2 weken 32 keer zoveel servercapaciteit nodig. "Liever vroeg opschalen dan laat crashen", besluit ze.',
     },
     objectives: {
-      exponential_functions: 'Exponentiele functies herkennen en van lineaire functies onderscheiden',
+      exponential_functions: 'Exponentiële functies herkennen en van lineaire functies onderscheiden',
       growth_factor: 'De groeifactor uit percentages bepalen en interpreteren',
       half_life: 'Halveringstijd en verdubbelingstijd berekenen en toepassen',
-      model_real_world: 'Reele groei- en vervalprocessen met exponentiele functies modelleren',
+      model_real_world: 'Reële groei- en vervalprocessen met exponentiële functies modelleren',
     },
     explanation: {
-      intro: 'Bij lineaire groei komt er elke stap hetzelfde bedrag bij. Bij exponentiele groei wordt er elke stap met dezelfde factor vermenigvuldigd. Dat klinkt vergelijkbaar — maar leidt tot totaal verschillende resultaten:',
+      intro: 'Bij lineaire groei komt er elke stap hetzelfde bedrag bij. Bij exponentiële groei wordt er elke stap met dezelfde factor vermenigvuldigd. Dat klinkt vergelijkbaar — maar leidt tot totaal verschillende resultaten:',
       growth_factor: 'De groeifactor $b$ vertelt je alles: groeit iets met $p\\%$ per tijdseenheid, dan is de factor groter dan 1. Neemt iets met $p\\%$ af (verval), dan is hij kleiner dan 1:',
-      mia_tip: 'Lineaire functies tellen op, exponentiele functies vermenigvuldigen. Bij 10% groei per dag is de factor $b = 1{,}10$ — na 7 dagen dus $1{,}10^7 \\approx 1{,}95$, bijna een verdubbeling! Dat verraste me bij de serverplanning.',
+      mia_tip: 'Lineaire functies tellen op, exponentiële functies vermenigvuldigen. Bij 10% groei per dag is de factor $b = 1{,}10$ — na 7 dagen dus $1{,}10^7 \\approx 1{,}95$, bijna een verdubbeling! Dat verraste me bij de serverplanning.',
       half_life: 'De halveringstijd $t_H$ is de tijd waarna nog de helft over is. Die is constant — ongeacht hoeveel je begint. Dat is het bijzondere aan exponentieel verval:',
       doubling_time: 'Het equivalent bij groei: de verdubbelingstijd $t_V$ vertelt je na hoeveel tijd de waarde verdubbeld is. Ook die blijft altijd gelijk:',
     },
     concepts: {
       exponential_function: {
-        title: 'Exponentiele functie',
+        title: 'Exponentiële functie',
         desc: 'De algemene vorm: $a$ is de beginwaarde, $b$ de groeifactor, $t$ de tijd. Essentieel: de variabele staat in de exponent — dat maakt het verschil met machtsfuncties.',
       },
       growth_factor: {
@@ -204,19 +204,19 @@ export const batch1 = {
         desc: 'De tijd totdat een waarde gehalveerd is. Typisch voor radioactief verval, medicijnen in het lichaam of batterijontlading. De halveringstijd is onafhankelijk van de beginwaarde.',
       },
       euler_base: {
-        title: 'Natuurlijke exponentiele functie',
+        title: 'Natuurlijke exponentiële functie',
         desc: 'Het grondtal $e \\approx 2{,}718$ is bijzonder: de functie $e^x$ is haar eigen afgeleide. Met $k > 0$ groeit ze, met $k < 0$ vervalt ze. Standaard in de natuurwetenschappen.',
       },
     },
     examples: {
       bacteria: {
         title: 'Bacteriegroei',
-        context: 'Een bacteriecultuur begint met 500 bacterien en verdubbelt elk uur.',
+        context: 'Een bacteriecultuur begint met 500 bacteriën en verdubbelt elk uur.',
         step1: 'Beginwaarde en groeifactor identificeren — verdubbeling betekent factor 2:',
-        step2: 'De exponentiele functie opstellen — $t$ telt de uren:',
+        step2: 'De exponentiële functie opstellen — $t$ telt de uren:',
         step3: 'Voor $t = 5$ (na 5 uur) invullen: $2^5 = 32$:',
-        step4: 'Na 5 uur zijn er 16.000 bacterien:',
-        mia_comment: 'Van 500 naar 16.000 in slechts 5 uur! Dat laat zien waarom exponentiele groei zo verrassend is. Bij servers werkt het net zo — spelersaantallen kunnen sneller groeien dan je servers kunt bijbestellen.',
+        step4: 'Na 5 uur zijn er 16.000 bacteriën:',
+        mia_comment: 'Van 500 naar 16.000 in slechts 5 uur! Dat laat zien waarom exponentiële groei zo verrassend is. Bij servers werkt het net zo — spelersaantallen kunnen sneller groeien dan je servers kunt bijbestellen.',
       },
       radioactive: {
         title: 'Radioactief verval',
@@ -239,15 +239,15 @@ export const batch1 = {
       },
       pandemic: {
         title: 'Pandemieverspreiding',
-        desc: 'COVID-19 heeft laten zien wat "exponentiele groei" betekent: zonder maatregelen verdubbelden de besmettingen elke 3 dagen. Na een maand zou de factor $2^{10} = 1024$ zijn.',
+        desc: 'COVID-19 heeft laten zien wat "exponentiële groei" betekent: zonder maatregelen verdubbelden de besmettingen elke 3 dagen. Na een maand zou de factor $2^{10} = 1024$ zijn.',
       },
     },
     mistakes: {
       linear_vs_exp: {
         wrong: 'Lineair model in plaats van exponentieel',
-        correct: 'Procentuele verandering = exponentiele functie',
+        correct: 'Procentuele verandering = exponentiële functie',
         why: '"5% groei per jaar" is NIET $+5$ per jaar, maar $\\cdot 1{,}05$ per jaar. Bij een lineair model is de toename constant, bij een exponentieel model wordt die steeds groter.',
-        mia_warning: 'Ik had eerst $\\text{Spelers}(t) = 100 + 50t$ berekend. De echte aantallen waren na een week 3x zo hoog! Exponentiele groei wordt bijna altijd onderschat.',
+        mia_warning: 'Ik had eerst $\\text{Spelers}(t) = 100 + 50t$ berekend. De echte aantallen waren na een week 3x zo hoog! Exponentiële groei wordt bijna altijd onderschat.',
       },
       wrong_growth_factor: {
         wrong: 'Percentage direct als factor ingevuld',

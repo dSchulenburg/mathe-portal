@@ -76,7 +76,7 @@ export const batch12b = {
       z_sign: {
         wrong: 'The $z$-formula reversed: $z = \\frac{\\mu - x}{\\sigma}$',
         correct: 'Correct is $z = \\frac{x - \\mu}{\\sigma}$ — value minus expected value, not the other way around',
-        why: 'If you swap numerator and denominator, you get the wrong sign. A value above the mean should give a positive $z$, one below it a negative $z$. With $x = 70$, $\\mu = 50$: $z = +2{,}5$ (above average), not $-2{,}5$.',
+        why: 'If you swap numerator and denominator, you get the wrong sign. A value above the mean should give a positive $z$, one below it a negative one. With $x = 70$, $\\mu = 50$: $z = +2{,}5$ (above average), not $-2{,}5$.',
       },
     },
   },
@@ -126,11 +126,11 @@ export const batch12b = {
       },
       player_states: {
         title: 'Player Behavior as a Markov Chain',
-        context: 'In "Harbor Lights 3D," players switch between Exploring (E) and Fighting (F). Kai has observed: Those exploring stay exploring 70% of the time and switch to fighting 30%. Those fighting stay fighting 80% and go back to exploring 20%. Currently 60% of players are exploring.',
+        context: 'In "Harbor Lights 3D," players switch between Exploring (E) and Fighting (F). Kai has observed: Those exploring stay exploring $70\\%$ of the time and switch to fighting $30\\%$. Those fighting stay fighting $80\\%$ and go back to exploring $20\\%$. Currently $60\\%$ of players are exploring.',
         step1: 'Set up the transition matrix $T$ and initial vector $\\vec{v}_0$:',
         step2: 'Calculate one step — $\\vec{v}_1 = T \\cdot \\vec{v}_0$:',
         step3: 'Determine the fixed vector — solve the system $T \\cdot \\vec{v} = \\vec{v}$ with $x + y = 1$:',
-        step4: 'In the long run, 40% explore and 60% fight — regardless of the start:',
+        step4: 'In the long run, $40\\%$ explore and $60\\%$ fight — regardless of the start:',
         kai_comment: 'This is gold for my game design! The fixed vector shows me that players fight more than they explore in the long run — no matter how they start. If I want it more balanced, I need to change the transition probabilities. Matrices make player behavior calculable!',
       },
     },
@@ -211,7 +211,7 @@ export const batch12b = {
       },
       mixed_stochastik: {
         title: 'Typical Stochastics Problem: Hypothesis Test',
-        context: 'Amir\'s A/B test shows: Normally 8% of 50 users click the new button. After a redesign, he wants to test whether the click rate has increased ($\\alpha = 5\\%$).',
+        context: 'Amir\'s A/B test shows: Normally $8\\%$ of 50 users click the new button. After a redesign, he wants to test whether the click rate has increased ($\\alpha = 5\\%$).',
         step1: 'Set up the model — binomial distribution with the parameters:',
         step2: 'Formulate hypotheses — one-sided test (upper tail):',
         step3: 'Search for the critical region — test $k = 8$ ($P$ still too large):',

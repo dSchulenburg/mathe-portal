@@ -1,7 +1,7 @@
 export const batch4 = {
   '10-lineare-funktionen': {
     story: {
-      intro: 'Mia assemble le niveau 4 de Lumières du Port : Lumi doit sauter sur une plateforme qui dérive lentement et régulièrement vers la droite. « Le mouvement est linéaire », explique Tim. « 60 pixels par seconde — c\'est tout. » Mia le saisit et remarque aussitôt : c\'est une équation de droite tout à fait ordinaire. Position de départ plus vitesse fois temps. Exactement ce qu\'elle a retenu de la classe de troisième — mais plus formel désormais : $f(x) = m \\cdot x + b$.',
+      intro: 'Mia assemble le niveau 4 de Hafenlichter : Lumi doit sauter sur une plateforme qui dérive lentement et régulièrement vers la droite. « Le mouvement est linéaire », explique Tim. « 60 pixels par seconde — c\'est tout. » Mia le saisit et remarque aussitôt : c\'est une équation de droite tout à fait ordinaire. Position de départ plus vitesse fois temps. Exactement ce qu\'elle a retenu de la classe de troisième — mais plus formel désormais : $f(x) = m \\cdot x + b$.',
       challenge: 'Mia doit régler la courbe de saut de Lumi pour qu\'il atterrisse précisément sur la plateforme en dérive. Pente du mouvement de la plateforme et point d\'intersection avec la trajectoire de Lumi — tout est linéaire.',
       outro: 'Une fonction affine possède deux réglages : $m$ détermine sa raideur, $b$ la décale vers le haut ou vers le bas. Mia comprend maintenant pourquoi elle en a besoin sans cesse : plateformes, consommation d\'énergie, barres de vie — partout où quelque chose augmente ou diminue d\'une quantité constante « par pas », l\'équation de droite est le bon outil.',
     },
@@ -87,7 +87,7 @@ export const batch4 = {
 
   '10-kreis': {
     story: {
-      intro: 'Mia conçoit un boss rotatif pour Lumières du Port. Le boss est un moulin tourbillonnant à trois bras — et Lumi doit sauter entre les intervalles. « La hitbox doit être circulaire », dit Tim. « Sinon ça paraît bancal quand Lumi frôle un bras qui n\'est même pas à proximité. » Mia a besoin du périmètre, de l\'aire et de l\'angle de chaque bras — de la géométrie du cercle à l\'état pur.',
+      intro: 'Mia conçoit un boss rotatif pour Hafenlichter. Le boss est un moulin tourbillonnant à trois bras — et Lumi doit sauter entre les intervalles. « La hitbox doit être circulaire », dit Tim. « Sinon ça paraît bancal quand Lumi frôle un bras qui n\'est même pas à proximité. » Mia a besoin du périmètre, de l\'aire et de l\'angle de chaque bras — de la géométrie du cercle à l\'état pur.',
       challenge: 'Mia doit programmer des hitboxes rondes. Et aussi la longueur d\'arc que chaque bras balaie par seconde — sinon la vitesse de rotation sera fausse.',
       outro: 'Avec $U = 2\\pi r$ et $A = \\pi r^2$, Mia dispose des outils standard. Et avec le radian, elle convertit directement les angles de rotation en distances parcourues — bien plus vite que par le détour des $360°$. « Le radian est le langage de programmation des rotations », retient-elle.',
     },

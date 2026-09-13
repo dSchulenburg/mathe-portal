@@ -28,6 +28,7 @@ import LessonLayer from '../lesson/LessonLayer';
 import StoryOutro from '../lesson/StoryOutro';
 import { getCharacterForTopic, TOPIC_STORIES } from '../../data/characters';
 import { useTranslation } from '../../i18n/useTranslation';
+import { topicTitle } from '../../i18n/topicTitle';
 import { useDisplayMode } from '../../context/DisplayModeContext';
 import { vorschauText } from '../../utils/mathVorschau';
 
@@ -123,7 +124,7 @@ export default function TopicView({ topicId, onBack }) {
             fontSize: '0.9rem',
           }}
         >
-          ← Zurück
+          {t('topicView.back')}
         </button>
       </div>
     );
@@ -220,7 +221,7 @@ export default function TopicView({ topicId, onBack }) {
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem', flexWrap: 'wrap' }}>
               <button
                 onClick={onBack}
-                aria-label="Zurück zur Themenübersicht"
+                aria-label={t('topicView.backAria')}
                 style={{
                   background: 'transparent',
                   border: '1px solid var(--mp-border)',
@@ -232,7 +233,7 @@ export default function TopicView({ topicId, onBack }) {
                   minHeight: '36px',
                 }}
               >
-                ← Zurück
+                {t('topicView.back')}
               </button>
 
               <span style={{
@@ -258,7 +259,7 @@ export default function TopicView({ topicId, onBack }) {
               color: 'var(--mp-text)',
               margin: '0 0 0.6rem',
             }}>
-              {topic.icon} {topic.titleKey}
+              {topic.icon} {topicTitle(t, topic)}
             </h1>
 
             {/* Progress bar */}

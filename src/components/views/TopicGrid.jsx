@@ -5,6 +5,7 @@ import { useMathStore } from '../../store/mathStore';
 import { navigate } from '../../lib/router';
 import LanguageSwitcher from '../LanguageSwitcher';
 import { useTranslation } from '../../i18n/useTranslation';
+import { topicTitle } from '../../i18n/topicTitle';
 
 const GRADE_TABS = [
   { grade: 10, label: 'Klasse 10', available: true },
@@ -19,6 +20,7 @@ import HeatmapBadge from '../journal/HeatmapBadge';
 function TopicCard({ topic }) {
   const getTopicProgress = useMathStore((s) => s.getTopicProgress);
   const getLessonProgress = useMathStore((s) => s.getLessonProgress);
+  const { t } = useTranslation();
   const exerciseCount = topic.exercises?.length || 0;
   const progress = getTopicProgress(topic.id, exerciseCount);
   const lessonProgress = getLessonProgress(topic.id);
@@ -70,7 +72,7 @@ function TopicCard({ topic }) {
             color: 'var(--mp-text)',
             lineHeight: 1.3,
           }}>
-            {topic.titleKey}
+            {topicTitle(t, topic)}
           </h3>
           <span style={{
             fontSize: '0.7rem',

@@ -75,11 +75,23 @@ const DIACRITICS = {
 //
 // ru/uk pruefen das gesamte kyrillische Alphabet — dort sind Tausende
 // Treffer normal, weshalb der Wert deutlich hoeher liegen darf.
+// cs nachgemessen 13.09.2026 nach der Reparatur: fuenf korrekte Dateien
+// (16–26 KB) haben 1150–2131 Treffer, die gefalteten hatten 2–6. 400 laesst
+// grossen Abstand nach unten und faengt auch eine nur teilweise gefaltete Datei.
 const MIN_DIACRITICS = {
-  cs: 40, da: 25, en: 0, es: 50, fr: 50, it: 25,
+  cs: 400, da: 25, en: 0, es: 50, fr: 50, it: 25,
   nl: 8, no: 25, pl: 40, pt: 50, ru: 200, uk: 200,
 };
 const MIN_DIACRITICS_DEFAULT = 20;
+
+// Einzelne Dateien, die nachweislich korrekt sind und trotzdem unter der
+// Schwelle liegen. Nur mit Begruendung eintragen — eine pauschal gesenkte
+// Sprachschwelle wuerde den ASCII-Fold in allen anderen Dateien uebersehen.
+const DIACRITICS_EXEMPT = {
+  // 13.09.2026 komplett gelesen: Koerper, Potenzen, Aehnlichkeit — kein
+  // einziges Wort braucht im Niederlaendischen Trema oder Akzent.
+  'lessons-10-batch2-nl.js': 'orthografisch geprueft, 0 Diakritika sind korrekt',
+};
 
 const args = process.argv.slice(2);
 const asJson = args.includes('--json');
@@ -90,10 +102,15 @@ const skip = skipArg ? skipArg.split('=')[1].split(',') : [];
 
 const langs = only ? LANGS.filter((l) => only.includes(l)) : LANGS;
 
-/** Alle deutschen Quelldateien: lessons-<klasse>-batch<n>.js ohne Sprachsuffix. */
+/**
+ * Alle deutschen Quelldateien ohne Sprachsuffix:
+ *   lessons-<klasse>-batch<n>.js   Lektionstexte
+ *   portal-batch<n>.js             Themen-Titel, UI-Texte, Bruecken-Sprechblasen
+ *                                  (erzeugt von scripts/extract-portal-strings.mjs)
+ */
 function germanSources() {
   return readdirSync(I18N_DIR)
-    .filter((f) => /^lessons-\d+-batch\d+\.js$/.test(f))
+    .filter((f) => /^(lessons-\d+-batch\d+|portal-batch\d+)\.js$/.test(f))
     .sort();
 }
 
@@ -266,7 +283,7 @@ for (const src of sources) {
     }
 
     // 3. Diakritika
-    if (!skip.includes('diacritics') && DIACRITICS[lang]) {
+    if (!skip.includes('diacritics') && DIACRITICS[lang] && !DIACRITICS_EXEMPT[file]) {
       const raw = readFileSync(join(I18N_DIR, file), 'utf8');
       const hits = (raw.match(new RegExp(DIACRITICS[lang], 'gi')) || []).length;
       const min = MIN_DIACRITICS[lang] ?? MIN_DIACRITICS_DEFAULT;
