@@ -9,25 +9,26 @@ import { batch11c } from '../lessons-11-batch3-uk';
 import { batch12a } from '../lessons-12-batch1-uk';
 import { batch12b } from '../lessons-12-batch2-uk';
 import { batch12c } from '../lessons-12-batch3-uk';
+import { batch0 } from '../lessons-10-batch0-uk';
 import { portalBatch1 } from '../portal-batch1-uk';
 
 export default {
   ...portalBatch1,
   portal: {
     title: '∫nfinity',
-    subtitle: '∫nfinity',
+    subtitle: 'Математика — універсальна мова',
     oerBadge: 'Відкриті освітні ресурси',
     progress: 'Твій прогрес',
     comingSoon: 'Незабаром',
   },
   modules: {
     'quad-funktionen': {
-      title: '∫nfinity',
-      subtitle: '∫nfinity',
+      title: 'Квадратичні функції',
+      subtitle: '{levels} рівні · {exercises} вправи',
     },
     differentialrechnung: {
-      title: '∫nfinity',
-      subtitle: '∫nfinity',
+      title: 'Диференціальне числення',
+      subtitle: '{levels} рівні · {exercises} вправи',
     },
   },
   ui: {
@@ -59,18 +60,18 @@ export default {
   },
   levels: {
     'quad-funktionen': {
-      1: { title: '∫nfinity' },
-      2: { title: '∫nfinity' },
-      3: { title: '∫nfinity' },
-      4: { title: '∫nfinity' },
-      5: { title: '∫nfinity' },
-      6: { title: '∫nfinity' },
+      1: { title: 'Основи', subtitle: 'Розпізнавання парабол' },
+      2: { title: 'Перетворення форм', subtitle: 'Стандартна ↔ Вершинна форма' },
+      3: { title: 'Формула дискримінанта', subtitle: 'Знаходження нулів' },
+      4: { title: 'Факторизація', subtitle: 'Формули Вієта' },
+      5: { title: 'Комбінований', subtitle: 'Поєднання методів' },
+      6: { title: 'Текстові задачі', subtitle: 'Математика в житті' },
     },
     differentialrechnung: {
-      1: { title: '∫nfinity' },
-      2: { title: '∫nfinity' },
-      3: { title: '∫nfinity' },
-      4: { title: '∫nfinity' },
+      1: { title: 'Швидкості змін та границі', subtitle: 'Що таке похідна?' },
+      2: { title: 'Базові правила', subtitle: 'Степенева, Константа, Сума' },
+      3: { title: 'Розширені правила', subtitle: 'Добуток, Частка, Ланцюжок' },
+      4: { title: 'Монотонність та екстремуми', subtitle: 'Аналіз кривих I' },
     },
   },
   stories: {
@@ -106,37 +107,39 @@ export default {
   },
   exercises: {
     differentialrechnung: {
-      'D1-EX1': { title: '∫nfinity' },
-      'D1-EX2': { title: '∫nfinity' },
-      'D1-EX3': { title: '∫nfinity' },
-      'D1-EX4': { title: '∫nfinity' },
-      'D2-EX1': { title: '∫nfinity' },
-      'D2-EX2': { title: '∫nfinity' },
-      'D2-EX3': { title: '∫nfinity' },
-      'D2-EX4': { title: '∫nfinity' },
-      'D3-EX1': { title: '∫nfinity' },
-      'D3-EX2': { title: '∫nfinity' },
-      'D3-EX3': { title: '∫nfinity' },
-      'D3-EX4': { title: '∫nfinity' },
-      'D4-EX1': { title: '∫nfinity' },
-      'D4-EX2': { title: '∫nfinity' },
-      'D4-EX3': { title: '∫nfinity' },
-      'D4-EX4': { title: '∫nfinity' },
+      'D1-EX1': { title: 'Середня швидкість зміни', description: 'Обчисли нахил секанти f(x) = x² між x=1 і x=3.' },
+      'D1-EX2': { title: 'Миттєва швидкість зміни', description: 'Перетягни точку на кривій і визнач нахил.' },
+      'D1-EX3': { title: 'Від різниці до диференціального відношення', description: 'Диференціюй f(x) = x² за допомогою границі.' },
+      'D1-EX4': { title: 'Границя візуально', description: 'Спостерігай за анімацією і визнач нахил дотичної.' },
+      'D2-EX1': { title: 'Степенева правило', description: 'Диференціюй 5 функцій за допомогою степеневої правила.' },
+      'D2-EX2': { title: 'Правило константного множника', description: 'Диференціюй функції з постійними множниками.' },
+      'D2-EX3': { title: 'Правило суми', description: 'Диференціюй f(x) = 3x² + 2x − 5 доданок за доданком.' },
+      'D2-EX4': { title: 'Змішані вправи', description: 'Визнач правильне правило і обчисли.' },
+      'D3-EX1': { title: 'Правило добутку', description: 'Диференціюй f(x) = (2x+1)·x³.' },
+      'D3-EX2': { title: 'Правило частки', description: 'Диференціюй f(x) = (x²+1)/(x−1).' },
+      'D3-EX3': { title: 'Правило ланцюжка', description: 'Диференціюй f(x) = (2x+3)⁴.' },
+      'D3-EX4': { title: 'Вибір правила', description: 'Яке правило підходить? Поясни і обчисли.' },
+      'D4-EX1': { title: 'Знаходження екстремумів', description: 'Визнач екстремуми f(x) = x³ − 3x.' },
+      'D4-EX2': { title: 'Зміна знаку', description: 'Познач екстремальні точки на графіку.' },
+      'D4-EX3': { title: 'Інтервали монотонності', description: 'В яких інтервалах функція зростає або спадає?' },
+      'D4-EX4': { title: 'Повний алгоритм', description: 'Проведи повне дослідження екстремумів.' },
     },
   },
   // ── Lesson Layer Labels ──
   lesson: {
     objectives: 'Цілі навчання',
-    objectivesSubtitle: '∫nfinity',
+    objectivesSubtitle: 'Після цієї теми ти зможеш...',
     explanation: 'Пояснення',
     concepts: 'Ключові поняття',
     examples: 'Приклади розв\'язань',
-    examplesSubtitle: '∫nfinity',
+    examplesSubtitle: 'Розв\'язано крок за кроком',
     realWorld: 'Де ти це зустрінеш?',
     mistakes: 'Типові помилки',
-    mistakesSubtitle: '∫nfinity',
+    mistakesSubtitle: 'Тут часто помиляються...',
     prerequisites: 'Попередні знання',
-    prerequisitesSubtitle: '∫nfinity',
+    prerequisitesSubtitle: 'Це ти вже маєш уміти',
+    connections: 'Мости до інших тем',
+    connectionsSubtitle: 'Де та сама ідея з\'являється знову',
     collapseLesson: 'Згорнути урок',
     expandLesson: 'Показати урок',
     skipToExercises: 'Перейти до вправ →',
@@ -156,19 +159,7 @@ export default {
     ...batch12a,
     ...batch12b,
     ...batch12c,
-    '10-quad-funktionen': {
-      story: {
-        intro: 'Mia сидить у своєму маленькому офісі біля Гамбурзької гавані і дивиться на екран. Lumi, її ігровий персонаж у "Hafenlichter", повинен елегантно стрибати через ящики та контейнери — але крива стрибка виглядає неправильно. "Фізика не збігається", бурмотить вона. Щоб запрограмувати реалістичну траєкторію стрибка, Mia потрібні квадратичні функції.',
-        challenge: 'Lumi повинен стрибати через ящики — але крива стрибка виглядає неприродно.',
-        outro: 'З вершинною формою Mia запрограмувала ідеальну криву стрибка! Lumi тепер летить елегантною дугою над гамбурзькими контейнерами. "Нарешті виглядає реалістично", каже Тім і дає п\'ять.',
-      },
-      objectives: { recognize: 'Розпізнавати квадратичні функції та описувати їхні властивості', vertex_form: 'Впевнено перетворювати між нормальною та вершинною формою', pq_formula: 'Обчислювати нулі за формулою', graph_properties: 'Зчитувати напрямок відкриття, вершину та вісь симетрії з рівняння' },
-      explanation: { intro: 'Уяви, що кидаєш баскетбольний м\'яч. М\'яч летить дугою вгору, досягає найвищої точки і падає. Ця траєкторія має цілком певну форму — параболу. Математично ми описуємо її квадратичною функцією:', opening: 'Число $a$ визначає, чи парабола відкрита вгору ($a > 0$) чи вниз ($a < 0$) — і наскільки "вузька" або "широка" вона.', mia_tip: 'У моїй грі $a$ від\'ємне, бо крива стрибка йде вгору і потім вниз — як перевернута U!', vertex_form: 'Вершинна форма одразу показує найвищу (або найнижчу) точку параболи. Вершина $S$ має координати $(d \\mid e)$:', conversion: 'Для перетворення з нормальної у вершинну форму використовуй виділення повного квадрата.' },
-      concepts: { normal_form: { title: '∫nfinity' } },
-      examples: { vertex: { title: '∫nfinity' } },
-      realworld: { basketball: { title: '∫nfinity' } },
-      mistakes: { sign_error: { wrong: 'Помилка знаку', correct: 'Врахувати знаки', why: 'У $f(x) = (x - d)^2 + e$ стоїть мінус перед $d$. $(x - 3)^2$ має вершину при $d = +3$!', mia_warning: 'Ця помилка коштувала мені 3 години дебагу!' }, pq_wrong: { wrong: 'Формула без ділення', correct: 'Спочатку поділити на $a$', why: 'Формула працює тільки при коефіцієнті 1 перед $x^2$.' } },
-    },
+    ...batch0,
   },
 
   footer: {

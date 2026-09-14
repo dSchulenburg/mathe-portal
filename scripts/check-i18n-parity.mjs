@@ -25,6 +25,13 @@
  *                   spreaden. Nur importieren reicht nicht — der haeufigste
  *                   Fehler beim Nachziehen einer Sprache.
  *
+ * NICHT hier geprueft: was direkt in locales/<lang>.js steht (portal, ui,
+ * levels, lesson ...). Node kann die Locale-Dateien wegen ihrer endungslosen
+ * Batch-Imports nicht laden. Das deckt src/i18n/__tests__/locale-integrity.test.js
+ * ab (npm run test:run) — Befund 13.09.2026: 562 Platzhalter '∫nfinity' standen
+ * dort, waehrend dieser Pruefer "alles sauber" meldete. Lektionstexte gehoeren
+ * deshalb IMMER in einen Batch, nie inline in eine Locale.
+ *
  * Aufruf:  node scripts/check-i18n-parity.mjs [--json] [--only=fr,pl] [--skip=diacritics]
  * Exit 0 = alles sauber, Exit 1 = mindestens ein Befund.
  */
