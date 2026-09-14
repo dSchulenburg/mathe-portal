@@ -62,8 +62,8 @@ export const batch0 = {
         desc: 'Cada lançamento ao cesto descreve uma parábola. A altura $h$ depende do tempo $t$. Os treinadores usam isto para calcular o ângulo de lançamento ideal.',
       },
       bridge: {
-        title: 'Arcos de pontes',
-        desc: 'Muitas pontes têm a forma de uma parábola — é a forma de arco mais estável, porque distribui o peso de maneira uniforme. A Golden Gate Bridge? Uma parábola.',
+        title: 'Pontes suspensas',
+        desc: 'Nas pontes suspensas como a Golden Gate Bridge, o cabo principal fica pendurado quase exatamente em forma de parábola – porque o tabuleiro distribui o seu peso de maneira uniforme pelo cabo.',
       },
       pricing: {
         title: 'Otimização de preços',
@@ -217,7 +217,7 @@ export const batch0 = {
     realworld: {
       lootbox: {
         title: 'Loot boxes nos jogos',
-        desc: 'Jogos como Fortnite ou Genshin Impact usam probabilidades nos seus sistemas de drop. Na UE as taxas de drop têm de ser publicadas — com matemática podes verificar se uma compra compensa.',
+        desc: 'Jogos como Genshin Impact ou EA Sports FC usam probabilidades nas suas loot boxes. Nas lojas de aplicações da Apple e da Google as probabilidades de ganhar têm de ser mostradas – com matemática podes verificar se uma compra compensa.',
       },
       shuffle: {
         title: 'Modo aleatório do Spotify',

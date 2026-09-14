@@ -62,8 +62,8 @@ export const batch0 = {
         desc: 'Hvert kast mod kurven følger en parabel. Højden $h$ afhænger af tiden $t$. Trænere bruger det til at beregne den bedste kastevinkel.',
       },
       bridge: {
-        title: 'Brobuer',
-        desc: 'Mange broer har form som en parabel — det er den mest stabile bueform, fordi den fordeler vægten jævnt. Golden Gate Bridge? En parabel.',
+        title: 'Hængebroer',
+        desc: 'På hængebroer som Golden Gate Bridge hænger bærekablet næsten præcis som en parabel – fordi kørebanen fordeler sin vægt jævnt på kablet.',
       },
       pricing: {
         title: 'Prisoptimering',
@@ -217,7 +217,7 @@ export const batch0 = {
     realworld: {
       lootbox: {
         title: 'Lootbokse i spil',
-        desc: 'Spil som Fortnite eller Genshin Impact bruger sandsynligheder til deres drop-systemer. I EU skal drop-raterne offentliggøres — med matematik kan du tjekke, om et køb kan betale sig.',
+        desc: 'Spil som Genshin Impact eller EA Sports FC bruger sandsynligheder til deres lootbokse. I Apples og Googles app-butikker skal vinderchancerne vises – med matematik kan du tjekke, om et køb kan betale sig.',
       },
       shuffle: {
         title: 'Spotify-shuffle',

@@ -62,8 +62,8 @@ export const batch0 = {
         desc: 'Jeder Korbwurf beschreibt eine Parabel. Die Höhe $h$ hängt von der Zeit $t$ ab. Trainer nutzen das, um den optimalen Abwurfwinkel zu berechnen.',
       },
       bridge: {
-        title: 'Brückenbögen',
-        desc: 'Viele Brücken haben die Form einer Parabel — sie ist die stabilste Bogenform, weil sie das Gewicht gleichmäßig verteilt. Die Golden Gate Bridge? Eine Parabel.',
+        title: 'Hängebrücken',
+        desc: 'Bei Hängebrücken wie der Golden Gate Bridge hängt das Tragseil fast genau als Parabel durch – weil die Fahrbahn ihr Gewicht gleichmäßig auf das Seil verteilt.',
       },
       pricing: {
         title: 'Preisoptimierung',
@@ -217,7 +217,7 @@ export const batch0 = {
     realworld: {
       lootbox: {
         title: 'Gaming-Lootboxen',
-        desc: 'Spiele wie Fortnite oder Genshin Impact nutzen Wahrscheinlichkeiten für ihre Drop-Systeme. In der EU müssen die Drop-Raten veröffentlicht werden — mit Mathe kannst du prüfen, ob sich ein Kauf lohnt.',
+        desc: 'Spiele wie Genshin Impact oder EA Sports FC nutzen Wahrscheinlichkeiten für ihre Lootboxen. In Apples und Googles App-Stores müssen die Gewinnchancen angezeigt werden – mit Mathe kannst du prüfen, ob sich ein Kauf lohnt.',
       },
       shuffle: {
         title: 'Spotify-Shuffle',

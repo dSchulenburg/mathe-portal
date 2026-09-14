@@ -62,8 +62,8 @@ export const batch0 = {
         desc: 'Każdy rzut do kosza opisuje parabolę. Wysokość $h$ zależy od czasu $t$. Trenerzy wykorzystują to, żeby obliczyć optymalny kąt wyrzutu.',
       },
       bridge: {
-        title: 'Łuki mostów',
-        desc: 'Wiele mostów ma kształt paraboli — to najbardziej stabilny kształt łuku, bo rozkłada ciężar równomiernie. Golden Gate Bridge? Parabola.',
+        title: 'Mosty wiszące',
+        desc: 'W mostach wiszących, takich jak Golden Gate Bridge, lina nośna zwisa niemal dokładnie w kształcie paraboli – bo pomost rozkłada swój ciężar równomiernie na linę.',
       },
       pricing: {
         title: 'Optymalizacja cen',
@@ -217,7 +217,7 @@ export const batch0 = {
     realworld: {
       lootbox: {
         title: 'Lootboxy w grach',
-        desc: 'Gry takie jak Fortnite czy Genshin Impact wykorzystują prawdopodobieństwo w swoich systemach dropów. W UE drop rate muszą być publikowane — dzięki matematyce możesz sprawdzić, czy zakup się opłaca.',
+        desc: 'Gry takie jak Genshin Impact czy EA Sports FC wykorzystują prawdopodobieństwo w swoich lootboxach. W sklepach z aplikacjami Apple i Google szanse na wygraną muszą być pokazane – dzięki matematyce możesz sprawdzić, czy zakup się opłaca.',
       },
       shuffle: {
         title: 'Losowe odtwarzanie w Spotify',

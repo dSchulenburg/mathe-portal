@@ -62,8 +62,8 @@ export const batch0 = {
         desc: 'Every shot at the basket follows a parabola. The height $h$ depends on the time $t$. Coaches use this to calculate the best release angle.',
       },
       bridge: {
-        title: 'Bridge arches',
-        desc: 'Many bridges have the shape of a parabola — it is the most stable arch shape, because it spreads the weight evenly. The Golden Gate Bridge? A parabola.',
+        title: 'Suspension bridges',
+        desc: 'In suspension bridges like the Golden Gate Bridge, the main cable hangs almost exactly in the shape of a parabola – because the deck spreads its weight evenly along the cable.',
       },
       pricing: {
         title: 'Price optimization',
@@ -217,7 +217,7 @@ export const batch0 = {
     realworld: {
       lootbox: {
         title: 'Gaming loot boxes',
-        desc: 'Games like Fortnite or Genshin Impact use probabilities for their drop systems. In the EU the drop rates must be published — with math you can check whether buying is worth it.',
+        desc: 'Games like Genshin Impact or EA Sports FC use probabilities for their loot boxes. In Apple\'s and Google\'s app stores the odds must be shown – with math you can check whether buying is worth it.',
       },
       shuffle: {
         title: 'Spotify shuffle',

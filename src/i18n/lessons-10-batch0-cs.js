@@ -62,8 +62,8 @@ export const batch0 = {
         desc: 'Každý hod na koš opisuje parabolu. Výška $h$ závisí na čase $t$. Trenéři to využívají k výpočtu optimálního úhlu odhodu.',
       },
       bridge: {
-        title: 'Mostní oblouky',
-        desc: 'Mnoho mostů má tvar paraboly — je to nejstabilnější tvar oblouku, protože rovnoměrně rozkládá váhu. Golden Gate Bridge? Parabola.',
+        title: 'Visuté mosty',
+        desc: 'U visutých mostů, jako je Golden Gate Bridge, visí nosné lano téměř přesně ve tvaru paraboly – protože mostovka rozkládá svou váhu rovnoměrně po laně.',
       },
       pricing: {
         title: 'Optimalizace ceny',
@@ -217,7 +217,7 @@ export const batch0 = {
     realworld: {
       lootbox: {
         title: 'Herní lootboxy',
-        desc: 'Hry jako Fortnite nebo Genshin Impact používají pro své drop systémy pravděpodobnosti. V EU se drop rate musí zveřejňovat — s matematikou si můžeš ověřit, jestli se nákup vyplatí.',
+        desc: 'Hry jako Genshin Impact nebo EA Sports FC používají pro své lootboxy pravděpodobnosti. V obchodech s aplikacemi od Applu a Googlu se musí šance na výhru zobrazovat – s matematikou si můžeš ověřit, jestli se nákup vyplatí.',
       },
       shuffle: {
         title: 'Spotify Shuffle',

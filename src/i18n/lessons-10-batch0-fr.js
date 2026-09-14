@@ -62,8 +62,8 @@ export const batch0 = {
         desc: 'Chaque tir au panier décrit une parabole. La hauteur $h$ dépend du temps $t$. Les entraîneurs s\'en servent pour calculer l\'angle de tir idéal.',
       },
       bridge: {
-        title: 'Arcs de pont',
-        desc: 'Beaucoup de ponts ont la forme d\'une parabole — c\'est la forme d\'arc la plus stable, parce qu\'elle répartit le poids de façon égale. Le Golden Gate Bridge ? Une parabole.',
+        title: 'Ponts suspendus',
+        desc: 'Dans les ponts suspendus comme le Golden Gate Bridge, le câble porteur pend presque exactement en forme de parabole – parce que le tablier répartit son poids de façon égale sur le câble.',
       },
       pricing: {
         title: 'Optimisation des prix',
@@ -217,7 +217,7 @@ export const batch0 = {
     realworld: {
       lootbox: {
         title: 'Loot boxes dans les jeux',
-        desc: 'Des jeux comme Fortnite ou Genshin Impact utilisent des probabilités pour leurs systèmes de drop. Dans l\'UE, les taux de drop doivent être publiés — avec les maths, tu peux vérifier si un achat vaut le coup.',
+        desc: 'Des jeux comme Genshin Impact ou EA Sports FC utilisent des probabilités pour leurs loot boxes. Dans les boutiques d\'applications d\'Apple et de Google, les chances de gain doivent être affichées – avec les maths, tu peux vérifier si un achat vaut le coup.',
       },
       shuffle: {
         title: 'Lecture aléatoire Spotify',

@@ -62,8 +62,8 @@ export const batch0 = {
         desc: 'Elke worp naar de basket beschrijft een parabool. De hoogte $h$ hangt af van de tijd $t$. Trainers gebruiken dat om de beste werphoek te berekenen.',
       },
       bridge: {
-        title: 'Brugbogen',
-        desc: 'Veel bruggen hebben de vorm van een parabool — het is de stabielste boogvorm, omdat hij het gewicht gelijkmatig verdeelt. De Golden Gate Bridge? Een parabool.',
+        title: 'Hangbruggen',
+        desc: 'Bij hangbruggen zoals de Golden Gate Bridge hangt de draagkabel bijna precies in de vorm van een parabool – omdat het brugdek zijn gewicht gelijkmatig over de kabel verdeelt.',
       },
       pricing: {
         title: 'Prijsoptimalisatie',
@@ -217,7 +217,7 @@ export const batch0 = {
     realworld: {
       lootbox: {
         title: 'Lootboxen in games',
-        desc: 'Games zoals Fortnite of Genshin Impact gebruiken kansen voor hun dropsystemen. In de EU moeten de dropkansen openbaar gemaakt worden — met wiskunde kun je controleren of een aankoop de moeite waard is.',
+        desc: 'Games zoals Genshin Impact of EA Sports FC gebruiken kansen voor hun lootboxen. In de app-winkels van Apple en Google moeten de winkansen getoond worden – met wiskunde kun je controleren of een aankoop de moeite waard is.',
       },
       shuffle: {
         title: 'Spotify-shuffle',
