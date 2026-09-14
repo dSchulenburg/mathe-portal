@@ -1,7 +1,7 @@
 export const batch1 = {
   '10-quad-gleichungen': {
     story: {
-      intro: 'Mia har fått til Lumis hoppkurve — men nå sitter hun fast. I Level 3 av "Havnelys" må Lumi lande på en plattform i bevegelse. "Jeg trenger det eksakte tidspunktet da hoppkurven treffer plattformen", sier Mia til Tim. Det betyr: Hun må løse en andregradslikning. Ikke bare tegne funksjonen, men helt konkret løse for $x$.',
+      intro: 'Mia har fått til Lumis hoppkurve — men nå sitter hun fast. I Level 3 av "Hafenlichter" må Lumi lande på en plattform i bevegelse. "Jeg trenger det eksakte tidspunktet da hoppkurven treffer plattformen", sier Mia til Tim. Det betyr: Hun må løse en andregradslikning. Ikke bare tegne funksjonen, men helt konkret løse for $x$.',
       challenge: 'Mia må beregne når Lumis hoppkurve krysser den bevegelige plattformen — det fører til en andregradslikning.',
       outro: 'Mia har tre metoder i verktøykassen sin: abc-formelen, fullstendig kvadrering og faktorisering. Avhengig av likningen velger hun riktig metode — og Lumi lander nå punktlig på hver plattform. "Det er som en sveitserkniv", smiler hun.',
     },
@@ -89,7 +89,7 @@ export const batch1 = {
 
   '10-trigonometrie': {
     story: {
-      intro: 'Mia jobber med fyrtårn-levelet i Havnelys. Fyrtårnet kaster en lyskjegle over havnen, og Lumi må gjemme seg i skyggen. "Jeg må beregne hvor langt lyskjeglen når ved en bestemt vinkel", sier Mia. Tim peker på en rettvinklet trekant som lyskjeglen danner med bakken. "Det er trigonometri — sinus, cosinus og tangens."',
+      intro: 'Mia jobber med fyrtårn-levelet i Hafenlichter. Fyrtårnet kaster en lyskjegle over havnen, og Lumi må gjemme seg i skyggen. "Jeg må beregne hvor langt lyskjeglen når ved en bestemt vinkel", sier Mia. Tim peker på en rettvinklet trekant som lyskjeglen danner med bakken. "Det er trigonometri — sinus, cosinus og tangens."',
       challenge: 'Mia trenger rekkevidden til lyskjeglen ved ulike vinkler for å programmere skyggeområdet.',
       outro: 'Fyrtårnet roterer sakte, og lyskjeglen vandrer over havnen. Takket være sinus og cosinus beregner Mias kode i sanntid hvilke områder som er opplyst. Lumi sniker seg fra skygge til skygge — levelet har blitt skikkelig spennende!',
     },
@@ -173,7 +173,7 @@ export const batch1 = {
 
   '10-exp-wachstum': {
     story: {
-      intro: 'Havnelys skal få en flerspillermodus. Mia tester serverne med 10 spillere — alt går smooth. Men Tim advarer: "Hva skjer med 100? Med 1000? Hvis spillet går viralt, dobles kanskje spillerantallet hvert par dager." Mia regner etter og blir forskrekket: Eksponentiell vekst er mye raskere enn man tror.',
+      intro: 'Hafenlichter skal få en flerspillermodus. Mia tester serverne med 10 spillere — alt går smooth. Men Tim advarer: "Hva skjer med 100? Med 1000? Hvis spillet går viralt, dobles kanskje spillerantallet hvert par dager." Mia regner etter og blir forskrekket: Eksponentiell vekst er mye raskere enn man tror.',
       challenge: 'Serverbelastningen vokser ikke lineært med spillerne, men eksponentielt. Mia må forutsi når serverne blir overbelastet.',
       outro: 'Mia har bygd en modell som forutsier utviklingen av spillerantallet. Takket være eksponentialfunksjonen vet hun nå: Hvis doblingstiden er 3 dager, trenger hun etter 2 uker 32 ganger så mye serverkapasitet. "Heller skalere tidlig enn krasje sent", bestemmer hun.',
     },

@@ -1,7 +1,7 @@
 export const batch5 = {
   '10-stetigkeit': {
     story: {
-      intro: 'Mia staví pro Světla přístavu minihru s parkovacím domem: Lumi v něm odstaví dodávku a při vyzvednutí musí zaplatit. Mia programuje tarif — 2,00 € do jedné hodiny, potom 3,50 €. Při testování si Tim něčeho všimne: „Když přijdeš o sekundu později, stojí to najednou o 1,50 € víc. Je to bug?" Mia se podívá na graf. Není rozbitý — skáče. A právě tohle skákání má svoje jméno.',
+      intro: 'Mia staví pro Hafenlichter minihru s parkovacím domem: Lumi v něm odstaví dodávku a při vyzvednutí musí zaplatit. Mia programuje tarif — 2,00 € do jedné hodiny, potom 3,50 €. Při testování si Tim něčeho všimne: „Když přijdeš o sekundu později, stojí to najednou o 1,50 € víc. Je to bug?" Mia se podívá na graf. Není rozbitý — skáče. A právě tohle skákání má svoje jméno.',
       challenge: 'Kdy má funkce skutečný skok, kdy jen jednu chybějící díru a kdy utíká do nekonečna? Mia musí tyto tři případy spolehlivě rozlišovat, aby mohla rozhodnout, jaké tarify vůbec smí takto postavit.',
       outro: 'Mia teď umí v každém podezřelém místě ověřit, zda je funkce spojitá: limita zleva, limita zprava, funkční hodnota — shodují-li se všechny tři, je všechno v pořádku. A ví, které mezery umí opravit a které ne. Tarif parkovacího domu mimochodem zůstává nespojitý. To není bug, to je obchodní rozhodnutí.',
     },

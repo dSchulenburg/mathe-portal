@@ -1,7 +1,7 @@
 export const batch4 = {
   '10-lineare-funktionen': {
     story: {
-      intro: 'Mia está montando el nivel 4 de Luces del Puerto: Lumi tiene que saltar sobre una plataforma que se desplaza lenta y uniformemente hacia la derecha. «El movimiento es lineal», explica Tim. «60 píxeles por segundo, y ya está.» Mia lo teclea y se da cuenta enseguida: esto es una ecuación de la recta de lo más corriente. Posición inicial más velocidad por tiempo. Justo lo que se llevó de 3.º de ESO, solo que ahora más formal: $f(x) = m \\cdot x + b$.',
+      intro: 'Mia está montando el nivel 4 de Hafenlichter: Lumi tiene que saltar sobre una plataforma que se desplaza lenta y uniformemente hacia la derecha. «El movimiento es lineal», explica Tim. «60 píxeles por segundo, y ya está.» Mia lo teclea y se da cuenta enseguida: esto es una ecuación de la recta de lo más corriente. Posición inicial más velocidad por tiempo. Justo lo que se llevó de 3.º de ESO, solo que ahora más formal: $f(x) = m \\cdot x + b$.',
       challenge: 'Mia tiene que ajustar la curva de salto de Lumi para que aterrice exactamente sobre la plataforma en movimiento. Pendiente del desplazamiento de la plataforma y punto de corte con la trayectoria de Lumi: todo lineal.',
       outro: 'Una función lineal tiene dos mandos: $m$ determina lo empinada que es, $b$ la desplaza hacia arriba o hacia abajo. Ahora Mia entiende por qué la necesita una y otra vez: plataformas, consumo de energía, barras de vida. Allí donde algo aumenta o disminuye una cantidad constante «por paso», la ecuación de la recta es la herramienta correcta.',
     },
@@ -87,7 +87,7 @@ export const batch4 = {
 
   '10-kreis': {
     story: {
-      intro: 'Mia está diseñando un jefe giratorio para Luces del Puerto. El jefe es un molino en remolino con tres brazos, y Lumi tiene que saltar por los huecos. «La hitbox tiene que ser circular», dice Tim. «Si no, queda raro cuando Lumi roza un brazo que ni siquiera está cerca.» Mia necesita la longitud, el área y el ángulo de cada brazo: geometría del círculo en estado puro.',
+      intro: 'Mia está diseñando un jefe giratorio para Hafenlichter. El jefe es un molino en remolino con tres brazos, y Lumi tiene que saltar por los huecos. «La hitbox tiene que ser circular», dice Tim. «Si no, queda raro cuando Lumi roza un brazo que ni siquiera está cerca.» Mia necesita la longitud, el área y el ángulo de cada brazo: geometría del círculo en estado puro.',
       challenge: 'Mia tiene que programar hitboxes redondas. Además, la longitud de arco que cada brazo barre por segundo, porque si no la velocidad de giro no cuadra.',
       outro: 'Con $U = 2\\pi r$ y $A = \\pi r^2$, Mia tiene las herramientas estándar. Y con los radianes convierte los ángulos de giro directamente en distancias recorridas, mucho más rápido que dando el rodeo por los $360°$. «El radián es el lenguaje de programación de los giros», se apunta.',
     },

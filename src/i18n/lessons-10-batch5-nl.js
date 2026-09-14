@@ -1,7 +1,7 @@
 export const batch5 = {
   '10-stetigkeit': {
     story: {
-      intro: 'Mia bouwt voor "Havenlichten" een parkeergarage-minispel: Lumi zet de bestelbus neer en moet bij het ophalen betalen. Mia programmeert het tarief — 2,00 € tot een uur, daarna 3,50 €. Bij het testen valt Tim iets op: "Als je één seconde te laat bent, kost het ineens 1,50 € meer. Is dat een bug?" Mia bekijkt de grafiek. Die is niet kapot — hij springt. En precies dat springen heeft een naam.',
+      intro: 'Mia bouwt voor "Hafenlichter" een parkeergarage-minispel: Lumi zet de bestelbus neer en moet bij het ophalen betalen. Mia programmeert het tarief — 2,00 € tot een uur, daarna 3,50 €. Bij het testen valt Tim iets op: "Als je één seconde te laat bent, kost het ineens 1,50 € meer. Is dat een bug?" Mia bekijkt de grafiek. Die is niet kapot — hij springt. En precies dat springen heeft een naam.',
       challenge: 'Wanneer heeft een functie een echte sprong, wanneer ontbreekt er maar één los punt, en wanneer schiet ze naar oneindig? Mia moet de drie gevallen zeker uit elkaar houden om te beslissen welke tarieven ze überhaupt zo mag bouwen.',
       outro: 'Mia kan nu op elke verdachte plek controleren of een functie continu is: limiet van links, limiet van rechts, functiewaarde — komen alle drie overeen, dan is alles in orde. En ze weet welke gaten ze kan repareren en welke niet. Het parkeertarief blijft trouwens discontinu. Dat is geen bug, dat is een zakelijke beslissing.',
     },

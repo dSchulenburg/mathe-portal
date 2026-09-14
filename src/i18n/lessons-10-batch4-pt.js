@@ -1,7 +1,7 @@
 export const batch4 = {
   '10-lineare-funktionen': {
     story: {
-      intro: 'A Mia está a montar o nível 4 de Luzes do Porto: o Lumi tem de saltar para uma plataforma que desliza lenta e uniformemente para a direita. «O movimento é linear», explica o Tim. «60 pixéis por segundo, e pronto.» A Mia escreve isso e repara logo: é uma equação da reta absolutamente vulgar. Posição inicial mais velocidade vezes tempo. Exatamente aquilo que trouxe do 9.º ano, só que agora mais formal: $f(x) = m \\cdot x + b$.',
+      intro: 'A Mia está a montar o nível 4 de Hafenlichter: o Lumi tem de saltar para uma plataforma que desliza lenta e uniformemente para a direita. «O movimento é linear», explica o Tim. «60 pixéis por segundo, e pronto.» A Mia escreve isso e repara logo: é uma equação da reta absolutamente vulgar. Posição inicial mais velocidade vezes tempo. Exatamente aquilo que trouxe do 9.º ano, só que agora mais formal: $f(x) = m \\cdot x + b$.',
       challenge: 'A Mia tem de afinar a curva do salto do Lumi para que ele aterre exatamente sobre a plataforma em movimento. Declive do deslocamento da plataforma e ponto de interseção com a trajetória do Lumi: tudo linear.',
       outro: 'Uma função afim tem dois botões: $m$ determina o quão íngreme é, $b$ desloca-a para cima ou para baixo. Agora a Mia percebe porque precisa dela vezes sem conta: plataformas, consumo de energia, barras de vida. Onde quer que algo aumente ou diminua uma quantidade constante «por passo», a equação da reta é a ferramenta certa.',
     },
@@ -87,7 +87,7 @@ export const batch4 = {
 
   '10-kreis': {
     story: {
-      intro: 'A Mia está a desenhar um chefe rotativo para Luzes do Porto. O chefe é um moinho em redemoinho com três braços, e o Lumi tem de saltar pelos intervalos. «A hitbox tem de ser circular», diz o Tim. «Caso contrário fica estranho quando o Lumi roça um braço que nem sequer está perto.» A Mia precisa do perímetro, da área e do ângulo de cada braço: geometria do círculo no estado puro.',
+      intro: 'A Mia está a desenhar um chefe rotativo para Hafenlichter. O chefe é um moinho em redemoinho com três braços, e o Lumi tem de saltar pelos intervalos. «A hitbox tem de ser circular», diz o Tim. «Caso contrário fica estranho quando o Lumi roça um braço que nem sequer está perto.» A Mia precisa do perímetro, da área e do ângulo de cada braço: geometria do círculo no estado puro.',
       challenge: 'A Mia tem de programar hitboxes redondas. Além disso, o comprimento de arco que cada braço varre por segundo, senão a velocidade de rotação não bate certo.',
       outro: 'Com $U = 2\\pi r$ e $A = \\pi r^2$, a Mia tem as ferramentas padrão. E com os radianos converte os ângulos de rotação diretamente em distâncias percorridas, muito mais depressa do que dando a volta pelos $360°$. «O radiano é a linguagem de programação das rotações», anota ela.',
     },

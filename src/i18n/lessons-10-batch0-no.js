@@ -1,7 +1,7 @@
 export const batch0 = {
   '10-quad-funktionen': {
     story: {
-      intro: 'Mia sitter på det lille kontoret sitt ved Hamburg havn og stirrer på skjermen. Lumi, spillfiguren hennes i "Havnelys", skal hoppe elegant over kasser og containere — men hoppkurven ser bare feil ut. "Fysikken stemmer ikke", mumler hun. For å programmere en realistisk hoppbane trenger Mia kvadratiske funksjoner.',
+      intro: 'Mia sitter på det lille kontoret sitt ved Hamburg havn og stirrer på skjermen. Lumi, spillfiguren hennes i "Hafenlichter", skal hoppe elegant over kasser og containere — men hoppkurven ser bare feil ut. "Fysikken stemmer ikke", mumler hun. For å programmere en realistisk hoppbane trenger Mia kvadratiske funksjoner.',
       challenge: 'Lumi skal hoppe over kasser — men hoppkurven ser unaturlig ut.',
       outro: 'Med toppunktformen har Mia programmert den perfekte hoppkurven! Lumi flyr nå i en elegant bue over containerne i Hamburg. "Endelig ser det realistisk ut", sier Tim og gir henne en high five.',
     },
@@ -164,7 +164,7 @@ export const batch0 = {
   },
   '10-wahrscheinlichkeit': {
     story: {
-      intro: 'Mia vil bygge et loot-system for Havnelys. Spillerne skal kunne finne sjeldne gjenstander — men ikke for ofte, ellers blir det kjedelig, og ikke for sjelden, ellers blir det frustrerende. "Dette er ren sannsynlighetsregning", sier Jule. Mia setter seg ned og regner.',
+      intro: 'Mia vil bygge et loot-system for Hafenlichter. Spillerne skal kunne finne sjeldne gjenstander — men ikke for ofte, ellers blir det kjedelig, og ikke for sjelden, ellers blir det frustrerende. "Dette er ren sannsynlighetsregning", sier Jule. Mia setter seg ned og regner.',
       challenge: 'Loot-drop-systemet skal være rettferdig og spennende.',
       outro: 'Mias loot-system fungerer! Hun har justert drop-sannsynlighetene slik at spillerne i snitt finner en sjelden gjenstand i hver 20. kasse. "Matematikken bak er egentlig enkel", flirer hun — "men balanseringen tok likevel tid."',
     },
@@ -177,7 +177,7 @@ export const batch0 = {
     explanation: {
       intro: 'Hvor sannsynlig er det å slå en 6 med terningen? Hvor stor er sjansen for en sjelden gjenstand i spillet? For å svare på slike spørsmål trenger du sannsynlighetsregning. Grunnideen er enkel:',
       range: 'Sannsynligheter ligger alltid mellom 0 (umulig) og 1 (sikkert). Du kan skrive dem som brøk ($\\frac{1}{6}$), desimaltall ($0{,}167$) eller prosent ($16{,}7\\%$).',
-      mia_tip: 'I Havnelys er $P(\\text{sjelden gjenstand}) = 0{,}05$. Det betyr: Ved hvert drop har spilleren 5 % sjanse. Høres lite ut — men over mange drop blir det mye!',
+      mia_tip: 'I Hafenlichter er $P(\\text{sjelden gjenstand}) = 0{,}05$. Det betyr: Ved hvert drop har spilleren 5 % sjanse. Høres lite ut — men over mange drop blir det mye!',
       tree: 'Ved sammensatte forsøk (f.eks. å kaste terningen to ganger) bruker du et valgtre. Langs en sti multipliserer du sannsynlighetene:',
       complement: 'Ofte er det enklere å beregne "det motsatte". Sannsynligheten for at noe IKKE skjer, er:',
     },

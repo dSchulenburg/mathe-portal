@@ -1,7 +1,7 @@
 export const batch5 = {
   '10-stetigkeit': {
     story: {
-      intro: 'Mia sta creando per Luci del Porto un minigioco del parcheggio: Lumi lascia il furgone delle consegne e al ritiro deve pagare. Mia programma la tariffa: 2,00 € fino a un\'ora, dopo 3,50 €. Durante i test Tim nota qualcosa: «Se arrivi un secondo in ritardo, all\'improvviso costa 1,50 € in più. È un bug?» Mia guarda il grafico. Non è rotto: fa un salto. E proprio questo salto ha un nome.',
+      intro: 'Mia sta creando per Hafenlichter un minigioco del parcheggio: Lumi lascia il furgone delle consegne e al ritiro deve pagare. Mia programma la tariffa: 2,00 € fino a un\'ora, dopo 3,50 €. Durante i test Tim nota qualcosa: «Se arrivi un secondo in ritardo, all\'improvviso costa 1,50 € in più. È un bug?» Mia guarda il grafico. Non è rotto: fa un salto. E proprio questo salto ha un nome.',
       challenge: 'Quando una funzione fa un vero salto, quando le manca solo un singolo punto e quando va all\'infinito? Mia deve distinguere con sicurezza i tre casi per decidere quali tariffe può costruire in questo modo.',
       outro: 'Ora Mia sa verificare in ogni punto sospetto se una funzione è continua: limite da sinistra, limite da destra, valore della funzione. Se tutti e tre coincidono, va tutto bene. E sa quali buchi può riparare e quali no. La tariffa del parcheggio, tra l\'altro, resta discontinua. Non è un bug, è una scelta commerciale.',
     },

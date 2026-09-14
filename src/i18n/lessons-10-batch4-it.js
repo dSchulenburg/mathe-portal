@@ -1,7 +1,7 @@
 export const batch4 = {
   '10-lineare-funktionen': {
     story: {
-      intro: 'Mia sta mettendo insieme il livello 4 di Luci del Porto: Lumi deve saltare su una piattaforma che scivola lentamente e in modo uniforme verso destra. «Il movimento è lineare», spiega Tim. «60 pixel al secondo, tutto qui.» Mia lo digita e se ne accorge subito: è una normalissima equazione della retta. Posizione iniziale più velocità per tempo. Proprio quello che si era portata dietro dalla terza media, solo che ora è più formale: $f(x) = m \\cdot x + b$.',
+      intro: 'Mia sta mettendo insieme il livello 4 di Hafenlichter: Lumi deve saltare su una piattaforma che scivola lentamente e in modo uniforme verso destra. «Il movimento è lineare», spiega Tim. «60 pixel al secondo, tutto qui.» Mia lo digita e se ne accorge subito: è una normalissima equazione della retta. Posizione iniziale più velocità per tempo. Proprio quello che si era portata dietro dalla terza media, solo che ora è più formale: $f(x) = m \\cdot x + b$.',
       challenge: 'Mia deve regolare la curva di salto di Lumi in modo che atterri esattamente sulla piattaforma in movimento. Pendenza dello spostamento della piattaforma e punto di intersezione con la traiettoria di Lumi: tutto lineare.',
       outro: 'Una funzione lineare ha due manopole: $m$ stabilisce quanto è ripida, $b$ la sposta in alto o in basso. Ora Mia capisce perché le serve di continuo: piattaforme, consumo di energia, barre della vita. Ovunque qualcosa cresca o cali di una quantità costante «per passo», l\'equazione della retta è lo strumento giusto.',
     },
@@ -87,7 +87,7 @@ export const batch4 = {
 
   '10-kreis': {
     story: {
-      intro: 'Mia sta progettando un boss rotante per Luci del Porto. Il boss è un mulino vorticoso a tre bracci, e Lumi deve saltare attraverso gli spazi. «L\'hitbox deve essere circolare», dice Tim. «Altrimenti sembra sbagliato quando Lumi sfiora un braccio che non è nemmeno vicino.» A Mia servono circonferenza, area e angolo di ciascun braccio: geometria del cerchio allo stato puro.',
+      intro: 'Mia sta progettando un boss rotante per Hafenlichter. Il boss è un mulino vorticoso a tre bracci, e Lumi deve saltare attraverso gli spazi. «L\'hitbox deve essere circolare», dice Tim. «Altrimenti sembra sbagliato quando Lumi sfiora un braccio che non è nemmeno vicino.» A Mia servono circonferenza, area e angolo di ciascun braccio: geometria del cerchio allo stato puro.',
       challenge: 'Mia deve programmare hitbox rotonde. Inoltre la lunghezza d\'arco che ogni braccio spazza al secondo, altrimenti la velocità di rotazione non torna.',
       outro: 'Con $U = 2\\pi r$ e $A = \\pi r^2$ Mia ha gli strumenti standard. E con i radianti converte gli angoli di rotazione direttamente in distanze percorse, molto più in fretta che passando per i $360°$. «Il radiante è il linguaggio di programmazione delle rotazioni», si annota.',
     },

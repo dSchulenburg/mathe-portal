@@ -1,7 +1,7 @@
 export const batch5 = {
   '10-stetigkeit': {
     story: {
-      intro: 'Mia bygger et parkeringshus-minispill til Havnelys: Lumi setter fra seg varebilen og må betale når han henter den. Mia programmerer taksten — 2,00 € for inntil én time, deretter 3,50 €. Under testingen legger Tim merke til noe: «Kommer du ett sekund for sent, koster det plutselig 1,50 € mer. Er det en bug?» Mia ser på grafen. Den er ikke ødelagt — den hopper. Og nettopp dette hoppet har et navn.',
+      intro: 'Mia bygger et parkeringshus-minispill til Hafenlichter: Lumi setter fra seg varebilen og må betale når han henter den. Mia programmerer taksten — 2,00 € for inntil én time, deretter 3,50 €. Under testingen legger Tim merke til noe: «Kommer du ett sekund for sent, koster det plutselig 1,50 € mer. Er det en bug?» Mia ser på grafen. Den er ikke ødelagt — den hopper. Og nettopp dette hoppet har et navn.',
       challenge: 'Når har en funksjon et ekte sprang, når bare ett enkelt manglende hull, og når går den mot uendelig? Mia må skille sikkert mellom de tre tilfellene for å avgjøre hvilke takster hun i det hele tatt kan bygge på denne måten.',
       outro: 'Mia kan nå sjekke på ethvert mistenkelig sted om en funksjon er kontinuerlig: grenseverdi fra venstre, grenseverdi fra høyre, funksjonsverdi — stemmer alle tre overens, er alt i orden. Og hun vet hvilke hull hun kan reparere og hvilke ikke. Parkeringstaksten forblir forresten diskontinuerlig. Det er ikke en bug, det er en forretningsbeslutning.',
     },

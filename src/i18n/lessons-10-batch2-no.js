@@ -2,7 +2,7 @@ export const batch2 = {
   '10-koerper': {
     story: {
       intro:
-        'Mia stirrer på skjermen. Level-arkitekturen til "Havnelys" trenger 3D-objekter — lagerhaller, kraner, containere. Tim har modellert meshene, men Lumi spør: "Hvor mye minne trenger hver hitbox?" Mia smiler: "Til det trenger vi volum-formler."',
+        'Mia stirrer på skjermen. Level-arkitekturen til "Hafenlichter" trenger 3D-objekter — lagerhaller, kraner, containere. Tim har modellert meshene, men Lumi spør: "Hvor mye minne trenger hver hitbox?" Mia smiler: "Til det trenger vi volum-formler."',
       challenge:
         'Beregn volum og overflate av pyramider, kjegler og kuler. Hjelp Mia med å bygge de perfekte 3D-hitboksene for havnekvartalet!',
       outro:
@@ -52,7 +52,7 @@ export const batch2 = {
       hitbox: {
         title: 'Kuleformet hitbox',
         context:
-          'I "Havnelys" skal en bøye ha en kuleformet hitbox med volum $V = 904{,}8\\,\\text{cm}^3$. Hvor stor må radiusen være?',
+          'I "Hafenlichter" skal en bøye ha en kuleformet hitbox med volum $V = 904{,}8\\,\\text{cm}^3$. Hvor stor må radiusen være?',
         step1: 'Gitt: Volumet av kulen er $V = 904{,}8\\,\\text{cm}^3$. Søkt: radiusen $r$.',
         step2: 'Omstill formelen: Vi løser $V = \\frac{4}{3} \\pi r^3$ for $r^3$ ved å dividere med $\\frac{4}{3}\\pi$.',
         step3: 'Beregn: $r^3 \\approx 215{,}9$ — nå tar vi tredje rot.',
@@ -94,7 +94,7 @@ export const batch2 = {
   '10-potenzgesetze': {
     story: {
       intro:
-        'Jule optimaliserer minnet i "Havnelys". "Teksturene våre bruker 2 opphøyd i 20 bytes — hvor mye er det egentlig?" Tim regner etter: "Vent, potenser kan jeg..." Mia ler: "Da vis hva du kan."',
+        'Jule optimaliserer minnet i "Hafenlichter". "Teksturene våre bruker 2 opphøyd i 20 bytes — hvor mye er det egentlig?" Tim regner etter: "Vent, potenser kan jeg..." Mia ler: "Da vis hva du kan."',
       challenge:
         'Mestre potenslovene: Multipliser, potenser og forenkle potenser. Hjelp Tim med å beregne minnestørrelser og renderingstider lynraskt!',
       outro:
@@ -144,7 +144,7 @@ export const batch2 = {
       negative: {
         title: 'Omregne millisekunder',
         context:
-          'Et frame i "Havnelys" beregnes på $10^{-3}$ sekunder. Hva betyr det i desimalform?',
+          'Et frame i "Hafenlichter" beregnes på $10^{-3}$ sekunder. Hva betyr det i desimalform?',
         step1: 'Anvend negativ eksponent: $10^{-3}$ betyr $\\frac{1}{10^3}$.',
         step2: 'Regn ut: $\\frac{1}{1000} = 0{,}001$ sekunder.',
         step3: 'Innordning: $1\\,\\text{ms} = 10^{-3}\\,\\text{s}$ — ett millisekund. Ved 60 fps har hvert frame omtrent 16 ms tid.',
@@ -185,11 +185,11 @@ export const batch2 = {
   '10-aehnlichkeit': {
     story: {
       intro:
-        'Mia scroller gjennom asset-biblioteket til "Havnelys". Hamburg Speicherstadt har bygninger i alle størrelser — men de skal alle se proporsjonale ut. Lumi spør: "Kan vi ikke bare skalere alt?" Mia nikker: "Nøyaktig. Det er likhet."',
+        'Mia scroller gjennom asset-biblioteket til "Hafenlichter". Hamburg Speicherstadt har bygninger i alle størrelser — men de skal alle se proporsjonale ut. Lumi spør: "Kan vi ikke bare skalere alt?" Mia nikker: "Nøyaktig. Det er likhet."',
       challenge:
         'Forstå likedannede trekanter, skaleringsfaktorer og stråleteoremene. Hjelp Mia med å skalere havnekvartalet proporsjonalt!',
       outro:
-        'Speicherstadt i "Havnelys" ser fantastisk ut — hvert bygg er proporsjonalt, hver bro passer. Jule beundrer resultatet: "Som om det var en ekte modell!" Mia smiler: "Det er det også. Matematisk eksakt."',
+        'Speicherstadt i "Hafenlichter" ser fantastisk ut — hvert bygg er proporsjonalt, hver bro passer. Jule beundrer resultatet: "Som om det var en ekte modell!" Mia smiler: "Det er det også. Matematisk eksakt."',
     },
     objectives: {
       similar_triangles: 'Gjenkjenne likedannede trekanter og beskrive egenskapene deres',
@@ -230,7 +230,7 @@ export const batch2 = {
         step2: 'Les av modellhøyden: $h_{\\text{Modell}} = 3{,}5$ cm.',
         step3: 'Regn tilbake: $h_{\\text{real}} = 3{,}5 \\cdot 100 = 350$ cm $= 3{,}5$ m. Bygningen er 3,5 meter høy.',
         mia_comment:
-          'Mia: "Nøyaktig slik jobber vi i Havnelys. Vi bygger Speicherstadt som modell og skalerer alt proporsjonalt inn i spillet."',
+          'Mia: "Nøyaktig slik jobber vi i Hafenlichter. Vi bygger Speicherstadt som modell og skalerer alt proporsjonalt inn i spillet."',
       },
       intercept: {
         title: 'Anvende stråleteoremene',

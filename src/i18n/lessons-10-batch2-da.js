@@ -2,7 +2,7 @@ export const batch2 = {
   '10-koerper': {
     story: {
       intro:
-        'Mia stirrer på sin skærm. Level-arkitekturen i "Havnelys" har brug for 3D-objekter — lagerhaller, kraner, containere. Tim har modelleret meshene, men Lumi spørger: "Hvor meget hukommelse kræver hver hitbox?" Mia griner: "Til det har vi brug for volumenformler."',
+        'Mia stirrer på sin skærm. Level-arkitekturen i "Hafenlichter" har brug for 3D-objekter — lagerhaller, kraner, containere. Tim har modelleret meshene, men Lumi spørger: "Hvor meget hukommelse kræver hver hitbox?" Mia griner: "Til det har vi brug for volumenformler."',
       challenge:
         'Beregn voluminer og overflader af pyramider, kegler og kugler. Hjælp Mia med at bygge de perfekte 3D-hitboxe til hendes havnekvarter!',
       outro:
@@ -52,7 +52,7 @@ export const batch2 = {
       hitbox: {
         title: 'Kugleformet hitbox',
         context:
-          'I "Havnelys" skal en bøje have en kugleformet hitbox med volumen $V = 904{,}8\\,\\text{cm}^3$. Hvor stor skal radius være?',
+          'I "Hafenlichter" skal en bøje have en kugleformet hitbox med volumen $V = 904{,}8\\,\\text{cm}^3$. Hvor stor skal radius være?',
         step1: 'Givet: Kuglens volumen er $V = 904{,}8\\,\\text{cm}^3$. Søgt: radius $r$.',
         step2: 'Omstil formlen: Vi løser $V = \\frac{4}{3} \\pi r^3$ for $r^3$ ved at dividere med $\\frac{4}{3}\\pi$.',
         step3: 'Beregn: $r^3 \\approx 215{,}9$ — nu tager vi tredje rod.',
@@ -94,7 +94,7 @@ export const batch2 = {
   '10-potenzgesetze': {
     story: {
       intro:
-        'Jule optimerer hukommelsen i "Havnelys". "Vores teksturer bruger 2 i 20. potens bytes — hvor meget er det egentlig?" Tim regner efter: "Vent, potenser kan jeg..." Mia ler: "Så vis, hvad du kan."',
+        'Jule optimerer hukommelsen i "Hafenlichter". "Vores teksturer bruger 2 i 20. potens bytes — hvor meget er det egentlig?" Tim regner efter: "Vent, potenser kan jeg..." Mia ler: "Så vis, hvad du kan."',
       challenge:
         'Mestr potensreglerne: Multiplicer, potensér og forenkl potenser. Hjælp Tim med at beregne hukommelsesstørrelser og renderingstider lynhurtigt!',
       outro:
@@ -144,7 +144,7 @@ export const batch2 = {
       negative: {
         title: 'Omregne millisekunder',
         context:
-          'Et frame i "Havnelys" beregnes på $10^{-3}$ sekunder. Hvad betyder det i decimalform?',
+          'Et frame i "Hafenlichter" beregnes på $10^{-3}$ sekunder. Hvad betyder det i decimalform?',
         step1: 'Anvend negativ eksponent: $10^{-3}$ betyder $\\frac{1}{10^3}$.',
         step2: 'Beregn: $\\frac{1}{1000} = 0{,}001$ sekunder.',
         step3: 'Indordning: $1\\,\\text{ms} = 10^{-3}\\,\\text{s}$ — et millisekund. Ved 60 fps har hvert frame ca. 16 ms tid.',
@@ -185,11 +185,11 @@ export const batch2 = {
   '10-aehnlichkeit': {
     story: {
       intro:
-        'Mia scroller gennem asset-biblioteket til "Havnelys". Hamburg Speicherstadt har bygninger i alle størrelser — men de skal alle se proportionale ud. Lumi spørger: "Kan vi ikke bare skalere alt?" Mia nikker: "Præcis. Det er ligedannethed."',
+        'Mia scroller gennem asset-biblioteket til "Hafenlichter". Hamburg Speicherstadt har bygninger i alle størrelser — men de skal alle se proportionale ud. Lumi spørger: "Kan vi ikke bare skalere alt?" Mia nikker: "Præcis. Det er ligedannethed."',
       challenge:
         'Forstå ligedannede trekanter, skaleringsfaktorer og strålesætningen. Hjælp Mia med at skalere havnekvarteret proportionalt!',
       outro:
-        'Speicherstadt i "Havnelys" ser fantastisk ud — hver bygning er proportional, hver bro passer. Jule beundrer resultatet: "Som om det var en rigtig model!" Mia smiler: "Det er det også. Matematisk eksakt."',
+        'Speicherstadt i "Hafenlichter" ser fantastisk ud — hver bygning er proportional, hver bro passer. Jule beundrer resultatet: "Som om det var en rigtig model!" Mia smiler: "Det er det også. Matematisk eksakt."',
     },
     objectives: {
       similar_triangles: 'Genkende ligedannede trekanter og beskrive deres egenskaber',
@@ -230,7 +230,7 @@ export const batch2 = {
         step2: 'Aflæs modelhøjden: $h_{\\text{Model}} = 3{,}5$ cm.',
         step3: 'Regn tilbage: $h_{\\text{real}} = 3{,}5 \\cdot 100 = 350$ cm $= 3{,}5$ m. Bygningen er 3,5 meter høj.',
         mia_comment:
-          'Mia: "Præcis sådan arbejder vi i Havnelys. Vi bygger Speicherstadt som model og skalerer alt proportionalt ind i spillet."',
+          'Mia: "Præcis sådan arbejder vi i Hafenlichter. Vi bygger Speicherstadt som model og skalerer alt proportionalt ind i spillet."',
       },
       intercept: {
         title: 'Anvende strålesætningen',

@@ -1,7 +1,7 @@
 export const batch4 = {
   '10-lineare-funktionen': {
     story: {
-      intro: 'Mia zet niveau 4 van Havenlichten in elkaar: Lumi moet op een platform springen dat langzaam en gelijkmatig naar rechts drijft. "De beweging is lineair", legt Tim uit. "60 pixels per seconde — klaar." Mia typt het in en merkt meteen: dit is een doodgewone vergelijking van een rechte lijn. Startpositie plus snelheid maal tijd. Precies wat ze uit de derde klas heeft meegenomen, alleen nu formeler: $f(x) = m \\cdot x + b$.',
+      intro: 'Mia zet niveau 4 van Hafenlichter in elkaar: Lumi moet op een platform springen dat langzaam en gelijkmatig naar rechts drijft. "De beweging is lineair", legt Tim uit. "60 pixels per seconde — klaar." Mia typt het in en merkt meteen: dit is een doodgewone vergelijking van een rechte lijn. Startpositie plus snelheid maal tijd. Precies wat ze uit de derde klas heeft meegenomen, alleen nu formeler: $f(x) = m \\cdot x + b$.',
       challenge: 'Mia moet Lumi\'s sprongkromme zo afstemmen dat hij precies op het drijvende platform landt. Helling van de platformbeweging en snijpunt met Lumi\'s baan — allemaal lineair.',
       outro: 'Een lineaire functie heeft twee knoppen: $m$ bepaalt hoe steil ze loopt, $b$ verschuift haar omhoog of omlaag. Mia snapt nu waarom ze die keer op keer nodig heeft: platforms, energieverbruik, healthbalken — overal waar iets "per stap" met een constante hoeveelheid toe- of afneemt, is de lijnvergelijking het juiste gereedschap.',
     },
@@ -87,7 +87,7 @@ export const batch4 = {
 
   '10-kreis': {
     story: {
-      intro: 'Mia ontwerpt een draaiende eindbaas voor Havenlichten. De baas is een wervelend molenrad met drie armen — en Lumi moet door de openingen springen. "De hitbox moet cirkelvormig zijn", zegt Tim. "Anders ziet het er scheef uit als Lumi een arm raakt die helemaal niet in de buurt is." Mia heeft de omtrek, de oppervlakte en de hoek van elke arm nodig — pure cirkelmeetkunde.',
+      intro: 'Mia ontwerpt een draaiende eindbaas voor Hafenlichter. De baas is een wervelend molenrad met drie armen — en Lumi moet door de openingen springen. "De hitbox moet cirkelvormig zijn", zegt Tim. "Anders ziet het er scheef uit als Lumi een arm raakt die helemaal niet in de buurt is." Mia heeft de omtrek, de oppervlakte en de hoek van elke arm nodig — pure cirkelmeetkunde.',
       challenge: 'Mia moet ronde hitboxes programmeren. Daarnaast de booglengte die elke arm per seconde bestrijkt — anders klopt de draaisnelheid niet.',
       outro: 'Met $U = 2\\pi r$ en $A = \\pi r^2$ heeft Mia het standaardgereedschap. En met radialen rekent ze draaihoeken direct om naar afgelegde afstanden — veel sneller dan via de omweg over $360°$. "Radialen zijn de programmeertaal van draaibewegingen", noteert ze.',
     },

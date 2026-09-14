@@ -1,9 +1,9 @@
 export const batch3 = {
   '10-periodisch': {
     story: {
-      intro: 'Mia scroller gjennom animasjonslisten til Havnelys og rynker pannen. Lumis pusteanimasjon ser ut som en robot — hakkete og unaturlig. Også bølgene i havnen virker stive, og dag-natt-syklusen hopper i stedet for å flyte. "Alt som gjentar seg, trenger en svingning", sier Tim. "Sinus og cosinus — de er laget for det." Mia åpner kalkulatoren og dykker inn i verden av periodiske funksjoner.',
+      intro: 'Mia scroller gjennom animasjonslisten til Hafenlichter og rynker pannen. Lumis pusteanimasjon ser ut som en robot — hakkete og unaturlig. Også bølgene i havnen virker stive, og dag-natt-syklusen hopper i stedet for å flyte. "Alt som gjentar seg, trenger en svingning", sier Tim. "Sinus og cosinus — de er laget for det." Mia åpner kalkulatoren og dykker inn i verden av periodiske funksjoner.',
       challenge: 'Pusteanimasjon, bølgegang og dag-natt-syklus skal svinge naturlig i stedet for å rykke.',
-      outro: 'Lumis pust hever og senker seg nå mykt, havnebølgene ruller jevnt inn mot land, og lyset skifter glidende fra morgenrøde til midnattsblått. "Sinusfunksjoner finnes overalt i naturen", sier Jule. Mia nikker: "Og nå er de også i Havnelys."',
+      outro: 'Lumis pust hever og senker seg nå mykt, havnebølgene ruller jevnt inn mot land, og lyset skifter glidende fra morgenrøde til midnattsblått. "Sinusfunksjoner finnes overalt i naturen", sier Jule. Mia nikker: "Og nå er de også i Hafenlichter."',
     },
     objectives: {
       periodic_functions: 'Gjenkjenne periodiske funksjoner og skille dem fra ikke-periodiske',
@@ -48,7 +48,7 @@ export const batch3 = {
         step2: 'Perioden er en full omdreining: $T = 10\\,\\text{min}$. Derfra følger $b = \\frac{2\\pi}{10} = \\frac{\\pi}{5}$.',
         step3: 'Ta hensyn til startpunktet: Starte nederst betyr at vi forskyver sinus med $-\\frac{\\pi}{2}$ (sinus starter normalt i midten, ikke nederst).',
         step4: 'Kontroll: Etter 2,5 minutter (kvart omdreining) skal gondolen være på middelhøyde. Sett inn: $\\sin(0) = 0$, altså $h = 35\\,\\text{m}$. Stemmer!',
-        mia_comment: 'Nøyaktig slik fungerer også dag-natt-syklusen i Havnelys: Sinus med $T = 24$ (en spilldag) og forskyvning slik at det er mørkest ved midnatt.',
+        mia_comment: 'Nøyaktig slik fungerer også dag-natt-syklusen i Hafenlichter: Sinus med $T = 24$ (en spilldag) og forskyvning slik at det er mørkest ved midnatt.',
       },
     },
     realworld: {
@@ -82,7 +82,7 @@ export const batch3 = {
 
   '10-diff-einfuehrung': {
     story: {
-      intro: 'Havnelys kjører — men det hakker. Mia åpner ytelsesmonitoren og ser: I noen scener faller bildefrekvensen til 15 FPS. "Hvor nøyaktig blir det tregt?", spør Tim. "Jeg trenger ikke gjennomsnittet over hele scenen, men det nøyaktige stedet der ytelsen bryter sammen." Jule smiler: "Det er nøyaktig spørsmålet som førte til oppfinnelsen av differensialregningen — den momentane endringsraten."',
+      intro: 'Hafenlichter kjører — men det hakker. Mia åpner ytelsesmonitoren og ser: I noen scener faller bildefrekvensen til 15 FPS. "Hvor nøyaktig blir det tregt?", spør Tim. "Jeg trenger ikke gjennomsnittet over hele scenen, men det nøyaktige stedet der ytelsen bryter sammen." Jule smiler: "Det er nøyaktig spørsmålet som førte til oppfinnelsen av differensialregningen — den momentane endringsraten."',
       challenge: 'Finne det nøyaktige stedet der bildefrekvensen bryter sammen — ikke bare gjennomsnittet.',
       outro: 'Mia har funnet det kritiske stedet: Nøyaktig ved bilde 847 eksploderer renderingstiden fordi 200 partikler spawnes samtidig. "Uten den momentane endringsraten hadde jeg lett evig", sier hun. Tim nikker: "Newton ville ha gjort det på samme måte — bare uten ytelsesmonitor."',
     },
@@ -163,7 +163,7 @@ export const batch3 = {
 
   '10-funktionsklassen': {
     story: {
-      intro: 'Havnelys trenger et balanseringssystem: Hvor raskt skal Lumi levle? Hvor sterke blir fiendene? Hvor mye koster en oppgradering? "Hvis alt vokser lineært, blir spillet kjedelig", sier Jule. Tim legger til: "Og hvis alt vokser eksponentielt, blir det urettferdig." Mia innser: Hun må kjenne ulike veksttyper og bruke dem målrettet.',
+      intro: 'Hafenlichter trenger et balanseringssystem: Hvor raskt skal Lumi levle? Hvor sterke blir fiendene? Hvor mye koster en oppgradering? "Hvis alt vokser lineært, blir spillet kjedelig", sier Jule. Tim legger til: "Og hvis alt vokser eksponentielt, blir det urettferdig." Mia innser: Hun må kjenne ulike veksttyper og bruke dem målrettet.',
       challenge: 'Finne de rette vekstkurvene for spillbalansering — lineær, kvadratisk, eksponentiell eller logaritmisk.',
       outro: 'Mias balanseringssystem er ferdig: Løpshastighet vokser lineært, fallskade kvadratisk, XP-behov eksponentielt og læringskurven logaritmisk. "Hver kurve har sin plass", sier hun fornøyd. Spillet føles nå rettferdig og spennende — fra Level 1 til endbossen.',
     },
@@ -208,7 +208,7 @@ export const batch3 = {
       },
       game_mechanics: {
         title: 'Modellere spillmekanikker',
-        context: 'Fire ulike spillmekanikker i Havnelys trenger forskjellige funksjoner.',
+        context: 'Fire ulike spillmekanikker i Hafenlichter trenger forskjellige funksjoner.',
         step1: 'Løpshastighet: Øker per level med samme beløp ($+5$ per level). Det er en konstant endring — altså lineær. Rettferdig og forutsigbart.',
         step2: 'Fallskade: Fra 2 m høyde lett skade, fra 10 m mye mer. Skadetilveksten akselererer — kvadratisk. Gir fysisk mening (energi = $\\frac{1}{2}mv^2$).',
         step3: 'XP-behov per level: Level 2 trenger 150 XP, Level 3 trenger 225 XP, Level 4 trenger 337 XP. Behovet vokser alltid med 50% — eksponentielt. Slik forblir høyere levels en ekte utfordring.',

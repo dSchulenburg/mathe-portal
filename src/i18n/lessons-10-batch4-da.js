@@ -1,7 +1,7 @@
 export const batch4 = {
   '10-lineare-funktionen': {
     story: {
-      intro: 'Mia sætter niveau 4 af Havnelys sammen: Lumi skal springe op på en platform, der langsomt og jævnt driver mod højre. "Bevægelsen er lineær", forklarer Tim. "60 pixels i sekundet — færdig." Mia taster det ind og opdager med det samme: det er en helt almindelig ligning for en ret linje. Startposition plus fart gange tid. Præcis det, hun tog med fra 9. klasse — bare mere formelt nu: $f(x) = m \\cdot x + b$.',
+      intro: 'Mia sætter niveau 4 af Hafenlichter sammen: Lumi skal springe op på en platform, der langsomt og jævnt driver mod højre. "Bevægelsen er lineær", forklarer Tim. "60 pixels i sekundet — færdig." Mia taster det ind og opdager med det samme: det er en helt almindelig ligning for en ret linje. Startposition plus fart gange tid. Præcis det, hun tog med fra 9. klasse — bare mere formelt nu: $f(x) = m \\cdot x + b$.',
       challenge: 'Mia skal afstemme Lumis springkurve, så han lander præcis på den drivende platform. Hældningen på platformens bevægelse og skæringspunktet med Lumis bane — alt sammen lineært.',
       outro: 'En lineær funktion har to knapper: $m$ bestemmer, hvor stejlt den forløber, $b$ forskyder den op eller ned. Nu forstår Mia, hvorfor hun får brug for den igen og igen: platforme, energiforbrug, livsbjælker — overalt hvor noget "pr. skridt" vokser eller aftager med en fast størrelse, er linjens ligning det rigtige værktøj.',
     },
@@ -87,7 +87,7 @@ export const batch4 = {
 
   '10-kreis': {
     story: {
-      intro: 'Mia designer en roterende boss til Havnelys. Bossen er et hvirvlende møllehjul med tre arme — og Lumi skal springe gennem mellemrummene. "Hitboxen skal være cirkelformet", siger Tim. "Ellers ser det skævt ud, når Lumi strejfer en arm, der slet ikke er i nærheden." Mia har brug for omkredsen, arealet og vinklen for hver arm — ren cirkelgeometri.',
+      intro: 'Mia designer en roterende boss til Hafenlichter. Bossen er et hvirvlende møllehjul med tre arme — og Lumi skal springe gennem mellemrummene. "Hitboxen skal være cirkelformet", siger Tim. "Ellers ser det skævt ud, når Lumi strejfer en arm, der slet ikke er i nærheden." Mia har brug for omkredsen, arealet og vinklen for hver arm — ren cirkelgeometri.',
       challenge: 'Mia skal programmere runde hitboxes. Desuden buelængden, som hver arm stryger igennem pr. sekund — ellers passer rotationshastigheden ikke.',
       outro: 'Med $U = 2\\pi r$ og $A = \\pi r^2$ har Mia standardværktøjerne. Og med radianer omregner hun drejevinkler direkte til tilbagelagte strækninger — meget hurtigere end omvejen over $360°$. "Radianer er drejningernes programmeringssprog", noterer hun sig.',
     },
