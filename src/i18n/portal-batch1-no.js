@@ -103,7 +103,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Tilbake",
-    "backAria": "Tilbake til temaoversikten"
+    "backAria": "Tilbake til temaoversikten",
+    "notFound": "Fant ikke emnet:",
+    "noExercises": "Ingen oppgaver på dette nivået.",
+    "solved": "✓ Løst",
+    "unknownType": "Ukjent oppgavetype: {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Videregående, trinn 10–12 · Hamburgs læreplan",
+    "totalExercises": "{n}+ oppgaver",
+    "myProgress": "Min fremgang",
+    "grade": "Trinn {n}",
+    "soon": "snart",
+    "read": "lest",
+    "mastered": "mestret",
+    "comingSoon": "Kommer snart",
+    "exercises": "{n} oppgaver",
+    "solvedPct": "{pct} % løst",
+    "noTopics": "Ingen emner tilgjengelig for dette trinnet.",
+    "myLearningProgress": "Min læringsfremgang",
+    "classicPortal": "← Til den klassiske portalen"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Utforsk Pythagoras’ setning",
+    "DiceSim": "🎲 Simulator for tilfeldige forsøk",
+    "DiscriminantViz": "🔭 Utforsk diskriminanten",
+    "ProbabilityTree": "🌳 Utforsk sannsynlighetstreet",
+    "BinomialHistogram": "📊 Utforsk binomisk fordeling",
+    "StrahlensatzExplorer": "📐 Formlikhet og parallelle linjer live",
+    "Einheitskreis": "⭕ Enhetssirkelen og sinusbølgen",
+    "VectorExplorer": "➡️ Vektorer og skalarprodukt",
+    "BodyExplorer3D": "🔺 Drei og utforsk romfigurer",
+    "SekanteTangente": "📈 Sekant → tangent",
+    "RiemannSummen": "📐 Riemann-summer → integral",
+    "MarkovDiagramm": "🔄 Markovkjede: konvergens mot likevektsvektoren",
+    "FourFieldTable": "🔢 Interaktiv firefeltstabell"
+  },
+  "domains": {
+    "analysis": "Analyse",
+    "geometrie": "Geometri",
+    "stochastik": "Sannsynlighet og statistikk",
+    "algebra": "Lineær algebra"
+  },
+  "diffLevels": {
+    "basis": "Grunnleggende",
+    "standard": "Standard",
+    "erweitert": "Utvidet",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "bygger på",

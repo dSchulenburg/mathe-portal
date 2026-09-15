@@ -103,7 +103,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Terug",
-    "backAria": "Terug naar het overzicht van de onderwerpen"
+    "backAria": "Terug naar het overzicht van de onderwerpen",
+    "notFound": "Onderwerp niet gevonden:",
+    "noExercises": "Geen opgaven voor dit niveau.",
+    "solved": "✓ Opgelost",
+    "unknownType": "Onbekend opgavetype: {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Gymnasium, klas 10–12 · Hamburgs leerplan",
+    "totalExercises": "{n}+ opgaven",
+    "myProgress": "Mijn voortgang",
+    "grade": "Klas {n}",
+    "soon": "binnenkort",
+    "read": "gelezen",
+    "mastered": "beheerst",
+    "comingSoon": "Binnenkort beschikbaar",
+    "exercises": "{n} opgaven",
+    "solvedPct": "{pct}% opgelost",
+    "noTopics": "Geen onderwerpen beschikbaar voor deze klas.",
+    "myLearningProgress": "Mijn leervoortgang",
+    "classicPortal": "← Naar het klassieke portaal"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Ontdek de stelling van Pythagoras",
+    "DiceSim": "🎲 Simulator voor kansexperimenten",
+    "DiscriminantViz": "🔭 Ontdek de discriminant",
+    "ProbabilityTree": "🌳 Ontdek de kansboom",
+    "BinomialHistogram": "📊 Ontdek de binomiale verdeling",
+    "StrahlensatzExplorer": "📐 Evenredige lijnstukken live",
+    "Einheitskreis": "⭕ Eenheidscirkel & sinusgolf",
+    "VectorExplorer": "➡️ Vectoren & inproduct",
+    "BodyExplorer3D": "🔺 Ruimtefiguren draaien & ontdekken",
+    "SekanteTangente": "📈 Snijlijn → raaklijn",
+    "RiemannSummen": "📐 Riemann-sommen → integraal",
+    "MarkovDiagramm": "🔄 Markovketen: convergentie naar de evenwichtsvector",
+    "FourFieldTable": "🔢 Interactieve kruistabel"
+  },
+  "domains": {
+    "analysis": "Analyse",
+    "geometrie": "Meetkunde",
+    "stochastik": "Kansrekening en statistiek",
+    "algebra": "Lineaire algebra"
+  },
+  "diffLevels": {
+    "basis": "Basis",
+    "standard": "Standaard",
+    "erweitert": "Uitgebreid",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "bouwt voort op",

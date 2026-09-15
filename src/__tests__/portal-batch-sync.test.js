@@ -2,7 +2,8 @@ import { describe, it, expect } from 'vitest';
 import { TOPICS } from '../data/topics';
 import { portalBatch1 } from '../i18n/portal-batch1';
 import de from '../i18n/locales/de';
-import { topicTitle, bridgeText } from '../i18n/topicTitle';
+import { topicTitle, bridgeText, translated } from '../i18n/topicTitle';
+import { DOMAINS, DIFF_LEVELS } from '../data/types';
 
 // portal-batch1.js ist aus topics.js und data/lessons erzeugt. Laeuft beides
 // auseinander, zeigt die deutsche Oberflaeche den alten Text, die Uebersetzungen
@@ -31,6 +32,21 @@ describe('portal-batch1 (deutsche Quelle) ist mit den Daten synchron', () => {
     expect(de.topics).toBe(portalBatch1.topics);
     expect(de.bridges).toBe(portalBatch1.bridges);
     expect(de.topicView.back).toBe('← Zurück');
+    expect(de.topicGrid).toBe(portalBatch1.topicGrid);
+    expect(de.stations).toBe(portalBatch1.stations);
+  });
+
+  it('spiegelt die Sachgebiete aus DOMAINS', () => {
+    for (const [id, meta] of Object.entries(DOMAINS)) {
+      expect(portalBatch1.domains[id], id).toBe(meta.label);
+    }
+  });
+
+  it('hat fuer jedes Niveau einen Tab-Namen und Stationstitel', () => {
+    for (const level of DIFF_LEVELS) {
+      expect(portalBatch1.diffLevels[level], level).toBeTruthy();
+    }
+    expect(Object.keys(portalBatch1.stations).length).toBeGreaterThanOrEqual(13);
   });
 });
 
@@ -45,6 +61,13 @@ describe('topicTitle / bridgeText', () => {
   it('faellt auf den Klartext zurueck, wenn t() den Key zurueckgibt', () => {
     expect(topicTitle((k) => k, topic)).toBe('Klartext');
     expect(bridgeText((k) => k, 'x-thema', 0, 'Blase')).toBe('Blase');
+  });
+
+  it('translated: Uebersetzung oder eigener Rueckfall', () => {
+    const t = (k) => (k === 'domains.analysis' ? 'Calculus' : k);
+    expect(translated(t, 'domains.analysis', 'Analysis')).toBe('Calculus');
+    expect(translated(t, 'domains.unbekannt', 'unbekannt')).toBe('unbekannt');
+    expect(translated(undefined, 'domains.analysis', 'Analysis')).toBe('Analysis');
   });
 
   it('kommt ohne t aus', () => {

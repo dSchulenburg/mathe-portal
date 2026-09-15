@@ -5,12 +5,12 @@ import { useMathStore } from '../../store/mathStore';
 import { navigate } from '../../lib/router';
 import LanguageSwitcher from '../LanguageSwitcher';
 import { useTranslation } from '../../i18n/useTranslation';
-import { topicTitle } from '../../i18n/topicTitle';
+import { topicTitle, translated } from '../../i18n/topicTitle';
 
 const GRADE_TABS = [
-  { grade: 10, label: 'Klasse 10', available: true },
-  { grade: 11, label: 'Klasse 11', available: true },
-  { grade: 12, label: 'Klasse 12', available: true },
+  { grade: 10, available: true },
+  { grade: 11, available: true },
+  { grade: 12, available: true },
 ];
 
 const totalExerciseCount = TOPICS.reduce((sum, t) => sum + (t.exercises?.length || 0), 0);
@@ -80,7 +80,7 @@ function TopicCard({ topic }) {
             marginTop: '0.2rem',
             display: 'block',
           }}>
-            {topic.period}
+            {topic.grade ? t('topicGrid.grade', { n: topic.grade }) : topic.period}
           </span>
         </div>
       </div>
@@ -99,7 +99,7 @@ function TopicCard({ topic }) {
           color: domain.color,
           border: `1px solid ${domain.color}44`,
         }}>
-          {domain.icon} {domain.label}
+          {domain.icon} {translated(t, `domains.${topic.domain}`, domain.label)}
         </span>
         {lessonProgress.complete && (
           <span style={{
@@ -107,7 +107,7 @@ function TopicCard({ topic }) {
             padding: '0.15rem 0.5rem', borderRadius: '999px', fontSize: '0.65rem',
             fontWeight: 600, background: 'rgba(52,211,153,0.15)', color: '#34d399',
           }}>
-            📖 gelesen
+            📖 {t('topicGrid.read')}
           </span>
         )}
         {progress.mastered && (
@@ -116,7 +116,7 @@ function TopicCard({ topic }) {
             padding: '0.15rem 0.5rem', borderRadius: '999px', fontSize: '0.65rem',
             fontWeight: 600, background: 'rgba(251,191,36,0.15)', color: '#fbbf24',
           }}>
-            ⭐ gemeistert
+            ⭐ {t('topicGrid.mastered')}
           </span>
         )}
         <HeatmapBadge topicId={topic.id} />
@@ -130,7 +130,7 @@ function TopicCard({ topic }) {
             color: 'var(--mp-muted)',
             fontStyle: 'italic',
           }}>
-            Bald verfügbar
+            {t('topicGrid.comingSoon')}
           </span>
         ) : (
           <>
@@ -141,10 +141,10 @@ function TopicCard({ topic }) {
               marginBottom: '0.4rem',
             }}>
               <span style={{ fontSize: '0.75rem', color: 'var(--mp-muted)' }}>
-                {exerciseCount} Aufgaben
+                {t('topicGrid.exercises', { n: exerciseCount })}
               </span>
               <span style={{ fontSize: '0.75rem', color: pct > 0 ? 'var(--mp-success)' : 'var(--mp-muted)' }}>
-                {pct}% gelöst
+                {t('topicGrid.solvedPct', { pct })}
               </span>
             </div>
             {/* Progress bar */}
@@ -172,7 +172,7 @@ function TopicCard({ topic }) {
 export default function TopicGrid() {
   const [activeGrade, setActiveGrade] = useState(10);
   const topics = getTopicsByGrade(activeGrade);
-  const { language, setLanguage } = useTranslation();
+  const { t, language, setLanguage } = useTranslation();
 
   return (
     <div style={{
@@ -207,7 +207,7 @@ export default function TopicGrid() {
           color: 'var(--mp-muted)',
           fontSize: '0.95rem',
         }}>
-          Gymnasium Klasse 10–12 · Hamburger Bildungsplan
+          {t('topicGrid.subtitle')}
         </p>
         <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <span style={{
@@ -220,7 +220,7 @@ export default function TopicGrid() {
             color: 'var(--mp-primary)',
             fontWeight: 600,
           }}>
-            {totalExerciseCount}+ Aufgaben
+            {t('topicGrid.totalExercises', { n: totalExerciseCount })}
           </span>
           <a
             href="/dashboard/"
@@ -240,7 +240,7 @@ export default function TopicGrid() {
             onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
             onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
           >
-            📊 Mein Fortschritt
+            📊 {t('topicGrid.myProgress')}
           </a>
         </div>
       </div>
@@ -278,7 +278,7 @@ export default function TopicGrid() {
                 gap: '0.4rem',
               }}
             >
-              {tab.label}
+              {t('topicGrid.grade', { n: tab.grade })}
               {!tab.available && (
                 <span style={{
                   fontSize: '0.65rem',
@@ -288,7 +288,7 @@ export default function TopicGrid() {
                   color: 'var(--mp-muted)',
                   border: '1px solid var(--mp-border)',
                 }}>
-                  bald
+                  {t('topicGrid.soon')}
                 </span>
               )}
             </button>
@@ -314,7 +314,7 @@ export default function TopicGrid() {
             color: 'var(--mp-muted)',
             fontSize: '0.9rem',
           }}>
-            Keine Themen für diese Klassenstufe verfügbar.
+            {t('topicGrid.noTopics')}
           </div>
         )}
       </div>
@@ -346,7 +346,7 @@ export default function TopicGrid() {
             onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
             onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
           >
-            📊 Mein Lernfortschritt
+            📊 {t('topicGrid.myLearningProgress')}
           </a>
           <a
             href="#/"
@@ -361,7 +361,7 @@ export default function TopicGrid() {
             onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
             onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
           >
-            ← Zum klassischen Portal
+            {t('topicGrid.classicPortal')}
           </a>
         </div>
       </div>

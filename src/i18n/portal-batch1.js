@@ -104,7 +104,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Zurück",
-    "backAria": "Zurück zur Themenübersicht"
+    "backAria": "Zurück zur Themenübersicht",
+    "notFound": "Thema nicht gefunden:",
+    "noExercises": "Keine Aufgaben für dieses Level.",
+    "solved": "✓ Gelöst",
+    "unknownType": "Unbekannter Aufgabentyp: {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Gymnasium Klasse 10–12 · Hamburger Bildungsplan",
+    "totalExercises": "{n}+ Aufgaben",
+    "myProgress": "Mein Fortschritt",
+    "grade": "Klasse {n}",
+    "soon": "bald",
+    "read": "gelesen",
+    "mastered": "gemeistert",
+    "comingSoon": "Bald verfügbar",
+    "exercises": "{n} Aufgaben",
+    "solvedPct": "{pct}% gelöst",
+    "noTopics": "Keine Themen für diese Klassenstufe verfügbar.",
+    "myLearningProgress": "Mein Lernfortschritt",
+    "classicPortal": "← Zum klassischen Portal"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Erkunde den Satz des Pythagoras",
+    "DiceSim": "🎲 Zufallsexperiment-Simulator",
+    "DiscriminantViz": "🔭 Erkunde die Diskriminante",
+    "ProbabilityTree": "🌳 Wahrscheinlichkeitsbaum erkunden",
+    "BinomialHistogram": "📊 Binomialverteilung erkunden",
+    "StrahlensatzExplorer": "📐 Strahlensatz live erkunden",
+    "Einheitskreis": "⭕ Einheitskreis & Sinus-Welle",
+    "VectorExplorer": "➡️ Vektoren & Skalarprodukt",
+    "BodyExplorer3D": "🔺 Körper drehen & erkunden",
+    "SekanteTangente": "📈 Sekante → Tangente",
+    "RiemannSummen": "📐 Riemann-Summen → Integral",
+    "MarkovDiagramm": "🔄 Markov-Kette: Konvergenz zum Fixvektor",
+    "FourFieldTable": "🔢 Vierfeldertafel interaktiv"
+  },
+  "domains": {
+    "analysis": "Analysis",
+    "geometrie": "Geometrie",
+    "stochastik": "Stochastik",
+    "algebra": "Lineare Algebra"
+  },
+  "diffLevels": {
+    "basis": "Basis",
+    "standard": "Standard",
+    "erweitert": "Erweitert",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "baut auf",

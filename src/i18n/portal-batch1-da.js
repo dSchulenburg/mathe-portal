@@ -103,7 +103,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Tilbage",
-    "backAria": "Tilbage til emneoversigten"
+    "backAria": "Tilbage til emneoversigten",
+    "notFound": "Emnet blev ikke fundet:",
+    "noExercises": "Ingen opgaver på dette niveau.",
+    "solved": "✓ Løst",
+    "unknownType": "Ukendt opgavetype: {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Gymnasium, klassetrin 10–12 · Hamborgs læreplan",
+    "totalExercises": "{n}+ opgaver",
+    "myProgress": "Mine fremskridt",
+    "grade": "{n}. klasse",
+    "soon": "snart",
+    "read": "læst",
+    "mastered": "mestret",
+    "comingSoon": "Kommer snart",
+    "exercises": "{n} opgaver",
+    "solvedPct": "{pct} % løst",
+    "noTopics": "Ingen emner tilgængelige for dette klassetrin.",
+    "myLearningProgress": "Mine læringsfremskridt",
+    "classicPortal": "← Til den klassiske portal"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Udforsk Pythagoras’ sætning",
+    "DiceSim": "🎲 Simulator til tilfældige forsøg",
+    "DiscriminantViz": "🔭 Udforsk diskriminanten",
+    "ProbabilityTree": "🌳 Udforsk sandsynlighedstræet",
+    "BinomialHistogram": "📊 Udforsk binomialfordelingen",
+    "StrahlensatzExplorer": "📐 Ensvinklede trekanter live",
+    "Einheitskreis": "⭕ Enhedscirklen og sinusbølgen",
+    "VectorExplorer": "➡️ Vektorer og skalarprodukt",
+    "BodyExplorer3D": "🔺 Drej og udforsk rumlige figurer",
+    "SekanteTangente": "📈 Sekant → tangent",
+    "RiemannSummen": "📐 Riemann-summer → integral",
+    "MarkovDiagramm": "🔄 Markovkæde: konvergens mod ligevægtsvektoren",
+    "FourFieldTable": "🔢 Interaktiv firefeltstabel"
+  },
+  "domains": {
+    "analysis": "Analyse",
+    "geometrie": "Geometri",
+    "stochastik": "Sandsynlighed og statistik",
+    "algebra": "Lineær algebra"
+  },
+  "diffLevels": {
+    "basis": "Grundlæggende",
+    "standard": "Standard",
+    "erweitert": "Udvidet",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "bygger på",

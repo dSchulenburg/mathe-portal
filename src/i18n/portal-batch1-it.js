@@ -103,7 +103,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Indietro",
-    "backAria": "Torna alla panoramica degli argomenti"
+    "backAria": "Torna alla panoramica degli argomenti",
+    "notFound": "Argomento non trovato:",
+    "noExercises": "Nessun esercizio per questo livello.",
+    "solved": "✓ Risolto",
+    "unknownType": "Tipo di esercizio sconosciuto: {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Liceo, classi 10–12 · Programma scolastico di Amburgo",
+    "totalExercises": "{n}+ esercizi",
+    "myProgress": "I miei progressi",
+    "grade": "Classe {n}",
+    "soon": "presto",
+    "read": "letto",
+    "mastered": "padroneggiato",
+    "comingSoon": "Prossimamente",
+    "exercises": "{n} esercizi",
+    "solvedPct": "{pct}% risolto",
+    "noTopics": "Nessun argomento disponibile per questa classe.",
+    "myLearningProgress": "I miei progressi di apprendimento",
+    "classicPortal": "← Al portale classico"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Esplora il teorema di Pitagora",
+    "DiceSim": "🎲 Simulatore di esperimenti casuali",
+    "DiscriminantViz": "🔭 Esplora il discriminante",
+    "ProbabilityTree": "🌳 Esplora l’albero delle probabilità",
+    "BinomialHistogram": "📊 Esplora la distribuzione binomiale",
+    "StrahlensatzExplorer": "📐 Il teorema di Talete dal vivo",
+    "Einheitskreis": "⭕ Circonferenza goniometrica e onda sinusoidale",
+    "VectorExplorer": "➡️ Vettori e prodotto scalare",
+    "BodyExplorer3D": "🔺 Ruota ed esplora i solidi",
+    "SekanteTangente": "📈 Secante → tangente",
+    "RiemannSummen": "📐 Somme di Riemann → integrale",
+    "MarkovDiagramm": "🔄 Catena di Markov: convergenza al vettore stazionario",
+    "FourFieldTable": "🔢 Tabella a doppia entrata interattiva"
+  },
+  "domains": {
+    "analysis": "Analisi",
+    "geometrie": "Geometria",
+    "stochastik": "Probabilità e statistica",
+    "algebra": "Algebra lineare"
+  },
+  "diffLevels": {
+    "basis": "Base",
+    "standard": "Standard",
+    "erweitert": "Avanzato",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "si basa su",

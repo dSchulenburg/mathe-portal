@@ -103,7 +103,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Volver",
-    "backAria": "Volver a la lista de temas"
+    "backAria": "Volver a la lista de temas",
+    "notFound": "Tema no encontrado:",
+    "noExercises": "No hay ejercicios para este nivel.",
+    "solved": "✓ Resuelto",
+    "unknownType": "Tipo de ejercicio desconocido: {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Bachillerato, cursos 10–12 · Plan de estudios de Hamburgo",
+    "totalExercises": "{n}+ ejercicios",
+    "myProgress": "Mi progreso",
+    "grade": "Curso {n}",
+    "soon": "pronto",
+    "read": "leído",
+    "mastered": "dominado",
+    "comingSoon": "Próximamente",
+    "exercises": "{n} ejercicios",
+    "solvedPct": "{pct} % resuelto",
+    "noTopics": "No hay temas disponibles para este curso.",
+    "myLearningProgress": "Mi progreso de aprendizaje",
+    "classicPortal": "← Al portal clásico"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Explora el teorema de Pitágoras",
+    "DiceSim": "🎲 Simulador de experimentos aleatorios",
+    "DiscriminantViz": "🔭 Explora el discriminante",
+    "ProbabilityTree": "🌳 Explora el árbol de probabilidades",
+    "BinomialHistogram": "📊 Explora la distribución binomial",
+    "StrahlensatzExplorer": "📐 El teorema de Tales en directo",
+    "Einheitskreis": "⭕ Circunferencia unitaria y onda senoidal",
+    "VectorExplorer": "➡️ Vectores y producto escalar",
+    "BodyExplorer3D": "🔺 Gira y explora cuerpos geométricos",
+    "SekanteTangente": "📈 Secante → tangente",
+    "RiemannSummen": "📐 Sumas de Riemann → integral",
+    "MarkovDiagramm": "🔄 Cadena de Márkov: convergencia al vector estacionario",
+    "FourFieldTable": "🔢 Tabla de contingencia interactiva"
+  },
+  "domains": {
+    "analysis": "Análisis",
+    "geometrie": "Geometría",
+    "stochastik": "Probabilidad y estadística",
+    "algebra": "Álgebra lineal"
+  },
+  "diffLevels": {
+    "basis": "Básico",
+    "standard": "Estándar",
+    "erweitert": "Avanzado",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "se basa en",

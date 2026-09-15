@@ -103,7 +103,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Назад",
-    "backAria": "Назад до огляду тем"
+    "backAria": "Назад до огляду тем",
+    "notFound": "Тему не знайдено:",
+    "noExercises": "Для цього рівня немає завдань.",
+    "solved": "✓ Розв’язано",
+    "unknownType": "Невідомий тип завдання: {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Гімназія, 10–12 класи · Гамбурзька освітня програма",
+    "totalExercises": "{n}+ завдань",
+    "myProgress": "Мій прогрес",
+    "grade": "{n} клас",
+    "soon": "незабаром",
+    "read": "прочитано",
+    "mastered": "опановано",
+    "comingSoon": "Незабаром",
+    "exercises": "Завдань: {n}",
+    "solvedPct": "Розв’язано {pct}%",
+    "noTopics": "Для цього класу немає доступних тем.",
+    "myLearningProgress": "Мій навчальний прогрес",
+    "classicPortal": "← До класичного порталу"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Досліди теорему Піфагора",
+    "DiceSim": "🎲 Симулятор випадкового експерименту",
+    "DiscriminantViz": "🔭 Досліди дискримінант",
+    "ProbabilityTree": "🌳 Досліди дерево ймовірностей",
+    "BinomialHistogram": "📊 Досліди біноміальний розподіл",
+    "StrahlensatzExplorer": "📐 Теорема про пропорційні відрізки наживо",
+    "Einheitskreis": "⭕ Одиничне коло й синусоїда",
+    "VectorExplorer": "➡️ Вектори й скалярний добуток",
+    "BodyExplorer3D": "🔺 Обертай і досліджуй тіла",
+    "SekanteTangente": "📈 Січна → дотична",
+    "RiemannSummen": "📐 Суми Рімана → інтеграл",
+    "MarkovDiagramm": "🔄 Ланцюг Маркова: збіжність до стаціонарного вектора",
+    "FourFieldTable": "🔢 Інтерактивна таблиця спряженості"
+  },
+  "domains": {
+    "analysis": "Математичний аналіз",
+    "geometrie": "Геометрія",
+    "stochastik": "Стохастика",
+    "algebra": "Лінійна алгебра"
+  },
+  "diffLevels": {
+    "basis": "Базовий",
+    "standard": "Стандартний",
+    "erweitert": "Поглиблений",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "спирається на",

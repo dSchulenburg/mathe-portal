@@ -28,7 +28,7 @@ import LessonLayer from '../lesson/LessonLayer';
 import StoryOutro from '../lesson/StoryOutro';
 import { getCharacterForTopic, TOPIC_STORIES } from '../../data/characters';
 import { useTranslation } from '../../i18n/useTranslation';
-import { topicTitle } from '../../i18n/topicTitle';
+import { topicTitle, translated } from '../../i18n/topicTitle';
 import { useDisplayMode } from '../../context/DisplayModeContext';
 import { vorschauText } from '../../utils/mathVorschau';
 
@@ -39,6 +39,8 @@ function ensureRegistered(topicId) {
   }
 }
 
+// Titel = deutsche Quelle fuer stations.<Id> in portal-batch1. Einzeilige
+// Eintraege beibehalten: scripts/extract-portal-strings.mjs liest sie per Regex.
 const STATION_REGISTRY = {
   PythagorasExplorer: { Component: PythagorasExplorer, title: '🔭 Erkunde den Satz des Pythagoras' },
   DiceSim: { Component: DiceSim, title: '🎲 Zufallsexperiment-Simulator' },
@@ -61,7 +63,7 @@ function getStationsForTopic(topic) {
   return [];
 }
 
-function renderExercise(exercise, onComplete) {
+function renderExercise(exercise, onComplete, t) {
   switch (exercise.type) {
     case 'numeric-input':
       return <NumericInputExercise exercise={exercise} onComplete={onComplete} />;
@@ -74,7 +76,7 @@ function renderExercise(exercise, onComplete) {
     case 'drag-match':
       return <DragMatchExercise exercise={exercise} onComplete={onComplete} />;
     default:
-      return <p style={{ color: 'var(--mp-muted)' }}>Unbekannter Aufgabentyp: {exercise.type}</p>;
+      return <p style={{ color: 'var(--mp-muted)' }}>{t('topicView.unknownType', { type: exercise.type })}</p>;
   }
 }
 
@@ -110,7 +112,7 @@ export default function TopicView({ topicId, onBack }) {
         padding: '2rem',
       }}>
         <p style={{ fontSize: '1.2rem', color: 'var(--mp-muted)' }}>
-          Topic nicht gefunden: <code>{topicId}</code>
+          {t('topicView.notFound')} <code>{topicId}</code>
         </p>
         <button
           onClick={onBack}
@@ -248,7 +250,7 @@ export default function TopicView({ topicId, onBack }) {
                 color: domainMeta.color,
                 fontWeight: 600,
               }}>
-                {domainMeta.icon} {domainMeta.label}
+                {domainMeta.icon} {translated(t, `domains.${topic.domain}`, domainMeta.label)}
               </span>
             </div>
 
@@ -330,7 +332,8 @@ export default function TopicView({ topicId, onBack }) {
         {getStationsForTopic(topic).map((stationId) => {
           const meta = STATION_REGISTRY[stationId];
           if (!meta) return null;
-          const { Component, title } = meta;
+          const { Component } = meta;
+          const title = translated(t, `stations.${stationId}`, meta.title);
           return (
             <div key={stationId} style={{ marginBottom: '1.5rem', background: 'var(--mp-surface)', border: '1px solid var(--mp-border)', borderRadius: '10px', padding: '1rem' }}>
               <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--mp-primary)', marginBottom: '0.75rem' }}>{title}</h2>
@@ -372,7 +375,7 @@ export default function TopicView({ topicId, onBack }) {
                   marginBottom: '-2px',
                 }}
               >
-                {lmeta.icon} {level.charAt(0).toUpperCase() + level.slice(1)}
+                {lmeta.icon} {t(`diffLevels.${level}`)}
                 <span style={{ fontSize: '0.7rem', color: isActive ? lmeta.color : 'var(--mp-muted)', display: 'block', lineHeight: 1 }}>
                   {lmeta.label}
                 </span>
@@ -395,7 +398,7 @@ export default function TopicView({ topicId, onBack }) {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
           {levelExercises.length === 0 && (
             <p style={{ color: 'var(--mp-muted)', textAlign: 'center', padding: '2rem' }}>
-              Keine Aufgaben für dieses Level.
+              {t('topicView.noExercises')}
             </p>
           )}
 
@@ -492,12 +495,12 @@ export default function TopicView({ topicId, onBack }) {
                         fontSize: '0.8rem',
                         fontWeight: 600,
                       }}>
-                        ✓ Gelöst
+                        {t('topicView.solved')}
                       </div>
                     )}
 
                     <ExerciseCard exercise={exercise} index={idx} total={levelExercises.length}>
-                      {renderExercise(exercise, (id) => handleExerciseComplete(id))}
+                      {renderExercise(exercise, (id) => handleExerciseComplete(id), t)}
                     </ExerciseCard>
 
                     {/* OER Share button below the card */}

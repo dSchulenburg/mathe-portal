@@ -103,7 +103,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Voltar",
-    "backAria": "Voltar à visão geral dos temas"
+    "backAria": "Voltar à visão geral dos temas",
+    "notFound": "Tema não encontrado:",
+    "noExercises": "Não há exercícios para este nível.",
+    "solved": "✓ Resolvido",
+    "unknownType": "Tipo de exercício desconhecido: {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Ensino secundário, anos 10–12 · Currículo de Hamburgo",
+    "totalExercises": "{n}+ exercícios",
+    "myProgress": "O meu progresso",
+    "grade": "{n}.º ano",
+    "soon": "em breve",
+    "read": "lido",
+    "mastered": "dominado",
+    "comingSoon": "Em breve",
+    "exercises": "{n} exercícios",
+    "solvedPct": "{pct}% resolvido",
+    "noTopics": "Não há temas disponíveis para este ano.",
+    "myLearningProgress": "O meu progresso de aprendizagem",
+    "classicPortal": "← Para o portal clássico"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Explora o teorema de Pitágoras",
+    "DiceSim": "🎲 Simulador de experiências aleatórias",
+    "DiscriminantViz": "🔭 Explora o discriminante",
+    "ProbabilityTree": "🌳 Explora a árvore de probabilidades",
+    "BinomialHistogram": "📊 Explora a distribuição binomial",
+    "StrahlensatzExplorer": "📐 Teorema de Tales ao vivo",
+    "Einheitskreis": "⭕ Círculo trigonométrico e onda sinusoidal",
+    "VectorExplorer": "➡️ Vetores e produto escalar",
+    "BodyExplorer3D": "🔺 Roda e explora sólidos",
+    "SekanteTangente": "📈 Secante → tangente",
+    "RiemannSummen": "📐 Somas de Riemann → integral",
+    "MarkovDiagramm": "🔄 Cadeia de Markov: convergência para o vetor estacionário",
+    "FourFieldTable": "🔢 Tabela de dupla entrada interativa"
+  },
+  "domains": {
+    "analysis": "Análise",
+    "geometrie": "Geometria",
+    "stochastik": "Probabilidade e estatística",
+    "algebra": "Álgebra linear"
+  },
+  "diffLevels": {
+    "basis": "Básico",
+    "standard": "Padrão",
+    "erweitert": "Avançado",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "baseia-se em",

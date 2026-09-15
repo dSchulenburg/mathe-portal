@@ -12,6 +12,17 @@ export function topicTitle(t, topic) {
 }
 
 /**
+ * Uebersetzung mit eigenem Rueckfall. t() liefert bei fehlendem Key den Key
+ * selbst zurueck — fuer Daten ausserhalb von portal-batch1 (z. B. ein unbekanntes
+ * Sachgebiet) soll dann der Klartext stehen, nicht "domains.xyz".
+ */
+export function translated(t, key, fallback) {
+  if (typeof t !== 'function') return fallback;
+  const str = t(key);
+  return typeof str === 'string' && str !== key ? str : fallback;
+}
+
+/**
  * Sprechblase der n-ten Bruecke eines Themas, Rueckfall auf den deutschen Text
  * aus data/lessons.
  */

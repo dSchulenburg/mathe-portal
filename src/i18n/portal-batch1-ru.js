@@ -103,7 +103,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Назад",
-    "backAria": "Назад к обзору тем"
+    "backAria": "Назад к обзору тем",
+    "notFound": "Тема не найдена:",
+    "noExercises": "Для этого уровня нет заданий.",
+    "solved": "✓ Решено",
+    "unknownType": "Неизвестный тип задания: {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Гимназия, 10–12 классы · Гамбургская учебная программа",
+    "totalExercises": "{n}+ заданий",
+    "myProgress": "Мой прогресс",
+    "grade": "{n} класс",
+    "soon": "скоро",
+    "read": "прочитано",
+    "mastered": "освоено",
+    "comingSoon": "Скоро",
+    "exercises": "Заданий: {n}",
+    "solvedPct": "Решено {pct}%",
+    "noTopics": "Для этого класса нет доступных тем.",
+    "myLearningProgress": "Мой учебный прогресс",
+    "classicPortal": "← К классическому порталу"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Исследуй теорему Пифагора",
+    "DiceSim": "🎲 Симулятор случайного эксперимента",
+    "DiscriminantViz": "🔭 Исследуй дискриминант",
+    "ProbabilityTree": "🌳 Исследуй дерево вероятностей",
+    "BinomialHistogram": "📊 Исследуй биномиальное распределение",
+    "StrahlensatzExplorer": "📐 Теорема о пропорциональных отрезках вживую",
+    "Einheitskreis": "⭕ Единичная окружность и синусоида",
+    "VectorExplorer": "➡️ Векторы и скалярное произведение",
+    "BodyExplorer3D": "🔺 Вращай и исследуй тела",
+    "SekanteTangente": "📈 Секущая → касательная",
+    "RiemannSummen": "📐 Суммы Римана → интеграл",
+    "MarkovDiagramm": "🔄 Цепь Маркова: сходимость к стационарному вектору",
+    "FourFieldTable": "🔢 Интерактивная таблица сопряжённости"
+  },
+  "domains": {
+    "analysis": "Математический анализ",
+    "geometrie": "Геометрия",
+    "stochastik": "Стохастика",
+    "algebra": "Линейная алгебра"
+  },
+  "diffLevels": {
+    "basis": "Базовый",
+    "standard": "Стандартный",
+    "erweitert": "Углублённый",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "опирается на",

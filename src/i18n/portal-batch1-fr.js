@@ -103,7 +103,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Retour",
-    "backAria": "Retour à la vue d'ensemble des thèmes"
+    "backAria": "Retour à la vue d'ensemble des thèmes",
+    "notFound": "Thème introuvable :",
+    "noExercises": "Aucun exercice pour ce niveau.",
+    "solved": "✓ Résolu",
+    "unknownType": "Type d’exercice inconnu : {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Lycée, classes 10–12 · Programme scolaire de Hambourg",
+    "totalExercises": "{n}+ exercices",
+    "myProgress": "Ma progression",
+    "grade": "Classe {n}",
+    "soon": "bientôt",
+    "read": "lu",
+    "mastered": "maîtrisé",
+    "comingSoon": "Bientôt disponible",
+    "exercises": "{n} exercices",
+    "solvedPct": "{pct} % résolus",
+    "noTopics": "Aucun thème disponible pour cette classe.",
+    "myLearningProgress": "Ma progression d’apprentissage",
+    "classicPortal": "← Vers le portail classique"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Explore le théorème de Pythagore",
+    "DiceSim": "🎲 Simulateur d’expériences aléatoires",
+    "DiscriminantViz": "🔭 Explore le discriminant",
+    "ProbabilityTree": "🌳 Explore l’arbre de probabilités",
+    "BinomialHistogram": "📊 Explore la loi binomiale",
+    "StrahlensatzExplorer": "📐 Le théorème de Thalès en direct",
+    "Einheitskreis": "⭕ Cercle trigonométrique et sinusoïde",
+    "VectorExplorer": "➡️ Vecteurs et produit scalaire",
+    "BodyExplorer3D": "🔺 Faire tourner et explorer les solides",
+    "SekanteTangente": "📈 Sécante → tangente",
+    "RiemannSummen": "📐 Sommes de Riemann → intégrale",
+    "MarkovDiagramm": "🔄 Chaîne de Markov : convergence vers le vecteur stationnaire",
+    "FourFieldTable": "🔢 Tableau à double entrée interactif"
+  },
+  "domains": {
+    "analysis": "Analyse",
+    "geometrie": "Géométrie",
+    "stochastik": "Probabilités et statistiques",
+    "algebra": "Algèbre linéaire"
+  },
+  "diffLevels": {
+    "basis": "Base",
+    "standard": "Standard",
+    "erweitert": "Approfondi",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "s'appuie sur",

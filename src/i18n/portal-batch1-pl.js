@@ -103,7 +103,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Wstecz",
-    "backAria": "Wróć do przeglądu tematów"
+    "backAria": "Wróć do przeglądu tematów",
+    "notFound": "Nie znaleziono tematu:",
+    "noExercises": "Brak zadań na tym poziomie.",
+    "solved": "✓ Rozwiązane",
+    "unknownType": "Nieznany typ zadania: {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Liceum, klasy 10–12 · Hamburska podstawa programowa",
+    "totalExercises": "{n}+ zadań",
+    "myProgress": "Mój postęp",
+    "grade": "Klasa {n}",
+    "soon": "wkrótce",
+    "read": "przeczytane",
+    "mastered": "opanowane",
+    "comingSoon": "Wkrótce dostępne",
+    "exercises": "Zadania: {n}",
+    "solvedPct": "Rozwiązano {pct}%",
+    "noTopics": "Brak tematów dla tej klasy.",
+    "myLearningProgress": "Mój postęp w nauce",
+    "classicPortal": "← Do klasycznego portalu"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Odkryj twierdzenie Pitagorasa",
+    "DiceSim": "🎲 Symulator doświadczeń losowych",
+    "DiscriminantViz": "🔭 Odkryj wyróżnik",
+    "ProbabilityTree": "🌳 Odkryj drzewo prawdopodobieństwa",
+    "BinomialHistogram": "📊 Odkryj rozkład dwumianowy",
+    "StrahlensatzExplorer": "📐 Twierdzenie Talesa na żywo",
+    "Einheitskreis": "⭕ Okrąg jednostkowy i sinusoida",
+    "VectorExplorer": "➡️ Wektory i iloczyn skalarny",
+    "BodyExplorer3D": "🔺 Obracaj i odkrywaj bryły",
+    "SekanteTangente": "📈 Sieczna → styczna",
+    "RiemannSummen": "📐 Sumy Riemanna → całka",
+    "MarkovDiagramm": "🔄 Łańcuch Markowa: zbieżność do wektora stacjonarnego",
+    "FourFieldTable": "🔢 Interaktywna tablica czteropolowa"
+  },
+  "domains": {
+    "analysis": "Analiza matematyczna",
+    "geometrie": "Geometria",
+    "stochastik": "Rachunek prawdopodobieństwa",
+    "algebra": "Algebra liniowa"
+  },
+  "diffLevels": {
+    "basis": "Podstawowy",
+    "standard": "Standardowy",
+    "erweitert": "Rozszerzony",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "opiera się na",

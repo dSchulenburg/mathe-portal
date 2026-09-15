@@ -103,7 +103,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Back",
-    "backAria": "Back to topic overview"
+    "backAria": "Back to topic overview",
+    "notFound": "Topic not found:",
+    "noExercises": "No exercises for this level.",
+    "solved": "✓ Solved",
+    "unknownType": "Unknown exercise type: {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Upper secondary, grades 10–12 · Hamburg curriculum",
+    "totalExercises": "{n}+ exercises",
+    "myProgress": "My progress",
+    "grade": "Grade {n}",
+    "soon": "soon",
+    "read": "read",
+    "mastered": "mastered",
+    "comingSoon": "Coming soon",
+    "exercises": "{n} exercises",
+    "solvedPct": "{pct}% solved",
+    "noTopics": "No topics available for this grade.",
+    "myLearningProgress": "My learning progress",
+    "classicPortal": "← Back to the classic portal"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Explore the Pythagorean theorem",
+    "DiceSim": "🎲 Random experiment simulator",
+    "DiscriminantViz": "🔭 Explore the discriminant",
+    "ProbabilityTree": "🌳 Explore the probability tree",
+    "BinomialHistogram": "📊 Explore the binomial distribution",
+    "StrahlensatzExplorer": "📐 Explore the intercept theorem live",
+    "Einheitskreis": "⭕ Unit circle & sine wave",
+    "VectorExplorer": "➡️ Vectors & dot product",
+    "BodyExplorer3D": "🔺 Rotate & explore solids",
+    "SekanteTangente": "📈 Secant → tangent",
+    "RiemannSummen": "📐 Riemann sums → integral",
+    "MarkovDiagramm": "🔄 Markov chain: convergence to the steady-state vector",
+    "FourFieldTable": "🔢 Interactive two-way table"
+  },
+  "domains": {
+    "analysis": "Calculus",
+    "geometrie": "Geometry",
+    "stochastik": "Probability & Statistics",
+    "algebra": "Linear Algebra"
+  },
+  "diffLevels": {
+    "basis": "Basic",
+    "standard": "Standard",
+    "erweitert": "Advanced",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "builds on",

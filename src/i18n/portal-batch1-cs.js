@@ -103,7 +103,53 @@ export const portalBatch1 = {
   },
   "topicView": {
     "back": "← Zpět",
-    "backAria": "Zpět na přehled témat"
+    "backAria": "Zpět na přehled témat",
+    "notFound": "Téma nenalezeno:",
+    "noExercises": "Pro tuto úroveň nejsou žádné úlohy.",
+    "solved": "✓ Vyřešeno",
+    "unknownType": "Neznámý typ úlohy: {type}"
+  },
+  "topicGrid": {
+    "subtitle": "Gymnázium, ročníky 10–12 · Hamburský vzdělávací plán",
+    "totalExercises": "{n}+ úloh",
+    "myProgress": "Můj pokrok",
+    "grade": "{n}. ročník",
+    "soon": "brzy",
+    "read": "přečteno",
+    "mastered": "zvládnuto",
+    "comingSoon": "Brzy k dispozici",
+    "exercises": "Úlohy: {n}",
+    "solvedPct": "Vyřešeno {pct} %",
+    "noTopics": "Pro tento ročník nejsou k dispozici žádná témata.",
+    "myLearningProgress": "Můj pokrok v učení",
+    "classicPortal": "← Na klasický portál"
+  },
+  "stations": {
+    "PythagorasExplorer": "🔭 Prozkoumej Pythagorovu větu",
+    "DiceSim": "🎲 Simulátor náhodných pokusů",
+    "DiscriminantViz": "🔭 Prozkoumej diskriminant",
+    "ProbabilityTree": "🌳 Prozkoumej pravděpodobnostní strom",
+    "BinomialHistogram": "📊 Prozkoumej binomické rozdělení",
+    "StrahlensatzExplorer": "📐 Poměry úseček na rovnoběžkách naživo",
+    "Einheitskreis": "⭕ Jednotková kružnice a sinusoida",
+    "VectorExplorer": "➡️ Vektory a skalární součin",
+    "BodyExplorer3D": "🔺 Otáčej a zkoumej tělesa",
+    "SekanteTangente": "📈 Sečna → tečna",
+    "RiemannSummen": "📐 Riemannovy součty → integrál",
+    "MarkovDiagramm": "🔄 Markovův řetězec: konvergence ke stacionárnímu vektoru",
+    "FourFieldTable": "🔢 Interaktivní čtyřpolní tabulka"
+  },
+  "domains": {
+    "analysis": "Matematická analýza",
+    "geometrie": "Geometrie",
+    "stochastik": "Pravděpodobnost a statistika",
+    "algebra": "Lineární algebra"
+  },
+  "diffLevels": {
+    "basis": "Základní",
+    "standard": "Standardní",
+    "erweitert": "Rozšířená",
+    "ea": "eA"
   },
   "relations": {
     "baut-auf": "navazuje na",
