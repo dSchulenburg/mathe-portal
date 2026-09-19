@@ -37,7 +37,14 @@ function resolveBrowser() {
 }
 
 const CHROME_PATH = resolveBrowser();
-const OUTPUT_DIR  = './worksheets';
+// Direkt nach public/worksheets/, denn genau von dort liefert Vite die PDFs
+// aus. Bis zum 19.09.2026 schrieb der Generator nach ./worksheets/ -- ein
+// ungetrackter Ordner neben dem ausgelieferten. Dazwischen lag ein Kopierschritt
+// von Hand, den niemand dokumentiert hatte, und der zuletzt am 01.09.2026
+// jemand gemacht hat: sechs neue Themen und alle Textkorrekturen der Wochen
+// danach standen nie im Portal. Wer die Ausgabe woanders hinlenken will (etwa
+// zum Vergleichen), setzt WORKSHEETS_OUT.
+const OUTPUT_DIR  = process.env.WORKSHEETS_OUT || './public/worksheets';
 const EXERCISES_DIR = './src/data/exercises';
 
 // ─── CLI Args ────────────────────────────────────────────────────────────────
@@ -58,6 +65,7 @@ const COLORS = {
   basis:     '#86efac',  // green
   standard:  '#fbbf24',  // gold
   erweitert: '#f97316',  // orange
+  ea:        '#ef4444',  // rot, wie DIFF_LEVEL_META in src/data/types.js
 };
 
 // ─── Topic name map ──────────────────────────────────────────────────────────
@@ -97,12 +105,30 @@ const TOPIC_NAMES = {
 
 // ─── Competency labels ───────────────────────────────────────────────────────
 
+// Die Schluessel muessen zu COMPETENCIES_4K in src/data/types.js passen. Die
+// Beschriftung darf abweichen -- auf dem Blatt steht "Krit. Denken", weil die
+// Pille sonst umbricht. Nicht abweichen darf der Schluessel: 'kreativitaet'
+// stand hier noch in ASCII, waehrend die Uebungsdaten seit 09bd322 den echten
+// Umlaut tragen. Die Zuordnung griff ins Leere, und weil der Ausweg unten still
+// war, druckte jedes Blatt seither den rohen Schluessel klein: "kreativität".
 const COMP_LABELS = {
   'kommunikation':       { label: 'Kommunikation',       color: '#bfdbfe' },
   'kritisches-denken':   { label: 'Krit. Denken',        color: '#fde68a' },
-  'kreativitaet':        { label: 'Kreativität',          color: '#d9f99d' },
+  'kreativität':         { label: 'Kreativität',          color: '#d9f99d' },
   'kollaboration':       { label: 'Kollaboration',        color: '#fbcfe8' },
 };
+
+// Unbekannte Schluessel landen weiterhin unbeschriftet auf dem Blatt -- ein
+// Abbruch waere hier falsch, ein fertiges Arbeitsblatt ist mehr wert als keins.
+// Aber sie sagen es jetzt. Genau dieser stille Ausweg hat zwei Etiketten
+// wochenlang falsch drucken lassen, ohne dass irgendwo etwas rot wurde.
+const unbekannteSchluessel = new Set();
+function meldeUnbekannt(art, key) {
+  const eintrag = `${art}:${key}`;
+  if (unbekannteSchluessel.has(eintrag)) return;
+  unbekannteSchluessel.add(eintrag);
+  console.warn(`  ! Unbekannter ${art}-Schluessel "${key}" -- das Blatt druckt ihn roh. Zuordnung in scripts/build-worksheets.mjs ergaenzen.`);
+}
 
 // ─── Load exercises ───────────────────────────────────────────────────────────
 
@@ -136,8 +162,13 @@ async function loadAllTopics() {
 // ─── HTML Helpers ─────────────────────────────────────────────────────────────
 
 function diffBadge(level) {
-  const colors = { basis: COLORS.basis, standard: COLORS.standard, erweitert: COLORS.erweitert };
-  const labels = { basis: 'Basis', standard: 'Standard', erweitert: 'Erweitert' };
+  // 'ea' (erhoehtes Anforderungsniveau) fehlte hier. 53 Uebungen tragen es seit
+  // ed556ac; davor stand 'eA' in den Daten. Beide Male unbekannt -- das Blatt
+  // druckte den rohen Wert, der frueher zufaellig wie ein Etikett aussah ("eA")
+  // und seither wie ein Tippfehler ("ea").
+  const colors = { basis: COLORS.basis, standard: COLORS.standard, erweitert: COLORS.erweitert, ea: COLORS.ea };
+  const labels = { basis: 'Basis', standard: 'Standard', erweitert: 'Erweitert', ea: 'eA' };
+  if (!labels[level]) meldeUnbekannt('Niveau', level);
   const bg = colors[level] || '#e5e7eb';
   return `<span class="badge" style="background:${bg}; color:#1a1a2e;">${labels[level] || level}</span>`;
 }
@@ -145,6 +176,7 @@ function diffBadge(level) {
 function compTags(competencies) {
   if (!competencies || competencies.length === 0) return '';
   const pills = competencies.map(c => {
+    if (!COMP_LABELS[c]) meldeUnbekannt('Kompetenz', c);
     const info = COMP_LABELS[c] || { label: c, color: '#e5e7eb' };
     return `<span class="comp-tag" style="background:${info.color};">${info.label}</span>`;
   }).join('');
