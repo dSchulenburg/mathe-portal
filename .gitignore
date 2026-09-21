@@ -4,3 +4,8 @@ node_modules/
 # Python-Bytecode der Audio-Generatoren
 __pycache__/
 *.pyc
+
+# Generierte Arbeitsblatt-PDFs (66 Dateien, 17 MB). Reproduzierbar per Build,
+# gehoeren nicht ins Repo - am 21.09.2026 lagen sie untracked herum, ein
+# beherztes `git add -A` haette sie hineingeschoben.
+worksheets/
