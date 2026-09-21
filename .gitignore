@@ -8,4 +8,9 @@ __pycache__/
 # Generierte Arbeitsblatt-PDFs (66 Dateien, 17 MB). Reproduzierbar per Build,
 # gehoeren nicht ins Repo - am 21.09.2026 lagen sie untracked herum, ein
 # beherztes `git add -A` haette sie hineingeschoben.
-worksheets/
+# Fuehrender Slash mit Absicht: nur dieser Ordner im Wurzelverzeichnis.
+# Ohne ihn matcht das Muster auch public/worksheets/ -- und DAS sind die
+# 72 ausgelieferten PDFs, die Vite ins Portal baut. Sie sind getrackt und
+# deshalb heute geschuetzt; nimmt sie jemand aus dem Index, waeren sie
+# stillschweigend ignoriert (21.09.2026 mit check-ignore --no-index belegt).
+/worksheets/
