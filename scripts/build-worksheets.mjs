@@ -13,6 +13,7 @@ import puppeteer from 'puppeteer-core';
 import { readFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
 import { fileURLToPath, pathToFileURL } from 'url';
 import path from 'path';
+import { escHtml, renderMathText, katexCssInline } from './lib/math-render.mjs';
 
 // ─── Config ─────────────────────────────────────────────────────────────────
 
@@ -192,13 +193,13 @@ function renderMultipleChoice(data, withSolution, idx) {
       checkmark = '☑';
       extra = ` style="font-weight:600; color:${COLORS.primary};"`;
     }
-    return `<div class="mc-option"${extra}>${checkmark} ${escHtml(opt.text)}</div>`;
+    return `<div class="mc-option"${extra}>${checkmark} ${renderMathText(opt.text)}</div>`;
   }).join('');
 }
 
 function renderNumericInput(data, withSolution) {
   if (withSolution) {
-    return `<div class="answer-line solution-value">Antwort: <strong>${data.correctValue}</strong></div>`;
+    return `<div class="answer-line solution-value">Antwort: <strong>${renderMathText(data.correctValue)}</strong></div>`;
   }
   return `<div class="answer-line">Antwort: <span class="answer-blank">___________</span></div>`;
 }
@@ -213,12 +214,12 @@ function renderErrorAnalysis(data, withSolution) {
       rowClass += ' step-error';
       marker = `<span class="error-marker">✗ Fehler!</span>`;
       if (step.errorExplanation) {
-        marker += `<div class="error-explanation">${escHtml(step.errorExplanation)}</div>`;
+        marker += `<div class="error-explanation">${renderMathText(step.errorExplanation)}</div>`;
       }
     }
     html += `<div class="${rowClass}">
       <span class="step-num">${i + 1}.</span>
-      <span class="step-content">${escHtml(step.content)}</span>
+      <span class="step-content">${renderMathText(step.content)}</span>
       ${marker}
     </div>`;
   });
@@ -231,15 +232,9 @@ function renderErrorAnalysis(data, withSolution) {
   return html;
 }
 
-function escHtml(str) {
-  if (!str) return '';
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
+// escHtml lebt jetzt in lib/math-render.mjs, zusammen mit renderMathText.
+// Faustregel für neue Stellen: Aufgaben- und Lösungstexte gehen durch
+// renderMathText (sie enthalten $...$), reine Beschriftungen durch escHtml.
 
 function renderExercise(ex, num, withSolution) {
   const { type, data, diffLevel, competencies, contextKey, hintKeys, solutionKey, points } = ex;
@@ -252,19 +247,19 @@ function renderExercise(ex, num, withSolution) {
   const hintHtml = (hintKeys && hintKeys.length > 0 && !withSolution)
     ? `<div class="hint-box">
         <span class="hint-label">Tipp:</span>
-        ${hintKeys.map(h => `<div>${escHtml(h)}</div>`).join('')}
+        ${hintKeys.map(h => `<div>${renderMathText(h)}</div>`).join('')}
        </div>`
     : '';
 
   const solutionHtml = withSolution && solutionKey
     ? `<div class="solution-box">
         <span class="solution-label">Lösung:</span>
-        <div>${escHtml(solutionKey)}</div>
+        <div>${renderMathText(solutionKey)}</div>
        </div>`
     : '';
 
   const contextHtml = contextKey
-    ? `<div class="context-box">${escHtml(contextKey)}</div>`
+    ? `<div class="context-box">${renderMathText(contextKey)}</div>`
     : '';
 
   const pointsLabel = points ? `<span class="points-badge">${points} Pkt.</span>` : '';
@@ -280,7 +275,7 @@ function renderExercise(ex, num, withSolution) {
         </div>
       </div>
       ${contextHtml}
-      <div class="question-text">${escHtml(data.questionText)}</div>
+      <div class="question-text">${renderMathText(data.questionText)}</div>
       <div class="exercise-body">${bodyHtml}</div>
       ${hintHtml}
       ${solutionHtml}
@@ -538,6 +533,17 @@ function buildHtml(topicId, exercises, withSolution) {
   @media print {
     .exercise-card { page-break-inside: avoid; }
   }
+</style>
+<style>
+/* KaTeX, vollständig eingebettet - bewusst NACH dem Reset oben, sonst nimmt
+   der *-Selektor der Mathematik ihre Abstände weg.
+   Die Schriften stehen als data:-URI drin, weil generatePDF() mit
+   page.setContent() arbeitet: es gibt keine Basis-URL, nichts wird
+   nachgeladen. Fehlten sie, setzte Chrome die Formeln klaglos in einer
+   Ersatzschrift - schiefe Klammern und Wurzelzeichen, ohne Fehlermeldung. */
+${katexCssInline()}
+/* Auf 11pt Fließtext wirkt KaTeX' Standard (1.21em) zu groß. */
+.katex { font-size: 1.05em; }
 </style>
 </head>
 <body>
