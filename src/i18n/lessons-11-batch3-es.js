@@ -139,7 +139,7 @@ export const batch11c = {
         step1: 'Plantear la matriz ampliada: coeficientes a la izquierda, términos independientes a la derecha de la raya:',
         step2: 'Fila 2 menos 2 veces fila 1: el elemento $a_{21} = 2$ se anula:',
         step3: 'Fila 3 menos fila 1: el elemento $a_{31} = 1$ se anula. La columna izquierda queda ya limpia bajo el pivote 1:',
-        step4: 'Seguir hasta la forma escalonada y resolver hacia atrás: $z$ desde la última fila, sustituir arriba para $y$ y después $x$. Solución: $z = 1$, $y = \\tfrac{8}{3}$, $x = \\tfrac{7}{3}$:',
+        step4: 'Seguir hasta la forma escalonada y resolver hacia atrás: $z$ desde la última fila, sustituir arriba para $y$ y después $x$. Solución: $z = 3$, $y = 2$, $x = 1$:',
         amir_comment: 'Gauss es contabilidad: anotar limpiamente cada operación de fila. Quien ejecuta una operación a medias —por ejemplo, transformando solo la columna del pivote— obtiene basura. Aquí la disciplina gana al talento.',
       },
     },

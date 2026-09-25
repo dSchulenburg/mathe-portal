@@ -69,7 +69,7 @@ export const lesson = {
         { key: 'examples.gauss_3x3.step1', formula: '\\begin{pmatrix} 1 & 1 & 1 & | & 6 \\\\ 2 & -1 & 1 & | & 3 \\\\ 1 & 2 & -1 & | & 2 \\end{pmatrix}' },
         { key: 'examples.gauss_3x3.step2', formula: 'Z_2 \\to Z_2 - 2 Z_1: \\begin{pmatrix} 1 & 1 & 1 & | & 6 \\\\ 0 & -3 & -1 & | & -9 \\\\ 1 & 2 & -1 & | & 2 \\end{pmatrix}' },
         { key: 'examples.gauss_3x3.step3', formula: 'Z_3 \\to Z_3 - Z_1: \\begin{pmatrix} 1 & 1 & 1 & | & 6 \\\\ 0 & -3 & -1 & | & -9 \\\\ 0 & 1 & -2 & | & -4 \\end{pmatrix}' },
-        { key: 'examples.gauss_3x3.step4', formula: '\\Rightarrow z = 1, y = \\tfrac{8}{3}, x = \\tfrac{7}{3}' },
+        { key: 'examples.gauss_3x3.step4', formula: '\\Rightarrow z = 3, y = 2, x = 1' },
       ],
       characterComment: 'examples.gauss_3x3.amir_comment',
     },

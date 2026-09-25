@@ -139,7 +139,7 @@ export const batch11c = {
         step1: 'Sett opp den utvidede matrisen — koeffisienter til venstre, høyresider til høyre for streken:',
         step2: 'Rad 2 minus 2 ganger rad 1 — elementet $a_{21} = 2$ blir null:',
         step3: 'Rad 3 minus rad 1 — elementet $a_{31} = 1$ blir null. Venstre kolonne er nå ren under pivoten 1:',
-        step4: 'Fortsett til trappeform, og løs så baklengs: $z$ fra siste rad, sett inn oppover for $y$, deretter $x$. Løsning: $z = 1$, $y = \\tfrac{8}{3}$, $x = \\tfrac{7}{3}$:',
+        step4: 'Fortsett til trappeform, og løs så baklengs: $z$ fra siste rad, sett inn oppover for $y$, deretter $x$. Løsning: $z = 3$, $y = 2$, $x = 1$:',
         amir_comment: 'Gauss er bokføring: noter hver radoperasjon ordentlig. Den som utfører en operasjon halvveis — for eksempel bare former om pivotkolonnen — får bare tull. Disiplin slår geni her.',
       },
     },

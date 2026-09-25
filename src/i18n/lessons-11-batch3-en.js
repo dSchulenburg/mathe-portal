@@ -139,7 +139,7 @@ export const batch11c = {
         step1: 'Set up the augmented matrix — coefficients on the left, right-hand sides to the right of the bar:',
         step2: 'Row 2 minus 2 times row 1 — the entry $a_{21} = 2$ becomes zero:',
         step3: 'Row 3 minus row 1 — the entry $a_{31} = 1$ becomes zero. The left column below the pivot 1 is now clean:',
-        step4: 'Continue to row echelon form, then solve backwards: $z$ from the last row, substitute upwards for $y$, then $x$. Solution: $z = 1$, $y = \\tfrac{8}{3}$, $x = \\tfrac{7}{3}$:',
+        step4: 'Continue to row echelon form, then solve backwards: $z$ from the last row, substitute upwards for $y$, then $x$. Solution: $z = 3$, $y = 2$, $x = 1$:',
         amir_comment: 'Gauss is bookkeeping: note every row operation cleanly. Whoever carries out an operation only halfway — e.g. transforms only the pivot column — gets garbage. Discipline beats genius here.',
       },
     },

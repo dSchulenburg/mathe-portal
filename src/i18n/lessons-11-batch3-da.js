@@ -139,7 +139,7 @@ export const batch11c = {
         step1: 'Opstil den udvidede matrix — koefficienter til venstre, højresider til højre for stregen:',
         step2: 'Række 2 minus 2 gange række 1 — elementet $a_{21} = 2$ bliver nul:',
         step3: 'Række 3 minus række 1 — elementet $a_{31} = 1$ bliver nul. Venstre søjle er nu ren under pivoten 1:',
-        step4: 'Fortsæt til trappeform, og løs så baglæns: $z$ fra sidste række, indsæt opad for $y$, derefter $x$. Løsning: $z = 1$, $y = \\tfrac{8}{3}$, $x = \\tfrac{7}{3}$:',
+        step4: 'Fortsæt til trappeform, og løs så baglæns: $z$ fra sidste række, indsæt opad for $y$, derefter $x$. Løsning: $z = 3$, $y = 2$, $x = 1$:',
         amir_comment: 'Gauss er bogholderi: notér hver rækkeoperation ordentligt. Den, der kun udfører en operation halvt — f.eks. kun omformer pivotsøjlen — får noget vrøvl ud af det. Disciplin slår geni her.',
       },
     },
