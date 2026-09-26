@@ -139,7 +139,7 @@ export const batch11c = {
         step1: 'Costruire la matrice completa: coefficienti a sinistra, termini noti a destra della barra:',
         step2: 'Riga 2 meno 2 volte riga 1: l\'elemento $a_{21} = 2$ diventa nullo:',
         step3: 'Riga 3 meno riga 1: l\'elemento $a_{31} = 1$ diventa nullo. La colonna di sinistra è ora pulita sotto il pivot 1:',
-        step4: 'Proseguire fino alla forma a scalini, poi risolvere a ritroso: $z$ dall\'ultima riga, sostituire sopra per $y$ e poi $x$. Soluzione: $z = 1$, $y = \\tfrac{8}{3}$, $x = \\tfrac{7}{3}$:',
+        step4: 'Proseguire fino alla forma a scalini, poi risolvere a ritroso: $z$ dall\'ultima riga, sostituire sopra per $y$ e poi $x$. Soluzione: $z = 3$, $y = 2$, $x = 1$:',
         amir_comment: 'Gauss è contabilità: annotare in modo pulito ogni operazione sulle righe. Chi esegue un\'operazione a metà — per esempio trasformando solo la colonna del pivot — ottiene spazzatura. Qui la disciplina batte il genio.',
       },
     },

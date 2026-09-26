@@ -106,16 +106,16 @@ export const exercises = [
     competencies: ['kommunikation', 'kritisches-denken'], points: 10, timeEstimate: 6,
     contextKey: 'Tickets',
     data: {
-      questionText: 'Eine Schulklasse zahlt für 12 Erwachsenen-Tickets und 28 Schüler-Tickets insgesamt 244 €. Eine andere Klasse zahlt für 8 Erwachsenen-Tickets und 15 Schüler-Tickets 152 €. Wie viel kostet ein Erwachsenen-Ticket?',
+      questionText: 'Eine Schulklasse zahlt für 12 Erwachsenen-Tickets und 28 Schüler-Tickets insgesamt 220 €. Eine andere Klasse zahlt für 8 Erwachsenen-Tickets und 15 Schüler-Tickets 132 €. Wie viel kostet ein Erwachsenen-Ticket?',
       correctValue: 9,
       tolerance: 0.05,
       unit: '€',
     },
     hintKeys: [
-      'Sei $E$ = Preis Erwachsenen-Ticket, $S$ = Schüler-Ticket. Aufstellen: $12E + 28S = 244$ und $8E + 15S = 152$.',
+      'Sei $E$ = Preis Erwachsenen-Ticket, $S$ = Schüler-Ticket. Aufstellen: $12E + 28S = 220$ und $8E + 15S = 132$.',
       'Multipliziere geeignet, um $E$ oder $S$ zu eliminieren.',
     ],
-    solutionKey: 'Aus $12E + 28S = 244$ folgt $3E + 7S = 61$. Aus $8E + 15S = 152$ folgt $8E + 15S = 152$. Lösen: $E = 9$ €, $S = 80/14 = 5{,}71...$ Probe: $12 \\cdot 9 + 28 \\cdot 5 = 108 + 140 = 248$ — Hm, lass uns präzise rechnen. $E = 9, S = 4$: $12 \\cdot 9 + 28 \\cdot 4 = 108 + 112 = 220 \\neq 244$. Korrekt: aus dem System $E = 9$, $S = (244-108)/28 = 4{,}857$. Bei den realen Werten ist $E = 9$ €.',
+    solutionKey: 'Aus $12E + 28S = 220$ folgt geteilt durch 4: $3E + 7S = 55$. Mit 8 multiplizieren: $24E + 56S = 440$. Die zweite Gleichung mal 3: $24E + 45S = 396$. Subtrahieren: $11S = 44$, also $S = 4$. Einsetzen: $3E = 55 - 28 = 27$, also $E = 9$ €. Probe: $12 \\cdot 9 + 28 \\cdot 4 = 108 + 112 = 220$ und $8 \\cdot 9 + 15 \\cdot 4 = 72 + 60 = 132$.',
     tags: ['sachkontext', 'ticket-preise'],
   },
   {

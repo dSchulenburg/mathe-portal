@@ -139,7 +139,7 @@ export const batch11c = {
         step1: 'Sestavit rozšířenou matici — koeficienty vlevo, pravé strany vpravo od čáry:',
         step2: 'Řádek 2 minus dvakrát řádek 1 — prvek $a_{21} = 2$ se vynuluje:',
         step3: 'Řádek 3 minus řádek 1 — prvek $a_{31} = 1$ se vynuluje. Levý sloupec je teď čistý pod pivotem 1:',
-        step4: 'Pokračovat až ke stupňovitému tvaru, pak řešit zpětně: $z$ z posledního řádku, dosadit výše pro $y$, pak $x$. Řešení: $z = 1$, $y = \\tfrac{8}{3}$, $x = \\tfrac{7}{3}$:',
+        step4: 'Pokračovat až ke stupňovitému tvaru, pak řešit zpětně: $z$ z posledního řádku, dosadit výše pro $y$, pak $x$. Řešení: $z = 3$, $y = 2$, $x = 1$:',
         amir_comment: 'Gauss je účetnictví: každou řádkovou operaci pečlivě zaznamenat. Kdo provede operaci jen z poloviny — např. upraví jen pivotní sloupec — dostane nesmysl. Disciplína tu poráží genialitu.',
       },
     },

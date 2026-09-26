@@ -139,7 +139,7 @@ export const batch11c = {
         step1: 'Ułożyć macierz rozszerzoną — współczynniki po lewej, prawe strony po prawej od kreski:',
         step2: 'Wiersz 2 minus 2 razy wiersz 1 — element $a_{21} = 2$ staje się zerem:',
         step3: 'Wiersz 3 minus wiersz 1 — element $a_{31} = 1$ staje się zerem. Lewa kolumna jest teraz czysta pod elementem głównym 1:',
-        step4: 'Dalej aż do postaci schodkowej, potem rozwiązywanie wstecz: $z$ z ostatniego wiersza, podstawić wyżej dla $y$, potem $x$. Rozwiązanie: $z = 1$, $y = \\tfrac{8}{3}$, $x = \\tfrac{7}{3}$:',
+        step4: 'Dalej aż do postaci schodkowej, potem rozwiązywanie wstecz: $z$ z ostatniego wiersza, podstawić wyżej dla $y$, potem $x$. Rozwiązanie: $z = 3$, $y = 2$, $x = 1$:',
         amir_comment: 'Gauss to księgowość: każdą operację na wierszu notować starannie. Kto wykona operację po połowie — np. przekształci tylko kolumnę elementu głównego — dostanie śmieci. Dyscyplina bije tu geniusz.',
       },
     },

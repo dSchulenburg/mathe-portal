@@ -139,7 +139,7 @@ export const batch11c = {
         step1: 'Construir a matriz ampliada: coeficientes à esquerda, termos independentes à direita do traço:',
         step2: 'Linha 2 menos 2 vezes a linha 1: o elemento $a_{21} = 2$ anula-se:',
         step3: 'Linha 3 menos a linha 1: o elemento $a_{31} = 1$ anula-se. A coluna da esquerda fica agora limpa por baixo do pivô 1:',
-        step4: 'Prosseguir até à forma escalonada e resolver para trás: $z$ a partir da última linha, substituir acima para $y$ e depois $x$. Solução: $z = 1$, $y = \\tfrac{8}{3}$, $x = \\tfrac{7}{3}$:',
+        step4: 'Prosseguir até à forma escalonada e resolver para trás: $z$ a partir da última linha, substituir acima para $y$ e depois $x$. Solução: $z = 3$, $y = 2$, $x = 1$:',
         amir_comment: 'Gauss é contabilidade: anotar com clareza cada operação sobre as linhas. Quem executa uma operação a meio — por exemplo transformando apenas a coluna do pivô — obtém lixo. Aqui a disciplina vence o génio.',
       },
     },

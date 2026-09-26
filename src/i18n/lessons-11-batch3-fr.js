@@ -139,7 +139,7 @@ export const batch11c = {
         step1: 'Construire la matrice augmentée — coefficients à gauche, seconds membres à droite de la barre :',
         step2: 'Ligne 2 moins 2 fois ligne 1 — le coefficient $a_{21} = 2$ devient nul :',
         step3: 'Ligne 3 moins ligne 1 — le coefficient $a_{31} = 1$ devient nul. La colonne de gauche est maintenant propre sous le pivot 1 :',
-        step4: 'Poursuivre jusqu\'à la forme échelonnée, puis remonter : $z$ depuis la dernière ligne, substituer plus haut pour $y$, puis $x$. Solution : $z = 1$, $y = \\tfrac{8}{3}$, $x = \\tfrac{7}{3}$ :',
+        step4: 'Poursuivre jusqu\'à la forme échelonnée, puis remonter : $z$ depuis la dernière ligne, substituer plus haut pour $y$, puis $x$. Solution : $z = 3$, $y = 2$, $x = 1$ :',
         amir_comment: 'Gauss, c\'est de la comptabilité : noter proprement chaque opération sur les lignes. Qui n\'exécute une opération qu\'à moitié — par ex. ne transforme que la colonne du pivot — récolte du n\'importe quoi. Ici, la discipline bat le génie.',
       },
     },

@@ -139,7 +139,7 @@ export const batch11c = {
         step1: 'Erweiterte Matrix aufstellen — Koeffizienten links, rechte Seiten rechts vom Strich:',
         step2: 'Zeile 2 minus 2 mal Zeile 1 — der Eintrag $a_{21} = 2$ wird zu null:',
         step3: 'Zeile 3 minus Zeile 1 — der Eintrag $a_{31} = 1$ wird zu null. Die linke Spalte ist jetzt unter dem Pivot 1 sauber:',
-        step4: 'Weiter bis Stufenform, dann rückwärts auflösen: aus letzter Zeile $z$, oben einsetzen für $y$, dann $x$. Lösung: $z = 1$, $y = \\tfrac{8}{3}$, $x = \\tfrac{7}{3}$:',
+        step4: 'Weiter bis Stufenform, dann rückwärts auflösen: aus letzter Zeile $z$, oben einsetzen für $y$, dann $x$. Lösung: $z = 3$, $y = 2$, $x = 1$:',
         amir_comment: 'Gauß ist Buchhaltung: jede Zeilenoperation sauber notieren. Wer eine Operation nur halb ausführt — z.B. nur die Pivot-Spalte umformt — bekommt Müll. Disziplin schlägt Genie hier.',
       },
     },

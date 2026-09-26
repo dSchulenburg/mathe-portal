@@ -139,7 +139,7 @@ export const batch11c = {
         step1: 'Uitgebreide matrix opstellen — coëfficiënten links, rechterleden rechts van de streep:',
         step2: 'Rij 2 min 2 keer rij 1 — het element $a_{21} = 2$ wordt nul:',
         step3: 'Rij 3 min rij 1 — het element $a_{31} = 1$ wordt nul. De linkerkolom is nu schoon onder de spil 1:',
-        step4: 'Verder tot trapvorm, dan terugwaarts oplossen: $z$ uit de laatste rij, hoger invullen voor $y$, daarna $x$. Oplossing: $z = 1$, $y = \\tfrac{8}{3}$, $x = \\tfrac{7}{3}$:',
+        step4: 'Verder tot trapvorm, dan terugwaarts oplossen: $z$ uit de laatste rij, hoger invullen voor $y$, daarna $x$. Oplossing: $z = 3$, $y = 2$, $x = 1$:',
         amir_comment: 'Gauss is boekhouding: elke rijoperatie netjes noteren. Wie een operatie half uitvoert — bijvoorbeeld alleen de spilkolom omvormt — krijgt rommel. Discipline verslaat hier genialiteit.',
       },
     },
